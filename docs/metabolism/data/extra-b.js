@@ -401,3 +401,150 @@ window.EXTRA.push({
 <details class="check"><summary>Red blood cells are full of O<sub>2</sub>. Why don't they use it to make ATP?</summary><div class="ans"><p>Mature red blood cells have no mitochondria, so they have no Krebs cycle or ETC. They can only run glycolysis plus lactic acid fermentation (2 ATP per glucose). This also means they do not use up the O<sub>2</sub> they deliver.</p></div></details>
 `
 });
+
+window.EXTRA.push({
+  id: "e-exercise",
+  title: "Exercise energy systems, muscle fibre types and EPOC",
+  lesson: "2.07",
+  tier: "likely",
+  why: "Class discussed muscle burn, lactate and slow-twitch fibres; this puts it together into the three energy systems your muscles switch between, and what happens after and because of training.",
+  html: `
+<p>Muscles store only a few seconds' worth of ATP, yet you recycle roughly your own body mass in ATP every day (approximate). During exercise, three systems regenerate ATP at different speeds. <strong>All three are always running</strong>; the question is which one <em>dominates</em>.</p>
+
+<h3>The three energy systems</h3>
+<div class="table-wrap"><table class="data">
+<thead><tr><th>System</th><th>Fuel</th><th>O<sub>2</sub>?</th><th>Speed of ATP supply</th><th>Dominates for</th><th>Examples</th></tr></thead>
+<tbody>
+<tr><td><strong>ATP–creatine phosphate</strong> (phosphagen)</td><td>Stored ATP + creatine phosphate</td><td>No</td><td>Fastest</td><td>~0–10 s of max effort</td><td>100 m sprint, jump, heavy lift</td></tr>
+<tr><td><strong>Anaerobic glycolysis</strong> (glycolytic)</td><td>Muscle glycogen and blood glucose → lactate</td><td>No</td><td>Fast</td><td>~10 s to ~2 min</td><td>400 m, a long rally, a shift in hockey</td></tr>
+<tr><td><strong>Aerobic</strong> (oxidative)</td><td>Glucose, glycogen, fatty acids (some amino acids)</td><td>Yes</td><td>Slowest, but huge capacity</td><td>Beyond ~2 min</td><td>5 km run, marathon, swimming laps</td></tr>
+</tbody></table></div>
+<p>Times are approximate and blend into each other.</p>
+
+<h4>1. ATP–creatine phosphate</h4>
+<div class="eq">creatine phosphate + ADP ⇌ creatine + ATP (creatine kinase)</div>
+<p>One enzyme step transfers a phosphate straight to ADP, a form of substrate-level phosphorylation. It is extremely fast, but the creatine phosphate supply is small. After the effort, aerobic ATP rebuilds creatine phosphate in a few minutes, which is why sprinters rest between reps. Creatine supplements work by increasing this store.</p>
+
+<h4>2. Anaerobic glycolysis</h4>
+<p>Glycolysis followed by lactic acid fermentation (from class): 2 ATP per glucose, or 3 per glucose unit from glycogen. Fast, but fatigue sets in as H<sup>+</sup> accumulates. Remember from class: the acid comes from rapid ATP hydrolysis, not lactate, and lactate actually helps buffer it.</p>
+
+<h4>3. Aerobic system</h4>
+<p>Full respiration: up to 36–38 ATP per glucose (class values) and far more per fatty acid, but many more steps and dependent on O<sub>2</sub> delivery. At low intensity, fat is a major fuel. As intensity rises, the mix shifts toward carbohydrate because glucose gives ATP faster and more ATP per O<sub>2</sub>. Marathoners "hit the wall" when muscle and liver glycogen run out and fat alone cannot keep up their pace.</p>
+
+<h3>Muscle fibre types</h3>
+<div class="compare">
+  <div><h4>Slow-twitch (Type I, oxidative)</h4>
+    <ul>
+      <li>Many mitochondria, dense capillaries, lots of <strong>myoglobin</strong> (red colour, stores O<sub>2</sub>).</li>
+      <li>Aerobic, fatigue-resistant, less force.</li>
+      <li>Posture and endurance. They take up lactate and oxidize it (class: lactate shuttled to slow-twitch fibres).</li>
+    </ul>
+  </div>
+  <div><h4>Fast-twitch (Type II, glycolytic)</h4>
+    <ul>
+      <li>Fewer mitochondria, more glycolytic enzymes and glycogen, larger fibres, paler.</li>
+      <li>Powerful, fast, but fatigue quickly. They produce lactate.</li>
+      <li>Sprinting, jumping. (Type IIa is an intermediate that is both fast and fairly oxidative.)</li>
+    </ul>
+  </div>
+</div>
+<div class="callout tip"><p class="callout-title">Memory trick</p><p>Chicken legs (walking and standing all day) are dark meat, rich in slow-twitch fibres and myoglobin. Chicken breast (short bursts of flapping) is white meat, mostly fast-twitch.</p></div>
+
+<h3>Oxygen deficit, EPOC and the lactate threshold</h3>
+<ul>
+  <li><strong>Oxygen deficit</strong>: at the start of exercise, O<sub>2</sub> delivery lags behind demand, so the creatine phosphate and glycolytic systems cover the gap.</li>
+  <li><span class="term">EPOC</span> (excess post-exercise oxygen consumption, older term "oxygen debt"): you keep breathing hard after stopping. The extra O<sub>2</sub> is used to rebuild ATP and creatine phosphate, reload myoglobin and hemoglobin with O<sub>2</sub>, clear lactate (oxidized in heart and slow-twitch fibres, or turned back into glucose by the Cori cycle), and fuel the raised heart rate, breathing and body temperature. It is not just "paying back lactate."</li>
+  <li><span class="term">Lactate threshold</span>: the exercise intensity at which blood lactate starts rising sharply because production outpaces clearance. Above it, effort cannot be held for long. In untrained people it is often around 50–60% of maximum O<sub>2</sub> uptake, and in trained endurance athletes 70–80% or higher (approximate).</li>
+</ul>
+
+<h3>Training adaptations</h3>
+<div class="compare">
+  <div><h4>Endurance training</h4>
+    <ul>
+      <li>More mitochondria and oxidative enzymes</li>
+      <li>More capillaries (angiogenesis; lactate is one of the signals, from class)</li>
+      <li>More myoglobin; better fat use, which spares glycogen</li>
+      <li>Stronger heart, higher max O<sub>2</sub> uptake, higher lactate threshold</li>
+    </ul>
+  </div>
+  <div><h4>Sprint and strength training</h4>
+    <ul>
+      <li>Larger creatine phosphate and glycogen stores</li>
+      <li>More glycolytic enzymes</li>
+      <li>Better buffering of H<sup>+</sup></li>
+      <li>Larger fast-twitch fibres (hypertrophy)</li>
+    </ul>
+  </div>
+</div>
+
+<details class="check"><summary>Which energy system dominates in the first 5 seconds of a 100 m sprint, and which in the 40th minute of a soccer game played at a steady pace?</summary><div class="ans"><p>Sprint start: the ATP–creatine phosphate system (fastest, no O<sub>2</sub> needed). Steady 40th minute: the aerobic system, burning glucose and fatty acids, with brief bursts topped up by the other two systems.</p></div></details>
+
+<details class="check"><summary>Why do you keep breathing heavily for several minutes after a hard 400 m run?</summary><div class="ans"><p>EPOC. The extra O<sub>2</sub> supports aerobic ATP production to rebuild creatine phosphate and ATP, reload myoglobin and hemoglobin, clear lactate (oxidation, or gluconeogenesis via the Cori cycle, which costs ATP), and support elevated heart rate, breathing and temperature.</p></div></details>
+`
+});
+
+window.EXTRA.push({
+  id: "e-photosynthesis-link",
+  title: "Connecting to photosynthesis (preview)",
+  lesson: "mix",
+  tier: "likely",
+  why: "Photosynthesis is the other half of the Metabolic Processes strand and uses the same ETC and chemiosmosis ideas you just learned, so comparing the two is a favourite test question.",
+  html: `
+<p>Photosynthesis is the other half of the SBI4U Metabolic Processes strand. Most of what you learned about redox, electron transport and chemiosmosis carries straight over, so it helps to see the connections now.</p>
+
+<h3>"Reverse" equations</h3>
+<div class="eq">Cellular respiration: C<sub>6</sub>H<sub>12</sub>O<sub>6</sub> + 6O<sub>2</sub> → 6CO<sub>2</sub> + 6H<sub>2</sub>O + energy (ATP + heat)</div>
+<div class="eq">Photosynthesis: 6CO<sub>2</sub> + 6H<sub>2</sub>O + light energy → C<sub>6</sub>H<sub>12</sub>O<sub>6</sub> + 6O<sub>2</sub></div>
+<p>On paper, one is the reverse of the other. Respiration oxidizes glucose (catabolic, exergonic). Photosynthesis reduces CO<sub>2</sub> to glucose (anabolic, endergonic) using light energy. Together they form the core of the carbon cycle: the CO<sub>2</sub> you exhale can end up in a plant's glucose, and the O<sub>2</sub> a plant releases ends up in your water.</p>
+
+<div class="callout warn"><p class="callout-title">Common mistake</p><p>"Reverse equations" does <strong>not</strong> mean reverse pathways. Photosynthesis uses different enzymes, steps and organelles. And plants do not only photosynthesize: <strong>plant cells have mitochondria and carry out cellular respiration all the time</strong>, day and night. Chloroplasts make the sugar; mitochondria burn it for ATP.</p></div>
+
+<h3>Same machinery: ETC + chemiosmosis</h3>
+<p>Both organelles make ATP the same basic way you learned in 2.04: an ETC in a membrane uses energy from electrons to pump H<sup>+</sup> into a small compartment, and H<sup>+</sup> flows back through ATP synthase to make ATP.</p>
+<div class="table-wrap"><table class="data">
+<thead><tr><th></th><th>Mitochondrion (respiration)</th><th>Chloroplast (photosynthesis)</th></tr></thead>
+<tbody>
+<tr><td>Where electrons come from</td><td>Food: NADH and FADH<sub>2</sub> from glucose</td><td>Water, split using light (this releases O<sub>2</sub>)</td></tr>
+<tr><td>What energizes the electrons</td><td>Already high-energy (from glucose's bonds)</td><td>Light absorbed by chlorophyll</td></tr>
+<tr><td>Final electron acceptor</td><td>O<sub>2</sub> → H<sub>2</sub>O</td><td>NADP<sup>+</sup> → NADPH</td></tr>
+<tr><td>ETC membrane</td><td>Inner membrane (cristae)</td><td>Thylakoid membrane</td></tr>
+<tr><td>H<sup>+</sup> pumped into</td><td>Intermembrane space</td><td>Thylakoid space (lumen)</td></tr>
+<tr><td>ATP made in</td><td>Matrix</td><td>Stroma</td></tr>
+<tr><td>Name of ATP synthesis</td><td>Oxidative phosphorylation</td><td><span class="term">Photophosphorylation</span></td></tr>
+<tr><td>O<sub>2</sub></td><td>Consumed</td><td>Released</td></tr>
+</tbody></table></div>
+
+<h3>NAD<sup>+</sup> vs NADP<sup>+</sup></h3>
+<p>NADP<sup>+</sup> is NAD<sup>+</sup> with <strong>one extra phosphate group</strong> on its ribose. Both carry 2 electrons and 1 H<sup>+</sup> when reduced. Cells keep them as two separate pools:</p>
+<ul>
+  <li><strong>NAD<sup>+</sup>/NADH</strong>: catabolism. Collects electrons from breaking down fuel and delivers them to the ETC to make ATP.</li>
+  <li><strong>NADP<sup>+</sup>/NADPH</strong>: anabolism. Supplies electrons for building molecules, such as reducing CO<sub>2</sub> to sugar in the Calvin cycle (and making fatty acids in animal cells).</li>
+</ul>
+<div class="callout tip"><p class="callout-title">Memory trick</p><p>The extra <strong>P</strong> in NADPH is for <strong>P</strong>hotosynthesis and building (anabolic) <strong>P</strong>athways.</p></div>
+
+<h3>Two cycles, opposite jobs</h3>
+<div class="compare">
+  <div><h4>Krebs cycle (matrix)</h4>
+    <ul>
+      <li>Releases CO<sub>2</sub> (oxidizes carbon)</li>
+      <li>Produces NADH, FADH<sub>2</sub> and ATP</li>
+      <li>Regenerates oxaloacetate</li>
+    </ul>
+  </div>
+  <div><h4>Calvin cycle (stroma)</h4>
+    <ul>
+      <li>Fixes CO<sub>2</sub> (enzyme rubisco; reduces carbon)</li>
+      <li>Uses ATP and NADPH from the light reactions</li>
+      <li>Regenerates its starting molecule (RuBP); its product is <strong>G3P</strong>, the same 3-carbon sugar from glycolysis</li>
+    </ul>
+  </div>
+</div>
+
+<h3>Chloroplast vs mitochondrion structure</h3>
+<p>Both have a <strong>double membrane</strong>, their own circular DNA and bacteria-like ribosomes (both arose by endosymbiosis: mitochondria from an aerobic bacterium, chloroplasts from a cyanobacterium). Both increase internal membrane area for their ETC: <strong>cristae</strong> in mitochondria, stacked <strong>thylakoids</strong> (grana) in chloroplasts. The fluid around the internal membranes is the <strong>matrix</strong> in mitochondria and the <strong>stroma</strong> in chloroplasts (where the Calvin cycle happens). Mitochondria are found in nearly all eukaryotic cells; chloroplasts only in plants and algae, and only in their photosynthetic cells.</p>
+
+<details class="check"><summary>What is the final electron acceptor in respiration's ETC, and in photosynthesis's light reactions?</summary><div class="ans"><p>Respiration: O<sub>2</sub>, which is reduced to H<sub>2</sub>O. Photosynthesis: NADP<sup>+</sup>, which is reduced to NADPH (later used in the Calvin cycle). In photosynthesis, water is the electron <em>donor</em>, which is why O<sub>2</sub> is released.</p></div></details>
+
+<details class="check"><summary>A student says, "Plants don't need mitochondria because they make their own glucose." Correct this.</summary><div class="ans"><p>Plants make glucose in chloroplasts, but they still need ATP throughout the cell, day and night, including in roots and other non-green tissues. They get it by breaking down that glucose through cellular respiration in their mitochondria.</p></div></details>
+`
+});
