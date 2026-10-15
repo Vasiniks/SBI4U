@@ -91,7 +91,7 @@
   }).join('');
 
   function markNav(route) {
-    $$('.nav a').forEach(function (a) {
+    $$('.nav a[data-route]').forEach(function (a) {
       var r = a.getAttribute('data-route');
       var on = r === route || (r === 'beyond' && route.indexOf('beyond') === 0);
       if (on) a.setAttribute('aria-current', 'page'); else a.removeAttribute('aria-current');
@@ -106,12 +106,13 @@
     (parts[1] || '').split('&').forEach(function (kv) { if (kv) { var p = kv.split('='); query[p[0]] = decodeURIComponent(p[1] || ''); } });
     var seg = path.split('/');
     closeMenu();
+    setSubnav(null);
     view.removeAttribute('data-stage');
     setWide(false);
     if (!path) { renderHome(); markNav('home'); }
-    else if (seg[0] === 'cram') { renderCram(); markNav('cram'); }
-    else if (seg[0] === 'lesson') { renderLesson(seg[1]); markNav('lesson/' + seg[1]); }
-    else if (seg[0] === 'qa') { renderQA(query); markNav('qa'); }
+    else if (seg[0] === 'cram') { renderCram(seg[1]); markNav('cram'); }
+    else if (seg[0] === 'lesson') { renderLesson(seg[1], seg[2]); markNav('lesson/' + seg[1]); }
+    else if (seg[0] === 'qa') { renderQA(query, seg[1]); markNav('qa'); }
     else if (seg[0] === 'quiz') { renderQuizSetup(query); markNav('quiz'); }
     else if (seg[0] === 'apply') { renderApply(query); markNav('apply'); }
     else if (seg[0] === 'beyond') { seg[1] ? renderBeyondTopic(seg[1]) : renderBeyond(); markNav('beyond'); }
@@ -199,43 +200,81 @@
   }
   function countQA() { return QA.reduce(function (n, g) { return n + g.items.length; }, 0); }
 
+  /* ---------- tabs + sidebar sub-navigation ---------- */
+  function tabStrip(tabs, label) {
+    return '<nav class="tabs" aria-label="' + esc(label) + '">' + tabs.map(function (t) {
+      return '<a href="' + t.href + '"' + (t.tier ? ' data-tier="' + t.tier + '"' : '') + (t.current ? ' aria-current="page"' : '') + '>' + t.label + '</a>';
+    }).join('') + '</nav>';
+  }
+  function setSubnav(routeKey, tabs) {
+    $$('.subnav').forEach(function (u) { u.remove(); });
+    if (!routeKey || !tabs || !tabs.length) return;
+    var a = $('.nav a[data-route="' + routeKey + '"]'); if (!a) return;
+    a.insertAdjacentHTML('afterend', '<ul class="subnav">' + tabs.map(function (t) {
+      return '<li' + (t.tier ? ' data-tier="' + t.tier + '"' : '') + '><a href="' + t.href + '"' + (t.current ? ' aria-current="true"' : '') + '>' + t.label + '</a></li>';
+    }).join('') + '</ul>');
+  }
+  function centerActiveTab() {
+    var strip = $('.tabs', view), at = $('.tabs a[aria-current]', view);
+    if (strip && at) strip.scrollLeft = at.offsetLeft - strip.offsetLeft - 24;
+  }
+  // Split lesson-style HTML into one section per h3.
+  function sectionsOf(html, prep) {
+    var tmp = document.createElement('div');
+    tmp.innerHTML = html;
+    tierizeBody(tmp);
+    var kids = Array.prototype.slice.call(tmp.children);
+    var secs = kids.filter(function (c) { return c.classList.contains('tier-sec'); });
+    var lead = kids.filter(function (c) { return !c.classList.contains('tier-sec'); });
+    if (!secs.length) {
+      var one = document.createElement('section'); one.className = 'tier-sec'; one.setAttribute('data-tier', 'essential');
+      lead.forEach(function (c) { one.appendChild(c); }); secs = [one]; lead = [];
+    }
+    if (prep) prep(secs);
+    return { secs: secs, lead: lead };
+  }
+  function secTier(sec) { return sec.getAttribute('data-tier') || 'essential'; }
+  function secTitle(sec) { var h = sec.querySelector('h3'); return h ? (h.getAttribute('data-title') || h.textContent) : 'Overview'; }
+  function stepVisible(secs, i, dir) { for (var k = i + dir; k >= 0 && k < secs.length; k += dir) if (visible(secTier(secs[k]))) return k; return -1; }
+  function pickSection(secs, want) {
+    var i = Math.max(0, Math.min(secs.length - 1, parseInt(want, 10) || 0));
+    if (visible(secTier(secs[i]))) return i;
+    var f = stepVisible(secs, -1, 1); return f > -1 ? f : i;
+  }
+
   /* ---------- lesson ---------- */
-  function renderLesson(id) {
+  function renderLesson(id, want) {
     var l = LESSONS.filter(function (x) { return x.id === id; })[0];
     view.setAttribute('data-stage', stageOf(id));
-    if (!l) { view.innerHTML = '<h2>' + esc(lessonLabel(id)) + '</h2><p class="empty">This lesson is still being written. Check back soon.</p>'; return; }
+    if (!l) { view.innerHTML = '<h1>' + esc(lessonLabel(id)) + '</h1><p class="empty">This lesson is still being written. Check back soon.</p>'; return; }
     var idx = LESSON_IDS.indexOf(id);
-    var prev = LESSON_IDS[idx - 1], next = LESSON_IDS[idx + 1];
+    var prevL = LESSON_IDS[idx - 1], nextL = LESSON_IDS[idx + 1];
     var nQ = QUIZ.filter(function (q) { return q.lesson === id; }).length;
+    var S = sectionsOf(l.html), secs = S.secs, i = pickSection(secs, want);
+    var first = i === stepVisible(secs, -1, 1);
+    var tabs = secs.map(function (sec, k) { return { href: '#/lesson/' + id + '/' + k, label: esc(secTitle(sec)), tier: secTier(sec), current: k === i }; });
+    var p = stepVisible(secs, i, -1), n = stepVisible(secs, i, 1);
     view.innerHTML =
       '<header class="lesson-head">' +
         '<div class="lesson-kicker"><span>Lesson ' + l.id + '</span>' + (l.where ? '<span class="pill">' + esc(l.where) + '</span>' : '') + '</div>' +
         '<h1>' + esc(l.title) + '</h1>' +
-        (l.summary ? '<p class="lede">' + l.summary + '</p>' : '') +
-        (l.objectives && l.objectives.length ? '<div class="objectives"><p>By the end of this lesson you can</p><ul>' + l.objectives.map(function (o) { return '<li>' + o + '</li>'; }).join('') + '</ul></div>' : '') +
-        '<details class="toc"><summary>Jump to a section</summary><ol id="toc"></ol></details>' +
+        (first && l.summary ? '<p class="lede">' + l.summary + '</p>' : '') +
+        (first && l.objectives && l.objectives.length ? '<div class="objectives"><p>By the end of this lesson you can</p><ul>' + l.objectives.map(function (o) { return '<li>' + o + '</li>'; }).join('') + '</ul></div>' : '') +
       '</header>' +
-      '<article class="lesson-body">' + l.html + '</article>' +
-      '<div class="practice-cta"><p>Ready to test ' + esc(l.title) + '?</p><span><a class="btn" href="#/quiz?lesson=' + id + '">Practice ' + nQ + ' questions</a> <a class="btn ghost" href="#/qa?lesson=' + id + '">Class Q&amp;A</a></span></div>' +
-      '<nav class="pager" aria-label="Lessons">' +
-        (prev ? '<a class="prev" href="#/lesson/' + prev + '"><small>Previous</small>' + prev + ' ' + esc(LESSON_META[prev].title) + '</a>' : '') +
-        (next ? '<a class="next" href="#/lesson/' + next + '"><small>Next</small>' + next + ' ' + esc(LESSON_META[next].title) + '</a>' : '') +
+      tabStrip(tabs, 'Lesson sections') +
+      '<article class="lesson-body"></article>' +
+      (n === -1 ? '<div class="practice-cta"><p>Ready to test ' + esc(l.title) + '?</p><span><a class="btn" href="#/quiz?lesson=' + id + '">Practice ' + nQ + ' questions</a> <a class="btn ghost" href="#/qa?lesson=' + id + '">Class Q&amp;A</a></span></div>' : '') +
+      '<nav class="pager" aria-label="Sections">' +
+        (p > -1 ? '<a class="prev" href="#/lesson/' + id + '/' + p + '"><small>Previous section</small>' + esc(secTitle(secs[p])) + '</a>'
+          : prevL ? '<a class="prev" href="#/lesson/' + prevL + '"><small>Previous lesson</small>' + prevL + ' ' + esc(LESSON_META[prevL].title) + '</a>' : '') +
+        (n > -1 ? '<a class="next" href="#/lesson/' + id + '/' + n + '"><small>Next section</small>' + esc(secTitle(secs[n])) + '</a>'
+          : nextL ? '<a class="next" href="#/lesson/' + nextL + '"><small>Next lesson</small>' + nextL + ' ' + esc(LESSON_META[nextL].title) + '</a>' : '') +
       '</nav>';
-    tierizeBody($('.lesson-body', view));
-    var toc = $('#toc');
-    var hs = $$('.lesson-body h3', view);
-    if (!hs.length) { $('.toc', view).remove(); return; }
-    toc.innerHTML = hs.map(function (h, i) {
-      h.id = 'sec-' + i;
-      var t = h.parentNode.getAttribute('data-tier') || 'essential';
-      return '<li data-tier="' + t + '"><a href="#sec-' + i + '" data-sec="' + i + '">' + esc(h.getAttribute('data-title') || h.textContent) + '</a></li>';
-    }).join('');
-    toc.addEventListener('click', function (e) {
-      var a = e.target.closest('a'); if (!a) return;
-      e.preventDefault();
-      var t = document.getElementById('sec-' + a.getAttribute('data-sec'));
-      if (t) t.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    });
+    var art = $('.lesson-body', view);
+    if (first) S.lead.forEach(function (c) { art.appendChild(c); });
+    art.appendChild(secs[i]);
+    setSubnav('lesson/' + id, tabs);
+    centerActiveTab();
   }
 
   // Group each h3 and the blocks after it into a tier section; flag lower-tier blocks inside.
@@ -278,34 +317,48 @@
   }
 
   /* ---------- cram mode ---------- */
-  function renderCram() {
+  function renderCram(want) {
     var ess = QUIZ.filter(function (q) { return tierOf(q) === 'essential'; }).length;
     view.setAttribute('data-stage', 'etc');
-    setWide(true);
-    view.innerHTML = '<header class="lesson-head"><div class="lesson-kicker">' + tierBadge('essential') + '<span>Whole unit on one page</span></div>' +
+    var S = sectionsOf(window.CRAM || '<p class="empty">Cram sheet missing.</p>', function (secs) {
+      secs.forEach(function (sec) {
+        var h = sec.querySelector('h3'); if (!h) return;
+        var txt = h.textContent;
+        if (/^Krebs/.test(txt) && VIS.krebs) h.insertAdjacentHTML('afterend', '<figure class="diagram narrow">' + VIS.krebs + '<figcaption>Per turn: 3 NADH, 1 FADH<sub>2</sub>, 1 ATP, 2 CO<sub>2</sub>. Oxaloacetate is both the start and the end.</figcaption></figure>');
+        if (/^Electron transport/.test(txt) && VIS.etc) h.insertAdjacentHTML('afterend', '<figure class="diagram">' + VIS.etc + '<figcaption>Electrons (dashed blue) pass I → Q → III → cyt c → IV → O<sub>2</sub>. Red arrows are H<sup>+</sup>: pumped up by I, III and IV, then flowing back down through ATP synthase.</figcaption></figure>');
+        $$('tr[data-tier]', sec).forEach(function (tr) { var c = tr.cells[0]; if (c) c.insertAdjacentHTML('beforeend', ' ' + tierBadge(tr.getAttribute('data-tier'))); });
+      });
+      if (VIS.overview) {
+        var big = document.createElement('section'); big.className = 'tier-sec'; big.setAttribute('data-tier', 'essential');
+        big.innerHTML = '<h3 data-title="Big picture">Big picture</h3><figure class="diagram">' + VIS.overview + '<figcaption>The whole pathway on one map. Glycolysis happens in the cytoplasm; everything else is inside the mitochondrion.</figcaption></figure>';
+        secs.unshift(big);
+      }
+    });
+    var secs = S.secs, all = want === 'all', i = all ? -1 : pickSection(secs, want);
+    var tabs = secs.map(function (sec, k) { return { href: '#/cram/' + k, label: esc(secTitle(sec)), current: k === i }; });
+    tabs.push({ href: '#/cram/all', label: 'Whole sheet', current: all });
+    var p = all ? -1 : stepVisible(secs, i, -1), n = all ? -1 : stepVisible(secs, i, 1);
+    view.innerHTML = '<header class="lesson-head"><div class="lesson-kicker">' + tierBadge('essential') + '<span>The whole unit, essentials only</span></div>' +
       '<h1>Cram mode</h1>' +
-      '<p class="lede">Every name, function, location, yield, regulator and inhibitor in the unit, and nothing else. Read it top to bottom, then take the cram quiz.</p>' +
-      '<div class="toolbar"><button class="btn" id="cramQuiz"' + (ess ? '' : ' disabled') + '>Cram quiz: ' + Math.min(25, ess) + ' essential questions</button><button class="btn ghost" id="cramPrint">Print this page</button></div>' +
-      '<details class="toc"><summary>Jump to a section</summary><ol id="toc"></ol></details></header>' +
-      '<article class="lesson-body cram">' + (window.CRAM || '<p class="empty">Cram sheet missing.</p>') + '</article>';
-    var hs = $$('.lesson-body h3', view);
-    $('#toc').innerHTML = hs.map(function (h, i) { h.id = 'sec-' + i; return '<li><a href="#sec-' + i + '" data-sec="' + i + '">' + esc(h.textContent) + '</a></li>'; }).join('');
-    $('#toc').addEventListener('click', function (e) {
-      var a = e.target.closest('a'); if (!a) return; e.preventDefault();
-      var t = document.getElementById('sec-' + a.getAttribute('data-sec')); if (t) t.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    });
-    var body = $('.lesson-body', view);
-    if (VIS.overview) body.insertAdjacentHTML('afterbegin', '<figure class="diagram">' + VIS.overview + '<figcaption>The whole pathway on one map. Glycolysis happens in the cytoplasm; everything else is inside the mitochondrion.</figcaption></figure>');
-    hs.forEach(function (h) {
-      var txt = h.textContent;
-      if (/^Krebs/.test(txt) && VIS.krebs) h.insertAdjacentHTML('afterend', '<figure class="diagram narrow">' + VIS.krebs + '<figcaption>Per turn: 3 NADH, 1 FADH<sub>2</sub>, 1 ATP, 2 CO<sub>2</sub>. Oxaloacetate is both the start and the end.</figcaption></figure>');
-      if (/^Electron transport/.test(txt) && VIS.etc) h.insertAdjacentHTML('afterend', '<figure class="diagram">' + VIS.etc + '<figcaption>Electrons (dashed blue) pass I → Q → III → cyt c → IV → O<sub>2</sub>. Red arrows are H<sup>+</sup>: pumped up by I, III and IV, then flowing back down through ATP synthase.</figcaption></figure>');
-    });
-    $$('tr[data-tier]', view).forEach(function (tr) { var c = tr.cells[0]; if (c) c.insertAdjacentHTML('beforeend', ' ' + tierBadge(tr.getAttribute('data-tier'))); });
+      '<p class="lede">Every name, function, location, yield, regulator and inhibitor in the unit, one topic per tab. Finish with the cram quiz.</p>' +
+      '<div class="toolbar"><button class="btn" id="cramQuiz"' + (ess ? '' : ' disabled') + '>Cram quiz: ' + Math.min(25, ess) + ' essential questions</button><button class="btn ghost" id="cramPrint">Print the whole sheet</button></div></header>' +
+      tabStrip(tabs, 'Cram topics') +
+      '<article class="lesson-body cram"></article>' +
+      (all ? '' : '<nav class="pager" aria-label="Topics">' +
+        (p > -1 ? '<a class="prev" href="#/cram/' + p + '"><small>Previous</small>' + esc(secTitle(secs[p])) + '</a>' : '') +
+        (n > -1 ? '<a class="next" href="#/cram/' + n + '"><small>Next</small>' + esc(secTitle(secs[n])) + '</a>' : '<a class="next" href="#/cram/all"><small>Next</small>Whole sheet</a>') + '</nav>');
+    var art = $('.lesson-body', view);
+    (all ? secs : [secs[i]]).forEach(function (sec) { art.appendChild(sec); });
+    setSubnav('cram', tabs);
+    centerActiveTab();
     $('#cramQuiz').addEventListener('click', function () {
       startQuiz(shuffle(QUIZ.filter(function (q) { return tierOf(q) === 'essential'; })).slice(0, 25));
     });
-    $('#cramPrint').addEventListener('click', function () { window.print(); });
+    $('#cramPrint').addEventListener('click', function () {
+      if (all) { window.print(); return; }
+      location.hash = '#/cram/all';
+      setTimeout(function () { window.print(); }, 300);
+    });
   }
 
   /* ---------- filter chips helper ---------- */
@@ -316,23 +369,28 @@
   }
 
   /* ---------- Q&A ---------- */
-  function renderQA(query) {
-    var sel = query.lesson || 'all';
-    var groups = QA.filter(function (g) { return sel === 'all' || g.lesson === sel; });
-    var n = 0;
-    view.innerHTML = '<h1>Class questions &amp; answers</h1>' +
-      '<p class="lede">Every question from the slides, worksheets, review package and case study. Try each one in your head first, then open it to check.</p>' +
-      lessonChips(sel, true) +
+  function renderQA(query, want) {
+    if (!QA.length) { view.innerHTML = '<h1>Class questions &amp; answers</h1><p class="empty">Questions are still being written.</p>'; return; }
+    var i = parseInt(want, 10);
+    if (isNaN(i) && query.lesson) QA.forEach(function (g, k) { if (isNaN(i) && g.lesson === query.lesson) i = k; });
+    if (isNaN(i) || i < 0 || i >= QA.length) i = 0;
+    var g = QA[i];
+    var tabs = QA.map(function (x, k) { return { href: '#/qa/' + k, label: esc(x.title.split(':')[0]), current: k === i }; });
+    view.setAttribute('data-stage', stageOf(g.lesson));
+    view.innerHTML = '<header class="lesson-head"><div class="lesson-kicker"><span>Class questions &amp; answers</span><span>' + countQA() + ' questions in ' + QA.length + ' sets</span></div>' +
+      '<h1>' + esc(g.title) + '</h1>' + (g.source ? '<p class="qa-source">' + esc(g.source) + '</p>' : '') + '</header>' +
+      tabStrip(tabs, 'Question sets') +
       '<div class="toolbar"><button class="btn ghost" id="openAll">Show all answers</button><button class="btn ghost" id="closeAll">Hide all answers</button></div>' +
-      (groups.length ? groups.map(function (g) {
-        return '<section class="qa-group" data-stage="' + stageOf(g.lesson) + '"><h3>' + esc(g.title) + '</h3>' + (g.source ? '<p class="qa-source">' + esc(g.source) + '</p>' : '') +
-          g.items.map(function (it, i) {
-            n++;
-            var t = tierOf(it);
-            return '<details class="qa-item" data-tier="' + t + '"><summary><span class="qn">' + (i + 1) + '.</span>' + it.q + (t !== 'essential' ? ' ' + tierBadge(t) : '') + '</summary><div class="qa-a">' + (it.note ? '<p class="qa-note">' + it.note + '</p>' : '') + it.a + '</div></details>';
-          }).join('') + '</section>';
-      }).join('') : '<p class="empty">No questions for this lesson yet.</p>');
-    $$('.fchip', view).forEach(function (b) { b.addEventListener('click', function () { var l = b.getAttribute('data-l'); location.hash = '#/qa' + (l === 'all' ? '' : '?lesson=' + l); }); });
+      '<section class="qa-group">' + g.items.map(function (it, k) {
+        var t = tierOf(it);
+        return '<details class="qa-item" data-tier="' + t + '"><summary><span class="qn">' + (k + 1) + '.</span>' + it.q + (t !== 'essential' ? ' ' + tierBadge(t) : '') + '</summary><div class="qa-a">' + (it.note ? '<p class="qa-note">' + it.note + '</p>' : '') + it.a + '</div></details>';
+      }).join('') + '</section>' +
+      '<nav class="pager" aria-label="Question sets">' +
+        (i > 0 ? '<a class="prev" href="#/qa/' + (i - 1) + '"><small>Previous set</small>' + esc(QA[i - 1].title) + '</a>' : '') +
+        (i < QA.length - 1 ? '<a class="next" href="#/qa/' + (i + 1) + '"><small>Next set</small>' + esc(QA[i + 1].title) + '</a>' : '') +
+      '</nav>';
+    setSubnav('qa', tabs);
+    centerActiveTab();
     $('#openAll').addEventListener('click', function () { $$('.qa-item', view).forEach(function (d) { d.open = true; }); });
     $('#closeAll').addEventListener('click', function () { $$('.qa-item', view).forEach(function (d) { d.open = false; }); });
   }
@@ -469,13 +527,17 @@
   });
 
   /* ---------- apply & extend ---------- */
+  function applyTabs(sel) {
+    var ids = ['all'].concat(LESSON_IDS, ['mix']).filter(function (id) { return id === 'all' || EXT.some(function (x) { return x.lesson === id; }); });
+    return ids.map(function (id) { return { href: '#/apply' + (id === 'all' ? '' : '?lesson=' + id), label: id === 'all' ? 'All' : id === 'mix' ? 'Whole unit' : id + ' ' + esc(LESSON_META[id].title), current: sel === id }; });
+  }
   function renderApply(query) {
     var sel = query.lesson || 'all';
     var items = EXT.filter(function (x) { return sel === 'all' || x.lesson === sel; });
     var levelName = { apply: 'Apply', analyze: 'Analyze data', extend: 'Beyond the slides' };
     view.innerHTML = '<h1>Apply &amp; extend</h1>' +
       '<p class="lede">The thinking questions that come at the end of a test. Write your answer first, use a hint if you are stuck, then compare with the model answer.</p>' +
-      lessonChips(sel, true) +
+      tabStrip(applyTabs(sel), 'Lessons') +
       (items.length ? items.map(function (x) {
         var saved = store('ans-' + x.id) || '';
         return '<article class="x-card" data-stage="' + stageOf(x.lesson) + '" data-id="' + x.id + '" data-tier="' + tierOf(x) + '">' +
@@ -487,7 +549,8 @@
           '<div class="x-answer" hidden><p class="x-label">Model answer</p>' + x.answer + '</div>' +
           '</article>';
       }).join('') : '<p class="empty">No questions for this lesson yet.</p>');
-    $$('.fchip', view).forEach(function (b) { b.addEventListener('click', function () { var l = b.getAttribute('data-l'); location.hash = '#/apply' + (l === 'all' ? '' : '?lesson=' + l); }); });
+    setSubnav('apply', applyTabs(sel));
+    centerActiveTab();
     $$('.x-card', view).forEach(function (card) {
       var x = EXT.filter(function (e) { return e.id === card.getAttribute('data-id'); })[0];
       var shown = 0;
@@ -515,7 +578,9 @@
           return '<a href="#/beyond/' + e.id + '" data-stage="' + stageOf(e.lesson) + '" data-tier="' + tierOf(e) + '"><b>' + e.title + '</b>' + tierBadge(tierOf(e)) + (e.why ? '<span class="why">' + e.why + '</span>' : '') + '</a>';
         }).join('') + '</div>';
       }).join('') : '<p class="empty">This section is still being written.</p>');
+    setSubnav('beyond', beyondTabs(null));
   }
+  function beyondTabs(cur) { return EXTRA.map(function (e) { return { href: '#/beyond/' + e.id, label: e.title, tier: tierOf(e), current: e.id === cur }; }); }
   function renderBeyondTopic(id) {
     var i = -1; EXTRA.forEach(function (e, j) { if (e.id === id) i = j; });
     var e = EXTRA[i];
@@ -529,6 +594,7 @@
         (prev ? '<a class="prev" href="#/beyond/' + prev.id + '"><small>Previous topic</small>' + prev.title + '</a>' : '') +
         (next ? '<a class="next" href="#/beyond/' + next.id + '"><small>Next topic</small>' + next.title + '</a>' : '') +
       '</nav>';
+    setSubnav('beyond', beyondTabs(id));
   }
 
   /* ---------- glossary ---------- */
