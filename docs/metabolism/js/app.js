@@ -6,6 +6,7 @@
   var QUIZ = window.QUIZ || [];
   var EXT = window.EXT || [];
   var EXTRA = window.EXTRA || [];
+  var VIS = window.VIS || {};
   var GLOSSARY = (window.GLOSSARY || []).slice().sort(function (a, b) { return a.term.localeCompare(b.term); });
 
   var LESSON_META = {
@@ -140,8 +141,8 @@
   function renderHome() {
     var lessonCards = LESSON_IDS.map(function (id) {
       var l = LESSONS.filter(function (x) { return x.id === id; })[0];
-      return '<a class="lesson-card" data-stage="' + stageOf(id) + '" href="#/lesson/' + id + '"><span class="lc-num">Lesson ' + id + '</span><p class="lc-title">' + esc(LESSON_META[id].title) + '</p>' +
-        (l && l.summary ? '<p class="lc-sum">' + l.summary + '</p>' : '') + '</a>';
+      return '<a class="row-link" data-stage="' + stageOf(id) + '" href="#/lesson/' + id + '"><span class="rl-num">' + id + '</span><span class="rl-body"><b>' + esc(LESSON_META[id].title) + '</b>' +
+        (l && l.summary ? '<span>' + l.summary + '</span>' : '') + '</span></a>';
     }).join('');
     view.innerHTML =
       '<section class="hero">' +
@@ -149,6 +150,7 @@
         '<h1>Follow one glucose all the way to 38 ATP.</h1>' +
         '<p class="lede">Every lesson from class in full detail, every review question answered, a practice bank to test yourself, and extra content the slides skipped.</p>' +
         '<div class="journey">' +
+          (VIS.overview ? '<figure class="map">' + VIS.overview + '</figure>' : '') +
           '<div class="journey-track" role="group" aria-label="The four stages of aerobic respiration">' +
             STAGES.map(function (s, i) {
               return '<button class="stage-btn st-' + s.key + '" data-i="' + i + '" aria-pressed="false"><span class="s-name">' + s.name + '</span><span class="s-where">' + s.where + '</span><span class="s-carbon">' + s.carbon + '</span></button>';
@@ -170,9 +172,9 @@
         '<div>' + tierBadge('extra') + '<p>Enrichment beyond the slides, for full marks on thinking questions.</p></div>' +
       '</div>' +
       '<p class="muted">Use <strong>How much to show</strong> in the menu to hide lower levels everywhere. Short on time? <a href="#/cram">Open cram mode</a>: all the essentials on one page.</p>' +
-      '<h2>Lessons</h2><div class="card-grid">' + lessonCards + '</div>' +
+      '<h2>Lessons</h2><div class="rows">' + lessonCards + '</div>' +
       '<h2>Test yourself</h2>' +
-      '<div class="tool-list">' +
+      '<div class="rows tools">' +
         '<a href="#/qa"><b>Class questions &amp; answers</b><span>' + countQA() + ' questions from the slides, worksheets, review and the Seven Deaths case, with model answers.</span></a>' +
         '<a href="#/quiz"><b>Practice quiz</b><span>' + QUIZ.length + ' multiple-choice and true/false questions with explanations. Filter by lesson.</span></a>' +
         '<a href="#/apply"><b>Apply &amp; extend</b><span>' + EXT.length + ' application and thinking questions with hints and full answers.</span></a>' +
@@ -182,7 +184,8 @@
     $$('.stage-btn', view).forEach(function (btn) {
       btn.addEventListener('click', function () {
         var i = +btn.getAttribute('data-i');
-        $$('.stage-btn', view).forEach(function (b, j) { b.setAttribute('aria-pressed', String(j <= i)); });
+        $$('.stage-btn', view).forEach(function (b, j) { b.setAttribute('aria-pressed', String(j === i)); });
+        $$('.mapstage', view).forEach(function (g) { g.classList.toggle('dim', g.getAttribute('data-s') !== STAGES[i].key); });
         running = { atp: 0, nadh: 0, fadh: 0, co2: 0 };
         for (var j = 0; j <= i; j++) Object.keys(running).forEach(function (k) { running[k] += STAGES[j].tally[k]; });
         $$('.ledger b', view).forEach(function (b) { b.textContent = running[b.getAttribute('data-k')]; });
@@ -248,7 +251,7 @@
         sec.setAttribute('data-tier', t);
         body.insertBefore(sec, el);
         el.setAttribute('data-title', el.textContent);
-        el.insertAdjacentHTML('beforeend', ' ' + tierBadge(t));
+        if (t !== 'essential') el.insertAdjacentHTML('beforeend', ' ' + tierBadge(t));
       }
       if (sec) sec.appendChild(el);
     });
@@ -277,6 +280,13 @@
     $('#toc').addEventListener('click', function (e) {
       var a = e.target.closest('a'); if (!a) return; e.preventDefault();
       var t = document.getElementById('sec-' + a.getAttribute('data-sec')); if (t) t.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+    var body = $('.lesson-body', view);
+    if (VIS.overview) body.insertAdjacentHTML('afterbegin', '<figure class="diagram">' + VIS.overview + '<figcaption>The whole pathway on one map. Glycolysis happens in the cytoplasm; everything else is inside the mitochondrion.</figcaption></figure>');
+    hs.forEach(function (h) {
+      var txt = h.textContent;
+      if (/^Krebs/.test(txt) && VIS.krebs) h.insertAdjacentHTML('afterend', '<figure class="diagram narrow">' + VIS.krebs + '<figcaption>Per turn: 3 NADH, 1 FADH<sub>2</sub>, 1 ATP, 2 CO<sub>2</sub>. Oxaloacetate is both the start and the end.</figcaption></figure>');
+      if (/^Electron transport/.test(txt) && VIS.etc) h.insertAdjacentHTML('afterend', '<figure class="diagram">' + VIS.etc + '<figcaption>Electrons (dashed blue) pass I → Q → III → cyt c → IV → O<sub>2</sub>. Red arrows are H<sup>+</sup>: pumped up by I, III and IV, then flowing back down through ATP synthase.</figcaption></figure>');
     });
     $$('tr[data-tier]', view).forEach(function (tr) { var c = tr.cells[0]; if (c) c.insertAdjacentHTML('beforeend', ' ' + tierBadge(tr.getAttribute('data-tier'))); });
     $('#cramQuiz').addEventListener('click', function () {
@@ -378,7 +388,7 @@
     view.innerHTML = '<h2>Practice quiz</h2><div class="quiz-panel">' +
       '<div class="quiz-top"><span>Question ' + (quiz.i + 1) + ' of ' + quiz.pool.length + '</span><span>' + esc(lessonLabel(q.lesson)) + '</span></div>' +
       '<div class="progress"><i style="width:' + (100 * quiz.i / quiz.pool.length) + '%"></i></div>' +
-      '<p class="q-text">' + (q.type === 'tf' ? '<span class="pill" style="margin-right:8px">True or false</span>' : '') + q.q + ' ' + tierBadge(tierOf(q)) + '</p>' +
+      '<p class="q-text">' + (q.type === 'tf' ? '<span class="pill" style="margin-right:8px">True or false</span>' : '') + q.q + (tierOf(q) !== 'essential' ? ' ' + tierBadge(tierOf(q)) : '') + '</p>' +
       '<div class="opts' + (q.type === 'tf' ? ' tf-row' : '') + '">' + opts.map(function (o, i) { return '<button class="opt" data-i="' + i + '"><span class="k">' + keys[i] + '</span>' + o + '</button>'; }).join('') + '</div>' +
       '<div id="fb"></div>' +
       '<div class="quiz-actions"><button class="btn ghost" id="qQuit">End quiz</button><button class="btn" id="qNext" hidden>' + (quiz.i + 1 < quiz.pool.length ? 'Next question' : 'See results') + '</button></div>' +

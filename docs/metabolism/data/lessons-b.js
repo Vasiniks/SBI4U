@@ -470,4 +470,571 @@ window.LESSONS.push({
 `
 });
 
+/* ===================================================================
+   2.05 Regulation of Cellular Respiration
+   =================================================================== */
+window.LESSONS.push({
+  id: "2.05",
+  title: "Regulation of Cellular Respiration",
+  stage: "reg",
+  where: "Cytoplasm (PFK) and mitochondrial matrix (PDH, Krebs)",
+  summary: "Cells speed respiration up or slow it down to match their need for ATP. Two allosteric enzymes do most of the controlling: PFK in glycolysis and pyruvate dehydrogenase at the entrance to the mitochondrion, switched by signals such as ATP, ADP, citrate and NADH.",
+  objectives: [
+    "Explain why cellular respiration must be regulated, using the idea of matching supply to demand.",
+    "Define feedback inhibition and allosteric regulation, and distinguish an enzyme's active site from its allosteric site.",
+    "Explain why phosphofructokinase (PFK, step 3) is the main control point of glycolysis, and how ATP, ADP/AMP and citrate affect it.",
+    "List the activators and inhibitors of pyruvate dehydrogenase (PDH) and explain the logic behind each one.",
+    "Describe how the ATP/ADP balance, citrate and NADH coordinate glycolysis, the Krebs cycle and the ETC.",
+    "Predict how the pathway responds in real situations such as rest, sprinting, after a big meal and low oxygen."
+  ],
+  html: `
+<h3 data-tier="essential">Why regulate cellular respiration?</h3>
+<p>Your cells don't keep a big stockpile of ATP. At any moment there's only enough for a few seconds of hard work, so ATP is used and remade constantly. Over a day you recycle roughly your own body weight in ATP. ATP production therefore has to keep pace with ATP use, second by second:</p>
+<ul>
+<li><strong>If respiration runs too slowly</strong>, ATP runs out: muscles can't contract, ion pumps fail, and cells die.</li>
+<li><strong>If it runs too fast</strong>, fuel is wasted. Glucose gets burned when it could have been stored as glycogen or fat, and intermediates that could have been used to build other molecules get burned too.</li>
+</ul>
+<p>The goal is to <strong>match supply to demand</strong>, like a thermostat that turns the furnace on only when the house cools down. Cells do this with a few key enzymes that "sense" the cell's energy status and speed up or slow down. Control doesn't happen at every step. It happens at steps that are <strong>irreversible</strong> and that <strong>commit</strong> a molecule to the pathway, because that's where a single valve controls the whole flow.</p>
+<p>Many intermediates are also <strong>branch points</strong>. Glucose-6-phosphate can be stored as glycogen. Pyruvate can become acetyl-CoA, lactate, the amino acid alanine, or new glucose. Citrate can leave the mitochondrion and be used to build fatty acids. Regulation decides which way these molecules go.</p>
+
+<h3 data-tier="essential">Feedback inhibition</h3>
+<p><span class="term">Feedback inhibition</span> happens when a product made late in a pathway (often the end product) inhibits an enzyme near the <strong>start</strong> of that pathway. As the product builds up, the pathway slows. As the product is used up, the inhibition fades and the pathway speeds up again. It's negative feedback, so the system corrects itself.</p>
+<p>Examples in respiration:</p>
+<ul>
+<li><strong>ATP</strong>, the end product of the whole process, inhibits <strong>PFK</strong> near the beginning of glycolysis.</li>
+<li><strong>Citrate</strong>, made in the Krebs cycle, inhibits <strong>PFK</strong>, so a product of a later stage slows an earlier stage.</li>
+<li><strong>NADH</strong> and <strong>acetyl-CoA</strong>, the products of pyruvate oxidation, inhibit <strong>PDH</strong>, the enzyme that makes them.</li>
+</ul>
+<p><strong>Why inhibit near the start?</strong> If the cell blocked the <em>last</em> step instead, every intermediate before it would pile up, wasting the material and energy already spent making them. Stopping the flow at the source avoids that, like a factory that stops ordering raw materials when its warehouse is full, instead of letting half-built products stack up on the assembly line.</p>
+
+<h3 data-tier="essential">Allosteric enzymes</h3>
+<p>"Allo" means <em>other</em> and "steric" refers to <em>shape or space</em>, so "allosteric" means "at another site." An <span class="term">allosteric enzyme</span> has two kinds of binding sites:</p>
+<ul>
+<li>The <strong>active site</strong>, where the substrate binds and the reaction happens.</li>
+<li>One or more <strong>allosteric (regulatory) sites</strong>, elsewhere on the enzyme, where regulator molecules bind.</li>
+</ul>
+<p>When a regulator binds the allosteric site, the whole enzyme changes shape, and that change reaches the active site. An <strong>allosteric activator</strong> holds the enzyme in its active shape, so the substrate binds easily and the reaction speeds up. An <strong>allosteric inhibitor</strong> holds it in an inactive shape, so the substrate binds poorly and the reaction slows. Regulators bind weakly and <strong>reversibly</strong>: they attach and detach depending on how much of them is around. So an allosteric enzyme's activity always reflects the cell's <em>current</em> conditions. Allosteric enzymes are usually built from several subunits, which helps the shape change spread through the whole enzyme.</p>
+<figure class="diagram">
+<svg viewBox="0 0 640 230" role="img" aria-labelledby="s205a-title s205a-desc">
+<title id="s205a-title">How an allosteric activator and an allosteric inhibitor work</title>
+<desc id="s205a-desc">Left: an activator binds the allosteric site on the bottom of the enzyme, the active site on top keeps its rounded shape, and the substrate fits, so the enzyme is active. Right: an inhibitor binds the allosteric site, the active site changes to a narrow shape, and the substrate no longer fits, so the enzyme is slowed.</desc>
+<line x1="320" y1="30" x2="320" y2="215" stroke-width="1.5" style="stroke:var(--line)"/>
+<g stroke-width="2" style="fill:var(--etc-soft);stroke:var(--etc)">
+<path d="M90,70 L138,70 A22,22 0 0 0 182,70 L230,70 Q250,70 250,90 L250,150 Q250,170 230,170 L218,170 L200,148 L182,170 L90,170 Q70,170 70,150 L70,90 Q70,70 90,70 Z"/>
+<path d="M410,70 L468,70 L480,84 L492,70 L550,70 Q570,70 570,90 L570,150 Q570,170 550,170 L538,170 L520,148 L502,170 L410,170 Q390,170 390,150 L390,90 Q390,70 410,70 Z"/>
+</g>
+<g stroke-width="2" style="fill:var(--glyco-soft);stroke:var(--glyco)">
+<circle cx="160" cy="68" r="19"/>
+<circle cx="548" cy="44" r="17"/>
+</g>
+<polygon points="186,172 200,154 214,172" style="fill:var(--good)"/>
+<polygon points="506,172 520,154 534,172" style="fill:var(--bad)"/>
+<g stroke-width="1.5" style="stroke:var(--ink-2)">
+<line x1="128" y1="56" x2="142" y2="68"/>
+<line x1="454" y1="56" x2="472" y2="72"/>
+</g>
+<g font-family="inherit" font-size="12" style="fill:var(--ink)">
+<text x="160" y="18" font-size="13" font-weight="700" text-anchor="middle">Activator bound</text>
+<text x="480" y="18" font-size="13" font-weight="700" text-anchor="middle">Inhibitor bound</text>
+<text x="160" y="73" font-size="13" font-weight="700" text-anchor="middle">S</text>
+<text x="548" y="49" font-size="13" font-weight="700" text-anchor="middle">S</text>
+<text x="140" y="128" text-anchor="middle" style="fill:var(--ink-2)">enzyme</text>
+<text x="460" y="128" text-anchor="middle" style="fill:var(--ink-2)">enzyme</text>
+<text x="126" y="52" text-anchor="end">active site</text>
+<text x="186" y="50">substrate</text>
+<text x="176" y="192" text-anchor="end">allosteric site</text>
+<text x="222" y="192">activator</text>
+<text x="452" y="52" text-anchor="end">active site changed</text>
+<text x="496" y="192" text-anchor="end">allosteric site</text>
+<text x="542" y="192">inhibitor</text>
+<text x="160" y="216" text-anchor="middle" font-weight="700">substrate fits → enzyme active</text>
+<text x="480" y="216" text-anchor="middle" font-weight="700">active site changes shape → enzyme slowed</text>
+</g>
+</svg>
+<figcaption>An allosteric regulator never touches the active site. It binds a separate allosteric site and changes the enzyme's overall shape, which makes the active site fit the substrate better (activator) or worse (inhibitor).</figcaption>
+</figure>
+<div class="compare" data-tier="likely">
+<div><h4>Competitive inhibitor</h4><ul>
+<li>Looks like the substrate.</li>
+<li>Binds the <strong>active site</strong> itself and blocks it.</li>
+<li>Competes with the substrate, so lots of substrate can outcompete it.</li>
+</ul></div>
+<div><h4>Allosteric inhibitor</h4><ul>
+<li>Usually looks nothing like the substrate.</li>
+<li>Binds a <strong>different site</strong> and changes the enzyme's shape.</li>
+<li>Used by cells as a reversible "dimmer switch" for whole pathways (PFK, PDH).</li>
+</ul></div>
+</div>
+<div class="callout tip"><p class="callout-title">Memory trick</p><p><strong>Allosteric = "another site."</strong> Think of the volume knob on a speaker. You never touch the speaker cone (the active site), but turning the knob on the side changes what comes out.</p></div>
+
+<h3 data-tier="essential">Phosphofructokinase (PFK): the main control point of glycolysis</h3>
+<div class="eq">fructose-6-phosphate + ATP → fructose-1,6-bisphosphate + ADP &nbsp;(glycolysis step 3, enzyme PFK)</div>
+<p><strong>PFK is the main regulatory allosteric enzyme in glycolysis.</strong> Because it sets the speed of glycolysis, it also sets how fast pyruvate is supplied to everything downstream: pyruvate oxidation, the Krebs cycle and the ETC.</p>
+<h4>Why step 3?</h4>
+<ul>
+<li><strong>It is the first committed step.</strong> Before step 3, the sugar still has other options: glucose-6-phosphate can be stored as glycogen, and fructose-6-phosphate can be turned back into glucose-6-phosphate. Once fructose-1,6-bisphosphate is made, the only thing it can do is continue down glycolysis. The decision "burn this sugar or not" is made here.</li>
+<li><strong>It is irreversible in the cell.</strong> The reaction releases a lot of energy, so it acts as a true one-way valve.</li>
+<li><strong>It is early.</strong> Shutting the valve near the start means no half-processed intermediates pile up downstream.</li>
+<li><strong>It doesn't block storage.</strong> If the cell controlled glycolysis at step 1 instead, it would also stop glucose-6-phosphate from being made, and with it the ability to store glucose as glycogen. Controlling at step 3 stops glucose from being <em>burned</em> while still letting it be <em>stored</em>.</li>
+</ul>
+<h4>What turns PFK up or down, and why</h4>
+<div class="table-wrap"><table class="data">
+<thead><tr><th>Signal</th><th>Effect on PFK</th><th>What the signal means</th><th>Why that response makes sense</th></tr></thead>
+<tbody>
+<tr><td><strong>High ATP</strong></td><td>Inhibits</td><td>The cell has plenty of energy</td><td>No need to break down more glucose; save it (as glycogen or fat) for later. This is feedback inhibition by the end product.</td></tr>
+<tr><td><strong>High citrate</strong></td><td>Inhibits</td><td>The Krebs cycle is "full": it already has plenty of acetyl-CoA (often from fat breakdown)</td><td>Sending more pyruvate would just pile up. Citrate also makes ATP's inhibition stronger.</td></tr>
+<tr><td><strong>High ADP (and AMP)</strong></td><td>Stimulates</td><td>ATP is being used up faster than it's made</td><td>Speed up glycolysis to make more ATP. AMP appears when the cell is so short of energy that it pulls a phosphate off one ADP to rebuild another (2 ADP → ATP + AMP), so AMP is an emergency signal.</td></tr>
+<tr><td><strong>Low citrate</strong></td><td>Stimulates (inhibition removed)</td><td>The Krebs cycle is running low on fuel</td><td>Send more pyruvate toward acetyl-CoA to keep Krebs supplied.</td></tr>
+</tbody></table></div>
+<div class="callout key"><p class="callout-title">On the test</p><p>Slide wording: PFK is <strong>inhibited by high ATP</strong> and <strong>stimulated by high ADP and low citrate</strong>. High citrate inhibits it too. Always explain the <em>logic</em>: "ATP high means energy is plentiful, so there's no need to make more."</p></div>
+<h4 data-tier="likely">ATP is a substrate and an inhibitor at the same time?</h4>
+<p data-tier="likely">ATP is a substrate of PFK (it donates the phosphate in step 3), yet high ATP inhibits PFK. How can both be true? PFK has <strong>two different places</strong> where ATP can bind. The <strong>active site</strong> binds ATP strongly, so it is filled even when ATP is fairly low, and PFK works. The <strong>allosteric site</strong> binds ATP weakly, so it fills up only when ATP is abundant. When it does, PFK changes shape and slows down. Low ATP: only the active site is occupied, so PFK runs. High ATP: the allosteric site is occupied too, so PFK slows.</p>
+<p data-tier="extra"><strong>Beyond the slides:</strong> a drop in pH (more H<sup>+</sup>) also inhibits PFK. During extremely intense exercise this acts as a safety brake, slowing glycolysis before the muscle cell becomes dangerously acidic.</p>
+
+<h3 data-tier="essential">Pyruvate dehydrogenase (PDH): gatekeeper of the mitochondrion</h3>
+<div class="eq">pyruvate + CoA + NAD<sup>+</sup> → acetyl-CoA + CO<sub>2</sub> + NADH &nbsp;(pyruvate dehydrogenase complex)</div>
+<p>PDH carries out pyruvate oxidation, the link step. It decides whether pyruvate gets burned in the mitochondrion. This is another one-way, committed step: once pyruvate's carbons become acetyl-CoA, animal cells can't turn them back into pyruvate or glucose. Pyruvate that <em>isn't</em> sent through PDH can instead become lactate, alanine, or (in the liver) new glucose. That's why PDH, like PFK, is an <strong>allosteric enzyme</strong> controlled by several signals.</p>
+<div class="table-wrap"><table class="data">
+<thead><tr><th>Regulator</th><th>Effect on PDH</th><th>Slide's reason</th><th>The logic</th></tr></thead>
+<tbody>
+<tr><td><strong>Pyruvate</strong></td><td>Activates</td><td>High substrate supply</td><td>Lots of pyruvate is arriving from glycolysis. Process it before it piles up and stalls glycolysis.</td></tr>
+<tr><td><strong>ADP</strong></td><td>Activates</td><td>Signals low cellular energy</td><td>The cell needs ATP, so feed more acetyl-CoA to Krebs and the ETC.</td></tr>
+<tr><td><strong>NAD<sup>+</sup></strong></td><td>Activates</td><td>Reactant availability</td><td>PDH needs NAD<sup>+</sup> to accept electrons. Plenty of NAD<sup>+</sup> also means the ETC is keeping up with oxidizing NADH.</td></tr>
+<tr><td><strong>CoA</strong></td><td>Activates</td><td>Reactant availability</td><td>PDH needs free CoA to make acetyl-CoA. Free CoA means acetyl-CoA is being used up by Krebs, so there's room for more.</td></tr>
+<tr><td><strong>Acetyl-CoA</strong></td><td>Inhibits</td><td>Product feedback</td><td>Krebs already has plenty of fuel (often from fat breakdown), so pyruvate, and the glucose it came from, can be spared.</td></tr>
+<tr><td><strong>NADH</strong></td><td>Inhibits</td><td>Product feedback</td><td>The ETC isn't keeping up (or O<sub>2</sub> is low). Making more NADH would be pointless, and NAD<sup>+</sup> is scarce anyway.</td></tr>
+<tr><td><strong>ATP</strong></td><td>Inhibits</td><td>Signals high energy supply</td><td>Energy is plentiful, so there's no need to burn more fuel.</td></tr>
+</tbody></table></div>
+<div class="callout tip"><p class="callout-title">Memory trick</p><p><strong>"Empty says go, full says stop."</strong> The regulators come in three pairs. In each pair, the "empty" form activates PDH and the "full" form inhibits it:</p><ul><li><strong>ADP</strong> (empty, go) vs <strong>ATP</strong> (full, stop)</li><li><strong>NAD<sup>+</sup></strong> (empty carrier, go) vs <strong>NADH</strong> (full carrier, stop)</li><li><strong>CoA</strong> (empty, go) vs <strong>acetyl-CoA</strong> (carrying an acetyl group, stop)</li></ul><p>Plus <strong>pyruvate</strong>, PDH's own substrate, says go. What really matters is the ratios: high ATP/ADP, high NADH/NAD<sup>+</sup> and high acetyl-CoA/CoA all slow PDH down.</p></div>
+<div class="callout teacher"><p class="callout-title">Said in class</p><p>Pyruvate oxidation is regulated by <strong>ATP and O<sub>2</sub> levels</strong>. When ATP is high, pyruvate doesn't get sent into the mitochondria. The O<sub>2</sub> link works through NADH: low O<sub>2</sub> stalls the ETC, NADH builds up, and NADH inhibits PDH. So when oxygen is short, pyruvate is diverted to fermentation (lesson 2.07) instead of entering the mitochondrion.</p></div>
+<p data-tier="extra"><strong>Beyond the slides:</strong> besides direct allosteric control, PDH is switched off by having a phosphate group attached to it (by an enzyme called PDH kinase) and switched back on when the phosphate is removed. The kinase is activated by ATP, NADH and acetyl-CoA and inhibited by pyruvate and ADP, so it follows the same logic as the table above.</p>
+
+<h3 data-tier="essential">Controlling the whole pathway</h3>
+<p>The class slide sums it up: <strong>aerobic respiration is regulated by the relative concentrations of ATP and ADP, and by the concentrations of citrate and NADH.</strong> Each signal links one stage to another:</p>
+<ul>
+<li><strong>ATP vs ADP (energy status).</strong> High ATP slows PFK, PDH and key Krebs enzymes; high ADP speeds them up. ADP is also a <em>substrate</em> of ATP synthase. When ADP runs short, ATP synthase slows, H<sup>+</sup> stops flowing back, and the gradient becomes so steep that the pumps can't push more H<sup>+</sup> against it. Electron flow then slows. So the ETC slows automatically when ATP isn't needed, and speeds up as soon as ADP appears.</li>
+<li><strong>Citrate.</strong> The first product of the Krebs cycle. High citrate means Krebs is saturated, and it slows PFK. It's a message from the mitochondrion to the cytoplasm that keeps glycolysis from outrunning Krebs.</li>
+<li><strong>NADH.</strong> High NADH means the ETC can't oxidize it fast enough. It slows PDH and the NADH-producing enzymes inside the Krebs cycle, because making more NADH would be useless until the ETC catches up.</li>
+</ul>
+<p>The result is that every stage is linked. The cell's demand for ATP "pulls" the whole pathway: using ATP produces ADP, ADP activates PFK, PDH and ATP synthase, the ETC speeds up and regenerates NAD<sup>+</sup>, and Krebs and pyruvate oxidation speed up in turn.</p>
+<figure class="diagram">
+<svg viewBox="0 0 640 500" role="img" aria-labelledby="s205b-title s205b-desc">
+<title id="s205b-title">Regulation map of cellular respiration</title>
+<desc id="s205b-desc">The pathway runs down the centre: glucose, fructose-6-phosphate, PFK, fructose-1,6-bisphosphate, steps 4 to 10, pyruvate, PDH, acetyl-CoA, Krebs cycle, ETC and chemiosmosis. On the left, red lines with flat ends show inhibitors: high ATP and high citrate inhibit PFK; high ATP, high NADH and high acetyl-CoA inhibit PDH. On the right, green arrows show activators: high ADP or AMP and low citrate activate PFK; high pyruvate, high ADP, NAD+ and free CoA activate PDH.</desc>
+<defs>
+<marker id="m205b-a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0 L10,5 L0,10 z" style="fill:var(--ink-2)"/></marker>
+<marker id="m205b-g" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="10" markerHeight="10" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0 L10,5 L0,10 z" style="fill:var(--good)"/></marker>
+<marker id="m205b-r" viewBox="0 0 4 16" refX="2" refY="8" markerWidth="4" markerHeight="16" markerUnits="userSpaceOnUse" orient="auto"><rect x="0" y="0" width="4" height="16" style="fill:var(--bad)"/></marker>
+</defs>
+<g stroke-width="2" style="fill:var(--surface);stroke:var(--line)">
+<rect x="230" y="14" width="180" height="30" rx="6"/>
+<rect x="230" y="66" width="180" height="30" rx="6"/>
+<rect x="230" y="170" width="180" height="30" rx="6"/>
+<rect x="230" y="250" width="180" height="30" rx="6"/>
+<rect x="230" y="354" width="180" height="30" rx="6"/>
+</g>
+<rect x="230" y="118" width="180" height="30" rx="6" stroke-width="2.5" style="fill:var(--glyco-soft);stroke:var(--glyco)"/>
+<rect x="230" y="302" width="180" height="30" rx="6" stroke-width="2.5" style="fill:var(--link-soft);stroke:var(--link)"/>
+<rect x="230" y="406" width="180" height="30" rx="15" stroke-width="2" style="fill:var(--krebs-soft);stroke:var(--krebs)"/>
+<rect x="230" y="458" width="180" height="30" rx="6" stroke-width="2" style="fill:var(--etc-soft);stroke:var(--etc)"/>
+<g stroke-width="2" style="stroke:var(--ink-2)">
+<line x1="320" y1="44" x2="320" y2="64" marker-end="url(#m205b-a)"/>
+<line x1="320" y1="96" x2="320" y2="116" marker-end="url(#m205b-a)"/>
+<line x1="320" y1="148" x2="320" y2="168" marker-end="url(#m205b-a)"/>
+<line x1="320" y1="200" x2="320" y2="248" stroke-dasharray="5 4" marker-end="url(#m205b-a)"/>
+<line x1="320" y1="280" x2="320" y2="300" marker-end="url(#m205b-a)"/>
+<line x1="320" y1="332" x2="320" y2="352" marker-end="url(#m205b-a)"/>
+<line x1="320" y1="384" x2="320" y2="404" marker-end="url(#m205b-a)"/>
+<line x1="320" y1="436" x2="320" y2="456" marker-end="url(#m205b-a)"/>
+</g>
+<g stroke-width="2" style="fill:var(--surface);stroke:var(--bad)">
+<rect x="10" y="97" width="160" height="26" rx="6"/>
+<rect x="10" y="139" width="160" height="26" rx="6"/>
+<rect x="10" y="270" width="160" height="24" rx="6"/>
+<rect x="10" y="305" width="160" height="24" rx="6"/>
+<rect x="10" y="340" width="160" height="24" rx="6"/>
+</g>
+<g stroke-width="2" style="fill:var(--surface);stroke:var(--good)">
+<rect x="470" y="97" width="160" height="26" rx="6"/>
+<rect x="470" y="139" width="160" height="26" rx="6"/>
+<rect x="470" y="254" width="160" height="24" rx="6"/>
+<rect x="470" y="288" width="160" height="24" rx="6"/>
+<rect x="470" y="322" width="160" height="24" rx="6"/>
+<rect x="470" y="356" width="160" height="24" rx="6"/>
+</g>
+<g stroke-width="2.5" style="stroke:var(--bad)">
+<line x1="170" y1="110" x2="228" y2="125" marker-end="url(#m205b-r)"/>
+<line x1="170" y1="152" x2="228" y2="141" marker-end="url(#m205b-r)"/>
+<line x1="170" y1="282" x2="228" y2="306" marker-end="url(#m205b-r)"/>
+<line x1="170" y1="317" x2="228" y2="317" marker-end="url(#m205b-r)"/>
+<line x1="170" y1="352" x2="228" y2="328" marker-end="url(#m205b-r)"/>
+<line x1="20" y1="456" x2="58" y2="456" marker-end="url(#m205b-r)"/>
+</g>
+<g stroke-width="2.5" style="stroke:var(--good)">
+<line x1="470" y1="110" x2="412" y2="128" marker-end="url(#m205b-g)"/>
+<line x1="470" y1="152" x2="412" y2="138" marker-end="url(#m205b-g)"/>
+<line x1="470" y1="266" x2="412" y2="307" marker-end="url(#m205b-g)"/>
+<line x1="470" y1="300" x2="412" y2="313" marker-end="url(#m205b-g)"/>
+<line x1="470" y1="334" x2="412" y2="321" marker-end="url(#m205b-g)"/>
+<line x1="470" y1="368" x2="412" y2="327" marker-end="url(#m205b-g)"/>
+<line x1="20" y1="430" x2="60" y2="430" marker-end="url(#m205b-g)"/>
+</g>
+<g font-family="inherit" font-size="13" text-anchor="middle" style="fill:var(--ink)">
+<text x="320" y="34">glucose</text>
+<text x="320" y="86">fructose-6-phosphate</text>
+<text x="320" y="138" font-weight="700">PFK (step 3)</text>
+<text x="320" y="190" font-size="12">fructose-1,6-bisphosphate</text>
+<text x="320" y="270">pyruvate</text>
+<text x="320" y="322" font-weight="700">PDH complex</text>
+<text x="320" y="374">acetyl-CoA</text>
+<text x="320" y="426">Krebs cycle</text>
+<text x="320" y="478">ETC + chemiosmosis</text>
+<text x="90" y="115">ATP (high)</text>
+<text x="90" y="157">citrate (high)</text>
+<text x="90" y="287">ATP (high)</text>
+<text x="90" y="322">NADH (high)</text>
+<text x="90" y="357">acetyl-CoA (high)</text>
+<text x="550" y="115">ADP / AMP (high)</text>
+<text x="550" y="157">citrate (low)</text>
+<text x="550" y="271">pyruvate (high)</text>
+<text x="550" y="305">ADP (high)</text>
+<text x="550" y="339">NAD⁺ (high)</text>
+<text x="550" y="373">CoA (free)</text>
+</g>
+<g font-family="inherit" font-size="12" font-weight="700" text-anchor="middle">
+<text x="90" y="88" style="fill:var(--bad)">inhibit PFK (−)</text>
+<text x="550" y="88" style="fill:var(--good)">activate PFK (+)</text>
+<text x="90" y="260" style="fill:var(--bad)">inhibit PDH (−)</text>
+<text x="550" y="244" style="fill:var(--good)">activate PDH (+)</text>
+</g>
+<g font-family="inherit" font-size="12" style="fill:var(--ink-2)">
+<text x="330" y="229">steps 4–10</text>
+<text x="70" y="434" style="fill:var(--ink)">activates (+)</text>
+<text x="70" y="460" style="fill:var(--ink)">inhibits (−)</text>
+<text x="466" y="430">ATP, NADH and citrate are</text>
+<text x="466" y="447">made by later stages and</text>
+<text x="466" y="464">feed back on earlier ones.</text>
+</g>
+</svg>
+<figcaption>Regulation map. Green arrows activate; red lines ending in a bar inhibit. PFK controls glycolysis and PDH controls entry into the mitochondrion. Products made further down (ATP, citrate, NADH, acetyl-CoA) slow the enzymes upstream: feedback inhibition.</figcaption>
+</figure>
+<p data-tier="extra">Inside the Krebs cycle itself (beyond the slides), the enzymes that make NADH, such as isocitrate dehydrogenase, are also slowed by NADH and ATP and sped up by ADP. It's the same logic again.</p>
+
+<h3 data-tier="likely">Scenarios: putting it together</h3>
+<p>Tests often give you a situation and ask what happens. Work through it in this order: <strong>What is the energy status (ATP vs ADP)? Is O<sub>2</sub> available (what is NADH doing)? Is fuel piling up (citrate, acetyl-CoA)?</strong> Then apply the regulators.</p>
+<h4>1. Resting on the couch</h4>
+<p>ATP is high and ADP is low. Krebs is well supplied, so citrate and NADH are high. PFK is inhibited (high ATP and citrate) and PDH is inhibited (high ATP and NADH). Respiration idles at a low rate. Glucose entering cells is turned into glucose-6-phosphate and stored as glycogen. That's possible because the brake is at step 3, not step 1. Resting muscle actually gets much of its energy from fat: acetyl-CoA from fat breakdown inhibits PDH and the resulting citrate inhibits PFK, which <strong>spares glucose</strong> for the brain.</p>
+<h4>2. Sprinting</h4>
+<p>Muscle hydrolyzes ATP extremely fast, so ADP and AMP rise sharply. PFK is strongly activated and glycolysis speeds up dramatically. ADP and the flood of pyruvate also activate PDH, and Krebs and the ETC speed up. But O<sub>2</sub> delivery to the muscle can't keep up. The ETC slows locally, NADH builds up and NAD<sup>+</sup> falls. High NADH inhibits PDH, so extra pyruvate is turned into lactate (fermentation), which regenerates NAD<sup>+</sup> so glycolysis can keep making ATP. (More in lesson 2.07.)</p>
+<h4>3. After a big meal, sitting down</h4>
+<p>Lots of glucose is available, but ATP demand is low. ATP and citrate are high, so PFK slows. Glucose is stored as glycogen in the liver and muscles. Extra citrate is exported from the mitochondrion into the cytoplasm, where it is used to build fatty acids, so surplus energy ends up stored as fat. (Beyond the slides: in the liver, the hormone insulin triggers production of an extra PFK activator that overrides ATP's brake, so excess glucose can be turned into fat. You won't be tested on this.)</p>
+<h4>4. Oxygen cut off (holding your breath, or cyanide)</h4>
+<p>The ETC stops, so NADH soars and NAD<sup>+</sup> crashes. PDH and the Krebs cycle are inhibited. ATP falls and ADP/AMP rise, so PFK is activated and glycolysis runs flat out, kept going only by fermentation. The cell burns through glucose very quickly for just 2 ATP each.</p>
+<div class="table-wrap"><table class="data">
+<thead><tr><th>Situation</th><th>ATP / ADP</th><th>NADH</th><th>Citrate</th><th>PFK</th><th>PDH</th><th>Outcome</th></tr></thead>
+<tbody>
+<tr><td>Resting</td><td>ATP high</td><td>High</td><td>High</td><td>Slowed</td><td>Slowed</td><td>Respiration idles; glucose stored; fat used</td></tr>
+<tr><td>Sprinting</td><td>ADP/AMP high</td><td>Rising (low O<sub>2</sub>)</td><td>Low</td><td>Strongly on</td><td>On, then held back by NADH</td><td>Fast glycolysis; extra pyruvate becomes lactate</td></tr>
+<tr><td>After a big meal</td><td>ATP high</td><td>High</td><td>High</td><td>Slowed</td><td>Slowed</td><td>Glucose to glycogen; citrate to fat</td></tr>
+<tr><td>No O<sub>2</sub></td><td>ADP/AMP high</td><td>Very high</td><td>Falls</td><td>On</td><td>Off</td><td>Glycolysis + fermentation only (2 ATP)</td></tr>
+</tbody></table></div>
+
+<h3 data-tier="essential">Quick checks</h3>
+<details class="check"><summary>Why does the cell regulate cellular respiration at all?</summary><div class="ans"><p>To match ATP production to ATP demand. The cell stores very little ATP, so it must make ATP as fast as it's used. Making too little starves the cell; making too much wastes fuel that could have been stored (as glycogen or fat) or used to build other molecules.</p></div></details>
+<details class="check"><summary>What does "allosteric" mean, and how does an allosteric inhibitor slow an enzyme?</summary><div class="ans"><p>Allosteric means "another site." An allosteric inhibitor binds a regulatory site that is separate from the active site. This changes the shape of the whole enzyme, including the active site, so the substrate binds poorly and the reaction slows. The binding is reversible, so activity follows the inhibitor's concentration.</p></div></details>
+<details class="check"><summary>Define feedback inhibition and give an example from cellular respiration.</summary><div class="ans"><p>Feedback inhibition is when a product made late in a pathway inhibits an enzyme early in the pathway, so the pathway slows as product builds up. Example: ATP, the end product of respiration, allosterically inhibits PFK at step 3 of glycolysis. (Also: NADH and acetyl-CoA inhibit PDH; citrate inhibits PFK.)</p></div></details>
+<details class="check"><summary>Why is PFK, rather than hexokinase (step 1), the main control point of glycolysis?</summary><div class="ans"><p>Step 3 is the first committed step. Before it, glucose-6-phosphate can still be stored as glycogen, but fructose-1,6-bisphosphate can only continue through glycolysis. Controlling at step 3 stops glucose from being burned without blocking its storage. The step is also irreversible and early, so no intermediates pile up downstream.</p></div></details>
+<details class="check"><summary>A cell has high ATP and high citrate. What happens to PFK and to the rate of glycolysis? Why does this make sense?</summary><div class="ans"><p>Both ATP and citrate inhibit PFK, so glycolysis slows. High ATP means energy is plentiful; high citrate means the Krebs cycle already has plenty of fuel. Making more pyruvate would waste glucose that can be stored instead.</p></div></details>
+<details class="check"><summary>Sort these into activators and inhibitors of PDH: ATP, NAD<sup>+</sup>, acetyl-CoA, pyruvate, NADH, CoA, ADP.</summary><div class="ans"><p><strong>Activators:</strong> pyruvate (substrate supply), ADP (low energy), NAD<sup>+</sup> and CoA (reactant availability). <strong>Inhibitors:</strong> acetyl-CoA and NADH (product feedback), ATP (high energy). Trick: the "empty" forms (ADP, NAD<sup>+</sup>, CoA) say go; the "full" forms (ATP, NADH, acetyl-CoA) say stop.</p></div></details>
+<details class="check"><summary>Explain why NADH inhibits PDH, using the term "feedback."</summary><div class="ans"><p>NADH is a product of the PDH reaction, so its inhibition of PDH is product (feedback) inhibition. High NADH means the ETC isn't oxidizing NADH fast enough (for example, because O<sub>2</sub> is low), so NAD<sup>+</sup> is scarce and making more NADH would be useless. Slowing PDH prevents a pile-up and sends pyruvate toward other fates, such as lactate.</p></div></details>
+<details class="check"><summary>ATP is a substrate of PFK, yet high ATP inhibits PFK. Explain.</summary><div class="ans"><p>PFK binds ATP at two different sites. The active site binds ATP strongly (as the phosphate donor) and is filled even at low ATP. The allosteric site binds ATP weakly and fills only when ATP is abundant. When it does, PFK changes shape and slows down. So ATP is used as a substrate at normal levels but acts as an inhibitor when there's a surplus.</p></div></details>
+<details class="check" data-tier="likely"><summary>If ATP synthase suddenly stopped working, predict what would happen to NADH levels and to PDH activity.</summary><div class="ans"><p>With ATP synthase blocked, H<sup>+</sup> can't flow back, so the gradient builds up until the pumps can't push more H<sup>+</sup>. Electron flow stops, and NADH can no longer be oxidized: NADH rises and NAD<sup>+</sup> falls. High NADH (and falling NAD<sup>+</sup>) inhibits PDH, so pyruvate oxidation and the Krebs cycle slow down. Meanwhile ATP falls and ADP rises, which activates PFK, and the cell relies on glycolysis and fermentation.</p></div></details>
+<details class="check" data-tier="likely"><summary>During a sprint, why does extra pyruvate become lactate instead of acetyl-CoA, even though ADP is high?</summary><div class="ans"><p>O<sub>2</sub> delivery can't keep up, so the ETC slows and NADH accumulates. High NADH (a product inhibitor) holds PDH back even though ADP is activating it, and NAD<sup>+</sup> (needed by PDH) is scarce. Pyruvate is instead reduced to lactate, which regenerates the NAD<sup>+</sup> that glycolysis needs to keep making ATP.</p></div></details>
+
+<h3 data-tier="essential">Lesson summary</h3>
+<ul>
+<li>Respiration is regulated to <strong>match ATP supply to demand</strong>: too little ATP kills cells, and too much wastes fuel that could be stored.</li>
+<li><strong>Feedback inhibition:</strong> a late product inhibits an early enzyme (ATP inhibits PFK; NADH and acetyl-CoA inhibit PDH; citrate inhibits PFK).</li>
+<li><strong>Allosteric enzymes</strong> have an active site and a separate allosteric (regulatory) site. Regulators bind reversibly and change the enzyme's shape, activating or inhibiting it.</li>
+<li><strong>PFK</strong> (step 3) is the <strong>main regulatory allosteric enzyme of glycolysis</strong> because step 3 is the first committed, irreversible step.</li>
+<li>PFK is <strong>inhibited by high ATP and high citrate</strong> and <strong>stimulated by high ADP/AMP and low citrate</strong>.</li>
+<li><strong>PDH</strong> (allosteric) is <strong>activated by pyruvate</strong> (substrate supply), <strong>ADP</strong> (low energy), and <strong>NAD<sup>+</sup> and CoA</strong> (reactant availability). It is <strong>inhibited by acetyl-CoA and NADH</strong> (product feedback) and <strong>ATP</strong> (high energy). "Empty says go, full says stop."</li>
+<li>Overall, <strong>aerobic respiration is regulated by the relative concentrations of ATP and ADP, and by citrate and NADH</strong>. ADP availability also controls ATP synthase and therefore the ETC.</li>
+<li>Low O<sub>2</sub>: NADH rises, PDH is inhibited, and pyruvate goes to fermentation. Low ATP: ADP/AMP rise, PFK is activated, and glycolysis speeds up.</li>
+</ul>
+`
+});
+
+/* ===================================================================
+   2.06 Lipid & Protein Catabolism
+   =================================================================== */
+window.LESSONS.push({
+  id: "2.06",
+  title: "Lipid & Protein Catabolism",
+  stage: "cat",
+  where: "Cytoplasm, mitochondrial matrix and liver",
+  summary: "When glycogen runs low, cells burn fats and then proteins as alternate fuels. Each is first hydrolyzed into monomers, which are converted into molecules that join cellular respiration at glycolysis, pyruvate, acetyl-CoA or the Krebs cycle.",
+  objectives: [
+    "Describe how the breakdown pathways for carbohydrates, lipids, proteins and nucleic acids connect to cellular respiration.",
+    "State the order in which the body uses its fuels and explain why nucleic acids are rarely used for energy.",
+    "Define hydrolysis, gluconeogenesis, β-oxidation and deamination.",
+    "Explain how glycerol and fatty acids enter cellular respiration, and why fats store so much energy.",
+    "Explain how amino acids are deaminated in the liver, what happens to the ammonia, and where their carbon skeletons enter respiration.",
+    "Describe how lipids and proteins enter the metabolic cycles of cellular respiration (review Q17)."
+  ],
+  html: `
+<h3 data-tier="essential">The interconnections of metabolic pathways</h3>
+<p>So far, every lesson has followed glucose. But you also eat fats and proteins, and your body stores fat in large amounts. The cell doesn't need a separate set of machinery for each fuel. Instead, the breakdown of every kind of macromolecule <strong>funnels into the same pathways</strong> you already know: glycolysis, pyruvate oxidation, the Krebs cycle and the ETC. Glycolysis and the Krebs cycle act as a central hub for metabolism.</p>
+<p>There are only a few <strong>entry points</strong>:</p>
+<ul>
+<li><strong>Glycolysis:</strong> simple sugars, and glycerol from fats (as DHAP).</li>
+<li><strong>Pyruvate:</strong> some amino acids (such as alanine and glycine).</li>
+<li><strong>Acetyl-CoA:</strong> fatty acids (by β-oxidation) and some amino acids (such as leucine and lysine).</li>
+<li><strong>Krebs cycle intermediates:</strong> some amino acids enter directly (such as glutamate as α-ketoglutarate).</li>
+</ul>
+<p>Whatever the fuel, the final products are the same: <strong>CO<sub>2</sub></strong> and <strong>H<sub>2</sub>O</strong> (plus ATP). Proteins add one more waste product, <strong>ammonia (NH<sub>3</sub>)</strong>, from their nitrogen.</p>
+<figure class="diagram">
+<svg viewBox="0 0 640 500" role="img" aria-labelledby="s206a-title s206a-desc">
+<title id="s206a-title">How all classes of nutrients enter cellular respiration</title>
+<desc id="s206a-desc">Top row: nucleic acids, proteins, polysaccharides and lipids are hydrolyzed into nucleotides, amino acids, simple sugars, and glycerol plus fatty acids. Nucleotides are rarely used because their parts are recycled. Amino acids are deaminated in the liver, giving ammonia, which becomes urea, and carbon skeletons that enter at pyruvate, acetyl-CoA or the Krebs cycle. Simple sugars enter glycolysis. Glycerol enters glycolysis as DHAP. Fatty acids undergo beta-oxidation to acetyl-CoA. Glycolysis leads to pyruvate, then acetyl-CoA, the Krebs cycle, which releases carbon dioxide, and the ETC, which makes ATP and water.</desc>
+<defs>
+<marker id="m206a-a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0 L10,5 L0,10 z" style="fill:var(--ink-2)"/></marker>
+</defs>
+<g stroke-width="2" style="fill:var(--surface);stroke:var(--line)">
+<rect x="10" y="12" width="130" height="30" rx="6"/>
+<rect x="160" y="12" width="140" height="30" rx="6"/>
+<rect x="320" y="12" width="140" height="30" rx="6"/>
+<rect x="474" y="12" width="160" height="30" rx="6"/>
+<rect x="10" y="92" width="130" height="30" rx="6"/>
+<rect x="160" y="92" width="140" height="30" rx="6"/>
+<rect x="320" y="92" width="140" height="30" rx="6"/>
+<rect x="474" y="92" width="70" height="30" rx="6"/>
+<rect x="552" y="92" width="82" height="30" rx="6"/>
+<rect x="160" y="172" width="140" height="30" rx="6"/>
+<rect x="320" y="238" width="140" height="30" rx="6"/>
+<rect x="482" y="385" width="80" height="30" rx="6"/>
+</g>
+<rect x="10" y="160" width="120" height="40" rx="6" stroke-width="2" stroke-dasharray="5 4" style="fill:var(--surface-2);stroke:var(--ink-2)"/>
+<rect x="10" y="236" width="130" height="40" rx="6" stroke-width="2" style="fill:var(--proton-soft);stroke:var(--proton)"/>
+<rect x="320" y="160" width="140" height="30" rx="6" stroke-width="2" style="fill:var(--glyco-soft);stroke:var(--glyco)"/>
+<rect x="320" y="308" width="140" height="30" rx="6" stroke-width="2" style="fill:var(--link-soft);stroke:var(--link)"/>
+<circle cx="390" cy="400" r="34" stroke-width="2" style="fill:var(--krebs-soft);stroke:var(--krebs)"/>
+<rect x="320" y="452" width="140" height="30" rx="6" stroke-width="2" style="fill:var(--etc-soft);stroke:var(--etc)"/>
+<g stroke-width="2" fill="none" style="stroke:var(--ink-2)">
+<line x1="75" y1="42" x2="75" y2="90" marker-end="url(#m206a-a)"/>
+<line x1="230" y1="42" x2="230" y2="90" marker-end="url(#m206a-a)"/>
+<line x1="390" y1="42" x2="390" y2="90" marker-end="url(#m206a-a)"/>
+<line x1="540" y1="42" x2="512" y2="90" marker-end="url(#m206a-a)"/>
+<line x1="568" y1="42" x2="590" y2="90" marker-end="url(#m206a-a)"/>
+<line x1="70" y1="122" x2="70" y2="158" marker-end="url(#m206a-a)"/>
+<line x1="230" y1="122" x2="230" y2="170" marker-end="url(#m206a-a)"/>
+<path d="M160,107 L150,107 L150,256 L142,256" marker-end="url(#m206a-a)"/>
+<line x1="390" y1="122" x2="390" y2="158" marker-end="url(#m206a-a)"/>
+<line x1="390" y1="190" x2="390" y2="236" marker-end="url(#m206a-a)"/>
+<line x1="390" y1="268" x2="390" y2="306" marker-end="url(#m206a-a)"/>
+<line x1="390" y1="338" x2="390" y2="364" marker-end="url(#m206a-a)"/>
+<line x1="390" y1="434" x2="390" y2="450" marker-end="url(#m206a-a)"/>
+<line x1="509" y1="122" x2="462" y2="172" marker-end="url(#m206a-a)"/>
+<path d="M593,122 L593,323 L462,323" marker-end="url(#m206a-a)"/>
+<path d="M230,202 L230,400"/>
+<line x1="230" y1="253" x2="318" y2="253" marker-end="url(#m206a-a)"/>
+<line x1="230" y1="323" x2="318" y2="323" marker-end="url(#m206a-a)"/>
+<line x1="230" y1="400" x2="354" y2="400" marker-end="url(#m206a-a)"/>
+<line x1="424" y1="400" x2="480" y2="400" marker-end="url(#m206a-a)"/>
+</g>
+<g font-family="inherit" font-size="13" text-anchor="middle" style="fill:var(--ink)">
+<text x="75" y="32" font-weight="700">Nucleic acids</text>
+<text x="230" y="32" font-weight="700">Proteins</text>
+<text x="390" y="32" font-weight="700">Polysaccharides</text>
+<text x="554" y="32" font-weight="700">Lipids (fats)</text>
+<text x="75" y="112">Nucleotides</text>
+<text x="230" y="112">Amino acids</text>
+<text x="390" y="112">Simple sugars</text>
+<text x="509" y="112" font-size="12">Glycerol</text>
+<text x="593" y="112" font-size="12">Fatty acids</text>
+<text x="70" y="176" font-size="12">rarely used:</text>
+<text x="70" y="193" font-size="12">parts recycled</text>
+<text x="230" y="192">Carbon skeletons</text>
+<text x="75" y="253" font-weight="700">NH₃ (ammonia)</text>
+<text x="75" y="270" font-size="12">→ urea, excreted</text>
+<text x="390" y="180">Glycolysis</text>
+<text x="390" y="258">Pyruvate</text>
+<text x="390" y="328">Acetyl-CoA</text>
+<text x="390" y="398">Krebs</text>
+<text x="390" y="414">cycle</text>
+<text x="390" y="472">ETC → ATP + H₂O</text>
+<text x="522" y="405">CO₂</text>
+</g>
+<g font-family="inherit" font-size="12" style="fill:var(--ink-2)">
+<text x="83" y="72">hydrolysis</text>
+<text x="238" y="146">deamination</text>
+<text x="238" y="161">(in the liver)</text>
+<text x="488" y="162">as DHAP</text>
+<text x="585" y="230" text-anchor="end">β-oxidation</text>
+<text x="12" y="466" font-size="13" font-weight="700" style="fill:var(--ink)">Final products:</text>
+<text x="12" y="484">NH₃, CO₂, H₂O (+ ATP)</text>
+</g>
+</svg>
+<figcaption>All classes of nutrients can be used for energy. Macromolecules are hydrolyzed into monomers (top two rows), and the monomers join cellular respiration at a few entry points. The final products are NH<sub>3</sub> (from proteins), CO<sub>2</sub> and H<sub>2</sub>O.</figcaption>
+</figure>
+
+<h3 data-tier="essential">When and in what order fuels are used</h3>
+<p>Lipid and protein catabolism kicks in <strong>when glycogen stores are low</strong>. Fats and proteins act as an <strong>alternate source of energy</strong>. The body uses its fuels in a clear order:</p>
+<ol class="steps">
+<li><p class="step-head">Carbohydrates first</p><p>Blood glucose and glycogen (stored in the liver and muscles) are the quickest to use. Glucose can also be broken down without oxygen (glycolysis + fermentation), and the brain and red blood cells depend on it. But glycogen stores are small, enough for less than a day without food.</p></li>
+<li><p class="step-head">Lipids (fats) second</p><p>Fat is the body's main long-term energy store, and there's a lot of it. It's slower to mobilize, and burning fatty acids requires oxygen, because they enter as acetyl-CoA and have to go through Krebs and the ETC.</p></li>
+<li><p class="step-head">Proteins last</p><p>Proteins aren't stored as fuel. Every protein has a job: enzymes, muscle fibres, transporters, antibodies, hormones. Burning protein means breaking down working tissue (mostly muscle), and it produces toxic ammonia. Heavy protein use happens only in <strong>severe fasting or starvation</strong>.</p></li>
+<li><p class="step-head">Nucleic acids: rarely</p><p>DNA and RNA make up a small fraction of the cell, and their parts (bases, sugars, phosphates) are valuable. Instead of being burned, <strong>the components are usually recycled</strong> to build new nucleic acids.</p></li>
+</ol>
+<div class="callout teacher"><p class="callout-title">Said in class</p><p>Lipids are consumed before proteins, and proteins before nucleic acids. Protein breakdown for energy only happens during <strong>severe fasting</strong>.</p></div>
+<p data-tier="likely">One nuance: even early in a fast, a little protein is broken down. The brain needs glucose, and as you'll see below, fatty acids can't be turned into glucose, so some amino acids are used to make it. Large-scale protein breakdown is what marks true starvation.</p>
+
+<h3 data-tier="essential">Key term: gluconeogenesis</h3>
+<p><span class="term">Gluconeogenesis</span> means making new glucose from non-carbohydrate sources ("gluco" = glucose, "neo" = new, "genesis" = creation). The raw materials include <strong>glycerol</strong> (from fats), <strong>lactate</strong> (from fermentation), and the carbon skeletons of many <strong>amino acids</strong>. It happens mainly in the <strong>liver</strong>.</p>
+<p><strong>Why bother?</strong> When glycogen runs out, blood glucose still has to stay up, because the brain and red blood cells depend on it. Red blood cells have no mitochondria, so they can only use glucose (by glycolysis), and the brain can't use fatty acids directly. Gluconeogenesis is <strong>anabolic</strong>: it costs ATP, roughly the reverse of glycolysis, but it uses different enzymes for the three irreversible steps.</p>
+<div class="callout warn"><p class="callout-title">Common mistake</p><p>Gluconeogenesis is not the same as glycogenolysis (breaking stored glycogen back down into glucose) or glycogenesis (making glycogen). <strong>Neo = new</strong>: gluconeogenesis builds glucose from scratch out of molecules that weren't sugars.</p></div>
+
+<h3 data-tier="essential">Step 1: hydrolysis into monomers</h3>
+<p>Before any macromolecule can enter respiration, it is <strong>hydrolyzed into its monomers</strong>. <span class="term">Hydrolysis</span> means breaking a bond by adding water (the reverse of dehydration synthesis). It's catabolic and is carried out by digestive and cellular enzymes:</p>
+<div class="table-wrap"><table class="data">
+<thead><tr><th>Macromolecule</th><th>Hydrolyzed into</th><th>Enters respiration as</th></tr></thead>
+<tbody>
+<tr><td>Polysaccharides (starch, glycogen)</td><td>Simple sugars (glucose)</td><td>Glycolysis</td></tr>
+<tr><td>Lipids (triglycerides / fats)</td><td>Glycerol + 3 fatty acids</td><td>Glycerol → DHAP (glycolysis); fatty acids → acetyl-CoA</td></tr>
+<tr><td>Proteins</td><td>Amino acids</td><td>After deamination: pyruvate, acetyl-CoA or Krebs intermediates</td></tr>
+<tr><td>Nucleic acids</td><td>Nucleotides</td><td>Rarely used; parts are recycled</td></tr>
+</tbody></table></div>
+
+<h3 data-tier="essential">Lipid catabolism</h3>
+<p>A fat (triglyceride) is one <strong>glycerol</strong> attached to <strong>three fatty acid</strong> chains. After hydrolysis, the two parts take different routes.</p>
+<h4>Glycerol: into glycolysis, or into new glucose</h4>
+<p>Glycerol is a small 3-carbon molecule. Through an enzyme conversion (a phosphate is added and the molecule is oxidized), it becomes <strong>DHAP</strong> (dihydroxyacetone phosphate), the same 3-carbon molecule made at step 4 of glycolysis. From there it has two possible fates:</p>
+<ul>
+<li><strong>Glycerol → DHAP → glycolysis.</strong> DHAP is converted to glyceraldehyde-3-phosphate (step 5) and continues through the payoff phase to pyruvate, acetyl-CoA, Krebs and the ETC, producing CO<sub>2</sub>, ATP and H<sub>2</sub>O.</li>
+<li><strong>Glycerol → glucose by gluconeogenesis</strong> (liver synthesis). The liver can run the pathway "uphill" to build new glucose for the brain and red blood cells.</li>
+</ul>
+<div class="callout teacher"><p class="callout-title">Said in class</p><p>Which way glycerol goes depends on how low glucose is. When glucose is only <strong>somewhat low</strong>, glycerol is converted to DHAP and burned through glycolysis. When glucose is <strong>really low</strong>, glycerol is used to make new glucose by gluconeogenesis.</p></div>
+<h4>Fatty acids: β-oxidation to acetyl-CoA</h4>
+<p>Fatty acids are long hydrocarbon chains, often 16 or 18 carbons. In the <strong>mitochondrial matrix</strong>, they go through <span class="term">β-oxidation</span> (beta-oxidation): the chain is cut <strong>two carbons at a time</strong>, and each 2-carbon piece becomes one <strong>acetyl-CoA</strong>, which enters the Krebs cycle. Each cut also produces <strong>1 NADH and 1 FADH<sub>2</sub></strong>, which go straight to the ETC. The name comes from where the cut happens: at the "beta" carbon, the second carbon from the acid end of the chain. Getting started costs the equivalent of 2 ATP, because the fatty acid has to be "activated" by attaching it to CoA.</p>
+<figure class="diagram">
+<svg viewBox="0 0 640 160" role="img" aria-labelledby="s206b-title s206b-desc">
+<title id="s206b-title">Beta-oxidation of a 16-carbon fatty acid</title>
+<desc id="s206b-desc">A chain of 16 carbon atoms is shown as eight 2-carbon units. Seven dashed cut lines separate them. Seven rounds of beta-oxidation give 8 acetyl-CoA, 7 NADH and 7 FADH2.</desc>
+<g stroke-width="2" style="fill:var(--link-soft);stroke:var(--link)">
+<rect x="36" y="52" width="68" height="36" rx="18"/>
+<rect x="108" y="52" width="68" height="36" rx="18"/>
+<rect x="180" y="52" width="68" height="36" rx="18"/>
+<rect x="252" y="52" width="68" height="36" rx="18"/>
+<rect x="324" y="52" width="68" height="36" rx="18"/>
+<rect x="396" y="52" width="68" height="36" rx="18"/>
+<rect x="468" y="52" width="68" height="36" rx="18"/>
+<rect x="540" y="52" width="68" height="36" rx="18"/>
+</g>
+<g stroke-width="1.5" style="fill:var(--surface);stroke:var(--ink-2)">
+<circle cx="52" cy="70" r="12"/><circle cx="88" cy="70" r="12"/>
+<circle cx="124" cy="70" r="12"/><circle cx="160" cy="70" r="12"/>
+<circle cx="196" cy="70" r="12"/><circle cx="232" cy="70" r="12"/>
+<circle cx="268" cy="70" r="12"/><circle cx="304" cy="70" r="12"/>
+<circle cx="340" cy="70" r="12"/><circle cx="376" cy="70" r="12"/>
+<circle cx="412" cy="70" r="12"/><circle cx="448" cy="70" r="12"/>
+<circle cx="484" cy="70" r="12"/><circle cx="520" cy="70" r="12"/>
+<circle cx="556" cy="70" r="12"/><circle cx="592" cy="70" r="12"/>
+</g>
+<g stroke-width="2" stroke-dasharray="4 3" style="stroke:var(--proton)">
+<line x1="106" y1="42" x2="106" y2="98"/><line x1="178" y1="42" x2="178" y2="98"/>
+<line x1="250" y1="42" x2="250" y2="98"/><line x1="322" y1="42" x2="322" y2="98"/>
+<line x1="394" y1="42" x2="394" y2="98"/><line x1="466" y1="42" x2="466" y2="98"/>
+<line x1="538" y1="42" x2="538" y2="98"/>
+</g>
+<g font-family="inherit" font-size="12" text-anchor="middle" style="fill:var(--ink)">
+<text x="52" y="74">C</text><text x="88" y="74">C</text><text x="124" y="74">C</text><text x="160" y="74">C</text>
+<text x="196" y="74">C</text><text x="232" y="74">C</text><text x="268" y="74">C</text><text x="304" y="74">C</text>
+<text x="340" y="74">C</text><text x="376" y="74">C</text><text x="412" y="74">C</text><text x="448" y="74">C</text>
+<text x="484" y="74">C</text><text x="520" y="74">C</text><text x="556" y="74">C</text><text x="592" y="74">C</text>
+</g>
+<g font-family="inherit" font-size="13" style="fill:var(--ink)">
+<text x="36" y="28" font-weight="700">Palmitic acid: 16 carbons</text>
+<text x="604" y="28" text-anchor="end" font-size="12" style="fill:var(--proton)">dashed line = one cut</text>
+<text x="320" y="122" text-anchor="middle">7 cuts (rounds of β-oxidation) → 8 acetyl-CoA</text>
+<text x="320" y="144" text-anchor="middle" font-size="12" style="fill:var(--ink-2)">each cut also makes 1 NADH + 1 FADH₂, so 7 NADH + 7 FADH₂ in total</text>
+</g>
+</svg>
+<figcaption>β-oxidation chops a fatty acid into 2-carbon acetyl units. A 16-carbon chain needs 7 cuts and gives 8 acetyl-CoA, and every cut also yields NADH and FADH<sub>2</sub> for the ETC.</figcaption>
+</figure>
+<h4>Why fats are so energy-dense</h4>
+<p>Gram for gram, fat stores about twice as much energy as carbohydrate (about 37 kJ/g vs 17 kJ/g, or 9 vs 4 Calories per gram). There are two reasons:</p>
+<ol>
+<li><strong>Fatty acids are highly reduced.</strong> They are long chains of C–H bonds with almost no oxygen. Every carbon has lots of electrons still to give away to NAD<sup>+</sup> and FAD. Glucose is already partly oxidized (it has one oxygen for every carbon), so it has fewer electrons left to give. More electrons means more NADH and FADH<sub>2</sub>, which means more ATP.</li>
+<li><strong>One fatty acid makes many acetyl-CoA.</strong> A 16-carbon fatty acid gives 8 acetyl-CoA, plus 7 NADH and 7 FADH<sub>2</sub> from the cuts themselves. One glucose gives only 2 acetyl-CoA.</li>
+</ol>
+<p data-tier="likely"><strong>Worked example (class values: NADH = 3, FADH<sub>2</sub> = 2 ATP).</strong> Palmitic acid (16 C): 8 acetyl-CoA through Krebs, each worth 3 NADH (9) + 1 FADH<sub>2</sub> (2) + 1 ATP = 12 ATP, so 96 ATP. The 7 cuts add 7 NADH (21) + 7 FADH<sub>2</sub> (14) = 35 ATP. Total 96 + 35 = 131, minus 2 for activation = <strong>129 ATP</strong>, compared with 38 for glucose. (With modern values, about 106 vs 30–32.) Per carbon, that's about 8 ATP for the fat vs about 6 for glucose.</p>
+<p data-tier="likely">There's a practical bonus too: fat is stored dry (it's hydrophobic), while glycogen is stored with a lot of water, so glycogen weighs much more for the same energy. That's why animals, including you, store long-term energy as fat.</p>
+<div class="callout warn" data-tier="likely"><p class="callout-title">Common mistake</p><p>Fatty acids can't be turned into glucose. Their carbons arrive as acetyl-CoA, and the PDH step (pyruvate → acetyl-CoA) is one-way, so acetyl-CoA can't go back to pyruvate. Only the <strong>glycerol</strong> part of a fat can become glucose. That's why the slide shows gluconeogenesis coming from glycerol, never from fatty acids.</p></div>
+<p data-tier="extra"><strong>Beyond the slides:</strong> during long fasts or very low-carbohydrate diets, the liver makes more acetyl-CoA from fat than its Krebs cycle can handle. It converts the extra into <em>ketone bodies</em>, which travel in the blood and can be used as fuel by the brain and muscles.</p>
+
+<h3 data-tier="essential">Protein catabolism</h3>
+<p>The class slide traces protein breakdown in four stages:</p>
+<ol class="steps">
+<li><p class="step-head">Hydrolysis: proteins → amino acids</p><p>Peptide bonds are broken by adding water (proteases and peptidases), releasing individual amino acids.</p></li>
+<li><p class="step-head">Deamination (in the liver)</p><p>The <strong>amino group (−NH<sub>2</sub>)</strong> is removed from each amino acid and released as <strong>ammonia (NH<sub>3</sub>)</strong>. What's left is a nitrogen-free <strong>carbon skeleton</strong>.</p></li>
+<li><p class="step-head">Ammonia is removed as waste</p><p>NH<sub>3</sub> is toxic: it raises pH and interferes with brain function. The liver converts it into <strong>urea</strong>, which is far less toxic and dissolves in water. The kidneys then excrete urea in urine.</p></li>
+<li><p class="step-head">Carbon skeletons enter respiration</p><p>Depending on the amino acid, the skeleton becomes pyruvate, acetyl-CoA, or a Krebs cycle intermediate, then goes through Krebs and the ETC to give CO<sub>2</sub>, ATP and H<sub>2</sub>O.</p></li>
+</ol>
+<div class="table-wrap"><table class="data">
+<thead><tr><th>Route (slide)</th><th>Carbon skeleton becomes…</th><th>Slide examples</th><th>Enters at</th></tr></thead>
+<tbody>
+<tr><td>Pyruvate pathway</td><td>Pyruvate</td><td><strong>Alanine, glycine</strong></td><td>Pyruvate (before pyruvate oxidation and Krebs)</td></tr>
+<tr><td>Acetyl-CoA pathway</td><td>Acetyl-CoA</td><td><strong>Leucine, lysine</strong></td><td>Acetyl-CoA, entering the Krebs cycle</td></tr>
+<tr><td>Specific direct entry</td><td>A specific Krebs intermediate</td><td><strong>Glutamate → α-ketoglutarate</strong></td><td>Directly into the Krebs cycle</td></tr>
+</tbody></table></div>
+<div class="callout teacher"><p class="callout-title">Said in class</p><p>Deamination happens in the <strong>liver</strong>, and the nitrogen it removes leaves as ammonia, a metabolic waste. Protein is only broken down for energy during <strong>severe fasting</strong>.</p></div>
+<div class="callout warn"><p class="callout-title">Common mistake</p><p>Deamination removes the <strong>amino group</strong> (−NH<sub>2</sub>), not the "backbone". The amino group becomes ammonia. The carbon skeleton is everything else: the central carbon, the carboxyl group <em>and</em> the R group. It's the carbon skeleton that gets burned for energy.</p></div>
+<h4 data-tier="likely">Why alanine becomes pyruvate (and glutamate becomes α-ketoglutarate)</h4>
+<p data-tier="likely">Compare their structures. <strong>Alanine</strong> (3 carbons) is just <strong>pyruvate</strong> (3 carbons) with an amino group where pyruvate has a C=O. Swap the amino group for an oxygen and alanine <em>is</em> pyruvate. The same trick links <strong>glutamate</strong> (5 C) with <strong>α-ketoglutarate</strong> (5 C), and aspartate (4 C) with oxaloacetate (4 C). This is why the glycolysis lesson listed alanine as one possible fate of pyruvate: the conversion runs both ways, so the cell can build alanine from spare pyruvate, or burn alanine as pyruvate when protein is being used for fuel. (The aspartate–oxaloacetate pair is also how the malate–aspartate shuttle from lesson 2.04 gets its name.)</p>
+<p data-tier="extra"><strong>Beyond the slides:</strong> amino acids whose skeletons become pyruvate or Krebs intermediates (like alanine and glutamate) can be used to make glucose by gluconeogenesis. Those that become only acetyl-CoA (like leucine and lysine) can't, for the same reason fatty acids can't. This is why the body breaks down some muscle protein during a long fast: it needs those skeletons to keep blood glucose up for the brain.</p>
+
+<h3 data-tier="essential">Putting it together: how lipids and proteins enter respiration</h3>
+<p>This is review question 17. A complete answer names the hydrolysis step, the conversion, and the entry point:</p>
+<div class="compare">
+<div><h4>Lipids</h4><ul>
+<li>Hydrolyzed into glycerol + 3 fatty acids.</li>
+<li><strong>Glycerol</strong> → DHAP (enzyme conversion) → enters <strong>glycolysis</strong>; or, when glucose is very low, glycerol → glucose by <strong>gluconeogenesis</strong> in the liver.</li>
+<li><strong>Fatty acids</strong> → <strong>β-oxidation</strong> in the matrix → many <strong>acetyl-CoA</strong> (plus NADH and FADH<sub>2</sub>) → <strong>Krebs cycle</strong> and ETC.</li>
+</ul></div>
+<div><h4>Proteins</h4><ul>
+<li>Hydrolyzed into amino acids.</li>
+<li><strong>Deamination</strong> (liver) removes the amino group as NH<sub>3</sub>, which is converted to urea and excreted.</li>
+<li>Carbon skeletons enter as <strong>pyruvate</strong> (alanine, glycine), <strong>acetyl-CoA</strong> (leucine, lysine) or <strong>Krebs intermediates</strong> (glutamate → α-ketoglutarate).</li>
+</ul></div>
+</div>
+<div class="callout key"><p class="callout-title">On the test</p><p>The class answer key's short version: <strong>lipids enter through gluconeogenesis and β-oxidation; proteins enter through deamination.</strong> Use that as your skeleton, then add the entry points (glycolysis via DHAP, acetyl-CoA, pyruvate, Krebs intermediates) for full marks. The Krebs review also asks how fatty acids and proteins can be used: they can be converted into acetyl-CoA (or, for some amino acids, Krebs intermediates).</p></div>
+
+<h3 data-tier="essential">Quick checks</h3>
+<details class="check"><summary>Describe how lipids and proteins enter the metabolic cycles of cellular respiration. (Review Q17)</summary><div class="ans"><p><strong>Lipids:</strong> hydrolyzed into glycerol and fatty acids. Glycerol is converted to DHAP and enters glycolysis, or is used by the liver to make glucose (gluconeogenesis) when glucose is very low. Fatty acids are broken down 2 carbons at a time by β-oxidation into acetyl-CoA, which enters the Krebs cycle; each round also produces NADH and FADH<sub>2</sub> for the ETC. <strong>Proteins:</strong> hydrolyzed into amino acids, which are deaminated in the liver. The amino group is removed as ammonia (converted to urea and excreted), and the carbon skeletons enter as pyruvate (e.g. alanine, glycine), acetyl-CoA (e.g. leucine, lysine) or Krebs intermediates (e.g. glutamate → α-ketoglutarate).</p></div></details>
+<details class="check"><summary>In what order does the body use its fuels? Why are nucleic acids rarely used?</summary><div class="ans"><p>Carbohydrates (glucose, glycogen) first, then lipids, then proteins; nucleic acids rarely. Nucleic acids are a small part of the cell's mass and their components (bases, sugars, phosphates) are valuable, so they are recycled to build new DNA and RNA instead of being burned.</p></div></details>
+<details class="check"><summary>Define gluconeogenesis and give two raw materials for it.</summary><div class="ans"><p>Gluconeogenesis is the making of new glucose from non-carbohydrate sources, mainly in the liver. Raw materials include glycerol (from fats), lactate (from fermentation) and the carbon skeletons of many amino acids (e.g. alanine).</p></div></details>
+<details class="check"><summary>What is deamination, where does it happen, and what happens to the product containing nitrogen?</summary><div class="ans"><p>Deamination is the removal of the amino group (−NH<sub>2</sub>) from an amino acid, leaving a carbon skeleton. It happens in the liver. The nitrogen is released as ammonia (NH<sub>3</sub>), which is toxic, so the liver converts it into urea, which the kidneys excrete in urine.</p></div></details>
+<details class="check"><summary>A 16-carbon fatty acid undergoes β-oxidation. How many acetyl-CoA, NADH and FADH<sub>2</sub> does β-oxidation produce?</summary><div class="ans"><p>16 ÷ 2 = <strong>8 acetyl-CoA</strong>. Making 8 pieces takes 7 cuts, so <strong>7 NADH and 7 FADH<sub>2</sub></strong>. (The 8 acetyl-CoA then make 24 more NADH, 8 FADH<sub>2</sub> and 8 ATP in the Krebs cycle.)</p></div></details>
+<details class="check"><summary>Why does fat store more energy per gram than carbohydrate?</summary><div class="ans"><p>Fatty acids are long, highly reduced hydrocarbon chains with many C–H bonds and very little oxygen, so they have many more electrons to donate to NAD<sup>+</sup> and FAD per carbon than glucose, which is already partly oxidized. One fatty acid also produces many acetyl-CoA (8 from a 16-carbon chain vs 2 from glucose). And fat is stored without water, unlike glycogen.</p></div></details>
+<details class="check" data-tier="likely"><summary>Where would the carbon skeletons of alanine, leucine and glutamate enter cellular respiration?</summary><div class="ans"><p>Alanine → pyruvate (then pyruvate oxidation). Leucine → acetyl-CoA (then Krebs). Glutamate → α-ketoglutarate, entering the Krebs cycle directly.</p></div></details>
+<details class="check" data-tier="likely"><summary>Why can glycerol be turned into glucose, but fatty acids can't?</summary><div class="ans"><p>Glycerol becomes DHAP, a glycolysis intermediate, so the liver can run gluconeogenesis from it up to glucose. Fatty acids are broken down into acetyl-CoA, and the step that makes acetyl-CoA from pyruvate (PDH) is irreversible, so acetyl-CoA can't be turned back into pyruvate, and therefore not into glucose.</p></div></details>
+<details class="check" data-tier="likely"><summary>Why does the body avoid using protein for energy until it's starving?</summary><div class="ans"><p>Proteins aren't stored as fuel. Every protein has a structural or functional job (enzymes, muscle, transporters, antibodies), so burning them means breaking down working tissue, mainly muscle. Deamination also produces toxic ammonia, which costs energy to convert into urea. Carbohydrates and fats are designed for storage and are used first.</p></div></details>
+
+<h3 data-tier="essential">Lesson summary</h3>
+<ul>
+<li>All classes of nutrients can be used for energy; their breakdown <strong>funnels into glycolysis, pyruvate, acetyl-CoA and the Krebs cycle</strong>. Final products: <strong>CO<sub>2</sub>, H<sub>2</sub>O and NH<sub>3</sub></strong> (from proteins).</li>
+<li>Lipid and protein catabolism happens <strong>when glycogen stores are low</strong>, as an alternate source of energy.</li>
+<li>Order of use: <strong>carbohydrates → lipids → proteins</strong>; nucleic acids rarely (components recycled).</li>
+<li>Macromolecules are first <strong>hydrolyzed into monomers</strong>.</li>
+<li><strong>Gluconeogenesis</strong> = making new glucose from non-carbohydrate sources (glycerol, lactate, amino acids), mainly in the liver.</li>
+<li>Lipids → glycerol + fatty acids. <strong>Glycerol → DHAP → glycolysis</strong> (glucose somewhat low) or <strong>glycerol → glucose by gluconeogenesis</strong> in the liver (glucose very low).</li>
+<li><strong>Fatty acids → β-oxidation → acetyl-CoA</strong> → Krebs: cut 2 carbons at a time; each cut also gives 1 NADH + 1 FADH<sub>2</sub>. A 16-C fatty acid gives 8 acetyl-CoA (about 129 ATP by class values).</li>
+<li>Fats are energy-dense because they are highly reduced (many C–H bonds) and yield many acetyl-CoA. Fatty acids can't become glucose; glycerol can.</li>
+<li>Proteins → amino acids (hydrolysis) → <strong>deamination in the liver</strong>: amino group removed as <strong>NH<sub>3</sub></strong> (toxic, converted to <strong>urea</strong>).</li>
+<li>Carbon skeletons → <strong>pyruvate</strong> (alanine, glycine), <strong>acetyl-CoA</strong> (leucine, lysine), or <strong>Krebs intermediates</strong> directly (glutamate → α-ketoglutarate).</li>
+<li>Protein is used for energy only in <strong>severe fasting / starvation</strong>.</li>
+</ul>
+`
+});
+
 // END-LESSONS-B
