@@ -101,11 +101,11 @@ sub, sup { line-height: 0; }
 strong { font-weight: 650; }
 
 /* ---------- lesson components ---------- */
-.callout { padding: 2px 0 2px 18px; margin: 1.5em 0; border-left: 3px solid var(--c, var(--line)); }
+.callout { padding: 12px 18px 8px; margin: 1.5em 0; border-radius: var(--r); background: var(--surface-2); }
 .callout > :last-child { margin-bottom: .3em; }
 .callout-title { font-family: var(--display); font-weight: 700; font-size: 14px; margin: 0 0 2px; color: var(--c, var(--ink-2)); }
-.callout.teacher { --c: var(--krebs); background: var(--krebs-soft); border-radius: 0 var(--r) var(--r) 0; padding: 12px 18px 8px; }
-.callout.key { --c: var(--etc); background: var(--etc-soft); border-radius: 0 var(--r) var(--r) 0; padding: 12px 18px 8px; }
+.callout.teacher { --c: var(--krebs); background: var(--krebs-soft); }
+.callout.key { --c: var(--etc); background: var(--etc-soft); }
 .callout.tip { --c: var(--link); }
 .callout.warn { --c: var(--proton); }
 .eq { font-family: var(--display); font-size: 18px; text-align: center; padding: 12px 16px; margin: 1.3em 0; border-radius: var(--r); background: var(--surface-2); overflow-x: auto; line-height: 1.6; }
@@ -176,7 +176,7 @@ figure.map svg { display: block; width: 100%; height: auto; font-family: var(--d
 .lesson-head { margin-bottom: 20px; }
 .lesson-kicker { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; font-family: var(--display); font-size: 14px; color: var(--ink-2); margin-bottom: 10px; }
 .pill { display: inline-block; padding: 2px 10px; border-radius: 999px; background: var(--accent-soft); color: var(--accent); font-weight: 650; font-family: var(--display); font-size: 13px; }
-.objectives { margin: 22px 0; padding-left: 18px; border-left: 3px solid var(--accent); }
+.objectives { margin: 22px 0; }
 .objectives p { font-family: var(--display); font-weight: 700; margin: 0 0 4px; font-size: 15px; }
 .objectives ul { margin-bottom: 0; }
 .toc { font-family: var(--display); font-size: 14.5px; margin: 0 0 10px; }
@@ -218,7 +218,7 @@ textarea { min-height: 100px; resize: vertical; font-family: var(--body); }
 .qa-item > summary::-webkit-details-marker { display: none; }
 .qa-item .qn { position: absolute; left: 0; top: 14px; font-size: 13.5px; color: var(--accent); font-weight: 700; font-variant-numeric: tabular-nums; }
 .qa-item .qa-a { padding: 0 0 8px 36px; }
-.qa-note { font-size: 14.5px; color: var(--ink-2); border-left: 3px solid var(--line); padding: 2px 12px; margin: 0 0 12px; }
+.qa-note { font-size: 14.5px; color: var(--ink-2); background: var(--surface-2); border-radius: 8px; padding: 8px 12px; margin: 0 0 12px; }
 .qa-item[open] > summary { color: var(--accent); }
 
 /* ---------- quiz ---------- */
@@ -237,9 +237,9 @@ textarea { min-height: 100px; resize: vertical; font-family: var(--body); }
 .opt.wrong { border-color: var(--bad); background: var(--bad-soft); }
 .opt.wrong .k { color: var(--bad); }
 .tf-row { grid-template-columns: 1fr 1fr; }
-.feedback { margin-top: 18px; padding-left: 16px; border-left: 3px solid var(--line); }
+.feedback { margin-top: 18px; padding: 12px 16px 4px; border-radius: var(--r); background: var(--surface-2); }
 .feedback .verdict { font-family: var(--display); font-weight: 750; margin: 0 0 2px; }
-.feedback.ok { border-color: var(--good); } .feedback.no { border-color: var(--bad); }
+.feedback.ok { background: var(--good-soft); } .feedback.no { background: var(--bad-soft); }
 .feedback.ok .verdict { color: var(--good); } .feedback.no .verdict { color: var(--bad); }
 .quiz-actions { display: flex; justify-content: flex-end; gap: 8px; margin-top: 18px; }
 .score-big { font-family: var(--display); font-size: 64px; font-weight: 800; line-height: 1; margin: 6px 0; letter-spacing: -.03em; }
@@ -257,7 +257,7 @@ textarea { min-height: 100px; resize: vertical; font-family: var(--body); }
 .x-card { border-top: 1px solid var(--line); padding: 26px 0 10px; }
 .x-meta { display: flex; flex-wrap: wrap; gap: 10px; font-family: var(--display); font-size: 13.5px; color: var(--ink-2); margin-bottom: 6px; align-items: center; }
 .x-card h3 { margin: 0 0 10px; font-size: 21px; }
-.x-hint { border-left: 3px solid var(--accent); padding: 2px 0 2px 14px; margin: 10px 0; font-size: 15.5px; }
+.x-hint { background: var(--surface-2); border-radius: 8px; padding: 8px 14px; margin: 10px 0; font-size: 15.5px; }
 .x-answer { margin-top: 10px; padding: 14px 18px 6px; background: var(--good-soft); border-radius: var(--r); }
 .x-answer > p.x-label { font-family: var(--display); font-weight: 750; color: var(--good); margin-bottom: 4px; }
 
