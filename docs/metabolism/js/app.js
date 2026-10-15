@@ -5,7 +5,7 @@
   var QA = window.QA || [];
   var QUIZ = (window.QUIZ || []).concat(window.QUIZ_APPLIED || [], window.DRILL || []);
   var EXT = window.EXT || [];
-  var EXTRA = window.EXTRA || [];
+  var EXTRA = (window.EXTRA || []).map(function (e, i) { return [e, i]; }).sort(function (a, b) { return a[0].lesson.localeCompare(b[0].lesson) || a[1] - b[1]; }).map(function (p) { return p[0]; });
   var VIS = window.VIS || {};
   var GLOSSARY = (window.GLOSSARY || []).slice().sort(function (a, b) { return a.term.localeCompare(b.term); });
 
