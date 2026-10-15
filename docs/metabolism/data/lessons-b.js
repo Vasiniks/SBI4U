@@ -223,7 +223,6 @@ window.LESSONS.push({
 </ul>
 <p>Together these store potential energy, like water held behind a dam. Because the inner membrane is impermeable to H<sup>+</sup>, the only way back into the matrix is through ATP synthase.</p>
 <div class="callout teacher"><p class="callout-title">Said in class</p><p>The H<sup>+</sup> gradient "shifts the pH", and it's the pH difference plus the concentration gradient that drives H<sup>+</sup> through ATP synthase. Also, when oxygen forms water on the <strong>matrix side</strong>, it uses up 2 H<sup>+</sup> from the matrix each time. That lowers the H<sup>+</sup> concentration in the matrix even further, so making water <strong>indirectly increases the gradient</strong>.</p></div>
-<details class="check"><summary>How do the mitochondria maintain the chemiosmotic gradient? (Review Q2)</summary><div class="ans"><p>Complexes I, III and IV keep pumping H<sup>+</sup> from the matrix into the intermembrane space, using energy from electrons flowing down the chain. That needs a steady supply of NADH and FADH<sub>2</sub> (from glycolysis, pyruvate oxidation and Krebs) and O<sub>2</sub> to accept the electrons at the end. The inner membrane is impermeable to H<sup>+</sup>, so H<sup>+</sup> can't leak back easily and can only return through ATP synthase. Forming water on the matrix side also removes H<sup>+</sup> from the matrix, making the gradient steeper.</p></div></details>
 
 <h3 data-tier="essential">Oxygen: the final electron acceptor</h3>
 <p>At the end of the chain, complex IV hands the electrons to oxygen. Oxygen is the <span class="term">final electron acceptor</span>. It is the most electronegative member of the chain, and it is what <strong>pulls electrons through the redox reactions</strong>: as long as O<sub>2</sub> keeps removing electrons from complex IV, every carrier upstream can unload and accept more. Oxygen also <strong>binds with 2 H<sup>+</sup> from the matrix to form water</strong>:</p>
@@ -606,7 +605,8 @@ window.LESSONS.push({
 <tr><td><strong>ATP</strong></td><td>Inhibits</td><td>Signals high energy supply</td><td>Energy is plentiful, so there's no need to burn more fuel.</td></tr>
 </tbody></table></div>
 <div class="callout tip"><p class="callout-title">Memory trick</p><p><strong>"Empty says go, full says stop."</strong> The regulators come in three pairs. In each pair, the "empty" form activates PDH and the "full" form inhibits it:</p><ul><li><strong>ADP</strong> (empty, go) vs <strong>ATP</strong> (full, stop)</li><li><strong>NAD<sup>+</sup></strong> (empty carrier, go) vs <strong>NADH</strong> (full carrier, stop)</li><li><strong>CoA</strong> (empty, go) vs <strong>acetyl-CoA</strong> (carrying an acetyl group, stop)</li></ul><p>Plus <strong>pyruvate</strong>, PDH's own substrate, says go. What really matters is the ratios: high ATP/ADP, high NADH/NAD<sup>+</sup> and high acetyl-CoA/CoA all slow PDH down.</p></div>
-<div class="callout teacher"><p class="callout-title">Said in class</p><p>Pyruvate oxidation is regulated by <strong>ATP and O<sub>2</sub> levels</strong>. When ATP is high, pyruvate doesn't get sent into the mitochondria. The O<sub>2</sub> link works through NADH: low O<sub>2</sub> stalls the ETC, NADH builds up, and NADH inhibits PDH. So when oxygen is short, pyruvate is diverted to fermentation (lesson 2.07) instead of entering the mitochondrion.</p></div>
+<div class="callout teacher"><p class="callout-title">Said in class</p><p>Pyruvate oxidation is regulated by <strong>ATP and O<sub>2</sub> levels</strong>. When ATP is high, pyruvate doesn't get sent into the mitochondria.</p></div>
+<p>The O<sub>2</sub> link works through NADH. Low O<sub>2</sub> stalls the ETC, NADH builds up, and NADH inhibits PDH. So when oxygen is short, pyruvate is diverted to fermentation (lesson 2.07) instead of entering the mitochondrion.</p>
 <p data-tier="extra"><strong>Beyond the slides:</strong> besides direct allosteric control, PDH is switched off by having a phosphate group attached to it (by an enzyme called PDH kinase) and switched back on when the phosphate is removed. The kinase is activated by ATP, NADH and acetyl-CoA and inhibited by pyruvate and ADP, so it follows the same logic as the table above.</p>
 
 <h3 data-tier="essential">Controlling the whole pathway</h3>
@@ -734,9 +734,9 @@ window.LESSONS.push({
 <thead><tr><th>Situation</th><th>ATP / ADP</th><th>NADH</th><th>Citrate</th><th>PFK</th><th>PDH</th><th>Outcome</th></tr></thead>
 <tbody>
 <tr><td>Resting</td><td>ATP high</td><td>High</td><td>High</td><td>Slowed</td><td>Slowed</td><td>Respiration idles; glucose stored; fat used</td></tr>
-<tr><td>Sprinting</td><td>ADP/AMP high</td><td>Rising (low O<sub>2</sub>)</td><td>Low</td><td>Strongly on</td><td>On, then held back by NADH</td><td>Fast glycolysis; extra pyruvate becomes lactate</td></tr>
+<tr><td>Sprinting</td><td>ADP/AMP high</td><td>Rising (low O<sub>2</sub>)</td><td>Not the main signal</td><td>Strongly on</td><td>On, then held back by NADH</td><td>Fast glycolysis; extra pyruvate becomes lactate</td></tr>
 <tr><td>After a big meal</td><td>ATP high</td><td>High</td><td>High</td><td>Slowed</td><td>Slowed</td><td>Glucose to glycogen; citrate to fat</td></tr>
-<tr><td>No O<sub>2</sub></td><td>ADP/AMP high</td><td>Very high</td><td>Falls</td><td>On</td><td>Off</td><td>Glycolysis + fermentation only (2 ATP)</td></tr>
+<tr><td>No O<sub>2</sub></td><td>ADP/AMP high</td><td>Very high</td><td>Not the main signal (Krebs stalled)</td><td>On</td><td>Off</td><td>Glycolysis + fermentation only (2 ATP)</td></tr>
 </tbody></table></div>
 
 <h3 data-tier="essential">Quick checks</h3>
@@ -915,7 +915,7 @@ window.LESSONS.push({
 </ul>
 <div class="callout teacher"><p class="callout-title">Said in class</p><p>Which way glycerol goes depends on how low glucose is. When glucose is only <strong>somewhat low</strong>, glycerol is converted to DHAP and burned through glycolysis. When glucose is <strong>really low</strong>, glycerol is used to make new glucose by gluconeogenesis.</p></div>
 <h4>Fatty acids: β-oxidation to acetyl-CoA</h4>
-<p>Fatty acids are long hydrocarbon chains, often 16 or 18 carbons. In the <strong>mitochondrial matrix</strong>, they go through <span class="term">β-oxidation</span> (beta-oxidation): the chain is cut <strong>two carbons at a time</strong>, and each 2-carbon piece becomes one <strong>acetyl-CoA</strong>, which enters the Krebs cycle. Each cut also produces <strong>1 NADH and 1 FADH<sub>2</sub></strong>, which go straight to the ETC. The name comes from where the cut happens: at the "beta" carbon, the second carbon from the acid end of the chain. Getting started costs the equivalent of 2 ATP, because the fatty acid has to be "activated" by attaching it to CoA.</p>
+<p>Fatty acids are long hydrocarbon chains, often 16 or 18 carbons. In the <strong>mitochondrial matrix</strong>, they go through <span class="term">β-oxidation</span> (beta-oxidation): the chain is cut <strong>two carbons at a time</strong>, and each 2-carbon piece becomes one <strong>acetyl-CoA</strong>, which enters the Krebs cycle. Each cut also produces <strong>1 NADH and 1 FADH<sub>2</sub></strong>, which go straight to the ETC. The name comes from where the chain is oxidized and cut: at the "beta" carbon, the second carbon after the acid (carboxyl) group. Getting started costs the equivalent of 2 ATP, because the fatty acid has to be "activated" by attaching it to CoA.</p>
 <figure class="diagram">
 <svg viewBox="0 0 640 160" role="img" aria-labelledby="s206b-title s206b-desc">
 <title id="s206b-title">Beta-oxidation of a 16-carbon fatty acid</title>
@@ -987,7 +987,7 @@ window.LESSONS.push({
 <tr><td>Acetyl-CoA pathway</td><td>Acetyl-CoA</td><td><strong>Leucine, lysine</strong></td><td>Acetyl-CoA, entering the Krebs cycle</td></tr>
 <tr><td>Specific direct entry</td><td>A specific Krebs intermediate</td><td><strong>Glutamate → α-ketoglutarate</strong></td><td>Directly into the Krebs cycle</td></tr>
 </tbody></table></div>
-<div class="callout teacher"><p class="callout-title">Said in class</p><p>Deamination happens in the <strong>liver</strong>, and the nitrogen it removes leaves as ammonia, a metabolic waste. Protein is only broken down for energy during <strong>severe fasting</strong>.</p></div>
+<div class="callout teacher"><p class="callout-title">Said in class</p><p>Deamination happens in the <strong>liver</strong>, and the nitrogen it removes leaves as ammonia, a metabolic waste.</p></div>
 <div class="callout warn"><p class="callout-title">Common mistake</p><p>Deamination removes the <strong>amino group</strong> (−NH<sub>2</sub>), not the "backbone". The amino group becomes ammonia. The carbon skeleton is everything else: the central carbon, the carboxyl group <em>and</em> the R group. It's the carbon skeleton that gets burned for energy.</p></div>
 <h4 data-tier="likely">Why alanine becomes pyruvate (and glutamate becomes α-ketoglutarate)</h4>
 <p data-tier="likely">Compare their structures. <strong>Alanine</strong> (3 carbons) is just <strong>pyruvate</strong> (3 carbons) with an amino group where pyruvate has a C=O. Swap the amino group for an oxygen and alanine <em>is</em> pyruvate. The same trick links <strong>glutamate</strong> (5 C) with <strong>α-ketoglutarate</strong> (5 C), and aspartate (4 C) with oxaloacetate (4 C). This is why the glycolysis lesson listed alanine as one possible fate of pyruvate: the conversion runs both ways, so the cell can build alanine from spare pyruvate, or burn alanine as pyruvate when protein is being used for fuel. (The aspartate–oxaloacetate pair is also how the malate–aspartate shuttle from lesson 2.04 gets its name.)</p>
@@ -1037,4 +1037,361 @@ window.LESSONS.push({
 `
 });
 
-// END-LESSONS-B
+/* ===================================================================
+   2.07 Anaerobic Respiration: Fermentation
+   =================================================================== */
+window.LESSONS.push({
+  id: "2.07",
+  title: "Anaerobic Respiration: Fermentation",
+  stage: "ferm",
+  where: "Cytoplasm (cytosol)",
+  summary: "Without enough oxygen, the ETC stops and NAD+ runs out, which would shut down glycolysis. Fermentation regenerates NAD+ by passing NADH's electrons to pyruvate (making lactate) or to acetaldehyde (making ethanol and CO2), so glycolysis can keep making its 2 ATP.",
+  objectives: [
+    "Describe the possible fates of pyruvate and what determines which one happens.",
+    "Explain why fermentation is needed: its real purpose is to regenerate NAD+ so glycolysis can continue.",
+    "Compare the ATP yield of fermentation (2) with aerobic respiration (36–38) and explain the difference.",
+    "Describe lactic acid fermentation, including the enzyme lactate dehydrogenase, and the four fates of lactate in the body.",
+    "Explain why the muscle \"burn\" during hard exercise is not caused by lactic acid.",
+    "Describe alcohol fermentation step by step (pyruvate decarboxylase, alcohol dehydrogenase) and write its word and balanced equations.",
+    "Compare lactic acid and alcohol fermentation, and apply them to yeast, bread-making and other real-world examples."
+  ],
+  html: `
+<h3 data-tier="essential">Fates of pyruvate</h3>
+<p>Glycolysis always ends with pyruvate, but what happens to pyruvate next depends on the conditions in the cell. Pyruvate is a major <strong>branch point</strong> in metabolism:</p>
+<figure class="diagram">
+<svg viewBox="0 0 640 300" role="img" aria-labelledby="s207a-title s207a-desc">
+<title id="s207a-title">The fates of pyruvate</title>
+<desc id="s207a-desc">Glucose-6-phosphate is converted to pyruvate by glycolysis, and pyruvate can be converted back by gluconeogenesis. From pyruvate, three arrows lead down: aerobic conditions with oxygen give acetyl-CoA, which goes on to the Krebs cycle and ETC for 36 to 38 ATP; anaerobic conditions in vertebrates give lactate; anaerobic conditions in microorganisms give ethanol and carbon dioxide. Both fermentation routes give 2 ATP per glucose.</desc>
+<defs>
+<marker id="m207a-a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0 L10,5 L0,10 z" style="fill:var(--ink-2)"/></marker>
+</defs>
+<rect x="230" y="14" width="180" height="32" rx="6" stroke-width="2" style="fill:var(--glyco-soft);stroke:var(--glyco)"/>
+<rect x="260" y="128" width="120" height="32" rx="6" stroke-width="2.5" style="fill:var(--surface);stroke:var(--ink)"/>
+<rect x="20" y="232" width="160" height="32" rx="6" stroke-width="2" style="fill:var(--link-soft);stroke:var(--link)"/>
+<rect x="250" y="232" width="140" height="32" rx="6" stroke-width="2" style="fill:var(--proton-soft);stroke:var(--proton)"/>
+<rect x="460" y="232" width="160" height="32" rx="6" stroke-width="2" style="fill:var(--glyco-soft);stroke:var(--glyco)"/>
+<g stroke-width="2" style="stroke:var(--ink-2)">
+<line x1="300" y1="46" x2="300" y2="126" marker-end="url(#m207a-a)"/>
+<line x1="340" y1="128" x2="340" y2="48" marker-end="url(#m207a-a)"/>
+<line x1="270" y1="160" x2="132" y2="230" marker-end="url(#m207a-a)"/>
+<line x1="320" y1="160" x2="320" y2="230" marker-end="url(#m207a-a)"/>
+<line x1="370" y1="160" x2="508" y2="230" marker-end="url(#m207a-a)"/>
+</g>
+<g font-family="inherit" font-size="13" style="fill:var(--ink)">
+<text x="320" y="35" text-anchor="middle">Glucose-6-phosphate</text>
+<text x="320" y="149" text-anchor="middle" font-weight="700">Pyruvate</text>
+<text x="100" y="253" text-anchor="middle" font-weight="700">Acetyl-CoA</text>
+<text x="320" y="253" text-anchor="middle" font-weight="700">Lactate</text>
+<text x="540" y="253" text-anchor="middle" font-weight="700">Ethanol + CO₂</text>
+</g>
+<g font-family="inherit" font-size="12" style="fill:var(--ink-2)">
+<text x="292" y="92" text-anchor="end">glycolysis</text>
+<text x="348" y="92">gluconeogenesis</text>
+<text x="172" y="186" text-anchor="end" style="fill:var(--ink)">aerobic</text>
+<text x="172" y="202" text-anchor="end">(O₂ present)</text>
+<text x="330" y="190" style="fill:var(--ink)">anaerobic</text>
+<text x="330" y="206">(vertebrates)</text>
+<text x="470" y="184" style="fill:var(--ink)">anaerobic</text>
+<text x="470" y="200">(microorganisms)</text>
+<text x="100" y="284" text-anchor="middle">→ Krebs + ETC: 36–38 ATP</text>
+<text x="320" y="284" text-anchor="middle">2 ATP per glucose</text>
+<text x="540" y="284" text-anchor="middle">2 ATP per glucose</text>
+</g>
+</svg>
+<figcaption>Fates of pyruvate (class slide). With oxygen, pyruvate is oxidized to acetyl-CoA in the mitochondrion. Without oxygen, vertebrate cells reduce it to lactate, and yeast and many other microorganisms turn it into ethanol and CO<sub>2</sub>. Pyruvate can also be rebuilt into glucose (gluconeogenesis).</figcaption>
+</figure>
+<p>Three things decide which way pyruvate goes:</p>
+<ul>
+<li><strong>Oxygen.</strong> If O<sub>2</sub> is available, the ETC runs, NAD<sup>+</sup> is recycled, and pyruvate is sent into the mitochondrion to become acetyl-CoA (the aerobic route, up to 36–38 ATP). If O<sub>2</sub> is absent or used up, pyruvate is fermented.</li>
+<li><strong>Energy status.</strong> As you saw in lesson 2.05, high ATP and NADH inhibit PDH, so pyruvate isn't sent into the mitochondrion. In the liver, spare pyruvate can be turned back into glucose (gluconeogenesis).</li>
+<li><strong>The organism.</strong> Which fermentation a cell can do depends on its enzymes. Animal cells have lactate dehydrogenase, so they make lactate. Yeast have pyruvate decarboxylase, so they make ethanol.</li>
+</ul>
+<p data-tier="likely">(Pyruvate can also become the amino acid alanine, as you saw in lessons 2.02 and 2.06.)</p>
+
+<h3 data-tier="essential">Anaerobic conditions</h3>
+<p>Fermentation occurs under <strong>anaerobic conditions</strong>: the <strong>absence or local depletion of oxygen</strong>. "Local depletion" is the key phrase for humans. Oxygen may be plentiful in your lungs and blood while a particular tissue is using O<sub>2</sub> faster than blood can deliver it.</p>
+<div class="callout teacher"><p class="callout-title">Said in class</p><p>Our <strong>whole body cannot be in an anaerobic state</strong>, but <strong>certain parts of the body can be</strong>.</p></div>
+<p>Why? Your brain and heart need a huge, constant supply of aerobic ATP. If the whole body went anaerobic, those organs would fail within minutes (exactly what happened to the cyanide victims in lesson 2.04). But a single working tissue, like a thigh muscle in a sprint, can briefly use O<sub>2</sub> faster than the blood can bring it in. That muscle goes locally anaerobic and ferments, while the rest of the body stays aerobic.</p>
+<p data-tier="likely">Some cells are anaerobic all the time. <strong>Red blood cells have no mitochondria</strong>, so even though they carry oxygen, they can't use it. They make all their ATP by glycolysis and constantly produce lactate.</p>
+
+<h3 data-tier="essential">Why fermentation exists: the NAD<sup>+</sup> problem</h3>
+<p>The slide says fermentation <strong>"regenerates NAD<sup>+</sup> to sustain glycolysis."</strong> That one line is the whole point of this lesson. Here's why it matters:</p>
+<ol class="steps">
+<li><p class="step-head">Glycolysis needs NAD<sup>+</sup></p><p>Step 6 (glyceraldehyde-3-phosphate dehydrogenase) can't happen unless NAD<sup>+</sup> is there to accept electrons. Each glucose turns 2 NAD<sup>+</sup> into 2 NADH.</p></li>
+<li><p class="step-head">The cell has only a little NAD<sup>+</sup></p><p>NAD<sup>+</sup> is made from a vitamin (niacin, B<sub>3</sub>) and exists in small amounts. It has to be recycled over and over; the cell can't just make more.</p></li>
+<li><p class="step-head">Normally the ETC recycles it</p><p>Complex I oxidizes NADH back to NAD<sup>+</sup> (via the shuttles, for glycolysis's NADH). But that needs O<sub>2</sub> at the end of the chain.</p></li>
+<li><p class="step-head">No O<sub>2</sub>: NAD<sup>+</sup> runs out</p><p>Without oxygen the ETC stops, so NADH can't be recycled. Within seconds all the NAD<sup>+</sup> is stuck as NADH, step 6 stops, glycolysis stops, and the cell gets <strong>no ATP at all</strong>.</p></li>
+<li><p class="step-head">Fermentation: dump the electrons on an organic molecule</p><p>The cell hands NADH's electrons to pyruvate (or to acetaldehyde, which is made from pyruvate). That molecule becomes the <strong>final electron acceptor</strong> in place of O<sub>2</sub>. NADH is oxidized back to NAD<sup>+</sup>, which returns to step 6, and glycolysis keeps going.</p></li>
+</ol>
+<div class="callout teacher"><p class="callout-title">Said in class</p><p>The lack of oxygen prevents the ETC from running, which stops the regeneration of NAD<sup>+</sup>. Fermentation's job is to make that NAD<sup>+</sup> another way.</p></div>
+<p>Notice that the fermentation steps themselves <strong>make no ATP</strong>. All the ATP comes from glycolysis. Fermentation's only job is to keep glycolysis supplied with NAD<sup>+</sup> (and, as a bonus, to clear away pyruvate, which would otherwise build up and stall glycolysis). It solves the two "leftover problems" from the glycolysis worksheet.</p>
+<div class="callout key"><p class="callout-title">On the test</p><p><strong>"What is the real purpose of fermentation?"</strong> (Review Q15). Answer: <strong>to oxidize NADH back into NAD<sup>+</sup> so that glycolysis can continue</strong> (and keep making its 2 ATP) when there's no oxygen. Don't say "to make ATP" or "to make lactic acid / alcohol"; those are side effects.</p></div>
+<div class="callout warn"><p class="callout-title">Common mistake</p><p>"Fermentation produces 2 ATP" is only true if you include glycolysis. The fermentation <em>step</em> (pyruvate → lactate, or pyruvate → ethanol) makes <strong>zero</strong> ATP. The 2 ATP come from glycolysis, which fermentation keeps running.</p></div>
+<p data-tier="extra"><strong>Beyond the slides:</strong> the class calls fermentation "anaerobic respiration." Microbiologists use "anaerobic respiration" for something slightly different: some bacteria run a full ETC but use a molecule other than O<sub>2</sub> (such as nitrate or sulfate) as the final electron acceptor. Fermentation has no ETC at all. For this course, treat the two terms as the class does.</p>
+
+<h3 data-tier="essential">How much ATP? 2 vs 36–38</h3>
+<p>Fermentation produces <strong>significantly less ATP</strong>: <strong>2 ATP per glucose</strong> (net, from glycolysis) compared with <strong>36–38</strong> for aerobic respiration (the slides' maximum; realistically 30–32). That's roughly 18 times less.</p>
+<div class="compare">
+<div><h4>Aerobic respiration</h4><div class="tally"><span class="chip atp">36–38 ATP</span></div><p>Glucose is oxidized all the way to CO<sub>2</sub>. NADH's electrons go down the ETC to O<sub>2</sub>, the biggest energy drop of all, and pay for about 34 ATP by chemiosmosis.</p></div>
+<div><h4>Fermentation</h4><div class="tally"><span class="chip atp">2 ATP</span></div><p>Only glycolysis's substrate-level phosphorylation. NADH's electrons are "wasted" on pyruvate instead of going down the ETC, and most of glucose's energy stays locked in the end product.</p></div>
+</div>
+<p><strong>Where did the rest of the energy go?</strong> It's still in the product. Ethanol is so energy-rich that it's burned as fuel in cars, and lactate can be turned back into pyruvate and burned later (see the fates of lactate below). Fermentation only takes the "first bite" of glucose.</p>
+<p data-tier="likely">Using the worksheet's 94-ATP scale, fermentation is only about 2% efficient (2 ÷ 94), compared with about 40% for aerobic respiration. To make the same amount of ATP, a fermenting cell has to burn glucose roughly 18 times faster. That's why fermentation suits short bursts of activity (or organisms like yeast sitting in a pile of sugar), and why glycolysis speeds up so dramatically when O<sub>2</sub> runs low: falling ATP and rising ADP/AMP activate PFK (lesson 2.05).</p>
+<p>From the "Follow That Glucose!" worksheet, Table 1, the fermentation row for animal tissue looks like this:</p>
+<div class="table-wrap"><table class="data">
+<thead><tr><th>Step</th><th>ATP</th><th>NADH + H<sup>+</sup></th><th>FADH<sub>2</sub></th><th>CO<sub>2</sub></th></tr></thead>
+<tbody>
+<tr><td>Glycolysis</td><td>−2, +4 (net 2)</td><td>+2</td><td>0</td><td>0</td></tr>
+<tr><td>Fermentation (animal tissue)</td><td>0</td><td>−2</td><td>0</td><td>0</td></tr>
+<tr><td><strong>Overall</strong></td><td><strong>net 2</strong></td><td><strong>0</strong> (all recycled)</td><td>0</td><td>0</td></tr>
+</tbody></table></div>
+
+<h3 data-tier="essential">Lactic acid fermentation</h3>
+<p><strong>Who does it:</strong> animals (for example, your skeletal muscle cells during hard exercise) and some bacteria, such as the <em>Lactobacillus</em> species used to make yogurt, cheese, sauerkraut, kimchi and the sour taste in sourdough.</p>
+<p><strong>What happens:</strong> in a single step, <strong>pyruvate is reduced by NADH</strong>, forming <strong>lactate</strong> and regenerating <strong>NAD<sup>+</sup></strong>. The enzyme is <span class="term">lactate dehydrogenase (LDH)</span>. Pyruvate is the final electron acceptor. No carbon is removed, so <strong>no CO<sub>2</sub></strong> is produced, and lactate has 3 carbons, just like pyruvate.</p>
+<div class="eq">pyruvate + NADH + H<sup>+</sup> → lactate + NAD<sup>+</sup> &nbsp;(lactate dehydrogenase)</div>
+<div class="eq">Overall: glucose → 2 lactate (+ 2 ATP) &nbsp;&nbsp; C<sub>6</sub>H<sub>12</sub>O<sub>6</sub> → 2 C<sub>3</sub>H<sub>6</sub>O<sub>3</sub></div>
+<figure class="diagram">
+<svg viewBox="0 0 640 290" role="img" aria-labelledby="s207b-title s207b-desc">
+<title id="s207b-title">Lactic acid fermentation and the NAD+ cycle</title>
+<desc id="s207b-desc">Glucose goes through glycolysis to 2 pyruvate, making 2 ATP from 2 ADP and 2 phosphate. During glycolysis step 6, 2 NAD+ are reduced to 2 NADH plus 2 H+. Pyruvate then drops down to the lactate dehydrogenase step, where it is reduced to 2 lactate, and the 2 NADH are oxidized back to 2 NAD+, which return to glycolysis. The NAD+ and NADH form a loop between the two reactions.</desc>
+<defs>
+<marker id="m207b-a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="10" markerHeight="10" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0 L10,5 L0,10 z" style="fill:var(--ink)"/></marker>
+</defs>
+<rect x="16" y="42" width="100" height="36" rx="6" stroke-width="2" style="fill:var(--surface);stroke:var(--line)"/>
+<polygon points="124,48 468,48 468,40 488,60 468,80 468,72 124,72" stroke-width="2" style="fill:var(--glyco-soft);stroke:var(--glyco)"/>
+<rect x="492" y="42" width="132" height="36" rx="6" stroke-width="2" style="fill:var(--surface);stroke:var(--line)"/>
+<polygon points="600,228 132,228 132,220 112,240 132,260 132,252 600,252" stroke-width="2" style="fill:var(--surface-2);stroke:var(--ink-2)"/>
+<rect x="16" y="222" width="88" height="36" rx="6" stroke-width="2" style="fill:var(--proton-soft);stroke:var(--proton)"/>
+<g stroke-width="2" style="fill:var(--etc-soft);stroke:var(--etc)">
+<rect x="150" y="132" width="100" height="30" rx="6"/>
+<rect x="360" y="132" width="140" height="30" rx="6"/>
+</g>
+<g fill="none" stroke-width="2" style="stroke:var(--ink)">
+<line x1="558" y1="78" x2="558" y2="226" marker-end="url(#m207b-a)"/>
+<path d="M215,132 C215,60 415,60 415,130" marker-end="url(#m207b-a)"/>
+<path d="M445,162 C445,236 185,236 185,164" marker-end="url(#m207b-a)"/>
+</g>
+<g font-family="inherit" font-size="13" text-anchor="middle" style="fill:var(--ink)">
+<text x="66" y="65" font-weight="700">Glucose</text>
+<text x="296" y="65" font-weight="700">Glycolysis</text>
+<text x="296" y="28">2 ADP + 2 Pi → 2 ATP</text>
+<text x="558" y="65" font-weight="700">2 Pyruvate</text>
+<text x="200" y="152" font-weight="700">2 NAD⁺</text>
+<text x="430" y="152" font-weight="700">2 NADH + 2 H⁺</text>
+<text x="366" y="245">Lactate dehydrogenase (LDH): pyruvate is reduced</text>
+<text x="60" y="245" font-weight="700">2 Lactate</text>
+<text x="315" y="112" font-size="12" style="fill:var(--ink-2)">glycolysis step 6</text>
+<text x="315" y="190" font-size="12" font-weight="700">regenerates NAD⁺</text>
+</g>
+</svg>
+<figcaption>Lactic acid fermentation (class slide). The same 2 NAD<sup>+</sup> molecules cycle back and forth: glycolysis reduces them to NADH, and lactate dehydrogenase oxidizes them back to NAD<sup>+</sup> by reducing pyruvate to lactate. Net result: 2 ATP and 2 lactate per glucose.</figcaption>
+</figure>
+<p><strong>It's reversible.</strong> LDH works in both directions. When oxygen becomes available again, lactate can be oxidized back into pyruvate (turning NAD<sup>+</sup> into NADH), and the pyruvate can enter the mitochondrion. That's why lactate is not a dead-end waste product, as you'll see in its four fates below.</p>
+<p><strong>Lactic acid or lactate?</strong> Lactic acid releases an H<sup>+</sup> at the pH inside your body, so what your cells actually make and carry around is the <strong>lactate</strong> ion. You'll see both names used. The notes put it simply: "we produce lactate anyways."</p>
+
+<h3 data-tier="likely">The muscle "burn": it's not lactic acid</h3>
+<div class="callout teacher"><p class="callout-title">Said in class</p><p>The pain in your muscles during hard exercise is <strong>not caused by lactic acid</strong>. It comes from the mechanism of muscle contraction: you're hydrolyzing so much ATP that it releases protons (H<sup>+</sup>). The <strong>proton buildup makes the muscle acidic</strong>. Lactate actually acts as a <strong>buffer</strong>: it takes up protons.</p></div>
+<p>Here's the chemistry behind that:</p>
+<ul>
+<li><strong>Splitting ATP releases H<sup>+</sup>.</strong> At the pH inside a cell, ATP hydrolysis (ATP + H<sub>2</sub>O → ADP + P<sub>i</sub>) also releases a hydrogen ion. During a hard sprint, muscles split ATP extremely fast. When ATP is used faster than the mitochondria can rebuild it aerobically, H<sup>+</sup> piles up, the pH drops, and acid-sensing nerve endings produce the burning feeling (along with fatigue).</li>
+<li><strong>Making lactate uses up H<sup>+</sup>.</strong> Look at the LDH equation: pyruvate + NADH + <strong>H<sup>+</sup></strong> → lactate + NAD<sup>+</sup>. Each lactate made consumes a proton. Lactate also leaves the muscle cell together with an H<sup>+</sup>, carrying acid out into the blood. Both effects slow the drop in pH.</li>
+<li><strong>Why the myth exists.</strong> Lactate rises at the same time as the burn and fatigue, so for decades people assumed it caused them. That was correlation, not causation.</li>
+</ul>
+<div class="callout warn"><p class="callout-title">Common mistake</p><p>"Lactic acid build-up makes your muscles sore the next day." No. Lactate is cleared from muscle and blood within about an hour after exercise. Next-day soreness comes from tiny tears in muscle fibres and the inflammation that repairs them, not from lactate.</p></div>
+
+<h3 data-tier="essential">Fates of lactate in animal cells</h3>
+<p>Lactate is not waste. It's a valuable fuel and even a signalling molecule. The slide lists four fates:</p>
+<figure class="diagram">
+<svg viewBox="0 0 640 300" role="img" aria-labelledby="s207c-title s207c-desc">
+<title id="s207c-title">Four fates of lactate in animal cells</title>
+<desc id="s207c-desc">Lactate made by working muscle travels in the blood to four destinations. One: slow-twitch muscle fibres convert it to pyruvate and oxidize it for ATP. Two: the liver uses it for gluconeogenesis in the Cori cycle, sending glucose back to the blood. Three: the heart and brain convert it to pyruvate as a fast fuel for ATP. Four: as a signal, it stimulates capillary growth and the formation of new mitochondria.</desc>
+<defs>
+<marker id="m207c-a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0 L10,5 L0,10 z" style="fill:var(--ink-2)"/></marker>
+</defs>
+<rect x="220" y="113" width="200" height="74" rx="10" stroke-width="2" style="fill:var(--surface-2);stroke:var(--ink-2)"/>
+<rect x="10" y="10" width="190" height="76" rx="8" stroke-width="2" style="fill:var(--etc-soft);stroke:var(--etc)"/>
+<rect x="440" y="10" width="190" height="76" rx="8" stroke-width="2" style="fill:var(--link-soft);stroke:var(--link)"/>
+<rect x="10" y="214" width="190" height="76" rx="8" stroke-width="2" style="fill:var(--proton-soft);stroke:var(--proton)"/>
+<rect x="440" y="214" width="190" height="76" rx="8" stroke-width="2" style="fill:var(--glyco-soft);stroke:var(--glyco)"/>
+<g stroke-width="2" style="stroke:var(--ink-2)">
+<line x1="240" y1="113" x2="198" y2="89" marker-end="url(#m207c-a)"/>
+<line x1="400" y1="113" x2="442" y2="89" marker-end="url(#m207c-a)"/>
+<line x1="240" y1="187" x2="198" y2="211" marker-end="url(#m207c-a)"/>
+<line x1="400" y1="187" x2="442" y2="211" marker-end="url(#m207c-a)"/>
+</g>
+<g font-family="inherit" font-size="12" style="fill:var(--ink)">
+<text x="320" y="138" text-anchor="middle" font-size="14" font-weight="700">Lactate</text>
+<text x="320" y="157" text-anchor="middle">from working muscle,</text>
+<text x="320" y="174" text-anchor="middle">carried in the blood</text>
+<text x="22" y="34" font-size="13" font-weight="700">1. Slow-twitch fibres</text>
+<text x="22" y="54">lactate → pyruvate</text>
+<text x="22" y="72">→ oxidized for ATP</text>
+<text x="452" y="34" font-size="13" font-weight="700">2. Liver: Cori cycle</text>
+<text x="452" y="54">gluconeogenesis</text>
+<text x="452" y="72">→ glucose to the blood</text>
+<text x="22" y="238" font-size="13" font-weight="700">3. Heart and brain</text>
+<text x="22" y="258">lactate → pyruvate</text>
+<text x="22" y="276">→ fast fuel for ATP</text>
+<text x="452" y="238" font-size="13" font-weight="700">4. Signalling</text>
+<text x="452" y="258">capillary growth</text>
+<text x="452" y="276">+ new mitochondria</text>
+</g>
+</svg>
+<figcaption>The four fates of lactate. Three of them burn it or recycle it as fuel; the fourth uses it as a chemical signal that helps the body adapt to exercise.</figcaption>
+</figure>
+<ol class="steps">
+<li><p class="step-head">Shuttled to slow-twitch muscle fibres → pyruvate</p><p>Fast-twitch fibres (built for bursts, relying on glycolysis) make lots of lactate. Neighbouring <strong>slow-twitch (oxidative) fibres</strong>, which are packed with mitochondria, take it up, convert it back to pyruvate with LDH, and oxidize it in their mitochondria for ATP. This is called the cell-to-cell lactate shuttle.</p></li>
+<li><p class="step-head">Sent to the liver → gluconeogenesis (Cori cycle)</p><p>Lactate travels in the blood to the <strong>liver</strong>, which converts it back to pyruvate and then builds it into new <strong>glucose</strong> by gluconeogenesis. The glucose returns to the blood and can fuel muscles again. This muscle-to-liver-to-muscle loop is the <span class="term">Cori cycle</span>. It costs the liver ATP, about 6 ATP to rebuild one glucose that gave the muscle only 2, and the liver makes that ATP aerobically.</p></li>
+<li><p class="step-head">Used by the heart and brain for faster ATP production</p><p>The heart and brain take lactate from the blood, convert it to pyruvate, and oxidize it in their mitochondria. Because lactate is already one step from pyruvate, it skips all of glycolysis, including the 2-ATP investment. That makes it a fast, efficient fuel. During exercise, lactate becomes one of the heart's preferred fuels.</p></li>
+<li><p class="step-head">Stimulates capillary growth (signalling)</p><p>Lactate also acts as a signal (it's been nicknamed a "lactormone"). It binds receptors on cells and triggers <strong>capillary growth</strong> (to ensure faster delivery of oxygen) and the formation of <strong>new mitochondria</strong>. That's part of how training makes muscles better at aerobic respiration, so you produce less lactate at the same effort.</p></li>
+</ol>
+<p data-tier="likely">The worksheet's version: animal tissue makes lactate, which <strong>the liver converts back to pyruvate when oxygen is plentiful again</strong>. That's also why you keep breathing hard after a sprint. Your body needs extra O<sub>2</sub> to make the ATP for recycling lactate, rebuild ATP stores, and reload oxygen in the blood and muscles. This is sometimes called "oxygen debt."</p>
+<div class="callout tip"><p class="callout-title">Memory trick</p><p>Four fates, four places: <strong>Muscle, Liver, Heart/brain, Messages</strong>. Slow-twitch muscle burns it, the liver rebuilds glucose from it, the heart and brain use it as fast fuel, and as a messenger it grows capillaries.</p></div>
+
+<h3 data-tier="essential">Alcohol fermentation</h3>
+<p><strong>Who does it:</strong> yeast and other fungi, plants (for example, roots in waterlogged soil that can't get enough O<sub>2</sub>), and some bacteria.</p>
+<p><strong>What happens:</strong> pyruvate is converted to ethanol in <strong>two steps</strong>, both in the cytoplasm:</p>
+<ol class="steps">
+<li><p class="step-head">Pyruvate → acetaldehyde + CO<sub>2</sub> &nbsp;(pyruvate decarboxylase)</p><p>A carboxyl group is removed from pyruvate (3 C) and released as <strong>CO<sub>2</sub></strong>, leaving <strong>acetaldehyde</strong> (2 C). That's 1 CO<sub>2</sub> per pyruvate, so <strong>2 CO<sub>2</sub> per glucose</strong>. This is a decarboxylation, and it's irreversible: the CO<sub>2</sub> escapes as a gas. No NADH is used or made in this step.</p></li>
+<li><p class="step-head">Acetaldehyde + NADH + H<sup>+</sup> → ethanol + NAD<sup>+</sup> &nbsp;(alcohol dehydrogenase)</p><p>Acetaldehyde is the <strong>final electron acceptor</strong>. It takes the electrons and a hydrogen from NADH (plus an H<sup>+</sup> from solution) and is reduced to <strong>ethanol</strong>. NADH is oxidized back to <strong>NAD<sup>+</sup></strong>, which returns to glycolysis.</p></li>
+</ol>
+<div class="eq">Word equation: glucose → ethanol + carbon dioxide (+ 2 ATP)</div>
+<div class="eq">Balanced: C<sub>6</sub>H<sub>12</sub>O<sub>6</sub> → 2 C<sub>2</sub>H<sub>5</sub>OH + 2 CO<sub>2</sub> &nbsp;(+ 2 ATP)</div>
+<div class="eq">With the ATP shown: C<sub>6</sub>H<sub>12</sub>O<sub>6</sub> + 2 ADP + 2 P<sub>i</sub> → 2 C<sub>2</sub>H<sub>5</sub>OH + 2 CO<sub>2</sub> + 2 ATP</div>
+<p>Check the balance: carbon 6 = 2(2) + 2(1) = 6; hydrogen 12 = 2(6) = 12; oxygen 6 = 2(1) + 2(2) = 6.</p>
+<figure class="diagram">
+<svg viewBox="0 0 640 290" role="img" aria-labelledby="s207d-title s207d-desc">
+<title id="s207d-title">Alcohol fermentation and the NAD+ cycle</title>
+<desc id="s207d-desc">Glucose goes through glycolysis to 2 pyruvate, making 2 ATP. 2 NAD+ are reduced to 2 NADH in glycolysis step 6. Pyruvate decarboxylase removes 2 CO2 from the 2 pyruvate, forming 2 acetaldehyde. Alcohol dehydrogenase then reduces acetaldehyde to 2 ethanol, oxidizing the 2 NADH back to 2 NAD+, which return to glycolysis.</desc>
+<defs>
+<marker id="m207d-a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="10" markerHeight="10" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0 L10,5 L0,10 z" style="fill:var(--ink)"/></marker>
+</defs>
+<rect x="16" y="42" width="100" height="36" rx="6" stroke-width="2" style="fill:var(--surface);stroke:var(--line)"/>
+<polygon points="124,48 446,48 446,40 466,60 446,80 446,72 124,72" stroke-width="2" style="fill:var(--glyco-soft);stroke:var(--glyco)"/>
+<rect x="474" y="42" width="150" height="36" rx="6" stroke-width="2" style="fill:var(--surface);stroke:var(--line)"/>
+<rect x="474" y="222" width="150" height="36" rx="6" stroke-width="2" style="fill:var(--surface);stroke:var(--line)"/>
+<polygon points="466,228 132,228 132,220 112,240 132,260 132,252 466,252" stroke-width="2" style="fill:var(--surface-2);stroke:var(--ink-2)"/>
+<rect x="16" y="222" width="88" height="36" rx="6" stroke-width="2" style="fill:var(--glyco-soft);stroke:var(--glyco)"/>
+<g stroke-width="2" style="fill:var(--etc-soft);stroke:var(--etc)">
+<rect x="150" y="132" width="100" height="30" rx="6"/>
+<rect x="340" y="132" width="110" height="30" rx="6"/>
+</g>
+<g fill="none" stroke-width="2" style="stroke:var(--ink)">
+<line x1="520" y1="78" x2="520" y2="220" marker-end="url(#m207d-a)"/>
+<line x1="520" y1="160" x2="564" y2="182" marker-end="url(#m207d-a)"/>
+<path d="M215,132 C215,60 395,60 395,130" marker-end="url(#m207d-a)"/>
+<path d="M425,162 C425,236 185,236 185,164" marker-end="url(#m207d-a)"/>
+</g>
+<g font-family="inherit" font-size="13" text-anchor="middle" style="fill:var(--ink)">
+<text x="66" y="65" font-weight="700">Glucose</text>
+<text x="285" y="65" font-weight="700">Glycolysis</text>
+<text x="285" y="28">2 ADP + 2 Pi → 2 ATP</text>
+<text x="549" y="65" font-weight="700">2 Pyruvate</text>
+<text x="549" y="245" font-weight="700">2 Acetaldehyde</text>
+<text x="60" y="245" font-weight="700">2 Ethanol</text>
+<text x="200" y="152" font-weight="700">2 NAD⁺</text>
+<text x="395" y="152" font-weight="700">2 NADH + 2 H⁺</text>
+<text x="300" y="245" font-size="12">Alcohol dehydrogenase: acetaldehyde is reduced</text>
+<text x="305" y="112" font-size="12" style="fill:var(--ink-2)">glycolysis step 6</text>
+<text x="305" y="190" font-size="12" font-weight="700">regenerates NAD⁺</text>
+</g>
+<g font-family="inherit" font-size="12" style="fill:var(--ink)">
+<text x="530" y="112">pyruvate</text>
+<text x="530" y="128">decarboxylase</text>
+<text x="570" y="192" font-size="13" font-weight="700">2 CO₂</text>
+</g>
+</svg>
+<figcaption>Alcohol fermentation (class slide). Pyruvate decarboxylase releases CO<sub>2</sub> to form acetaldehyde, and alcohol dehydrogenase reduces acetaldehyde to ethanol, regenerating the NAD<sup>+</sup> that glycolysis needs.</figcaption>
+</figure>
+<div class="callout warn"><p class="callout-title">Common mistake</p><p>Don't confuse <strong>pyruvate decarboxylase</strong> with <strong>pyruvate dehydrogenase</strong>. Pyruvate <em>dehydrogenase</em> (PDH) is the aerobic link-step enzyme in the mitochondrion: it makes acetyl-CoA, CO<sub>2</sub> and NADH. Pyruvate <em>decarboxylase</em> is the yeast fermentation enzyme in the cytoplasm: it makes acetaldehyde and CO<sub>2</sub>, with no NADH. Both release CO<sub>2</sub>, which is why they're easy to mix up.</p></div>
+<div class="callout tip"><p class="callout-title">Memory trick</p><p><strong>Lactic is the short one; alcohol is the long one.</strong> Lactic: 1 step, 1 product, no gas, reversible. Alcohol: 2 steps, 2 products (ethanol + CO<sub>2</sub>), the gas escapes, so it can't be reversed. And the enzyme names describe the job: <em>de-carbox-ylase</em> removes a carboxyl group (as CO<sub>2</sub>); <em>de-hydrogen-ase</em> moves hydrogen (electrons) to or from NAD.</p></div>
+<p data-tier="extra"><strong>Beyond the slides:</strong> humans can't do alcohol fermentation because we have no pyruvate decarboxylase. Your liver <em>does</em> have alcohol dehydrogenase, but it uses it in reverse, to break down ethanol you drink into acetaldehyde. Yeast can't turn ethanol back into pyruvate, so ethanol is released into the surroundings. It's toxic to yeast too, which is why fermentation alone can't make wine much stronger than about 15% alcohol.</p>
+
+<h3 data-tier="essential">Lactic acid vs alcohol fermentation</h3>
+<div class="table-wrap"><table class="data">
+<thead><tr><th>Feature</th><th>Lactic acid fermentation</th><th>Alcohol fermentation</th></tr></thead>
+<tbody>
+<tr><td>Organisms</td><td>Animals (muscle cells, red blood cells); some bacteria (e.g. <em>Lactobacillus</em>)</td><td>Yeast and other fungi; plants; some bacteria</td></tr>
+<tr><td>Location in the cell</td><td>Cytoplasm</td><td>Cytoplasm</td></tr>
+<tr><td>Steps after glycolysis</td><td>1</td><td>2</td></tr>
+<tr><td>Enzyme(s)</td><td>Lactate dehydrogenase (LDH)</td><td>Pyruvate decarboxylase, then alcohol dehydrogenase</td></tr>
+<tr><td>Final electron acceptor</td><td>Pyruvate</td><td>Acetaldehyde</td></tr>
+<tr><td>CO<sub>2</sub> released?</td><td>No</td><td>Yes: 2 per glucose</td></tr>
+<tr><td>End product(s)</td><td>2 lactate (3 C)</td><td>2 ethanol (2 C) + 2 CO<sub>2</sub></td></tr>
+<tr><td>Reversible?</td><td>Yes: lactate → pyruvate when O<sub>2</sub> returns</td><td>No: CO<sub>2</sub> is lost</td></tr>
+<tr><td>NAD<sup>+</sup> regenerated?</td><td>Yes (2 per glucose)</td><td>Yes (2 per glucose)</td></tr>
+<tr><td>Net ATP per glucose</td><td>2 (from glycolysis)</td><td>2 (from glycolysis)</td></tr>
+<tr><td>Everyday uses</td><td>Yogurt, cheese, sauerkraut, kimchi, sourdough tang</td><td>Bread (CO<sub>2</sub> makes it rise), beer, wine, fuel ethanol</td></tr>
+</tbody></table></div>
+<details class="check" data-tier="likely"><summary>Worksheet: Compare and contrast fermentation in bacterial cells and in animal tissue.</summary><div class="ans"><p><strong>Similarities:</strong> in both, pyruvate is converted into a product that can be released (into the environment, or into the bloodstream) so glycolysis keeps running at full speed, and both use up the NADH from glycolysis, regenerating NAD<sup>+</sup>. <strong>Difference:</strong> the product. The bacterial (and yeast) cells in the worksheet turn pyruvate into ethanol by removing a CO<sub>2</sub> molecule, which is irreversible. Animal tissue converts pyruvate into lactate (lactic acid), which the liver can convert back into pyruvate when oxygen is plentiful again. (Note: some bacteria, like the ones in yogurt, make lactate instead.)</p></div></details>
+
+<h3 data-tier="likely">Yeast: switching between pathways</h3>
+<p>Yeast (<em>Saccharomyces cerevisiae</em>) is a <span class="term">facultative anaerobe</span>: it can live with or without oxygen and switches pathways to suit the conditions.</p>
+<div class="compare">
+<div><h4>With O<sub>2</sub>: aerobic respiration</h4><ul>
+<li>Pyruvate → acetyl-CoA → Krebs → ETC.</li>
+<li>Up to 36–38 ATP per glucose.</li>
+<li>Products: CO<sub>2</sub> and H<sub>2</sub>O; no ethanol.</li>
+<li>Yeast grow and multiply quickly.</li>
+</ul></div>
+<div><h4>Without O<sub>2</sub>: alcohol fermentation</h4><ul>
+<li>Pyruvate → acetaldehyde + CO<sub>2</sub> → ethanol.</li>
+<li>Only 2 ATP per glucose.</li>
+<li>Products: ethanol and CO<sub>2</sub>.</li>
+<li>Must burn sugar much faster to get the same ATP.</li>
+</ul></div>
+</div>
+<p><strong>Why do yeast ferment in some conditions?</strong> (Assignment reflection question.) When O<sub>2</sub> is scarce or used up, such as deep inside bread dough, in a sealed fermenter, or under a brewer's airlock, there's no final electron acceptor for the ETC. NADH can't be recycled there, so the yeast must regenerate NAD<sup>+</sup> by fermentation to keep glycolysis, and its 2 ATP, going. Fermentation keeps the yeast alive until oxygen returns.</p>
+<p data-tier="extra"><strong>Beyond the slides:</strong> baker's yeast actually prefers to ferment whenever sugar is very plentiful, even if some oxygen is present. Fermenting is a fast (if wasteful) way to use sugar, and the ethanol it releases harms competing microbes.</p>
+
+<h3 data-tier="likely">Application: yeast fermentation in bread</h3>
+<p>The Yeast Fermentation assignment asks you to connect what happens inside yeast cells to what you can see in the kitchen. Here's the biology at each stage of making bread:</p>
+<ol class="steps">
+<li><p class="step-head">Activation (proofing the yeast)</p><p>Dried yeast is dormant: its cells are dehydrated and its metabolism has nearly stopped. Warm water (roughly 35–43 °C) rehydrates the cells and speeds up their enzyme-catalyzed reactions, because molecules move faster and collide more often. Sugar provides the substrate for glycolysis. Foam on the surface is CO<sub>2</sub>, proof the yeast are alive. <strong>Temperature control matters:</strong> too cold and the reactions are slow; too hot (above about 50 °C, and certainly by about 60 °C) and the yeast's enzymes <strong>denature</strong>. The bonds holding their 3-D shape break, the active sites change shape, the yeast die, and the dough never rises.</p></li>
+<li><p class="step-head">Mixing and kneading</p><p>Kneading develops <strong>gluten</strong>, a stretchy network of proteins from the flour. Gluten forms elastic walls that will trap gas bubbles like tiny balloons.</p></li>
+<li><p class="step-head">Fermentation (proofing the dough)</p><p>In the yeast's <strong>cytoplasm</strong>, glycolysis runs: glucose + 2 ATP + 2 NAD<sup>+</sup> → 2 pyruvate + 4 ATP (net 2) + 2 NADH. The small amount of O<sub>2</sub> in the dough is quickly used up, so conditions become anaerobic and the yeast switch to alcohol fermentation. Pyruvate decarboxylase releases <strong>CO<sub>2</sub></strong>, and alcohol dehydrogenase makes <strong>ethanol</strong> while regenerating NAD<sup>+</sup>. The CO<sub>2</sub> is trapped by the gluten, so <strong>the dough expands</strong>. The ethanol and other by-products add flavour.</p></li>
+<li><p class="step-head">Baking</p><p>Heat makes the trapped gas expand, and the yeast briefly work faster ("oven spring"). Then, at about 60 °C, the yeast die and their enzymes denature. <strong>The ethanol evaporates</strong>: it boils at 78 °C and the inside of a loaf reaches about 95–99 °C, so most of it is driven off, leaving only small traces. Starch sets and proteins firm up, locking the bubble structure in place. The holes in a slice of bread are where CO<sub>2</sub> bubbles were.</p></li>
+</ol>
+<p>For an experiment (Option B), the rate of fermentation can be measured by the rate of CO<sub>2</sub> production (for example, gas collected in a balloon or the height of the dough), because CO<sub>2</sub> is a direct product of the pathway. Here's how common variables affect it:</p>
+<div class="table-wrap"><table class="data">
+<thead><tr><th>Variable</th><th>Effect on fermentation rate</th><th>Biological reason</th></tr></thead>
+<tbody>
+<tr><td>Temperature</td><td>Rises up to an optimum (about 30–40 °C), then falls sharply</td><td>Warmer = more collisions between enzymes and substrates; too hot = enzymes denature</td></tr>
+<tr><td>Sugar type</td><td>Glucose and fructose: fast. Sucrose: fast after a short delay. Lactose and artificial sweeteners: little or no CO<sub>2</sub></td><td>Glucose and fructose enter glycolysis directly. Yeast secrete an enzyme (invertase) that splits sucrose into glucose + fructose. Baker's yeast lack the enzyme to digest lactose, and sweeteners like sucralose can't enter glycolysis.</td></tr>
+<tr><td>Sugar concentration</td><td>Increases up to a point, then levels off or drops</td><td>More substrate means faster reactions until the enzymes are saturated; very high sugar draws water out of the yeast by osmosis</td></tr>
+<tr><td>Salt</td><td>Slows fermentation (a little is used to control rising)</td><td>Salt draws water out of yeast cells by osmosis and disrupts enzyme function</td></tr>
+<tr><td>pH (lemon juice, baking soda)</td><td>Fastest near the yeast's optimum (slightly acidic); slower at extremes</td><td>Each enzyme has an optimal pH; strong acid or base changes the active site's shape</td></tr>
+</tbody></table></div>
+<div class="callout key"><p class="callout-title">On the test</p><p>The assignment's required content doubles as excellent test review: the word and balanced equations for alcohol fermentation; <strong>2 ATP vs 36–38</strong> for aerobic respiration; glycolysis in the <strong>cytoplasm</strong> (inputs glucose, 2 ATP, 2 NAD<sup>+</sup>; outputs 2 pyruvate, net 2 ATP, 2 NADH); both fermentation steps with their enzymes; and why yeast ferment when O<sub>2</sub> is scarce (to regenerate NAD<sup>+</sup>).</p></div>
+
+<h3 data-tier="essential">Quick checks</h3>
+<details class="check"><summary>What is the real purpose of fermentation? (Review Q15)</summary><div class="ans"><p>To oxidize NADH back into NAD<sup>+</sup> so that glycolysis can continue in the absence of oxygen. Glycolysis step 6 needs NAD<sup>+</sup>, and without O<sub>2</sub> the ETC can't regenerate it. Fermentation regenerates it by passing NADH's electrons to pyruvate (or acetaldehyde), so the cell keeps getting glycolysis's 2 ATP. The fermentation step itself makes no ATP.</p></div></details>
+<details class="check"><summary>Write the reactions for alcoholic and lactate fermentation. (Review Q14)</summary><div class="ans"><p><strong>Alcoholic:</strong> glucose → (glycolysis) → 2 pyruvate; pyruvate → acetaldehyde + CO<sub>2</sub> (pyruvate decarboxylase); acetaldehyde + NADH + H<sup>+</sup> → ethanol + NAD<sup>+</sup> (alcohol dehydrogenase). Overall: C<sub>6</sub>H<sub>12</sub>O<sub>6</sub> → 2 C<sub>2</sub>H<sub>5</sub>OH + 2 CO<sub>2</sub> + 2 ATP.</p><p><strong>Lactate:</strong> glucose → (glycolysis) → 2 pyruvate; pyruvate + NADH + H<sup>+</sup> → lactate + NAD<sup>+</sup> (lactate dehydrogenase). Overall: C<sub>6</sub>H<sub>12</sub>O<sub>6</sub> → 2 C<sub>3</sub>H<sub>6</sub>O<sub>3</sub> + 2 ATP. In both, the 2 NAD<sup>+</sup> cycle between glycolysis and the fermentation step.</p></div></details>
+<details class="check"><summary>Why does fermentation yield only 2 ATP per glucose, compared with 36–38 for aerobic respiration? Where is the rest of the energy?</summary><div class="ans"><p>Only glycolysis runs, making 2 ATP (net) by substrate-level phosphorylation. Pyruvate isn't oxidized in Krebs, and NADH's electrons are given to pyruvate or acetaldehyde instead of going down the ETC to O<sub>2</sub>, so no ATP is made by chemiosmosis. Most of glucose's energy stays in the end product: lactate (which can be burned later) or ethanol (which is itself a fuel).</p></div></details>
+<details class="check"><summary>Compare and contrast fermentation in bacterial cells and in animal tissue. (Worksheet)</summary><div class="ans"><p>Both convert pyruvate into a product that can be disposed of (into the environment or the bloodstream) so glycolysis keeps running, and both consume the NADH from glycolysis, regenerating NAD<sup>+</sup>. They differ in the product: the bacteria (and yeast) make ethanol by removing CO<sub>2</sub>, which is irreversible, while animal tissue makes lactate, which the liver can convert back to pyruvate when O<sub>2</sub> is plentiful.</p></div></details>
+<details class="check"><summary>Complete the worksheet's Table 1 row for fermentation in animal tissue.</summary><div class="ans"><p>ATP: 0. NADH + H<sup>+</sup>: −2 (2 NADH are oxidized to NAD<sup>+</sup>). FADH<sub>2</sub>: 0. CO<sub>2</sub>: 0. Combined with glycolysis (net 2 ATP, +2 NADH), the overall result is 2 ATP and no net NADH.</p></div></details>
+<details class="check"><summary>Why can parts of your body be anaerobic, but not your whole body?</summary><div class="ans"><p>A working tissue such as a sprinting muscle can use O<sub>2</sub> faster than the blood delivers it, so it becomes locally anaerobic and ferments for a short time while the rest of the body stays aerobic. The whole body can't, because organs like the brain and heart need a constant, large supply of aerobic ATP; 2 ATP per glucose from fermentation isn't nearly enough, and they would fail within minutes.</p></div></details>
+<details class="check"><summary>Does lactic acid cause the "burn" in your muscles during hard exercise? Explain.</summary><div class="ans"><p>No. The burn comes from H<sup>+</sup> released when ATP is hydrolyzed very rapidly during muscle contraction, faster than it can be rebuilt aerobically. The H<sup>+</sup> builds up and lowers the pH. Making lactate actually consumes H<sup>+</sup> (pyruvate + NADH + H<sup>+</sup> → lactate + NAD<sup>+</sup>), and lactate leaves the cell along with H<sup>+</sup>, so lactate acts as a buffer and slows the acidification.</p></div></details>
+<details class="check"><summary>List the four fates of lactate in animal cells.</summary><div class="ans"><p>(1) Shuttled to slow-twitch muscle fibres, converted to pyruvate and oxidized for ATP. (2) Sent to the liver and converted to glucose by gluconeogenesis (the Cori cycle). (3) Used by the heart and brain as a fuel for faster ATP production. (4) Acts as a signal that stimulates capillary growth (faster O<sub>2</sub> delivery) and the formation of new mitochondria.</p></div></details>
+<details class="check"><summary>Is lactic acid fermentation reversible? Is alcohol fermentation? Why the difference?</summary><div class="ans"><p>Lactic acid fermentation is reversible: lactate dehydrogenase can turn lactate back into pyruvate when O<sub>2</sub> returns. Alcohol fermentation is irreversible: its first step removes CO<sub>2</sub>, which escapes as a gas, so ethanol can't be turned back into pyruvate.</p></div></details>
+<details class="check" data-tier="likely"><summary>Bread dough rises because of yeast fermentation, which makes ethanol. Why is there almost no alcohol in baked bread?</summary><div class="ans"><p>The CO<sub>2</sub> made by pyruvate decarboxylase is trapped by the gluten network, which makes the dough rise. During baking, the inside of the loaf reaches about 95–99 °C, well above ethanol's boiling point (78 °C), so most of the ethanol evaporates out of the bread. The heat also kills the yeast (around 60 °C) and stops fermentation.</p></div></details>
+<details class="check" data-tier="likely"><summary>A student proofs yeast in boiling water. What happens and why?</summary><div class="ans"><p>No foam forms and the dough won't rise. The high temperature denatures the yeast's enzymes (including those of glycolysis and fermentation): the bonds holding their 3-D shape break and the active sites no longer fit their substrates. The yeast cells die, so no CO<sub>2</sub> is produced.</p></div></details>
+<details class="check" data-tier="likely"><summary>Two flasks of yeast get equal sugar. One is sealed (no O<sub>2</sub>); the other is bubbled with air. Which uses up its sugar faster, and which makes ethanol?</summary><div class="ans"><p>The sealed flask uses its sugar much faster and makes ethanol + CO<sub>2</sub>. Without O<sub>2</sub>, yeast ferment and get only 2 ATP per glucose, so they must break down far more glucose to get enough ATP. The aerated flask carries out aerobic respiration (up to 36–38 ATP per glucose), uses sugar more slowly, makes CO<sub>2</sub> and water but no ethanol, and grows more yeast.</p></div></details>
+<details class="check" data-tier="likely"><summary>After a 400 m sprint you keep breathing hard for several minutes. Use the fates of lactate to explain why.</summary><div class="ans"><p>During the sprint your muscles fermented glucose to lactate. Afterward, extra O<sub>2</sub> is needed to make the ATP for converting lactate back into pyruvate and then glucose in the liver (gluconeogenesis, the Cori cycle), for oxidizing lactate in slow-twitch fibres, heart and brain, and for rebuilding ATP and re-oxygenating blood and muscle. Breathing stays fast until this "oxygen debt" is repaid.</p></div></details>
+
+<h3 data-tier="essential">Lesson summary</h3>
+<ul>
+<li><strong>Fates of pyruvate:</strong> aerobic → acetyl-CoA; anaerobic in vertebrates → lactate; anaerobic in microorganisms → ethanol + CO<sub>2</sub>; pyruvate ⇄ glucose-6-phosphate by glycolysis / gluconeogenesis.</li>
+<li>Fermentation occurs under <strong>anaerobic conditions</strong> (absence or local depletion of O<sub>2</sub>). The whole body can't be anaerobic, but parts (like working muscle) can.</li>
+<li><strong>Real purpose: regenerate NAD<sup>+</sup> (oxidize NADH) so glycolysis can continue.</strong> The fermentation step itself makes no ATP.</li>
+<li><strong>2 ATP vs 36–38</strong>: only glycolysis runs; most of the energy stays in lactate or ethanol.</li>
+<li><strong>Lactic acid fermentation</strong> (animals, some bacteria): pyruvate + NADH → lactate + NAD<sup>+</sup>, catalyzed by <strong>lactate dehydrogenase (LDH)</strong>. One step, no CO<sub>2</sub>, reversible.</li>
+<li>The muscle burn is from <strong>H<sup>+</sup> released by rapid ATP hydrolysis</strong>, not lactic acid; making lactate actually <strong>buffers</strong> (takes up) H<sup>+</sup>.</li>
+<li><strong>Fates of lactate:</strong> slow-twitch fibres (→ pyruvate → ATP); liver (gluconeogenesis, Cori cycle); heart and brain (fast fuel); signalling (capillary growth, new mitochondria).</li>
+<li><strong>Alcohol fermentation</strong> (yeast/fungi, plants, some bacteria): pyruvate → acetaldehyde + CO<sub>2</sub> (<strong>pyruvate decarboxylase</strong>), then acetaldehyde + NADH → ethanol + NAD<sup>+</sup> (<strong>alcohol dehydrogenase</strong>). Irreversible.</li>
+<li>Word: glucose → ethanol + carbon dioxide. Balanced: <strong>C<sub>6</sub>H<sub>12</sub>O<sub>6</sub> → 2 C<sub>2</sub>H<sub>5</sub>OH + 2 CO<sub>2</sub> (+ 2 ATP)</strong>.</li>
+<li>Yeast is a <strong>facultative anaerobe</strong>: aerobic with O<sub>2</sub>, alcohol fermentation without it. In bread, CO<sub>2</sub> trapped by gluten makes dough rise, ethanol evaporates during baking, and too much heat denatures yeast enzymes.</li>
+</ul>
+`
+});

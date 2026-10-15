@@ -255,8 +255,20 @@
       }
       if (sec) sec.appendChild(el);
     });
+    // A tiered h4 owns the blocks after it, up to the next heading.
+    $$('h4[data-tier]', body).forEach(function (h) {
+      var t = h.getAttribute('data-tier');
+      var wrap = document.createElement('div');
+      wrap.className = 'tier-sub';
+      wrap.setAttribute('data-tier', t);
+      h.parentNode.insertBefore(wrap, h);
+      h.removeAttribute('data-tier');
+      if (TIER_RANK[t] && t !== 'essential') h.insertAdjacentHTML('beforeend', ' ' + tierBadge(t));
+      var n = h;
+      while (n && !(n !== h && /^H[34]$/.test(n.tagName))) { var next = n.nextElementSibling; wrap.appendChild(n); n = next; }
+    });
     $$('[data-tier]', body).forEach(function (el) {
-      if (el.classList.contains('tier-sec') || el.tagName === 'TR' || el.tagName === 'LI') return;
+      if (el.classList.contains('tier-sec') || el.classList.contains('tier-sub') || el.tagName === 'TR' || el.tagName === 'LI') return;
       var t = el.getAttribute('data-tier');
       var parentSec = el.closest('.tier-sec');
       if (!TIER_RANK[t] || t === 'essential' || (parentSec && parentSec.getAttribute('data-tier') === t)) return;

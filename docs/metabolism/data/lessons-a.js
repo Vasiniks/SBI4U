@@ -460,4 +460,517 @@ window.LESSONS.push({
 </ul>
 `
 });
+/* ===================================================================
+   2.02 GLYCOLYSIS (CELLULAR RESPIRATION PT 1)
+   =================================================================== */
+window.LESSONS.push({
+  id: "2.02",
+  title: "Glycolysis",
+  stage: "glyco",
+  where: "Cytoplasm",
+  summary: "An overview of cellular respiration (the equation, the four stages and the mitochondrion), then glycolysis in full: how one glucose is split into two pyruvate over 10 enzyme-catalyzed steps for a net gain of 2 ATP and 2 NADH, and what happens to the pyruvate next.",
+  objectives: [
+    "Write the overall equation for aerobic cellular respiration and explain why ATP synthesis must be coupled to glucose breakdown.",
+    "Name the four stages of aerobic respiration with their number of steps, location, oxygen requirement and main products.",
+    "Draw and label a mitochondrion (outer membrane, inner membrane, cristae, intermembrane space, matrix) and explain why the inner membrane is folded.",
+    "Describe all 10 steps of glycolysis: the intermediate, the enzyme, what happens and why, split into the investment (prep) and payoff phases.",
+    "Account for the ATP and NADH of glycolysis (2 ATP invested, 4 made, net 2; 2 NADH) and explain substrate-level phosphorylation.",
+    "State which parts of the overall respiration equation glycolysis accounts for, and the two problems the cell must solve after glycolysis.",
+    "Explain how oxygen and ATP levels decide the fate of pyruvate."
+  ],
+  html: `
+<h3 data-tier="essential">Cellular respiration: the big picture</h3>
+<p><span class="term">Cellular respiration</span> is the catabolic process in which cells break down glucose (and other fuels) and capture the released energy as ATP. When oxygen is used, it is called <span class="term">aerobic cellular respiration</span>. The overall equation:</p>
+<div class="eq">C<sub>6</sub>H<sub>12</sub>O<sub>6</sub> + 6 O<sub>2</sub> → 6 CO<sub>2</sub> + 6 H<sub>2</sub>O + ATP (energy)</div>
+<p>That one line hides dozens of reactions. The energy stored in glucose ends up in two places:</p>
+<ol>
+  <li><strong>Directly in ATP.</strong> A few reactions make ATP on the spot.</li>
+  <li><strong>In high-energy electron carriers</strong> (NADH and FADH<sub>2</sub>). These carry electrons stripped from glucose to the electron transport chain, where their energy <strong>powers the production of much more ATP</strong>. At the very end, the electrons are handed to oxygen.</li>
+</ol>
+<div class="callout teacher"><p class="callout-title">Said in class</p><p>Once glucose has been split apart, its electrons eventually go to <strong>oxygen</strong>, which is called the <strong>final electron acceptor</strong>. That is the only job O<sub>2</sub> has in cellular respiration, and it is why you breathe.</p></div>
+<h4>Why ATP-building has to be coupled</h4>
+<p><strong>Building ATP is an endergonic reaction that builds up a molecule (anabolic), so it must be coupled to an exergonic reaction to provide the energy.</strong> (Slide wording, worth memorizing.) ADP + P<sub>i</sub> will never become ATP on its own, for the same reason a ball will not roll uphill. The cell couples it to the exergonic breakdown of glucose into CO<sub>2</sub> and H<sub>2</sub>O.</p>
+<p>The class slide drew this as a chain of energy transfers: the exergonic breakdown of glucose (through glycolysis, the Krebs cycle and oxidative phosphorylation) releases energy, some as heat, and some captured by turning ADP + P<sub>i</sub> into ATP. The ATP is then spent on endergonic jobs, like forming the bonds that join glucose molecules into a polysaccharide. ATP is the go-between that carries energy from the reactions that release it to the reactions that need it.</p>
+<h4>Where it happens</h4>
+<p><strong>In eukaryotic cells, energy from sugars is converted to usable energy in the cytoplasm and the mitochondria.</strong> The first stage (glycolysis) happens in the cytoplasm; the rest happen inside mitochondria.</p>
+<p data-tier="extra">Prokaryotes (bacteria) have no mitochondria. They run glycolysis and the Krebs cycle in their cytoplasm, and their electron transport chain sits in their plasma membrane. That fits the idea that mitochondria are descended from bacteria that were engulfed by an ancestral cell long ago (endosymbiotic theory).</p>
+<div class="callout key"><p class="callout-title">On the test</p><p>Know the balanced equation by heart: C<sub>6</sub>H<sub>12</sub>O<sub>6</sub> + 6 O<sub>2</sub> → 6 CO<sub>2</sub> + 6 H<sub>2</sub>O + ATP. The class review key writes "+ 36 ATP"; the slides say a maximum of 38 ATP. Check the numbers balance: 6 C, 12 H and 18 O on each side.</p></div>
+
+<h3 data-tier="essential">The four stages of aerobic respiration</h3>
+<div class="table-wrap"><table class="data">
+<thead><tr><th>Stage</th><th>Steps</th><th>Location</th><th>O<sub>2</sub> needed?</th><th>Main products (per glucose)</th></tr></thead>
+<tbody>
+<tr><td><strong>1. Glycolysis</strong></td><td>10 steps</td><td>Cytoplasm (cytosol)</td><td><strong>No</strong> (anaerobic; happens in all cells)</td><td>2 pyruvate, 2 ATP (net), 2 NADH</td></tr>
+<tr><td><strong>2. Pyruvate oxidation</strong> (link / prep / transition step)</td><td>1 step</td><td>Mitochondrial matrix (pyruvate moves from cytoplasm into matrix)</td><td>Indirectly (only runs when O<sub>2</sub> is available)</td><td>2 acetyl-CoA, 2 NADH, 2 CO<sub>2</sub></td></tr>
+<tr><td><strong>3. Krebs cycle</strong> (citric acid cycle)</td><td>8 steps, cyclic</td><td>Mitochondrial matrix</td><td>Indirectly</td><td>2 ATP, 6 NADH, 2 FADH<sub>2</sub>, 4 CO<sub>2</sub></td></tr>
+<tr><td><strong>4. Electron transport chain + chemiosmosis</strong> (oxidative phosphorylation)</td><td>Multi-step</td><td>Inner mitochondrial membrane (cristae)</td><td><strong>Yes, directly</strong> (O<sub>2</sub> = final electron acceptor)</td><td>About 34 ATP (class maximum), H<sub>2</sub>O; NAD<sup>+</sup> and FAD recycled</td></tr>
+</tbody></table></div>
+<p>Why do stages 2 and 3 say "indirectly"? Neither pyruvate oxidation nor the Krebs cycle uses O<sub>2</sub> as a reactant. But both need a steady supply of empty carriers (NAD<sup>+</sup> and FAD), and the only place those are recycled in aerobic respiration is the electron transport chain, which cannot run without oxygen. No O<sub>2</sub> → ETC stops → NADH and FADH<sub>2</sub> pile up → no NAD<sup>+</sup> or FAD left → stages 2 and 3 grind to a halt too. Glycolysis is the only stage that can keep going without oxygen (with help from fermentation, lesson 2.07).</p>
+<figure class="diagram">
+<svg viewBox="0 0 640 625" role="img" aria-labelledby="t202a">
+<title id="t202a">Overview of aerobic cellular respiration. In the cytoplasm, glycolysis splits glucose into 2 pyruvate, making 2 ATP and 2 NADH. Pyruvate enters the mitochondrion. In the matrix, pyruvate oxidation makes 2 acetyl-CoA, 2 NADH and 2 CO2, and the Krebs cycle makes 2 ATP, 6 NADH, 2 FADH2 and 4 CO2. In the inner membrane, the electron transport chain and chemiosmosis use the electron carriers and oxygen to make about 34 ATP and water.</title>
+<defs>
+<marker id="ar202a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" style="fill:var(--ink-2)"/></marker>
+<marker id="ar202b" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" style="fill:var(--etc)"/></marker>
+</defs>
+<rect x="10" y="10" width="620" height="150" rx="14" style="fill:var(--glyco-soft);stroke:var(--glyco)" stroke-width="1.5"/>
+<text x="24" y="32" font-family="inherit" font-size="12.5" font-weight="700" style="fill:var(--glyco)">CYTOPLASM (cytosol)</text>
+<rect x="24" y="48" width="172" height="56" rx="10" style="fill:var(--surface);stroke:var(--glyco)" stroke-width="2"/>
+<text x="110" y="72" text-anchor="middle" font-family="inherit" font-size="13" font-weight="700" style="fill:var(--ink)">1. Glycolysis</text>
+<text x="110" y="91" text-anchor="middle" font-family="inherit" font-size="11.5" style="fill:var(--ink-2)">10 steps · no O₂ needed</text>
+<text x="320" y="70" text-anchor="middle" font-family="inherit" font-size="13" style="fill:var(--ink)">glucose (6C)</text>
+<line x1="320" y1="78" x2="320" y2="106" style="stroke:var(--ink-2)" stroke-width="2" marker-end="url(#ar202a)"/>
+<text x="320" y="124" text-anchor="middle" font-family="inherit" font-size="13" style="fill:var(--ink)">2 pyruvate (3C)</text>
+<text x="452" y="72" font-family="inherit" font-size="12.5" font-weight="700" style="fill:var(--good)">+ 2 ATP (net)</text>
+<text x="452" y="92" font-family="inherit" font-size="12.5" font-weight="700" style="fill:var(--etc)">+ 2 NADH</text>
+<rect x="10" y="176" width="620" height="412" rx="36" style="fill:var(--surface-2);stroke:var(--ink-2)" stroke-width="2"/>
+<text x="40" y="198" font-family="inherit" font-size="12.5" font-weight="700" style="fill:var(--ink-2)">MITOCHONDRION</text>
+<rect x="26" y="208" width="588" height="236" rx="22" style="fill:var(--surface);stroke:var(--line)" stroke-width="1.5" stroke-dasharray="5 4"/>
+<text x="600" y="228" text-anchor="end" font-family="inherit" font-size="12" font-style="italic" style="fill:var(--ink-2)">matrix</text>
+<line x1="320" y1="132" x2="320" y2="256" style="stroke:var(--ink-2)" stroke-width="2" marker-end="url(#ar202a)"/>
+<rect x="40" y="236" width="172" height="52" rx="10" style="fill:var(--link-soft);stroke:var(--link)" stroke-width="2"/>
+<text x="126" y="258" text-anchor="middle" font-family="inherit" font-size="12.5" font-weight="700" style="fill:var(--ink)">2. Pyruvate oxidation</text>
+<text x="126" y="276" text-anchor="middle" font-family="inherit" font-size="11.5" style="fill:var(--ink-2)">1 step · matrix</text>
+<text x="320" y="274" text-anchor="middle" font-family="inherit" font-size="13" style="fill:var(--ink)">2 acetyl-CoA (2C)</text>
+<text x="452" y="258" font-family="inherit" font-size="12.5" font-weight="700" style="fill:var(--etc)">+ 2 NADH</text>
+<text x="452" y="278" font-family="inherit" font-size="12.5" font-weight="700" style="fill:var(--ink-2)">+ 2 CO₂</text>
+<line x1="320" y1="282" x2="320" y2="326" style="stroke:var(--ink-2)" stroke-width="2" marker-end="url(#ar202a)"/>
+<rect x="40" y="320" width="172" height="52" rx="10" style="fill:var(--krebs-soft);stroke:var(--krebs)" stroke-width="2"/>
+<text x="126" y="342" text-anchor="middle" font-family="inherit" font-size="12.5" font-weight="700" style="fill:var(--ink)">3. Krebs cycle</text>
+<text x="126" y="360" text-anchor="middle" font-family="inherit" font-size="11.5" style="fill:var(--ink-2)">8 steps · cyclic · matrix</text>
+<circle cx="320" cy="370" r="38" style="fill:var(--krebs-soft);stroke:var(--krebs)" stroke-width="3"/>
+<path d="M352,350 L358,342 L362,354 Z" style="fill:var(--krebs)"/>
+<path d="M288,390 L282,398 L278,386 Z" style="fill:var(--krebs)"/>
+<text x="320" y="375" text-anchor="middle" font-family="inherit" font-size="12.5" font-weight="700" style="fill:var(--krebs)">Krebs</text>
+<text x="320" y="428" text-anchor="middle" font-family="inherit" font-size="11.5" style="fill:var(--ink-2)">turns twice per glucose</text>
+<text x="452" y="342" font-family="inherit" font-size="12.5" font-weight="700" style="fill:var(--good)">+ 2 ATP</text>
+<text x="452" y="362" font-family="inherit" font-size="12.5" font-weight="700" style="fill:var(--etc)">+ 6 NADH</text>
+<text x="452" y="382" font-family="inherit" font-size="12.5" font-weight="700" style="fill:var(--etc)">+ 2 FADH₂</text>
+<text x="452" y="402" font-family="inherit" font-size="12.5" font-weight="700" style="fill:var(--ink-2)">+ 4 CO₂</text>
+<rect x="26" y="456" width="588" height="118" rx="16" style="fill:var(--etc-soft);stroke:var(--etc)" stroke-width="2"/>
+<text x="600" y="476" text-anchor="end" font-family="inherit" font-size="12" font-style="italic" style="fill:var(--etc)">inner membrane</text>
+<rect x="40" y="470" width="172" height="62" rx="10" style="fill:var(--surface);stroke:var(--etc)" stroke-width="2"/>
+<text x="126" y="494" text-anchor="middle" font-family="inherit" font-size="12.5" font-weight="700" style="fill:var(--ink)">4. ETC + chemiosmosis</text>
+<text x="126" y="512" text-anchor="middle" font-family="inherit" font-size="11.5" style="fill:var(--ink-2)">inner membrane</text>
+<text x="126" y="526" text-anchor="middle" font-family="inherit" font-size="11.5" style="fill:var(--ink-2)">(cristae)</text>
+<text x="320" y="500" text-anchor="middle" font-family="inherit" font-size="12" style="fill:var(--ink)">NADH, FADH₂ drop off e⁻</text>
+<text x="320" y="518" text-anchor="middle" font-family="inherit" font-size="12" style="fill:var(--ink)">O₂ = final e⁻ acceptor → H₂O</text>
+<text x="320" y="536" text-anchor="middle" font-family="inherit" font-size="12" style="fill:var(--ink)">H⁺ gradient drives ATP synthase</text>
+<text x="452" y="504" font-family="inherit" font-size="12.5" font-weight="700" style="fill:var(--good)">+ ~34 ATP</text>
+<text x="452" y="524" font-family="inherit" font-size="12.5" font-weight="700" style="fill:var(--ink-2)">+ H₂O</text>
+<line x1="604" y1="100" x2="604" y2="490" style="stroke:var(--etc)" stroke-width="2" stroke-dasharray="6 4" marker-end="url(#ar202b)"/>
+<text x="620" y="300" text-anchor="middle" font-family="inherit" font-size="11" transform="rotate(90 620 300)" style="fill:var(--etc)">NADH and FADH₂ carry e⁻ to the ETC</text>
+<text x="320" y="612" text-anchor="middle" font-family="inherit" font-size="13" font-weight="700" style="fill:var(--ink)">Class maximum: 2 + 2 + 34 = 38 ATP per glucose</text>
+</svg>
+<figcaption>The four stages and where they happen. Glucose's carbon leaves as CO<sub>2</sub> in stages 2 and 3; its electrons are carried by NADH and FADH<sub>2</sub> to stage 4, where most of the ATP is made.</figcaption>
+</figure>
+<div class="callout tip"><p class="callout-title">Memory trick</p><p>Follow the glucose <strong>from outside in</strong>: <strong>cytoplasm</strong> (glycolysis) → <strong>matrix</strong> (pyruvate oxidation, then Krebs) → <strong>inner membrane</strong> (ETC). And "Krebs cycle" and "citric acid cycle" are two names for the same thing (citrate is the first molecule made in it).</p></div>
+
+<h3 data-tier="essential">The mitochondrion</h3>
+<p>Three of the four stages happen in the <span class="term">mitochondrion</span> (plural: mitochondria), so you need to know its parts. It has <strong>two membranes</strong>, which create two separate compartments.</p>
+<figure class="diagram">
+<svg viewBox="0 0 640 420" role="img" aria-labelledby="t202b">
+<title id="t202b">Labelled mitochondrion: a smooth outer membrane surrounds a highly folded inner membrane whose folds are called cristae. The narrow fluid-filled intermembrane space lies between the two membranes. The protein-rich matrix fills the inside of the inner membrane.</title>
+<rect x="50" y="80" width="540" height="270" rx="90" style="fill:var(--surface-2);stroke:var(--ink-2)" stroke-width="3"/>
+<rect x="68" y="98" width="504" height="234" rx="76" style="fill:var(--krebs-soft);stroke:var(--etc)" stroke-width="3"/>
+<path d="M159,96 L159,180 A11 11 0 0 0 181,180 L181,96" style="fill:var(--surface-2);stroke:var(--etc)" stroke-width="3"/>
+<path d="M249,96 L249,180 A11 11 0 0 0 271,180 L271,96" style="fill:var(--surface-2);stroke:var(--etc)" stroke-width="3"/>
+<path d="M339,96 L339,180 A11 11 0 0 0 361,180 L361,96" style="fill:var(--surface-2);stroke:var(--etc)" stroke-width="3"/>
+<path d="M429,96 L429,180 A11 11 0 0 0 451,180 L451,96" style="fill:var(--surface-2);stroke:var(--etc)" stroke-width="3"/>
+<path d="M204,334 L204,250 A11 11 0 0 1 226,250 L226,334" style="fill:var(--surface-2);stroke:var(--etc)" stroke-width="3"/>
+<path d="M294,334 L294,250 A11 11 0 0 1 316,250 L316,334" style="fill:var(--surface-2);stroke:var(--etc)" stroke-width="3"/>
+<path d="M384,334 L384,250 A11 11 0 0 1 406,250 L406,334" style="fill:var(--surface-2);stroke:var(--etc)" stroke-width="3"/>
+<path d="M474,334 L474,250 A11 11 0 0 1 496,250 L496,334" style="fill:var(--surface-2);stroke:var(--etc)" stroke-width="3"/>
+<text x="320" y="220" text-anchor="middle" font-family="inherit" font-size="13" font-weight="700" style="fill:var(--krebs)">MATRIX (protein-rich fluid)</text>
+<text x="108" y="222" text-anchor="middle" font-family="inherit" font-size="11" style="fill:var(--ink-2)">Krebs +</text>
+<text x="108" y="236" text-anchor="middle" font-family="inherit" font-size="11" style="fill:var(--ink-2)">pyruvate ox.</text>
+<text x="40" y="34" font-family="inherit" font-size="13" font-weight="700" style="fill:var(--ink)">Outer membrane</text>
+<text x="40" y="50" font-family="inherit" font-size="12" style="fill:var(--ink-2)">smooth</text>
+<line x1="96" y1="56" x2="130" y2="80" style="stroke:var(--ink-2)" stroke-width="1.5"/>
+<text x="300" y="34" text-anchor="middle" font-family="inherit" font-size="13" font-weight="700" style="fill:var(--ink)">Cristae</text>
+<text x="300" y="50" text-anchor="middle" font-family="inherit" font-size="12" style="fill:var(--ink-2)">folds of the inner membrane</text>
+<line x1="290" y1="56" x2="272" y2="128" style="stroke:var(--ink-2)" stroke-width="1.5"/>
+<text x="600" y="34" text-anchor="end" font-family="inherit" font-size="13" font-weight="700" style="fill:var(--etc)">Inner membrane</text>
+<text x="600" y="50" text-anchor="end" font-family="inherit" font-size="12" style="fill:var(--ink-2)">highly folded</text>
+<line x1="540" y1="56" x2="512" y2="98" style="stroke:var(--ink-2)" stroke-width="1.5"/>
+<text x="40" y="384" font-family="inherit" font-size="13" font-weight="700" style="fill:var(--ink)">Intermembrane space</text>
+<text x="40" y="400" font-family="inherit" font-size="12" style="fill:var(--ink-2)">fluid-filled gap between the membranes</text>
+<line x1="120" y1="372" x2="160" y2="341" style="stroke:var(--ink-2)" stroke-width="1.5"/>
+<text x="600" y="384" text-anchor="end" font-family="inherit" font-size="13" font-weight="700" style="fill:var(--etc)">ETC + ATP synthase</text>
+<text x="600" y="400" text-anchor="end" font-family="inherit" font-size="12" style="fill:var(--ink-2)">embedded in the inner membrane</text>
+<line x1="520" y1="370" x2="497" y2="300" style="stroke:var(--ink-2)" stroke-width="1.5"/>
+</svg>
+<figcaption>A mitochondrion cut in half lengthwise. Inside each crista is intermembrane space, because a crista is just a fold of the inner membrane.</figcaption>
+</figure>
+<div class="table-wrap"><table class="data">
+<thead><tr><th>Part</th><th>Description</th><th>Role in respiration</th></tr></thead>
+<tbody>
+<tr><td><strong>Outer membrane</strong></td><td><strong>Smooth</strong>; surrounds the whole organelle</td><td>Separates the mitochondrion from the cytoplasm; fairly permeable to small molecules such as pyruvate</td></tr>
+<tr><td><strong>Inner membrane</strong></td><td><strong>Highly folded</strong>; much less permeable (H<sup>+</sup> cannot leak through easily)</td><td>Holds the <strong>electron transport chain</strong> proteins and <strong>ATP synthase</strong> (stage 4)</td></tr>
+<tr><td><strong>Cristae</strong></td><td>The <strong>folds of the inner membrane</strong></td><td>Increase the surface area of the inner membrane, so more ETC and ATP synthase can fit</td></tr>
+<tr><td><strong>Intermembrane space</strong></td><td><strong>Fluid-filled</strong> space between the outer and inner membranes</td><td>H<sup>+</sup> ions are pumped in here by the ETC, building up a concentration gradient</td></tr>
+<tr><td><strong>Matrix</strong></td><td><strong>Protein-rich fluid</strong> inside the inner membrane (also has the mitochondrion's own DNA and ribosomes)</td><td>Contains the enzymes for <strong>pyruvate oxidation</strong> and the <strong>Krebs cycle</strong> (stages 2 and 3)</td></tr>
+</tbody></table></div>
+<h4>Why is the inner membrane folded?</h4>
+<p>Folding is a classic biology solution to a space problem: it <strong>increases surface area without increasing volume</strong>, like the villi in your small intestine or the folds of your brain. Most ATP is made by proteins <em>embedded in the inner membrane</em> (the ETC complexes and ATP synthase). The more inner membrane a mitochondrion has, the more of these proteins it can hold, and the more ATP it can make. That is why cells with huge energy demands, like heart and skeletal muscle cells, have mitochondria packed with tightly folded cristae.</p>
+<p>The two-membrane design matters too. Because the inner membrane is a tight barrier, protons pumped into the narrow intermembrane space cannot simply leak back. They build up into a steep gradient, which is the "stored energy" ATP synthase uses (lesson 2.04).</p>
+<div class="callout warn"><p class="callout-title">Common mistake</p><p>The <strong>cristae are the folds</strong>, not the space. The <strong>intermembrane space</strong> is the gap between the two membranes. Also, the matrix is <em>inside the inner membrane</em>, not between the membranes. Mixing up "matrix" and "intermembrane space" is the most common labelling error on this diagram.</p></div>
+<div class="callout key"><p class="callout-title">On the test</p><p>The review asks you to "draw and label a mitochondrion and its parts." Practise drawing it from memory with all five labels: outer membrane (smooth), inner membrane (highly folded), cristae (folds of the inner membrane), intermembrane space (fluid-filled), matrix (protein-rich fluid). Add where each stage happens for bonus understanding.</p></div>
+
+<h3 data-tier="essential">Glycolysis: overview</h3>
+<p><span class="term">Glycolysis</span> comes from <strong>glyco</strong> = sugar and <strong>lysis</strong> = splitting. It splits one 6-carbon glucose into two 3-carbon <span class="term">pyruvate</span> molecules.</p>
+<ul>
+  <li><strong>Where:</strong> the cytoplasm (cytosol). No organelle needed.</li>
+  <li><strong>Who:</strong> <strong>all cells</strong>, in both aerobic and anaerobic conditions. Bacteria, yeast, plants and you all do it the same way.</li>
+  <li><strong>Oxygen:</strong> <strong>not needed</strong>. Glycolysis is anaerobic.</li>
+  <li><strong>Steps:</strong> 10, each catalyzed by its own enzyme.</li>
+</ul>
+<div class="eq">glucose + 2 NAD<sup>+</sup> + 2 ADP + 2 P<sub>i</sub> → 2 pyruvate + 2 NADH + 2 H<sup>+</sup> + 2 ATP + 2 H<sub>2</sub>O</div>
+<p>(That is the <em>net</em> equation. The 2 ATP invested at the start are paid back, so they cancel out.)</p>
+<p data-tier="extra">Why is glycolysis so universal, and why does it not need oxygen? It is thought to be one of the oldest metabolic pathways, evolving in early prokaryotes billions of years ago, before there was much oxygen in Earth's atmosphere and before mitochondria existed. Every living thing inherited it.</p>
+
+<h3 data-tier="essential">Why glucose has to be destabilized first</h3>
+<p><strong>Glucose is very stable.</strong> Its ring structure holds together well, which is great for storage and transport but bad if you want to pull it apart. <strong>An input of energy is required to destabilize glucose so that the energy can be harvested.</strong> This is activation energy again (lesson 2.01), paid in ATP.</p>
+<p>So glycolysis starts by <em>spending</em> energy: <strong>2 ATP are required to start the process, and it produces 4, so the NET is 2 ATP.</strong></p>
+<div class="callout tip"><p class="callout-title">Memory trick</p><p>"You have to spend money to make money." Glycolysis invests 2 ATP like a business investing start-up cash, then earns back 4 ATP for a profit of 2. Or picture a boulder that must be pushed up onto the edge of a cliff (investment) before it can roll down and do work (payoff).</p></div>
+<h4>The two phases</h4>
+<div class="compare">
+  <div>
+    <h4>1. Prep phase (investment), steps 1–5</h4>
+    <ul>
+      <li><strong>Destabilizes and splits glucose.</strong></li>
+      <li><strong>Costs 2 ATP</strong> (steps 1 and 3).</li>
+      <li>Ends with <strong>two G3P</strong> (glyceraldehyde-3-phosphate), each 3-carbon.</li>
+      <li>No ATP or NADH is made yet.</li>
+    </ul>
+  </div>
+  <div>
+    <h4>2. Payoff phase, steps 6–10</h4>
+    <ul>
+      <li><strong>Production of energy.</strong></li>
+      <li>Each G3P makes 1 NADH and 2 ATP. With two G3P: <strong>2 NADH and 4 ATP</strong>.</li>
+      <li>Ends with <strong>two pyruvate</strong>.</li>
+    </ul>
+  </div>
+</div>
+
+<h3 data-tier="essential">The 10 steps of glycolysis</h3>
+<p>Use the diagram to see the whole pathway at once, then read the step-by-step explanations below it. For each step, know the <strong>intermediate</strong>, the <strong>enzyme</strong>, <strong>what happens</strong> and <strong>why</strong>.</p>
+<figure class="diagram">
+<svg viewBox="0 0 640 1260" role="img" aria-labelledby="t202c">
+<title id="t202c">Glycolysis pathway, top to bottom. Investment phase: step 1 hexokinase turns glucose into glucose-6-phosphate using 1 ATP; step 2 phosphoglucose isomerase makes fructose-6-phosphate; step 3 phosphofructokinase makes fructose-1,6-bisphosphate using 1 ATP; step 4 aldolase splits it into DHAP and G3P; step 5 triose phosphate isomerase converts DHAP into G3P. Payoff phase, happening twice: step 6 G3P dehydrogenase adds inorganic phosphate and makes NADH, giving 1,3-bisphosphoglycerate; step 7 phosphoglycerate kinase makes ATP, giving 3-phosphoglycerate; step 8 phosphoglycerate mutase makes 2-phosphoglycerate; step 9 enolase removes water, giving phosphoenolpyruvate; step 10 pyruvate kinase makes ATP, giving pyruvate.</title>
+<defs><marker id="ar202c" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" style="fill:var(--ink-2)"/></marker></defs>
+<rect x="6" y="6" width="628" height="610" rx="14" style="fill:var(--glyco-soft)"/>
+<rect x="6" y="626" width="628" height="628" rx="14" style="fill:var(--surface-2)"/>
+<text x="24" y="310" text-anchor="middle" font-family="inherit" font-size="12" font-weight="700" transform="rotate(-90 24 310)" style="fill:var(--glyco)">INVESTMENT (PREP) PHASE · steps 1–5 · spend 2 ATP</text>
+<text x="24" y="940" text-anchor="middle" font-family="inherit" font-size="12" font-weight="700" transform="rotate(-90 24 940)" style="fill:var(--ink-2)">PAYOFF PHASE · steps 6–10 · make 4 ATP + 2 NADH</text>
+<text x="44" y="652" font-family="inherit" font-size="12" font-weight="700" style="fill:var(--proton)">Everything below happens TWICE (×2)</text>
+<rect x="175" y="47" width="230" height="46" rx="10" style="fill:var(--surface);stroke:var(--glyco)" stroke-width="2"/>
+<text x="290" y="67" text-anchor="middle" font-family="inherit" font-size="13" font-weight="700" style="fill:var(--ink)">glucose</text>
+<text x="290" y="84" text-anchor="middle" font-family="inherit" font-size="11" style="fill:var(--ink-2)">6C</text>
+<rect x="175" y="167" width="230" height="46" rx="10" style="fill:var(--surface);stroke:var(--glyco)" stroke-width="2"/>
+<text x="290" y="187" text-anchor="middle" font-family="inherit" font-size="13" font-weight="700" style="fill:var(--ink)">glucose-6-phosphate</text>
+<text x="290" y="204" text-anchor="middle" font-family="inherit" font-size="11" style="fill:var(--ink-2)">G6P · 6C · 1 P</text>
+<rect x="175" y="287" width="230" height="46" rx="10" style="fill:var(--surface);stroke:var(--glyco)" stroke-width="2"/>
+<text x="290" y="307" text-anchor="middle" font-family="inherit" font-size="13" font-weight="700" style="fill:var(--ink)">fructose-6-phosphate</text>
+<text x="290" y="324" text-anchor="middle" font-family="inherit" font-size="11" style="fill:var(--ink-2)">F6P · 6C · 1 P</text>
+<rect x="175" y="407" width="230" height="46" rx="10" style="fill:var(--surface);stroke:var(--glyco)" stroke-width="2"/>
+<text x="290" y="427" text-anchor="middle" font-family="inherit" font-size="13" font-weight="700" style="fill:var(--ink)">fructose-1,6-bisphosphate</text>
+<text x="290" y="444" text-anchor="middle" font-family="inherit" font-size="11" style="fill:var(--ink-2)">F1,6BP · 6C · 2 P</text>
+<rect x="175" y="537" width="230" height="46" rx="10" style="fill:var(--surface);stroke:var(--glyco)" stroke-width="2"/>
+<text x="290" y="557" text-anchor="middle" font-family="inherit" font-size="13" font-weight="700" style="fill:var(--ink)">glyceraldehyde-3-phosphate</text>
+<text x="290" y="574" text-anchor="middle" font-family="inherit" font-size="11" style="fill:var(--ink-2)">G3P · 3C · ×2</text>
+<rect x="175" y="717" width="230" height="46" rx="10" style="fill:var(--surface);stroke:var(--ink-2)" stroke-width="2"/>
+<text x="290" y="737" text-anchor="middle" font-family="inherit" font-size="13" font-weight="700" style="fill:var(--ink)">1,3-bisphosphoglycerate</text>
+<text x="290" y="754" text-anchor="middle" font-family="inherit" font-size="11" style="fill:var(--ink-2)">1,3-BPG · 3C · 2 P · ×2</text>
+<rect x="175" y="837" width="230" height="46" rx="10" style="fill:var(--surface);stroke:var(--ink-2)" stroke-width="2"/>
+<text x="290" y="857" text-anchor="middle" font-family="inherit" font-size="13" font-weight="700" style="fill:var(--ink)">3-phosphoglycerate</text>
+<text x="290" y="874" text-anchor="middle" font-family="inherit" font-size="11" style="fill:var(--ink-2)">3PG · 3C · ×2</text>
+<rect x="175" y="957" width="230" height="46" rx="10" style="fill:var(--surface);stroke:var(--ink-2)" stroke-width="2"/>
+<text x="290" y="977" text-anchor="middle" font-family="inherit" font-size="13" font-weight="700" style="fill:var(--ink)">2-phosphoglycerate</text>
+<text x="290" y="994" text-anchor="middle" font-family="inherit" font-size="11" style="fill:var(--ink-2)">2PG · 3C · ×2</text>
+<rect x="175" y="1077" width="230" height="46" rx="10" style="fill:var(--surface);stroke:var(--ink-2)" stroke-width="2"/>
+<text x="290" y="1097" text-anchor="middle" font-family="inherit" font-size="13" font-weight="700" style="fill:var(--ink)">phosphoenolpyruvate</text>
+<text x="290" y="1114" text-anchor="middle" font-family="inherit" font-size="11" style="fill:var(--ink-2)">PEP · 3C · ×2</text>
+<rect x="175" y="1197" width="230" height="46" rx="10" style="fill:var(--surface);stroke:var(--link)" stroke-width="2"/>
+<text x="290" y="1217" text-anchor="middle" font-family="inherit" font-size="13" font-weight="700" style="fill:var(--ink)">pyruvate</text>
+<text x="290" y="1234" text-anchor="middle" font-family="inherit" font-size="11" style="fill:var(--ink-2)">3C · ×2</text>
+<rect x="445" y="537" width="180" height="46" rx="10" style="fill:var(--surface);stroke:var(--glyco)" stroke-width="2"/>
+<text x="535" y="557" text-anchor="middle" font-family="inherit" font-size="13" font-weight="700" style="fill:var(--ink)">DHAP · 3C</text>
+<text x="535" y="574" text-anchor="middle" font-family="inherit" font-size="11" style="fill:var(--ink-2)">dihydroxyacetone phosphate</text>
+<line x1="290" y1="95" x2="290" y2="164" style="stroke:var(--ink-2)" stroke-width="2" marker-end="url(#ar202c)"/>
+<circle cx="290" cy="129" r="11" style="fill:var(--surface);stroke:var(--ink)" stroke-width="1.5"/>
+<text x="290" y="133" text-anchor="middle" font-family="inherit" font-size="11.5" font-weight="700" style="fill:var(--ink)">1</text>
+<text x="272" y="127" text-anchor="end" font-family="inherit" font-size="12" font-weight="700" style="fill:var(--ink)">hexokinase</text>
+<text x="272" y="143" text-anchor="end" font-family="inherit" font-size="11" style="fill:var(--ink-2)">add P: destabilize + trap</text>
+<path d="M332,105 Q298,129 332,153" style="fill:none;stroke:var(--glyco)" stroke-width="2" marker-end="url(#ar202c)"/>
+<text x="338" y="111" font-family="inherit" font-size="12" font-weight="700" style="fill:var(--ink)">ATP</text>
+<text x="338" y="159" font-family="inherit" font-size="12" font-weight="700" style="fill:var(--ink)">ADP</text>
+<text x="626" y="134" text-anchor="end" font-family="inherit" font-size="13" font-weight="700" style="fill:var(--bad)">−1 ATP</text>
+<line x1="290" y1="215" x2="290" y2="284" style="stroke:var(--ink-2)" stroke-width="2" marker-end="url(#ar202c)"/>
+<circle cx="290" cy="249" r="11" style="fill:var(--surface);stroke:var(--ink)" stroke-width="1.5"/>
+<text x="290" y="253" text-anchor="middle" font-family="inherit" font-size="11.5" font-weight="700" style="fill:var(--ink)">2</text>
+<text x="272" y="247" text-anchor="end" font-family="inherit" font-size="12" font-weight="700" style="fill:var(--ink)">phosphoglucose isomerase</text>
+<text x="272" y="263" text-anchor="end" font-family="inherit" font-size="11" style="fill:var(--ink-2)">rearrange into isomer</text>
+<line x1="290" y1="335" x2="290" y2="404" style="stroke:var(--ink-2)" stroke-width="2" marker-end="url(#ar202c)"/>
+<circle cx="290" cy="369" r="11" style="fill:var(--surface);stroke:var(--ink)" stroke-width="1.5"/>
+<text x="290" y="373" text-anchor="middle" font-family="inherit" font-size="11.5" font-weight="700" style="fill:var(--ink)">3</text>
+<text x="272" y="367" text-anchor="end" font-family="inherit" font-size="12" font-weight="700" style="fill:var(--ink)">phosphofructokinase (PFK)</text>
+<text x="272" y="383" text-anchor="end" font-family="inherit" font-size="11" style="fill:var(--ink-2)">add P: symmetry · regulatory</text>
+<path d="M332,345 Q298,369 332,393" style="fill:none;stroke:var(--glyco)" stroke-width="2" marker-end="url(#ar202c)"/>
+<text x="338" y="351" font-family="inherit" font-size="12" font-weight="700" style="fill:var(--ink)">ATP</text>
+<text x="338" y="399" font-family="inherit" font-size="12" font-weight="700" style="fill:var(--ink)">ADP</text>
+<text x="626" y="374" text-anchor="end" font-family="inherit" font-size="13" font-weight="700" style="fill:var(--bad)">−1 ATP</text>
+<line x1="290" y1="455" x2="290" y2="534" style="stroke:var(--ink-2)" stroke-width="2" marker-end="url(#ar202c)"/>
+<circle cx="290" cy="494" r="11" style="fill:var(--surface);stroke:var(--ink)" stroke-width="1.5"/>
+<text x="290" y="498" text-anchor="middle" font-family="inherit" font-size="11.5" font-weight="700" style="fill:var(--ink)">4</text>
+<text x="272" y="492" text-anchor="end" font-family="inherit" font-size="12" font-weight="700" style="fill:var(--ink)">aldolase</text>
+<text x="272" y="508" text-anchor="end" font-family="inherit" font-size="11" style="fill:var(--ink-2)">split 6C → two 3C</text>
+<line x1="290" y1="585" x2="290" y2="714" style="stroke:var(--ink-2)" stroke-width="2" marker-end="url(#ar202c)"/>
+<circle cx="290" cy="680" r="11" style="fill:var(--surface);stroke:var(--ink)" stroke-width="1.5"/>
+<text x="290" y="684" text-anchor="middle" font-family="inherit" font-size="11.5" font-weight="700" style="fill:var(--ink)">6</text>
+<text x="272" y="678" text-anchor="end" font-family="inherit" font-size="12" font-weight="700" style="fill:var(--ink)">G3P dehydrogenase</text>
+<text x="272" y="694" text-anchor="end" font-family="inherit" font-size="11" style="fill:var(--ink-2)">oxidize, add Pᵢ, make NADH</text>
+<path d="M332,656 Q298,680 332,704" style="fill:none;stroke:var(--glyco)" stroke-width="2" marker-end="url(#ar202c)"/>
+<text x="338" y="662" font-family="inherit" font-size="12" font-weight="700" style="fill:var(--ink)">NAD⁺ + Pᵢ</text>
+<text x="338" y="710" font-family="inherit" font-size="12" font-weight="700" style="fill:var(--ink)">NADH + H⁺</text>
+<text x="626" y="685" text-anchor="end" font-family="inherit" font-size="13" font-weight="700" style="fill:var(--etc)">+2 NADH</text>
+<line x1="290" y1="765" x2="290" y2="834" style="stroke:var(--ink-2)" stroke-width="2" marker-end="url(#ar202c)"/>
+<circle cx="290" cy="799" r="11" style="fill:var(--surface);stroke:var(--ink)" stroke-width="1.5"/>
+<text x="290" y="803" text-anchor="middle" font-family="inherit" font-size="11.5" font-weight="700" style="fill:var(--ink)">7</text>
+<text x="272" y="797" text-anchor="end" font-family="inherit" font-size="12" font-weight="700" style="fill:var(--ink)">phosphoglycerate kinase</text>
+<text x="272" y="813" text-anchor="end" font-family="inherit" font-size="11" style="fill:var(--ink-2)">make ATP (SLP)</text>
+<path d="M332,775 Q298,799 332,823" style="fill:none;stroke:var(--glyco)" stroke-width="2" marker-end="url(#ar202c)"/>
+<text x="338" y="781" font-family="inherit" font-size="12" font-weight="700" style="fill:var(--ink)">ADP</text>
+<text x="338" y="829" font-family="inherit" font-size="12" font-weight="700" style="fill:var(--ink)">ATP</text>
+<text x="626" y="804" text-anchor="end" font-family="inherit" font-size="13" font-weight="700" style="fill:var(--good)">+2 ATP</text>
+<line x1="290" y1="885" x2="290" y2="954" style="stroke:var(--ink-2)" stroke-width="2" marker-end="url(#ar202c)"/>
+<circle cx="290" cy="919" r="11" style="fill:var(--surface);stroke:var(--ink)" stroke-width="1.5"/>
+<text x="290" y="923" text-anchor="middle" font-family="inherit" font-size="11.5" font-weight="700" style="fill:var(--ink)">8</text>
+<text x="272" y="917" text-anchor="end" font-family="inherit" font-size="12" font-weight="700" style="fill:var(--ink)">phosphoglycerate mutase</text>
+<text x="272" y="933" text-anchor="end" font-family="inherit" font-size="11" style="fill:var(--ink-2)">move P from C3 to C2</text>
+<line x1="290" y1="1005" x2="290" y2="1074" style="stroke:var(--ink-2)" stroke-width="2" marker-end="url(#ar202c)"/>
+<circle cx="290" cy="1039" r="11" style="fill:var(--surface);stroke:var(--ink)" stroke-width="1.5"/>
+<text x="290" y="1043" text-anchor="middle" font-family="inherit" font-size="11.5" font-weight="700" style="fill:var(--ink)">9</text>
+<text x="272" y="1037" text-anchor="end" font-family="inherit" font-size="12" font-weight="700" style="fill:var(--ink)">enolase</text>
+<text x="272" y="1053" text-anchor="end" font-family="inherit" font-size="11" style="fill:var(--ink-2)">remove water</text>
+<path d="M302,1041 Q314,1059 334,1063" style="fill:none;stroke:var(--glyco)" stroke-width="2" marker-end="url(#ar202c)"/>
+<text x="338" y="1069" font-family="inherit" font-size="12" font-weight="700" style="fill:var(--ink)">H₂O</text>
+<text x="626" y="1044" text-anchor="end" font-family="inherit" font-size="13" font-weight="700" style="fill:var(--ink-2)">+2 H₂O</text>
+<line x1="290" y1="1125" x2="290" y2="1194" style="stroke:var(--ink-2)" stroke-width="2" marker-end="url(#ar202c)"/>
+<circle cx="290" cy="1159" r="11" style="fill:var(--surface);stroke:var(--ink)" stroke-width="1.5"/>
+<text x="290" y="1163" text-anchor="middle" font-family="inherit" font-size="11.5" font-weight="700" style="fill:var(--ink)">10</text>
+<text x="272" y="1157" text-anchor="end" font-family="inherit" font-size="12" font-weight="700" style="fill:var(--ink)">pyruvate kinase</text>
+<text x="272" y="1173" text-anchor="end" font-family="inherit" font-size="11" style="fill:var(--ink-2)">make ATP (SLP)</text>
+<path d="M332,1135 Q298,1159 332,1183" style="fill:none;stroke:var(--glyco)" stroke-width="2" marker-end="url(#ar202c)"/>
+<text x="338" y="1141" font-family="inherit" font-size="12" font-weight="700" style="fill:var(--ink)">ADP</text>
+<text x="338" y="1189" font-family="inherit" font-size="12" font-weight="700" style="fill:var(--ink)">ATP</text>
+<text x="626" y="1164" text-anchor="end" font-family="inherit" font-size="13" font-weight="700" style="fill:var(--good)">+2 ATP</text>
+<line x1="380" y1="455" x2="515" y2="534" style="stroke:var(--ink-2)" stroke-width="2" marker-end="url(#ar202c)"/>
+<line x1="443" y1="560" x2="408" y2="560" style="stroke:var(--ink-2)" stroke-width="2" marker-end="url(#ar202c)"/>
+<text x="535" y="602" text-anchor="middle" font-family="inherit" font-size="11.5" font-weight="700" style="fill:var(--ink)">5 · triose phosphate isomerase</text>
+<text x="535" y="616" text-anchor="middle" font-family="inherit" font-size="11" style="fill:var(--ink-2)">DHAP → G3P (isomer)</text>
+</svg>
+<figcaption>Glycolysis from glucose to 2 pyruvate. ATP is spent at steps 1 and 3, NADH is made at step 6, ATP is made at steps 7 and 10, and water is removed at step 9. Below the G3P line, every step happens twice per glucose.</figcaption>
+</figure>
+<h4>Prep (investment) phase</h4>
+<ol class="steps">
+<li><p class="step-head">Hexokinase: glucose → glucose-6-phosphate (G6P)</p>
+<p><strong>What:</strong> a phosphate from ATP is added to carbon 6 of glucose. ATP → ADP. <span class="chip atp">−1 ATP</span></p>
+<p><strong>Why:</strong> <em>add phosphate to destabilize glucose.</em> The negative phosphate makes the molecule less stable and more reactive, the first push "up the hill." It also <strong>traps glucose in the cell</strong>: glucose transporters do not recognize G6P, and its negative charge cannot cross the membrane. And by turning free glucose into G6P immediately, it keeps the inside glucose concentration low, so more glucose keeps diffusing in (lesson 2.01).</p></li>
+<li><p class="step-head">Phosphoglucose isomerase: G6P → fructose-6-phosphate (F6P)</p>
+<p><strong>What:</strong> G6P is <strong>rearranged into its isomer</strong>, F6P (same formula, different arrangement). The six-sided glucose ring becomes the five-sided fructose ring. Also called phosphohexose isomerase. No ATP involved.</p>
+<p><strong>Why:</strong> <em>rearrange the molecule into an isomer to further destabilize it.</em> The rearrangement also frees up carbon 1 as a –CH<sub>2</sub>OH group sticking out of the ring, so it can receive a second phosphate in step 3, and it puts the molecule's "split point" in the middle so step 4 can cut it into two equal 3-carbon halves. An <span class="term">isomerase</span> is an enzyme that changes a molecule's shape into an isomer.</p></li>
+<li><p class="step-head">Phosphofructokinase (PFK): F6P → fructose-1,6-bisphosphate (F1,6BP)</p>
+<p><strong>What:</strong> a second phosphate from ATP is added, this time to carbon 1. ATP → ADP. <span class="chip atp">−1 ATP</span> Now the molecule has a phosphate on each end ("bis" = two).</p>
+<p><strong>Why:</strong> <em>add phosphate to destabilize the molecule and create symmetry for splitting.</em> Two negative phosphates on one small sugar make it very unstable, ready to break. Having one on each end means that when it splits in the middle, each half gets a phosphate.</p>
+<p><strong>PFK is the key regulatory enzyme of glycolysis.</strong> It is an allosteric enzyme, <strong>inhibited by high ATP</strong> (and citrate) and <strong>stimulated by high ADP</strong>. This makes sense: once F1,6BP is made, it has no other use, so step 3 is the "point of no return" (the committed step). Controlling the pathway here means the cell does not waste glucose making ATP it does not need (lesson 2.05).</p></li>
+<li><p class="step-head">Aldolase: F1,6BP → DHAP + G3P</p>
+<p><strong>What:</strong> the 6-carbon sugar is <strong>split into two 3-carbon molecules</strong>: dihydroxyacetone phosphate (<strong>DHAP</strong>) and glyceraldehyde-3-phosphate (<strong>G3P</strong>). Each has one phosphate.</p>
+<p><strong>Why:</strong> this is the actual "lysis" (splitting) in glycolysis. The destabilization in steps 1–3 is what makes this cut possible.</p></li>
+<li><p class="step-head">Triose phosphate isomerase: DHAP → G3P</p>
+<p><strong>What:</strong> <strong>DHAP rearranges into its isomer, G3P.</strong> Now there are <strong>two G3P</strong>.</p>
+<p><strong>Why:</strong> only G3P can continue into the payoff phase. DHAP and G3P are isomers (both C<sub>3</sub>H<sub>7</sub>O<sub>6</sub>P), so converting DHAP means <strong>none of the glucose is wasted</strong>: both halves carry on. As G3P is used up in step 6, more DHAP keeps converting to replace it.</p></li>
+</ol>
+<h4>Payoff phase (every step happens twice per glucose)</h4>
+<ol class="steps">
+<li><p class="step-head">Glyceraldehyde-3-phosphate dehydrogenase: G3P → 1,3-bisphosphoglycerate (1,3-BPG)</p>
+<p><strong>What:</strong> two things are coupled in one step. (1) G3P is <strong>oxidized</strong>: a dehydrogenase removes hydrogen (two electrons), and <strong>NAD<sup>+</sup> is reduced to NADH</strong>. (2) An <strong>inorganic phosphate (P<sub>i</sub>)</strong> is added. This P<sub>i</sub> comes from the <strong>"cellular pool" in the cytoplasm</strong>, not from ATP. <span class="chip nadh">+2 NADH</span> (1 per G3P × 2)</p>
+<p><strong>Why:</strong> <em>add phosphate and make NADH.</em> This is the only <strong>redox</strong> step in glycolysis, and it is where the energy harvest starts. The oxidation of G3P releases energy. Part is captured in NADH (high-energy electrons for later), and part is used to attach a free phosphate with a very high-energy bond. That phosphate is "paid for" by the oxidation, not by ATP, which is why glycolysis can come out ahead.</p></li>
+<li><p class="step-head">Phosphoglycerate kinase: 1,3-BPG → 3-phosphoglycerate (3PG)</p>
+<p><strong>What:</strong> the high-energy phosphate on carbon 1 is transferred <strong>directly to ADP</strong>, making ATP. <span class="chip atp">+2 ATP</span> (1 per 1,3-BPG × 2)</p>
+<p><strong>Why:</strong> <em>make ATP and harvest more of the energy.</em> This is <strong>substrate-level phosphorylation</strong>. These 2 ATP pay back the 2 invested in steps 1 and 3, so after step 7 the cell has "broken even."</p></li>
+<li><p class="step-head">Phosphoglycerate mutase: 3PG → 2-phosphoglycerate (2PG)</p>
+<p><strong>What:</strong> the remaining phosphate is <strong>moved from carbon 3 to carbon 2</strong>. The molecule is isomerized. No ATP involved. A <span class="term">mutase</span> moves a group to a different position within the same molecule.</p>
+<p><strong>Why:</strong> <em>isomerize to destabilize.</em> On carbon 3 the phosphate is fairly stable and hard to transfer. Moving it to carbon 2 sets up step 9, which will turn it into a high-energy phosphate.</p></li>
+<li><p class="step-head">Enolase: 2PG → phosphoenolpyruvate (PEP)</p>
+<p><strong>What:</strong> a <strong>water molecule is removed</strong> (dehydration). <span class="chip">+2 H<sub>2</sub>O</span></p>
+<p><strong>Why:</strong> <em>remove water to destabilize further.</em> Removing H<sub>2</sub>O creates a double bond next to the phosphate and rearranges the electrons so the phosphate is held in a very strained, high-energy position. PEP's phosphate bond is one of the highest-energy phosphate bonds in biology, even higher than ATP's, so it can easily be passed to ADP. These are the <strong>2 H<sub>2</sub>O</strong> glycolysis produces.</p></li>
+<li><p class="step-head">Pyruvate kinase: PEP → pyruvate</p>
+<p><strong>What:</strong> the phosphate is transferred <strong>directly to ADP</strong>, making ATP, and <strong>pyruvate</strong> is produced. <span class="chip atp">+2 ATP</span> (1 per PEP × 2)</p>
+<p><strong>Why:</strong> <em>make ATP and harvest more of the energy.</em> Substrate-level phosphorylation again. These 2 ATP are glycolysis's <strong>profit</strong>, the net gain.</p></li>
+</ol>
+<div class="callout tip"><p class="callout-title">Memory trick</p><p>Enzyme name endings tell you what the step does. <strong>-kinase</strong> moves a phosphate between ATP and something else (steps 1, 3, 7, 10: every step where ATP is spent or made). <strong>-isomerase</strong> and <strong>mutase</strong> rearrange (steps 2, 5, 8). <strong>Dehydrogenase</strong> removes hydrogen, so it is a redox step that makes NADH (step 6). <strong>Aldolase</strong> splits (step 4). <strong>Enolase</strong> removes water to make an "enol" (step 9). Kinases are named after their non-ATP molecule, so "pyruvate kinase" and "phosphoglycerate kinase" are named as if run backwards; do not let that throw you.</p></div>
+<div class="callout tip"><p class="callout-title">Memory trick</p><p>One phrase per step: <strong>1</strong> add P · <strong>2</strong> isomer · <strong>3</strong> add P (symmetry) · <strong>4</strong> split · <strong>5</strong> isomer → 2 G3P · <strong>6</strong> add P<sub>i</sub> + NADH · <strong>7</strong> ATP · <strong>8</strong> isomer · <strong>9</strong> remove water · <strong>10</strong> ATP. A well-known mnemonic for the 11 molecules: "<strong>G</strong>oodness <strong>G</strong>racious, <strong>F</strong>ather <strong>F</strong>ranklin <strong>D</strong>id <strong>G</strong>o <strong>B</strong>y <strong>P</strong>icking <strong>P</strong>umpkins (to) <strong>P</strong>repare <strong>P</strong>ies" (glucose, G6P, F6P, F1,6BP, DHAP, G3P, 1,3-BPG, 3PG, 2PG, PEP, pyruvate).</p></div>
+<p data-tier="extra">The detailed glycolysis diagram in the slides marked three reactions with orange arrows as <strong>irreversible (highly exergonic)</strong>: step 1 (hexokinase), step 3 (PFK) and step 10 (pyruvate kinase). All the others are reversible. It also showed Mg<sup>2+</sup> as a cofactor (helper ion) for several of the enzymes. When the liver builds glucose from pyruvate (gluconeogenesis), it can run the reversible steps backwards but has to use different enzymes to get around those three one-way steps.</p>
+
+<h3 data-tier="essential">Why everything doubles after step 5</h3>
+<p>Up to step 4 you are following <strong>one</strong> molecule (glucose, then G6P, F6P, F1,6BP). Step 4 splits it into two 3-carbon pieces, and step 5 converts the DHAP so both pieces are <strong>G3P</strong>. From then on there are <strong>two identical molecules going through steps 6–10 side by side</strong>. Every product made in the payoff phase is therefore made <strong>twice per glucose</strong>:</p>
+<ul>
+  <li>Step 6: 1 NADH per G3P → <strong>2 NADH</strong></li>
+  <li>Step 7: 1 ATP per 1,3-BPG → <strong>2 ATP</strong></li>
+  <li>Step 9: 1 H<sub>2</sub>O per 2PG → <strong>2 H<sub>2</sub>O</strong></li>
+  <li>Step 10: 1 ATP per PEP → <strong>2 ATP</strong></li>
+  <li>End: <strong>2 pyruvate</strong></li>
+</ul>
+<div class="callout warn"><p class="callout-title">Common mistake</p><p>Forgetting to double. If a diagram shows "ADP → ATP" once at step 7 and once at step 10, it is showing one G3P's path. The total for one glucose is 4 ATP made, not 2. Watch for whether a question says "per G3P," "per pyruvate" or "per glucose."</p></div>
+
+<h3 data-tier="essential">Net result: counting the yield</h3>
+<div class="table-wrap"><table class="data">
+<thead><tr><th>Step</th><th>Enzyme</th><th>ATP</th><th>NADH</th><th>Other</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>Hexokinase</td><td>−1</td><td></td><td></td></tr>
+<tr><td>3</td><td>Phosphofructokinase</td><td>−1</td><td></td><td></td></tr>
+<tr><td>6</td><td>G3P dehydrogenase</td><td></td><td>+2</td><td>uses 2 P<sub>i</sub> from the cytoplasm</td></tr>
+<tr><td>7</td><td>Phosphoglycerate kinase</td><td>+2</td><td></td><td>substrate-level phosphorylation</td></tr>
+<tr><td>9</td><td>Enolase</td><td></td><td></td><td>+2 H<sub>2</sub>O</td></tr>
+<tr><td>10</td><td>Pyruvate kinase</td><td>+2</td><td></td><td>substrate-level phosphorylation; 2 pyruvate</td></tr>
+<tr><td colspan="2"><strong>Total per glucose</strong></td><td><strong>−2 + 4 = net +2</strong></td><td><strong>+2</strong></td><td><strong>2 pyruvate, 2 H<sub>2</sub>O; 0 CO<sub>2</sub>; 0 O<sub>2</sub> used</strong></td></tr>
+</tbody></table></div>
+<div class="tally"><span class="chip atp">2 ATP (net)</span><span class="chip nadh">2 NADH</span><span class="chip">2 pyruvate</span><span class="chip">2 H<sub>2</sub>O</span></div>
+<p>From the slides: glycolysis <strong>costs two ATP</strong>, <strong>produces four ATP</strong>, and <strong>produces two NADH</strong> (high-energy electron carriers). The <strong>fate of pyruvate depends on the presence of oxygen and ATP levels.</strong></p>
+<p>Here is a neat way to see where the profit comes from. Count phosphates. Phosphates are added to the sugar at steps 1 and 3 (2 from ATP) and at step 6 (2 from the free P<sub>i</sub> pool), for 4 in total. All 4 are removed and handed to ADP at steps 7 and 10. Two of them were "borrowed" from ATP and two were "free" P<sub>i</sub>. The net 2 ATP is really those two inorganic phosphates, attached in step 6 using energy from the oxidation of G3P.</p>
+<div class="callout key"><p class="callout-title">On the test</p><p>The worksheet key: "Phosphate is <strong>added in steps 1, 3 &amp; 6</strong> and phosphate is <strong>removed in steps 7 &amp; 10</strong>." In the class molecule-tracking table, glycolysis is written as <strong>−2 ATP, +4 ATP; 2 NADH + H<sup>+</sup>; 0 FADH<sub>2</sub>; 0 CO<sub>2</sub></strong>.</p></div>
+
+<h3 data-tier="essential">Substrate-level phosphorylation</h3>
+<p>The 4 ATP made in glycolysis are produced by <span class="term">substrate-level phosphorylation (SLP)</span>: <strong>ATP forms directly in an enzyme-catalyzed reaction.</strong> An enzyme takes a phosphate group straight off a high-energy substrate molecule (1,3-BPG at step 7, PEP at step 10) and attaches it to ADP:</p>
+<div class="eq">substrate–P + ADP → product + ATP &nbsp;(one enzyme, one step)</div>
+<p>Why the name? The phosphate comes from a <strong>substrate</strong> (the molecule the enzyme acts on), and adding a phosphate is <strong>phosphorylation</strong>. Compare this with the other way cells make ATP:</p>
+<div class="compare">
+  <div>
+    <h4>Substrate-level phosphorylation</h4>
+    <ul>
+      <li>Phosphate moved directly from a substrate to ADP by one enzyme.</li>
+      <li>No membrane, no gradient, no O<sub>2</sub> needed.</li>
+      <li>Glycolysis (steps 7 and 10) and Krebs (1 step).</li>
+      <li>Makes only a small amount of ATP: 4 per glucose in total.</li>
+    </ul>
+  </div>
+  <div>
+    <h4>Oxidative phosphorylation</h4>
+    <ul>
+      <li>ADP + P<sub>i</sub> → ATP by <strong>ATP synthase</strong>, powered by an H<sup>+</sup> gradient.</li>
+      <li>Needs the inner mitochondrial membrane and O<sub>2</sub>.</li>
+      <li>The ETC + chemiosmosis (lesson 2.04).</li>
+      <li>Makes most of the ATP (about 34 of 38).</li>
+    </ul>
+  </div>
+</div>
+<div class="callout warn"><p class="callout-title">Common mistake</p><p>The worksheet question defines SLP loosely as "the transfer of a phosphate group catalyzed by an enzyme," and its key lists steps 1, 3 and 6 (phosphate added) as well as 7 and 10 (phosphate removed). Strictly, SLP is <strong>making ATP</strong> by direct transfer, which happens at <strong>steps 7 and 10</strong>. If a question asks "which steps <em>produce ATP</em> by SLP," answer 7 and 10. If it asks which steps involve adding or removing a phosphate, list all five.</p></div>
+<p>Substrate-level phosphorylation is why a cell can make some ATP with no oxygen at all: glycolysis needs no membrane, no gradient and no ETC.</p>
+
+<h3 data-tier="likely">Glycolysis and the overall equation</h3>
+<p>Look back at C<sub>6</sub>H<sub>12</sub>O<sub>6</sub> + 6 O<sub>2</sub> → 6 CO<sub>2</sub> + 6 H<sub>2</sub>O. Which parts happen during glycolysis?</p>
+<div class="table-wrap"><table class="data">
+<thead><tr><th>Part of the equation</th><th>In glycolysis?</th><th>Explanation</th></tr></thead>
+<tbody>
+<tr><td>C<sub>6</sub>H<sub>12</sub>O<sub>6</sub> (glucose)</td><td><strong>Yes</strong>: the only reactant used</td><td>Split into 2 pyruvate</td></tr>
+<tr><td>6 O<sub>2</sub></td><td><strong>No</strong></td><td>Oxygen is not consumed until the end of the ETC</td></tr>
+<tr><td>6 CO<sub>2</sub></td><td><strong>No</strong></td><td>No carbon is lost; all 6 carbons are still in the 2 pyruvate (3 + 3). CO<sub>2</sub> is released in pyruvate oxidation and Krebs.</td></tr>
+<tr><td>6 H<sub>2</sub>O</td><td>Partly</td><td>2 H<sub>2</sub>O are made at step 9 (enolase). Most of the water in the equation is made at the end of the ETC, when O<sub>2</sub> accepts electrons and H<sup>+</sup>.</td></tr>
+</tbody></table></div>
+<div class="callout key"><p class="callout-title">On the test</p><p>Class review answer: "<strong>Glucose is the only reactant used</strong>; it is split into 2 pyruvate molecules. <strong>2 water molecules are produced. No CO<sub>2</sub> is produced yet. Oxygen is not consumed yet.</strong>" The worksheet key puts it the other way round: oxygen, water and carbon dioxide are mostly produced or used elsewhere in respiration.</p></div>
+
+<h3 data-tier="likely">Where is the energy now?</h3>
+<p>At the end of glycolysis, <strong>most of glucose's bond energy is still trapped in the two pyruvate molecules</strong> (worksheet answer). Glycolysis only "skims off" a little. You can estimate how little. The complete oxidation of glucose releases about 2870 kJ/mol, and making one ATP takes about 30.5 kJ/mol, so if respiration were 100% efficient, one glucose could make about 2870 ÷ 30.5 ≈ <strong>94 ATP</strong>. Glycolysis nets 2. That is about <strong>2%</strong>. Some more energy is sitting in the 2 NADH, but the rest is in pyruvate's chemical bonds, waiting for the mitochondrion.</p>
+<p>This is why aerobic organisms do so much better than anaerobic ones. An anaerobic cell has to stop at pyruvate and gets only 2 ATP per glucose. An aerobic cell keeps oxidizing pyruvate all the way to CO<sub>2</sub> and gets up to 38.</p>
+
+<h3 data-tier="likely">Two problems left over after glycolysis</h3>
+<p>A worksheet question asks what problems remain for the cell once glycolysis is finished. There are two, and the rest of the unit is largely about how cells solve them.</p>
+<ol>
+  <li><strong>NAD<sup>+</sup> must be regenerated.</strong> Step 6 needs NAD<sup>+</sup> as the electron acceptor, and every glucose uses up 2 of them, turning them into NADH. Cells contain only a small amount of NAD<sup>+</sup>. If the NADH is not oxidized back to NAD<sup>+</sup>, the cell runs out within seconds, step 6 stops, and the whole pathway stops (and with it, the ATP supply). <em>Solution:</em> with O<sub>2</sub>, the ETC oxidizes NADH back to NAD<sup>+</sup>; without O<sub>2</sub>, fermentation does it.</li>
+  <li><strong>Pyruvate must be removed.</strong> Several steps of glycolysis are reversible. If pyruvate (the product) builds up, the reactions slow down and the pathway stalls. Products must be cleared for a pathway to keep running forward. <em>Solution:</em> with O<sub>2</sub>, pyruvate is moved into the mitochondrion and converted to acetyl-CoA; without O<sub>2</sub>, it is converted to lactate or ethanol.</li>
+</ol>
+<p>(The key also mentions that ADP is needed to make ATP, but the cell uses ATP so constantly that there is always plenty of ADP around, so this is not a real concern.)</p>
+
+<h3 data-tier="essential">The fate of pyruvate</h3>
+<p>Pyruvate is a crossroads molecule. What happens to it <strong>depends on the presence of oxygen and on ATP levels</strong>:</p>
+<div class="table-wrap"><table class="data">
+<thead><tr><th>Condition</th><th>What happens to pyruvate</th><th>Lesson</th></tr></thead>
+<tbody>
+<tr><td><strong>O<sub>2</sub> present, cell needs ATP</strong></td><td>Moves into the mitochondrion → pyruvate oxidation → acetyl-CoA → Krebs cycle → ETC. Maximum ATP.</td><td>2.03, 2.04</td></tr>
+<tr><td><strong>O<sub>2</sub> absent (or locally used up)</strong></td><td>Fermentation: reduced to <strong>lactate</strong> (animals) or to <strong>ethanol + CO<sub>2</sub></strong> (yeast). Main purpose: regenerate NAD<sup>+</sup> so glycolysis can keep going.</td><td>2.07</td></tr>
+<tr><td><strong>ATP already high (energy not needed)</strong></td><td>Used to build things instead: new glucose (gluconeogenesis), lipids (fats), or the amino acid alanine.</td><td>2.05, 2.06</td></tr>
+</tbody></table></div>
+<div class="callout teacher"><p class="callout-title">Said in class</p><p>If pyruvate is <strong>not needed for energy</strong>, it can be used for:</p><ul><li><strong>Gluconeogenesis</strong>: making new glucose ("gluco" + "neo" (new) + "genesis" (creation)). This happens mainly in the liver.</li><li><strong>Lipids</strong>: pyruvate is turned into acetyl-CoA, which can be used to build fatty acids for storage as fat.</li><li><strong>Alanine</strong>, an amino acid: pyruvate is just one amino group away from alanine.</li></ul></div>
+<p>This shows the two sides of metabolism working together. When energy is plentiful, the products of catabolism are fed into anabolism and stored. When energy is short, they are burned for ATP.</p>
+
+<h3 data-tier="likely">Is the mitochondrion "the powerhouse of the cell"?</h3>
+<p>This is one of the slide's review questions, and the answer key says "answers may vary." Whatever you argue, back it with evidence. A strong answer looks at both sides:</p>
+<div class="compare">
+  <div>
+    <h4>Yes, mostly</h4>
+    <ul>
+      <li>It makes <strong>most</strong> of the cell's ATP: about 34 of a maximum 38 per glucose (stage 4), plus 2 more in the Krebs cycle.</li>
+      <li>Three of the four stages happen inside it.</li>
+      <li>Cells with high energy needs (muscle, heart, sperm) are packed with mitochondria.</li>
+    </ul>
+  </div>
+  <div>
+    <h4>Not entirely</h4>
+    <ul>
+      <li><strong>Some ATP is made in the cytoplasm</strong>, by glycolysis, without any mitochondria (class answer key's point).</li>
+      <li>Some cells have no mitochondria at all (mature red blood cells, bacteria) and get all their ATP from glycolysis.</li>
+      <li>Mitochondria do not <em>create</em> energy. They convert chemical energy in food into ATP. The "power" originally came from the sun via photosynthesis.</li>
+    </ul>
+  </div>
+</div>
+<p>A balanced conclusion: the mitochondrion is where <strong>most</strong> ATP is produced, so "powerhouse" is fair, but it is not the only site of ATP production, and it depends on glycolysis in the cytoplasm to supply its fuel.</p>
+
+<h3 data-tier="likely">A look ahead: 38 ATP</h3>
+<p>The last slide of the lesson summarizes where we are going: <strong>a maximum of 38 ATP is produced per glucose, but some is generally lost.</strong> The slide's diagram breaks it down:</p>
+<div class="table-wrap"><table class="data">
+<thead><tr><th>Stage</th><th>How the ATP is made</th><th>ATP per glucose</th></tr></thead>
+<tbody>
+<tr><td>Glycolysis (cytoplasm)</td><td>Substrate-level phosphorylation</td><td>2</td></tr>
+<tr><td>Krebs (citric acid) cycle (matrix)</td><td>Substrate-level phosphorylation</td><td>2</td></tr>
+<tr><td>Oxidative phosphorylation (ETC + chemiosmosis)</td><td>ATP synthase, powered by NADH and FADH<sub>2</sub></td><td>about 34</td></tr>
+<tr><td colspan="2"><strong>Maximum</strong></td><td><strong>about 38</strong></td></tr>
+</tbody></table></div>
+<p>The slide also shows the 2 NADH made by glycolysis in the cytoplasm being passed across the mitochondrial membrane by an "electron shuttle," and notes that they may arrive as 2 FADH<sub>2</sub> instead. That is one reason the real number is lower than 38. The class review key uses 36, and modern measurements put the real yield closer to 30–32. You will see why in lesson 2.04.</p>
+<div class="callout teacher"><p class="callout-title">Said in class</p><p>The ETC stage makes roughly 26–34 ATP, depending on conditions. NADH and FADH<sub>2</sub> drive H<sup>+</sup> across the membrane to make a gradient, and as H<sup>+</sup> flows back through ATP synthase, ADP is turned into ATP.</p></div>
+<div class="callout warn"><p class="callout-title">Common mistake</p><p>Do not swap the Krebs numbers. Per glucose the Krebs cycle makes <strong>6 NADH and 2 FADH<sub>2</sub></strong> (plus 2 ATP and 4 CO<sub>2</sub>), not 6 FADH<sub>2</sub> and 2 NADH. NADH is always the one there are more of.</p></div>
+
+<h3 data-tier="likely">Review &amp; application questions</h3>
+<details class="check"><summary>1. What are the products of glycolysis?</summary><div class="ans"><p>Per glucose: <strong>2 pyruvate, 2 ATP (net), 2 NADH</strong> (high-energy electron carriers). Also 2 H<sub>2</sub>O and 2 H<sup>+</sup>. (Gross ATP is 4, but 2 were invested.)</p></div></details>
+<details class="check"><summary>2. Is the mitochondrion "the powerhouse of the cell"? Defend your answer.</summary><div class="ans"><p>Answers may vary, but must be supported. Yes: it produces most of the cell's ATP (about 34 of 38 by oxidative phosphorylation, plus 2 from Krebs). However, some ATP is made in the cytoplasm by glycolysis, some cells (like red blood cells) have no mitochondria and rely on glycolysis alone, and mitochondria convert energy rather than create it. So it is the <em>main</em> but not the <em>only</em> site of ATP production.</p></div></details>
+<details class="check"><summary>3. Which of the reactants/products of cellular respiration are used/produced in glycolysis?</summary><div class="ans"><p><strong>Glucose is the only reactant used</strong>; it is split into 2 pyruvate. <strong>2 water molecules are produced</strong> (step 9). <strong>No CO<sub>2</sub> is produced yet</strong> and <strong>no O<sub>2</sub> is consumed yet</strong>. O<sub>2</sub>, CO<sub>2</sub> and most of the H<sub>2</sub>O belong to later stages.</p></div></details>
+<details class="check"><summary>Worksheet: At the end of glycolysis, where is most of the bond energy from glucose?</summary><div class="ans"><p>Still <strong>trapped in the pyruvate</strong> molecules (with a little in the NADH). Glycolysis releases only a small fraction of glucose's energy, about 2% as net ATP.</p></div></details>
+<details class="check"><summary>Worksheet: State the products you would expect if an amylose (starch) chain of 120 glucose monomers went through glycolysis.</summary><div class="ans"><p>Multiply the per-glucose numbers by 120: <strong>240 pyruvate</strong>, <strong>480 ATP made</strong> (but 240 ATP consumed, so <strong>240 net ATP</strong>), and <strong>240 NADH</strong>. (Also 240 H<sub>2</sub>O.)</p></div></details>
+<details class="check"><summary>How many pyruvate molecules would be produced by the glycolysis of 5 glucose molecules?</summary><div class="ans"><p><strong>10</strong> (2 per glucose).</p></div></details>
+<details class="check"><summary>Worksheet: What problems remain for the cell to solve after glycolysis is finished?</summary><div class="ans"><p>(1) <strong>NAD<sup>+</sup> must be regenerated</strong>, because step 6 needs it and the cell's supply is small; NADH must be oxidized back to NAD<sup>+</sup>. (2) <strong>Pyruvate must be removed</strong>, because its build-up would stall the reaction pathway. (ADP is also needed, but the cell always has plenty.)</p></div></details>
+<details class="check"><summary>What is happening when phosphoenolpyruvate is converted to pyruvate?</summary><div class="ans"><p><strong>Substrate-level phosphorylation</strong>: pyruvate kinase transfers the high-energy phosphate from PEP directly to ADP, making ATP (step 10). It happens twice per glucose.</p></div></details>
+<details class="check"><summary>A patient is deficient in the enzyme that converts fructose-1,6-bisphosphate into DHAP and G3P. What might build up in the cell?</summary><div class="ans"><p>The enzyme is <strong>aldolase</strong> (step 4). Its substrate, <strong>fructose-1,6-bisphosphate</strong>, would pile up. Because the payoff phase cannot happen, the molecules it would have used are not consumed, so <strong>ADP and NAD<sup>+</sup></strong> build up too (class key answer). Meanwhile 2 ATP per glucose have already been spent in steps 1 and 3 with nothing earned back, so the cell actually loses ATP.</p></div></details>
+<details class="check"><summary>Identify the reactants needed for glycolysis.</summary><div class="ans"><p><strong>Glucose, ATP and NAD<sup>+</sup></strong> (class key), plus ADP and P<sub>i</sub> for the payoff phase.</p></div></details>
+<details class="check"><summary>Why is step 6 the only step in glycolysis that makes NADH?</summary><div class="ans"><p>It is the only redox (oxidation) step. G3P dehydrogenase removes hydrogen (electrons) from G3P, oxidizing it, and NAD<sup>+</sup> accepts those electrons (is reduced) to become NADH. No other step of glycolysis removes electrons from the sugar.</p></div></details>
+<details class="check"><summary>Why does glycolysis spend ATP at the start if its whole purpose is to make ATP?</summary><div class="ans"><p>Glucose is very stable, so energy must be invested to destabilize it (activation energy). Adding phosphates at steps 1 and 3 makes the sugar unstable enough to split and to be harvested. The investment of 2 ATP is repaid by the 4 ATP made in the payoff phase, for a net gain of 2. Step 1's phosphate also traps glucose inside the cell.</p></div></details>
+<details class="check"><summary>Is glycolysis affected if a cell runs out of oxygen? Why?</summary><div class="ans"><p>Not directly. Glycolysis is anaerobic, so it does not use O<sub>2</sub> (class key: "No, it is an anaerobic process"). It does need NAD<sup>+</sup>, though, and without O<sub>2</sub> the ETC cannot regenerate it, which is why cells switch on fermentation to keep NAD<sup>+</sup> available.</p></div></details>
+
+<h3 data-tier="essential">Lesson summary</h3>
+<ul>
+  <li><strong>C<sub>6</sub>H<sub>12</sub>O<sub>6</sub> + 6 O<sub>2</sub> → 6 CO<sub>2</sub> + 6 H<sub>2</sub>O + ATP</strong> (class: 36 ATP; slide maximum 38). Energy goes into ATP directly and into NADH/FADH<sub>2</sub>, which power more ATP. O<sub>2</sub> = final electron acceptor.</li>
+  <li>Building ATP is endergonic and anabolic, so it <strong>must be coupled</strong> to the exergonic breakdown of glucose.</li>
+  <li>Four stages: <strong>glycolysis</strong> (10 steps, cytoplasm, no O<sub>2</sub>) → <strong>pyruvate oxidation</strong> (1 step, matrix) → <strong>Krebs</strong> (8 steps, cyclic, matrix) → <strong>ETC + chemiosmosis</strong> (inner membrane).</li>
+  <li>Mitochondrion: <strong>smooth outer membrane</strong>, <strong>highly folded inner membrane</strong> (folds = <strong>cristae</strong>, more surface area for ETC + ATP synthase), <strong>fluid-filled intermembrane space</strong>, <strong>protein-rich matrix</strong>.</li>
+  <li>Glycolysis = "sugar splitting": glucose (6C) → 2 pyruvate (3C), in all cells, anaerobic.</li>
+  <li><strong>Prep phase (1–5):</strong> spend 2 ATP to destabilize and split glucose. <strong>Payoff phase (6–10):</strong> make 4 ATP + 2 NADH. Everything after step 5 happens ×2.</li>
+  <li>Steps: 1 hexokinase (G6P, −ATP) · 2 phosphoglucose isomerase (F6P) · 3 <strong>PFK</strong> (F1,6BP, −ATP, key regulatory step) · 4 aldolase (DHAP + G3P) · 5 triose phosphate isomerase (2 G3P) · 6 G3P dehydrogenase (1,3-BPG, +NADH, adds P<sub>i</sub> from the cellular pool) · 7 phosphoglycerate kinase (3PG, +ATP) · 8 phosphoglycerate mutase (2PG) · 9 enolase (PEP, −H<sub>2</sub>O) · 10 pyruvate kinase (pyruvate, +ATP).</li>
+  <li><strong>Net: 2 ATP, 2 NADH, 2 pyruvate, 2 H<sub>2</sub>O.</strong> No CO<sub>2</sub>, no O<sub>2</sub>.</li>
+  <li><strong>Substrate-level phosphorylation</strong>: ATP formed directly in an enzyme-catalyzed reaction (steps 7 and 10). Phosphate added at steps 1, 3, 6; removed at 7, 10.</li>
+  <li>Most of glucose's energy is still in <strong>pyruvate</strong>. Problems left: <strong>regenerate NAD<sup>+</sup></strong>, <strong>remove pyruvate</strong>.</li>
+  <li>Fate of pyruvate depends on <strong>O<sub>2</sub> and ATP levels</strong>: aerobic → mitochondria; anaerobic → fermentation; not needed → gluconeogenesis, lipids, alanine.</li>
+  <li>Maximum <strong>38 ATP</strong> per glucose (2 glycolysis + 2 Krebs + ~34 oxidative phosphorylation), but some is generally lost.</li>
+</ul>
+`
+});
 // END-LESSONS-A
