@@ -22,6 +22,25 @@
   var LESSON_IDS = ['2.01', '2.02', '2.03', '2.04', '2.05', '2.06', '2.07'];
 
   var view = document.getElementById('view');
+
+  /* ---------- knowledge tiers ---------- */
+  var TIER_RANK = { essential: 1, likely: 2, extra: 3 };
+  var TIER_NAME = { essential: 'Essential', likely: 'Likely', extra: 'Extra' };
+  var DEPTH_HINT = {
+    essential: 'Only must-know content: names, functions, locations, yields, regulators.',
+    likely: 'Essential plus what will probably be tested or was said in class.',
+    extra: 'Everything, including enrichment beyond the slides.'
+  };
+  function getDepth() { var d = store('depth'); return TIER_RANK[d] ? d : 'extra'; }
+  function tierOf(x) { if (!x) return 'essential'; var t = x.tier || (x.core === 'deeper' ? 'extra' : x.core) ; return TIER_RANK[t] ? t : 'essential'; }
+  function visible(t) { return TIER_RANK[t || 'essential'] <= TIER_RANK[getDepth()]; }
+  function tierBadge(t) { return '<span class="tier-badge t-' + t + '">' + TIER_NAME[t] + '</span>'; }
+  function applyDepth() {
+    var d = getDepth();
+    document.documentElement.setAttribute('data-depth', d);
+    $$('.depth button').forEach(function (b) { b.setAttribute('aria-pressed', String(b.getAttribute('data-depth') === d)); });
+    var h = document.getElementById('depthHint'); if (h) h.textContent = DEPTH_HINT[d];
+  }
   var $ = function (sel, root) { return (root || document).querySelector(sel); };
   var $$ = function (sel, root) { return Array.prototype.slice.call((root || document).querySelectorAll(sel)); };
   function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
@@ -60,6 +79,10 @@
   scrim.addEventListener('click', closeMenu);
   document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeMenu(); });
 
+  $$('.depth button').forEach(function (b) {
+    b.addEventListener('click', function () { store('depth', b.getAttribute('data-depth')); applyDepth(); route(true); });
+  });
+
   /* ---------- nav ---------- */
   $('#navLessons').innerHTML = LESSON_IDS.map(function (id) {
     return '<li><a href="#/lesson/' + id + '" data-route="lesson/' + id + '" data-stage="' + stageOf(id) + '"><span class="dot"></span><span class="num">' + id + '</span><span>' + esc(LESSON_META[id].title) + '</span></a></li>';
@@ -74,7 +97,7 @@
   }
 
   /* ---------- router ---------- */
-  function route() {
+  function route(keepScroll) {
     var h = location.hash.replace(/^#\/?/, '');
     var parts = h.split('?');
     var path = parts[0], query = {};
@@ -84,6 +107,7 @@
     view.removeAttribute('data-stage');
     setWide(false);
     if (!path) { renderHome(); markNav('home'); }
+    else if (seg[0] === 'cram') { renderCram(); markNav('cram'); }
     else if (seg[0] === 'lesson') { renderLesson(seg[1]); markNav('lesson/' + seg[1]); }
     else if (seg[0] === 'qa') { renderQA(query); markNav('qa'); }
     else if (seg[0] === 'quiz') { renderQuizSetup(query); markNav('quiz'); }
@@ -91,11 +115,11 @@
     else if (seg[0] === 'beyond') { seg[1] ? renderBeyondTopic(seg[1]) : renderBeyond(); markNav('beyond'); }
     else if (seg[0] === 'glossary') { renderGlossary(); markNav('glossary'); }
     else { renderHome(); markNav('home'); }
-    if (!query.keep) window.scrollTo(0, 0);
+    if (keepScroll !== true) window.scrollTo(0, 0);
     var h1 = view.querySelector('h1, h2');
     document.title = (h1 ? h1.textContent + ' · ' : '') + 'SBI4U Metabolic Processes';
   }
-  window.addEventListener('hashchange', route);
+  window.addEventListener('hashchange', function () { route(); });
 
   /* ---------- home ---------- */
   var STAGES = [
@@ -139,6 +163,13 @@
           '<div class="journey-detail" id="journeyDetail"><h3>Tap a stage to follow the glucose</h3><p class="muted">The counters add up what one glucose has produced by the end of each stage, using the class values (NADH ≈ 3 ATP, FADH<sub>2</sub> ≈ 2 ATP).</p></div>' +
         '</div>' +
       '</section>' +
+      '<h2>Three levels of depth</h2>' +
+      '<div class="tier-explain">' +
+        '<div>' + tierBadge('essential') + '<p>Must-know for the test: every name, function, location, yield, regulator and inhibitor.</p></div>' +
+        '<div>' + tierBadge('likely') + '<p>Probably tested or said in class: reasoning, worked examples, case studies.</p></div>' +
+        '<div>' + tierBadge('extra') + '<p>Enrichment beyond the slides, for full marks on thinking questions.</p></div>' +
+      '</div>' +
+      '<p class="muted">Use <strong>How much to show</strong> in the menu to hide lower levels everywhere. Short on time? <a href="#/cram">Open cram mode</a>: all the essentials on one page.</p>' +
       '<h2>Lessons</h2><div class="card-grid">' + lessonCards + '</div>' +
       '<h2>Test yourself</h2>' +
       '<div class="tool-list">' +
@@ -186,16 +217,72 @@
         (prev ? '<a class="prev" href="#/lesson/' + prev + '"><small>Previous</small>' + prev + ' ' + esc(LESSON_META[prev].title) + '</a>' : '') +
         (next ? '<a class="next" href="#/lesson/' + next + '"><small>Next</small>' + next + ' ' + esc(LESSON_META[next].title) + '</a>' : '') +
       '</nav>';
+    tierizeBody($('.lesson-body', view));
     var toc = $('#toc');
     var hs = $$('.lesson-body h3', view);
     if (!hs.length) { $('.toc', view).remove(); return; }
-    toc.innerHTML = hs.map(function (h, i) { h.id = 'sec-' + i; return '<li><a href="#sec-' + i + '" data-sec="' + i + '">' + esc(h.textContent) + '</a></li>'; }).join('');
+    toc.innerHTML = hs.map(function (h, i) {
+      h.id = 'sec-' + i;
+      var t = h.parentNode.getAttribute('data-tier') || 'essential';
+      return '<li data-tier="' + t + '"><a href="#sec-' + i + '" data-sec="' + i + '">' + esc(h.getAttribute('data-title') || h.textContent) + '</a></li>';
+    }).join('');
     toc.addEventListener('click', function (e) {
       var a = e.target.closest('a'); if (!a) return;
       e.preventDefault();
       var t = document.getElementById('sec-' + a.getAttribute('data-sec'));
       if (t) t.scrollIntoView({ behavior: 'smooth', block: 'start' });
     });
+  }
+
+  // Group each h3 and the blocks after it into a tier section; flag lower-tier blocks inside.
+  function tierizeBody(body) {
+    if (!body) return;
+    var kids = Array.prototype.slice.call(body.children);
+    var sec = null;
+    kids.forEach(function (el) {
+      if (el.tagName === 'H3') {
+        var t = TIER_RANK[el.getAttribute('data-tier')] ? el.getAttribute('data-tier') : 'essential';
+        el.removeAttribute('data-tier');
+        sec = document.createElement('section');
+        sec.className = 'tier-sec';
+        sec.setAttribute('data-tier', t);
+        body.insertBefore(sec, el);
+        el.setAttribute('data-title', el.textContent);
+        el.insertAdjacentHTML('beforeend', ' ' + tierBadge(t));
+      }
+      if (sec) sec.appendChild(el);
+    });
+    $$('[data-tier]', body).forEach(function (el) {
+      if (el.classList.contains('tier-sec') || el.tagName === 'TR' || el.tagName === 'LI') return;
+      var t = el.getAttribute('data-tier');
+      var parentSec = el.closest('.tier-sec');
+      if (!TIER_RANK[t] || t === 'essential' || (parentSec && parentSec.getAttribute('data-tier') === t)) return;
+      el.insertAdjacentHTML('beforebegin', '<div class="tier-flag" data-tier="' + t + '">' + tierBadge(t) + '</div>');
+    });
+  }
+
+  /* ---------- cram mode ---------- */
+  function renderCram() {
+    var ess = QUIZ.filter(function (q) { return tierOf(q) === 'essential'; }).length;
+    view.setAttribute('data-stage', 'etc');
+    setWide(true);
+    view.innerHTML = '<header class="lesson-head"><div class="lesson-kicker">' + tierBadge('essential') + '<span>Whole unit on one page</span></div>' +
+      '<h1>Cram mode</h1>' +
+      '<p class="lede">Every name, function, location, yield, regulator and inhibitor in the unit, and nothing else. Read it top to bottom, then take the cram quiz.</p>' +
+      '<div class="toolbar"><button class="btn" id="cramQuiz">Cram quiz: ' + Math.min(25, ess) + ' essential questions</button><button class="btn ghost" id="cramPrint">Print this page</button></div>' +
+      '<details class="toc"><summary>Jump to a section</summary><ol id="toc"></ol></details></header>' +
+      '<article class="lesson-body cram">' + (window.CRAM || '<p class="empty">Cram sheet missing.</p>') + '</article>';
+    var hs = $$('.lesson-body h3', view);
+    $('#toc').innerHTML = hs.map(function (h, i) { h.id = 'sec-' + i; return '<li><a href="#sec-' + i + '" data-sec="' + i + '">' + esc(h.textContent) + '</a></li>'; }).join('');
+    $('#toc').addEventListener('click', function (e) {
+      var a = e.target.closest('a'); if (!a) return; e.preventDefault();
+      var t = document.getElementById('sec-' + a.getAttribute('data-sec')); if (t) t.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+    $$('tr[data-tier]', view).forEach(function (tr) { var c = tr.cells[0]; if (c) c.insertAdjacentHTML('beforeend', ' ' + tierBadge(tr.getAttribute('data-tier'))); });
+    $('#cramQuiz').addEventListener('click', function () {
+      startQuiz(shuffle(QUIZ.filter(function (q) { return tierOf(q) === 'essential'; })).slice(0, 25));
+    });
+    $('#cramPrint').addEventListener('click', function () { window.print(); });
   }
 
   /* ---------- filter chips helper ---------- */
@@ -218,7 +305,8 @@
         return '<section class="qa-group" data-stage="' + stageOf(g.lesson) + '"><h3>' + esc(g.title) + '</h3>' + (g.source ? '<p class="qa-source">' + esc(g.source) + '</p>' : '') +
           g.items.map(function (it, i) {
             n++;
-            return '<details class="qa-item"><summary><span class="qn">' + (i + 1) + '.</span>' + it.q + '</summary><div class="qa-a">' + (it.note ? '<p class="qa-note">' + it.note + '</p>' : '') + it.a + '</div></details>';
+            var t = tierOf(it);
+            return '<details class="qa-item" data-tier="' + t + '"><summary><span class="qn">' + (i + 1) + '.</span>' + it.q + (t !== 'essential' ? ' ' + tierBadge(t) : '') + '</summary><div class="qa-a">' + (it.note ? '<p class="qa-note">' + it.note + '</p>' : '') + it.a + '</div></details>';
           }).join('') + '</section>';
       }).join('') : '<p class="empty">No questions for this lesson yet.</p>');
     $$('.fchip', view).forEach(function (b) { b.addEventListener('click', function () { var l = b.getAttribute('data-l'); location.hash = '#/qa' + (l === 'all' ? '' : '?lesson=' + l); }); });
@@ -250,6 +338,8 @@
         '<p class="muted" style="font-size:14px;margin-top:-6px">Leave all unselected to use every lesson.</p>' +
         '<span class="field-label">Question type</span>' +
         '<div class="chips" id="qType"><button class="fchip" data-t="both" aria-pressed="true">Both</button><button class="fchip" data-t="mcq" aria-pressed="false">Multiple choice</button><button class="fchip" data-t="tf" aria-pressed="false">True / false</button></div>' +
+        '<span class="field-label">Depth</span>' +
+        '<p class="muted" style="font-size:15px;margin:0">Using <strong>' + { essential: 'Essential only', likely: 'Essential + Likely', extra: 'Everything' }[getDepth()] + '</strong> (' + QUIZ.filter(function (q) { return visible(tierOf(q)); }).length + ' questions). Change it under <em>How much to show</em> in the menu.</p>' +
         '<span class="field-label">Length</span>' +
         '<div class="chips" id="qCount">' + [10, 20, 40, 0].map(function (c) { return '<button class="fchip" data-c="' + c + '" aria-pressed="' + (c === 20) + '">' + (c ? c + ' questions' : 'Everything') + '</button>'; }).join('') + '</div>' +
         '<div class="toolbar" style="margin-top:22px"><button class="btn" id="qStart">Start quiz</button>' +
@@ -266,7 +356,7 @@
     single('#qCount', function (b) { count = +b.getAttribute('data-c'); });
     $('#qStart').addEventListener('click', function () {
       var ls = $$('#qLessons .fchip[aria-pressed="true"]', view).map(function (b) { return b.getAttribute('data-l'); });
-      var pool = QUIZ.filter(function (q) { return (!ls.length || ls.indexOf(q.lesson) > -1) && (type === 'both' || q.type === type); });
+      var pool = QUIZ.filter(function (q) { return visible(tierOf(q)) && (!ls.length || ls.indexOf(q.lesson) > -1) && (type === 'both' || q.type === type); });
       pool = shuffle(pool); if (count) pool = pool.slice(0, count);
       startQuiz(pool);
     });
@@ -288,7 +378,7 @@
     view.innerHTML = '<h2>Practice quiz</h2><div class="quiz-panel">' +
       '<div class="quiz-top"><span>Question ' + (quiz.i + 1) + ' of ' + quiz.pool.length + '</span><span>' + esc(lessonLabel(q.lesson)) + '</span></div>' +
       '<div class="progress"><i style="width:' + (100 * quiz.i / quiz.pool.length) + '%"></i></div>' +
-      '<p class="q-text">' + (q.type === 'tf' ? '<span class="pill" style="margin-right:8px">True or false</span>' : '') + q.q + '</p>' +
+      '<p class="q-text">' + (q.type === 'tf' ? '<span class="pill" style="margin-right:8px">True or false</span>' : '') + q.q + ' ' + tierBadge(tierOf(q)) + '</p>' +
       '<div class="opts' + (q.type === 'tf' ? ' tf-row' : '') + '">' + opts.map(function (o, i) { return '<button class="opt" data-i="' + i + '"><span class="k">' + keys[i] + '</span>' + o + '</button>'; }).join('') + '</div>' +
       '<div id="fb"></div>' +
       '<div class="quiz-actions"><button class="btn ghost" id="qQuit">End quiz</button><button class="btn" id="qNext" hidden>' + (quiz.i + 1 < quiz.pool.length ? 'Next question' : 'See results') + '</button></div>' +
@@ -359,8 +449,8 @@
       lessonChips(sel, true) +
       (items.length ? items.map(function (x) {
         var saved = store('ans-' + x.id) || '';
-        return '<article class="x-card" data-stage="' + stageOf(x.lesson) + '" data-id="' + x.id + '">' +
-          '<div class="x-meta"><span class="pill">' + (levelName[x.level] || x.level) + '</span><span>' + esc(lessonLabel(x.lesson)) + '</span>' + (x.marks ? '<span>' + x.marks + ' marks</span>' : '') + '</div>' +
+        return '<article class="x-card" data-stage="' + stageOf(x.lesson) + '" data-id="' + x.id + '" data-tier="' + tierOf(x) + '">' +
+          '<div class="x-meta">' + tierBadge(tierOf(x)) + '<span class="pill">' + (levelName[x.level] || x.level) + '</span><span>' + esc(lessonLabel(x.lesson)) + '</span>' + (x.marks ? '<span>' + x.marks + ' marks</span>' : '') + '</div>' +
           '<h3>' + esc(x.title) + '</h3>' + x.prompt +
           '<label class="field-label" for="ta-' + x.id + '">Your answer</label><textarea id="ta-' + x.id + '" placeholder="Write your answer here. It is saved in this browser.">' + esc(saved) + '</textarea>' +
           '<div class="x-hints"></div>' +
@@ -387,12 +477,13 @@
   /* ---------- beyond the slides ---------- */
   function renderBeyond() {
     view.innerHTML = '<h1>Beyond the slides</h1>' +
-      '<p class="lede">Your notes can\'t catch everything said in class, and the slides skip some of the reasoning. These topics fill those gaps. Topics marked <span class="tag likely">likely</span> were probably mentioned in class or could show up on the test; <span class="tag">deeper</span> topics are for full understanding and extension questions.</p>' +
+      '<p class="lede">Your notes can\'t catch everything said in class, and the slides skip some of the reasoning. These topics fill those gaps. ' + tierBadge('likely') + ' topics were probably mentioned in class or could show up on the test; ' + tierBadge('extra') + ' topics are for full understanding and extension questions.</p>' +
+      (getDepth() === 'essential' ? '<p class="empty">You are in Essential depth, so this section is hidden. Switch <em>How much to show</em> to <strong>+ Likely</strong> or <strong>Everything</strong> to see it.</p>' : '') +
       (EXTRA.length ? LESSON_IDS.concat(['mix']).map(function (id) {
         var items = EXTRA.filter(function (e) { return e.lesson === id; });
         if (!items.length) return '';
         return '<h3>' + esc(id === 'mix' ? 'Whole unit' : id + ' ' + LESSON_META[id].title) + '</h3><div class="beyond-list">' + items.map(function (e) {
-          return '<a href="#/beyond/' + e.id + '" data-stage="' + stageOf(e.lesson) + '"><b>' + e.title + '</b><span class="tag' + (e.core === 'likely' ? ' likely' : '') + '">' + (e.core === 'likely' ? 'likely' : 'deeper') + '</span>' + (e.why ? '<span class="why">' + e.why + '</span>' : '') + '</a>';
+          return '<a href="#/beyond/' + e.id + '" data-stage="' + stageOf(e.lesson) + '" data-tier="' + tierOf(e) + '"><b>' + e.title + '</b>' + tierBadge(tierOf(e)) + (e.why ? '<span class="why">' + e.why + '</span>' : '') + '</a>';
         }).join('') + '</div>';
       }).join('') : '<p class="empty">This section is still being written.</p>');
   }
@@ -402,9 +493,9 @@
     if (!e) { renderBeyond(); return; }
     view.setAttribute('data-stage', stageOf(e.lesson));
     var prev = EXTRA[i - 1], next = EXTRA[i + 1];
-    view.innerHTML = '<header class="lesson-head"><div class="lesson-kicker"><a href="#/beyond">Beyond the slides</a><span>Extends ' + esc(lessonLabel(e.lesson)) + '</span><span class="tag' + (e.core === 'likely' ? ' likely' : '') + '">' + (e.core === 'likely' ? 'likely' : 'deeper') + '</span></div>' +
+    view.innerHTML = '<header class="lesson-head"><div class="lesson-kicker"><a href="#/beyond">Beyond the slides</a><span>Extends ' + esc(lessonLabel(e.lesson)) + '</span>' + tierBadge(tierOf(e)) + '</div>' +
       '<h1>' + e.title + '</h1>' + (e.why ? '<p class="lede">' + e.why + '</p>' : '') + '</header>' +
-      '<article class="lesson-body">' + e.html + '</article>' +
+      '<article class="lesson-body beyond-body">' + e.html + '</article>' +
       '<nav class="pager" aria-label="Topics">' +
         (prev ? '<a class="prev" href="#/beyond/' + prev.id + '"><small>Previous topic</small>' + prev.title + '</a>' : '') +
         (next ? '<a class="next" href="#/beyond/' + next.id + '"><small>Next topic</small>' + next.title + '</a>' : '') +
@@ -425,7 +516,7 @@
         return (g.term + ' ' + g.def).replace(/<[^>]+>/g, '').toLowerCase().indexOf(q) > -1;
       });
       $('#gl').innerHTML = rows.length ? rows.map(function (g) {
-        return '<div class="gloss-row" data-stage="' + stageOf(g.lesson) + '"><dt>' + g.term + (g.lesson ? '<small><a href="#/lesson/' + g.lesson + '">' + esc(lessonLabel(g.lesson)) + '</a></small>' : '') + '</dt><dd>' + g.def + '</dd></div>';
+        return '<div class="gloss-row" data-stage="' + stageOf(g.lesson) + '" data-tier="' + tierOf(g) + '"><dt>' + g.term + (tierOf(g) !== 'essential' ? ' ' + tierBadge(tierOf(g)) : '') + (g.lesson ? '<small><a href="#/lesson/' + g.lesson + '">' + esc(lessonLabel(g.lesson)) + '</a></small>' : '') + '</dt><dd>' + g.def + '</dd></div>';
       }).join('') : '<p class="empty">No terms match “' + esc(q) + '”. Try a shorter word.</p>';
     }
     $('#gq').addEventListener('input', draw);
@@ -433,5 +524,6 @@
     draw();
   }
 
+  applyDepth();
   route();
 })();

@@ -31,6 +31,7 @@
     </a>
     <ul class="nav">
       <li><a href="#/" data-route="home">Overview</a></li>
+      <li><a href="#/cram" data-route="cram" class="cram-link">Cram mode</a></li>
       <li class="nav-group">
         <span class="nav-label">Lessons</span>
         <ul id="navLessons"></ul>
@@ -41,6 +42,15 @@
       <li><a href="#/beyond" data-route="beyond">Beyond the slides</a></li>
       <li><a href="#/glossary" data-route="glossary">Glossary</a></li>
     </ul>
+    <div class="depth-box">
+      <span class="nav-label" id="depthLabel">How much to show</span>
+      <div class="depth" role="group" aria-labelledby="depthLabel">
+        <button data-depth="essential">Essential</button>
+        <button data-depth="likely">+ Likely</button>
+        <button data-depth="extra">Everything</button>
+      </div>
+      <p class="depth-hint" id="depthHint"></p>
+    </div>
     <div class="sidebar-foot">
       <button class="theme-btn wide" data-theme-toggle>Switch theme</button>
       <a class="back-hub" href="../">All SBI4U units</a>
@@ -60,6 +70,7 @@
 <script src="data/quiz.js"></script>
 <script src="data/extension.js"></script>
 <script src="data/extra.js"></script>
+<script src="data/cram.js"></script>
 <script src="js/app.js"></script>
 </body>
 </html>

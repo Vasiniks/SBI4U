@@ -2,3 +2,4 @@
 /Metabolism/
 /.claude/
 .DS_Store
+.playwright-mcp/

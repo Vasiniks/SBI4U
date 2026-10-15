@@ -314,3 +314,31 @@ textarea { min-height: 110px; resize: vertical; font-family: var(--body); }
   details.check, details.qa-item { break-inside: avoid; }
   details.check .ans, details.qa-item .qa-a { display: block; }
 }
+
+/* ---------- knowledge tiers ---------- */
+:root[data-depth="essential"] [data-tier="likely"],
+:root[data-depth="essential"] [data-tier="extra"],
+:root[data-depth="likely"] [data-tier="extra"] { display: none !important; }
+.tier-badge { display: inline-block; vertical-align: middle; font-family: var(--display); font-size: 11.5px; font-weight: 700; line-height: 1; padding: 4px 8px 4px; border-radius: 999px; letter-spacing: .01em; white-space: nowrap; transform: translateY(-2px); }
+.tier-badge.t-essential { background: var(--ink); color: var(--bg); }
+.tier-badge.t-likely { background: var(--etc-soft); color: var(--etc); box-shadow: inset 0 0 0 1px var(--etc); }
+.tier-badge.t-extra { background: transparent; color: var(--krebs); box-shadow: inset 0 0 0 1px var(--krebs); }
+h3 .tier-badge { margin-left: 6px; }
+.tier-flag { margin: 1.2em 0 -.6em; }
+.tier-sec[data-tier="extra"] > h3 { color: var(--ink-2); }
+.tier-explain { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin: 14px 0 12px; }
+.tier-explain > div { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius-m); padding: 14px 16px 4px; }
+.tier-explain p { font-size: 15px; line-height: 1.5; margin: 8px 0 10px; color: var(--ink-2); }
+.depth-box { padding: 0 2px; }
+.depth { display: grid; grid-template-columns: repeat(3, 1fr); border: 1px solid var(--line); border-radius: var(--radius-s); overflow: hidden; margin: 2px 0 6px; }
+.depth button { border: 0; background: var(--surface); padding: 7px 4px; font-family: var(--display); font-size: 12.5px; font-weight: 600; cursor: pointer; color: var(--ink-2); }
+.depth button + button { border-left: 1px solid var(--line); }
+.depth button[aria-pressed="true"] { background: var(--ink); color: var(--bg); }
+.depth-hint { font-family: var(--display); font-size: 12.5px; color: var(--ink-2); line-height: 1.4; margin: 0 4px; }
+.nav a.cram-link { font-weight: 700; }
+.cram h3 { font-size: 21px; }
+.cram table.data { font-size: 14.5px; }
+.cram table.data th[scope], .cram tbody th { font-family: var(--display); font-weight: 650; white-space: nowrap; background: var(--surface-2); width: 1%; }
+@media (max-width: 560px) { .cram tbody th { white-space: normal; width: 34%; } }
+@media (max-width: 900px) { .tier-explain { grid-template-columns: 1fr; } }
+@media print { .cram .tier-badge { box-shadow: none; } }
