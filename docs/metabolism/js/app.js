@@ -269,7 +269,7 @@
     view.innerHTML = '<header class="lesson-head"><div class="lesson-kicker">' + tierBadge('essential') + '<span>Whole unit on one page</span></div>' +
       '<h1>Cram mode</h1>' +
       '<p class="lede">Every name, function, location, yield, regulator and inhibitor in the unit, and nothing else. Read it top to bottom, then take the cram quiz.</p>' +
-      '<div class="toolbar"><button class="btn" id="cramQuiz">Cram quiz: ' + Math.min(25, ess) + ' essential questions</button><button class="btn ghost" id="cramPrint">Print this page</button></div>' +
+      '<div class="toolbar"><button class="btn" id="cramQuiz"' + (ess ? '' : ' disabled') + '>Cram quiz: ' + Math.min(25, ess) + ' essential questions</button><button class="btn ghost" id="cramPrint">Print this page</button></div>' +
       '<details class="toc"><summary>Jump to a section</summary><ol id="toc"></ol></details></header>' +
       '<article class="lesson-body cram">' + (window.CRAM || '<p class="empty">Cram sheet missing.</p>') + '</article>';
     var hs = $$('.lesson-body h3', view);
