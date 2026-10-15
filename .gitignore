@@ -1,5 +1,6 @@
-# Raw class materials (slides, handouts, personal notes) stay private
-/Metabolism/
-/.claude/
+.claude/
 .DS_Store
 .playwright-mcp/
+/.claude/
+/Metabolism/
+# Raw class materials (slides, handouts, personal notes) stay private

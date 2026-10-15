@@ -3,7 +3,7 @@
 
   var LESSONS = (window.LESSONS || []).slice().sort(function (a, b) { return a.id.localeCompare(b.id); });
   var QA = window.QA || [];
-  var QUIZ = (window.QUIZ || []).concat(window.DRILL || []);
+  var QUIZ = (window.QUIZ || []).concat(window.QUIZ_APPLIED || [], window.DRILL || []);
   var EXT = window.EXT || [];
   var EXTRA = window.EXTRA || [];
   var VIS = window.VIS || {};
