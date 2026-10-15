@@ -341,3 +341,15 @@ h3 .tier-badge { margin-left: 6px; }
 .subnav a:hover { color: var(--ink); }
 .subnav a[aria-current="true"] { color: var(--ink); font-weight: 650; background: var(--surface-2); }
 .lesson-body > .tier-sec > h3:first-child { margin-top: .9em; }
+
+/* ---------- diagram fitting ---------- */
+#view { margin-left: auto; margin-right: auto; }
+.fig-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; overscroll-behavior-x: contain; }
+.fig-scroll > svg { margin: 0 auto; height: auto; }
+.fig-scroll.scrolls { border-radius: 8px; background: linear-gradient(to right, transparent 92%, var(--surface-2)); }
+.fig-scroll.scrolls + figcaption::before { content: "Swipe sideways to see the whole diagram. "; font-weight: 650; color: var(--ink); }
+@media (max-width: 560px) {
+  figure.diagram, figure.map { margin-left: -16px; margin-right: -16px; }
+  figure.diagram figcaption { padding: 0 16px; }
+  .fig-scroll { padding: 0 16px; }
+}

@@ -118,6 +118,7 @@
     else if (seg[0] === 'beyond') { seg[1] ? renderBeyondTopic(seg[1]) : renderBeyond(); markNav('beyond'); }
     else if (seg[0] === 'glossary') { renderGlossary(); markNav('glossary'); }
     else { renderHome(); markNav('home'); }
+    fitDiagrams();
     if (keepScroll !== true) window.scrollTo(0, 0);
     var h1 = view.querySelector('h1, h2');
     document.title = (h1 ? h1.textContent + ' · ' : '') + 'SBI4U Metabolic Processes';
@@ -199,6 +200,29 @@
     });
   }
   function countQA() { return QA.reduce(function (n, g) { return n + g.items.length; }, 0); }
+
+  /* ---------- diagram sizing ---------- */
+  // Never upscale a diagram past its drawn size; on narrow screens keep labels >= 10px and scroll sideways.
+  function fitDiagrams() {
+    $$('figure svg', view).forEach(function (svg) {
+      if (svg.parentNode.classList.contains('fig-scroll')) return;
+      var vb = svg.viewBox && svg.viewBox.baseVal;
+      if (!vb || !vb.width) return;
+      var minF = 99;
+      $$('text', svg).forEach(function (t) { var f = parseFloat(getComputedStyle(t).fontSize); if (f && f < minF) minF = f; });
+      if (minF === 99) minF = 12;
+      var wrap = document.createElement('div');
+      wrap.className = 'fig-scroll';
+      svg.parentNode.insertBefore(wrap, svg);
+      wrap.appendChild(svg);
+      svg.style.maxWidth = vb.width + 'px';
+      svg.style.minWidth = Math.min(vb.width, Math.round(vb.width * 10 / minF)) + 'px';
+      if (wrap.scrollWidth > wrap.clientWidth + 2) wrap.classList.add('scrolls');
+    });
+  }
+  window.addEventListener('resize', function () {
+    $$('.fig-scroll', view).forEach(function (w) { w.classList.toggle('scrolls', w.scrollWidth > w.clientWidth + 2); });
+  });
 
   /* ---------- tabs + sidebar sub-navigation ---------- */
   function tabStrip(tabs, label) {
