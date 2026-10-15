@@ -3,7 +3,7 @@
 
   var LESSONS = (window.LESSONS || []).slice().sort(function (a, b) { return a.id.localeCompare(b.id); });
   var QA = window.QA || [];
-  var QUIZ = window.QUIZ || [];
+  var QUIZ = (window.QUIZ || []).concat(window.DRILL || []);
   var EXT = window.EXT || [];
   var EXTRA = window.EXTRA || [];
   var VIS = window.VIS || {};
@@ -34,6 +34,7 @@
   };
   function getDepth() { var d = store('depth'); return TIER_RANK[d] ? d : 'extra'; }
   function tierOf(x) { if (!x) return 'essential'; var t = x.tier || (x.core === 'deeper' ? 'extra' : x.core) ; return TIER_RANK[t] ? t : 'essential'; }
+  function kindOf(q) { return q.kind || (q.level === 3 ? 'applied' : 'knowledge'); }
   function visible(t) { return TIER_RANK[t || 'essential'] <= TIER_RANK[getDepth()]; }
   function tierBadge(t) { return '<span class="tier-badge t-' + t + '">' + TIER_NAME[t] + '</span>'; }
   function applyDepth() {
@@ -342,7 +343,7 @@
   function renderQuizSetup(query) {
     var st = stats();
     var sel = query.lesson ? [query.lesson] : [];
-    var type = 'both', count = 20;
+    var type = 'both', count = 20, kind = query.kind || 'both';
     var byLesson = LESSON_IDS.concat(['mix']).map(function (id) {
       var qs = QUIZ.filter(function (q) { return q.lesson === id; });
       var seen = 0, right = 0;
@@ -358,6 +359,11 @@
           return '<button class="fchip" data-l="' + id + '" aria-pressed="' + (sel.indexOf(id) > -1) + '">' + (id === 'mix' ? 'Whole unit' : id + ' ' + esc(LESSON_META[id].title)) + '</button>';
         }).join('') + '</div>' +
         '<p class="muted" style="font-size:14px;margin-top:-6px">Leave all unselected to use every lesson.</p>' +
+        '<span class="field-label">Kind</span>' +
+        '<div class="chips" id="qKind">' + [['both', 'Both'], ['knowledge', 'Knowledge: names, enzymes, facts'], ['applied', 'Applied: homework extensions, scenarios']].map(function (k) {
+          var c = QUIZ.filter(function (q) { return k[0] === 'both' || kindOf(q) === k[0]; }).length;
+          return '<button class="fchip" data-k="' + k[0] + '" aria-pressed="' + (kind === k[0]) + '">' + k[1] + ' <span class="muted">' + c + '</span></button>';
+        }).join('') + '</div>' +
         '<span class="field-label">Question type</span>' +
         '<div class="chips" id="qType"><button class="fchip" data-t="both" aria-pressed="true">Both</button><button class="fchip" data-t="mcq" aria-pressed="false">Multiple choice</button><button class="fchip" data-t="tf" aria-pressed="false">True / false</button></div>' +
         '<span class="field-label">Depth</span>' +
@@ -375,10 +381,11 @@
     $$('#qLessons .fchip', view).forEach(function (b) { b.addEventListener('click', function () { b.setAttribute('aria-pressed', String(b.getAttribute('aria-pressed') !== 'true')); }); });
     function single(groupSel, cb) { $$(groupSel + ' .fchip', view).forEach(function (b) { b.addEventListener('click', function () { $$(groupSel + ' .fchip', view).forEach(function (x) { x.setAttribute('aria-pressed', 'false'); }); b.setAttribute('aria-pressed', 'true'); cb(b); }); }); }
     single('#qType', function (b) { type = b.getAttribute('data-t'); });
+    single('#qKind', function (b) { kind = b.getAttribute('data-k'); });
     single('#qCount', function (b) { count = +b.getAttribute('data-c'); });
     $('#qStart').addEventListener('click', function () {
       var ls = $$('#qLessons .fchip[aria-pressed="true"]', view).map(function (b) { return b.getAttribute('data-l'); });
-      var pool = QUIZ.filter(function (q) { return visible(tierOf(q)) && (!ls.length || ls.indexOf(q.lesson) > -1) && (type === 'both' || q.type === type); });
+      var pool = QUIZ.filter(function (q) { return visible(tierOf(q)) && (kind === 'both' || kindOf(q) === kind) && (!ls.length || ls.indexOf(q.lesson) > -1) && (type === 'both' || q.type === type); });
       pool = shuffle(pool); if (count) pool = pool.slice(0, count);
       startQuiz(pool);
     });
@@ -398,7 +405,7 @@
     var opts = q.type === 'tf' ? ['True', 'False'] : q.options;
     var keys = q.type === 'tf' ? ['T', 'F'] : ['A', 'B', 'C', 'D'];
     view.innerHTML = '<h2>Practice quiz</h2><div class="quiz-panel">' +
-      '<div class="quiz-top"><span>Question ' + (quiz.i + 1) + ' of ' + quiz.pool.length + '</span><span>' + esc(lessonLabel(q.lesson)) + '</span></div>' +
+      '<div class="quiz-top"><span>Question ' + (quiz.i + 1) + ' of ' + quiz.pool.length + '</span><span>' + (kindOf(q) === 'applied' ? 'Applied · ' : 'Knowledge · ') + esc(lessonLabel(q.lesson)) + '</span></div>' +
       '<div class="progress"><i style="width:' + (100 * quiz.i / quiz.pool.length) + '%"></i></div>' +
       '<p class="q-text">' + (q.type === 'tf' ? '<span class="pill" style="margin-right:8px">True or false</span>' : '') + q.q + (tierOf(q) !== 'essential' ? ' ' + tierBadge(tierOf(q)) : '') + '</p>' +
       '<div class="opts' + (q.type === 'tf' ? ' tf-row' : '') + '">' + opts.map(function (o, i) { return '<button class="opt" data-i="' + i + '"><span class="k">' + keys[i] + '</span>' + o + '</button>'; }).join('') + '</div>' +
