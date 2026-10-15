@@ -451,6 +451,173 @@ window.EXT.push(
 <p><strong>3.</strong> The brain normally needs a lot of glucose. In a fast, much of that glucose comes from gluconeogenesis using amino acids from broken-down muscle protein. When the brain switches to ketone bodies, it needs much less glucose, so fewer amino acids are needed, and muscle protein (including heart muscle) is preserved for longer.</p>
 <p><strong>4.</strong> Without insulin, cells cannot take in glucose, so the body behaves as if it is starving even though blood glucose is high. Fat is broken down very fast, flooding the liver with acetyl-CoA, and ketone production goes far above what tissues can use. Acetoacetate and β-hydroxybutyrate are acids, so they lower blood pH (ketoacidosis). The brain's breathing centre detects the acid and drives deep, rapid breathing to blow off CO<sub>2</sub> and reduce the acid load. Acetone on the breath smells fruity. It is a medical emergency, treated with insulin and fluids.</p>`,
     marks: 6
+  },
+
+  /* ================================================================ 2.07 Fermentation */
+  {
+    id: "xb15", lesson: "2.07", level: "analyze", tier: "likely",
+    title: "Sprinter vs marathoner: muscles, lactate and the burn",
+    prompt: `<p>Thigh muscle samples and race-day blood tests from two elite athletes:</p>
+<div class="table-wrap"><table class="data">
+<thead><tr><th>Measurement</th><th>400 m sprinter</th><th>Marathoner</th></tr></thead>
+<tbody>
+<tr><td>Fast-twitch fibres (%)</td><td>75</td><td>20</td></tr>
+<tr><td>Mitochondria (relative volume)</td><td>1.0</td><td>2.1</td></tr>
+<tr><td>Capillaries per muscle fibre</td><td>1.6</td><td>3.2</td></tr>
+<tr><td>Lactate dehydrogenase activity (relative)</td><td>100</td><td>45</td></tr>
+<tr><td>Blood lactate at the finish (mmol/L)</td><td>18</td><td>3</td></tr>
+</tbody></table></div>
+<ol>
+<li>Which athlete's muscle is built to rely more on fermentation? Use two pieces of data.</li>
+<li>A marathon uses far more glucose in total than a 400 m race. Explain why the marathoner still finishes with much lower blood lactate.</li>
+<li>The marathoner's extra capillaries and mitochondria developed partly through training. Link this to a fate of lactate from class.</li>
+<li>A coach says: "The burn at the end of the 400 m is lactic acid, and the soreness two days later is lactic acid left in your muscles." Correct both claims.</li>
+<li>Describe two places the sprinter's lactate goes after the race.</li>
+</ol>`,
+    hints: [
+      "Lactate builds up when the rate of ATP demand outruns O<sub>2</sub> delivery and the ETC. Compare how fast each athlete needs ATP.",
+      "Class point: the H<sup>+</sup> behind the burn comes from rapid ATP hydrolysis. Lactate is cleared from muscle within about an hour."
+    ],
+    answer: `<p><strong>1. The sprinter.</strong> 75% fast-twitch fibres and more than twice the lactate dehydrogenase activity (100 vs 45) mean the muscle is built to make ATP fast by glycolysis and to regenerate NAD<sup>+</sup> by converting pyruvate to lactate. It has half the mitochondria and fewer capillaries, so it relies less on aerobic respiration.</p>
+<p><strong>2.</strong> Lactate depends on <em>rate</em>, not total glucose. A 400 m sprint demands ATP faster than O<sub>2</sub> delivery and the ETC can supply, so NADH builds up and pyruvate is converted to lactate. Marathon pace is slower, so O<sub>2</sub> delivery keeps up and most pyruvate is fully oxidized. The little lactate made is cleared about as fast as it forms, helped by many mitochondria and capillaries.</p>
+<p><strong>3.</strong> Lactate acts as a signal: it stimulates <strong>capillary growth</strong> (faster O<sub>2</sub> delivery) and the building of more mitochondria. Repeated training exposes muscle to lactate, so endurance muscle adapts to handle more aerobic work.</p>
+<p><strong>4. Correcting the coach.</strong></p>
+<ul>
+<li><strong>The burn</strong> is from H<sup>+</sup> released by rapid ATP hydrolysis (ATP → ADP + P<sub>i</sub>) during intense contraction. Making lactate actually <em>uses</em> a proton (pyruvate + NADH + H<sup>+</sup> → lactate + NAD<sup>+</sup>), so lactate helps buffer.</li>
+<li><strong>Soreness days later</strong> cannot be lactate: it is cleared from muscle and blood within about an hour. Delayed soreness comes from tiny tears in muscle fibres and the inflammation that repairs them.</li>
+</ul>
+<p><strong>5. Fates of lactate</strong> (any two):</p>
+<ul>
+<li>Shuttled to slow-twitch fibres, converted back to pyruvate and oxidized.</li>
+<li>Carried to the liver and made into glucose by gluconeogenesis (Cori cycle).</li>
+<li>Used by the heart and brain as fuel.</li>
+</ul>`,
+    marks: 7
+  },
+
+  {
+    id: "xb16", lesson: "2.07", level: "apply", tier: "essential",
+    title: "Fermentation's ATP math and the Cori cycle bill",
+    prompt: `<p>A working muscle needs 380 ATP. Use the class maximum of 38 ATP per glucose for aerobic respiration.</p>
+<ol>
+<li>How many glucose molecules are needed if the muscle uses aerobic respiration? If it uses only lactic acid fermentation?</li>
+<li>Fermentation makes no extra ATP after glycolysis. So why does the cell convert pyruvate to lactate at all? What would happen if pyruvate simply piled up?</li>
+<li>In the Cori cycle the liver converts 2 lactate back into 1 glucose, which costs 6 ATP. The glucose returns to the muscle and is fermented again. Calculate the net ATP cost of one turn of the cycle.</li>
+<li>If the Cori cycle loses ATP, why does the body run it?</li>
+<li>Where is most of glucose's energy after lactic acid fermentation?</li>
+</ol>`,
+    hints: [
+      "Fermentation gives only glycolysis's net 2 ATP. Glycolysis step 6 needs NAD<sup>+</sup>, and glycolysis makes NADH.",
+      "Cori cycle: the muscle gains 2 ATP per glucose fermented; the liver spends 6 to rebuild that glucose. Think about <em>where</em> and <em>when</em> each happens."
+    ],
+    answer: `<p><strong>1.</strong> Aerobic: 380 ÷ 38 = <strong>10 glucose</strong>. Fermentation: 380 ÷ 2 = <strong>190 glucose</strong>, 19 times as many. This is why glycogen runs out so fast during intense exercise.</p>
+<p><strong>2.</strong> The real purpose of fermentation is to <strong>regenerate NAD<sup>+</sup></strong>. Glycolysis step 6 (G3P dehydrogenase) needs NAD<sup>+</sup> and turns it into NADH. Without O<sub>2</sub>, the ETC cannot reoxidize NADH. Lactate dehydrogenase solves this: pyruvate + NADH → lactate + NAD<sup>+</sup>. If pyruvate simply piled up, NAD<sup>+</sup> would run out, step 6 would stop and glycolysis (the only ATP source left) would stop too. The build-up of pyruvate would also stall the pathway.</p>
+<p><strong>3. Net cost.</strong></p>
+<div class="eq">Muscle gains 2 ATP; liver spends 6 ATP → net cost = 6 − 2 = 4 ATP per turn</div>
+<p><strong>4. Why it is worth it.</strong></p>
+<ul>
+<li><strong>Time-shifting:</strong> the muscle gets fast ATP when it needs it, without waiting for O<sub>2</sub>. The liver pays the cost later.</li>
+<li><strong>Place-shifting:</strong> the liver is not working hard, has plenty of O<sub>2</sub>, and makes its ATP aerobically (mostly from fat), so the cost is easy to afford.</li>
+<li><strong>Recycling:</strong> lactate's carbon is not wasted. It returns as glucose for muscle and brain, and lactate does not build up in the blood.</li>
+</ul>
+<p><strong>5.</strong> Most of the energy is still in the <strong>lactate</strong>. Fermentation only releases the small amount captured by glycolysis; the rest stays in lactate's bonds. That is why lactate is a useful fuel: when O<sub>2</sub> is available, it can be converted back to pyruvate and fully oxidized, or rebuilt into glucose.</p>`,
+    marks: 6
+  },
+
+  {
+    id: "xb17", lesson: "2.07", level: "analyze", tier: "likely",
+    title: "Yeast balloon experiment: temperature",
+    prompt: `<p>For the Yeast Fermentation assignment (Option B), a student set up five flasks. Each held 250 mL of water, 10 g of sucrose and 7 g of dry yeast, with a balloon stretched over the mouth. Each flask sat in a water bath at a different temperature. After 30 minutes the increase in balloon circumference was measured.</p>
+<div class="table-wrap"><table class="data">
+<thead><tr><th>Temperature (°C)</th><th>Trial 1 (cm)</th><th>Trial 2 (cm)</th><th>Trial 3 (cm)</th><th>Mean (cm)</th></tr></thead>
+<tbody>
+<tr><td>5</td><td>0.5</td><td>0.8</td><td>0.6</td><td>0.6</td></tr>
+<tr><td>20</td><td>4.8</td><td>5.3</td><td>5.0</td><td>5.0</td></tr>
+<tr><td>35</td><td>12.1</td><td>11.4</td><td>12.4</td><td>12.0</td></tr>
+<tr><td>45</td><td>9.0</td><td>9.8</td><td>9.2</td><td>9.3</td></tr>
+<tr><td>60</td><td>0.4</td><td>0.0</td><td>0.2</td><td>0.2</td></tr>
+</tbody></table></div>
+<ol>
+<li>Identify the independent and dependent variables, three controlled variables, and a suitable negative control.</li>
+<li>Gas production is low at both 5 °C and 60 °C, but for different reasons. Explain each. Predict what happens if both flasks are then moved to 35 °C.</li>
+<li>Which gas fills the balloon? Give both reactions that release it, with their enzymes. Could some of the gas come from aerobic respiration? Explain.</li>
+<li>A classmate predicts that sucralose (an artificial sweetener) would give the same result as sucrose. Predict the result and explain.</li>
+<li>Suggest one improvement to the method.</li>
+</ol>`,
+    hints: [
+      "Low temperature: molecules move slowly and collide less often. High temperature: what happens to an enzyme's shape, and can it recover?",
+      "Alcohol fermentation releases CO<sub>2</sub> when pyruvate becomes acetaldehyde. At the start, the flask still contains air."
+    ],
+    answer: `<p><strong>1.</strong> Independent: temperature. Dependent: increase in balloon circumference (a measure of CO<sub>2</sub> made). Controlled (any three): mass and type of sugar, mass of yeast, volume of water, time, balloon type and size, flask size. Negative control: a flask with yeast and water but <strong>no sugar</strong> (or sugar but no yeast) at 35 °C, to show the gas comes from yeast using sugar.</p>
+<p><strong>2.</strong> At <strong>5 °C</strong>, molecules have little kinetic energy. Enzymes and substrates collide less often, so glycolysis and fermentation run slowly, but the enzymes are undamaged. At <strong>60 °C</strong>, the enzymes (glycolytic enzymes, pyruvate decarboxylase, alcohol dehydrogenase) and membranes are <strong>denatured</strong>: their shapes change and active sites no longer fit, so the yeast die. Moved to 35 °C, the 5 °C flask speeds up to normal; the 60 °C flask stays flat, because denaturation is not reversed. The data also show an optimum near 35 °C, with 45 °C already lower (some denaturation begins).</p>
+<p><strong>3.</strong> The gas is <strong>CO<sub>2</sub></strong>. In alcohol fermentation, pyruvate → acetaldehyde + CO<sub>2</sub> (pyruvate decarboxylase); then acetaldehyde + NADH → ethanol + NAD<sup>+</sup> (alcohol dehydrogenase), which releases no gas. Overall: C<sub>6</sub>H<sub>12</sub>O<sub>6</sub> → 2 C<sub>2</sub>H<sub>5</sub>OH + 2 CO<sub>2</sub>. Yes, some CO<sub>2</sub> may come from aerobic respiration: the flask starts with air, and yeast can respire aerobically (6 CO<sub>2</sub> per glucose, from pyruvate oxidation and Krebs) until the O<sub>2</sub> is used up.</p>
+<p><strong>4.</strong> Sucralose would give almost no gas, like the no-sugar control. Yeast have no enzymes or transporters that can break down and use sucralose, so it cannot enter glycolysis. (Sucrose works because yeast secrete an enzyme that splits it into glucose and fructose.)</p>
+<p><strong>5.</strong> Any one: measure gas volume by water displacement instead of circumference; take readings every 5 minutes to find the rate; pre-warm the water to the bath temperature before adding yeast; use more trials or more temperatures between 30 and 45 °C to locate the optimum.</p>`,
+    marks: 8
+  },
+
+  {
+    id: "xb18", lesson: "2.07", level: "apply", tier: "likely",
+    title: "Bread biochemistry: from proofing to the oven",
+    prompt: `<p>A pizza dough recipe says:</p>
+<ul>
+<li>Stir the yeast into <strong>warm (not hot)</strong> water with a spoonful of sugar and wait 10 minutes until it foams.</li>
+<li>Mix in flour and salt, and knead for 10 minutes.</li>
+<li>Let the dough rise for 1 hour in a warm place.</li>
+<li>Bake at 230 °C.</li>
+</ul>
+<ol>
+<li>Why must the water be warm but not hot? What would happen with boiling water?</li>
+<li>Explain how the dough rises. Name the gas, the reactions that make it, and why the dough traps it.</li>
+<li>Kneading mixes air into the dough, yet the yeast soon switches to fermentation. Explain, and say why the switch is necessary for the yeast.</li>
+<li>Bread contains almost no alcohol. What happens to the ethanol, and what else happens in the first minutes of baking?</li>
+<li>Too much salt in the dough slows rising. Explain.</li>
+</ol>`,
+    hints: [
+      "Yeast enzymes work best near 30–35 °C and are denatured above about 50–60 °C. Ethanol boils at about 78 °C.",
+      "Gluten is a stretchy protein network formed by kneading. Salt outside a cell means less water outside relative to inside: which way does water move?"
+    ],
+    answer: `<p><strong>1.</strong> Dry yeast is dormant. Warm water (about 35–40 °C) rehydrates it and brings its enzymes close to their optimum, so glycolysis starts quickly; the sugar is an easy first fuel, and foam shows CO<sub>2</sub> is being made. Cold water would work only slowly. Boiling water would <strong>denature</strong> the yeast's enzymes and kill the cells, so the dough would never rise.</p>
+<p><strong>2.</strong> Yeast break down sugars by glycolysis to pyruvate. In alcohol fermentation, <strong>pyruvate decarboxylase</strong> removes CO<sub>2</sub> to make acetaldehyde, and <strong>alcohol dehydrogenase</strong> reduces acetaldehyde to ethanol using NADH, regenerating NAD<sup>+</sup>. The <strong>CO<sub>2</sub></strong> forms bubbles. Kneading builds a stretchy <strong>gluten</strong> network, which traps the bubbles, so the dough expands instead of letting the gas escape.</p>
+<p><strong>3.</strong> The O<sub>2</sub> in the dough is quickly used up by the yeast's own aerobic respiration, and little new O<sub>2</sub> can get into a dense dough. Yeast are facultative anaerobes, so they switch to fermentation. Without O<sub>2</sub> as the final electron acceptor the ETC stops and NADH cannot be reoxidized. Fermentation regenerates NAD<sup>+</sup> so glycolysis can keep making its 2 ATP per glucose. (With plenty of sugar, baker's yeast actually ferments some sugar even before O<sub>2</sub> runs out.)</p>
+<p><strong>4.</strong> In the oven, the ethanol <strong>evaporates</strong> (it boils at about 78 °C) and escapes, leaving only flavour traces. In the first minutes the dough puffs up ("oven spring"): the trapped CO<sub>2</sub> expands as it heats, ethanol and water turn to vapour, and the yeast briefly speed up. Then, above about 60 °C, the yeast die and their enzymes denature, and the starch and gluten set into a firm crumb, fixing the shape.</p>
+<p><strong>5.</strong> Salt makes the solution outside the yeast cells hypertonic, so water leaves the cells by <strong>osmosis</strong>. Dehydrated cells run their enzymes and transport more slowly, so less CO<sub>2</sub> is made. Too much sugar slows yeast the same way.</p>`,
+    marks: 7
+  },
+
+  {
+    id: "xb19", lesson: "2.07", level: "extend", tier: "extra",
+    title: "Anaerobic respiration is not the same as fermentation",
+    prompt: `<p><strong>Beyond the slides.</strong> The class slides use "anaerobic respiration" and "fermentation" together. Microbiologists separate them. Some bacteria have an ETC but use a substance other than O<sub>2</sub> as the final electron acceptor. <em>Denitrifying bacteria</em> in waterlogged soil use nitrate (NO<sub>3</sub><sup>−</sup>), eventually releasing N<sub>2</sub> gas. <em>Sulfate-reducing bacteria</em> in marsh mud use sulfate (SO<sub>4</sub><sup>2−</sup>), releasing hydrogen sulfide (H<sub>2</sub>S, the rotten-egg smell).</p>
+<div class="table-wrap"><table class="data">
+<thead><tr><th>Electron acceptor → product</th><th>Standard reduction potential (V)</th></tr></thead>
+<tbody>
+<tr><td>NAD<sup>+</sup> → NADH (the starting donor)</td><td>−0.32</td></tr>
+<tr><td>SO<sub>4</sub><sup>2−</sup> → H<sub>2</sub>S</td><td>−0.22</td></tr>
+<tr><td>NO<sub>3</sub><sup>−</sup> → NO<sub>2</sub><sup>−</sup></td><td>+0.42</td></tr>
+<tr><td>O<sub>2</sub> → H<sub>2</sub>O</td><td>+0.82</td></tr>
+</tbody></table></div>
+<ol>
+<li>Explain the difference between anaerobic respiration and fermentation. Include where ATP is made and what accepts the electrons from NADH.</li>
+<li>Rank O<sub>2</sub>, nitrate and sulfate by how much ATP an organism could make per NADH. Use the table and the idea from class that a more positive redox potential means a stronger pull on electrons.</li>
+<li>Denitrifying bacteria can also use O<sub>2</sub>. Predict which acceptor they use when both are present, and explain why waterlogged fields lose nitrate fertilizer.</li>
+<li>Classify yeast making ethanol, human muscle making lactate, and sulfate-reducing bacteria as fermentation or anaerobic respiration.</li>
+</ol>`,
+    hints: [
+      "Fermentation never uses an ETC: an organic molecule made in the cell (pyruvate or acetaldehyde) takes the electrons. Anaerobic respiration keeps the ETC and chemiosmosis but swaps out O<sub>2</sub>.",
+      "Energy released depends on the size of the drop from NADH (−0.32 V) to the final acceptor. Subtract to compare."
+    ],
+    answer: `<p><strong>1.</strong> In <strong>anaerobic respiration</strong>, NADH still gives its electrons to an ETC in a membrane, H<sup>+</sup> are pumped, and ATP synthase makes ATP by chemiosmosis (oxidative phosphorylation). Only the final acceptor changes: an inorganic substance such as nitrate or sulfate replaces O<sub>2</sub>. In <strong>fermentation</strong>, there is no ETC. NADH gives its electrons to an organic molecule made by the cell (pyruvate → lactate, or acetaldehyde → ethanol) just to regenerate NAD<sup>+</sup>. The only ATP is the net 2 from substrate-level phosphorylation in glycolysis.</p>
+<p><strong>2. Ranking: O<sub>2</sub> > nitrate > sulfate.</strong> The energy released depends on how far electrons "fall" from NADH to the final acceptor:</p>
+<ul>
+<li>O<sub>2</sub>: +0.82 − (−0.32) = 1.14 V, the biggest drop, the most H<sup>+</sup> pumped, the most ATP.</li>
+<li>Nitrate: +0.42 − (−0.32) = 0.74 V, about two-thirds as much.</li>
+<li>Sulfate: −0.22 − (−0.32) = 0.10 V, very little.</li>
+</ul>
+<p>O<sub>2</sub> has the most positive potential, so it pulls electrons down the chain hardest. That is why it is the best final acceptor and why aerobic organisms make the most ATP. Sulfate reducers get so little energy that they grow slowly and live only where competitors cannot.</p>
+<p><strong>3.</strong> They use <strong>O<sub>2</sub></strong> when it is available, because it gives more ATP per NADH. When soil is waterlogged, water fills the air spaces and O<sub>2</sub> runs out, so the bacteria switch to nitrate. They convert nitrate fertilizer into N<sub>2</sub> gas, which escapes into the air, so crops lose that nitrogen.</p>
+<p><strong>4.</strong> Yeast making ethanol: <strong>fermentation</strong>. Human muscle making lactate: <strong>fermentation</strong>. Sulfate-reducing bacteria: <strong>anaerobic respiration</strong> (ETC with sulfate as the final acceptor). On your test, use the class wording, but know this distinction for extension questions.</p>`,
+    marks: 6
   }
 
 );
