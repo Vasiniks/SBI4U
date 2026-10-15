@@ -302,7 +302,7 @@ window.LESSONS.push({
 </svg>
 <figcaption>Active transport powered by phosphorylation. The phosphate from ATP changes the carrier's shape so it opens to the other side. Afterward the phosphate is released as P<sub>i</sub> and the carrier snaps back, ready to go again.</figcaption>
 </figure>
-<p>Why does a phosphate change a protein's shape? A protein's shape is held together by attractions and repulsions between the charged and polar parts of its amino acids. Dropping a large negative charge onto one spot rearranges those interactions, so the protein shifts into a new shape. For a carrier, the new shape opens to the other side of the membrane. When the phosphate is later removed, the protein snaps back.</p>
+<p data-tier="likely">Why does a phosphate change a protein's shape? A protein's shape is held together by attractions and repulsions between the charged and polar parts of its amino acids. Dropping a large negative charge onto one spot rearranges those interactions, so the protein shifts into a new shape. For a carrier, the new shape opens to the other side of the membrane. When the phosphate is later removed, the protein snaps back.</p>
 <p data-tier="extra">The best-known example is the sodium–potassium pump in nerve cells: for each ATP it hydrolyzes, it pushes 3 Na<sup>+</sup> out of the cell and 2 K<sup>+</sup> in, both against their gradients. In some cells this one pump uses a third or more of all the ATP made.</p>
 
 <h3 data-tier="likely">Phosphorylation in action: two more examples</h3>
@@ -322,7 +322,7 @@ window.LESSONS.push({
   <li>Since incoming glucose is immediately turned into something else, the concentration of <em>free glucose</em> inside stays low. The gradient never "fills up," so <strong>glucose keeps flowing in</strong>.</li>
 </ol>
 <p>So one phosphorylation does three jobs: it starts destabilizing glucose (you will see why that matters in glycolysis), it traps it in the cell, and it keeps the glucose gradient pointing inward.</p>
-<details class="check"><summary>A cell keeps converting glucose to glucose-6-phosphate. What would happen to glucose uptake if this step were blocked?</summary><div class="ans"><p>Glucose uptake would slow and then stop. Free glucose would build up inside the cell until the inside concentration matched the outside, so there would be no more gradient for facilitated diffusion. Any glucose that got in could also leak back out, because the transporter recognizes glucose (but not G6P).</p></div></details>
+<details class="check" data-tier="likely"><summary>A cell keeps converting glucose to glucose-6-phosphate. What would happen to glucose uptake if this step were blocked?</summary><div class="ans"><p>Glucose uptake would slow and then stop. Free glucose would build up inside the cell until the inside concentration matched the outside, so there would be no more gradient for facilitated diffusion. Any glucose that got in could also leak back out, because the transporter recognizes glucose (but not G6P).</p></div></details>
 
 <h3 data-tier="essential">Redox reactions</h3>
 <p>Remember the slide: respiration's energy is "captured via <strong>redox reactions</strong>." This is how energy is actually moved out of glucose.</p>
@@ -490,7 +490,7 @@ window.LESSONS.push({
 <div class="callout teacher"><p class="callout-title">Said in class</p><p>Once glucose has been split apart, its electrons eventually go to <strong>oxygen</strong>, which is called the <strong>final electron acceptor</strong>. That is the only job O<sub>2</sub> has in cellular respiration, and it is why you breathe.</p></div>
 <h4>Why ATP-building has to be coupled</h4>
 <p><strong>Building ATP is an endergonic reaction that builds up a molecule (anabolic), so it must be coupled to an exergonic reaction to provide the energy.</strong> (Slide wording, worth memorizing.) ADP + P<sub>i</sub> will never become ATP on its own, for the same reason a ball will not roll uphill. The cell couples it to the exergonic breakdown of glucose into CO<sub>2</sub> and H<sub>2</sub>O.</p>
-<p>The class slide drew this as a chain of energy transfers: the exergonic breakdown of glucose (through glycolysis, the Krebs cycle and oxidative phosphorylation) releases energy, some as heat, and some captured by turning ADP + P<sub>i</sub> into ATP. The ATP is then spent on endergonic jobs, like forming the bonds that join glucose molecules into a polysaccharide. ATP is the go-between that carries energy from the reactions that release it to the reactions that need it.</p>
+<p data-tier="likely">The class slide drew this as a chain of energy transfers: the exergonic breakdown of glucose (through glycolysis, the Krebs cycle and oxidative phosphorylation) releases energy, some as heat, and some captured by turning ADP + P<sub>i</sub> into ATP. The ATP is then spent on endergonic jobs, like forming the bonds that join glucose molecules into a polysaccharide. ATP is the go-between that carries energy from the reactions that release it to the reactions that need it.</p>
 <h4>Where it happens</h4>
 <p><strong>In eukaryotic cells, energy from sugars is converted to usable energy in the cytoplasm and the mitochondria.</strong> The first stage (glycolysis) happens in the cytoplasm; the rest happen inside mitochondria.</p>
 <p data-tier="extra">Prokaryotes (bacteria) have no mitochondria. They run glycolysis and the Krebs cycle in their cytoplasm, and their electron transport chain sits in their plasma membrane. That fits the idea that mitochondria are descended from bacteria that were engulfed by an ancestral cell long ago (endosymbiotic theory).</p>
@@ -505,7 +505,7 @@ window.LESSONS.push({
 <tr><td><strong>3. Krebs cycle</strong> (citric acid cycle)</td><td>8 steps, cyclic</td><td>Mitochondrial matrix</td><td>Indirectly</td><td>2 ATP, 6 NADH, 2 FADH<sub>2</sub>, 4 CO<sub>2</sub></td></tr>
 <tr><td><strong>4. Electron transport chain + chemiosmosis</strong> (oxidative phosphorylation)</td><td>Multi-step</td><td>Inner mitochondrial membrane (cristae)</td><td><strong>Yes, directly</strong> (O<sub>2</sub> = final electron acceptor)</td><td>About 34 ATP (class maximum), H<sub>2</sub>O; NAD<sup>+</sup> and FAD recycled</td></tr>
 </tbody></table></div>
-<p>Why do stages 2 and 3 say "indirectly"? Neither pyruvate oxidation nor the Krebs cycle uses O<sub>2</sub> as a reactant. But both need a steady supply of empty carriers (NAD<sup>+</sup> and FAD), and the only place those are recycled in aerobic respiration is the electron transport chain, which cannot run without oxygen. No O<sub>2</sub> → ETC stops → NADH and FADH<sub>2</sub> pile up → no NAD<sup>+</sup> or FAD left → stages 2 and 3 grind to a halt too. Glycolysis is the only stage that can keep going without oxygen (with help from fermentation, lesson 2.07).</p>
+<p data-tier="likely">Why do stages 2 and 3 say "indirectly"? Neither pyruvate oxidation nor the Krebs cycle uses O<sub>2</sub> as a reactant. But both need a steady supply of empty carriers (NAD<sup>+</sup> and FAD), and the only place those are recycled in aerobic respiration is the electron transport chain, which cannot run without oxygen. No O<sub>2</sub> → ETC stops → NADH and FADH<sub>2</sub> pile up → no NAD<sup>+</sup> or FAD left → stages 2 and 3 grind to a halt too. Glycolysis is the only stage that can keep going without oxygen (with help from fermentation, lesson 2.07).</p>
 <figure class="diagram">
 <svg viewBox="0 0 640 625" role="img" aria-labelledby="t202a">
 <title id="t202a">Overview of aerobic cellular respiration. In the cytoplasm, glycolysis splits glucose into 2 pyruvate, making 2 ATP and 2 NADH. Pyruvate enters the mitochondrion. In the matrix, pyruvate oxidation makes 2 acetyl-CoA, 2 NADH and 2 CO2, and the Krebs cycle makes 2 ATP, 6 NADH, 2 FADH2 and 4 CO2. In the inner membrane, the electron transport chain and chemiosmosis use the electron carriers and oxygen to make about 34 ATP and water.</title>
@@ -613,7 +613,7 @@ window.LESSONS.push({
 </tbody></table></div>
 <h4>Why is the inner membrane folded?</h4>
 <p>Folding is a classic biology solution to a space problem: it <strong>increases surface area without increasing volume</strong>, like the villi in your small intestine or the folds of your brain. Most ATP is made by proteins <em>embedded in the inner membrane</em> (the ETC complexes and ATP synthase). The more inner membrane a mitochondrion has, the more of these proteins it can hold, and the more ATP it can make. That is why cells with huge energy demands, like heart and skeletal muscle cells, have mitochondria packed with tightly folded cristae.</p>
-<p>The two-membrane design matters too. Because the inner membrane is a tight barrier, protons pumped into the narrow intermembrane space cannot simply leak back. They build up into a steep gradient, which is the "stored energy" ATP synthase uses (lesson 2.04).</p>
+<p data-tier="likely">The two-membrane design matters too. Because the inner membrane is a tight barrier, protons pumped into the narrow intermembrane space cannot simply leak back. They build up into a steep gradient, which is the "stored energy" ATP synthase uses (lesson 2.04).</p>
 <div class="callout warn"><p class="callout-title">Common mistake</p><p>The <strong>cristae are the folds</strong>, not the space. The <strong>intermembrane space</strong> is the gap between the two membranes. Also, the matrix is <em>inside the inner membrane</em>, not between the membranes. Mixing up "matrix" and "intermembrane space" is the most common labelling error on this diagram.</p></div>
 <div class="callout key"><p class="callout-title">On the test</p><p>The review asks you to "draw and label a mitochondrion and its parts." Practise drawing it from memory with all five labels: outer membrane (smooth), inner membrane (highly folded), cristae (folds of the inner membrane), intermembrane space (fluid-filled), matrix (protein-rich fluid). Add where each stage happens for bonus understanding.</p></div>
 
@@ -769,7 +769,6 @@ window.LESSONS.push({
 <line x1="380" y1="455" x2="515" y2="534" style="stroke:var(--ink-2)" stroke-width="2" marker-end="url(#ar202c)"/>
 <line x1="443" y1="560" x2="408" y2="560" style="stroke:var(--ink-2)" stroke-width="2" marker-end="url(#ar202c)"/>
 <text x="535" y="602" text-anchor="middle" font-family="inherit" font-size="11.5" font-weight="700" style="fill:var(--ink)">5 · triose phosphate isomerase</text>
-<text x="535" y="616" text-anchor="middle" font-family="inherit" font-size="11" style="fill:var(--ink-2)">DHAP → G3P (isomer)</text>
 </svg>
 <figcaption>Glycolysis from glucose to 2 pyruvate. ATP is spent at steps 1 and 3, NADH is made at step 6, ATP is made at steps 7 and 10, and water is removed at step 9. Below the G3P line, every step happens twice per glucose.</figcaption>
 </figure>
@@ -839,7 +838,7 @@ window.LESSONS.push({
 </tbody></table></div>
 <div class="tally"><span class="chip atp">2 ATP (net)</span><span class="chip nadh">2 NADH</span><span class="chip">2 pyruvate</span><span class="chip">2 H<sub>2</sub>O</span></div>
 <p>From the slides: glycolysis <strong>costs two ATP</strong>, <strong>produces four ATP</strong>, and <strong>produces two NADH</strong> (high-energy electron carriers). The <strong>fate of pyruvate depends on the presence of oxygen and ATP levels.</strong></p>
-<p>Here is a neat way to see where the profit comes from. Count phosphates. Phosphates are added to the sugar at steps 1 and 3 (2 from ATP) and at step 6 (2 from the free P<sub>i</sub> pool), for 4 in total. All 4 are removed and handed to ADP at steps 7 and 10. Two of them were "borrowed" from ATP and two were "free" P<sub>i</sub>. The net 2 ATP is really those two inorganic phosphates, attached in step 6 using energy from the oxidation of G3P.</p>
+<p data-tier="likely">Here is a neat way to see where the profit comes from. Count phosphates. Phosphates are added to the sugar at steps 1 and 3 (2 from ATP) and at step 6 (2 from the free P<sub>i</sub> pool), for 4 in total. All 4 are removed and handed to ADP at steps 7 and 10. Two of them were "borrowed" from ATP and two were "free" P<sub>i</sub>. The net 2 ATP is really those two inorganic phosphates, attached in step 6 using energy from the oxidation of G3P.</p>
 <div class="callout key"><p class="callout-title">On the test</p><p>The worksheet key: "Phosphate is <strong>added in steps 1, 3 &amp; 6</strong> and phosphate is <strong>removed in steps 7 &amp; 10</strong>." In the class molecule-tracking table, glycolysis is written as <strong>−2 ATP, +4 ATP; 2 NADH + H<sup>+</sup>; 0 FADH<sub>2</sub>; 0 CO<sub>2</sub></strong>.</p></div>
 
 <h3 data-tier="essential">Substrate-level phosphorylation</h3>
@@ -866,7 +865,7 @@ window.LESSONS.push({
     </ul>
   </div>
 </div>
-<div class="callout warn"><p class="callout-title">Common mistake</p><p>The worksheet question defines SLP loosely as "the transfer of a phosphate group catalyzed by an enzyme," and its key lists steps 1, 3 and 6 (phosphate added) as well as 7 and 10 (phosphate removed). Strictly, SLP is <strong>making ATP</strong> by direct transfer, which happens at <strong>steps 7 and 10</strong>. If a question asks "which steps <em>produce ATP</em> by SLP," answer 7 and 10. If it asks which steps involve adding or removing a phosphate, list all five.</p></div>
+<div class="callout warn" data-tier="likely"><p class="callout-title">Common mistake</p><p>The worksheet question defines SLP loosely as "the transfer of a phosphate group catalyzed by an enzyme," and its key lists steps 1, 3 and 6 (phosphate added) as well as 7 and 10 (phosphate removed). Strictly, SLP is <strong>making ATP</strong> by direct transfer, which happens at <strong>steps 7 and 10</strong>. If a question asks "which steps <em>produce ATP</em> by SLP," answer 7 and 10. If it asks which steps involve adding or removing a phosphate, list all five.</p></div>
 <p>Substrate-level phosphorylation is why a cell can make some ATP with no oxygen at all: glycolysis needs no membrane, no gradient and no ETC.</p>
 
 <h3 data-tier="likely">Glycolysis and the overall equation</h3>
@@ -903,7 +902,7 @@ window.LESSONS.push({
 <tr><td><strong>ATP already high (energy not needed)</strong></td><td>Used to build things instead: new glucose (gluconeogenesis), lipids (fats), or the amino acid alanine.</td><td>2.05, 2.06</td></tr>
 </tbody></table></div>
 <div class="callout teacher"><p class="callout-title">Said in class</p><p>If pyruvate is <strong>not needed for energy</strong>, it can be used for:</p><ul><li><strong>Gluconeogenesis</strong>: making new glucose ("gluco" + "neo" (new) + "genesis" (creation)). This happens mainly in the liver.</li><li><strong>Lipids</strong>: pyruvate is turned into acetyl-CoA, which can be used to build fatty acids for storage as fat.</li><li><strong>Alanine</strong>, an amino acid: pyruvate is just one amino group away from alanine.</li></ul></div>
-<p>This shows the two sides of metabolism working together. When energy is plentiful, the products of catabolism are fed into anabolism and stored. When energy is short, they are burned for ATP.</p>
+<p data-tier="likely">This shows the two sides of metabolism working together. When energy is plentiful, the products of catabolism are fed into anabolism and stored. When energy is short, they are burned for ATP.</p>
 
 <h3 data-tier="likely">Is the mitochondrion "the powerhouse of the cell"?</h3>
 <p>This is one of the slide's review questions, and the answer key says "answers may vary." Whatever you argue, back it with evidence. A strong answer looks at both sides:</p>
@@ -973,4 +972,491 @@ window.LESSONS.push({
 </ul>
 `
 });
-// END-LESSONS-A
+/* ===================================================================
+   2.03 PYRUVATE OXIDATION & KREBS CYCLE (CELLULAR RESPIRATION PT 2)
+   =================================================================== */
+window.LESSONS.push({
+  id: "2.03",
+  title: "Pyruvate Oxidation & Krebs Cycle",
+  stage: "krebs",
+  where: "Mitochondrial matrix",
+  summary: "What happens to pyruvate when oxygen is available: it is moved into the mitochondrial matrix, oxidized to acetyl-CoA (releasing the first CO2), and then fed into the eight-step Krebs cycle, which strips off the remaining carbon as CO2 and loads the energy onto NADH and FADH2.",
+  objectives: [
+    "Describe the three chemical events of pyruvate oxidation, name the enzyme complex, and give its products per pyruvate and per glucose.",
+    "Explain how ATP and O2 levels decide whether pyruvate is oxidized in the mitochondrion.",
+    "Name the eight Krebs cycle intermediates in order with their carbon counts, and identify where NADH, FADH2, ATP (via GTP) and CO2 are produced.",
+    "Identify the four redox steps, the isomerization step and the substrate-level phosphorylation step of the Krebs cycle.",
+    "Track the six carbons of glucose to six CO2, and explain why the Krebs cycle is a cycle (oxaloacetate and CoA are regenerated).",
+    "Explain how ATP/ADP, citrate and NADH levels control aerobic respiration.",
+    "Total the products of glycolysis, pyruvate oxidation and the Krebs cycle: 4 ATP, 10 NADH, 2 FADH2, 6 CO2."
+  ],
+  html: `
+<h3 data-tier="likely">Quiz time: glycolysis recap</h3>
+<p>The lesson opened with four questions on glycolysis. Try each before revealing the answer. If any of these feel shaky, review lesson 2.02 first, because everything here builds on it.</p>
+<details class="check"><summary>1. Was oxygen required for glycolysis?</summary><div class="ans"><p><strong>No!</strong> Glycolysis is <strong>anaerobic</strong>. It happens in the cytoplasm of all cells, with or without O<sub>2</sub>.</p></div></details>
+<details class="check"><summary>2. How much ATP is produced (NET) from glycolysis?</summary><div class="ans"><p><strong>Net 2 ATP</strong> per glucose (4 made, 2 invested).</p></div></details>
+<details class="check"><summary>3. What are the products of glycolysis?</summary><div class="ans"><p><strong>2 pyruvate + 2 NADH + 2 ATP</strong> (net), per glucose. (Also 2 H<sub>2</sub>O.)</p></div></details>
+<details class="check"><summary>4. Does NAD<sup>+</sup> → NADH represent an oxidation or a reduction? How can you tell?</summary><div class="ans"><p><strong>Reduction</strong> (LEO says GER). NAD<sup>+</sup> <strong>gained electrons</strong>, and the negative electrons then attracted an H<sup>+</sup>, giving NADH. Gaining electrons = reduction. A quick visual check: the reduced form is the one with the extra H.</p></div></details>
+
+<h3 data-tier="essential">Pyruvate oxidation: the link step</h3>
+<p>Glycolysis left the cell with two pyruvate molecules, still holding most of glucose's energy. <strong>For cells with mitochondria and a supply of oxygen</strong>, the next stage is <span class="term">pyruvate oxidation</span>. It is also called the <strong>link step</strong>, <strong>prep step</strong> or <strong>transition reaction</strong>, because it links glycolysis (in the cytoplasm) to the Krebs cycle (in the matrix).</p>
+<ul>
+  <li><strong>Where:</strong> pyruvate is made in the cytoplasm and is moved through a <strong>transport protein</strong> in the mitochondrial membranes into the <strong>mitochondrial matrix</strong>. The reaction happens in the matrix.</li>
+  <li><strong>How many steps:</strong> 1 (one overall reaction, run by one giant enzyme complex).</li>
+  <li><strong>Enzyme:</strong> catalyzed by the <span class="term">pyruvate dehydrogenase complex (PDH)</span>.</li>
+  <li><strong>How often:</strong> once per pyruvate, so <strong>twice per glucose</strong>.</li>
+</ul>
+<figure class="diagram">
+<svg viewBox="0 0 640 300" role="img" aria-labelledby="t203a">
+<title id="t203a">Pyruvate oxidation. Pyruvate, a 3-carbon molecule in the cytoplasm, passes through a transport protein in the mitochondrial membranes into the matrix. There the pyruvate dehydrogenase complex removes one carbon as carbon dioxide, reduces NAD+ to NADH, and attaches coenzyme A, producing acetyl-CoA, a 2-carbon acetyl group attached to CoA.</title>
+<defs>
+<marker id="ar203a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" style="fill:var(--ink-2)"/></marker>
+</defs>
+<rect x="0" y="0" width="204" height="300" style="fill:var(--glyco-soft)"/>
+<rect x="236" y="0" width="404" height="300" style="fill:var(--link-soft)"/>
+<rect x="204" y="0" width="32" height="300" style="fill:var(--surface-2)"/>
+<line x1="206" y1="0" x2="206" y2="300" style="stroke:var(--ink-2)" stroke-width="2"/>
+<line x1="216" y1="0" x2="216" y2="300" style="stroke:var(--ink-2)" stroke-width="2"/>
+<line x1="224" y1="0" x2="224" y2="300" style="stroke:var(--ink-2)" stroke-width="2"/>
+<line x1="234" y1="0" x2="234" y2="300" style="stroke:var(--ink-2)" stroke-width="2"/>
+<text x="14" y="24" font-family="inherit" font-size="12.5" font-weight="700" style="fill:var(--glyco)">CYTOPLASM</text>
+<text x="250" y="24" font-family="inherit" font-size="12.5" font-weight="700" style="fill:var(--link)">MITOCHONDRIAL MATRIX</text>
+<text x="440" y="54" text-anchor="middle" font-family="inherit" font-size="12.5" font-weight="700" style="fill:var(--ink)">pyruvate dehydrogenase complex (PDH)</text>
+<rect x="24" y="128" width="150" height="46" rx="10" style="fill:var(--surface);stroke:var(--glyco)" stroke-width="2"/>
+<text x="99" y="148" text-anchor="middle" font-family="inherit" font-size="13" font-weight="700" style="fill:var(--ink)">pyruvate</text>
+<text x="99" y="165" text-anchor="middle" font-family="inherit" font-size="11.5" style="fill:var(--ink-2)">3C</text>
+<rect x="198" y="134" width="44" height="34" rx="8" style="fill:var(--link-soft);stroke:var(--link)" stroke-width="2"/>
+<text x="192" y="118" text-anchor="end" font-family="inherit" font-size="11" style="fill:var(--ink-2)">transport protein</text>
+<line x1="176" y1="151" x2="514" y2="151" style="stroke:var(--ink-2)" stroke-width="3" marker-end="url(#ar203a)"/>
+<rect x="520" y="128" width="112" height="46" rx="10" style="fill:var(--surface);stroke:var(--krebs)" stroke-width="2"/>
+<text x="576" y="148" text-anchor="middle" font-family="inherit" font-size="13" font-weight="700" style="fill:var(--ink)">acetyl-CoA</text>
+<text x="576" y="165" text-anchor="middle" font-family="inherit" font-size="11.5" style="fill:var(--ink-2)">2C + CoA</text>
+<path d="M290,154 Q294,194 318,206" style="fill:none;stroke:var(--ink-2)" stroke-width="2" marker-end="url(#ar203a)"/>
+<text x="326" y="214" font-family="inherit" font-size="13" font-weight="700" style="fill:var(--ink-2)">CO₂</text>
+<text x="300" y="248" text-anchor="middle" font-family="inherit" font-size="11.5" style="fill:var(--ink)">1 · CO₂ removed</text>
+<text x="300" y="263" text-anchor="middle" font-family="inherit" font-size="11" style="fill:var(--ink-2)">(decarboxylation)</text>
+<path d="M366,104 Q390,196 414,104" style="fill:none;stroke:var(--etc)" stroke-width="2" marker-end="url(#ar203a)"/>
+<text x="356" y="98" text-anchor="middle" font-family="inherit" font-size="12.5" font-weight="700" style="fill:var(--ink)">NAD⁺</text>
+<text x="432" y="98" text-anchor="middle" font-family="inherit" font-size="12.5" font-weight="700" style="fill:var(--etc)">NADH + H⁺</text>
+<text x="394" y="78" text-anchor="middle" font-family="inherit" font-size="11.5" style="fill:var(--ink)">2 · NAD⁺ reduced (pyruvate oxidized)</text>
+<path d="M462,216 Q464,172 478,155" style="fill:none;stroke:var(--krebs)" stroke-width="2" marker-end="url(#ar203a)"/>
+<text x="462" y="232" text-anchor="middle" font-family="inherit" font-size="13" font-weight="700" style="fill:var(--krebs)">CoA</text>
+<text x="462" y="248" text-anchor="middle" font-family="inherit" font-size="11.5" style="fill:var(--ink)">3 · CoA attaches</text>
+<text x="438" y="280" text-anchor="middle" font-family="inherit" font-size="12" font-weight="700" style="fill:var(--ink)">Per pyruvate: 1 CO₂ + 1 NADH + 1 acetyl-CoA</text>
+<text x="438" y="295" text-anchor="middle" font-family="inherit" font-size="11.5" style="fill:var(--ink-2)">(×2 per glucose)</text>
+</svg>
+<figcaption>Pyruvate oxidation. The three events (numbered as on the class slide) are carried out by the pyruvate dehydrogenase complex in the matrix. 3 carbons go in; 2 leave as the acetyl group and 1 leaves as CO<sub>2</sub>.</figcaption>
+</figure>
+<h4>The three chemical events</h4>
+<ol class="steps">
+<li><p class="step-head">CO<sub>2</sub> is removed (decarboxylation)</p><p>Pyruvate's carboxyl group (–COO<sup>−</sup>) is cut off and released as <strong>CO<sub>2</sub></strong>. The 3-carbon pyruvate becomes a 2-carbon fragment. This is the <strong>first CO<sub>2</sub></strong> released in cellular respiration, and the first time glucose's carbon leaves the cell. <span class="term">Decarboxylation</span> = removing a carboxyl group as CO<sub>2</sub>.</p></li>
+<li><p class="step-head">NAD<sup>+</sup> is reduced to NADH (pyruvate is oxidized)</p><p>The 2-carbon fragment is <strong>oxidized</strong>: electrons (with hydrogen) are removed and handed to <strong>NAD<sup>+</sup></strong>, which is <strong>reduced to NADH</strong>. This is why the whole stage is called pyruvate <em>oxidation</em>, and why the enzyme is a <em>dehydrogenase</em> (it removes hydrogen). The energy released is captured in NADH, not lost.</p></li>
+<li><p class="step-head">Coenzyme A attaches to form acetyl-CoA</p><p>The remaining 2-carbon <strong>acetyl group</strong> (the slide calls it "acetate") is attached to <span class="term">coenzyme A (CoA)</span>, forming <span class="term">acetyl-CoA</span>. CoA acts like a carrier "handle": it holds the acetyl group in a reactive, high-energy form ready to be fed into the Krebs cycle.</p></li>
+</ol>
+<div class="eq">pyruvate + NAD<sup>+</sup> + CoA → acetyl-CoA + NADH + H<sup>+</sup> + CO<sub>2</sub></div>
+<p>The reactants needed are therefore <strong>pyruvate, NAD<sup>+</sup> and CoA</strong> (class review key). No ATP is made or used.</p>
+<div class="callout key"><p class="callout-title">On the test</p><p>The worksheet asks you to "summarize the three chemical events that occur to bring pyruvate into the mitochondria." Class answer: the pyruvate passes through a <strong>transport protein</strong>; a <strong>CO<sub>2</sub> is cleaved off</strong>; the remaining <strong>acetyl group is attached to coenzyme A</strong> to form acetyl-CoA. During this process pyruvate is <strong>oxidized</strong> and the coupled reduction converts <strong>NAD<sup>+</sup> to NADH</strong>. The fill-in-the-blank version: "One <strong>carbon</strong> atom is removed via <strong>decarboxylation</strong> and <strong>hydrogen</strong> is removed using <strong>NAD<sup>+</sup></strong>. Coenzyme A becomes attached to the remaining <strong>carbon</strong> atoms, creating <strong>acetyl-CoA</strong>."</p></div>
+<div class="callout warn"><p class="callout-title">Common mistake</p><p>Do not call the enzyme "pyruvate decarboxylase." In class notes the CO<sub>2</sub> removal was written as happening "via pyruvate decarboxylase," but that name belongs to a <strong>different enzyme used by yeast in alcohol fermentation</strong> (pyruvate → acetaldehyde + CO<sub>2</sub>, lesson 2.07). In aerobic respiration, all three events are done by the <strong>pyruvate dehydrogenase complex (PDH)</strong>. It does decarboxylate pyruvate, but its name is pyruvate <em>dehydrogenase</em>. Use PDH on the test.</p></div>
+<p data-tier="extra">The PDH "complex" really is complex: it is a cluster of three different enzymes, with dozens of copies of each, plus five helper coenzymes, several of which are made from B vitamins (CoA comes from vitamin B5; NAD<sup>+</sup> from B3; FAD from B2; and thiamine, B1, is needed too). It is one of the largest enzyme complexes in the cell, and passing the intermediate directly from one enzyme to the next keeps the reaction fast and efficient.</p>
+
+<h3 data-tier="essential">Yield of pyruvate oxidation</h3>
+<div class="table-wrap"><table class="data">
+<thead><tr><th>Product</th><th>Per pyruvate</th><th>Per glucose (2 pyruvate)</th></tr></thead>
+<tbody>
+<tr><td>Acetyl-CoA</td><td>1</td><td><strong>2</strong></td></tr>
+<tr><td>NADH</td><td>1</td><td><strong>2</strong></td></tr>
+<tr><td>CO<sub>2</sub> (released as waste)</td><td>1</td><td><strong>2</strong></td></tr>
+<tr><td>ATP</td><td>0</td><td><strong>0</strong></td></tr>
+<tr><td>FADH<sub>2</sub></td><td>0</td><td><strong>0</strong></td></tr>
+</tbody></table></div>
+<div class="tally"><span class="chip nadh">2 NADH</span><span class="chip co2">2 CO<sub>2</sub></span><span class="chip">2 acetyl-CoA</span></div>
+<p>In the class molecule-tracking table, the oxidation of pyruvate (prep or link step) row reads: <strong>ATP 0, NADH + H<sup>+</sup> 2, FADH<sub>2</sub> 0, CO<sub>2</sub> 2</strong>.</p>
+<details class="check" data-tier="likely"><summary>Why does pyruvate oxidation make no ATP, yet still matter for energy?</summary><div class="ans"><p>No phosphate is transferred to ADP, so no ATP is made directly. But the oxidation step captures energy in <strong>NADH</strong> (2 per glucose), which will power ATP production in the ETC (about 3 ATP each by the class count). It also produces acetyl-CoA, the fuel for the Krebs cycle.</p></div></details>
+
+<h3 data-tier="essential">When does pyruvate oxidation happen? ATP and oxygen</h3>
+<div class="callout teacher"><p class="callout-title">Said in class</p><p>Pyruvate oxidation is <strong>regulated by ATP and O<sub>2</sub> levels</strong>. When <strong>ATP is high</strong>, pyruvate does <strong>not</strong> get sent into the mitochondria.</p></div>
+<p>This makes sense from the cell's point of view:</p>
+<ul>
+  <li><strong>No O<sub>2</sub>:</strong> the ETC cannot run, so NADH is not turned back into NAD<sup>+</sup>. PDH needs NAD<sup>+</sup>, so pyruvate oxidation stalls. Pyruvate is diverted to fermentation instead (lactate in your muscles), which regenerates NAD<sup>+</sup> for glycolysis.</li>
+  <li><strong>High ATP:</strong> the cell already has plenty of energy, so there is no point burning more fuel. Pyruvate is kept out of the Krebs cycle and can instead be used to build glucose, fat or alanine (lesson 2.02).</li>
+  <li><strong>Low ATP (high ADP) and plenty of O<sub>2</sub>:</strong> pyruvate is moved into the matrix and oxidized as fast as possible.</li>
+</ul>
+<p>PDH is an <strong>allosteric enzyme</strong>, so it can be switched up or down by molecules that bind to it. The regulation slide (lesson 2.05) lists what controls it:</p>
+<div class="compare">
+  <div><h4>PDH is activated by</h4><ul><li><strong>Pyruvate</strong>: high substrate supply</li><li><strong>ADP</strong>: signals low cellular energy</li><li><strong>NAD<sup>+</sup></strong> and <strong>CoA</strong>: reactants are available</li></ul></div>
+  <div><h4>PDH is inhibited by</h4><ul><li><strong>Acetyl-CoA</strong> and <strong>NADH</strong>: its own products (feedback)</li><li><strong>ATP</strong>: signals a high energy supply</li></ul></div>
+</div>
+<p data-tier="extra">Pyruvate oxidation is <strong>irreversible</strong>. Once the CO<sub>2</sub> has been removed, the carbon is gone. This is why animals cannot turn acetyl-CoA (or fat, which breaks down into acetyl-CoA) back into glucose: the carbon needed to rebuild pyruvate has already left as CO<sub>2</sub>. That makes PDH a very important control point. Once pyruvate passes it, the carbon is committed to being burned or stored as fat.</p>
+
+<h3 data-tier="essential">The Krebs cycle: overview</h3>
+<p>The <span class="term">Krebs cycle</span> (also called the <span class="term">citric acid cycle</span>, because citrate is the first molecule it makes) is an <strong>8-step cyclical process in the mitochondrial matrix</strong>. Each turn takes in one acetyl-CoA. From the slides:</p>
+<ul>
+  <li>It <strong>occurs twice for each molecule of glucose</strong>: once for each acetyl-CoA.</li>
+  <li>It <strong>captures additional energy as NADH and FADH<sub>2</sub></strong> (high-energy electron carriers) <strong>and some ATP</strong>.</li>
+  <li>It <strong>releases the remaining carbon from the glucose as CO<sub>2</sub></strong>.</li>
+  <li><strong>CoA and oxaloacetate are cycled and regenerated</strong>: CoA is reused to form acetyl-CoA, and oxaloacetate restarts the cycle.</li>
+</ul>
+<div class="callout teacher"><p class="callout-title">Said in class</p><p><strong>Oxaloacetate is the start and the end of this cycle.</strong> It is the 4-carbon molecule that picks up each acetyl group at step 1, and it is rebuilt at step 8, ready to pick up the next one.</p></div>
+<p data-tier="extra">The cycle is named after Hans Krebs, the biochemist who worked out its sequence in 1937 and later shared a Nobel Prize for it. It is also called the tricarboxylic acid (TCA) cycle, since citrate has three carboxyl groups.</p>
+<figure class="diagram">
+<svg viewBox="0 0 640 630" role="img" aria-labelledby="t203b">
+<title id="t203b">The Krebs cycle. Acetyl-CoA (2 carbons) joins oxaloacetate (4 carbons) to form citrate (6 carbons), releasing CoA. Step 2: citrate is isomerized to isocitrate (6C). Step 3: isocitrate becomes alpha-ketoglutarate (5C), producing NADH and CO2. Step 4: alpha-ketoglutarate becomes succinyl-CoA (4C), producing NADH and CO2. Step 5: succinyl-CoA becomes succinate (4C), producing GTP which makes ATP, and releasing CoA. Step 6: succinate becomes fumarate (4C), producing FADH2. Step 7: water is added to fumarate to make malate (4C). Step 8: malate becomes oxaloacetate (4C), producing NADH. Per turn: 3 NADH, 1 FADH2, 1 ATP, 2 CO2.</title>
+<defs><marker id="ar203b" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" style="fill:var(--ink-2)"/></marker></defs>
+<circle cx="320" cy="345" r="200" style="fill:none;stroke:var(--krebs)" stroke-width="3"/>
+<path d="M482.5,228.2 L478.6,213.4 L469.2,220.8 Z" style="fill:var(--krebs)"/>
+<path d="M517.5,377.3 L525.2,364.1 L513.3,362.7 Z" style="fill:var(--krebs)"/>
+<path d="M439.6,505.5 L454.3,501.3 L446.8,492.0 Z" style="fill:var(--krebs)"/>
+<path d="M159.5,464.6 L163.7,479.3 L173.0,471.8 Z" style="fill:var(--krebs)"/>
+<path d="M122.5,312.7 L114.8,325.9 L126.7,327.3 Z" style="fill:var(--krebs)"/>
+<path d="M197.6,186.6 L183.0,191.1 L190.7,200.2 Z" style="fill:var(--krebs)"/>
+<circle cx="320.0" cy="145.0" r="11" style="fill:var(--surface);stroke:var(--krebs)" stroke-width="2"/>
+<text x="320" y="149" text-anchor="middle" font-family="inherit" font-size="11.5" font-weight="700" style="fill:var(--krebs)">1</text>
+<circle cx="461.4" cy="203.6" r="11" style="fill:var(--surface);stroke:var(--krebs)" stroke-width="2"/>
+<text x="461" y="208" text-anchor="middle" font-family="inherit" font-size="11.5" font-weight="700" style="fill:var(--krebs)">2</text>
+<circle cx="520.0" cy="345.0" r="11" style="fill:var(--surface);stroke:var(--krebs)" stroke-width="2"/>
+<text x="520" y="349" text-anchor="middle" font-family="inherit" font-size="11.5" font-weight="700" style="fill:var(--krebs)">3</text>
+<circle cx="461.4" cy="486.4" r="11" style="fill:var(--surface);stroke:var(--krebs)" stroke-width="2"/>
+<text x="461" y="490" text-anchor="middle" font-family="inherit" font-size="11.5" font-weight="700" style="fill:var(--krebs)">4</text>
+<circle cx="320.0" cy="545.0" r="11" style="fill:var(--surface);stroke:var(--krebs)" stroke-width="2"/>
+<text x="320" y="549" text-anchor="middle" font-family="inherit" font-size="11.5" font-weight="700" style="fill:var(--krebs)">5</text>
+<circle cx="178.6" cy="486.4" r="11" style="fill:var(--surface);stroke:var(--krebs)" stroke-width="2"/>
+<text x="179" y="490" text-anchor="middle" font-family="inherit" font-size="11.5" font-weight="700" style="fill:var(--krebs)">6</text>
+<circle cx="120.0" cy="345.0" r="11" style="fill:var(--surface);stroke:var(--krebs)" stroke-width="2"/>
+<text x="120" y="349" text-anchor="middle" font-family="inherit" font-size="11.5" font-weight="700" style="fill:var(--krebs)">7</text>
+<circle cx="178.6" cy="203.6" r="11" style="fill:var(--surface);stroke:var(--krebs)" stroke-width="2"/>
+<text x="179" y="208" text-anchor="middle" font-family="inherit" font-size="11.5" font-weight="700" style="fill:var(--krebs)">8</text>
+<rect x="334.5" y="140.2" width="124" height="40" rx="9" style="fill:var(--krebs-soft);stroke:var(--krebs)" stroke-width="2"/>
+<text x="397" y="158" text-anchor="middle" font-family="inherit" font-size="13" font-weight="700" style="fill:var(--ink)">citrate</text>
+<text x="397" y="173" text-anchor="middle" font-family="inherit" font-size="11.5" style="fill:var(--ink-2)">6C</text>
+<rect x="442.8" y="248.5" width="124" height="40" rx="9" style="fill:var(--krebs-soft);stroke:var(--krebs)" stroke-width="2"/>
+<text x="505" y="266" text-anchor="middle" font-family="inherit" font-size="13" font-weight="700" style="fill:var(--ink)">isocitrate</text>
+<text x="505" y="281" text-anchor="middle" font-family="inherit" font-size="11.5" style="fill:var(--ink-2)">6C</text>
+<rect x="442.8" y="401.5" width="124" height="40" rx="9" style="fill:var(--krebs-soft);stroke:var(--krebs)" stroke-width="2"/>
+<text x="505" y="420" text-anchor="middle" font-family="inherit" font-size="13" font-weight="700" style="fill:var(--ink)">α-ketoglutarate</text>
+<text x="505" y="435" text-anchor="middle" font-family="inherit" font-size="11.5" style="fill:var(--ink-2)">5C</text>
+<rect x="334.5" y="509.8" width="124" height="40" rx="9" style="fill:var(--krebs-soft);stroke:var(--krebs)" stroke-width="2"/>
+<text x="397" y="528" text-anchor="middle" font-family="inherit" font-size="13" font-weight="700" style="fill:var(--ink)">succinyl-CoA</text>
+<text x="397" y="543" text-anchor="middle" font-family="inherit" font-size="11.5" style="fill:var(--ink-2)">4C</text>
+<rect x="181.5" y="509.8" width="124" height="40" rx="9" style="fill:var(--krebs-soft);stroke:var(--krebs)" stroke-width="2"/>
+<text x="243" y="528" text-anchor="middle" font-family="inherit" font-size="13" font-weight="700" style="fill:var(--ink)">succinate</text>
+<text x="243" y="543" text-anchor="middle" font-family="inherit" font-size="11.5" style="fill:var(--ink-2)">4C</text>
+<rect x="73.2" y="401.5" width="124" height="40" rx="9" style="fill:var(--krebs-soft);stroke:var(--krebs)" stroke-width="2"/>
+<text x="135" y="420" text-anchor="middle" font-family="inherit" font-size="13" font-weight="700" style="fill:var(--ink)">fumarate</text>
+<text x="135" y="435" text-anchor="middle" font-family="inherit" font-size="11.5" style="fill:var(--ink-2)">4C</text>
+<rect x="73.2" y="248.5" width="124" height="40" rx="9" style="fill:var(--krebs-soft);stroke:var(--krebs)" stroke-width="2"/>
+<text x="135" y="266" text-anchor="middle" font-family="inherit" font-size="13" font-weight="700" style="fill:var(--ink)">malate</text>
+<text x="135" y="281" text-anchor="middle" font-family="inherit" font-size="11.5" style="fill:var(--ink-2)">4C</text>
+<rect x="181.5" y="140.2" width="124" height="40" rx="9" style="fill:var(--krebs-soft);stroke:var(--krebs)" stroke-width="3"/>
+<text x="243" y="158" text-anchor="middle" font-family="inherit" font-size="13" font-weight="700" style="fill:var(--ink)">oxaloacetate</text>
+<text x="243" y="173" text-anchor="middle" font-family="inherit" font-size="11.5" style="fill:var(--ink-2)">4C</text>
+<rect x="250" y="40" width="140" height="44" rx="10" style="fill:var(--link-soft);stroke:var(--link)" stroke-width="2"/>
+<text x="320" y="59" text-anchor="middle" font-family="inherit" font-size="13" font-weight="700" style="fill:var(--ink)">acetyl-CoA</text>
+<text x="320" y="76" text-anchor="middle" font-family="inherit" font-size="11" style="fill:var(--ink-2)">2C (from pyruvate ox.)</text>
+<line x1="320" y1="86" x2="320" y2="130" style="stroke:var(--link)" stroke-width="3" marker-end="url(#ar203b)"/>
+<text x="312" y="112" text-anchor="end" font-family="inherit" font-size="12" font-weight="700" style="fill:var(--link)">H₂O</text>
+<text x="330" y="112" font-family="inherit" font-size="12" style="fill:var(--ink-2)">CoA-SH out</text>
+<text x="478" y="196" font-family="inherit" font-size="12" font-weight="700" style="fill:var(--ink-2)">isomerization</text>
+<text x="546" y="338" font-family="inherit" font-size="12.5" font-weight="700" style="fill:var(--etc)">NAD⁺ → NADH</text>
+<text x="546" y="356" font-family="inherit" font-size="12.5" font-weight="700" style="fill:var(--ink-2)">CO₂ out</text>
+<text x="476" y="500" font-family="inherit" font-size="12.5" font-weight="700" style="fill:var(--etc)">NAD⁺ → NADH</text>
+<text x="476" y="518" font-family="inherit" font-size="12.5" font-weight="700" style="fill:var(--ink-2)">CO₂ out</text>
+<text x="476" y="535" font-family="inherit" font-size="11.5" style="fill:var(--ink-2)">(CoA in)</text>
+<text x="320" y="580" text-anchor="middle" font-family="inherit" font-size="12.5" font-weight="700" style="fill:var(--good)">GDP + Pᵢ → GTP;  GTP + ADP → ATP</text>
+<text x="320" y="597" text-anchor="middle" font-family="inherit" font-size="11.5" style="fill:var(--ink-2)">substrate-level phosphorylation · CoA-SH out</text>
+<text x="168" y="518" text-anchor="end" font-family="inherit" font-size="12.5" font-weight="700" style="fill:var(--etc)">FAD → FADH₂</text>
+<text x="96" y="349" text-anchor="end" font-family="inherit" font-size="12.5" font-weight="700" style="fill:var(--link)">+ H₂O</text>
+<text x="158" y="200" text-anchor="end" font-family="inherit" font-size="12.5" font-weight="700" style="fill:var(--etc)">NAD⁺ → NADH</text>
+<text x="320" y="300" text-anchor="middle" font-family="inherit" font-size="16" font-weight="700" style="fill:var(--krebs)">Krebs cycle</text>
+<text x="320" y="320" text-anchor="middle" font-family="inherit" font-size="12" style="fill:var(--ink-2)">(citric acid cycle)</text>
+<text x="320" y="352" text-anchor="middle" font-family="inherit" font-size="12" style="fill:var(--ink)">Per turn (one acetyl-CoA):</text>
+<text x="320" y="372" text-anchor="middle" font-family="inherit" font-size="12.5" font-weight="700" style="fill:var(--ink)">3 NADH · 1 FADH₂ · 1 ATP · 2 CO₂</text>
+<text x="320" y="396" text-anchor="middle" font-family="inherit" font-size="12" style="fill:var(--ink-2)">2 turns per glucose</text>
+</svg>
+<figcaption>The Krebs cycle, one turn (one acetyl-CoA). The carbon count is shown under each name. Steps 3 and 4 each release CO<sub>2</sub> and make NADH; step 5 makes ATP (via GTP); step 6 makes FADH<sub>2</sub>; step 8 makes NADH and regenerates oxaloacetate. Double everything for one glucose.</figcaption>
+</figure>
+<div class="callout tip"><p class="callout-title">Memory trick</p><p>Intermediates in order: "<strong>C</strong>itrate <strong>I</strong>s <strong>K</strong>rebs' <strong>S</strong>tarting <strong>S</strong>ubstrate <strong>F</strong>or <strong>M</strong>aking <strong>O</strong>xaloacetate" = <strong>C</strong>itrate, <strong>I</strong>socitrate, α-<strong>K</strong>etoglutarate, <strong>S</strong>uccinyl-CoA, <strong>S</strong>uccinate, <strong>F</strong>umarate, <strong>M</strong>alate, <strong>O</strong>xaloacetate (which then joins the next acetyl-CoA to make citrate again). Carbon counts follow the pattern <strong>4 + 2 → 6, 6, 5, 4, 4, 4, 4, 4</strong>: the two CO<sub>2</sub> come off one after the other, right after isocitrate.</p></div>
+
+<h3 data-tier="essential">The eight steps</h3>
+<p>The worksheet key says you do not need to memorize every structure, but you <strong>should be able to look at a diagram and identify the correct step</strong> for each kind of reaction. That means knowing the order of the intermediates and where each product comes off.</p>
+<div class="table-wrap"><table class="data">
+<thead><tr><th>Step</th><th>Reaction</th><th>Enzyme</th><th>Carbons</th><th>Produced / type of reaction</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>acetyl-CoA + oxaloacetate → <strong>citrate</strong></td><td>citrate synthase</td><td>2 + 4 → 6</td><td>CoA released; H<sub>2</sub>O used. Joining (condensation).</td></tr>
+<tr><td>2</td><td>citrate → <strong>isocitrate</strong></td><td>aconitase</td><td>6 → 6</td><td><strong>Isomerization</strong>. No products.</td></tr>
+<tr><td>3</td><td>isocitrate → <strong>α-ketoglutarate</strong></td><td>isocitrate dehydrogenase</td><td>6 → 5</td><td><strong>NADH + CO<sub>2</sub></strong>. Redox + decarboxylation.</td></tr>
+<tr><td>4</td><td>α-ketoglutarate → <strong>succinyl-CoA</strong></td><td>α-ketoglutarate dehydrogenase</td><td>5 → 4</td><td><strong>NADH + CO<sub>2</sub></strong>; CoA added. Redox + decarboxylation.</td></tr>
+<tr><td>5</td><td>succinyl-CoA → <strong>succinate</strong></td><td>succinyl-CoA synthetase</td><td>4 → 4</td><td><strong>GTP → ATP</strong>; CoA released. <strong>Substrate-level phosphorylation</strong>.</td></tr>
+<tr><td>6</td><td>succinate → <strong>fumarate</strong></td><td>succinate dehydrogenase</td><td>4 → 4</td><td><strong>FADH<sub>2</sub></strong>. Redox.</td></tr>
+<tr><td>7</td><td>fumarate → <strong>malate</strong></td><td>fumarase</td><td>4 → 4</td><td>H<sub>2</sub>O added (hydration).</td></tr>
+<tr><td>8</td><td>malate → <strong>oxaloacetate</strong></td><td>malate dehydrogenase</td><td>4 → 4</td><td><strong>NADH</strong>. Redox. Oxaloacetate regenerated.</td></tr>
+</tbody></table></div>
+<p>Here is what is happening at each step, and why.</p>
+<ol class="steps">
+<li><p class="step-head">Citrate synthase: acetyl-CoA (2C) + oxaloacetate (4C) → citrate (6C)</p><p>The 2-carbon acetyl group is handed from CoA onto the 4-carbon oxaloacetate, making 6-carbon <strong>citrate</strong> (citric acid). <strong>CoA is released</strong> (written CoA-SH) to go back and pick up another acetyl group in pyruvate oxidation. Breaking acetyl-CoA's high-energy bond is what drives this joining reaction forward. A water molecule is used.</p></li>
+<li><p class="step-head">Aconitase: citrate → isocitrate</p><p>Citrate is rearranged into its <strong>isomer, isocitrate</strong>: an –OH group is moved to a neighbouring carbon (by removing water and then adding it back). Nothing is gained or lost. <strong>Why:</strong> in citrate, the –OH sits on a carbon that cannot be oxidized. Moving it puts it in a position where step 3 can oxidize it. Isomerize to set up the next step, the same trick as glycolysis steps 2 and 8.</p></li>
+<li><p class="step-head">Isocitrate dehydrogenase: isocitrate (6C) → α-ketoglutarate (5C)</p><p>Isocitrate is <strong>oxidized</strong> (NAD<sup>+</sup> → <strong>NADH</strong>) and <strong>decarboxylated</strong> (one carbon leaves as <strong>CO<sub>2</sub></strong>). This is an "oxidative decarboxylation," just like pyruvate oxidation. Class review answer for "explain the conversion of isocitrate to α-ketoglutarate": <strong>decarboxylation and reduction of NAD<sup>+</sup></strong>.</p></li>
+<li><p class="step-head">α-Ketoglutarate dehydrogenase: α-ketoglutarate (5C) → succinyl-CoA (4C)</p><p>Another <strong>oxidative decarboxylation</strong>: a second <strong>CO<sub>2</sub></strong> leaves, NAD<sup>+</sup> is reduced to <strong>NADH</strong>, and <strong>CoA is attached</strong>, forming succinyl-CoA. This step works almost exactly like the PDH complex: remove CO<sub>2</sub>, make NADH, attach CoA. After this step, the cycle has released the same number of carbons (2) as acetyl-CoA brought in.</p></li>
+<li><p class="step-head">Succinyl-CoA synthetase: succinyl-CoA → succinate</p><p>CoA is released, and the energy of the succinyl–CoA bond is used to attach a phosphate to GDP, making <strong>GTP</strong> (guanosine triphosphate, a close relative of ATP). The GTP immediately passes its phosphate to ADP: <strong>GTP + ADP → GDP + ATP</strong>. This is the cycle's only <strong>substrate-level phosphorylation</strong>, and it is the "1 ATP per turn."</p></li>
+<li><p class="step-head">Succinate dehydrogenase: succinate → fumarate</p><p>Succinate is <strong>oxidized</strong>: two hydrogens are removed to make a C=C double bond. The electrons go to <strong>FAD</strong>, which is reduced to <strong>FADH<sub>2</sub></strong>. <strong>Why FAD and not NAD<sup>+</sup>?</strong> Removing these particular hydrogens releases less energy than the other oxidations, not enough to reduce NAD<sup>+</sup>. FAD can accept electrons at this lower energy. This is also why FADH<sub>2</sub> is worth less ATP than NADH later on. Succinate dehydrogenase is the only Krebs enzyme built into the inner mitochondrial membrane, and it doubles as <strong>Complex II</strong> of the ETC (lesson 2.04).</p></li>
+<li><p class="step-head">Fumarase: fumarate → malate</p><p>A <strong>water molecule is added</strong> across the double bond (hydration), putting an –OH group back on the molecule. <strong>Why:</strong> this sets up the final oxidation in step 8. No carriers are made here.</p></li>
+<li><p class="step-head">Malate dehydrogenase: malate → oxaloacetate</p><p>Malate is <strong>oxidized</strong> (NAD<sup>+</sup> → <strong>NADH</strong>), turning the –OH into a C=O and <strong>regenerating oxaloacetate</strong>. The cycle is back where it started, with oxaloacetate ready to accept the next acetyl group.</p></li>
+</ol>
+<div class="callout warn"><p class="callout-title">Common mistake</p><p>Students often put the CO<sub>2</sub> in the wrong place. The two CO<sub>2</sub> come off at <strong>steps 3 and 4</strong>, the 6C → 5C → 4C steps. Use the carbon counts as your check: carbon only drops when CO<sub>2</sub> leaves. Also note that steps 3 and 4 each make <em>both</em> NADH and CO<sub>2</sub>, while step 8 makes NADH with <em>no</em> CO<sub>2</sub>.</p></div>
+<p data-tier="extra">Isocitrate dehydrogenase (step 3) is the main control point inside the cycle. It is slowed by high ATP and NADH and sped up by ADP, the same "energy charge" logic as PFK and PDH.</p>
+
+<h3 data-tier="essential">Yield: per acetyl-CoA vs per glucose</h3>
+<p>This is the slide's "Quick Check" table. Each glucose makes 2 acetyl-CoA, so the cycle turns twice and every number doubles.</p>
+<div class="table-wrap"><table class="data">
+<thead><tr><th>Product</th><th>Per acetyl-CoA (one turn)</th><th>Per glucose (two turns)</th><th>Made at</th></tr></thead>
+<tbody>
+<tr><td>NADH</td><td>3</td><td><strong>6</strong></td><td>steps 3, 4, 8</td></tr>
+<tr><td>FADH<sub>2</sub></td><td>1</td><td><strong>2</strong></td><td>step 6</td></tr>
+<tr><td>ATP (via GTP)</td><td>1</td><td><strong>2</strong></td><td>step 5</td></tr>
+<tr><td>CO<sub>2</sub></td><td>2</td><td><strong>4</strong></td><td>steps 3, 4</td></tr>
+</tbody></table></div>
+<div class="tally"><span class="chip atp">2 ATP</span><span class="chip nadh">6 NADH</span><span class="chip fadh">2 FADH<sub>2</sub></span><span class="chip co2">4 CO<sub>2</sub></span></div>
+<p>From the slide: per glucose the Krebs cycle yields <strong>2 ATP, 6 NADH, 2 FADH<sub>2</sub> and 4 CO<sub>2</sub></strong>. The NADH and FADH<sub>2</sub> <strong>go to the ETC</strong>. It <strong>consumes 6 molecules of water</strong>, and its <strong>ATP is produced by substrate-level phosphorylation</strong>.</p>
+<p data-tier="likely">Water enters the cycle at step 1 (forming citrate) and step 7 (fumarate → malate), and the class diagram also shows a water at step 5. That gives 3 per turn and the slide's <strong>6 per glucose</strong>. (Different textbooks count the water slightly differently; for this course, use 6.)</p>
+<div class="callout key"><p class="callout-title">On the test</p><p>Know both columns. A common question gives you "per acetyl-CoA" and asks for "per glucose," or the reverse. The ratio inside one turn is always <strong>3 NADH : 1 FADH<sub>2</sub> : 1 ATP : 2 CO<sub>2</sub></strong>. In the class molecule-tracking table, the Krebs row reads <strong>ATP 2, NADH 6, FADH<sub>2</sub> 2, CO<sub>2</sub> 4</strong>.</p></div>
+<div class="callout warn"><p class="callout-title">Common mistake</p><p>Do not double-count. "Per glucose" for the Krebs cycle means <strong>two turns</strong>, not one turn per pyruvate plus another per acetyl-CoA. Each pyruvate becomes exactly one acetyl-CoA, and each acetyl-CoA drives exactly one turn.</p></div>
+
+<h3 data-tier="essential">Redox, isomerization and SLP: finding them on the cycle</h3>
+<p>The second Quick Check slide asked three questions. Here they are with full explanations.</p>
+<details class="check"><summary>1. How many redox reactions occur in the Krebs cycle? Where? Are they reduction or oxidation?</summary><div class="ans"><p><strong>Four</strong>: three reduce NAD<sup>+</sup> and one reduces FAD.</p><ul><li>Step 3: isocitrate → α-ketoglutarate (NAD<sup>+</sup> → NADH)</li><li>Step 4: α-ketoglutarate → succinyl-CoA (NAD<sup>+</sup> → NADH)</li><li>Step 6: succinate → fumarate (FAD → FADH<sub>2</sub>)</li><li>Step 8: malate → oxaloacetate (NAD<sup>+</sup> → NADH)</li></ul><p>Each one is <em>both</em> an oxidation and a reduction: the carbon compound is <strong>oxidized</strong> (loses electrons), and NAD<sup>+</sup> or FAD is <strong>reduced</strong> (gains them). The carbon compound is the reducing agent; NAD<sup>+</sup>/FAD is the oxidizing agent.</p></div></details>
+<details class="check"><summary>2. Where does the isomerization reaction occur?</summary><div class="ans"><p><strong>Step 2: citrate (citric acid) → isocitrate.</strong> Same atoms, rearranged (the –OH group moves), so the molecule can be oxidized in step 3.</p></div></details>
+<details class="check"><summary>3. Where does substrate-level phosphorylation occur?</summary><div class="ans"><p><strong>Step 5: succinyl-CoA → succinate.</strong> A phosphate is attached to GDP to make GTP, which then passes it to ADP: ADP → ATP. It is SLP because the ATP (via GTP) is formed directly in an enzyme-catalyzed reaction, with no ETC or ATP synthase involved.</p></div></details>
+<div class="callout tip"><p class="callout-title">Memory trick</p><p>Spot a redox step by its enzyme: every <strong>dehydrogenase</strong> (steps 3, 4, 6, 8) removes hydrogen and loads a carrier. Four dehydrogenases = four redox steps = 3 NADH + 1 FADH<sub>2</sub> per turn. The odd one out, <strong>succinate</strong> dehydrogenase, is the <strong>F</strong>AD one ("<strong>S</strong>uccinate → <strong>F</strong>umarate makes <strong>F</strong>ADH<sub>2</sub>": F follows S).</p></div>
+
+<h3 data-tier="essential">Following the carbon: why CO<sub>2</sub> leaves</h3>
+<p>Glucose has 6 carbons. By the end of the Krebs cycle, <strong>none of them are left</strong>. Every one has been released as CO<sub>2</sub>:</p>
+<figure class="diagram">
+<svg viewBox="0 0 640 330" role="img" aria-labelledby="t203c">
+<title id="t203c">Carbon tracking. Glucose has 6 carbons. After glycolysis they are in 2 pyruvate of 3 carbons each, with no CO2 released. After pyruvate oxidation they are in 2 acetyl groups of 2 carbons each, with 2 CO2 released. After two turns of the Krebs cycle no carbons from glucose remain, and 4 more CO2 have been released, for a total of 6 CO2.</title>
+<text x="285" y="22" text-anchor="middle" font-family="inherit" font-size="12" font-weight="700" style="fill:var(--ink-2)">Carbons still in fuel molecules</text>
+<text x="470" y="22" text-anchor="middle" font-family="inherit" font-size="12" font-weight="700" style="fill:var(--ink-2)">Released as CO₂</text>
+<text x="16" y="58" font-family="inherit" font-size="13" font-weight="700" style="fill:var(--ink)">glucose</text>
+<text x="16" y="74" font-family="inherit" font-size="11.5" style="fill:var(--ink-2)">(start)</text>
+<circle cx="210" cy="60" r="11" style="fill:var(--krebs)"/>
+<text x="210" y="64" text-anchor="middle" font-family="inherit" font-size="11" font-weight="700" style="fill:var(--surface)">C</text>
+<circle cx="238" cy="60" r="11" style="fill:var(--krebs)"/>
+<text x="238" y="64" text-anchor="middle" font-family="inherit" font-size="11" font-weight="700" style="fill:var(--surface)">C</text>
+<circle cx="266" cy="60" r="11" style="fill:var(--krebs)"/>
+<text x="266" y="64" text-anchor="middle" font-family="inherit" font-size="11" font-weight="700" style="fill:var(--surface)">C</text>
+<circle cx="294" cy="60" r="11" style="fill:var(--krebs)"/>
+<text x="294" y="64" text-anchor="middle" font-family="inherit" font-size="11" font-weight="700" style="fill:var(--surface)">C</text>
+<circle cx="322" cy="60" r="11" style="fill:var(--krebs)"/>
+<text x="322" y="64" text-anchor="middle" font-family="inherit" font-size="11" font-weight="700" style="fill:var(--surface)">C</text>
+<circle cx="350" cy="60" r="11" style="fill:var(--krebs)"/>
+<text x="350" y="64" text-anchor="middle" font-family="inherit" font-size="11" font-weight="700" style="fill:var(--surface)">C</text>
+<text x="16" y="128" font-family="inherit" font-size="13" font-weight="700" style="fill:var(--ink)">2 pyruvate</text>
+<text x="16" y="144" font-family="inherit" font-size="11.5" style="fill:var(--ink-2)">after glycolysis</text>
+<circle cx="210" cy="130" r="11" style="fill:var(--krebs)"/>
+<text x="210" y="134" text-anchor="middle" font-family="inherit" font-size="11" font-weight="700" style="fill:var(--surface)">C</text>
+<circle cx="238" cy="130" r="11" style="fill:var(--krebs)"/>
+<text x="238" y="134" text-anchor="middle" font-family="inherit" font-size="11" font-weight="700" style="fill:var(--surface)">C</text>
+<circle cx="266" cy="130" r="11" style="fill:var(--krebs)"/>
+<text x="266" y="134" text-anchor="middle" font-family="inherit" font-size="11" font-weight="700" style="fill:var(--surface)">C</text>
+<circle cx="322" cy="130" r="11" style="fill:var(--krebs)"/>
+<text x="322" y="134" text-anchor="middle" font-family="inherit" font-size="11" font-weight="700" style="fill:var(--surface)">C</text>
+<circle cx="350" cy="130" r="11" style="fill:var(--krebs)"/>
+<text x="350" y="134" text-anchor="middle" font-family="inherit" font-size="11" font-weight="700" style="fill:var(--surface)">C</text>
+<circle cx="378" cy="130" r="11" style="fill:var(--krebs)"/>
+<text x="378" y="134" text-anchor="middle" font-family="inherit" font-size="11" font-weight="700" style="fill:var(--surface)">C</text>
+<text x="626" y="135" text-anchor="end" font-family="inherit" font-size="12.5" font-weight="700" style="fill:var(--ink)">0 CO₂</text>
+<text x="16" y="198" font-family="inherit" font-size="13" font-weight="700" style="fill:var(--ink)">2 acetyl groups</text>
+<text x="16" y="214" font-family="inherit" font-size="11.5" style="fill:var(--ink-2)">after pyruvate oxidation</text>
+<circle cx="210" cy="200" r="11" style="fill:var(--krebs)"/>
+<text x="210" y="204" text-anchor="middle" font-family="inherit" font-size="11" font-weight="700" style="fill:var(--surface)">C</text>
+<circle cx="238" cy="200" r="11" style="fill:var(--krebs)"/>
+<text x="238" y="204" text-anchor="middle" font-family="inherit" font-size="11" font-weight="700" style="fill:var(--surface)">C</text>
+<circle cx="322" cy="200" r="11" style="fill:var(--krebs)"/>
+<text x="322" y="204" text-anchor="middle" font-family="inherit" font-size="11" font-weight="700" style="fill:var(--surface)">C</text>
+<circle cx="350" cy="200" r="11" style="fill:var(--krebs)"/>
+<text x="350" y="204" text-anchor="middle" font-family="inherit" font-size="11" font-weight="700" style="fill:var(--surface)">C</text>
+<circle cx="400" cy="200" r="10" style="fill:var(--surface-2);stroke:var(--ink-2)" stroke-width="1.5"/>
+<text x="400" y="204" text-anchor="middle" font-family="inherit" font-size="11" font-weight="700" style="fill:var(--ink-2)">C</text>
+<circle cx="424" cy="200" r="10" style="fill:var(--surface-2);stroke:var(--ink-2)" stroke-width="1.5"/>
+<text x="424" y="204" text-anchor="middle" font-family="inherit" font-size="11" font-weight="700" style="fill:var(--ink-2)">C</text>
+<text x="626" y="205" text-anchor="end" font-family="inherit" font-size="12.5" font-weight="700" style="fill:var(--ink)">2 CO₂</text>
+<text x="16" y="268" font-family="inherit" font-size="13" font-weight="700" style="fill:var(--ink)">nothing left</text>
+<text x="16" y="284" font-family="inherit" font-size="11.5" style="fill:var(--ink-2)">after 2 Krebs turns</text>
+<text x="290" y="274" text-anchor="middle" font-family="inherit" font-size="12.5" font-weight="700" style="fill:var(--krebs)">0 carbons from glucose</text>
+<circle cx="400" cy="270" r="10" style="fill:var(--surface-2);stroke:var(--ink-2)" stroke-width="1.5"/>
+<text x="400" y="274" text-anchor="middle" font-family="inherit" font-size="11" font-weight="700" style="fill:var(--ink-2)">C</text>
+<circle cx="424" cy="270" r="10" style="fill:var(--surface-2);stroke:var(--ink-2)" stroke-width="1.5"/>
+<text x="424" y="274" text-anchor="middle" font-family="inherit" font-size="11" font-weight="700" style="fill:var(--ink-2)">C</text>
+<circle cx="448" cy="270" r="10" style="fill:var(--surface-2);stroke:var(--ink-2)" stroke-width="2"/>
+<text x="448" y="274" text-anchor="middle" font-family="inherit" font-size="11" font-weight="700" style="fill:var(--ink-2)">C</text>
+<circle cx="472" cy="270" r="10" style="fill:var(--surface-2);stroke:var(--ink-2)" stroke-width="2"/>
+<text x="472" y="274" text-anchor="middle" font-family="inherit" font-size="11" font-weight="700" style="fill:var(--ink-2)">C</text>
+<circle cx="496" cy="270" r="10" style="fill:var(--surface-2);stroke:var(--ink-2)" stroke-width="2"/>
+<text x="496" y="274" text-anchor="middle" font-family="inherit" font-size="11" font-weight="700" style="fill:var(--ink-2)">C</text>
+<circle cx="520" cy="270" r="10" style="fill:var(--surface-2);stroke:var(--ink-2)" stroke-width="2"/>
+<text x="520" y="274" text-anchor="middle" font-family="inherit" font-size="11" font-weight="700" style="fill:var(--ink-2)">C</text>
+<text x="626" y="275" text-anchor="end" font-family="inherit" font-size="12.5" font-weight="700" style="fill:var(--ink)">6 CO₂ total</text>
+<text x="320" y="318" text-anchor="middle" font-family="inherit" font-size="12.5" font-weight="700" style="fill:var(--ink)">6 C in → 6 CO₂ out: every carbon of glucose is exhaled as CO₂</text>
+</svg>
+<figcaption>Tracking glucose's six carbons. No carbon is lost in glycolysis; 2 leave as CO<sub>2</sub> in pyruvate oxidation; the last 4 leave as CO<sub>2</sub> during the two turns of the Krebs cycle.</figcaption>
+</figure>
+<div class="table-wrap"><table class="data">
+<thead><tr><th>Molecule</th><th>Carbons</th><th>CO<sub>2</sub> released so far (per glucose)</th></tr></thead>
+<tbody>
+<tr><td>Glucose</td><td>6</td><td>0</td></tr>
+<tr><td>Pyruvate (×2)</td><td>3 each</td><td>0 (glycolysis releases no CO<sub>2</sub>)</td></tr>
+<tr><td>Acetyl-CoA (×2)</td><td>2 each</td><td>2 (pyruvate oxidation)</td></tr>
+<tr><td>Citrate / isocitrate</td><td>6</td><td>(acetyl's 2 C join oxaloacetate's 4 C)</td></tr>
+<tr><td>α-Ketoglutarate</td><td>5</td><td>1 per turn</td></tr>
+<tr><td>Succinyl-CoA, succinate, fumarate, malate, oxaloacetate</td><td>4</td><td>2 per turn</td></tr>
+<tr><td><strong>End of Krebs (2 turns)</strong></td><td><strong>0 of glucose's carbons left</strong></td><td><strong>2 + 4 = 6 CO<sub>2</sub></strong></td></tr>
+</tbody></table></div>
+<p><strong>Why does carbon leave as CO<sub>2</sub>?</strong> The whole point of respiration is to remove the high-energy electrons from glucose's carbon atoms. As each carbon is stripped of its hydrogens (electrons) and bonded to oxygen instead, it becomes more and more oxidized. CO<sub>2</sub> is carbon in its <strong>most fully oxidized form</strong>: it has no high-energy electrons left to give. It is a "spent" molecule with no more usable energy, so the cell gets rid of it. It diffuses out of the cell into the blood and is exhaled from your lungs.</p>
+<p>The class review answers on where glucose's atoms go:</p>
+<ul>
+  <li><strong>Carbon atoms:</strong> exhaled as CO<sub>2</sub>.</li>
+  <li><strong>Oxygen atoms</strong> (of glucose): exhaled as CO<sub>2</sub>.</li>
+  <li><strong>Hydrogen atoms:</strong> carried as electrons + H<sup>+</sup> on <strong>NADH and FADH<sub>2</sub></strong>, or released as <strong>free protons (H<sup>+</sup>)</strong>. They end up in water at the end of the ETC.</li>
+</ul>
+<div class="callout warn" data-tier="likely"><p class="callout-title">Common mistake</p><p>The O<sub>2</sub> you breathe in does <strong>not</strong> become the CO<sub>2</sub> you breathe out. The oxygen in exhaled CO<sub>2</sub> comes from glucose (and water). The O<sub>2</sub> you inhale is used only at the very end of the ETC, where it becomes <strong>water</strong>. That is why O<sub>2</sub> still has not appeared anywhere in glycolysis, pyruvate oxidation or the Krebs cycle.</p></div>
+<p data-tier="extra">A subtle point: the two CO<sub>2</sub> released in one turn are not literally the two carbons that the acetyl group just brought in. Those carbons become part of the regenerated oxaloacetate and leave in later turns. The bookkeeping still works out exactly, because each turn takes in 2 carbons and releases 2.</p>
+
+<h3 data-tier="essential">Why it is a cycle</h3>
+<p>In a <span class="term">cyclic pathway</span>, the end product is <strong>recycled to be reused</strong>. In a <span class="term">linear pathway</span>, the product <strong>exits and goes somewhere else</strong>.</p>
+<div class="compare">
+  <div><h4>Glycolysis: linear</h4><ul><li>Starts with glucose, ends with pyruvate.</li><li>Pyruvate leaves the pathway (to the mitochondrion, fermentation, or biosynthesis).</li><li>Every glucose needs a fresh start.</li></ul></div>
+  <div><h4>Krebs cycle: cyclic</h4><ul><li>Starts and ends with <strong>oxaloacetate</strong>.</li><li>Oxaloacetate is regenerated at step 8 and reused at step 1.</li><li><strong>CoA</strong> is also released (steps 1 and 5) and reused to make more acetyl-CoA.</li></ul></div>
+</div>
+<p><strong>Why is a cycle useful?</strong> Because oxaloacetate is regenerated, it works a bit like a reusable carrier or a catalyst. A <strong>small amount of oxaloacetate can process an unlimited amount of acetyl-CoA</strong>. The cycle does not have to make a new 4-carbon "holder" for every acetyl group. It just keeps going round as long as acetyl-CoA arrives and NAD<sup>+</sup> and FAD are available. The same is true of CoA: a small pool is reused over and over.</p>
+<p data-tier="likely">It also explains why the cycle is such a good "hub." Fatty acids and many amino acids can be broken down into acetyl-CoA or into Krebs intermediates themselves, and plug straight into the cycle (lesson 2.06).</p>
+
+<h3 data-tier="essential">Control of aerobic respiration</h3>
+<p>From the slide: <strong>aerobic respiration is regulated by the relative concentrations of ATP and ADP, and the concentrations of citrate and NADH.</strong></p>
+<figure class="diagram">
+<svg viewBox="0 0 640 560" role="img" aria-labelledby="t203d">
+<title id="t203d">Control of aerobic respiration. The pathway runs glucose, fructose-6-phosphate, phosphofructokinase, fructose-1,6-bisphosphate, pyruvate, pyruvate dehydrogenase, acetyl-CoA, Krebs cycle, electron transport chain. High ATP inhibits phosphofructokinase. High ADP activates phosphofructokinase. High citrate from the Krebs cycle inhibits phosphofructokinase. High NADH from the Krebs cycle inhibits pyruvate dehydrogenase.</title>
+<defs>
+<marker id="ar203d" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" style="fill:var(--ink-2)"/></marker>
+<marker id="ar203g" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" style="fill:var(--good)"/></marker>
+</defs>
+<line x1="16" y1="20" x2="44" y2="20" style="stroke:var(--good)" stroke-width="3" marker-end="url(#ar203g)"/>
+<text x="52" y="24" font-family="inherit" font-size="12" style="fill:var(--good)">activates</text>
+<line x1="16" y1="42" x2="42" y2="42" style="stroke:var(--bad)" stroke-width="3"/>
+<line x1="43" y1="34" x2="43" y2="50" style="stroke:var(--bad)" stroke-width="3"/>
+<text x="52" y="46" font-family="inherit" font-size="12" style="fill:var(--bad)">inhibits</text>
+<text x="320" y="40" text-anchor="middle" font-family="inherit" font-size="13" style="fill:var(--ink)">glucose</text>
+<line x1="320" y1="48" x2="320" y2="80" style="stroke:var(--ink-2)" stroke-width="2" marker-end="url(#ar203d)"/>
+<text x="320" y="98" text-anchor="middle" font-family="inherit" font-size="13" style="fill:var(--ink)">fructose-6-phosphate</text>
+<line x1="320" y1="106" x2="320" y2="130" style="stroke:var(--ink-2)" stroke-width="2" marker-end="url(#ar203d)"/>
+<rect x="220" y="134" width="200" height="34" rx="8" style="fill:var(--glyco-soft);stroke:var(--glyco)" stroke-width="2"/>
+<text x="320" y="156" text-anchor="middle" font-family="inherit" font-size="12.5" font-weight="700" style="fill:var(--ink)">phosphofructokinase (PFK)</text>
+<line x1="320" y1="170" x2="320" y2="194" style="stroke:var(--ink-2)" stroke-width="2" marker-end="url(#ar203d)"/>
+<text x="320" y="212" text-anchor="middle" font-family="inherit" font-size="13" style="fill:var(--ink)">fructose-1,6-bisphosphate</text>
+<line x1="320" y1="220" x2="320" y2="262" style="stroke:var(--ink-2)" stroke-width="2" stroke-dasharray="4 4" marker-end="url(#ar203d)"/>
+<text x="332" y="246" font-family="inherit" font-size="11.5" style="fill:var(--ink-2)">rest of glycolysis</text>
+<text x="320" y="282" text-anchor="middle" font-family="inherit" font-size="13" style="fill:var(--ink)">pyruvate</text>
+<line x1="320" y1="290" x2="320" y2="312" style="stroke:var(--ink-2)" stroke-width="2" marker-end="url(#ar203d)"/>
+<rect x="200" y="316" width="240" height="34" rx="8" style="fill:var(--link-soft);stroke:var(--link)" stroke-width="2"/>
+<text x="320" y="338" text-anchor="middle" font-family="inherit" font-size="12.5" font-weight="700" style="fill:var(--ink)">pyruvate dehydrogenase (PDH)</text>
+<line x1="320" y1="352" x2="320" y2="376" style="stroke:var(--ink-2)" stroke-width="2" marker-end="url(#ar203d)"/>
+<text x="320" y="394" text-anchor="middle" font-family="inherit" font-size="13" style="fill:var(--ink)">acetyl-CoA</text>
+<line x1="320" y1="402" x2="320" y2="426" style="stroke:var(--ink-2)" stroke-width="2" marker-end="url(#ar203d)"/>
+<circle cx="320" cy="458" r="28" style="fill:var(--krebs-soft);stroke:var(--krebs)" stroke-width="2"/>
+<text x="320" y="463" text-anchor="middle" font-family="inherit" font-size="12.5" font-weight="700" style="fill:var(--krebs)">Krebs</text>
+<line x1="320" y1="488" x2="320" y2="508" style="stroke:var(--ink-2)" stroke-width="2" marker-end="url(#ar203d)"/>
+<rect x="220" y="512" width="200" height="34" rx="8" style="fill:var(--etc-soft);stroke:var(--etc)" stroke-width="2"/>
+<text x="320" y="534" text-anchor="middle" font-family="inherit" font-size="12.5" font-weight="700" style="fill:var(--ink)">ETC + chemiosmosis</text>
+<rect x="44" y="272" width="92" height="32" rx="8" style="fill:var(--surface);stroke:var(--bad)" stroke-width="2"/>
+<text x="90" y="293" text-anchor="middle" font-family="inherit" font-size="13" font-weight="700" style="fill:var(--ink)">high ATP</text>
+<path d="M90,272 L90,151 L214,151" style="fill:none;stroke:var(--bad)" stroke-width="3"/>
+<line x1="216" y1="141" x2="216" y2="161" style="stroke:var(--bad)" stroke-width="3"/>
+<text x="150" y="143" text-anchor="middle" font-family="inherit" font-size="12" style="fill:var(--bad)">inhibits</text>
+<rect x="500" y="60" width="104" height="32" rx="8" style="fill:var(--surface);stroke:var(--good)" stroke-width="2"/>
+<text x="552" y="81" text-anchor="middle" font-family="inherit" font-size="13" font-weight="700" style="fill:var(--ink)">high ADP</text>
+<path d="M552,92 L552,146 L428,146" style="fill:none;stroke:var(--good)" stroke-width="3" marker-end="url(#ar203g)"/>
+<text x="490" y="139" text-anchor="middle" font-family="inherit" font-size="12" style="fill:var(--good)">activates</text>
+<path d="M348,458 L604,458 L604,162 L426,162" style="fill:none;stroke:var(--bad)" stroke-width="3"/>
+<line x1="424" y1="152" x2="424" y2="172" style="stroke:var(--bad)" stroke-width="3"/>
+<text x="476" y="450" text-anchor="middle" font-family="inherit" font-size="13" font-weight="700" style="fill:var(--ink)">high citrate</text>
+<text x="510" y="180" text-anchor="middle" font-family="inherit" font-size="12" style="fill:var(--bad)">inhibits</text>
+<rect x="40" y="470" width="96" height="32" rx="8" style="fill:var(--surface);stroke:var(--bad)" stroke-width="2"/>
+<text x="88" y="491" text-anchor="middle" font-family="inherit" font-size="13" font-weight="700" style="fill:var(--ink)">high NADH</text>
+<line x1="292" y1="466" x2="138" y2="486" style="stroke:var(--ink-2)" stroke-width="2" marker-end="url(#ar203d)"/>
+<path d="M88,470 L88,333 L194,333" style="fill:none;stroke:var(--bad)" stroke-width="3"/>
+<line x1="196" y1="323" x2="196" y2="343" style="stroke:var(--bad)" stroke-width="3"/>
+<text x="142" y="325" text-anchor="middle" font-family="inherit" font-size="12" style="fill:var(--bad)">inhibits</text>
+</svg>
+<figcaption>Based on the class "Control of Aerobic Respiration" slide. Two enzymes are the main valves: PFK (in glycolysis) and PDH (the link step). Signals of "plenty of energy" (ATP, citrate, NADH) close the valves; a signal of "energy needed" (ADP) opens them.</figcaption>
+</figure>
+<div class="table-wrap"><table class="data">
+<thead><tr><th>Signal</th><th>What it means</th><th>Effect</th><th>Why it makes sense</th></tr></thead>
+<tbody>
+<tr><td><strong>High ATP</strong></td><td>Cell has plenty of energy</td><td><strong>Inhibits PFK</strong> (and PDH)</td><td>No need to break down more glucose; save it.</td></tr>
+<tr><td><strong>High ADP</strong></td><td>ATP is being used up fast</td><td><strong>Activates PFK</strong> (and PDH)</td><td>Need more ATP, so speed up glucose breakdown.</td></tr>
+<tr><td><strong>High citrate</strong></td><td>Krebs cycle is backed up; plenty of fuel already in the pipeline</td><td><strong>Inhibits PFK</strong> (low citrate stimulates it)</td><td>No point sending more pyruvate into a full cycle.</td></tr>
+<tr><td><strong>High NADH</strong></td><td>Carriers are full; ETC is busy or short of O<sub>2</sub></td><td><strong>Inhibits PDH</strong></td><td>No NAD<sup>+</sup> to spare, and more NADH would not be used.</td></tr>
+</tbody></table></div>
+<p>This is <span class="term">feedback inhibition</span>: the products of the pathway (ATP, citrate, NADH) slow down earlier steps of the same pathway. It keeps the cell from wasting fuel, and it means that ATP production automatically matches ATP use. When you start sprinting, ATP is spent, ADP rises, PFK and PDH speed up, and respiration accelerates. When you rest, ATP builds up and the whole system slows down again.</p>
+<div class="callout key"><p class="callout-title">On the test</p><p>Memorize the slide sentence word for word: "Aerobic respiration is regulated by the relative concentrations of <strong>ATP and ADP</strong>, and the concentrations of <strong>citrate and NADH</strong>." Lesson 2.05 looks at PFK and PDH in more detail.</p></div>
+<details class="check" data-tier="likely"><summary>Why does it make sense that citrate, a Krebs cycle molecule, controls an enzyme in glycolysis?</summary><div class="ans"><p>Citrate builds up when the Krebs cycle has more fuel than it can handle (for example, when the cell already has lots of ATP and NADH). Glycolysis supplies that fuel. By inhibiting PFK, citrate slows down glycolysis at its committed step, so the cell stops making pyruvate it cannot use. It is a "the pipeline is full" signal sent back to the start of the pipeline.</p></div></details>
+
+<h3 data-tier="essential">What have we made so far?</h3>
+<p>The slide's summary, per glucose:</p>
+<div class="table-wrap"><table class="data">
+<thead><tr><th>Stage</th><th>Location</th><th>ATP</th><th>NADH</th><th>FADH<sub>2</sub></th><th>CO<sub>2</sub></th><th>Carbon product</th></tr></thead>
+<tbody>
+<tr><td>1. Glycolysis</td><td>Cytoplasm</td><td>2 (net)</td><td>2</td><td>0</td><td>0</td><td>2 pyruvate</td></tr>
+<tr><td>2. Pyruvate oxidation</td><td>Matrix</td><td>0</td><td>2</td><td>0</td><td>2</td><td>2 acetyl-CoA</td></tr>
+<tr><td>3. Krebs cycle (×2)</td><td>Matrix</td><td>2</td><td>6</td><td>2</td><td>4</td><td>none (oxaloacetate regenerated)</td></tr>
+<tr><td><strong>Total</strong></td><td></td><td><strong>4</strong></td><td><strong>10</strong></td><td><strong>2</strong></td><td><strong>6</strong></td><td>all 6 carbons gone</td></tr>
+</tbody></table></div>
+<div class="tally"><span class="chip atp">4 ATP</span><span class="chip nadh">10 NADH</span><span class="chip fadh">2 FADH<sub>2</sub></span><span class="chip co2">6 CO<sub>2</sub></span></div>
+<p>All 4 ATP so far were made by <strong>substrate-level phosphorylation</strong>. Notice how little that is: just 4 ATP from the whole breakdown of glucose to CO<sub>2</sub>. The energy has not disappeared. It has been moved into the <strong>10 NADH and 2 FADH<sub>2</sub></strong>, which are now carrying it to the electron transport chain. Using the class conversion (NADH ≈ 3 ATP, FADH<sub>2</sub> ≈ 2 ATP):</p>
+<div class="eq">10 NADH × 3 + 2 FADH<sub>2</sub> × 2 = 34 ATP &nbsp;→&nbsp; 4 + 34 = 38 ATP maximum</div>
+<p>So about 90% of the ATP is still to come, and it all depends on the ETC, which depends on oxygen.</p>
+<div class="callout warn"><p class="callout-title">Common mistake</p><p>The "4 ATP" total uses the <strong>net</strong> 2 from glycolysis (4 made − 2 invested) plus 2 from Krebs. Do not write 6. And the 10 NADH includes the 2 from glycolysis, which were made in the cytoplasm. Those are the ones that need a "shuttle" to get their electrons into the mitochondrion, which is part of why the real ATP total is less than 38 (lesson 2.04).</p></div>
+
+<h3 data-tier="likely">Has the cell solved its problems yet?</h3>
+<p>After glycolysis the cell had two problems: regenerate NAD<sup>+</sup>, and get rid of pyruvate (lesson 2.02). The worksheet asks whether the Krebs cycle solves them.</p>
+<ul>
+  <li><strong>Pyruvate: solved.</strong> By transporting pyruvate into the mitochondrion and converting it to acetyl-CoA, the cell removes it from the cytoplasm, so it no longer slows glycolysis.</li>
+  <li><strong>NAD<sup>+</sup>: not solved, actually worse.</strong> No NAD<sup>+</sup> has been regenerated. Pyruvate oxidation and Krebs have turned even more NAD<sup>+</sup> into NADH (8 more per glucose) and FAD into FADH<sub>2</sub>. Without a way to oxidize them back, the cell runs out of empty carriers and everything slows. The ETC solves this by oxidizing NADH and FADH<sub>2</sub> and handing their electrons to O<sub>2</sub>.</li>
+</ul>
+<p>The worksheet also asks which parts of the overall equation are now accounted for. Glycolysis + pyruvate oxidation + Krebs explain <strong>glucose</strong> (used up) and all <strong>6 CO<sub>2</sub></strong> (released, liberating all the carbon that photosynthesis originally fixed into glucose). <strong>O<sub>2</sub> is still not part of the process</strong>, and most of the H<sub>2</sub>O has not been made yet. Both belong to the ETC.</p>
+<h4>How efficient is respiration so far?</h4>
+<p>The worksheet uses this rule: if all of glucose's energy were captured, it would make about <strong>94 ATP</strong> (2870 kJ/mol ÷ 30.5 kJ/mol per ATP). That is 100% efficiency.</p>
+<ul>
+  <li><strong>Glycolysis alone:</strong> 2 net ATP ÷ 94 ≈ <strong>2%</strong>.</li>
+  <li><strong>Glycolysis + Krebs:</strong> counting the net ATP, 4 ÷ 94 ≈ <strong>4%</strong>. The class answer key works it out as about <strong>6%</strong>, which comes from counting all 6 ATP made by substrate-level phosphorylation (4 in glycolysis + 2 in Krebs) without subtracting the 2 invested. Show your working so the marker can see which count you used.</li>
+  <li><strong>After the ETC:</strong> 38 ÷ 94 ≈ 40% at the class maximum. The rest of the energy becomes body heat.</li>
+</ul>
+<details class="check"><summary>Does the Krebs cycle solve the problems that remained after glycolysis?</summary><div class="ans"><p>Only one of them. It deals with <strong>pyruvate</strong>: pyruvate is moved into the mitochondrion and turned into acetyl-CoA, so it no longer builds up and slows glycolysis. But <strong>no NAD<sup>+</sup> is regenerated</strong>. In fact more NAD<sup>+</sup> is converted to NADH (and FAD to FADH<sub>2</sub>), and without NAD<sup>+</sup> to accept electrons, glycolysis would slow. The ETC solves that problem.</p></div></details>
+
+<h3 data-tier="likely">Review &amp; research questions</h3>
+<details class="check"><summary>1. How do fatty acids and proteins enter the Krebs cycle?</summary><div class="ans"><p>They can be <strong>converted into acetyl-CoA</strong> (class key). In more detail: <strong>fatty acids</strong> are broken into 2-carbon pieces by β-oxidation, producing acetyl-CoA. <strong>Proteins</strong> are hydrolyzed into amino acids, which are deaminated (amino group removed) in the liver. The leftover carbon skeletons enter as pyruvate, as acetyl-CoA, or directly as Krebs intermediates (for example, glutamate → α-ketoglutarate). See lesson 2.06.</p></div></details>
+<details class="check"><summary>2. If the Krebs cycle is overstimulated, the body will produce too much of which: carbon dioxide, glucose, pyruvate, acetyl-CoA or oxygen?</summary><div class="ans"><p><strong>Carbon dioxide.</strong> CO<sub>2</sub> is a product of the Krebs cycle (2 per turn), so a faster cycle releases more CO<sub>2</sub>. Glucose, pyruvate and acetyl-CoA are used up <em>before or by</em> the cycle (their levels would fall, not rise), and oxygen is not produced in respiration at all; it is consumed by the ETC.</p></div></details>
+<details class="check"><summary>3. Acetyl-CoA is a reactant in the citric acid cycle, and NADH and FADH<sub>2</sub> are products. If 12 FADH<sub>2</sub> are produced over a period of time, how many NADH are produced?</summary><div class="ans"><p><strong>36 NADH.</strong> Each turn of the cycle produces 1 FADH<sub>2</sub> and 3 NADH. 12 FADH<sub>2</sub> means 12 turns, and 12 × 3 = 36 NADH. (The class key's written explanation says "2 NADH" per turn, which is a typo; its answer of 36 uses 3 per turn, which is correct.) This counts only the Krebs cycle, not the NADH from glycolysis or pyruvate oxidation.</p></div></details>
+<details class="check"><summary>4. What is the difference between a cyclic pathway and a linear pathway? Classify glycolysis and Krebs.</summary><div class="ans"><p>In a <strong>cyclic</strong> pathway, the end product is recycled to be reused (Krebs: oxaloacetate is regenerated and starts the next turn). In a <strong>linear</strong> pathway, the product exits and goes somewhere else (glycolysis: pyruvate leaves). <strong>Glycolysis is linear; Krebs is cyclic.</strong></p></div></details>
+<details class="check"><summary>How many carbon atoms are in glucose, pyruvate, acetyl-CoA and citrate?</summary><div class="ans"><p>Glucose <strong>6</strong>, pyruvate <strong>3</strong>, acetyl-CoA <strong>2</strong> (in the acetyl group), citrate <strong>6</strong>.</p></div></details>
+<details class="check"><summary>How many carbon atoms from the original glucose remain at the end of the Krebs cycle? Where did the carbon, oxygen and hydrogen atoms go?</summary><div class="ans"><p><strong>0</strong>. Carbon atoms: exhaled as CO<sub>2</sub>. Oxygen atoms: exhaled as CO<sub>2</sub>. Hydrogen atoms: carried by NADH and FADH<sub>2</sub>, or released as free protons (H<sup>+</sup>).</p></div></details>
+<details class="check"><summary>Identify the reactants needed for (a) pyruvate oxidation and (b) the Krebs cycle.</summary><div class="ans"><p>(a) <strong>Pyruvate, NAD<sup>+</sup>, CoA.</strong> (b) <strong>Acetyl-CoA, NAD<sup>+</sup>, FAD, oxaloacetate, ADP + P<sub>i</sub></strong> (via GDP), plus water.</p></div></details>
+<details class="check"><summary>Identify the location of pyruvate oxidation and the Krebs cycle.</summary><div class="ans"><p>Pyruvate oxidation: pyruvate <strong>moves from the cytoplasm into the mitochondrial matrix</strong>, where it is oxidized. Krebs cycle: <strong>mitochondrial matrix</strong>.</p></div></details>
+<details class="check"><summary>Explain what is happening in the conversion of isocitrate to α-ketoglutarate.</summary><div class="ans"><p><strong>Decarboxylation and reduction of NAD<sup>+</sup>.</strong> One carbon is removed as CO<sub>2</sub> (6C → 5C), and isocitrate is oxidized, its electrons reducing NAD<sup>+</sup> to NADH.</p></div></details>
+<details class="check"><summary>How does a lack of oxygen affect the Krebs cycle, even though the Krebs cycle does not use O<sub>2</sub>?</summary><div class="ans"><p>Without O<sub>2</sub>, the ETC stops, so NADH and FADH<sub>2</sub> are no longer oxidized back to NAD<sup>+</sup> and FAD. The Krebs cycle needs NAD<sup>+</sup> (steps 3, 4, 8) and FAD (step 6), so the <strong>lack of NAD<sup>+</sup> and FAD eventually stops the Krebs cycle too</strong>.</p></div></details>
+<details class="check"><summary>Why does the Krebs cycle make FADH<sub>2</sub> at one step instead of NADH?</summary><div class="ans"><p>At step 6 (succinate → fumarate), the oxidation releases too little energy to reduce NAD<sup>+</sup>, so the lower-energy carrier FAD accepts the electrons instead. Because FADH<sub>2</sub>'s electrons are lower in energy, FADH<sub>2</sub> yields fewer ATP in the ETC (about 2, vs 3 for NADH, by the class count).</p></div></details>
+
+<h3 data-tier="essential">Lesson summary</h3>
+<ul>
+  <li><strong>Pyruvate oxidation</strong> (link step): for cells with mitochondria + O<sub>2</sub>. Pyruvate moves from the cytoplasm into the <strong>matrix</strong> through a transport protein. Catalyzed by the <strong>pyruvate dehydrogenase complex (PDH)</strong>.</li>
+  <li>Three events: <strong>CO<sub>2</sub> removed</strong> (decarboxylation), <strong>NAD<sup>+</sup> reduced to NADH</strong> (pyruvate oxidized), <strong>CoA attaches</strong> to the acetyl group → <strong>acetyl-CoA</strong>.</li>
+  <li>Per glucose: <strong>2 acetyl-CoA, 2 NADH, 2 CO<sub>2</sub></strong>, 0 ATP. Not "pyruvate decarboxylase" (that is the yeast fermentation enzyme).</li>
+  <li>Regulated by <strong>ATP and O<sub>2</sub></strong>: high ATP → pyruvate is not sent into the mitochondria.</li>
+  <li><strong>Krebs cycle</strong>: 8 steps, cyclic, matrix, <strong>twice per glucose</strong> (once per acetyl-CoA). Oxaloacetate is the start and end; CoA and oxaloacetate are regenerated.</li>
+  <li>Order: <strong>oxaloacetate (4C) + acetyl-CoA (2C) → citrate (6C) → isocitrate (6C) → α-ketoglutarate (5C) → succinyl-CoA (4C) → succinate (4C) → fumarate (4C) → malate (4C) → oxaloacetate (4C)</strong>.</li>
+  <li>Per turn: <strong>3 NADH, 1 FADH<sub>2</sub>, 1 ATP (via GTP), 2 CO<sub>2</sub></strong>. Per glucose: <strong>6 NADH, 2 FADH<sub>2</sub>, 2 ATP, 4 CO<sub>2</sub></strong>; consumes 6 H<sub>2</sub>O.</li>
+  <li><strong>4 redox steps</strong> (3 NAD<sup>+</sup>, 1 FAD): isocitrate → α-KG, α-KG → succinyl-CoA, succinate → fumarate (FADH<sub>2</sub>), malate → oxaloacetate. <strong>Isomerization</strong>: step 2, citrate → isocitrate. <strong>SLP</strong>: step 5, succinyl-CoA → succinate.</li>
+  <li>Carbon: 6 → 2 × 3 → 2 × 2 (+2 CO<sub>2</sub>) → 0 (+4 CO<sub>2</sub>). All 6 carbons leave as CO<sub>2</sub> and are exhaled. Hydrogens leave on NADH/FADH<sub>2</sub> or as H<sup>+</sup>.</li>
+  <li><strong>Cyclic</strong> (Krebs, product reused) vs <strong>linear</strong> (glycolysis, product leaves).</li>
+  <li>Control: regulated by relative <strong>[ATP]/[ADP]</strong> and by <strong>[citrate]</strong> and <strong>[NADH]</strong>. High ATP and citrate inhibit PFK; ADP activates PFK; NADH inhibits PDH.</li>
+  <li><strong>Running total (SLP only): 4 ATP, 10 NADH, 2 FADH<sub>2</sub>, 6 CO<sub>2</sub>.</strong> O<sub>2</sub> still not used; NAD<sup>+</sup> still needs regenerating, so on to the ETC.</li>
+</ul>
+`
+});
