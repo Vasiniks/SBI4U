@@ -224,4 +224,102 @@ window.CRAM = `
 <li>Trans fats: the body treats them like saturated fats and lacks enzymes to break them down well → cardiovascular problems.</li>
 <li>Cold-water fish have more unsaturated fats so their membranes stay fluid; plants store oils (liquid, easy to access at low temperature).</li>
 </ul>
+
+<h3>Nucleic acids</h3>
+<ul>
+<li><strong>Nucleotide</strong> = phosphate group + pentose (5-carbon) sugar + nitrogenous base. The base attaches at C1′ of the sugar, the phosphate at C5′.</li>
+<li><strong>Purines</strong> = adenine (A), guanine (G): <strong>double</strong> ring. <strong>Pyrimidines</strong> = cytosine (C), thymine (T), uracil (U): <strong>single</strong> ring. Longer name, smaller ring.</li>
+<li><strong>Chargaff's rule:</strong> A pairs with T (or U in RNA) by <strong>2</strong> H-bonds; G pairs with C by <strong>3</strong> H-bonds. A purine always pairs with a pyrimidine, keeping the "rungs" the same width, so in double-stranded DNA purines = pyrimidines (1 : 1). Not true for single-stranded RNA.</li>
+<li><strong>Phosphodiester linkage</strong> (condensation, releases H<sub>2</sub>O): the phosphate joins the 3′ carbon of one sugar to the 5′ carbon of the next → sugar–phosphate backbone (sides of the ladder). Bases are the rungs, held by hydrogen bonds.</li>
+<li><strong>Antiparallel:</strong> each strand has a free phosphate at the <strong>5′ end</strong> and a free sugar (–OH) at the <strong>3′ end</strong>. 5′ of one strand lines up with 3′ of the other (one runs 5′→3′, the other 3′→5′).</li>
+<li>DNA = double helix (twisted ladder), about 10 base pairs per turn.</li>
+</ul>
+<div class="table-wrap"><table class="data">
+<thead><tr><th></th><th>DNA</th><th>RNA</th></tr></thead>
+<tbody>
+<tr><td>Full name</td><td>Deoxyribonucleic acid</td><td>Ribonucleic acid</td></tr>
+<tr><td>Sugar</td><td>Deoxyribose: <strong>no oxygen at carbon 2</strong> (H instead of OH)</td><td>Ribose (–OH on carbon 2)</td></tr>
+<tr><td>Bases</td><td>A, T, G, C</td><td>A, <strong>U</strong>, G, C</td></tr>
+<tr><td>Strands</td><td>Two, antiparallel, double helix</td><td>One (single-stranded)</td></tr>
+<tr><td>Function</td><td>Contains the hereditary information</td><td>Translates DNA into functional proteins</td></tr>
+<tr><td>Types</td><td>Most common form: B-form double helix</td><td>mRNA (messenger, a working copy), tRNA (brings amino acids), rRNA (main part of ribosomes)</td></tr>
+<tr><td>Stability</td><td>More stable: thymine (= uracil + a methyl group)</td><td>Less stable; likely came first ("RNA world")</td></tr>
+</tbody></table></div>
+<ul>
+<li><strong>Why T, not U, in DNA:</strong> cytosine can lose its amine group (deamination) and become uracil. With T in DNA, repair enzymes know any U is an error and fix it. Natural selection favoured this higher accuracy.</li>
+<li><strong>ATP</strong> = adenine + ribose + <strong>3</strong> phosphates; <strong>ADP</strong> has 2. Both are nucleotides, like the units of RNA.</li>
+</ul>
+<div class="eq">Example: DNA is 18% A → T = 18%, so G + C = 100 − 36 = 64% → G = 32%, C = 32%</div>
+
+<h3>Proteins</h3>
+<p><strong>Functions:</strong> structural support, transport of substances, cell signalling, movement, coordination and regulation of activities, accelerating chemical reactions (enzymes). DNA codes for proteins; 3 bases (a codon) code for 1 amino acid, and tRNA brings the amino acids.</p>
+<ul>
+<li><strong>Amino acid:</strong> central carbon bonded to an <strong>amino group</strong> (–NH<sub>2</sub>), a <strong>carboxyl group</strong> (–COOH), a <strong>hydrogen</strong> and an <strong>R group</strong> (side chain). The 20 amino acids differ only in their R group.</li>
+<li><strong>9 essential amino acids</strong> can't be made by the body (or not enough), so they must come from diet: valine, isoleucine, leucine, methionine, lysine, threonine, histidine, phenylalanine, tryptophan.</li>
+<li><strong>Polarity comes from the R group</strong> (every amino acid has polar amino and carboxyl groups). A polar R group has O or N (or S) creating a dipole. Small, polar R groups are the most soluble; bigger, nonpolar R groups lower solubility.</li>
+</ul>
+<div class="table-wrap"><table class="data">
+<thead><tr><th>R-group class</th><th>Examples (know one of each)</th></tr></thead>
+<tbody>
+<tr><td>Nonpolar (hydrophobic)</td><td><strong>Glycine</strong> (R = H), alanine (CH<sub>3</sub>), valine, leucine, isoleucine, methionine, phenylalanine, tryptophan, proline, cysteine</td></tr>
+<tr><td>Polar (uncharged)</td><td><strong>Serine</strong> (CH<sub>2</sub>OH), threonine, tyrosine, asparagine, glutamine</td></tr>
+<tr><td>Positive charge (basic)</td><td>Lysine, arginine, <strong>histidine</strong></td></tr>
+<tr><td>Negative charge (acidic)</td><td><strong>Aspartic acid</strong>, glutamic acid</td></tr>
+</tbody></table></div>
+<p><strong>Peptide bond</strong> (condensation): the carboxyl group of one amino acid bonds to the amino group of the next, releasing H<sub>2</sub>O. The chain has an <strong>N-terminus</strong> (free amino end) and a <strong>C-terminus</strong> (free carboxyl end). Tripeptide = 3 amino acids, 2 peptide bonds, 2 H<sub>2</sub>O.</p>
+<div class="table-wrap"><table class="data">
+<thead><tr><th>Level</th><th>What it is</th><th>Held by</th></tr></thead>
+<tbody>
+<tr><td><strong>Primary</strong></td><td>Sequence of amino acids in the chain (set by DNA)</td><td>Peptide bonds (covalent)</td></tr>
+<tr><td><strong>Secondary</strong></td><td>Local folding into <strong>α-helices</strong> or <strong>β-pleated sheets</strong></td><td>H-bonds along the backbone: C=O of one amino acid to N–H of another</td></tr>
+<tr><td><strong>Tertiary</strong></td><td>Overall 3D folding of one polypeptide</td><td>R-group (side chain) interactions: H-bonds, ionic bonds, hydrophobic interactions, disulfide bridges (–S–S– between cysteines)</td></tr>
+<tr><td><strong>Quaternary</strong></td><td>More than one polypeptide chain together (e.g., hemoglobin, 4 chains). Not every protein has one</td><td>Same R-group interactions, between chains</td></tr>
+</tbody></table></div>
+<p>A functional protein = one or more polypeptides twisted and coiled into a specific 3D shape. <strong>Shape determines function.</strong></p>
+<h4>Denaturation</h4>
+<ul>
+<li>Protein loses its shape and becomes non-functional.</li>
+<li>Caused by <strong>high temperature</strong> (e.g., above 40 °C) and <strong>acidic, basic or salty</strong> environments.</li>
+<li>Can be a temporary disruption of bonds or permanent. Usually affects quaternary, tertiary and secondary structure but <strong>not the peptide bonds</strong> (primary structure stays).</li>
+<li>Useful (cooking makes meat tender) or dangerous (high fever).</li>
+</ul>
+
+<h3>Enzymes</h3>
+<div class="table-wrap"><table class="data"><tbody>
+<tr><th>Enzyme</th><td>Protein catalyst: speeds up a reaction without being consumed, by lowering activation energy. Very specific. Names often end in <strong>-ase</strong>.</td></tr>
+<tr><th>Activation energy (E<sub>A</sub>)</th><td>Minimum energy needed to start a reaction.</td></tr>
+<tr><th>Substrate</th><td>The specific reactant an enzyme acts on.</td></tr>
+<tr><th>Active site</th><td>Region of the enzyme where the substrate binds.</td></tr>
+<tr><th>Enzyme–substrate complex</th><td>Enzyme with substrate bound in its active site.</td></tr>
+<tr><th>Induced fit model</th><td>Substrate binds and the active site changes shape (conformational change) to fit it more tightly.</td></tr>
+<tr><th>Exergonic / endergonic</th><td>Exergonic releases energy (catabolic). Endergonic absorbs energy (anabolic). Enzymes catalyze both.</td></tr>
+<tr><th>Cofactor</th><td>Nonprotein helper that is <strong>inorganic</strong>: metal ions that stabilize enzyme shape and attract substrate electrons.</td></tr>
+<tr><th>Coenzyme</th><td>Nonprotein helper that is <strong>organic</strong>: acts as a molecular shuttle (carries electrons or protons).</td></tr>
+<tr><th>Allosteric site</th><td>A regulatory site on the enzyme away from the active site.</td></tr>
+</tbody></table></div>
+<p><strong>Induced fit cycle:</strong> substrates enter the active site → enzyme changes shape around them → held by weak interactions (H-bonds, ionic bonds) → E<sub>A</sub> lowered by orienting substrates (template), straining bonds, giving a favourable microenvironment or taking part directly → products released → active site free for new substrates.</p>
+<p><strong>Grade 11 digestive enzymes:</strong> amylase (starch → maltose), lipase (lipids → glycerol + fatty acids), protease (proteins → amino acids), lactase (lactose → glucose + galactose), carbohydrase (carbohydrates → simple sugars).</p>
+<div class="table-wrap"><table class="data">
+<thead><tr><th>Factor</th><th>Effect on rate</th><th>Why</th></tr></thead>
+<tbody>
+<tr><td>Substrate concentration</td><td>Rises, then <strong>plateaus</strong></td><td>More substrate = more collisions, until every active site is busy (point of saturation). Adding more then does nothing.</td></tr>
+<tr><td>Enzyme concentration</td><td>Rises <strong>proportionally</strong> (straight line)</td><td>More active sites. In cells, capped by substrate supply and the energy cost of making enzymes.</td></tr>
+<tr><td>Temperature</td><td>Rises to an <strong>optimum</strong>, then drops sharply</td><td>Faster molecules collide more, but past the optimum the enzyme denatures. Human ≈ 37 °C; heat-tolerant organism ≈ 76 °C.</td></tr>
+<tr><td>pH</td><td>Highest at an <strong>optimum</strong> pH, lower on either side</td><td>Wrong pH changes the charges on R groups → shape changes → denatures. Blood enzymes ~7.4; stomach enzymes ~2.</td></tr>
+<tr><td>Cofactors / coenzymes</td><td>Needed for activity</td><td>Bind inactive enzymes and alter the active site so it works.</td></tr>
+</tbody></table></div>
+<div class="table-wrap"><table class="data">
+<thead><tr><th>Regulator</th><th>Binds to</th><th>Effect</th></tr></thead>
+<tbody>
+<tr><td><strong>Competitive inhibitor</strong></td><td>Active site</td><td>Blocks the normal substrate from binding</td></tr>
+<tr><td><strong>Non-competitive inhibitor</strong> (allosteric inhibitor)</td><td>Allosteric site</td><td>Changes the active site's shape; stabilizes the <strong>inactive</strong> form</td></tr>
+<tr><td><strong>Allosteric activator</strong></td><td>Allosteric site</td><td>Stabilizes the <strong>active</strong> form so the substrate fits</td></tr>
+<tr><td><strong>Feedback inhibition</strong></td><td>End product binds the allosteric site of an early enzyme</td><td>Switches off its own pathway (isoleucine inhibits threonine deaminase, enzyme 1). Negative feedback</td></tr>
+</tbody></table></div>
+<ul>
+<li>Enzymes are regulated by negative feedback (homeostasis), certain medications and toxins.</li>
+<li><strong>Fresh pineapple in Jell-O:</strong> its protease digests the gelatin (a collagen protein), so it won't set. Cooked pineapple works: heat denatured the protease.</li>
+<li>Less digestive enzyme with age → less digestion → fewer nutrients absorbed.</li>
+<li>Body temperature and pH must stay in range because enzymes are proteins and denature outside it.</li>
+</ul>
 `;
