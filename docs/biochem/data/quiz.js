@@ -746,4 +746,524 @@ window.QUIZ.push(
     answer: false,
     explain: "A polypeptide has an N-terminus (free amino group) and a C-terminus (free carboxyl group). The 5′ and 3′ labels are used for nucleic acid strands." }
 );
+window.QUIZ.push(
+  /* ---------------- 1.07 Enzymes ---------------- */
+  { id: "q100", lesson: "1.07", type: "mcq", kind: "knowledge", tier: "essential", level: 1,
+    q: "How do enzymes speed up chemical reactions?",
+    options: ["By raising the temperature inside the cell", "By lowering the activation energy needed", "By adding extra energy to the products", "By increasing the activation energy needed"],
+    answer: 1,
+    explain: "Enzymes are protein catalysts: they lower the activation energy (for example by straining bonds and lining reactants up correctly), so the reaction runs faster. They are not used up." },
+
+  { id: "q101", lesson: "1.07", type: "tf", kind: "knowledge", tier: "essential", level: 1,
+    q: "An enzyme is used up in the reaction it catalyzes, so it must be replaced after each reaction.",
+    answer: false,
+    explain: "A catalyst speeds up a reaction without being consumed, which is why it is not a reactant. One enzyme molecule can be used again and again." },
+
+  { id: "q102", lesson: "1.07", type: "mcq", kind: "knowledge", tier: "essential", level: 1,
+    q: "What is the region of an enzyme where the substrate binds called?",
+    options: ["The allosteric site", "The R group", "The peptide bond", "The active site"],
+    answer: 3,
+    explain: "The substrate binds the active site. The allosteric site is a different site where regulators (activators or non-competitive inhibitors) bind." },
+
+  { id: "q103", lesson: "1.07", type: "mcq", kind: "knowledge", tier: "essential", level: 1,
+    q: "Which statement describes the <strong>induced fit</strong> model?",
+    options: [
+      "Once the substrate binds, the active site changes shape slightly to fit it more snugly",
+      "The active site is a rigid, exact match for the substrate and never changes shape",
+      "The substrate permanently changes the enzyme's amino acid sequence",
+      "The enzyme can bind any molecule that happens to touch its active site"
+    ],
+    answer: 0,
+    explain: "The substrate binds the active site to form an enzyme-substrate complex, and the active site undergoes a conformational change to better hold it. Enzymes are still very specific to their substrates." },
+
+  { id: "q104", lesson: "1.07", type: "mcq", kind: "knowledge", tier: "essential", level: 2,
+    q: "As substrate concentration rises, the reaction rate increases and then levels off (plateaus). Why does it level off?",
+    options: [
+      "The enzyme denatures when there is too much substrate",
+      "Extra substrate molecules act as competitive inhibitors",
+      "Every active site is occupied; the enzymes are saturated",
+      "The activation energy rises as more substrate is added"
+    ],
+    answer: 2,
+    explain: "At first, more substrate means more collisions with free active sites. Once every active site is busy, adding substrate cannot speed things up; only adding more enzyme would." },
+
+  { id: "q105", lesson: "1.07", type: "mcq", kind: "knowledge", tier: "essential", level: 1,
+    q: "A typical human enzyme works best at about ____, while an enzyme from a heat-tolerant organism works best at about ____.",
+    options: ["0°C; 37°C", "37°C; 76°C", "76°C; 37°C", "37°C; 100°C"],
+    answer: 1,
+    explain: "Every enzyme has an optimal temperature. Human enzymes work best near body temperature (37°C); the slide's heat-tolerant example works best near 76°C." },
+
+  { id: "q106", lesson: "1.07", type: "tf", kind: "knowledge", tier: "essential", level: 1,
+    q: "Above its optimal temperature, an enzyme's reaction rate drops because the enzyme begins to denature.",
+    answer: true,
+    explain: "Rate rises with temperature up to the optimum, then falls quickly as the enzyme loses its shape, including the shape of the active site." },
+
+  { id: "q107", lesson: "1.07", type: "mcq", kind: "knowledge", tier: "essential", level: 1,
+    q: "What is a <strong>cofactor</strong>?",
+    options: [
+      "An organic molecule that shuttles electrons or protons",
+      "A molecule that binds the active site and blocks the substrate",
+      "An inorganic metal ion that helps stabilize the enzyme's shape",
+      "The product released at the end of an enzyme reaction"
+    ],
+    answer: 2,
+    explain: "Cofactors are inorganic metal ions that stabilize enzyme shape and attract substrate electrons. Cofactors and coenzymes are both non-protein helpers that bind inactive enzymes and alter their active sites." },
+
+  { id: "q108", lesson: "1.07", type: "mcq", kind: "knowledge", tier: "essential", level: 1,
+    q: "What makes a <strong>coenzyme</strong> different from a cofactor?",
+    options: [
+      "It is organic and can act as a shuttle for electrons or protons",
+      "It is an inorganic metal ion such as Mg<sup>2+</sup> or Zn<sup>2+</sup>",
+      "It is the part of the enzyme's own polypeptide that forms the active site",
+      "It always slows the enzyme down by binding the allosteric site"
+    ],
+    answer: 0,
+    explain: "Coenzymes are organic (carbon-based) helper molecules; many act as molecular shuttles that carry electrons or protons (you will meet NAD<sup>+</sup> and FAD in Unit 2). Cofactors are inorganic metal ions." },
+
+  { id: "q109", lesson: "1.07", type: "mcq", kind: "knowledge", tier: "essential", level: 1,
+    q: "How does a <strong>competitive</strong> inhibitor work?",
+    options: [
+      "It binds an allosteric site and changes the active site's shape",
+      "It binds the active site and blocks the normal substrate",
+      "It acts as a metal ion that helps the substrate bind",
+      "It breaks the peptide bonds that hold the enzyme together"
+    ],
+    answer: 1,
+    explain: "A competitive inhibitor resembles the substrate and competes for the active site. A non-competitive inhibitor binds elsewhere (an allosteric site)." },
+
+  { id: "q110", lesson: "1.07", type: "mcq", kind: "knowledge", tier: "essential", level: 1,
+    q: "How does a <strong>non-competitive</strong> inhibitor work?",
+    options: [
+      "It binds the active site and competes with the substrate",
+      "It lowers the activation energy of the reaction",
+      "It raises the amount of substrate available to the enzyme",
+      "It binds an allosteric site, which changes the active site's shape"
+    ],
+    answer: 3,
+    explain: "A non-competitive (allosteric) inhibitor binds away from the active site and stabilizes the inactive form, so the substrate no longer fits well." },
+
+  { id: "q111", lesson: "1.07", type: "tf", kind: "knowledge", tier: "essential", level: 1,
+    q: "An allosteric activator binds the regulatory (allosteric) site and stabilizes the active form of the enzyme.",
+    answer: true,
+    explain: "Allosteric enzymes switch between active and inactive forms. Activators stabilize the active form; allosteric inhibitors stabilize the inactive form." },
+
+  { id: "q112", lesson: "1.07", type: "mcq", kind: "knowledge", tier: "likely", level: 2,
+    q: "In <strong>feedback inhibition</strong>, the end product of a metabolic pathway…",
+    options: [
+      "binds an allosteric site on an early enzyme and switches the pathway off",
+      "binds the active site of the last enzyme and speeds the pathway up",
+      "is broken down by hydrolysis so the pathway can start over again",
+      "becomes the substrate for the first enzyme in the same pathway"
+    ],
+    answer: 0,
+    explain: "Class example: isoleucine, the end product, binds the allosteric site of enzyme 1 (threonine deaminase), so threonine no longer fits and the pathway stops. This is negative feedback that keeps levels stable." },
+
+  { id: "q113", lesson: "1.07", type: "mcq", kind: "knowledge", tier: "essential", level: 1,
+    q: "<strong>Exergonic</strong> reactions ____ energy and are often ____ reactions.",
+    options: ["absorb; anabolic", "absorb; catabolic", "release; catabolic", "release; anabolic"],
+    answer: 2,
+    explain: "Exergonic reactions release energy (e.g., catabolic breakdown). Endergonic reactions absorb energy (e.g., anabolic building). Enzymes lower the activation energy for both kinds." },
+
+  { id: "q114", lesson: "1.07", type: "tf", kind: "knowledge", tier: "likely", level: 2,
+    q: "Fresh pineapple stops Jell-O from setting because its protease digests the gelatin, but cooked pineapple does not, because heat denatures the protease.",
+    answer: true,
+    explain: "Gelatin is a protein made from collagen, so pineapple's protease breaks it down. Cooking denatures the enzyme, so the gelatin can set." },
+
+  { id: "q115", lesson: "1.07", type: "tf", kind: "knowledge", tier: "essential", level: 1,
+    q: "Most enzyme names end in the suffix -ose, as in sucrose.",
+    answer: false,
+    explain: "Many enzymes end in -ase (amylase, lipase, protease, lactase). The ending -ose is used for sugars such as sucrose and glucose." },
+
+  { id: "q116", lesson: "1.07", type: "mcq", kind: "knowledge", tier: "likely", level: 2,
+    q: "An enzyme that works in the stomach most likely has an optimal pH closest to…",
+    options: ["12", "9", "7.4", "2"],
+    answer: 3,
+    explain: "Every enzyme has an optimal pH that matches where it works: about 2 in the acidic stomach, and about 7.4 for enzymes in blood. Far from that pH, the enzyme can denature." },
+
+  { id: "q117", lesson: "1.07", type: "mcq", kind: "knowledge", tier: "likely", level: 1,
+    q: "Which enzyme is correctly matched with the molecule it breaks down?",
+    options: ["Lipase – proteins", "Amylase – starch", "Protease – lipids", "Lactase – sucrose"],
+    answer: 1,
+    explain: "Amylase digests starch, lipase digests lipids (fats), protease digests proteins, and lactase digests lactose. An enzyme's name often hints at its substrate." },
+
+  /* ---------------- 1.08 Cell Organelles ---------------- */
+  { id: "q118", lesson: "1.08", type: "mcq", kind: "knowledge", tier: "essential", level: 1,
+    q: "Which organelle produces most of the cell's <strong>ATP</strong> through cellular respiration?",
+    options: ["Chloroplast", "Golgi apparatus", "Mitochondrion", "Ribosome"],
+    answer: 2,
+    explain: "Mitochondria (two membranes) release energy from food to make ATP. Cells with high energy demand, such as muscle cells and neurons, have many; fat storage cells have few." },
+
+  { id: "q119", lesson: "1.08", type: "mcq", kind: "knowledge", tier: "essential", level: 1,
+    q: "Which organelle has ribosomes on its surface and makes and folds proteins that will be secreted or built into membranes?",
+    options: ["Rough endoplasmic reticulum", "Smooth endoplasmic reticulum", "Golgi apparatus", "Lysosome"],
+    answer: 0,
+    explain: "The rough ER is a network of flattened sacs continuous with the nuclear envelope. Its ribosomes feed polypeptides into it, where they fold and are processed." },
+
+  { id: "q120", lesson: "1.08", type: "mcq", kind: "knowledge", tier: "essential", level: 1,
+    q: "Which organelle makes <strong>lipids</strong> (phospholipids and steroids) and <strong>detoxifies</strong> drugs and poisons?",
+    options: ["Rough ER", "Nucleolus", "Golgi apparatus", "Smooth ER"],
+    answer: 3,
+    explain: "The smooth ER has no ribosomes, so it does not make proteins. It is abundant in liver cells (detoxification) and adrenal gland cells (steroid hormones)." },
+
+  { id: "q121", lesson: "1.08", type: "mcq", kind: "knowledge", tier: "essential", level: 1,
+    q: "Which organelle looks like a stack of flattened sacs ('pancakes') and modifies, sorts and packages proteins and lipids from the ER?",
+    options: ["Endoplasmic reticulum", "Golgi apparatus", "Nuclear envelope", "Mitochondrion"],
+    answer: 1,
+    explain: "The Golgi apparatus adds finishing touches (e.g., sugars or phosphates, or trimming polypeptides), then ships the products off in vesicles to the cell membrane or to lysosomes." },
+
+  { id: "q122", lesson: "1.08", type: "mcq", kind: "knowledge", tier: "essential", level: 1,
+    q: "Where in the cell are ribosome subunits assembled from RNA and protein?",
+    options: ["Nucleolus", "Golgi apparatus", "Smooth ER", "Cytosol"],
+    answer: 0,
+    explain: "The nucleolus is a dense, irregular region inside the nucleus that assembles ribosome subunits, which then leave through the nuclear pores." },
+
+  { id: "q123", lesson: "1.08", type: "tf", kind: "knowledge", tier: "essential", level: 1,
+    q: "Ribosomes are surrounded by a single membrane, like lysosomes.",
+    answer: false,
+    explain: "Ribosomes have no membrane. They make proteins either free in the cytosol or bound to the rough ER (or nuclear envelope)." },
+
+  { id: "q124", lesson: "1.08", type: "mcq", kind: "knowledge", tier: "essential", level: 1,
+    q: "Which organelle is a vesicle full of digestive enzymes that break down wastes, worn-out organelles and engulfed material?",
+    options: ["Vacuole", "Smooth ER", "Lysosome", "Golgi apparatus"],
+    answer: 2,
+    explain: "Lysosomes carry out digestion inside the cell. They are made by the Golgi apparatus and are especially plentiful in white blood cells, which digest engulfed microbes." },
+
+  { id: "q125", lesson: "1.08", type: "mcq", kind: "knowledge", tier: "likely", level: 2,
+    q: "The pH inside a lysosome is about 4.5–5. What does this tell you about its enzymes?",
+    options: [
+      "They work best at a neutral pH of about 7",
+      "They work best in acidic conditions",
+      "They are denatured by acid, so they act only in the cytosol",
+      "They are not proteins, so pH has no effect on them"
+    ],
+    answer: 1,
+    explain: "An enzyme's optimal pH matches where it works. Lysosomal enzymes are adapted to acid, so if one leaks into the near-neutral cytosol it works poorly, which protects the cell." },
+
+  { id: "q126", lesson: "1.08", type: "mcq", kind: "knowledge", tier: "essential", level: 1,
+    q: "Which structures are found in plant cells but <strong>not</strong> in animal cells?",
+    options: [
+      "Mitochondria, ribosomes and the Golgi apparatus",
+      "Nucleus, rough ER and lysosomes",
+      "Centrioles, cilia and the cell membrane",
+      "Cell wall, chloroplasts and a large central vacuole"
+    ],
+    answer: 3,
+    explain: "Plants have a cellulose cell wall (protection, support, shape), chloroplasts (photosynthesis; double membrane, fluid stroma) and a large central vacuole. Plants also have mitochondria." },
+
+  { id: "q127", lesson: "1.08", type: "tf", kind: "knowledge", tier: "essential", level: 1,
+    q: "Plant cells usually have a large central vacuole that stores water and keeps the cell firm through fluid pressure.",
+    answer: true,
+    explain: "The central vacuole helps with water balance and storage, and its fluid pressure keeps the plant cell firm. Animal cells have only small vacuoles, if any." },
+
+  { id: "q128", lesson: "1.08", type: "mcq", kind: "knowledge", tier: "essential", level: 1,
+    q: "How does the nuclear envelope control what enters and leaves the nucleus?",
+    options: [
+      "Through ribosomes attached to its outer surface",
+      "Through nuclear pores in its double membrane",
+      "Through plasmodesmata linking it to the cell wall",
+      "Through cilia that sweep molecules inward"
+    ],
+    answer: 1,
+    explain: "The nuclear envelope is a double membrane dotted with nuclear pores that regulate traffic, e.g., letting ribosome subunits and RNA out." },
+
+  { id: "q129", lesson: "1.08", type: "tf", kind: "knowledge", tier: "essential", level: 1,
+    q: "Chromatin is the dense region inside the nucleus where ribosome subunits are assembled.",
+    answer: false,
+    explain: "That describes the nucleolus. Chromatin is the cell's DNA together with its associated proteins, found in the nucleus outside the nucleolus." },
+
+  { id: "q130", lesson: "1.08", type: "mcq", kind: "knowledge", tier: "essential", level: 1,
+    q: "What is the difference between <strong>cytosol</strong> and <strong>cytoplasm</strong>?",
+    options: [
+      "They are two names for exactly the same thing",
+      "Cytoplasm is only the fluid; cytosol also includes the organelles",
+      "Cytosol is the fluid found only inside the nucleus",
+      "Cytosol is the fluid; cytoplasm is the fluid plus organelles"
+    ],
+    answer: 3,
+    explain: "Cytosol is the water-based fluid of the cell. Cytoplasm means everything between the cell membrane and the nucleus: the cytosol plus the organelles in it." },
+
+  { id: "q131", lesson: "1.08", type: "mcq", kind: "knowledge", tier: "essential", level: 1,
+    q: "Which cytoskeleton fibres are long, hollow tubes that also form the core of cilia and flagella?",
+    options: ["Microtubules", "Microfilaments", "Chromatin fibres", "Intermediate filaments"],
+    answer: 0,
+    explain: "Microtubules are hollow cylinders that assemble and disassemble as needed. Microfilaments are thin solid fibres that change the cell's shape and allow contraction." },
+
+  { id: "q132", lesson: "1.08", type: "tf", kind: "knowledge", tier: "essential", level: 1,
+    q: "Flagella are short, numerous and hair-like, while cilia are long and whip-like.",
+    answer: false,
+    explain: "It is the other way around: cilia are short and hair-like, and flagella are long and whip-like (e.g., a sperm's tail). Both are made of microtubules and move cells or fluids." },
+
+  { id: "q133", lesson: "1.08", type: "mcq", kind: "knowledge", tier: "likely", level: 2,
+    q: "Pancreatic cells and plasma B cells secrete large amounts of protein (digestive enzymes and antibodies). Which organelles do they have in abundance?",
+    options: ["Smooth ER and lysosomes", "Rough ER and Golgi apparatus", "Chloroplasts and vacuoles", "Mitochondria and smooth ER"],
+    answer: 1,
+    explain: "Rough ER makes and folds the proteins, the Golgi modifies and packages them, and vesicles carry them out by exocytosis. Cells such as fat cells that secrete little protein have little rough ER." },
+
+  { id: "q134", lesson: "1.08", type: "tf", kind: "knowledge", tier: "likely", level: 2,
+    q: "Liver cells contain a lot of smooth ER because they detoxify drugs and poisons.",
+    answer: true,
+    explain: "Smooth ER detoxifies metabolic wastes and drugs, so it is abundant in liver cells. Adrenal gland cells also have a lot of it because they make steroid hormones." },
+
+  { id: "q135", lesson: "1.08", type: "mcq", kind: "knowledge", tier: "likely", level: 1,
+    q: "What is <strong>Tay-Sachs disease</strong>?",
+    options: [
+      "A disorder in which mitochondria cannot make enough ATP for the muscles",
+      "A disease in which ribosomes fail to attach to the rough ER",
+      "A lysosomal disorder: a missing enzyme lets lipids build up in nerve cells",
+      "A condition in which the Golgi apparatus cannot package insulin"
+    ],
+    answer: 2,
+    explain: "In Tay-Sachs disease, lysosomes lack one digestive enzyme, so a lipid they should break down builds up in neurons and damages the nervous system. The slides pose the question; these details come from outside the slides." },
+
+  { id: "q136", lesson: "1.08", type: "mcq", kind: "knowledge", tier: "essential", level: 2,
+    q: "Which path does a protein that will be <strong>secreted</strong> from the cell follow?",
+    options: [
+      "Golgi → rough ER → lysosome → cell membrane",
+      "Nucleus → smooth ER → mitochondrion → cell membrane",
+      "Ribosome → lysosome → vacuole → cell membrane",
+      "Rough ER → vesicle → Golgi → vesicle → cell membrane"
+    ],
+    answer: 3,
+    explain: "Ribosomes on the rough ER make the protein, a vesicle carries it to the Golgi for modification and packaging, and a secretory vesicle fuses with the cell membrane to release it (exocytosis)." },
+
+  { id: "q137", lesson: "1.08", type: "mcq", kind: "knowledge", tier: "extra", level: 1,
+    q: "Which two organelles have their own double membrane and resemble bacteria, which supports the theory of endosymbiosis?",
+    options: ["Mitochondria and chloroplasts", "Lysosomes and vacuoles", "Golgi apparatus and smooth ER", "Ribosomes and nucleoli"],
+    answer: 0,
+    explain: "Mitochondria and chloroplasts are thought to descend from bacteria that were engulfed by an ancestral cell. This idea goes beyond the slides." }
+);
+window.QUIZ.push(
+  /* ---------------- 1.09 Cell Membrane ---------------- */
+  { id: "q138", lesson: "1.09", type: "mcq", kind: "knowledge", tier: "essential", level: 1,
+    q: "In the fluid mosaic model, what does <strong>fluid</strong> refer to?",
+    options: [
+      "The membrane being made mostly of water molecules",
+      "The cytosol flowing freely through the membrane",
+      "Phospholipids and proteins moving sideways within the membrane",
+      "Proteins dissolving into the extracellular fluid"
+    ],
+    answer: 2,
+    explain: "The components are not static: phospholipids and proteins drift laterally. Said in class: this flexibility lets the membrane take some damage without rupturing." },
+
+  { id: "q139", lesson: "1.09", type: "mcq", kind: "knowledge", tier: "essential", level: 1,
+    q: "In the fluid mosaic model, what does <strong>mosaic</strong> refer to?",
+    options: [
+      "The membrane is made of many different macromolecules",
+      "The phosphate heads form a checkerboard pattern",
+      "The membrane has two separate layers of phospholipids",
+      "The proteins are fixed in one permanent position"
+    ],
+    answer: 0,
+    explain: "Like tiles in a mosaic, the membrane is made of many different pieces: phospholipids, proteins, cholesterol, and carbohydrates attached as glycoproteins and glycolipids." },
+
+  { id: "q140", lesson: "1.09", type: "mcq", kind: "knowledge", tier: "essential", level: 1,
+    q: "How do <strong>integral</strong> proteins differ from <strong>peripheral</strong> proteins?",
+    options: [
+      "Integral proteins are made of carbohydrate, peripheral ones of lipid",
+      "Integral proteins are found only in plant cell membranes",
+      "Integral proteins sit loosely on the inner surface only",
+      "Integral proteins are embedded in the bilayer, often spanning it"
+    ],
+    answer: 3,
+    explain: "Integral proteins are embedded in the bilayer, and many span it from outside to inside (e.g., channels). Peripheral proteins sit on only one surface and do not cross the hydrophobic core." },
+
+  { id: "q141", lesson: "1.09", type: "mcq", kind: "knowledge", tier: "essential", level: 1,
+    q: "Carbohydrate chains attached to membrane <strong>proteins</strong> form…",
+    options: ["glycolipids", "glycoproteins", "phospholipids", "cholesterol"],
+    answer: 1,
+    explain: "Glycoproteins work in communication, transport and anchoring, and act as 'ID tags' for cell recognition. Carbohydrates on phospholipids form glycolipids instead." },
+
+  { id: "q142", lesson: "1.09", type: "mcq", kind: "knowledge", tier: "essential", level: 1,
+    q: "What does cholesterol do to the membrane at <strong>high</strong> temperatures?",
+    options: [
+      "Makes it more fluid by pushing the phospholipids apart",
+      "Breaks down into fatty acids that leave the membrane",
+      "Makes it less fluid by restraining phospholipid movement",
+      "Dissolves into the cytosol and lets the membrane melt"
+    ],
+    answer: 2,
+    explain: "Cholesterol acts as a fluidity buffer. In heat it stays bonded in place and restrains the phospholipids (less fluid); in cold it keeps them from packing tightly, so the membrane does not freeze." },
+
+  { id: "q143", lesson: "1.09", type: "mcq", kind: "knowledge", tier: "essential", level: 2,
+    q: "Why can't ions and large polar molecules cross the phospholipid bilayer on their own?",
+    options: [
+      "The bilayer's interior of fatty acid tails is hydrophobic",
+      "The phosphate heads are nonpolar and repel all charges",
+      "Ions are too small to be held by the phosphate heads",
+      "Ions can only move during dehydration synthesis"
+    ],
+    answer: 0,
+    explain: "The nonpolar core repels charged and polar particles, so they need hydrophilic pores formed by proteins (channels and carriers). Small nonpolar molecules like O<sub>2</sub> and CO<sub>2</sub> pass straight through." },
+
+  { id: "q144", lesson: "1.09", type: "mcq", kind: "knowledge", tier: "likely", level: 2,
+    q: "Adrenaline cannot cross the membrane, so it binds a receptor protein on the outside, which triggers reactions inside the cell. Which membrane function is this?",
+    options: ["Intercellular joining", "Enzymatic activity", "Compartmentalization", "Signal transduction"],
+    answer: 3,
+    explain: "Signal transduction passes a message across the membrane without the signal molecule entering (class example: adrenaline). Other functions include physical barrier, selective permeability, cell-cell recognition, enzymatic activity, intercellular joining and anchoring." },
+
+  { id: "q145", lesson: "1.09", type: "mcq", kind: "knowledge", tier: "likely", level: 1,
+    q: "What is the 'sugar coat' of carbohydrate chains on a cell's outer surface called?",
+    options: ["Cytoskeleton", "Glycocalyx", "Extracellular fluid", "Cell wall"],
+    answer: 1,
+    explain: "Said in class: the glycocalyx is made of short carbohydrate chains on the cell exterior. It helps in cell recognition and binds the extracellular matrix, which holds cells together in tissues." },
+
+  { id: "q146", lesson: "1.09", type: "tf", kind: "knowledge", tier: "essential", level: 1,
+    q: "Unsaturated fatty acid tails increase membrane fluidity, while saturated tails decrease it.",
+    answer: true,
+    explain: "Kinks in cis-unsaturated tails keep phospholipids from packing closely. Saturated tails (and, as said in class, straight trans tails) pack tightly and make the membrane less fluid." },
+
+  { id: "q147", lesson: "1.09", type: "tf", kind: "knowledge", tier: "essential", level: 1,
+    q: "At low temperatures, cholesterol keeps phospholipids from packing tightly together, which stops the membrane from freezing.",
+    answer: true,
+    explain: "In the cold, cholesterol wedges between the tails and keeps space between them, maintaining fluidity. In the heat it has the opposite effect." },
+
+  { id: "q148", lesson: "1.09", type: "tf", kind: "knowledge", tier: "essential", level: 1,
+    q: "Peripheral proteins span the entire bilayer, from the extracellular fluid to the cytoplasm.",
+    answer: false,
+    explain: "Peripheral proteins sit on only one surface (inner or outer). Proteins that span the bilayer are integral proteins." },
+
+  { id: "q149", lesson: "1.09", type: "tf", kind: "knowledge", tier: "essential", level: 1,
+    q: "The carbohydrate chains of glycoproteins and glycolipids face the cytoplasm side of the membrane.",
+    answer: false,
+    explain: "Membrane carbohydrates are attached to the cell's exterior, where they act in cell recognition and in attaching to the extracellular matrix." },
+
+  { id: "q150", lesson: "1.09", type: "tf", kind: "knowledge", tier: "likely", level: 2,
+    q: "Fish that live in cold water have more unsaturated fatty acids in their membranes, which keeps the membranes fluid.",
+    answer: true,
+    explain: "Saturated tails would pack tightly and make the membranes stiff and brittle in the cold. Kinked unsaturated tails keep the membranes fluid and working." },
+
+  { id: "q151", lesson: "1.09", type: "tf", kind: "knowledge", tier: "essential", level: 1,
+    q: "Glycolipids are carbohydrate chains attached to membrane proteins.",
+    answer: false,
+    explain: "Glycolipids are carbohydrate chains attached to phospholipids; they add membrane stability and act in cell surface identification. Carbohydrates attached to proteins form glycoproteins." },
+
+  { id: "q152", lesson: "1.09", type: "tf", kind: "knowledge", tier: "extra", level: 1,
+    q: "Some membrane proteins join neighbouring cells together through junctions, such as tight junctions and gap junctions.",
+    answer: true,
+    explain: "Intercellular joining (helping build tissues) is a membrane function on the slides. The names of the junctions go beyond the slides." },
+
+  /* ---------------- 1.10 Cellular Transport ---------------- */
+  { id: "q153", lesson: "1.10", type: "mcq", kind: "knowledge", tier: "essential", level: 1,
+    q: "Which list contains <strong>only</strong> types of passive transport?",
+    options: [
+      "Osmosis, active transport and endocytosis",
+      "Simple diffusion, facilitated diffusion and osmosis",
+      "Facilitated diffusion, exocytosis and the Na<sup>+</sup>/K<sup>+</sup> pump",
+      "Simple diffusion, phagocytosis and pinocytosis"
+    ],
+    answer: 1,
+    explain: "Passive transport needs no energy and moves particles down their concentration gradient: simple diffusion, facilitated diffusion and osmosis. Pumps, endocytosis and exocytosis need energy." },
+
+  { id: "q154", lesson: "1.10", type: "mcq", kind: "knowledge", tier: "essential", level: 1,
+    q: "Which molecules cross the membrane by <strong>simple diffusion</strong>?",
+    options: [
+      "Charged ions such as sodium (Na<sup>+</sup>) and potassium (K<sup>+</sup>)",
+      "Large proteins such as enzymes and antibodies",
+      "Polar sugars and amino acids such as glucose",
+      "Small, lipid-soluble molecules such as O<sub>2</sub> and CO<sub>2</sub>"
+    ],
+    answer: 3,
+    explain: "Small nonpolar (lipid-soluble) molecules slip straight through the bilayer. Ions need channel proteins, sugars and amino acids need carrier proteins, and large proteins need bulk transport." },
+
+  { id: "q155", lesson: "1.10", type: "mcq", kind: "knowledge", tier: "essential", level: 1,
+    q: "How do <strong>channel proteins</strong> differ from carrier proteins?",
+    options: [
+      "Channels form water-filled pores for specific ions and do not change shape",
+      "Channels change shape each time they move a molecule across",
+      "Channels always use ATP to move ions against their gradient",
+      "Channels engulf particles and pinch them off in vesicles"
+    ],
+    answer: 0,
+    explain: "Channel proteins are open pores (e.g., aquaporins for water, said in class). Carrier proteins change shape to pass specific molecules by size, shape and charge, such as amino acids, sugars and small proteins." },
+
+  { id: "q156", lesson: "1.10", type: "mcq", kind: "knowledge", tier: "essential", level: 2,
+    q: "A cell is placed in a solution with a <strong>lower</strong> solute concentration than its cytoplasm. Which statement is correct?",
+    options: [
+      "The solution is hypertonic, so the cell loses water",
+      "The solution is isotonic, so there is no net water movement",
+      "The solution is hypotonic, so the cell gains water",
+      "The solution is hypotonic, so the cell loses water"
+    ],
+    answer: 2,
+    explain: "Low solute outside means high water concentration outside, so water moves in. Memory tip: 'hypo' sounds like 'hippo' – the cell swells, and an animal cell may burst (lysis)." },
+
+  { id: "q157", lesson: "1.10", type: "mcq", kind: "knowledge", tier: "essential", level: 1,
+    q: "What happens to a red blood cell placed in a <strong>hypertonic</strong> solution?",
+    options: [
+      "It gains water and bursts (lysis)",
+      "It loses water and shrivels (crenation)",
+      "It stays the same size with no net movement",
+      "It becomes firm and turgid against its wall"
+    ],
+    answer: 1,
+    explain: "A hypertonic solution has more solute than the cell, so water leaves the cell and it shrivels (crenation). Animal cells have no cell wall, so 'turgid' does not apply to them." },
+
+  { id: "q158", lesson: "1.10", type: "mcq", kind: "knowledge", tier: "extra", level: 2,
+    q: "What happens to a <strong>plant cell</strong> in a hypotonic solution?",
+    options: [
+      "It bursts (lysis), exactly like an animal cell",
+      "Its membrane pulls away from the cell wall",
+      "It shrivels because water leaves its vacuole",
+      "It swells and becomes turgid; the wall stops it bursting"
+    ],
+    answer: 3,
+    explain: "Water enters and fills the central vacuole, pushing the membrane against the strong cell wall. This turgid state is the healthy normal for plant cells. Plant cell outcomes go beyond the slides." },
+
+  { id: "q159", lesson: "1.10", type: "mcq", kind: "knowledge", tier: "essential", level: 1,
+    q: "What is <strong>phagocytosis</strong>?",
+    options: [
+      "'Cell eating': the cell engulfs solid particles",
+      "'Cell drinking': the cell takes in fluid and solutes",
+      "The release of hormones from the cell in vesicles",
+      "The diffusion of water across the cell membrane"
+    ],
+    answer: 0,
+    explain: "Phagocytosis ('cell eating') is a type of endocytosis in which the cell engulfs solid particles, e.g., a white blood cell engulfing bacteria. Pinocytosis is 'cell drinking'." },
+
+  { id: "q160", lesson: "1.10", type: "mcq", kind: "knowledge", tier: "essential", level: 1,
+    q: "Which type of endocytosis takes in specific molecules only after they bind to receptors on the cell surface?",
+    options: ["Pinocytosis", "Phagocytosis", "Receptor-mediated endocytosis", "Constitutive exocytosis"],
+    answer: 2,
+    explain: "In receptor-mediated endocytosis, binding to surface receptors triggers vesicle formation, so the cell takes in only the selected molecules." },
+
+  { id: "q161", lesson: "1.10", type: "tf", kind: "knowledge", tier: "essential", level: 1,
+    q: "Diffusion moves particles from an area of high concentration to an area of lower concentration without using energy.",
+    answer: true,
+    explain: "Diffusion is passive: particles move down (along) their concentration gradient until they reach dynamic equilibrium." },
+
+  { id: "q162", lesson: "1.10", type: "tf", kind: "knowledge", tier: "essential", level: 1,
+    q: "When particles reach dynamic equilibrium, they stop moving.",
+    answer: false,
+    explain: "Particles keep moving in both directions; there is just no net change in concentration. That is why it is called <em>dynamic</em> equilibrium." },
+
+  { id: "q163", lesson: "1.10", type: "tf", kind: "knowledge", tier: "essential", level: 1,
+    q: "Osmosis is the diffusion of solutes, such as salt, across a selectively permeable membrane.",
+    answer: false,
+    explain: "Osmosis is the diffusion of <em>water</em> across a selectively permeable membrane, from an area of high water concentration to an area of lower water concentration." },
+
+  { id: "q164", lesson: "1.10", type: "tf", kind: "knowledge", tier: "essential", level: 1,
+    q: "In an isotonic solution there is no net movement of water, but water molecules still cross the membrane in both directions.",
+    answer: true,
+    explain: "Isotonic means equal solute concentrations on both sides, so water enters and leaves at the same rate. No net movement does not mean no movement (said in class)." },
+
+  { id: "q165", lesson: "1.10", type: "tf", kind: "knowledge", tier: "essential", level: 1,
+    q: "Active transport moves particles down their concentration gradient, so it does not need energy.",
+    answer: false,
+    explain: "Active transport moves particles against their gradient (low to high), so it needs energy (ATP) and specific carrier proteins." },
+
+  { id: "q166", lesson: "1.10", type: "tf", kind: "knowledge", tier: "essential", level: 1,
+    q: "Regulated exocytosis is a continuous, automatic process that constantly secretes membrane lipids and proteins.",
+    answer: false,
+    explain: "That is constitutive exocytosis, which happens in all cells. Regulated exocytosis stores substances and releases them on demand after a chemical or electrical signal." },
+
+  { id: "q167", lesson: "1.10", type: "tf", kind: "knowledge", tier: "likely", level: 1,
+    q: "The sodium-potassium (Na<sup>+</sup>/K<sup>+</sup>) pump is an example of active transport.",
+    answer: true,
+    explain: "The pump uses ATP to move Na<sup>+</sup> and K<sup>+</sup> against their concentration gradients. Endocytosis and exocytosis also need energy." },
+
+  { id: "q168", lesson: "1.10", type: "tf", kind: "knowledge", tier: "extra", level: 2,
+    q: "A plant cell in a hypertonic solution undergoes plasmolysis: it loses water and its membrane pulls away from the cell wall.",
+    answer: true,
+    explain: "Water leaves the central vacuole, the cell loses turgor, and the membrane shrinks away from the rigid wall. Plant cell outcomes go beyond the slides." }
+);
 /* @@END@@ */

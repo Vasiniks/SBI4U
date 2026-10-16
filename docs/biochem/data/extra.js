@@ -612,4 +612,80 @@ window.EXTRA.push({
 `
 });
 
-/* @@NEXT@@ */
+window.EXTRA.push({
+  id: "e-data-stats",
+  title: "Experimental design, standard deviation and error bars",
+  lesson: "1.11",
+  tier: "likely",
+  why: "The graphing slides cover which graph to use; lab reports also need a fair test, a measure of spread and correctly read error bars, which is the next step.",
+  html: `
+<h3>Designing a fair test</h3>
+<ul>
+<li><span class="term">Independent variable (IV)</span>: the one factor you change on purpose. It goes on the x-axis.</li>
+<li><span class="term">Dependent variable (DV)</span>: what you measure in response. It goes on the y-axis, so a title reads "DV vs IV" (y vs x).</li>
+<li><span class="term">Controlled variables</span>: everything else, kept the same (for example temperature, volume, enzyme concentration and timing).</li>
+<li><strong>Controls:</strong> a negative control (such as no enzyme) shows what happens without the factor. A positive control shows the method works.</li>
+<li><strong>Replicates:</strong> repeat each condition (at least 3 trials, ideally more) and average them. Repeats reduce the effect of random error and let you measure variability.</li>
+</ul>
+<div class="compare">
+<div><h4>Random error</h4><p>Unpredictable scatter, such as reading a meniscus slightly differently each time. It lowers <strong>precision</strong> (how close repeated results are to each other). More trials reduce its effect.</p></div>
+<div><h4>Systematic error</h4><p>Shifts every result the same way, such as a thermometer that reads 2 °C high. It lowers <strong>accuracy</strong> (how close results are to the true value). More trials do not fix it.</p></div>
+</div>
+<div class="callout warn"><p class="callout-title">Common mistake</p><p>"Human error" is not an acceptable source of error. Name the specific problem and say which way it would push the results.</p></div>
+
+<h3>Mean and standard deviation</h3>
+<p>The mean is the sum of the values divided by how many there are (n). The <span class="term">standard deviation (SD)</span> measures how spread out the values are around the mean. A small SD means the values are tightly clustered, so the data are precise.</p>
+<div class="eq">SD = √[ Σ(x − mean)<sup>2</sup> ÷ (n − 1) ]</div>
+<p><strong>Worked example.</strong> Three trials give rates of 4.0, 4.4 and 3.6 mL O<sub>2</sub>/min. Mean = 12.0 ÷ 3 = 4.0. The deviations are 0, +0.4 and −0.4. Their squares are 0, 0.16 and 0.16, which sum to 0.32. Divide by n − 1 = 2 to get 0.16, and take the square root: SD = 0.4. Report the result as 4.0 ± 0.4 mL/min. For bell-shaped data, about 68% of values fall within 1 SD of the mean and about 95% within 2 SD. In a spreadsheet, use STDEV.S.</p>
+
+<h3>Reading error bars</h3>
+<figure class="diagram"><svg viewBox="0 0 640 280" role="img" aria-labelledby="bx-eb-t"><title id="bx-eb-t">Two bar graphs: in A the error bars overlap, in B they do not</title>
+<text x="185" y="24" font-size="13" font-family="inherit" text-anchor="middle" style="fill:var(--ink)">A: error bars overlap</text>
+<text x="495" y="24" font-size="13" font-family="inherit" text-anchor="middle" style="fill:var(--ink)">B: error bars do not overlap</text>
+<text transform="translate(22,140) rotate(-90)" font-size="12" font-family="inherit" text-anchor="middle" style="fill:var(--ink-2)">Mean rate</text>
+<line x1="70" y1="240" x2="300" y2="240" style="stroke:var(--ink);stroke-width:1.5"/>
+<line x1="70" y1="240" x2="70" y2="40" style="stroke:var(--ink);stroke-width:1.5"/>
+<line x1="380" y1="240" x2="610" y2="240" style="stroke:var(--ink);stroke-width:1.5"/>
+<line x1="380" y1="240" x2="380" y2="40" style="stroke:var(--ink);stroke-width:1.5"/>
+<text x="62" y="244" font-size="11" font-family="inherit" text-anchor="end" style="fill:var(--ink-2)">0</text>
+<text x="62" y="194" font-size="11" font-family="inherit" text-anchor="end" style="fill:var(--ink-2)">20</text>
+<text x="62" y="144" font-size="11" font-family="inherit" text-anchor="end" style="fill:var(--ink-2)">40</text>
+<text x="62" y="94" font-size="11" font-family="inherit" text-anchor="end" style="fill:var(--ink-2)">60</text>
+<text x="62" y="44" font-size="11" font-family="inherit" text-anchor="end" style="fill:var(--ink-2)">80</text>
+<text x="372" y="244" font-size="11" font-family="inherit" text-anchor="end" style="fill:var(--ink-2)">0</text>
+<text x="372" y="194" font-size="11" font-family="inherit" text-anchor="end" style="fill:var(--ink-2)">20</text>
+<text x="372" y="144" font-size="11" font-family="inherit" text-anchor="end" style="fill:var(--ink-2)">40</text>
+<text x="372" y="94" font-size="11" font-family="inherit" text-anchor="end" style="fill:var(--ink-2)">60</text>
+<text x="372" y="44" font-size="11" font-family="inherit" text-anchor="end" style="fill:var(--ink-2)">80</text>
+<rect x="100" y="140" width="60" height="100" style="fill:var(--blue-soft);stroke:var(--blue);stroke-width:2"/>
+<rect x="190" y="125" width="60" height="115" style="fill:var(--amber-soft);stroke:var(--amber);stroke-width:2"/>
+<rect x="410" y="140" width="60" height="100" style="fill:var(--blue-soft);stroke:var(--blue);stroke-width:2"/>
+<rect x="500" y="65" width="60" height="175" style="fill:var(--amber-soft);stroke:var(--amber);stroke-width:2"/>
+<path d="M130,120 V160 M120,120 H140 M120,160 H140" style="fill:none;stroke:var(--ink);stroke-width:2"/>
+<path d="M220,105 V145 M210,105 H230 M210,145 H230" style="fill:none;stroke:var(--ink);stroke-width:2"/>
+<path d="M440,125 V155 M430,125 H450 M430,155 H450" style="fill:none;stroke:var(--ink);stroke-width:2"/>
+<path d="M530,50 V80 M520,50 H540 M520,80 H540" style="fill:none;stroke:var(--ink);stroke-width:2"/>
+<text x="130" y="258" font-size="12" font-family="inherit" text-anchor="middle" style="fill:var(--ink)">Control</text>
+<text x="220" y="258" font-size="12" font-family="inherit" text-anchor="middle" style="fill:var(--ink)">Treated</text>
+<text x="440" y="258" font-size="12" font-family="inherit" text-anchor="middle" style="fill:var(--ink)">Control</text>
+<text x="530" y="258" font-size="12" font-family="inherit" text-anchor="middle" style="fill:var(--ink)">Treated</text>
+</svg><figcaption>Error bars show ± 1 SD. In A the bars overlap a lot, so the difference could easily be due to chance. In B there is no overlap, which suggests a real effect.</figcaption></figure>
+<p><span class="term">Error bars</span> show the variability or uncertainty around each mean. Always say in the caption what they represent: ± 1 SD, standard error, or a 95% confidence interval. As a rule of thumb for this course:</p>
+<ul>
+<li><strong>Large overlap:</strong> you cannot conclude that the treatment had an effect. The difference may just be random variation.</li>
+<li><strong>No overlap:</strong> this suggests a real difference. Scientists confirm it with a statistical test, such as a t-test.</li>
+</ul>
+
+<h3>Scatter plots: strength is not cause</h3>
+<ul>
+<li><strong>R<sup>2</sup></strong> (from 0 to 1) tells you how closely the points fit the trendline. Values near 1 mean the points sit close to the line, which is a strong relationship. This matches the slide's point that distance from the trendline shows strength.</li>
+<li><strong>Correlation is not causation.</strong> Ice cream sales and drownings both rise in summer, but one does not cause the other. A third variable, hot weather, drives both. Only a controlled experiment can show cause.</li>
+<li><strong>Interpolate, do not extrapolate.</strong> Reading values between your data points is reasonable. Extending the line beyond them is risky. An enzyme's rate rises with temperature only up to its optimum, then drops sharply, so a straight-line extrapolation would be badly wrong.</li>
+<li><strong>Outliers:</strong> check for a mistake, but do not quietly delete them. Report them and explain any you leave out.</li>
+</ul>
+
+<details class="check"><summary>Find the mean and standard deviation of 10, 12 and 14.</summary><div class="ans"><p>Mean = 36 ÷ 3 = 12. Deviations: −2, 0 and +2. Squares: 4, 0 and 4, which sum to 8. Divide by n − 1 = 2 to get 4. √4 = 2, so the result is <strong>12 ± 2</strong>.</p></div></details>
+<details class="check"><summary>Enzyme A's rate is 5.1 ± 1.2 and enzyme B's is 5.8 ± 1.4 (mean ± SD). Can you conclude that B is faster?</summary><div class="ans"><p>No. A's range (3.9 to 6.3) and B's range (4.4 to 7.2) overlap heavily, so the difference could be random variation. You would need more trials and a statistical test before claiming that B is faster.</p></div></details>
+`
+});
+

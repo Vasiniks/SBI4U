@@ -166,6 +166,7 @@ window.LESSONS.push({
 <line x1="133" y1="106" x2="207" y2="106" style="stroke:var(--ink-2)" stroke-width="2" stroke-dasharray="5 4"/>
 <polygon points="252.5,87 230,74 207.5,87 207.5,113 230,126 252.5,113" style="fill:var(--magenta-soft);stroke:var(--magenta)" stroke-width="2"/>
 <polygon points="252.5,87 277.2,79 292.5,100 277.2,121 252.5,113" style="fill:var(--magenta-soft);stroke:var(--magenta)" stroke-width="2"/>
+<line x1="252.5" y1="87" x2="252.5" y2="113" style="stroke:var(--magenta)" stroke-width="2"/>
 <text x="230" y="106" text-anchor="middle" font-family="inherit" font-size="16" font-weight="700" style="fill:var(--ink)">A</text>
 <line x1="292" y1="100" x2="326" y2="100" style="stroke:var(--ink)" stroke-width="2"/>
 <text x="190" y="148" text-anchor="middle" font-family="inherit" font-size="12" style="fill:var(--ink)">A–T (A–U in RNA): 2 hydrogen bonds</text>
@@ -177,6 +178,7 @@ window.LESSONS.push({
 <line x1="133" y1="209" x2="207" y2="209" style="stroke:var(--ink-2)" stroke-width="2" stroke-dasharray="5 4"/>
 <polygon points="252.5,187 230,174 207.5,187 207.5,213 230,226 252.5,213" style="fill:var(--magenta-soft);stroke:var(--magenta)" stroke-width="2"/>
 <polygon points="252.5,187 277.2,179 292.5,200 277.2,221 252.5,213" style="fill:var(--magenta-soft);stroke:var(--magenta)" stroke-width="2"/>
+<line x1="252.5" y1="187" x2="252.5" y2="213" style="stroke:var(--magenta)" stroke-width="2"/>
 <text x="230" y="206" text-anchor="middle" font-family="inherit" font-size="16" font-weight="700" style="fill:var(--ink)">G</text>
 <line x1="292" y1="200" x2="326" y2="200" style="stroke:var(--ink)" stroke-width="2"/>
 <text x="190" y="248" text-anchor="middle" font-family="inherit" font-size="12" style="fill:var(--ink)">G–C: 3 hydrogen bonds</text>
@@ -213,7 +215,7 @@ window.LESSONS.push({
 <p data-tier="likely">Because a G–C pair has three hydrogen bonds and an A–T pair only two, a stretch of DNA rich in G and C holds its two strands together more tightly than a stretch rich in A and T. It takes more heat to separate G–C-rich DNA, and cells often start unzipping DNA at A–T-rich regions.</p>
 <div class="callout teacher"><p class="callout-title">Said in class</p><p>From the DNA video: the two strands interact through hydrogen bonds between bases, which is what "base pairing" means. A second force also stabilizes the helix: the flat, ring-shaped (aromatic) bases stack on top of each other like a pile of coins, and the attraction between stacked rings (called π–π stacking, from the ring electrons) holds the helix together along its length.</p></div>
 <p data-tier="extra">History: in 1950 the biochemist Erwin Chargaff measured the bases in DNA from many species and found that the amount of A always equals the amount of T, and the amount of G always equals the amount of C, even though the A + T to G + C ratio varies from species to species. In 1953 James Watson and Francis Crick, using X-ray images of DNA made by Rosalind Franklin, explained Chargaff's numbers with their double-helix model: the amounts match because A is always paired with T and G with C. The class slides use "Chargaff's rule" for the pairing rule itself.</p>
-<div class="callout tip"><p class="callout-title">Memory trick</p><p><strong>"AT the Golf Course"</strong>: A goes with T, G goes with C. For the hydrogen bonds, count the strokes in the letters: <strong>A–T</strong> pairs have <strong>2</strong> bonds, <strong>C–G</strong> pairs have <strong>3</strong> (C and G are "curvier" and hold on tighter).</p></div>
+<div class="callout tip"><p class="callout-title">Memory trick</p><p><strong>"AT the Golf Course"</strong>: A goes with T, G goes with C. For the hydrogen bonds: the letters A and T are drawn with straight lines only, while C and G are curvy. The straight pair gets <strong>2</strong> hydrogen bonds; the curvy pair holds on tighter with <strong>3</strong>.</p></div>
 <details class="check"><summary>Review question 1: How does the number of purines relate to the number of pyrimidines in a DNA/RNA chain?</summary><div class="ans"><p>In double-stranded DNA, the number of <strong>purines always equals the number of pyrimidines</strong> (a 1:1 ratio). Every rung of the ladder is one purine (A or G, double ring) paired with one pyrimidine (T or C, single ring), so they must come in equal numbers. This keeps the rungs a constant width: A pairs with T and G pairs with C.</p><p>In RNA, which is usually <strong>single-stranded</strong>, there is no partner strand, so the 1:1 ratio does not have to hold, although A and G are still purines and C and U are still pyrimidines.</p></div></details>
 
 <h3 data-tier="essential">Using Chargaff's rule: base percentage calculations</h3>
