@@ -301,6 +301,536 @@ window.LESSONS.push({
 <div class="callout teacher"><p class="callout-title">Said in class</p><p>A vacuole is technically a special type of vesicle: a big bubble that acts as the cell's <strong>trash can</strong>. Plants have a large central vacuole that also keeps the plant firm through fluid pressure.</p></div>
 <p data-tier="extra">Other kinds from the reading: <strong>food vacuoles</strong> form when a cell engulfs food by phagocytosis, and many freshwater protists have <strong>contractile vacuoles</strong> that pump excess water out of the cell so it does not burst.</p>
 <details class="check"><summary>Why does a plant wilt if it is not watered?</summary><div class="ans"><p>Its cells lose water, so the central vacuoles shrink. The vacuoles no longer press outward against the cell walls, so the fluid pressure that kept the cells firm drops, and the stems and leaves go limp.</p></div></details>
-<!-- @@108-PART3@@ -->
+<h3 data-tier="essential">Mitochondria</h3>
+<ul>
+  <li><strong>Structure:</strong> a bean-shaped organelle (usually 1 to 4 µm long) with <strong>two membranes</strong>. The <strong>outer membrane</strong> is smooth. The <strong>inner membrane</strong> is highly folded; the folds are called <span class="term">cristae</span>. The two membranes create two compartments: the <span class="term">intermembrane space</span> (between the membranes) and the <span class="term">matrix</span> (the fluid inside the inner membrane), which contains enzymes, the mitochondrion's own DNA and its own ribosomes.</li>
+  <li><strong>Function:</strong> the site of <strong>aerobic cellular respiration</strong>. Mitochondria break down organic molecules such as glucose and fatty acids, using oxygen, and transfer the energy released into <strong>ATP</strong>, the molecule cells use to power their work. They make most of the ATP in plant and animal cells.</li>
+</ul>
+<p>The cristae exist to increase surface area. Many of the proteins of respiration, including the enzyme that makes ATP, are built into the inner membrane, so more folds means more ATP-making machinery packed into the same small organelle. You will study each stage in Unit 2.</p>
+<p>The number of mitochondria matches the cell's energy demand. A single-celled yeast may have only one; a human skeletal muscle cell can have a thousand or more. Mitochondria are not fixed shapes either: they move, change shape, split in two and fuse.</p>
+<div class="callout warn"><p class="callout-title">Common mistake</p><p>The slide's hint says it directly: <strong>do not write "the powerhouse of the cell."</strong> It earns no marks because it names neither the process nor the product. Write: "site of cellular respiration, which uses oxygen to break down glucose and stores the released energy in ATP." Also avoid "mitochondria make energy": energy cannot be created; it is converted from the chemical energy in food to the chemical energy in ATP.</p></div>
+<figure class="diagram">
+<svg viewBox="0 0 640 272" role="img" aria-labelledby="b108-t3">
+<title id="b108-t3">Cutaway diagrams of a mitochondrion and a chloroplast. The mitochondrion has a smooth outer membrane, an inner membrane folded into cristae, an intermembrane space between them, and a fluid matrix inside. The chloroplast has outer and inner membranes surrounding a fluid stroma that contains stacks of thylakoid discs called grana, joined by lamellae.</title>
+<text x="160" y="20" text-anchor="middle" font-family="inherit" font-size="14" font-weight="700" style="fill:var(--ink)">Mitochondrion</text>
+<text x="480" y="20" text-anchor="middle" font-family="inherit" font-size="14" font-weight="700" style="fill:var(--ink)">Chloroplast</text>
+<ellipse cx="160" cy="140" rx="130" ry="62" style="fill:var(--red-soft);stroke:var(--red)" stroke-width="2.5"/>
+<ellipse cx="160" cy="140" rx="118" ry="50" style="fill:var(--surface);stroke:var(--red)" stroke-width="2"/>
+<path d="M75,105V135M115,94V133M155,90V132M195,92V132M235,101V135M95,182V147M135,189V148M175,190V148M215,184V147M255,170V150" style="fill:none;stroke:var(--red)" stroke-width="6" stroke-linecap="round"/>
+<path d="M75,105V135M115,94V133M155,90V132M195,92V132M235,101V135M95,182V147M135,189V148M175,190V148M215,184V147M255,170V150" style="fill:none;stroke:var(--red-soft)" stroke-width="2" stroke-linecap="round"/>
+<ellipse cx="480" cy="140" rx="135" ry="62" style="fill:var(--surface-2);stroke:var(--good)" stroke-width="2.5"/>
+<ellipse cx="480" cy="140" rx="127" ry="55" style="fill:var(--teal-soft);stroke:var(--good)" stroke-width="1.5"/>
+<g style="fill:var(--good)">
+<rect x="382" y="123" width="26" height="6" rx="3"/><rect x="382" y="131" width="26" height="6" rx="3"/><rect x="382" y="139" width="26" height="6" rx="3"/><rect x="382" y="147" width="26" height="6" rx="3"/>
+<rect x="432" y="111" width="26" height="6" rx="3"/><rect x="432" y="119" width="26" height="6" rx="3"/><rect x="432" y="127" width="26" height="6" rx="3"/><rect x="432" y="135" width="26" height="6" rx="3"/>
+<rect x="492" y="125" width="26" height="6" rx="3"/><rect x="492" y="133" width="26" height="6" rx="3"/><rect x="492" y="141" width="26" height="6" rx="3"/><rect x="492" y="149" width="26" height="6" rx="3"/>
+<rect x="547" y="115" width="26" height="6" rx="3"/><rect x="547" y="123" width="26" height="6" rx="3"/><rect x="547" y="131" width="26" height="6" rx="3"/><rect x="547" y="139" width="26" height="6" rx="3"/>
+</g>
+<path d="M408,135 L432,125 M458,119 L492,139 M518,133 L547,127" style="fill:none;stroke:var(--good)" stroke-width="2"/>
+<g style="stroke:var(--ink-2)" stroke-width="1">
+<line x1="78" y1="50" x2="90" y2="88"/><line x1="240" y1="50" x2="250" y2="101"/><line x1="64" y1="238" x2="80" y2="177"/><line x1="150" y1="238" x2="145" y2="165"/><line x1="232" y1="238" x2="216" y2="162"/>
+<line x1="388" y1="50" x2="380" y2="99"/><line x1="566" y1="50" x2="570" y2="102"/><line x1="412" y1="238" x2="430" y2="170"/><line x1="495" y1="238" x2="505" y2="155"/><line x1="575" y1="238" x2="560" y2="145"/>
+</g>
+<g style="fill:var(--ink)"><circle cx="90" cy="88" r="2.2"/><circle cx="250" cy="101" r="2.2"/><circle cx="80" cy="177" r="2.2"/><circle cx="145" cy="165" r="2.2"/><circle cx="216" cy="162" r="2.2"/><circle cx="380" cy="99" r="2.2"/><circle cx="570" cy="102" r="2.2"/><circle cx="430" cy="170" r="2.2"/><circle cx="505" cy="155" r="2.2"/><circle cx="560" cy="145" r="2.2"/></g>
+<text x="70" y="44" text-anchor="middle" font-family="inherit" font-size="12" style="fill:var(--ink)">Outer membrane</text>
+<text x="235" y="44" text-anchor="middle" font-family="inherit" font-size="12" style="fill:var(--ink)">Intermembrane space</text>
+<text x="60" y="250" text-anchor="middle" font-family="inherit" font-size="12" style="fill:var(--ink)">Inner membrane</text>
+<text x="150" y="250" text-anchor="middle" font-family="inherit" font-size="12" style="fill:var(--ink)">Matrix</text>
+<text x="235" y="250" text-anchor="middle" font-family="inherit" font-size="12" style="fill:var(--ink)">Cristae (folds)</text>
+<text x="388" y="44" text-anchor="middle" font-family="inherit" font-size="12" style="fill:var(--ink)">Outer membrane</text>
+<text x="566" y="44" text-anchor="middle" font-family="inherit" font-size="12" style="fill:var(--ink)">Inner membrane</text>
+<text x="410" y="250" text-anchor="middle" font-family="inherit" font-size="12" style="fill:var(--ink)">Stroma</text>
+<text x="495" y="250" text-anchor="middle" font-family="inherit" font-size="12" style="fill:var(--ink)">Thylakoid</text>
+<text x="580" y="250" text-anchor="middle" font-family="inherit" font-size="12" style="fill:var(--ink)">Granum</text>
+<text x="580" y="265" text-anchor="middle" font-family="inherit" font-size="11.5" style="fill:var(--ink-2)">(thylakoid stack)</text>
+</svg>
+<figcaption>Both organelles have two membranes. The mitochondrion folds its inner membrane into cristae; the chloroplast has a third membrane system, the thylakoids, stacked into grana inside the stroma.</figcaption>
+</figure>
+
+<h3 data-tier="essential">Chloroplasts and other plastids</h3>
+<ul>
+  <li><strong>Structure:</strong> an oval or disk-shaped organelle bounded by a <strong>double membrane</strong> (outer and inner membrane, with an intermembrane space between). Inside is a semi-fluid called the <span class="term">stroma</span>, which contains enzymes and the chloroplast's own DNA. In the stroma is a third membrane system of flattened sacs called <span class="term">thylakoids</span>; a stack of thylakoids is a <span class="term">granum</span> (plural grana), and grana are linked by stroma lamellae. The green pigment <strong>chlorophyll</strong> sits in the thylakoid membranes.</li>
+  <li><strong>Function:</strong> <strong>photosynthesis</strong>. Chloroplasts capture light energy and use it to make sugars from carbon dioxide and water, releasing oxygen. They convert light energy into chemical energy.</li>
+  <li><strong>Location:</strong> in the cytoplasm of photosynthetic cells: plant cells (mostly in leaves and other green parts) and algae. Not in animal cells, and not in plant cells that never see light, such as root cells.</li>
+</ul>
+<p>A chloroplast is one kind of <span class="term">plastid</span>: a membrane-bound organelle used for photosynthesis or storage in plants and algae. Two other plastids appear in the reading:</p>
+<ul>
+  <li><span class="term">Chromoplasts</span> make and store pigments other than chlorophyll, mainly orange and red <strong>carotenoids</strong>. They colour many flowers, fruits and roots. As a tomato ripens, its green chloroplasts turn into red chromoplasts, and autumn colours appear when chlorophyll breaks down and reveals the carotenoids.</li>
+  <li><span class="term">Amyloplasts</span> are unpigmented plastids that store <strong>starch</strong>. They are abundant in stems, tubers (underground stems, like potatoes) and seeds.</li>
+</ul>
+<div class="callout teacher"><p class="callout-title">Said in class</p><p>Amyloplasts were not on the slides but came up in class: an unpigmented type of plastid that stores starch grains in stems, tubers and seeds. In some plants they also act as <strong>gravity-sensing</strong> organelles: being heavy with starch, they settle to the bottom of the cell, which tells a root which way is down.</p></div>
+<div class="table-wrap"><table class="data"><thead><tr><th></th><th>Mitochondrion</th><th>Chloroplast</th></tr></thead><tbody>
+<tr><td>Found in</td><td>Nearly all eukaryotic cells (plants and animals)</td><td>Plant and algal cells only</td></tr>
+<tr><td>Membranes</td><td>Two; inner one folded into cristae</td><td>Two, plus internal thylakoid membranes</td></tr>
+<tr><td>Fluid inside</td><td>Matrix</td><td>Stroma</td></tr>
+<tr><td>Own DNA and ribosomes</td><td>Yes</td><td>Yes</td></tr>
+<tr><td>Energy conversion</td><td>Chemical energy in food to chemical energy in ATP</td><td>Light energy to chemical energy in sugar</td></tr>
+</tbody></table></div>
+<h4 data-tier="likely">Endosymbiosis: why these two look like bacteria</h4>
+<p data-tier="likely">Mitochondria and chloroplasts resemble bacteria in size, shape and biochemistry. Each has its own DNA (similar to bacterial DNA) and its own ribosomes, and each divides on its own by splitting in two. The <span class="term">endosymbiosis</span> theory explains this: mitochondria evolved from aerobic bacteria, and chloroplasts from photosynthetic bacteria, that were taken in by a host cell and stayed there permanently. Their double membranes fit the story: the inner membrane came from the bacterium, the outer one from the host cell that engulfed it.</p>
+<div class="callout teacher"><p class="callout-title">Said in class</p><p>The chloroplast resembles photosynthetic bacteria, which is the evidence for endosymbiosis. Note that the mitochondrion "technically has two membranes," just like the chloroplast.</p></div>
+
+<h3 data-tier="essential">The cytoskeleton: microtubules and microfilaments</h3>
+<p>Between the nucleus and the plasma membrane runs the <span class="term">cytoskeleton</span>: an interconnected network of protein filaments. It reinforces the cell, organizes the organelles, and moves cell structures and often the whole cell. Some parts are permanent; others are built only when needed and then taken apart.</p>
+<div class="table-wrap"><table class="data"><thead><tr><th></th><th>Microtubules</th><th>Microfilaments</th><th>Intermediate filaments</th></tr></thead><tbody>
+<tr><td>Structure</td><td>Long, <strong>hollow</strong> cylinders made of the protein <strong>tubulin</strong>; thickest (25 nm)</td><td>Thin, solid <strong>fibres</strong> of the protein <strong>actin</strong>; thinnest (about 7 nm)</td><td>Fibrous proteins (such as keratins) twisted into cables; medium (8 to 12 nm)</td></tr>
+<tr><td>Mainly located</td><td>Throughout the cytoplasm, radiating out from the centrosome near the nucleus</td><td>Concentrated at the <strong>edge of the cell</strong>, just under the plasma membrane</td><td>Cytosol and nucleus of most animal cells</td></tr>
+<tr><td>Functions</td><td>Dynamic scaffolding that holds cell shape; tracks along which vesicles and organelles move; <strong>separate chromosomes</strong> during cell division; make up cilia, flagella and centrioles</td><td><strong>Change the shape</strong> of the cell; extend or drag the cell edge (pseudopods); <strong>muscle contraction</strong> (actin with myosin); pinch a dividing animal cell in two</td><td>The most stable and toughest; strengthen cells and tissues; anchor the nucleus</td></tr>
+</tbody></table></div>
+<p>The key word for microtubules is <strong>dynamic</strong>: they rapidly assemble when they are needed and disassemble when they are not. Before a cell divides, for example, a set of microtubules (the spindle) assembles, pulls the duplicated chromosomes apart, then breaks down again.</p>
+<div class="callout teacher"><p class="callout-title">Said in class</p><p>"Cytoskeleton" was not a slide heading, but it was discussed: it is the scaffolding of the cell, it organizes and moves cell structures (or the whole cell), some parts are permanent and some are not, and it is <strong>really important for animal cells to maintain their structure</strong>, because they have no cell wall. Microtubules assemble to help with a function when needed and disassemble when not; microfilaments change the shape of the cell and drive movements and contractions.</p></div>
+<div class="callout tip"><p class="callout-title">Memory trick</p><p>Micro<strong>tubules</strong> are <strong>tubes</strong> (hollow, made of <strong>tub</strong>ulin). Micro<strong>filaments</strong> are <strong>fil</strong>led-in threads of <strong>act</strong>in, the protein that <strong>act</strong>s in muscle contraction.</p></div>
+
+<h3 data-tier="essential">Cilia, flagella and centrioles</h3>
+<p><strong>Structure (both):</strong> extensions of the cell surface, covered by the plasma membrane, with an organized array of <strong>microtubules</strong> running their whole length (nine pairs in a ring around two central ones, the "9 + 2" pattern). Protein spokes and links hold the array together. Each one grows from, and is anchored by, a <span class="term">basal body</span> just below the membrane, which has the same structure as a centriole.</p>
+<div class="compare">
+  <div><h4>Flagella (singular flagellum)</h4><ul><li><strong>Long and whiplike</strong>; usually one or a few per cell.</li><li>Move in an undulating, propeller-like wave.</li><li>Function: <strong>propel a cell through fluid</strong>. Example: a human sperm cell.</li></ul></div>
+  <div><h4>Cilia (singular cilium)</h4><ul><li><strong>Short and hairlike</strong>; many per cell.</li><li>Beat back and forth in coordinated waves.</li><li>Function: <strong>move a cell through fluid</strong> (a paramecium), or <strong>move fluid past a cell that stays put</strong>. Thousands of ciliated cells lining your airways sweep mucus and trapped particles away from your lungs.</li></ul></div>
+</div>
+<p>Some cells move a different way. <span class="term">Pseudopods</span> ("false feet") are temporary, irregular lobes that bulge out of the cell. Microfilaments push the lobes forward, so the cell creeps along and can wrap around and engulf a target. Amoebas hunt this way, and so do your white blood cells.</p>
+<div class="callout teacher"><p class="callout-title">Said in class</p><p><strong>Centrioles</strong> were not on the slides. Each is made of <strong>nine sets of triplet microtubules</strong> and has <strong>no membrane</strong>. A pair of them sits in the centrosome of animal cells. They help organize microtubule assembly and are involved in animal cell division. In class, pseudopods were also mentioned as a third way cells move.</p></div>
+<div class="callout tip"><p class="callout-title">Memory trick</p><p><strong>Cilia</strong> means "eyelashes" in Latin: many short hairs. A <strong>flagellum</strong> is a "whip": one long tail.</p></div>
+
+<h3 data-tier="likely">Outside the cell: extracellular matrix and cell junctions</h3>
+<p>Most cells of multicellular organisms are surrounded and organized by an <span class="term">extracellular matrix (ECM)</span>: a non-living, complex mixture of fibrous proteins (such as collagen) and polysaccharides that the cells secrete around themselves. The ECM <strong>supports and anchors cells</strong>, <strong>separates tissues</strong> and helps with cell signalling. It is the basis of tissue organization. A plant's primary cell wall is a type of ECM (mostly cellulose), and fungal ECM is mostly chitin. <strong>Bone is mostly ECM</strong>: collagen fibres hardened by mineral deposits. Proteins in the plasma membrane (integrins) link the ECM outside to the cytoskeleton inside, which is the "anchoring" function you will meet in lesson 1.09.</p>
+<p>Cells that touch can still communicate through <span class="term">cell junctions</span>: structures that connect a cell to other cells and to its surroundings. Ions, small molecules and signals pass through some junctions; others help cells recognize and stick to each other and to the ECM.</p>
+<ul data-tier="extra">
+  <li><strong>Plasmodesmata</strong> (plants): channels through the cell walls that join the cytoplasm of neighbouring cells.</li>
+  <li><strong>Tight junctions</strong> (animals): membranes of neighbouring cells pressed together to make a seal, so fluid cannot leak between cells (for example, in the intestinal lining).</li>
+  <li><strong>Desmosomes</strong> (animals): rivet-like anchors that fasten cells together into strong sheets, such as skin.</li>
+  <li><strong>Gap junctions</strong> (animals): protein channels between cells, like plasmodesmata, that let ions and small molecules pass directly; they let heart muscle cells contract in sync.</li>
+</ul>
+<div class="callout teacher"><p class="callout-title">Said in class</p><p>Neither the ECM nor cell junctions were on the slides, but both were covered from the reading. ECM: a complex mix of fibrous proteins and polysaccharides that surrounds cells, supports and anchors them, separates tissues, and is the basis of tissue organization ("bone is mostly ECM"). Cell junctions: found between cells; they connect cells, transfer ions, molecules and signals, and help cells recognize and stick to each other.</p></div>
+
+<h3 data-tier="likely">Organelle abundance in specialized cells</h3>
+<p>Cells in a multicellular organism specialize, and a cell's organelles match its job. A cell that secretes protein is packed with rough ER and Golgi; a cell that does a lot of work is packed with mitochondria. The class worksheet "Organelle Abundance and Distribution" used these answers:</p>
+<div class="table-wrap"><table class="data"><thead><tr><th>Organelle</th><th>Main function</th><th>High concentration in</th><th>Low concentration in</th></tr></thead><tbody>
+<tr><td>Mitochondria</td><td>Generate cellular energy (ATP) via cellular respiration</td><td>Muscle cells, neurons</td><td>Fat cells, red blood cells</td></tr>
+<tr><td>Rough ER</td><td>Synthesizes, folds and processes proteins destined for secretion, insertion into membranes or delivery within the cell</td><td>Pancreatic cells, plasma B cells (secrete antibodies)</td><td>Muscle cells, fat cells</td></tr>
+<tr><td>Smooth ER</td><td>Synthesizes lipids (phospholipids and steroids); detoxifies metabolic waste</td><td>Liver cells, adrenal gland cells</td><td>Red blood cells, neurons</td></tr>
+<tr><td>Lysosomes</td><td>Break down and digest waste and unwanted materials</td><td>White blood cells, liver cells</td><td>Muscle cells, neurons</td></tr>
+<tr><td>Golgi apparatus</td><td>Processes, sorts and directs synthesized molecules</td><td>Pancreatic cells, salivary gland cells, adrenal gland cells</td><td>Fat cells, red blood cells</td></tr>
+</tbody></table></div>
+<p>Notice the reasoning: muscle contracts and neurons pump ions constantly, so both need ATP. Pancreatic cells and plasma B cells export proteins (enzymes and antibodies), so they need rough ER and Golgi. Liver cells detoxify and adrenal cells make steroid hormones (lipids), so they need smooth ER. White blood cells digest what they engulf, so they need lysosomes. Mature red blood cells have almost no organelles at all; they are mostly bags of hemoglobin.</p>
+<details class="check"><summary>Worksheet question 1: A mutation causes cells to have very few mitochondria. Which organs would be most affected, and why?</summary><div class="ans"><p>The organs with the highest ATP demand: the <strong>heart</strong> (needs ATP to pump continuously), the <strong>brain</strong> (needs constant ATP for signalling) and the <strong>skeletal muscles</strong> (need ATP for contraction). Too few mitochondria means an energy crisis in high-demand tissues.</p></div></details>
+<details class="check"><summary>Worksheet question 2: Nerve cells move neurotransmitters (proteins) along their long axons and must insulate the axon. Which organelles must be especially active?</summary><div class="ans"><p><strong>Mitochondria</strong> (ATP for the active transport of ions), <strong>rough ER and Golgi</strong> (to make and process the neurotransmitter proteins), and <strong>vesicles</strong> (to transport the neurotransmitters).</p></div></details>
+<details class="check"><summary>Worksheet question 3: Cells in the stomach lining secrete large amounts of digestive enzymes. Which organelles must be highly active, and how do they work together?</summary><div class="ans"><p><strong>Rough ER</strong> makes the enzymes, the <strong>Golgi</strong> modifies and packages them, and <strong>vesicles</strong> carry them to the plasma membrane and release them into the stomach by exocytosis: rough ER → Golgi → vesicles → out of the cell.</p></div></details>
+
+<h3 data-tier="essential">Organelle summary table</h3>
+<div class="table-wrap"><table class="data"><thead><tr><th>Organelle</th><th>Structure</th><th>Function</th><th>Extra info</th></tr></thead><tbody>
+<tr><td>Cell membrane</td><td>Phospholipid bilayer with proteins, cholesterol, carbohydrates</td><td>Barrier; controls what enters and leaves</td><td>Selectively permeable; all cells</td></tr>
+<tr><td>Cell wall</td><td>Cellulose microfibrils in pectin; primary and secondary wall</td><td>Protects, supports, gives shape</td><td>Plants, fungi (chitin), many protists; porous; plasmodesmata</td></tr>
+<tr><td>Nucleus</td><td>Large, round; double membrane with pores</td><td>Holds and protects DNA; controls access to it</td><td>Contains nucleoplasm, chromatin, nucleolus</td></tr>
+<tr><td>Nuclear envelope</td><td>Two lipid bilayers with nuclear pores</td><td>Controls what enters and leaves the nucleus</td><td>Outer membrane continuous with ER</td></tr>
+<tr><td>Nucleolus</td><td>Dense, irregular region; no membrane</td><td>Assembles ribosome subunits from rRNA and protein</td><td>Prominent in protein-making cells</td></tr>
+<tr><td>Chromatin</td><td>DNA wound around histone proteins</td><td>Packages DNA; condenses into chromosomes</td><td>Total DNA plus proteins in nucleus</td></tr>
+<tr><td>Cytosol</td><td>Semi-fluid, water-based</td><td>Suspends organelles; site of many reactions</td><td>Cytoplasm = cytosol + organelles</td></tr>
+<tr><td>Ribosome</td><td>Large and small subunits of rRNA and protein; no membrane</td><td>Protein synthesis</td><td>Free (cytosol) or bound (ER); made in nucleolus</td></tr>
+<tr><td>Rough ER</td><td>Flattened sacs studded with ribosomes</td><td>Makes and folds proteins for membranes and export</td><td>Continuous with nuclear envelope</td></tr>
+<tr><td>Smooth ER</td><td>Tubes with no ribosomes</td><td>Makes lipids and steroids; detoxifies drugs and poisons</td><td>Abundant in liver and adrenal cells</td></tr>
+<tr><td>Golgi apparatus</td><td>Stack of flattened sacs; cis and trans faces</td><td>Modifies (adds sugars, phosphates, cleaves), sorts, ships</td><td>"Post office"; makes lysosomes</td></tr>
+<tr><td>Vesicle</td><td>Small sac, single membrane</td><td>Transports, stores or digests substances</td><td>Buds off ER, Golgi, plasma membrane</td></tr>
+<tr><td>Lysosome</td><td>Vesicle of digestive enzymes</td><td>Intracellular digestion and recycling</td><td>pH about 5; from Golgi; Tay-Sachs</td></tr>
+<tr><td>Peroxisome</td><td>Vesicle with catalase and other enzymes</td><td>Breaks down fatty acids, H<sub>2</sub>O<sub>2</sub> and toxins</td><td>H<sub>2</sub>O<sub>2</sub> → water + oxygen</td></tr>
+<tr><td>Vacuole</td><td>Liquid-filled sac (plants: large central vacuole, tonoplast)</td><td>Stores materials and wastes; water balance</td><td>Plant: 50 to 90% of cell; keeps cell firm</td></tr>
+<tr><td>Mitochondrion</td><td>Double membrane; cristae; matrix</td><td>Cellular respiration: makes ATP</td><td>Own DNA; endosymbiosis</td></tr>
+<tr><td>Chloroplast</td><td>Double membrane; stroma; thylakoids in grana</td><td>Photosynthesis: light energy to sugar</td><td>A plastid; own DNA; plants and algae</td></tr>
+<tr><td>Microtubule</td><td>Hollow tube of tubulin</td><td>Shape, tracks, chromosome movement</td><td>Builds cilia, flagella, centrioles</td></tr>
+<tr><td>Microfilament</td><td>Solid fibre of actin</td><td>Changes cell shape; muscle contraction</td><td>Just under plasma membrane</td></tr>
+<tr><td>Cilia / flagella</td><td>Microtubule arrays (9 + 2) on a basal body</td><td>Move the cell or move fluid past it</td><td>Cilia short and many; flagella long and few</td></tr>
+<tr><td>Centriole</td><td>Nine triplets of microtubules; no membrane</td><td>Organizes microtubules; cell division</td><td>Animal cells only</td></tr>
+</tbody></table></div>
+
+<h3 data-tier="essential">Lesson summary</h3>
+<ul>
+  <li>Organelles divide a eukaryotic cell into compartments, so incompatible jobs can run side by side and harmful substances stay isolated. The cytosol is the fluid; the cytoplasm is the fluid plus the organelles.</li>
+  <li>Plant cells only: cell wall, chloroplasts, large central vacuole, plasmodesmata. Animal cells only: lysosomes, centrioles (and flagella, except in a few plant sperm).</li>
+  <li>The nucleus protects the DNA (chromatin) behind a double, porous envelope; the nucleolus builds ribosome subunits; ribosomes (no membrane) make proteins.</li>
+  <li>Endomembrane system: rough ER makes and folds proteins, smooth ER makes lipids and detoxifies, the Golgi modifies, sorts and ships, vesicles carry products, lysosomes (pH about 5) digest, vacuoles store and keep plant cells firm.</li>
+  <li>Mitochondria (cellular respiration, ATP) and chloroplasts (photosynthesis) both have double membranes and their own DNA, evidence for endosymbiosis.</li>
+  <li>The cytoskeleton (microtubules, microfilaments, intermediate filaments) gives shape and movement; cilia and flagella are microtubule-based; centrioles organize microtubules.</li>
+  <li>Specialized cells have more of the organelles their job needs: mitochondria in muscle, rough ER and Golgi in secreting cells, smooth ER in liver and adrenal cells, lysosomes in white blood cells.</li>
+</ul>
+`
+});
+
+/* ===================================================================
+   1.09 CELL MEMBRANE
+   =================================================================== */
+window.LESSONS.push({
+  id: "1.09",
+  title: "Cell Membrane",
+  stage: "c4",
+  where: "Plasma membrane",
+  summary: "The cell membrane is a phospholipid bilayer studded with proteins, cholesterol and carbohydrate chains. You need its functions, why phospholipids form a bilayer, what \"fluid\" and \"mosaic\" mean, the jobs of integral and peripheral proteins, the roles of glycoproteins and glycolipids, and how fatty acid tails, temperature and cholesterol control membrane fluidity.",
+  objectives: [
+    "List and explain the functions of the cell membrane: barrier, compartmentalization, selective permeability and transport, cell-cell recognition, signal transduction, enzymatic activity, intercellular joining, and anchoring.",
+    "Describe a phospholipid (hydrophilic head, hydrophobic tails) and explain why phospholipids form a bilayer on their own in water.",
+    "Explain what each word of the fluid mosaic model means and why the membrane needs to be fluid.",
+    "Distinguish integral from peripheral proteins and describe six jobs of membrane proteins.",
+    "Describe the glycocalyx, glycoproteins and glycolipids and their roles in recognition, communication and anchoring.",
+    "Explain how unsaturated and saturated fatty acid tails, temperature and cholesterol change membrane fluidity.",
+    "Predict whether a molecule can cross the bilayer on its own from its size, polarity and charge."
+  ],
+  html: `
+<h3 data-tier="essential">What the cell membrane is</h3>
+<p>Every cell is wrapped in a <span class="term">cell membrane</span> (also called the <span class="term">plasma membrane</span>). It is extremely thin, about 8 nm, far too thin to see with a light microscope, yet it decides what gets in and out of the cell and how the cell interacts with everything around it. The membranes around organelles (the nuclear envelope, ER, Golgi, lysosomes, mitochondria) are built on the same plan.</p>
+<p>The introductory slide shows the whole picture at once, the <span class="term">fluid mosaic model</span>. The base of the membrane is a <strong>phospholipid bilayer</strong>. Scattered through it are <strong>proteins</strong> (integral and peripheral), <strong>cholesterol</strong>, and <strong>carbohydrate chains</strong> attached to proteins (glycoproteins) or lipids (glycolipids). The rest of this lesson takes each part in turn and asks what it is for.</p>
+<figure class="diagram">
+<svg viewBox="0 0 640 352" role="img" aria-labelledby="b109-t1">
+<title id="b109-t1">The fluid mosaic model. A phospholipid bilayer, with hydrophilic heads facing the fluid outside and inside the cell and hydrophobic tails in the middle, holds a glycoprotein with a carbohydrate chain on the outside, a channel protein with a pore that molecules pass through, cholesterol molecules between the phospholipids, an integral protein attached to a cytoskeleton filament inside the cell, a peripheral protein on the inner surface, and a glycolipid with a carbohydrate chain.</title>
+<defs>
+<marker id="b109-ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" style="fill:var(--teal)"/></marker>
+</defs>
+<text x="20" y="22" font-family="inherit" font-size="12" font-style="italic" style="fill:var(--ink-2)">Outside the cell (extracellular fluid)</text>
+<text x="20" y="346" font-family="inherit" font-size="12" font-style="italic" style="fill:var(--ink-2)">Inside the cell (cytosol)</text>
+<path d="M26,147V180M32,147V180M26,188V221M32,188V221M44,147V180M50,147V180M44,188V221M50,188V221M62,147V180M68,147V180M62,188V221M68,188V221M80,147V180M86,147V180M80,188V221M86,188V221M98,147V180M104,147V180M98,188V221M104,188V221M116,147V180M122,147V180M116,188V221M122,188V221M134,147V180M140,147V180M134,188V221M140,188V221M152,147V180M158,147V180M152,188V221M158,188V221M170,147V180M176,147V180M170,188V221M176,188V221M188,147V180M194,147V180M188,188V221M194,188V221M206,147V180M212,147V180M206,188V221M212,188V221M224,147V180M230,147V180M224,188V221M230,188V221M242,147V180M248,147V180M242,188V221M248,188V221M260,147V180M266,147V180M260,188V221M266,188V221M278,147V180M284,147V180M278,188V221M284,188V221M296,147V180M302,147V180M296,188V221M302,188V221M314,147V180M320,147V180M314,188V221M320,188V221M332,147V180M338,147V180M332,188V221M338,188V221M350,147V180M356,147V180M350,188V221M356,188V221M368,147V180M374,147V180M368,188V221M374,188V221M386,147V180M392,147V180M386,188V221M392,188V221M404,147V180M410,147V180M404,188V221M410,188V221M422,147V180M428,147V180M422,188V221M428,188V221M440,147V180M446,147V180M440,188V221M446,188V221M458,147V180M464,147V180M458,188V221M464,188V221M476,147V180M482,147V180M476,188V221M482,188V221M494,147V180M500,147V180M494,188V221M500,188V221M512,147V180M518,147V180M512,188V221M518,188V221M530,147V180M536,147V180M530,188V221M536,188V221M548,147V180M554,147V180M548,188V221M554,188V221M566,147V180M572,147V180M566,188V221M572,188V221M584,147V180M590,147V180M584,188V221M590,188V221M602,147V180M608,147V180M602,188V221M608,188V221M620,147V180M626,147V180M620,188V221M626,188V221" style="fill:none;stroke:var(--ink-2)" stroke-width="1.5"/>
+<g style="fill:var(--blue-soft);stroke:var(--blue)" stroke-width="1.2"><circle cx="29" cy="140" r="7.5"/><circle cx="29" cy="228" r="7.5"/><circle cx="47" cy="140" r="7.5"/><circle cx="47" cy="228" r="7.5"/><circle cx="65" cy="140" r="7.5"/><circle cx="65" cy="228" r="7.5"/><circle cx="83" cy="140" r="7.5"/><circle cx="83" cy="228" r="7.5"/><circle cx="101" cy="140" r="7.5"/><circle cx="101" cy="228" r="7.5"/><circle cx="119" cy="140" r="7.5"/><circle cx="119" cy="228" r="7.5"/><circle cx="137" cy="140" r="7.5"/><circle cx="137" cy="228" r="7.5"/><circle cx="155" cy="140" r="7.5"/><circle cx="155" cy="228" r="7.5"/><circle cx="173" cy="140" r="7.5"/><circle cx="173" cy="228" r="7.5"/><circle cx="191" cy="140" r="7.5"/><circle cx="191" cy="228" r="7.5"/><circle cx="209" cy="140" r="7.5"/><circle cx="209" cy="228" r="7.5"/><circle cx="227" cy="140" r="7.5"/><circle cx="227" cy="228" r="7.5"/><circle cx="245" cy="140" r="7.5"/><circle cx="245" cy="228" r="7.5"/><circle cx="263" cy="140" r="7.5"/><circle cx="263" cy="228" r="7.5"/><circle cx="281" cy="140" r="7.5"/><circle cx="281" cy="228" r="7.5"/><circle cx="299" cy="140" r="7.5"/><circle cx="299" cy="228" r="7.5"/><circle cx="317" cy="140" r="7.5"/><circle cx="317" cy="228" r="7.5"/><circle cx="335" cy="140" r="7.5"/><circle cx="335" cy="228" r="7.5"/><circle cx="353" cy="140" r="7.5"/><circle cx="353" cy="228" r="7.5"/><circle cx="371" cy="140" r="7.5"/><circle cx="371" cy="228" r="7.5"/><circle cx="389" cy="140" r="7.5"/><circle cx="389" cy="228" r="7.5"/><circle cx="407" cy="140" r="7.5"/><circle cx="407" cy="228" r="7.5"/><circle cx="425" cy="140" r="7.5"/><circle cx="425" cy="228" r="7.5"/><circle cx="443" cy="140" r="7.5"/><circle cx="443" cy="228" r="7.5"/><circle cx="461" cy="140" r="7.5"/><circle cx="461" cy="228" r="7.5"/><circle cx="479" cy="140" r="7.5"/><circle cx="479" cy="228" r="7.5"/><circle cx="497" cy="140" r="7.5"/><circle cx="497" cy="228" r="7.5"/><circle cx="515" cy="140" r="7.5"/><circle cx="515" cy="228" r="7.5"/><circle cx="533" cy="140" r="7.5"/><circle cx="533" cy="228" r="7.5"/><circle cx="551" cy="140" r="7.5"/><circle cx="551" cy="228" r="7.5"/><circle cx="569" cy="140" r="7.5"/><circle cx="569" cy="228" r="7.5"/><circle cx="587" cy="140" r="7.5"/><circle cx="587" cy="228" r="7.5"/><circle cx="605" cy="140" r="7.5"/><circle cx="605" cy="228" r="7.5"/><circle cx="623" cy="140" r="7.5"/><circle cx="623" cy="228" r="7.5"/></g>
+<g style="fill:var(--amber)"><rect x="142.5" y="150" width="7" height="26" rx="3"/><rect x="286.5" y="150" width="7" height="26" rx="3"/><rect x="520.5" y="150" width="7" height="26" rx="3"/><rect x="178.5" y="192" width="7" height="26" rx="3"/><rect x="394.5" y="192" width="7" height="26" rx="3"/></g>
+<ellipse cx="110" cy="184" rx="22" ry="62" style="fill:var(--magenta-soft);stroke:var(--magenta)" stroke-width="2"/>
+<g style="fill:var(--good)"><circle cx="110" cy="113" r="5"/><circle cx="110" cy="102" r="5"/><circle cx="103" cy="92" r="5"/><circle cx="117" cy="92" r="5"/><circle cx="97" cy="82" r="5"/><circle cx="123" cy="82" r="5"/><circle cx="551" cy="126" r="5"/><circle cx="551" cy="115" r="5"/><circle cx="544" cy="105" r="5"/><circle cx="558" cy="105" r="5"/></g>
+<rect x="222" y="120" width="16" height="128" style="fill:var(--surface)"/>
+<rect x="198" y="120" width="24" height="128" rx="10" style="fill:var(--magenta-soft);stroke:var(--magenta)" stroke-width="2"/>
+<rect x="238" y="120" width="24" height="128" rx="10" style="fill:var(--magenta-soft);stroke:var(--magenta)" stroke-width="2"/>
+<line x1="230" y1="104" x2="230" y2="262" style="stroke:var(--teal)" stroke-width="1.5" marker-end="url(#b109-ar)"/>
+<g style="fill:var(--teal)"><circle cx="230" cy="96" r="4"/><circle cx="230" cy="184" r="4"/><circle cx="230" cy="276" r="4"/></g>
+<ellipse cx="355" cy="252" rx="26" ry="13" style="fill:var(--magenta-soft);stroke:var(--magenta)" stroke-width="2"/>
+<ellipse cx="460" cy="184" rx="20" ry="60" style="fill:var(--magenta-soft);stroke:var(--magenta)" stroke-width="2"/>
+<path d="M390,302 C430,290 480,306 540,294" style="fill:none;stroke:var(--teal)" stroke-width="4"/>
+<line x1="460" y1="244" x2="460" y2="298" style="stroke:var(--teal)" stroke-width="2"/>
+<g style="stroke:var(--ink-2)" stroke-width="1">
+<line x1="100" y1="56" x2="98" y2="77"/><line x1="225" y1="56" x2="210" y2="119"/><line x1="325" y1="56" x2="291" y2="149"/><line x1="452" y1="56" x2="458" y2="123"/><line x1="560" y1="56" x2="556" y2="100"/>
+<line x1="80" y1="312" x2="65" y2="236"/><line x1="335" y1="312" x2="348" y2="266"/><line x1="530" y1="312" x2="520" y2="298"/>
+</g>
+<text x="100" y="50" text-anchor="middle" font-family="inherit" font-size="12" style="fill:var(--ink)">Glycoprotein</text>
+<text x="230" y="50" text-anchor="middle" font-family="inherit" font-size="12" style="fill:var(--ink)">Channel protein</text>
+<text x="330" y="50" text-anchor="middle" font-family="inherit" font-size="12" style="fill:var(--amber)">Cholesterol</text>
+<text x="450" y="50" text-anchor="middle" font-family="inherit" font-size="12" style="fill:var(--ink)">Integral protein</text>
+<text x="560" y="50" text-anchor="middle" font-family="inherit" font-size="12" style="fill:var(--ink)">Glycolipid</text>
+<text x="90" y="324" text-anchor="middle" font-family="inherit" font-size="12" style="fill:var(--blue)">Phospholipid bilayer</text>
+<text x="330" y="324" text-anchor="middle" font-family="inherit" font-size="12" style="fill:var(--ink)">Peripheral protein</text>
+<text x="530" y="324" text-anchor="middle" font-family="inherit" font-size="12" style="fill:var(--teal)">Cytoskeleton filament</text>
+</svg>
+<figcaption>The fluid mosaic model. Proteins are magenta, carbohydrate chains green, cholesterol amber. The glycoprotein and channel protein are also integral proteins: they span the whole bilayer. Carbohydrate chains are only ever on the outside surface.</figcaption>
+</figure>
+
+<h3 data-tier="essential">Functions of the cell membrane</h3>
+<p>The slides list eight functions. For each one, know what it means and which part of the membrane does it.</p>
+<ol>
+  <li><strong>Physical barrier.</strong> The bilayer physically separates the cell's contents from its surroundings and keeps them from leaking away.</li>
+  <li><strong>Compartmentalization.</strong> It separates the inside of the cell from the outside, so the cell can keep its internal conditions (pH, ion concentrations, water content) different from the environment. Internal membranes do the same for each organelle.</li>
+  <li><strong>Selectively permeable.</strong> It lets some substances cross and blocks others, based on their size and solubility and on which protein channels and carriers are present.</li>
+  <li><strong>Allows transport in and out of the cell.</strong> Nutrients and oxygen must get in; wastes and products must get out. Proteins in the membrane open and close channels and carry specific materials across (lesson 1.10).</li>
+  <li><strong>Cell-cell recognition.</strong> Carbohydrate chains on the surface act like name tags, so cells can identify each other. This is how your immune system tells "self" from "foreign": in T-cell activation, a helper T cell recognizes a piece of a virus displayed on another cell's surface, and a killer T cell recognizes and destroys an infected cell.</li>
+  <li><strong>Signal transduction.</strong> A <span class="term">receptor protein</span> on the outside binds a signal molecule (such as a hormone) and passes the message inward. The slide shows three stages: <strong>reception</strong> (the signal binds the receptor), <strong>transduction</strong> (the receptor changes shape and triggers a chain of reactions inside the cell) and <strong>response</strong> (the cell's activity changes). The signal itself never enters.</li>
+  <li><strong>Enzymatic activity.</strong> Some membrane proteins are enzymes with their active site facing the inside or outside. Several enzymes can sit side by side in the membrane and carry out the steps of a pathway in order, like an assembly line.</li>
+  <li><strong>Intercellular joining (helps make tissues).</strong> Membrane proteins of neighbouring cells hook together to form junctions, such as tight junctions that seal cells into a sheet.</li>
+  <li><strong>Anchoring and structural support.</strong> Membrane proteins (such as integrins) attach to the cytoskeleton on the inside and to the fibres of the extracellular matrix (collagen and fibronectin) on the outside. This holds the cell's shape and anchors it in place in a tissue.</li>
+</ol>
+<div class="callout teacher"><p class="callout-title">Said in class</p><p>Use the term <strong>selectively permeable</strong>, not "semi-permeable." It is more accurate: the membrane does not just let "half" of things through; it chooses which specific substances cross, using proteins that can open and close channels for particular materials.</p></div>
+<div class="callout teacher"><p class="callout-title">Said in class</p><p>The signal transduction example was <strong>adrenaline</strong> (epinephrine). It cannot pass through the membrane, so it binds to a receptor on the outside of the cell, and that sets off reactions inside. The hormone is not absorbed; its signal is <em>transduced</em> (passed along) to the inside.</p></div>
+<div class="callout warn"><p class="callout-title">Common mistake</p><p>Adrenaline cannot cross the membrane because it is <strong>water-soluble (polar)</strong>, and polar molecules are blocked by the hydrophobic core of the bilayer. It is not because it is "not water-soluble." Fat-soluble hormones, such as the steroid hormones, do the opposite: they slip straight through the bilayer and bind receptors inside the cell.</p></div>
+<div class="callout key"><p class="callout-title">On the test</p><p>"Selectively permeable" and "allows transport" are related but separate items on the slide. If you are asked for the functions of the membrane, give the function <strong>and</strong> the structure that performs it, for example: "cell-cell recognition: glycoproteins act as identity markers."</p></div>
+
+<h3 data-tier="essential">The phospholipid bilayer</h3>
+<p>You met phospholipids in the lipids lesson. A <span class="term">phospholipid</span> has two very different ends:</p>
+<ul>
+  <li>a <strong>hydrophilic head</strong>: a phosphate group (often with a small extra polar or charged group) attached to glycerol. It is polar, so it is attracted to water.</li>
+  <li>two <strong>hydrophobic tails</strong>: fatty acid chains. They are nonpolar hydrocarbons, so they avoid water. One tail is often unsaturated and has a kink.</li>
+</ul>
+<p>A molecule with a water-loving end and a water-fearing end is called <span class="term">amphipathic</span>. That dual nature is the whole reason a membrane exists.</p>
+<figure class="diagram">
+<svg viewBox="0 0 640 285" role="img" aria-labelledby="b109-t2">
+<title id="b109-t2">Left: one phospholipid with a round hydrophilic head made of phosphate and glycerol and two hydrophobic fatty acid tails, one straight and saturated, one kinked at a carbon-carbon double bond and unsaturated. Right: in water, phospholipids form a bilayer, with heads facing the water outside and inside the cell and the tails hidden in the middle.</title>
+<text x="125" y="22" text-anchor="middle" font-family="inherit" font-size="13" font-weight="700" style="fill:var(--ink)">One phospholipid</text>
+<text x="450" y="22" text-anchor="middle" font-family="inherit" font-size="13" font-weight="700" style="fill:var(--ink)">In water: a bilayer forms</text>
+<line x1="262" y1="34" x2="262" y2="270" style="stroke:var(--line)" stroke-width="1"/>
+<circle cx="100" cy="70" r="24" style="fill:var(--blue-soft);stroke:var(--blue)" stroke-width="2"/>
+<text x="100" y="74" text-anchor="middle" font-family="inherit" font-size="11.5" style="fill:var(--blue)">head</text>
+<path d="M92,94 l-5,9 l5,9 l-5,9 l5,9 l-5,9 l5,9 l-5,9 l5,9 l-5,9 l5,9 l-5,9 l5,9" style="fill:none;stroke:var(--ink-2)" stroke-width="2.5" stroke-linejoin="round"/>
+<path d="M108,94 l5,9 l-5,9 l5,9 l-5,9 l5,9 l-5,9 l14,10 l0,10 l10,8 l0,10 l10,8 l0,10" style="fill:none;stroke:var(--ink-2)" stroke-width="2.5" stroke-linejoin="round"/>
+<text x="140" y="62" font-family="inherit" font-size="12" font-weight="700" style="fill:var(--blue)">Hydrophilic head</text>
+<text x="140" y="78" font-family="inherit" font-size="11.5" style="fill:var(--ink-2)">phosphate + glycerol</text>
+<text x="140" y="93" font-family="inherit" font-size="11.5" style="fill:var(--ink-2)">polar: faces water</text>
+<text x="126" y="140" font-family="inherit" font-size="11.5" style="fill:var(--red)">kink at C=C</text>
+<text x="150" y="182" font-family="inherit" font-size="12" font-weight="700" style="fill:var(--ink)">Hydrophobic tails</text>
+<text x="150" y="198" font-family="inherit" font-size="11.5" style="fill:var(--ink-2)">two fatty acids,</text>
+<text x="150" y="213" font-family="inherit" font-size="11.5" style="fill:var(--ink-2)">nonpolar: avoid water</text>
+<text x="86" y="230" text-anchor="middle" font-family="inherit" font-size="11.5" style="fill:var(--ink-2)">saturated</text>
+<text x="86" y="244" text-anchor="middle" font-family="inherit" font-size="11.5" style="fill:var(--ink-2)">(straight)</text>
+<text x="150" y="246" font-family="inherit" font-size="11.5" style="fill:var(--ink-2)">unsaturated (kinked)</text>
+<text x="410" y="56" text-anchor="middle" font-family="inherit" font-size="12" font-style="italic" style="fill:var(--blue)">water outside the cell</text>
+<path d="M297,97V132M303,97V132M297,138V173M303,138V173M317,97V132M323,97V132M317,138V173M323,138V173M337,97V132M343,97V132M337,138V173M343,138V173M357,97V132M363,97V132M357,138V173M363,138V173M377,97V132M383,97V132M377,138V173M383,138V173M397,97V132M403,97V132M397,138V173M403,138V173M417,97V132M423,97V132M417,138V173M423,138V173M437,97V132M443,97V132M437,138V173M443,138V173M457,97V132M463,97V132M457,138V173M463,138V173M477,97V132M483,97V132M477,138V173M483,138V173M497,97V132M503,97V132M497,138V173M503,138V173M517,97V132M523,97V132M517,138V173M523,138V173" style="fill:none;stroke:var(--ink-2)" stroke-width="1.5"/>
+<g style="fill:var(--blue-soft);stroke:var(--blue)" stroke-width="1.2"><circle cx="300" cy="89" r="8"/><circle cx="300" cy="181" r="8"/><circle cx="320" cy="89" r="8"/><circle cx="320" cy="181" r="8"/><circle cx="340" cy="89" r="8"/><circle cx="340" cy="181" r="8"/><circle cx="360" cy="89" r="8"/><circle cx="360" cy="181" r="8"/><circle cx="380" cy="89" r="8"/><circle cx="380" cy="181" r="8"/><circle cx="400" cy="89" r="8"/><circle cx="400" cy="181" r="8"/><circle cx="420" cy="89" r="8"/><circle cx="420" cy="181" r="8"/><circle cx="440" cy="89" r="8"/><circle cx="440" cy="181" r="8"/><circle cx="460" cy="89" r="8"/><circle cx="460" cy="181" r="8"/><circle cx="480" cy="89" r="8"/><circle cx="480" cy="181" r="8"/><circle cx="500" cy="89" r="8"/><circle cx="500" cy="181" r="8"/><circle cx="520" cy="89" r="8"/><circle cx="520" cy="181" r="8"/></g>
+<text x="410" y="216" text-anchor="middle" font-family="inherit" font-size="12" font-style="italic" style="fill:var(--blue)">water inside the cell (cytosol)</text>
+<text x="545" y="88" font-family="inherit" font-size="11.5" style="fill:var(--blue)">Hydrophilic</text>
+<text x="545" y="102" font-family="inherit" font-size="11.5" style="fill:var(--blue)">heads</text>
+<text x="545" y="132" font-family="inherit" font-size="11.5" style="fill:var(--ink)">Hydrophobic</text>
+<text x="545" y="146" font-family="inherit" font-size="11.5" style="fill:var(--ink)">tails</text>
+<text x="545" y="178" font-family="inherit" font-size="11.5" style="fill:var(--blue)">Hydrophilic</text>
+<text x="545" y="192" font-family="inherit" font-size="11.5" style="fill:var(--blue)">heads</text>
+<text x="410" y="252" text-anchor="middle" font-family="inherit" font-size="12" style="fill:var(--ink)">Tails hide from water in the middle;</text>
+<text x="410" y="268" text-anchor="middle" font-family="inherit" font-size="12" style="fill:var(--ink)">heads face water on both sides.</text>
+</svg>
+<figcaption>Phospholipids are amphipathic: a hydrophilic head and two hydrophobic tails. In water they arrange themselves into a double layer with the tails tucked inside.</figcaption>
+</figure>
+<p><strong>Why a bilayer forms on its own.</strong> Cells are surrounded by water on both sides: the extracellular fluid outside and the cytosol inside. If you put phospholipids in water, the hydrophobic tails cannot form hydrogen bonds with water, so the most stable arrangement is the one that hides the tails from water completely. Two layers line up tail to tail, with all the heads facing the water on both sides. No enzyme or energy is needed; it is driven by the same attractions and repulsions you studied in the water lesson. To get rid of exposed edges, the sheet closes up into a sealed sphere, which is exactly the shape of a cell or a vesicle.</p>
+<p>The bilayer is a <strong>continuous double layer</strong> around the whole cell, with no gaps. Its job as a barrier comes from its middle: the region of tails is <strong>hydrophobic</strong>, so it is <strong>impermeable to water-soluble molecules</strong> such as ions, sugars and amino acids. They are polar or charged, and they cannot dissolve in or pass through a nonpolar layer. Small nonpolar molecules, such as O<sub>2</sub> and CO<sub>2</sub>, slip straight through it.</p>
+<div class="callout teacher"><p class="callout-title">Said in class</p><p>Phospholipids <strong>spontaneously arrange into a sphere</strong>: you do not need to "build" a membrane; put phospholipids in water and it forms on its own.</p></div>
+<div class="callout warn"><p class="callout-title">Common mistake</p><p>The <strong>heads are hydrophilic</strong> and the <strong>tails are hydrophobic</strong>, never the other way round. It is the hydrophobic tails in the middle that make the membrane impermeable to water-soluble molecules. (A quick check: heads touch water on both sides of the membrane, so they must like water.)</p></div>
+<details class="check"><summary>Why can O<sub>2</sub> diffuse straight through the bilayer, but glucose and Na<sup>+</sup> cannot?</summary><div class="ans"><p>O<sub>2</sub> is small and nonpolar, so it can dissolve in and pass through the hydrophobic tail region. Glucose is large and polar, and Na<sup>+</sup> is charged; both are attracted to water and repelled by the nonpolar core, so they need a membrane protein (a carrier or a channel) to cross.</p></div></details>
+
+<h3 data-tier="essential">The fluid mosaic model</h3>
+<p>The accepted description of membrane structure is the <span class="term">fluid mosaic model</span>. Each word describes something real.</p>
+<div class="compare">
+  <div><h4>Fluid</h4><ul><li>Phospholipids and proteins <strong>move laterally</strong> (sideways) within their own layer.</li><li>The components are <strong>not static</strong>: a phospholipid can swap places with its neighbours millions of times a second.</li><li>The bilayer behaves like a thin film of oil, not like a solid sheet.</li></ul></div>
+  <div><h4>Mosaic</h4><ul><li>The membrane is <strong>composed of many different macromolecules</strong>: phospholipids, many kinds of proteins, cholesterol and carbohydrates.</li><li>Like the tiles of a mosaic picture, the pieces are scattered in a pattern across the surface.</li><li>Different cells, and different membranes in one cell, have different mixes.</li></ul></div>
+</div>
+<p>Why is the membrane fluid? The phospholipids are held together only by weak hydrophobic interactions between their tails, not by covalent bonds. Nothing locks them in place, so they slide past each other. Proteins drift through the lipids like icebergs in a sea. (Moving <em>across</em> from one layer to the other is rare, because the hydrophilic head would have to pass through the hydrophobic middle.)</p>
+<p>Why does a cell need its membrane to be fluid?</p>
+<ul>
+  <li><strong>Flexibility and self-sealing.</strong> A fluid membrane bends instead of cracking, and small tears close up on their own, like a soap bubble.</li>
+  <li><strong>Vesicles.</strong> Membrane can pinch off into vesicles and fuse back in (endocytosis and exocytosis, lesson 1.10). A rigid membrane could not do this.</li>
+  <li><strong>Working proteins.</strong> Many membrane proteins must move, change shape or meet partner proteins to do their jobs.</li>
+  <li><strong>Growth and movement.</strong> A cell can change shape, crawl and divide.</li>
+</ul>
+<div class="callout teacher"><p class="callout-title">Said in class</p><p>The phospholipid bilayer pretty much acts like a fluid, which gives it flexibility. That means the cell can take a bit of damage instead of instantly rupturing.</p></div>
+<div class="callout tip"><p class="callout-title">Memory trick</p><p><strong>Fluid</strong> = things <strong>flow</strong> sideways. <strong>Mosaic</strong> = <strong>many</strong> different pieces. If you can explain both halves of the name, you have explained the model.</p></div>
+<p data-tier="extra">Evidence for the model came from freeze-fracture electron microscopy (shown on one slide): a frozen membrane is split down the middle between its two layers, and the inner faces are covered in bumps, the proteins embedded in the bilayer. Other experiments fused a mouse cell with a human cell; within an hour the two species' membrane proteins had mixed evenly across the hybrid cell, showing that proteins move.</p>
+<h3 data-tier="essential">Membrane proteins</h3>
+<p>Proteins make up about half the mass of a typical membrane, and they do most of its jobs. The phospholipids form the barrier; the proteins decide what happens at it. The slides classify membrane proteins by <strong>where they sit</strong>:</p>
+<div class="compare">
+  <div><h4>Integral proteins</h4><ul><li><strong>Embedded in</strong> the bilayer; most span the whole membrane from the inside surface to the outside (transmembrane proteins).</li><li>Their middle section, the part buried among the tails, is made of amino acids with <strong>nonpolar (hydrophobic) R groups</strong>. The parts sticking out into the water on each side have <strong>polar</strong> R groups.</li><li>Hard to remove: you would have to break the membrane apart.</li><li>Examples: channel proteins, carrier proteins, pumps, most receptors.</li></ul></div>
+  <div><h4>Peripheral proteins</h4><ul><li><strong>Not embedded</strong>: loosely attached to <strong>one surface</strong> only, either the outside or the inside.</li><li>They never enter the hydrophobic core where the fatty acid tails are.</li><li>Usually bound to the exposed part of an integral protein or to the phospholipid heads.</li><li>Examples: enzymes on the inner surface, proteins linking the membrane to the cytoskeleton.</li></ul></div>
+</div>
+<p>The R groups explain where a protein ends up (look back at the proteins lesson). Hydrophobic R groups are stable surrounded by fatty acid tails, so a stretch of them anchors a protein inside the bilayer. A protein with only polar R groups on its surface cannot enter the core, so it can only sit on the surface.</p>
+<div class="callout teacher"><p class="callout-title">Said in class</p><p>Integral proteins are drawn like <strong>big jelly beans</strong> that extend from the inside of the membrane to the outside. Peripheral proteins are only on the exterior or only on the interior, <strong>not spanning the middle section</strong> where the fatty acids are.</p></div>
+<p>The slide (and its video) shows six main jobs of membrane proteins:</p>
+<div class="table-wrap"><table class="data"><thead><tr><th>Job</th><th>What the protein does</th><th>Example</th></tr></thead><tbody>
+<tr><td><strong>Selective transport channel</strong></td><td>Lets one specific substance cross the membrane, through a pore (channel) or by changing shape (carrier). Some use ATP to pump substances.</td><td>Aquaporins (water); glucose carriers; the sodium-potassium pump</td></tr>
+<tr><td><strong>Enzyme</strong></td><td>Catalyzes a reaction right at the membrane surface; a team of enzymes can line up to run a pathway step by step.</td><td>Lactase on intestinal cells; ATP synthase in mitochondria</td></tr>
+<tr><td><strong>Cell surface receptor</strong></td><td>Binds a signal molecule outside and changes shape, relaying the message inside (signal transduction).</td><td>Receptors for adrenaline and insulin</td></tr>
+<tr><td><strong>Cell surface identity marker</strong></td><td>Glycoproteins act as ID tags that other cells, especially immune cells, recognize as "self."</td><td>Markers that let T cells spot infected cells</td></tr>
+<tr><td><strong>Cell adhesion</strong></td><td>Proteins of neighbouring cells bind each other, joining cells into tissues.</td><td>Tight junctions sealing the intestinal lining</td></tr>
+<tr><td><strong>Attachment to the cytoskeleton</strong></td><td>Anchors the membrane to cytoskeleton filaments inside (and to the extracellular matrix outside), holding the cell's shape.</td><td>Integrins linking actin filaments to ECM fibres</td></tr>
+</tbody></table></div>
+<div class="callout warn"><p class="callout-title">Common mistake</p><p>"Peripheral" does not mean the protein floats loose in the cytosol or outside the cell. A peripheral protein is still part of the membrane: it is bound to one of its surfaces. The difference from an integral protein is only that it does not penetrate the hydrophobic core.</p></div>
+<details class="check"><summary>Review question 4: Explain the roles of proteins in the phospholipid bilayer.</summary><div class="ans"><p><strong>Transport:</strong> channel proteins and carrier proteins move specific molecules across the membrane, either passively or actively. <strong>Enzymatic activity:</strong> some proteins are enzymes that catalyze reactions directly at the membrane surface. <strong>Signal transduction:</strong> receptor proteins have binding sites for hormones or neurotransmitters, "telling" the cell to perform a specific task. <strong>Cell-cell recognition:</strong> glycoproteins serve as ID tags so the immune system can tell "self" from "foreign" cells. <strong>Intercellular joining:</strong> proteins hook together to form junctions (such as gap junctions or tight junctions). <strong>Attachment:</strong> proteins help maintain cell shape by attaching to the cytoskeleton inside or the extracellular matrix outside.</p></div></details>
+
+<h3 data-tier="essential">Carbohydrates: glycocalyx, glycoproteins and glycolipids</h3>
+<p>The outside surface of the cell is covered in short sugar chains. Together they form the <span class="term">glycocalyx</span>, literally a "sugar coat." These carbohydrates are attached <strong>only to the cell's exterior</strong>, never the inside, because their job is to deal with the outside world: other cells, signals and the extracellular matrix. The chains are short and often branched; a chain of a few sugars is an <span class="term">oligosaccharide</span> ("oligo" means "few").</p>
+<div class="compare">
+  <div><h4>Glycoproteins</h4><ul><li><strong>Carbohydrate chains attached to membrane proteins.</strong></li><li>Functions: <strong>communication, transport and anchoring</strong>.</li><li>They act as recognition sites and receptors, and they anchor the cell to the extracellular matrix.</li></ul></div>
+  <div><h4>Glycolipids</h4><ul><li><strong>Carbohydrate chains attached to phospholipids</strong> (lipids).</li><li>Functions: <strong>membrane stability</strong> and <strong>cell surface identification</strong>.</li><li>They help hold the membrane steady and mark what kind of cell this is.</li></ul></div>
+</div>
+<div class="callout tip"><p class="callout-title">Memory trick</p><p><strong>Glyco-</strong> means sugar. Glyco + <strong>protein</strong> = sugar on a protein. Glyco + <strong>lipid</strong> = sugar on a lipid. The second word tells you what the sugar is stuck to.</p></div>
+<div class="callout teacher"><p class="callout-title">Said in class</p><p>The glycocalyx binds to the extracellular matrix, which is how cells stick together into tissues (important in bone). Oligosaccharides are short chains of roughly 3 to 10 sugars (two sugars would just be a disaccharide). On glycoproteins, the protein part often works as the receptor. Glycolipids anchor to the ECM and work like an ID check at the door: "are you 18?"</p></div>
+<p data-tier="likely">Why use sugars as name tags? Sugars can link to each other at several different carbons and can branch, so even a short chain can come in an enormous number of distinct shapes. That variety lets every cell type carry its own recognizable pattern, the way a few letters can spell thousands of different words.</p>
+<p data-tier="extra">Your ABO blood type is a glycocalyx difference. Red blood cells of type A and type B carry slightly different sugar chains on their surface glycolipids and glycoproteins; type O has neither extra sugar. If you receive blood with the "wrong" sugar tags, your immune system recognizes those cells as foreign and attacks them. The same recognition system causes the rejection of transplanted organs.</p>
+
+<h3 data-tier="essential">Membrane fluidity</h3>
+<p>A membrane must be fluid enough to bend, fuse and let its proteins move, but not so fluid that it falls apart or leaks. Two components on the slides control this: the <strong>fatty acid tails</strong> and <strong>cholesterol</strong>. Temperature matters too.</p>
+<h4>Fatty acid tails</h4>
+<ul>
+  <li><strong>Unsaturated</strong> fatty acid tails <strong>increase</strong> fluidity. Each cis double bond puts a <strong>kink</strong> in the tail. Kinked tails cannot pack closely together, so the attractions between them are weaker and the phospholipids slide past each other easily.</li>
+  <li><strong>Saturated</strong> fatty acid tails <strong>decrease</strong> fluidity. They are straight, so they pack tightly side by side with many attractions between them. The membrane becomes more <strong>viscous</strong> (thicker, stiffer).</li>
+</ul>
+<p>It is the same reason you met in the lipids lesson: olive oil (mostly unsaturated) is liquid at room temperature, while butter (mostly saturated) is solid.</p>
+<div class="callout teacher"><p class="callout-title">Said in class</p><p><strong>Unsaturated (cis)</strong> tails increase fluidity. <strong>Saturated</strong> tails, and also <strong>trans</strong> unsaturated tails, decrease fluidity. A trans double bond does not make a sharp kink, so a trans fat behaves almost like a straight, saturated one.</p></div>
+<p><strong>Temperature.</strong> Heat makes molecules move faster, so a membrane becomes more fluid as it warms and less fluid as it cools. Too fluid, and the membrane leaks and cannot hold its proteins in place. Too cold, and it stiffens like butter in the fridge: proteins cannot move or change shape, so transport and enzymes stop working.</p>
+<p data-tier="extra">Organisms adjust their membranes to their environment. Fish in icy water and plants that survive frost build their membranes with a higher proportion of unsaturated tails, which keeps them fluid at low temperatures.</p>
+<figure class="diagram">
+<svg viewBox="0 0 640 238" role="img" aria-labelledby="b109-t3">
+<title id="b109-t3">Three panels. Unsaturated tails have kinks that keep phospholipids apart, so the membrane is more fluid. Saturated tails are straight and pack tightly, so the membrane is less fluid. Cholesterol molecules wedged between phospholipids act as a fluidity buffer: at high temperature they hold the phospholipids still, and at low temperature they stop them packing tightly and freezing.</title>
+<text x="110" y="22" text-anchor="middle" font-family="inherit" font-size="13" font-weight="700" style="fill:var(--ink)">Unsaturated tails</text>
+<text x="320" y="22" text-anchor="middle" font-family="inherit" font-size="13" font-weight="700" style="fill:var(--ink)">Saturated tails</text>
+<text x="530" y="22" text-anchor="middle" font-family="inherit" font-size="13" font-weight="700" style="fill:var(--ink)">With cholesterol</text>
+<line x1="215" y1="10" x2="215" y2="232" style="stroke:var(--line)" stroke-width="1"/>
+<line x1="425" y1="10" x2="425" y2="232" style="stroke:var(--line)" stroke-width="1"/>
+<path d="M36,61V128M44,61V92L56,128M71,61V128M79,61V92L91,128M106,61V128M114,61V92L126,128M141,61V128M149,61V92L161,128M176,61V128M184,61V92L196,128" style="fill:none;stroke:var(--ink-2)" stroke-width="2"/>
+<path d="M232,61V128M240,61V128M253,61V128M261,61V128M274,61V128M282,61V128M295,61V128M303,61V128M316,61V128M324,61V128M337,61V128M345,61V128M358,61V128M366,61V128M379,61V128M387,61V128M400,61V128M408,61V128" style="fill:none;stroke:var(--ink-2)" stroke-width="2"/>
+<path d="M446,61V128M454,61V128M481,61V128M489,61V128M516,61V128M524,61V128M551,61V128M559,61V128M586,61V128M594,61V128" style="fill:none;stroke:var(--ink-2)" stroke-width="2"/>
+<g style="fill:var(--amber)"><rect x="463.5" y="64" width="8" height="34" rx="3"/><rect x="498.5" y="64" width="8" height="34" rx="3"/><rect x="533.5" y="64" width="8" height="34" rx="3"/><rect x="568.5" y="64" width="8" height="34" rx="3"/><circle cx="467.5" cy="59" r="3.5"/><circle cx="502.5" cy="59" r="3.5"/><circle cx="537.5" cy="59" r="3.5"/><circle cx="572.5" cy="59" r="3.5"/></g>
+<g style="fill:var(--blue-soft);stroke:var(--blue)" stroke-width="1.5"><circle cx="40" cy="52" r="9"/><circle cx="75" cy="52" r="9"/><circle cx="110" cy="52" r="9"/><circle cx="145" cy="52" r="9"/><circle cx="180" cy="52" r="9"/><circle cx="236" cy="52" r="9"/><circle cx="257" cy="52" r="9"/><circle cx="278" cy="52" r="9"/><circle cx="299" cy="52" r="9"/><circle cx="320" cy="52" r="9"/><circle cx="341" cy="52" r="9"/><circle cx="362" cy="52" r="9"/><circle cx="383" cy="52" r="9"/><circle cx="404" cy="52" r="9"/><circle cx="450" cy="52" r="9"/><circle cx="485" cy="52" r="9"/><circle cx="520" cy="52" r="9"/><circle cx="555" cy="52" r="9"/><circle cx="590" cy="52" r="9"/></g>
+<text x="110" y="154" text-anchor="middle" font-family="inherit" font-size="12" style="fill:var(--ink)">Kinks keep tails apart</text>
+<text x="110" y="172" text-anchor="middle" font-family="inherit" font-size="12" font-weight="700" style="fill:var(--teal)">MORE fluid</text>
+<text x="320" y="154" text-anchor="middle" font-family="inherit" font-size="12" style="fill:var(--ink)">Straight tails pack tightly</text>
+<text x="320" y="172" text-anchor="middle" font-family="inherit" font-size="12" font-weight="700" style="fill:var(--red)">LESS fluid (viscous)</text>
+<text x="530" y="154" text-anchor="middle" font-family="inherit" font-size="12" font-weight="700" style="fill:var(--amber)">Fluidity buffer</text>
+<text x="530" y="172" text-anchor="middle" font-family="inherit" font-size="12" style="fill:var(--ink)">Hot: holds phospholipids still,</text>
+<text x="530" y="188" text-anchor="middle" font-family="inherit" font-size="12" style="fill:var(--ink)">so the membrane is less fluid</text>
+<text x="530" y="208" text-anchor="middle" font-family="inherit" font-size="12" style="fill:var(--ink)">Cold: stops tight packing,</text>
+<text x="530" y="224" text-anchor="middle" font-family="inherit" font-size="12" style="fill:var(--ink)">so the membrane does not freeze</text>
+</svg>
+<figcaption>One layer of the membrane shown in each panel. Tail shape sets how tightly phospholipids pack; cholesterol (amber) evens out the effect of temperature.</figcaption>
+</figure>
+<h4>Cholesterol</h4>
+<p><span class="term">Cholesterol</span> is a steroid (a lipid built from four fused carbon rings, with a small polar –OH group at one end). In animal cell membranes, cholesterol molecules wedge in between the phospholipids, with the –OH near the heads and the rigid rings alongside the upper part of the tails. It acts as a <strong>fluidity buffer</strong>: it resists change in either direction.</p>
+<ul>
+  <li><strong>High temperatures:</strong> cholesterol makes the membrane <strong>less fluid</strong> by staying bonded in place. Its rigid rings hold on to the neighbouring tails and restrain their movement, so the membrane does not become too runny.</li>
+  <li><strong>Low temperatures:</strong> cholesterol <strong>prevents the membrane from freezing</strong> and maintains fluidity. It physically gets in the way, so the tails cannot pack tightly together and solidify.</li>
+</ul>
+<div class="callout tip"><p class="callout-title">Memory trick</p><p>Think of cholesterol as a <strong>speed bump</strong> and a <strong>spacer</strong>. When it is hot and everything is racing around, the speed bump slows the phospholipids down. When it is cold and they want to huddle together, the spacer keeps them apart.</p></div>
+<div class="callout teacher"><p class="callout-title">Said in class</p><p>In class the temperature-buffering role was linked to <strong>ectotherms</strong> (animals whose body temperature follows their surroundings), because their membranes face the biggest temperature swings; endotherms like us keep a constant body temperature by homeostasis. Be careful with this: cholesterol is found in the membranes of <strong>all animal cells</strong>, including yours. The buffering simply matters most when temperature changes a lot.</p></div>
+<div class="callout warn"><p class="callout-title">Common mistake</p><p>Do not write "cholesterol increases fluidity" or "cholesterol decreases fluidity" on its own. It does <strong>both</strong>, depending on temperature: it lowers fluidity when it is hot and keeps the membrane fluid when it is cold. Always name the temperature.</p></div>
+<details class="check"><summary>Review question 5: Explain how cholesterol can increase or decrease membrane fluidity.</summary><div class="ans"><p>Cholesterol is a "fluidity buffer": it stops the membrane becoming too fluid in the heat or too rigid in the cold. <strong>At high temperatures</strong>, phospholipids move apart and the membrane gets too runny; cholesterol wedges between them like a speed bump and restrains their movement, <strong>decreasing</strong> fluidity. <strong>At low temperatures</strong>, phospholipids pack tightly and would freeze solid; cholesterol gets in the way of that packing, keeping space between the tails and <strong>increasing</strong> fluidity (preventing freezing).</p></div></details>
+<details class="check"><summary>An Arctic fish and a tropical fish are compared. Which would you expect to have more unsaturated fatty acid tails in its membranes, and why?</summary><div class="ans"><p>The <strong>Arctic fish</strong>. Its cells are very cold, which tends to make membranes stiff. Unsaturated tails have kinks that stop them packing tightly, so they keep the membrane fluid at low temperature. The tropical fish can use more saturated tails, which stop its membranes becoming too fluid in warm water.</p></div></details>
+
+<h3 data-tier="essential">Selectively permeable: what gets through</h3>
+<p>The last slide sums up the membrane's most important property. Whether a substance can cross depends on <strong>the size and solubility of the molecule</strong>, and on whether the membrane has a <strong>specific protein channel or carrier</strong> for it.</p>
+<div class="table-wrap"><table class="data"><thead><tr><th>Kind of molecule</th><th>Examples</th><th>Through the bilayer itself?</th><th>How it crosses</th></tr></thead><tbody>
+<tr><td>Gases</td><td>O<sub>2</sub>, CO<sub>2</sub>, N<sub>2</sub></td><td>Yes, easily</td><td>Simple diffusion</td></tr>
+<tr><td>Small hydrophobic (nonpolar, lipid-soluble)</td><td>Benzene, steroid hormones</td><td>Yes, easily</td><td>Simple diffusion</td></tr>
+<tr><td>Small polar, uncharged</td><td>H<sub>2</sub>O, ethanol</td><td>Yes, but slowly</td><td>Through the bilayer; water mostly through aquaporins</td></tr>
+<tr><td>Large polar</td><td>Glucose, sucrose</td><td>No</td><td>Carrier proteins</td></tr>
+<tr><td>Ions and charged molecules</td><td>H<sup>+</sup>, Na<sup>+</sup>, K<sup>+</sup>, Ca<sup>2+</sup>, Cl<sup>–</sup>, amino acids</td><td>No</td><td>Channel or carrier proteins (and pumps)</td></tr>
+</tbody></table></div>
+<p>The rule behind the table is the hydrophobic core. <strong>Small and nonpolar</strong> molecules dissolve in it and pass straight through. <strong>Large, polar or charged</strong> molecules are attracted to water and repelled by the core, so they need a protein. Ions are blocked especially well, because each ion is surrounded by a shell of attracted water molecules that makes it effectively bigger and very hydrophilic.</p>
+<p>The slide's figure previews lesson 1.10: (a) simple diffusion straight through the lipid bilayer; (b) facilitated diffusion through a nonspecific transporter; (c) facilitated diffusion through a specific transporter (glucose); (d) osmosis, water crossing through the bilayer and through an <strong>aquaporin</strong>.</p>
+<div class="callout warn"><p class="callout-title">Common mistake</p><p>Water is polar, yet some of it crosses the bilayer directly, because the molecule is tiny. Size and polarity both matter. Glucose is also polar but far too large to slip through, so it always needs a carrier.</p></div>
+<details class="check"><summary>Rank these by how easily they cross a pure phospholipid bilayer: glucose, CO<sub>2</sub>, Na<sup>+</sup>, H<sub>2</sub>O.</summary><div class="ans"><p><strong>CO<sub>2</sub></strong> (small, nonpolar: fastest) &gt; <strong>H<sub>2</sub>O</strong> (small but polar: slowly) &gt; <strong>glucose</strong> (large and polar: essentially none) and <strong>Na<sup>+</sup></strong> (charged: essentially none). Glucose and Na<sup>+</sup> both need membrane proteins.</p></div></details>
+
+<h3 data-tier="essential">Lesson summary</h3>
+<ul>
+  <li>Functions of the cell membrane: physical barrier, compartmentalization, selective permeability, transport, cell-cell recognition, signal transduction, enzymatic activity, intercellular joining, anchoring and support.</li>
+  <li>Phospholipids have hydrophilic heads and hydrophobic tails; in water they form a continuous bilayer on their own. The hydrophobic core blocks water-soluble molecules.</li>
+  <li>Fluid mosaic model: <strong>fluid</strong> because phospholipids and proteins move sideways; <strong>mosaic</strong> because it is made of many different macromolecules.</li>
+  <li>Integral proteins span the bilayer; peripheral proteins sit on one surface. Protein jobs: transport, enzyme, receptor, identity marker, adhesion, attachment to the cytoskeleton.</li>
+  <li>The glycocalyx is the sugar coat on the outside: glycoproteins (communication, transport, anchoring) and glycolipids (stability, identification).</li>
+  <li>Unsaturated tails increase fluidity, saturated tails decrease it; cholesterol buffers fluidity, lowering it when hot and preventing freezing when cold.</li>
+  <li>Small nonpolar molecules cross the bilayer directly; large, polar and charged ones need channel or carrier proteins.</li>
+</ul>
+`
+});
+
+/* ===================================================================
+   1.10 CELLULAR TRANSPORT
+   =================================================================== */
+window.LESSONS.push({
+  id: "1.10",
+  title: "Cellular Transport",
+  stage: "c1",
+  where: "Across the plasma membrane",
+  summary: "How substances cross the cell membrane. Passive transport (simple diffusion, facilitated diffusion through channel and carrier proteins, and osmosis) moves particles down their concentration gradient with no energy. Active transport uses ATP and carrier proteins to move particles against their gradient, and membrane-assisted transport moves large materials in by endocytosis and out by exocytosis. You also need to use hypotonic, isotonic and hypertonic to predict what happens to animal and plant cells.",
+  objectives: [
+    "Explain what a concentration gradient is and what moving down (along) or against it means.",
+    "Distinguish passive from active transport by energy use and direction relative to the gradient.",
+    "Define diffusion and dynamic equilibrium, and give examples of simple diffusion (small lipid-soluble molecules, O2, CO2).",
+    "Compare channel proteins and carrier proteins in facilitated diffusion.",
+    "Define osmosis and use isotonic, hypotonic and hypertonic to predict water movement and its effect on animal cells (lysis, crenation) and plant cells (turgid, flaccid, plasmolyzed).",
+    "Describe active transport using the sodium-potassium pump as an example.",
+    "Describe phagocytosis, pinocytosis and receptor-mediated endocytosis, and constitutive and regulated exocytosis."
+  ],
+  html: `
+<h3 data-tier="essential">The selectively permeable membrane</h3>
+<p>Lesson 1.09 ended with the key property of the cell membrane: it is <span class="term">selectively permeable</span>. A cell has to let oxygen and nutrients in, let carbon dioxide and wastes out, export products like hormones and enzymes, and keep the concentrations of ions inside very different from those outside. The membrane manages all of that traffic. This lesson is about <em>how</em> each kind of substance gets across.</p>
+<p>The slide's figure shows the starting point. <strong>Gases</strong> (O<sub>2</sub>, CO<sub>2</sub>), <strong>hydrophobic molecules</strong> (such as benzene) and <strong>small polar molecules</strong> (H<sub>2</sub>O, ethanol) pass through the bilayer. <strong>Large polar molecules</strong> (glucose) and <strong>charged molecules</strong> (ions such as H<sup>+</sup>, Na<sup>+</sup>, Cl<sup>–</sup>, Ca<sup>2+</sup>, and amino acids) bounce off it and need help from proteins.</p>
+<div class="callout teacher"><p class="callout-title">Said in class</p><p>Fat-based (lipid-soluble) molecules get through the membrane because they are nonpolar, like the tails. Small polar molecules can also pass; water can "leak" through.</p></div>
+<h4>Concentration gradients</h4>
+<p>A <span class="term">concentration gradient</span> is a difference in concentration between two regions, for example between the outside and the inside of a cell. The slides write concentration with square brackets: [high] means "high concentration" and [water] means "concentration of water."</p>
+<ul>
+  <li>Moving <strong>down</strong> (or <strong>along</strong>, or <strong>with</strong>) the gradient means from high concentration to low. This happens on its own, like a ball rolling downhill.</li>
+  <li>Moving <strong>against</strong> (or <strong>up</strong>) the gradient means from low concentration to high. This never happens on its own; it costs energy, like pushing the ball back up the hill.</li>
+</ul>
+
+<h3 data-tier="essential">Types of movement: passive vs active transport</h3>
+<p>The slides divide all transport into two kinds, based on two questions: <strong>does it need energy</strong>, and <strong>which way does it go relative to the gradient</strong>?</p>
+<div class="compare">
+  <div><h4>Passive transport</h4><ul><li><strong>No energy</strong> (no ATP) required.</li><li>Particles move <strong>down</strong> their concentration gradient (high → low).</li><li>Happens spontaneously, powered by the particles' own random motion.</li><li>Three types: <strong>simple diffusion</strong>, <strong>facilitated diffusion</strong>, <strong>osmosis</strong>.</li></ul></div>
+  <div><h4>Active transport</h4><ul><li><strong>Energy required</strong>, usually ATP.</li><li>Particles typically move <strong>against</strong> their concentration gradient (low → high).</li><li>Needs specific carrier proteins (pumps).</li><li>Examples: the sodium-potassium pump; membrane-assisted transport (endocytosis and exocytosis) also uses energy.</li></ul></div>
+</div>
+<figure class="diagram">
+<svg viewBox="0 0 640 330" role="img" aria-labelledby="b110-t1">
+<title id="b110-t1">Four ways across the membrane. Passive transport, down the gradient with no energy: simple diffusion of oxygen straight through the bilayer; facilitated diffusion of ions through a channel protein; facilitated diffusion of glucose through a carrier protein. Active transport, against the gradient using ATP: the sodium-potassium pump moves three sodium ions out and two potassium ions in.</title>
+<defs>
+<marker id="b110-ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" style="fill:var(--ink)"/></marker>
+<marker id="b110-arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" style="fill:var(--red)"/></marker>
+<marker id="b110-arb" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" style="fill:var(--blue)"/></marker>
+</defs>
+<text x="230" y="20" text-anchor="middle" font-family="inherit" font-size="13" font-weight="700" style="fill:var(--ink)">PASSIVE TRANSPORT</text>
+<text x="230" y="36" text-anchor="middle" font-family="inherit" font-size="11.5" style="fill:var(--ink-2)">down the gradient (high to low), no energy</text>
+<text x="548" y="20" text-anchor="middle" font-family="inherit" font-size="13" font-weight="700" style="fill:var(--ink)">ACTIVE TRANSPORT</text>
+<text x="548" y="36" text-anchor="middle" font-family="inherit" font-size="11.5" style="fill:var(--ink-2)">against the gradient, uses ATP</text>
+<path d="M20,48 V43 H442 V48 M470,48 V43 H626 V48" style="fill:none;stroke:var(--ink-2)" stroke-width="1.2"/>
+<g style="stroke:var(--line)" stroke-width="1" stroke-dasharray="4 4"><line x1="157" y1="52" x2="157" y2="325"/><line x1="307" y1="52" x2="307" y2="325"/><line x1="457" y1="52" x2="457" y2="325"/></g>
+<path d="M14,155V168M18,155V168M14,172V185M18,172V185M26,155V168M30,155V168M26,172V185M30,172V185M38,155V168M42,155V168M38,172V185M42,172V185M50,155V168M54,155V168M50,172V185M54,172V185M62,155V168M66,155V168M62,172V185M66,172V185M74,155V168M78,155V168M74,172V185M78,172V185M86,155V168M90,155V168M86,172V185M90,172V185M98,155V168M102,155V168M98,172V185M102,172V185M110,155V168M114,155V168M110,172V185M114,172V185M122,155V168M126,155V168M122,172V185M126,172V185M134,155V168M138,155V168M134,172V185M138,172V185M146,155V168M150,155V168M146,172V185M150,172V185M158,155V168M162,155V168M158,172V185M162,172V185M170,155V168M174,155V168M170,172V185M174,172V185M182,155V168M186,155V168M182,172V185M186,172V185M194,155V168M198,155V168M194,172V185M198,172V185M206,155V168M210,155V168M206,172V185M210,172V185M218,155V168M222,155V168M218,172V185M222,172V185M230,155V168M234,155V168M230,172V185M234,172V185M242,155V168M246,155V168M242,172V185M246,172V185M254,155V168M258,155V168M254,172V185M258,172V185M266,155V168M270,155V168M266,172V185M270,172V185M278,155V168M282,155V168M278,172V185M282,172V185M290,155V168M294,155V168M290,172V185M294,172V185M302,155V168M306,155V168M302,172V185M306,172V185M314,155V168M318,155V168M314,172V185M318,172V185M326,155V168M330,155V168M326,172V185M330,172V185M338,155V168M342,155V168M338,172V185M342,172V185M350,155V168M354,155V168M350,172V185M354,172V185M362,155V168M366,155V168M362,172V185M366,172V185M374,155V168M378,155V168M374,172V185M378,172V185M386,155V168M390,155V168M386,172V185M390,172V185M398,155V168M402,155V168M398,172V185M402,172V185M410,155V168M414,155V168M410,172V185M414,172V185M422,155V168M426,155V168M422,172V185M426,172V185M434,155V168M438,155V168M434,172V185M438,172V185M446,155V168M450,155V168M446,172V185M450,172V185M458,155V168M462,155V168M458,172V185M462,172V185M470,155V168M474,155V168M470,172V185M474,172V185M482,155V168M486,155V168M482,172V185M486,172V185M494,155V168M498,155V168M494,172V185M498,172V185M506,155V168M510,155V168M506,172V185M510,172V185M518,155V168M522,155V168M518,172V185M522,172V185M530,155V168M534,155V168M530,172V185M534,172V185M542,155V168M546,155V168M542,172V185M546,172V185M554,155V168M558,155V168M554,172V185M558,172V185M566,155V168M570,155V168M566,172V185M570,172V185M578,155V168M582,155V168M578,172V185M582,172V185M590,155V168M594,155V168M590,172V185M594,172V185M602,155V168M606,155V168M602,172V185M606,172V185M614,155V168M618,155V168M614,172V185M618,172V185M626,155V168M630,155V168M626,172V185M630,172V185" style="fill:none;stroke:var(--ink-2)" stroke-width="1.2"/>
+<g style="fill:var(--blue-soft);stroke:var(--blue)" stroke-width="1"><circle cx="16" cy="150" r="5"/><circle cx="16" cy="190" r="5"/><circle cx="28" cy="150" r="5"/><circle cx="28" cy="190" r="5"/><circle cx="40" cy="150" r="5"/><circle cx="40" cy="190" r="5"/><circle cx="52" cy="150" r="5"/><circle cx="52" cy="190" r="5"/><circle cx="64" cy="150" r="5"/><circle cx="64" cy="190" r="5"/><circle cx="76" cy="150" r="5"/><circle cx="76" cy="190" r="5"/><circle cx="88" cy="150" r="5"/><circle cx="88" cy="190" r="5"/><circle cx="100" cy="150" r="5"/><circle cx="100" cy="190" r="5"/><circle cx="112" cy="150" r="5"/><circle cx="112" cy="190" r="5"/><circle cx="124" cy="150" r="5"/><circle cx="124" cy="190" r="5"/><circle cx="136" cy="150" r="5"/><circle cx="136" cy="190" r="5"/><circle cx="148" cy="150" r="5"/><circle cx="148" cy="190" r="5"/><circle cx="160" cy="150" r="5"/><circle cx="160" cy="190" r="5"/><circle cx="172" cy="150" r="5"/><circle cx="172" cy="190" r="5"/><circle cx="184" cy="150" r="5"/><circle cx="184" cy="190" r="5"/><circle cx="196" cy="150" r="5"/><circle cx="196" cy="190" r="5"/><circle cx="208" cy="150" r="5"/><circle cx="208" cy="190" r="5"/><circle cx="220" cy="150" r="5"/><circle cx="220" cy="190" r="5"/><circle cx="232" cy="150" r="5"/><circle cx="232" cy="190" r="5"/><circle cx="244" cy="150" r="5"/><circle cx="244" cy="190" r="5"/><circle cx="256" cy="150" r="5"/><circle cx="256" cy="190" r="5"/><circle cx="268" cy="150" r="5"/><circle cx="268" cy="190" r="5"/><circle cx="280" cy="150" r="5"/><circle cx="280" cy="190" r="5"/><circle cx="292" cy="150" r="5"/><circle cx="292" cy="190" r="5"/><circle cx="304" cy="150" r="5"/><circle cx="304" cy="190" r="5"/><circle cx="316" cy="150" r="5"/><circle cx="316" cy="190" r="5"/><circle cx="328" cy="150" r="5"/><circle cx="328" cy="190" r="5"/><circle cx="340" cy="150" r="5"/><circle cx="340" cy="190" r="5"/><circle cx="352" cy="150" r="5"/><circle cx="352" cy="190" r="5"/><circle cx="364" cy="150" r="5"/><circle cx="364" cy="190" r="5"/><circle cx="376" cy="150" r="5"/><circle cx="376" cy="190" r="5"/><circle cx="388" cy="150" r="5"/><circle cx="388" cy="190" r="5"/><circle cx="400" cy="150" r="5"/><circle cx="400" cy="190" r="5"/><circle cx="412" cy="150" r="5"/><circle cx="412" cy="190" r="5"/><circle cx="424" cy="150" r="5"/><circle cx="424" cy="190" r="5"/><circle cx="436" cy="150" r="5"/><circle cx="436" cy="190" r="5"/><circle cx="448" cy="150" r="5"/><circle cx="448" cy="190" r="5"/><circle cx="460" cy="150" r="5"/><circle cx="460" cy="190" r="5"/><circle cx="472" cy="150" r="5"/><circle cx="472" cy="190" r="5"/><circle cx="484" cy="150" r="5"/><circle cx="484" cy="190" r="5"/><circle cx="496" cy="150" r="5"/><circle cx="496" cy="190" r="5"/><circle cx="508" cy="150" r="5"/><circle cx="508" cy="190" r="5"/><circle cx="520" cy="150" r="5"/><circle cx="520" cy="190" r="5"/><circle cx="532" cy="150" r="5"/><circle cx="532" cy="190" r="5"/><circle cx="544" cy="150" r="5"/><circle cx="544" cy="190" r="5"/><circle cx="556" cy="150" r="5"/><circle cx="556" cy="190" r="5"/><circle cx="568" cy="150" r="5"/><circle cx="568" cy="190" r="5"/><circle cx="580" cy="150" r="5"/><circle cx="580" cy="190" r="5"/><circle cx="592" cy="150" r="5"/><circle cx="592" cy="190" r="5"/><circle cx="604" cy="150" r="5"/><circle cx="604" cy="190" r="5"/><circle cx="616" cy="150" r="5"/><circle cx="616" cy="190" r="5"/><circle cx="628" cy="150" r="5"/><circle cx="628" cy="190" r="5"/></g>
+<text x="14" y="137" font-family="inherit" font-size="11.5" font-style="italic" style="fill:var(--ink-2)">outside</text>
+<text x="14" y="213" font-family="inherit" font-size="11.5" font-style="italic" style="fill:var(--ink-2)">inside</text>
+<g style="fill:var(--teal)"><circle cx="45" cy="62" r="4"/><circle cx="75" cy="54" r="4"/><circle cx="105" cy="68" r="4"/><circle cx="135" cy="58" r="4"/><circle cx="58" cy="90" r="4"/><circle cx="118" cy="92" r="4"/><circle cx="140" cy="112" r="4"/><circle cx="48" cy="112" r="4"/><circle cx="110" cy="124" r="4"/><circle cx="85" cy="170" r="4"/><circle cx="60" cy="252" r="4"/><circle cx="118" cy="268" r="4"/></g>
+<line x1="85" y1="104" x2="85" y2="234" style="stroke:var(--ink)" stroke-width="2" marker-end="url(#b110-ar)"/>
+<rect x="228" y="138" width="12" height="64" style="fill:var(--surface)"/>
+<rect x="208" y="138" width="20" height="64" rx="8" style="fill:var(--magenta-soft);stroke:var(--magenta)" stroke-width="2"/>
+<rect x="240" y="138" width="20" height="64" rx="8" style="fill:var(--magenta-soft);stroke:var(--magenta)" stroke-width="2"/>
+<g style="fill:var(--amber)"><circle cx="175" cy="60" r="3.5"/><circle cx="200" cy="72" r="3.5"/><circle cx="228" cy="56" r="3.5"/><circle cx="262" cy="70" r="3.5"/><circle cx="288" cy="60" r="3.5"/><circle cx="186" cy="96" r="3.5"/><circle cx="210" cy="106" r="3.5"/><circle cx="260" cy="96" r="3.5"/><circle cx="282" cy="108" r="3.5"/><circle cx="196" cy="126" r="3.5"/><circle cx="268" cy="126" r="3.5"/><circle cx="234" cy="172" r="3.5"/><circle cx="190" cy="250" r="3.5"/><circle cx="278" cy="264" r="3.5"/></g>
+<line x1="234" y1="104" x2="234" y2="236" style="stroke:var(--ink)" stroke-width="2" marker-end="url(#b110-ar)"/>
+<line x1="360" y1="84" x2="360" y2="236" style="stroke:var(--ink)" stroke-width="2" marker-end="url(#b110-ar)"/>
+<rect x="328" y="134" width="64" height="72" rx="14" style="fill:var(--magenta-soft);stroke:var(--magenta)" stroke-width="2"/>
+<rect x="351" y="126" width="18" height="44" rx="7" style="fill:var(--surface);stroke:var(--magenta)" stroke-width="1.5"/>
+<g style="fill:var(--good)"><rect x="326" y="57" width="9" height="9" rx="2"/><rect x="354" y="50" width="9" height="9" rx="2"/><rect x="384" y="62" width="9" height="9" rx="2"/><rect x="416" y="54" width="9" height="9" rx="2"/><rect x="436" y="80" width="9" height="9" rx="2"/><rect x="330" y="92" width="9" height="9" rx="2"/><rect x="404" y="96" width="9" height="9" rx="2"/><rect x="322" y="118" width="9" height="9" rx="2"/><rect x="426" y="118" width="9" height="9" rx="2"/><rect x="355" y="154" width="10" height="10" rx="2"/><rect x="336" y="258" width="9" height="9" rx="2"/><rect x="416" y="246" width="9" height="9" rx="2"/></g>
+<rect x="520" y="134" width="60" height="72" rx="14" style="fill:var(--magenta-soft);stroke:var(--magenta)" stroke-width="2"/>
+<g style="fill:var(--red)"><circle cx="480" cy="62" r="4.5"/><circle cx="505" cy="74" r="4.5"/><circle cx="530" cy="58" r="4.5"/><circle cx="590" cy="60" r="4.5"/><circle cx="614" cy="80" r="4.5"/><circle cx="486" cy="102" r="4.5"/><circle cx="604" cy="104" r="4.5"/><circle cx="512" cy="96" r="4.5"/><circle cx="522" cy="296" r="4.5"/></g>
+<g style="fill:var(--blue)"><circle cx="586" cy="252" r="4.5"/><circle cx="612" cy="268" r="4.5"/><circle cx="542" cy="286" r="4.5"/><circle cx="600" cy="294" r="4.5"/><circle cx="566" cy="304" r="4.5"/><circle cx="470" cy="86" r="4.5"/></g>
+<line x1="538" y1="234" x2="538" y2="102" style="stroke:var(--red)" stroke-width="2.5" marker-end="url(#b110-arr)"/>
+<line x1="562" y1="100" x2="562" y2="234" style="stroke:var(--blue)" stroke-width="2.5" marker-end="url(#b110-arb)"/>
+<text x="570" y="126" font-family="inherit" font-size="11.5" font-weight="700" style="fill:var(--red)">3 Na⁺ out</text>
+<text x="570" y="224" font-family="inherit" font-size="11.5" font-weight="700" style="fill:var(--blue)">2 K⁺ in</text>
+<circle cx="488" cy="250" r="15" style="fill:var(--amber-soft);stroke:var(--amber)" stroke-width="2"/>
+<text x="488" y="254" text-anchor="middle" font-family="inherit" font-size="11" font-weight="700" style="fill:var(--amber)">ATP</text>
+<text x="488" y="282" text-anchor="middle" font-family="inherit" font-size="11.5" style="fill:var(--ink-2)">ADP + Pi</text>
+<line x1="498" y1="238" x2="518" y2="210" style="stroke:var(--amber)" stroke-width="1.8"/>
+<text x="82" y="306" text-anchor="middle" font-family="inherit" font-size="12" font-weight="700" style="fill:var(--ink)">Simple diffusion</text>
+<text x="82" y="322" text-anchor="middle" font-family="inherit" font-size="11.5" style="fill:var(--ink-2)">e.g. O₂, CO₂</text>
+<text x="234" y="306" text-anchor="middle" font-family="inherit" font-size="12" font-weight="700" style="fill:var(--ink)">Channel protein</text>
+<text x="234" y="322" text-anchor="middle" font-family="inherit" font-size="11.5" style="fill:var(--ink-2)">e.g. ions</text>
+<text x="382" y="306" text-anchor="middle" font-family="inherit" font-size="12" font-weight="700" style="fill:var(--ink)">Carrier protein</text>
+<text x="382" y="322" text-anchor="middle" font-family="inherit" font-size="11.5" style="fill:var(--ink-2)">e.g. glucose</text>
+<text x="560" y="322" text-anchor="middle" font-family="inherit" font-size="12" font-weight="700" style="fill:var(--ink)">Na⁺/K⁺ pump</text>
+</svg>
+<figcaption>Dot density shows concentration. The three passive routes all run from the crowded side to the sparse side. The pump does the opposite: it pushes Na<sup>+</sup> out where Na<sup>+</sup> is already concentrated and K<sup>+</sup> in where K<sup>+</sup> is already concentrated, paid for by ATP.</figcaption>
+</figure>
+<details class="check"><summary>Review question 1: Describe the difference between passive and active transport.</summary><div class="ans"><p>The difference is whether cellular energy (ATP) is needed and which way the substance moves relative to its concentration gradient. <strong>Passive transport</strong> needs no energy: molecules move <strong>down</strong> their concentration gradient (high to low) spontaneously. Examples: simple diffusion, facilitated diffusion and osmosis. <strong>Active transport</strong> requires energy in the form of ATP: molecules move <strong>against</strong> their concentration gradient (low to high). Examples: the sodium-potassium (Na<sup>+</sup>/K<sup>+</sup>) pump, endocytosis and exocytosis.</p></div></details>
+
+<h3 data-tier="essential">Diffusion</h3>
+<p><span class="term">Diffusion</span> is the tendency of particles to move from an area of <strong>[high]</strong> to an area of <strong>[lower]</strong> concentration.</p>
+<p>Why does it happen? All particles in a liquid or gas are constantly moving in random directions (they have kinetic energy). No particle "knows" where the low concentration is. But if there are more particles on one side, more of them happen to wander across from that side than wander back. The result is a <strong>net</strong> movement from high to low, until the particles are evenly spread. A drop of dye in a glass of water spreads out this way without stirring.</p>
+<ul>
+  <li>Diffusion occurs by <strong>passive transport</strong>: <strong>no energy is required</strong> from the cell. The particles' own motion does the work.</li>
+  <li>Particles move <strong>along</strong> (down) the concentration gradient.</li>
+  <li>Particles eventually reach a <span class="term">dynamic equilibrium</span>: the concentration is equal everywhere, so there is no further net change.</li>
+</ul>
+<p>"Dynamic" is the important word. At equilibrium the particles have <strong>not</strong> stopped. They keep moving in both directions, but equal numbers cross each way, so the concentrations stay the same. The slide's dye diagram shows this: net diffusion to the right, then more net diffusion, then equilibrium with arrows going both ways.</p>
+<div class="callout teacher"><p class="callout-title">Said in class</p><p>Dynamic equilibrium means <strong>no net movement</strong> (no change), but "no net movement" does <strong>not</strong> mean "no movement." Particles are still crossing; they just cross equally in both directions.</p></div>
+<p data-tier="likely">Diffusion is faster when the gradient is steeper (bigger difference in concentration), the temperature is higher (particles move faster), the particles are smaller, the surface area is larger, and the distance is shorter. This is why cells stay small and why exchange surfaces such as lung alveoli are thin and have huge surface areas.</p>
+<h4>Simple diffusion</h4>
+<p><span class="term">Simple diffusion</span> is diffusion of molecules <strong>straight across the membrane</strong>, through the phospholipid bilayer, with no protein involved. It works for:</p>
+<ul>
+  <li><strong>small, lipid-soluble (nonpolar) molecules</strong>, which dissolve in the hydrophobic core (for example, steroid hormones);</li>
+  <li><strong>oxygen</strong> (O<sub>2</sub>);</li>
+  <li><strong>carbon dioxide</strong> (CO<sub>2</sub>).</li>
+</ul>
+<p>This is how your cells get oxygen and get rid of carbon dioxide. Your cells use O<sub>2</sub> constantly in cellular respiration, so its concentration inside stays lower than in the blood, and O<sub>2</sub> keeps diffusing in. They make CO<sub>2</sub> constantly, so it stays more concentrated inside and keeps diffusing out. The cell never has to spend energy on either.</p>
+
+<h3 data-tier="essential">Facilitated diffusion</h3>
+<p>Many substances a cell needs, such as ions, sugars and amino acids, are polar or charged and cannot pass through the hydrophobic core. <span class="term">Facilitated diffusion</span> is diffusion <strong>with help from a membrane transport protein</strong>. The protein provides a route across, but the substance still moves <strong>down its concentration gradient</strong> and the cell spends <strong>no energy</strong>, so it is still passive transport. There are two kinds of transport protein.</p>
+<div class="compare">
+  <div><h4>Channel proteins</h4><ul><li>Form <strong>water-filled pores</strong> through the membrane that allow <strong>specific ions</strong> to pass.</li><li>The protein's <strong>shape does not change</strong> as things pass through; it is a tunnel.</li><li>Very fast.</li><li>Example: <strong>aquaporins</strong>, channels for water; ion channels for K<sup>+</sup>, Na<sup>+</sup>, Cl<sup>–</sup>.</li></ul></div>
+  <div><h4>Carrier proteins</h4><ul><li><strong>Bind</strong> a specific molecule and <strong>change shape</strong> to carry it to the other side.</li><li>Specific, based on the molecule's <strong>size, shape and charge</strong>, much like an enzyme's active site.</li><li>Slower than channels.</li><li>Examples: <strong>amino acids, sugars and small proteins</strong>; the glucose transporter.</li></ul></div>
+</div>
+<p>The slide's glucose transporter shows a carrier in three steps: (1) glucose from the side where it is more concentrated binds to the transporter; (2) the transporter changes shape, opening to the other side; (3) glucose is released into the cytosol, where its concentration is lower, and the transporter flips back.</p>
+<p>Many channels are <strong>gated</strong>: they open or close in response to a signal, such as a change in voltage or the binding of a molecule. This is how the membrane "uses proteins to open and close channels for selected materials," as the notes from lesson 1.09 put it.</p>
+<div class="callout warn"><p class="callout-title">Common mistake</p><p>"It uses a protein, so it must be active transport." No. Using a protein is not the test. The test is energy and direction. Facilitated diffusion uses a protein but no ATP, and it only ever goes down the gradient, so it is <strong>passive</strong>.</p></div>
+<div class="callout tip"><p class="callout-title">Memory trick</p><p>A <strong>channel</strong> is a <strong>tunnel</strong>: an open hole, nothing moves. A <strong>carrier</strong> is a <strong>revolving door</strong>: it has to turn (change shape) to let each passenger through.</p></div>
+<p data-tier="extra">Because there are only so many carriers in a membrane, facilitated diffusion has a top speed. Once every carrier is busy (saturated), adding more glucose outside no longer speeds up its entry. Simple diffusion has no such limit: its rate just keeps rising with the gradient.</p>
+
+<h3 data-tier="essential">Osmosis</h3>
+<p><span class="term">Osmosis</span> is the <strong>diffusion of water</strong> across a <strong>selectively permeable membrane</strong>, from an area of <strong>high [water]</strong> to an area of <strong>lower [water]</strong>.</p>
+<p>Concentration of water is the flip side of concentration of solute. A solution with more dissolved solute has proportionally less water. So "high water to low water" is the same as "from <strong>low solute</strong> to <strong>high solute</strong>." Osmosis happens when the membrane lets water through but <strong>not</strong> the solute: the solute cannot spread out to even the concentrations, so the water moves instead.</p>
+<p>The slide's U-tube shows this. A selectively permeable membrane divides the tube; one side has less solute (more water), the other has more solute (less water). Water crosses toward the side with more solute, and the water level on that side rises until the system balances.</p>
+<p>Osmosis is passive: no energy is spent. Water crosses partly by slipping directly through the bilayer and mostly through <strong>aquaporins</strong>, the water channel proteins.</p>
+<div class="callout warn"><p class="callout-title">Common mistake</p><p>In osmosis it is the <strong>water</strong> that moves, not the solute. And water moves <strong>toward</strong> the side with the <strong>higher</strong> solute concentration, which sounds backwards until you remember that side has the <strong>lower water</strong> concentration.</p></div>
+<div class="callout tip"><p class="callout-title">Memory trick</p><p><strong>Water follows solute.</strong> Wherever there is more dissolved "stuff," water moves there to dilute it.</p></div>
+<details class="check"><summary>Review question 2: What is the difference between diffusion and osmosis?</summary><div class="ans"><p>Diffusion describes the movement of particles (ions, molecules) in general; osmosis refers specifically to the movement of <strong>water</strong> across a selectively permeable membrane. Both move with the concentration gradient, so both are forms of <strong>passive</strong> transport.</p></div></details>
+<!-- @@110-PART2@@ -->
 `
 });
