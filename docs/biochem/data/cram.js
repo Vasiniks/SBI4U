@@ -322,4 +322,131 @@ window.CRAM = `
 <li>Less digestive enzyme with age → less digestion → fewer nutrients absorbed.</li>
 <li>Body temperature and pH must stay in range because enzymes are proteins and denature outside it.</li>
 </ul>
+
+<h3>Cell organelles</h3>
+<div class="table-wrap"><table class="data">
+<thead><tr><th>Organelle</th><th>Structure</th><th>Function</th><th>Found in</th></tr></thead>
+<tbody>
+<tr><td><strong>Cell (plasma) membrane</strong></td><td>Phospholipid bilayer with proteins</td><td>Barrier; selectively permeable; controls what enters and leaves</td><td>Both</td></tr>
+<tr><td><strong>Cell wall</strong></td><td>Porous outer layer outside the membrane, made of cellulose; plasmodesmata connect neighbouring cells</td><td>Protects, supports, gives shape; stops the cell bursting</td><td><strong>Plant</strong> (fungi: chitin)</td></tr>
+<tr><td><strong>Nucleus</strong></td><td>Contains nucleoplasm, chromatin, nucleolus</td><td>Holds almost all the cell's DNA; protects and controls access to it; makes ribosome subunits</td><td>Both</td></tr>
+<tr><td><strong>Nuclear envelope</strong></td><td>Double membrane with nuclear pores</td><td>Controls what enters and leaves the nucleus</td><td>Both</td></tr>
+<tr><td><strong>Nucleolus</strong></td><td>Dense, irregular region inside the nucleus</td><td>Assembles ribosome subunits from rRNA and protein</td><td>Both</td></tr>
+<tr><td><strong>Chromatin</strong></td><td>DNA + associated proteins, in the nucleus outside the nucleolus</td><td>The cell's genetic material</td><td>Both</td></tr>
+<tr><td><strong>Cytosol</strong></td><td>Fluid part of the cell</td><td>Where many reactions occur. <em>Cytoplasm</em> = cytosol + all organelles between membrane and nucleus</td><td>Both</td></tr>
+<tr><td><strong>Ribosome</strong></td><td>Small granule of rRNA + protein; <strong>no membrane</strong>. Free (in cytosol) or bound (on rough ER, nuclear envelope)</td><td>Protein synthesis</td><td>Both</td></tr>
+<tr><td><strong>Rough ER</strong></td><td>Flattened sacs continuous with the nuclear envelope, studded with ribosomes</td><td>Makes, folds and processes proteins for secretion, membranes or delivery in the cell</td><td>Both</td></tr>
+<tr><td><strong>Smooth ER</strong></td><td>Tubes connected to rough ER, no ribosomes</td><td>Makes lipids (phospholipids, steroids); detoxifies drugs and poisons; breaks down carbohydrates and fatty acids</td><td>Both</td></tr>
+<tr><td><strong>Golgi body</strong></td><td>Stack of flattened membrane sacs ("pancakes")</td><td>Modifies (adds sugars, phosphates; trims chains), sorts, packages and ships proteins and lipids from the ER</td><td>Both</td></tr>
+<tr><td><strong>Vesicle</strong></td><td>Small membrane sac</td><td>Transports substances within the cell or releases them out (secretory vesicles)</td><td>Both</td></tr>
+<tr><td><strong>Lysosome</strong></td><td>Vesicle of digestive enzymes, made by the Golgi; acidic inside (pH ≈ 4.5–5, so its enzymes' optimum is acidic)</td><td>Intracellular digestion of wastes, worn-out parts, engulfed food or bacteria</td><td><strong>Animal</strong> (plants: mostly done by the vacuole)</td></tr>
+<tr><td><strong>Peroxisome</strong></td><td>Small membrane vesicle</td><td>Inactivates toxins</td><td>Both</td></tr>
+<tr><td><strong>Mitochondrion</strong></td><td>Double membrane; inner membrane folded into cristae</td><td>Generates ATP by cellular respiration (don't just write "powerhouse")</td><td>Both</td></tr>
+<tr><td><strong>Chloroplast</strong></td><td>Double membrane, pigments (chlorophyll), fluid stroma; a plastid</td><td>Photosynthesis: makes sugars from light, CO<sub>2</sub> and water</td><td><strong>Plant</strong></td></tr>
+<tr><td><strong>Vacuole</strong></td><td>Membrane sac; plants have one <strong>large central vacuole</strong></td><td>Stores water, nutrients and wastes; in plants keeps the cell firm (fluid/turgor pressure)</td><td>Both (large in plant, small in animal)</td></tr>
+<tr><td><strong>Microtubules</strong></td><td>Long hollow cylinders (cytoskeleton)</td><td>Shape, move organelles and chromosomes; assemble when needed, disassemble when not; build cilia and flagella</td><td>Both</td></tr>
+<tr><td><strong>Microfilaments</strong></td><td>Thin solid fibres (cytoskeleton)</td><td>Change cell shape, contraction, cell movement</td><td>Both</td></tr>
+<tr><td><strong>Centrioles</strong></td><td>Nine sets of triplet microtubules; <strong>no membrane</strong></td><td>Organize microtubule assembly; help in animal cell division</td><td><strong>Animal</strong></td></tr>
+<tr><td><strong>Cilia and flagella</strong></td><td>Arrays of microtubules. Cilia: short, many, hair-like. Flagella: long, few, whip-like</td><td>Cilia move fluid past the cell or move the cell; flagella propel the cell (sperm)</td><td>Animal (most plant cells lack them)</td></tr>
+</tbody></table></div>
+<p><strong>Plant only:</strong> cell wall, chloroplasts, large central vacuole, plasmodesmata. <strong>Animal only:</strong> centrioles, lysosomes (mainly), cilia/flagella. <strong>No membrane:</strong> ribosomes, centrioles, cytoskeleton. <strong>Double membrane:</strong> nucleus, mitochondrion, chloroplast.</p>
+<p><strong>Secretion pathway:</strong> rough ER makes the protein → vesicle → Golgi modifies and packages → secretory vesicle → exocytosis.</p>
+<div class="table-wrap"><table class="data">
+<thead><tr><th>Organelle</th><th>Many in</th><th>Few in</th></tr></thead>
+<tbody>
+<tr><td>Mitochondria</td><td>Muscle cells, neurons (heart, brain)</td><td>Fat cells, red blood cells</td></tr>
+<tr><td>Rough ER</td><td>Pancreatic cells, plasma B cells (antibodies)</td><td>Muscle cells, fat cells</td></tr>
+<tr><td>Smooth ER</td><td>Liver cells (detox), adrenal gland cells (steroid hormones)</td><td>Red blood cells, neurons</td></tr>
+<tr><td>Lysosomes</td><td>White blood cells, liver cells</td><td>Muscle cells, neurons</td></tr>
+<tr><td>Golgi</td><td>Pancreatic, salivary gland (amylase), adrenal cells</td><td>Fat cells, red blood cells</td></tr>
+</tbody></table></div>
+
+<h3>Cell membrane</h3>
+<p><strong>Functions:</strong> physical barrier; compartmentalization (inside vs outside); selectively permeable; transport in and out; cell–cell recognition; signal transduction; enzymatic activity; intercellular joining (makes tissues); anchoring and structural support.</p>
+<p><strong>Fluid mosaic model.</strong> <em>Fluid</em>: phospholipids and proteins move sideways (laterally); parts are not static. <em>Mosaic</em>: made of many different macromolecules.</p>
+<div class="table-wrap"><table class="data">
+<thead><tr><th>Component</th><th>Description</th><th>Role</th></tr></thead>
+<tbody>
+<tr><td><strong>Phospholipids</strong></td><td>Continuous double layer; heads face the water on both sides, tails inside</td><td>Barrier: the hydrophobic interior blocks water-soluble (polar, ionic) molecules</td></tr>
+<tr><td><strong>Integral proteins</strong></td><td>Embedded in the bilayer, usually spanning it</td><td>Channels, carriers, pumps, receptors</td></tr>
+<tr><td><strong>Peripheral proteins</strong></td><td>On the inner <em>or</em> outer surface only; don't enter the hydrophobic core</td><td>Enzymes, attachment to the cytoskeleton</td></tr>
+<tr><td><strong>Carbohydrates</strong></td><td>Short sugar chains (oligosaccharides) on the <strong>exterior</strong> only</td><td>Recognition, adhesion</td></tr>
+<tr><td><strong>Glycoproteins</strong></td><td>Carbohydrate chains attached to membrane proteins</td><td>Communication, transport, anchoring; "ID tags" so the immune system knows self from foreign</td></tr>
+<tr><td><strong>Glycolipids</strong></td><td>Carbohydrate chains attached to phospholipids</td><td>Membrane stability, cell surface identification</td></tr>
+<tr><td><strong>Cholesterol</strong></td><td>Steroid wedged between phospholipids</td><td>Fluidity buffer (below)</td></tr>
+</tbody></table></div>
+<p><strong>Six membrane protein jobs:</strong> selective transport (channel/carrier), enzyme, cell-surface receptor (signal transduction), cell-surface identity marker, cell adhesion (intercellular joining), attachment to the cytoskeleton / extracellular matrix.</p>
+<ul>
+<li><strong>Fluidity:</strong> unsaturated (cis, kinked) tails <strong>increase</strong> fluidity; saturated tails <strong>decrease</strong> it.</li>
+<li><strong>Cholesterol:</strong> at <strong>high</strong> temperature it holds phospholipids in place → <strong>less</strong> fluid. At <strong>low</strong> temperature it keeps tails from packing → prevents freezing, maintains fluidity.</li>
+<li><strong>Selective permeability</strong> depends on size, solubility and specific protein channels. Cross easily: gases (O<sub>2</sub>, CO<sub>2</sub>), small hydrophobic molecules (benzene), small polar molecules (H<sub>2</sub>O, ethanol, slowly). Need proteins: large polar molecules (glucose), charged particles (ions such as H<sup>+</sup>, Na<sup>+</sup>, Cl<sup>−</sup>; amino acids).</li>
+<li><strong>Signal transduction</strong> example: adrenaline can't cross the membrane, so it binds an outside receptor that triggers reactions inside.</li>
+</ul>
+
+<h3>Cellular transport</h3>
+<div class="table-wrap"><table class="data">
+<thead><tr><th>Type</th><th>Energy (ATP)?</th><th>Direction</th><th>Protein needed?</th><th>Examples</th></tr></thead>
+<tbody>
+<tr><td><strong>Simple diffusion</strong></td><td>No (passive)</td><td>High → low concentration (down the gradient)</td><td>No, straight through the bilayer</td><td>O<sub>2</sub>, CO<sub>2</sub>, small lipid-soluble molecules</td></tr>
+<tr><td><strong>Facilitated diffusion: channel</strong></td><td>No (passive)</td><td>High → low</td><td>Yes: channel protein, a water-filled pore that does <strong>not</strong> change shape</td><td>Specific ions; water through aquaporins</td></tr>
+<tr><td><strong>Facilitated diffusion: carrier</strong></td><td>No (passive)</td><td>High → low</td><td>Yes: carrier protein <strong>changes shape</strong>; specific to size, shape, charge</td><td>Sugars (glucose), amino acids, small proteins</td></tr>
+<tr><td><strong>Osmosis</strong></td><td>No (passive)</td><td>Water: high [water] (low solute) → low [water] (high solute)</td><td>No (slowly), or aquaporins for mass movement</td><td>Water only</td></tr>
+<tr><td><strong>Active transport</strong></td><td><strong>Yes</strong></td><td><strong>Low → high</strong> (against the gradient)</td><td>Yes: specific carrier proteins (pumps)</td><td>Sodium–potassium (Na<sup>+</sup>/K<sup>+</sup>) pump</td></tr>
+<tr><td><strong>Endocytosis</strong></td><td><strong>Yes</strong></td><td>Into the cell (membrane engulfs material, forms a vesicle)</td><td>Receptors for the receptor-mediated type</td><td>Phagocytosis ("cell eating", solids); pinocytosis ("cell drinking", fluid + solutes); receptor-mediated (specific molecules bind surface receptors)</td></tr>
+<tr><td><strong>Exocytosis</strong></td><td><strong>Yes</strong></td><td>Out of the cell (vesicle fuses with the membrane)</td><td>No</td><td>Wastes, hormones, enzymes. Constitutive (continuous, all cells, e.g., membrane lipids and proteins) vs regulated (stored, released on a chemical or electrical signal)</td></tr>
+</tbody></table></div>
+<ul>
+<li><strong>Passive vs active:</strong> passive needs no energy and goes down the gradient (spontaneous); active needs ATP and goes against the gradient.</li>
+<li><strong>Diffusion vs osmosis:</strong> diffusion = movement of particles/ions from high to low concentration; osmosis = diffusion of <strong>water</strong> across a selectively permeable membrane. Both are passive.</li>
+<li>Diffusion continues until <strong>dynamic equilibrium</strong>: molecules still move, but there is no net movement.</li>
+<li>Endocytosis and exocytosis are <strong>membrane-assisted (bulk) transport</strong>, counted with active transport because they use energy.</li>
+</ul>
+
+<h3>Tonicity</h3>
+<p>Tonicity describes the solute concentration of the <strong>solution outside</strong>, compared with the inside of the cell. Water moves toward the side with <strong>more solute</strong>.</p>
+<div class="table-wrap"><table class="data">
+<thead><tr><th>Solution is</th><th>Solute outside vs cell</th><th>Net water movement</th><th>Animal cell</th><th>Plant cell</th></tr></thead>
+<tbody>
+<tr><td><strong>Isotonic</strong></td><td>Equal</td><td>None (water still moves both ways equally)</td><td>Normal, stable</td><td>Flaccid (limp)</td></tr>
+<tr><td><strong>Hypotonic</strong></td><td>Lower (more water outside)</td><td><strong>Into</strong> the cell</td><td>Swells, may burst (lysis)</td><td>Turgid (firm, normal); cell wall stops bursting</td></tr>
+<tr><td><strong>Hypertonic</strong></td><td>Higher (less water outside)</td><td><strong>Out of</strong> the cell</td><td>Shrivels (crenation)</td><td>Plasmolysis (membrane pulls away from the wall)</td></tr>
+</tbody></table></div>
+<p>Memory trick: "hypo" sounds like "hippo": in a hypotonic solution the cell swells up like a hippo.</p>
+
+<h3>Graph types</h3>
+<ul>
+<li><strong>Independent variable</strong> = the one you change → <strong>x-axis</strong>. <strong>Dependent variable</strong> = what is measured, affected by the change → <strong>y-axis</strong>. Title format: "y vs. x".</li>
+</ul>
+<div class="table-wrap"><table class="data">
+<thead><tr><th>Graph</th><th>Use it when</th><th>Example</th></tr></thead>
+<tbody>
+<tr><td><strong>Bar graph</strong></td><td>Comparing discrete, non-continuous categories side by side</td><td>% of population in each blood group (A, B, AB, O)</td></tr>
+<tr><td><strong>Line graph</strong></td><td>Showing continuous change over time; data in sequential order</td><td>Reaction rate over time; temperature over a day</td></tr>
+<tr><td><strong>Scatter plot</strong></td><td>Showing a relationship (correlation) between two variables; points not connected in sequence</td><td>Height vs weight of different people</td></tr>
+</tbody></table></div>
+<ul>
+<li><strong>Correlation:</strong> positive (both increase together), negative (one increases as the other decreases), none (random scatter).</li>
+<li>Distance of points from the trendline or trend curve shows the <strong>strength</strong> of the relationship: small residuals = strong fit, large residuals = weak fit.</li>
+<li><strong>Enzyme graph shapes:</strong> rate vs [substrate] rises then plateaus (saturation); rate vs [enzyme] is a straight line; rate vs temperature rises to an optimum then falls steeply; rate vs pH peaks at the optimum.</li>
+</ul>
+
+<h3>Numbers and facts to know cold</h3>
+<ul>
+<li>ΔEN: &lt; 0.5 nonpolar covalent; 0.5–1.7 polar covalent; &gt; 1.7 ionic. Fluorine is the most electronegative.</li>
+<li>Force strengths (kJ/mol): LDF 0.05–40, dipole–dipole 5–25, H-bond 10–40, ion–dipole 40–600.</li>
+<li>H-bonds form only with H bonded to <strong>N, O or F</strong>.</li>
+<li>Body temperature 37 °C; proteins denature above about 40 °C; heat-tolerant enzymes work at about 76 °C. Water is densest at 4 °C.</li>
+<li>Blood pH 7.35–7.45 (fatal below 7.0 or above 7.8); stomach pH ≈ 2; lysosome pH ≈ 4.5–5.</li>
+<li>Carbon forms 4 covalent bonds. Glucose = C<sub>6</sub>H<sub>12</sub>O<sub>6</sub>; maltose/sucrose = C<sub>12</sub>H<sub>22</sub>O<sub>11</sub>.</li>
+<li>Triose 3 C, pentose 5 C, hexose 6 C. Oligosaccharide = 2–10 monosaccharides; polysaccharides = hundreds to thousands.</li>
+<li>Branches: amylopectin ~every 20 subunits, glycogen ~every 10. Amylose is about 20–25% of starch.</li>
+<li>Fat 9 kcal/g vs carbohydrate 4 kcal/g.</li>
+<li>Triglyceride: 1 glycerol + 3 fatty acids → 3 ester bonds + 3 H<sub>2</sub>O. Phospholipid: 2 fatty acids + phosphate. Steroid: 17 C in 4 rings.</li>
+<li><em>n</em> monomers joined → <em>n</em> − 1 bonds and <em>n</em> − 1 H<sub>2</sub>O (tripeptide: 2 peptide bonds, 2 H<sub>2</sub>O).</li>
+<li>A–T: 2 H-bonds; G–C: 3 H-bonds. %A = %T, %G = %C, purines = pyrimidines = 50%. About 10 base pairs per turn of the helix.</li>
+<li>20 amino acids, 9 essential. 3 bases (codon) = 1 amino acid. 4 levels of protein structure.</li>
+<li>Deoxyribose lacks O at carbon 2. DNA ends: 5′ = free phosphate, 3′ = free sugar (–OH).</li>
+<li>C-14: 6 p + 8 n → decays to N-14. I-131 half-life ≈ 8 days.</li>
+<li>Passive = no ATP, down the gradient. Active, endocytosis, exocytosis = ATP.</li>
+</ul>
 `;

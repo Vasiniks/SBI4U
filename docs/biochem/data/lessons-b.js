@@ -391,3 +391,134 @@ window.LESSONS.push({
 </ul>
 `
 });
+
+/* ===================================================================
+   1.06 PROTEINS
+   =================================================================== */
+window.LESSONS.push({
+  id: "1.06",
+  title: "Proteins",
+  stage: "c5",
+  where: "Made at ribosomes; work everywhere",
+  summary: "Proteins are polymers of 20 amino acids joined by peptide bonds. Learn the general structure of an amino acid, the four R-group families, how condensation builds a polypeptide, the four levels of protein structure, and why heat, pH and salt denature a protein by destroying its shape.",
+  objectives: [
+    "State that DNA codes for proteins and list the six main functions of proteins with an example of each.",
+    "Explain that 20 amino acids combine in specific sequences to make polypeptides, and name the 9 essential amino acids as ones that must come from the diet.",
+    "Draw the general structure of an amino acid and label the central carbon, amino group, carboxyl group, hydrogen atom and R group.",
+    "Classify an amino acid as non-polar, polar, positively charged or negatively charged from its R group, using glycine, serine, histidine and aspartic acid as examples.",
+    "Show how a peptide bond forms by condensation, name the N-terminus and C-terminus, and draw a tripeptide with all products.",
+    "Describe primary, secondary, tertiary and quaternary structure and the bonds or interactions that hold each level.",
+    "Define denaturation, explain how high temperature, pH and salt cause it, and give dangerous and useful examples."
+  ],
+  html: `
+<h3 data-tier="essential">DNA → protein: why proteins matter</h3>
+<p>The last lesson ended with DNA storing information. This lesson is about what that information is <em>for</em>. The class slide puts it simply: <strong>DNA codes for the production of proteins</strong>, and <strong>proteins are involved in almost everything the cell does</strong>. A gene is, in effect, a recipe for one protein.</p>
+<p>The picture on the slide shows the two-stage path from gene to protein, which you will study in detail in the genetics unit:</p>
+<ol>
+  <li><strong>Transcription</strong> (in the nucleus): the DNA of a gene is copied into a strand of RNA (pre-mRNA), which is processed into <strong>mRNA</strong>. The mRNA leaves the nucleus.</li>
+  <li><strong>Translation</strong> (in the cytoplasm, at a <strong>ribosome</strong>): the ribosome reads the mRNA, and <strong>tRNA</strong> molecules bring in the matching amino acids one at a time. The amino acids are linked into a growing protein chain.</li>
+</ol>
+<div class="callout teacher"><p class="callout-title">Said in class</p><p>The genetic code is read in groups of <strong>three bases</strong>, called a <span class="term">codon</span>. Each codon codes for <strong>one specific amino acid</strong>. tRNA "fetches" the right amino acid for each codon and the ribosome joins them into a protein chain.</p></div>
+<p data-tier="extra">With four bases read three at a time there are 4 × 4 × 4 = 64 possible codons, more than enough for 20 amino acids. Most amino acids have several codons, and three codons mean "stop".</p>
+
+<h3 data-tier="essential">Functions of proteins</h3>
+<p>The slide lists six functions. For each one, learn what it means and one example:</p>
+<div class="table-wrap"><table class="data">
+<thead><tr><th>Function</th><th>What it means</th><th>Example</th></tr></thead>
+<tbody>
+<tr><td>Structural support</td><td>Fibres that give strength and shape</td><td>Collagen in skin, tendons and bone; keratin in hair and nails</td></tr>
+<tr><td>Transport of substances</td><td>Carry molecules around the body or across membranes</td><td>Hemoglobin carries O<sub>2</sub> in blood; channel and carrier proteins in the cell membrane</td></tr>
+<tr><td>Cell signalling</td><td>Send and receive messages between cells</td><td>Receptor proteins on the cell surface; protein hormones such as insulin</td></tr>
+<tr><td>Movement</td><td>Make cells and muscles move</td><td>Actin and myosin in muscle contraction</td></tr>
+<tr><td>Coordination and regulation of activities</td><td>Control when and how fast processes happen</td><td>Insulin regulating blood sugar; proteins that switch genes on and off</td></tr>
+<tr><td>Accelerating chemical reactions</td><td>Act as catalysts</td><td>Enzymes such as amylase and lipase (next lesson)</td></tr>
+</tbody></table></div>
+<p>How can one type of molecule do so many different jobs? Because proteins can be built in an almost unlimited number of different <strong>shapes</strong>, and a protein's shape determines its function. Collagen is a long rope, hemoglobin is a compact ball with pockets that hold oxygen, and an enzyme has a groove that fits only its substrate. The rest of this lesson explains where those shapes come from.</p>
+<p data-tier="extra">Proteins also defend the body: antibodies are proteins that recognize and bind to invaders such as bacteria and viruses.</p>
+
+<h3 data-tier="essential">Composition: 20 amino acids</h3>
+<p>Proteins are polymers, and their monomers are <span class="term">amino acids</span>. There are <strong>20</strong> different amino acids, and <strong>the specific sequence of the 20 amino acids creates unique amino acid polymers</strong> called <span class="term">polypeptides</span>.</p>
+<p>Think of the 20 amino acids as a 20-letter alphabet. With 26 letters, English builds hundreds of thousands of words just by changing the order. A protein is often hundreds of amino acids long, so the number of possible sequences is astronomically large (for a chain of only 100 amino acids, 20<sup>100</sup>). That variety is why proteins can do so many jobs.</p>
+<p>Words to keep straight:</p>
+<ul>
+  <li><strong>Amino acid</strong>: the monomer.</li>
+  <li><strong>Dipeptide</strong>: two amino acids joined; <strong>tripeptide</strong>: three.</li>
+  <li><strong>Polypeptide</strong>: a long chain of amino acids.</li>
+  <li><strong>Protein</strong>: one or more polypeptides folded into a specific, functional 3D shape.</li>
+</ul>
+<h4>Essential amino acids</h4>
+<p><strong>9 of the 20 amino acids are classified as essential.</strong> Your body cannot make them (they are not naturally synthesized), so they <strong>must come from your diet</strong>. The other 11 are non-essential: your cells can build them from other molecules. The nine essential amino acids are <strong>valine, isoleucine, leucine, methionine, lysine, threonine, histidine, phenylalanine and tryptophan</strong>.</p>
+<div class="callout teacher"><p class="callout-title">Said in class</p><p>"Essential" also covers amino acids the body cannot make <strong>in sufficient quantities</strong>. If you cannot make enough of it to meet your needs, you have to eat it.</p></div>
+<div class="callout tip"><p class="callout-title">Memory trick</p><p><strong>PVT TIM HaLL</strong> ("Private Tim Hall"): <strong>P</strong>henylalanine, <strong>V</strong>aline, <strong>T</strong>hreonine, <strong>T</strong>ryptophan, <strong>I</strong>soleucine, <strong>M</strong>ethionine, <strong>H</strong>istidine, <strong>L</strong>eucine, <strong>L</strong>ysine.</p></div>
+<div class="callout warn"><p class="callout-title">Common mistake</p><p>"Essential" does <strong>not</strong> mean more important. Your body needs all 20 amino acids to build its proteins. "Essential" only means it is essential to get that amino acid from <strong>food</strong>.</p></div>
+<p data-tier="extra">Foods that contain all nine essential amino acids in good amounts (meat, fish, eggs, dairy, soy, quinoa) are called complete proteins. Most plant foods are low in one or two, but combining them works: grains are low in lysine and legumes are low in methionine, so rice and beans together supply all nine.</p>
+
+<h3 data-tier="essential">The structure of an amino acid</h3>
+<p>All 20 amino acids share the same basic plan. A <strong>central carbon atom</strong> (also called the alpha carbon) forms four bonds, to four different things:</p>
+<ol>
+  <li>An <span class="term">amino group</span> (–NH<sub>2</sub>).</li>
+  <li>A <span class="term">carboxyl group</span> (–COOH).</li>
+  <li>A <strong>hydrogen atom</strong> (–H).</li>
+  <li>An <span class="term">R group</span>, also called the <strong>side chain</strong>.</li>
+</ol>
+<p>The first three are identical in every amino acid. Only the <strong>R group</strong> changes, and it is the R group that gives each amino acid its identity and its chemical personality (size, polarity, charge). The name "amino acid" comes from the two functional groups you met in Lesson 1.02: the <strong>amino</strong> group, which acts as a base, and the <strong>carboxyl</strong> group, which acts as an acid.</p>
+<figure class="diagram">
+<svg viewBox="0 38 640 362" role="img" aria-labelledby="b106-t1">
+<title id="b106-t1">General structure of an amino acid: a central carbon bonded to an amino group (NH2) on the left, a carboxyl group (COOH) on the right, a hydrogen atom above and an R group, the side chain, below. Below it, four example amino acids: glycine with R equal to H (non-polar), serine with R equal to CH2OH (polar), histidine with a CH2 and nitrogen-containing ring (positively charged, basic) and aspartic acid with R equal to CH2COO minus (negatively charged, acidic).</title>
+<text x="230" y="54" text-anchor="middle" font-family="inherit" font-size="12" font-weight="700" style="fill:var(--ink)">Central carbon</text>
+<line x1="250" y1="60" x2="306" y2="128" style="stroke:var(--ink-2)" stroke-width="1.2"/>
+<text x="320" y="82" text-anchor="middle" font-family="inherit" font-size="16" style="fill:var(--ink)">H</text>
+<text x="334" y="68" font-family="inherit" font-size="12" style="fill:var(--ink-2)">hydrogen atom</text>
+<line x1="320" y1="88" x2="320" y2="123" style="stroke:var(--ink)" stroke-width="2"/>
+<rect x="140" y="92" width="104" height="100" rx="10" style="fill:var(--teal-soft);stroke:var(--teal)" stroke-width="1.5"/>
+<line x1="204" y1="132" x2="178" y2="114" style="stroke:var(--ink)" stroke-width="2"/>
+<line x1="204" y1="152" x2="178" y2="170" style="stroke:var(--ink)" stroke-width="2"/>
+<text x="168" y="114" text-anchor="middle" font-family="inherit" font-size="16" style="fill:var(--ink)">H</text>
+<text x="168" y="184" text-anchor="middle" font-family="inherit" font-size="16" style="fill:var(--ink)">H</text>
+<text x="214" y="146" text-anchor="middle" font-family="inherit" font-size="16" font-weight="700" style="fill:var(--ink)">N</text>
+<line x1="226" y1="140" x2="303" y2="140" style="stroke:var(--ink)" stroke-width="2"/>
+<circle cx="320" cy="140" r="17" style="fill:var(--surface-2);stroke:var(--ink-2)" stroke-width="1.5"/>
+<text x="320" y="146" text-anchor="middle" font-family="inherit" font-size="17" font-weight="700" style="fill:var(--ink)">C</text>
+<rect x="392" y="76" width="120" height="130" rx="10" style="fill:var(--amber-soft);stroke:var(--amber)" stroke-width="1.5"/>
+<line x1="337" y1="140" x2="402" y2="140" style="stroke:var(--ink)" stroke-width="2"/>
+<text x="412" y="146" text-anchor="middle" font-family="inherit" font-size="16" font-weight="700" style="fill:var(--ink)">C</text>
+<line x1="418" y1="128" x2="444" y2="104" style="stroke:var(--ink)" stroke-width="2"/>
+<line x1="425" y1="133" x2="451" y2="109" style="stroke:var(--ink)" stroke-width="2"/>
+<text x="458" y="104" text-anchor="middle" font-family="inherit" font-size="16" style="fill:var(--ink)">O</text>
+<line x1="422" y1="154" x2="446" y2="174" style="stroke:var(--ink)" stroke-width="2"/>
+<text x="466" y="192" text-anchor="middle" font-family="inherit" font-size="16" style="fill:var(--ink)">OH</text>
+<line x1="320" y1="157" x2="320" y2="194" style="stroke:var(--ink)" stroke-width="2"/>
+<rect x="296" y="194" width="48" height="36" rx="6" style="fill:var(--magenta-soft);stroke:var(--magenta)" stroke-width="1.5"/>
+<text x="320" y="218" text-anchor="middle" font-family="inherit" font-size="16" font-weight="700" style="fill:var(--ink)">R</text>
+<text x="192" y="212" text-anchor="middle" font-family="inherit" font-size="12" font-weight="700" style="fill:var(--ink)">Amino group</text>
+<text x="192" y="228" text-anchor="middle" font-family="inherit" font-size="12" style="fill:var(--ink)">–NH₂</text>
+<text x="452" y="224" text-anchor="middle" font-family="inherit" font-size="12" font-weight="700" style="fill:var(--ink)">Carboxyl group</text>
+<text x="452" y="240" text-anchor="middle" font-family="inherit" font-size="12" style="fill:var(--ink)">–COOH</text>
+<text x="320" y="250" text-anchor="middle" font-family="inherit" font-size="12" font-weight="700" style="fill:var(--ink)">R group (side chain)</text>
+<text x="320" y="266" text-anchor="middle" font-family="inherit" font-size="12" style="fill:var(--ink-2)">the only part that differs</text>
+<text x="320" y="298" text-anchor="middle" font-family="inherit" font-size="13" font-weight="700" style="fill:var(--ink)">One example from each R-group family</text>
+<rect x="12" y="308" width="142" height="84" rx="8" style="fill:var(--surface-2);stroke:var(--line)"/>
+<text x="83" y="330" text-anchor="middle" font-family="inherit" font-size="13" font-weight="700" style="fill:var(--ink)">Glycine</text>
+<text x="83" y="352" text-anchor="middle" font-family="inherit" font-size="13" style="fill:var(--ink)">R = –H</text>
+<text x="83" y="376" text-anchor="middle" font-family="inherit" font-size="12" style="fill:var(--amber)">non-polar</text>
+<rect x="170" y="308" width="142" height="84" rx="8" style="fill:var(--surface-2);stroke:var(--line)"/>
+<text x="241" y="330" text-anchor="middle" font-family="inherit" font-size="13" font-weight="700" style="fill:var(--ink)">Serine</text>
+<text x="241" y="352" text-anchor="middle" font-family="inherit" font-size="13" style="fill:var(--ink)">R = –CH₂OH</text>
+<text x="241" y="376" text-anchor="middle" font-family="inherit" font-size="12" style="fill:var(--blue)">polar (has –OH)</text>
+<rect x="328" y="308" width="142" height="84" rx="8" style="fill:var(--surface-2);stroke:var(--line)"/>
+<text x="399" y="330" text-anchor="middle" font-family="inherit" font-size="13" font-weight="700" style="fill:var(--ink)">Histidine</text>
+<text x="399" y="352" text-anchor="middle" font-family="inherit" font-size="13" style="fill:var(--ink)">R = –CH₂ + N ring</text>
+<text x="399" y="376" text-anchor="middle" font-family="inherit" font-size="12" style="fill:var(--teal)">+ charge (basic)</text>
+<rect x="486" y="308" width="142" height="84" rx="8" style="fill:var(--surface-2);stroke:var(--line)"/>
+<text x="557" y="330" text-anchor="middle" font-family="inherit" font-size="13" font-weight="700" style="fill:var(--ink)">Aspartic acid</text>
+<text x="557" y="352" text-anchor="middle" font-family="inherit" font-size="13" style="fill:var(--ink)">R = –CH₂COO⁻</text>
+<text x="557" y="376" text-anchor="middle" font-family="inherit" font-size="12" style="fill:var(--magenta)">− charge (acidic)</text>
+</svg>
+<figcaption>Every amino acid has the same central carbon, amino group, carboxyl group and hydrogen. Only the R group changes. The four amino acids at the bottom are the ones to memorize, one from each family.</figcaption>
+</figure>
+<p data-tier="likely">On the slide's amino acid chart, the structures are drawn as H<sub>3</sub>N<sup>+</sup>– and –COO<sup>−</sup> instead of H<sub>2</sub>N– and –COOH. That is how amino acids actually exist in water at body pH: the acidic carboxyl group gives away an H<sup>+</sup> (becoming –COO<sup>−</sup>) and the basic amino group picks one up (becoming –NH<sub>3</sub><sup>+</sup>). It is the same molecule, just ionized. Either form is accepted when you draw an amino acid.</p>
+<div class="callout teacher"><p class="callout-title">Said in class</p><p>You do not need to memorize all 20 structures from the chart. You do need to know <strong>one from each group</strong>, and the suggested ones are <strong>glycine</strong> (non-polar), <strong>serine</strong> (polar), <strong>histidine</strong> (positive charge) and <strong>aspartic acid</strong> (negative charge).</p></div>
+<details class="check"><summary>Quick check: Draw the general structure of an amino acid and identify its functional groups.</summary><div class="ans"><p>A central carbon with four bonds: on the left an <strong>amino group</strong> (H<sub>2</sub>N–, two H atoms on a nitrogen), on the right a <strong>carboxyl group</strong> (–COOH: a carbon double-bonded to O and single-bonded to OH), above a <strong>hydrogen atom</strong>, and below the <strong>R group (side chain)</strong>. The amino and carboxyl groups are the functional groups common to all amino acids; the R group varies.</p></div></details>
+@@B106@@
+`
+});
