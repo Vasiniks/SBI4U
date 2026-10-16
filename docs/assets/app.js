@@ -131,7 +131,7 @@
     if (pendingScroll) { var ps = pendingScroll; pendingScroll = null; ps.classList.remove('page-wait'); ps.classList.add('page-in'); ps.scrollIntoView({ block: 'start' }); }
     else if (keepScroll !== true) window.scrollTo(0, 0);
     var h1 = view.querySelector('h1, h2');
-    document.title = (h1 ? h1.textContent + ' · ' : '') + 'SBI4U Metabolic Processes';
+    document.title = (h1 ? h1.textContent + ' · ' : '') + (ALL ? 'SBI4U' : 'SBI4U ' + (UNIT.title || ''));
   }
   window.addEventListener('hashchange', function () { route(); });
 
