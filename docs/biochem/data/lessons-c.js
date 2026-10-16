@@ -272,15 +272,15 @@ window.LESSONS.push({
 </ul>
 <p>Vesicles work because membranes are fluid (lesson 1.09). A patch of membrane can pinch off into a sphere, travel, and then merge seamlessly into another membrane without leaking its contents.</p>
 <div class="callout teacher"><p class="callout-title">Said in class</p><p>Vesicles "carry things to places." The usual route is: vesicles from the ER go to the Golgi bodies, which modify the contents, and then new vesicles go to the plasma membrane or to lysosomes.</p></div>
+<details class="check"><summary>Trace a digestive enzyme made by a pancreas cell from its gene to the outside of the cell.</summary><div class="ans"><p>The gene in the <strong>nucleus</strong> is copied to mRNA, which exits through a nuclear pore. A ribosome on the <strong>rough ER</strong> builds the polypeptide, which folds inside the ER. A <strong>transport vesicle</strong> carries it to the <strong>cis face of the Golgi</strong>. The Golgi modifies it (for example by adding sugars) and sorts it, and it leaves the <strong>trans face</strong> in a <strong>secretory vesicle</strong>. The vesicle fuses with the <strong>plasma membrane</strong> and releases the enzyme outside the cell by exocytosis.</p></div></details>
 <h4 data-tier="likely">Peroxisomes</h4>
 <p>A <span class="term">peroxisome</span> is a vesicle that contains enzymes which digest fatty acids and amino acids. That breakdown produces hydrogen peroxide (H<sub>2</sub>O<sub>2</sub>), which is toxic. Peroxisomes also contain the enzyme <strong>catalase</strong>, which converts it into harmless water and oxygen: 2 H<sub>2</sub>O<sub>2</sub> → 2 H<sub>2</sub>O + O<sub>2</sub>. Keeping the peroxide inside one compartment protects the rest of the cell. Peroxisomes in liver cells also break down alcohol and other toxins.</p>
 <div class="callout teacher"><p class="callout-title">Said in class</p><p>Peroxisomes were not on the slides. In class they were described as a type of vesicle that <strong>inactivates toxins</strong>.</p></div>
-<details class="check"><summary>Trace a digestive enzyme made by a pancreas cell from its gene to the outside of the cell.</summary><div class="ans"><p>The gene in the <strong>nucleus</strong> is copied to mRNA, which exits through a nuclear pore. A ribosome on the <strong>rough ER</strong> builds the polypeptide, which folds inside the ER. A <strong>transport vesicle</strong> carries it to the <strong>cis face of the Golgi</strong>. The Golgi modifies it (for example by adding sugars) and sorts it, and it leaves the <strong>trans face</strong> in a <strong>secretory vesicle</strong>. The vesicle fuses with the <strong>plasma membrane</strong> and releases the enzyme outside the cell by exocytosis.</p></div></details>
 
 <h3 data-tier="essential">Lysosomes</h3>
 <p>The lysosome slide has five questions. Here they are in order.</p>
 <ol>
-  <li><strong>Structure:</strong> a small, membrane-bound vesicle (single membrane) filled with powerful <strong>digestive (hydrolytic) enzymes</strong>, about 40 different kinds, able to break down proteins, fats, polysaccharides and nucleic acids. Its membrane contains transport proteins that move the digested products out into the cytosol.</li>
+  <li><strong>Structure:</strong> a small, membrane-bound vesicle (single membrane) filled with powerful <strong>digestive (hydrolytic) enzymes</strong>, dozens of different kinds, able to break down proteins, fats, polysaccharides and nucleic acids. Its membrane contains transport proteins that move the digested products out into the cytosol.</li>
   <li><strong>Function:</strong> <strong>intracellular digestion</strong> and waste disposal. Lysosomes fuse with vacuoles or vesicles carrying particles or molecules for disposal (food, bacteria, worn-out cell parts) and empty their enzymes into them. The enzymes hydrolyze the contents, and useful products such as amino acids and simple sugars are returned to the cytosol to be reused. Lysosomes digest food brought in by <strong>phagocytosis</strong> (a white blood cell engulfing a bacterium) and recycle the cell's own damaged organelles (<span class="term">autophagy</span>).</li>
   <li><strong>Where they are created:</strong> they bud off the trans face of the <strong>Golgi apparatus</strong>. Their enzymes and membrane are made by the rough ER and processed in the Golgi first.</li>
   <li><strong>pH:</strong> the inside of a lysosome is <strong>acidic, about pH 4.5 to 5</strong>, while the cytosol is close to neutral (about pH 7.2). The lysosome's membrane pumps H<sup>+</sup> ions in to keep it that way. This tells you that lysosomal enzymes have an <strong>optimal pH that is acidic</strong>: they work best around pH 5 and poorly at neutral pH.</li>
@@ -1012,6 +1012,207 @@ window.LESSONS.push({
   <li>Hypotonic solution: water enters the cell (animal cells swell and may lyse; plant cells become turgid). Isotonic: no net movement. Hypertonic: water leaves (animal cells crenate; plant cells plasmolyze).</li>
   <li>Active transport uses ATP and specific carrier proteins to move substances against their gradient; the Na<sup>+</sup>/K<sup>+</sup> pump moves 3 Na<sup>+</sup> out and 2 K<sup>+</sup> in per ATP.</li>
   <li>Endocytosis brings material in by vesicles (phagocytosis, pinocytosis, receptor-mediated); exocytosis releases it (constitutive or regulated). Both use energy.</li>
+</ul>
+`
+});
+
+/* ===================================================================
+   1.11 VISUALIZING BIOLOGICAL DATA
+   =================================================================== */
+window.LESSONS.push({
+  id: "1.11",
+  title: "Visualizing Biological Data",
+  stage: "c6",
+  where: "Lab and data skills",
+  summary: "A quick guide to graphing. Identify the independent variable (x-axis) and dependent variable (y-axis), title the graph \"y vs. x\", and choose the right graph: a bar graph for separate categories, a line graph for continuous change over time, and a scatter plot for the relationship between two variables. Read correlations as positive, negative or none, and judge their strength by how close the points sit to the trendline.",
+  objectives: [
+    "Identify the independent and dependent variables in an experiment and put each on the correct axis.",
+    "Title a graph in the form \"dependent variable vs. independent variable\" and label both axes with units.",
+    "Choose a bar graph, line graph or scatter plot to suit the data, and justify the choice.",
+    "Describe positive, negative and no correlation on a scatter plot.",
+    "Judge the strength of a relationship from the distance of points to the trendline or trend curve.",
+    "Interpret a graph of biological data, such as osmosis results, to draw a conclusion."
+  ],
+  html: `
+<h3 data-tier="essential">Why graph data at all?</h3>
+<p>A table of numbers holds all your results, but it hides the pattern. A graph turns the numbers into a shape, so you can see at a glance whether something goes up, goes down, levels off or does nothing. That is why every lab report in this course needs at least one graph, and why test questions often hand you a graph and ask what it shows.</p>
+<p>The two big skills in this lesson are deciding <strong>what goes on which axis</strong> and choosing the <strong>right type of graph</strong> for your data. The wrong choice can make good data look meaningless.</p>
+
+<h3 data-tier="essential">Variables: independent and dependent</h3>
+<ul>
+  <li>The <span class="term">independent variable</span> (IV) is the <strong>variable you change</strong> on purpose. It is also called the manipulated variable.</li>
+  <li>The <span class="term">dependent variable</span> (DV) is the <strong>variable affected by the change</strong>: what you measure to see the effect. Its value "depends on" the independent variable.</li>
+</ul>
+<p>The slide's example uses the hypothesis "If you add sugar to hot water, then it will dissolve faster than in cold water." You choose the water <strong>temperature</strong>, so that is the independent variable. You then measure <strong>how long it takes the sugar to dissolve</strong>, so time is the dependent variable.</p>
+<p>For the comparison to be fair, everything else must stay the same: the mass and type of sugar, the volume of water, whether and how you stir. These are <span class="term">controlled variables</span>. If you also changed the amount of sugar, you could not tell which change caused the result.</p>
+<h4>Which axis?</h4>
+<p>The independent variable goes on the <strong>x-axis</strong> (horizontal). The dependent variable goes on the <strong>y-axis</strong> (vertical). The slide writes this as <strong>(y vs. x)</strong>, and that is also how you title a graph: <em>dependent variable vs. independent variable</em>. For the sugar experiment: "Time to Dissolve vs. Water Temperature."</p>
+<div class="callout tip"><p class="callout-title">Memory trick</p><p><strong>DRY MIX</strong>: <strong>D</strong>ependent, <strong>R</strong>esponding, <strong>Y</strong>-axis; <strong>M</strong>anipulated, <strong>I</strong>ndependent, <strong>X</strong>-axis.</p></div>
+<div class="callout warn"><p class="callout-title">Common mistake</p><p>Writing the title backwards. "Temperature vs. Time to Dissolve" would mean temperature is on the y-axis. The thing <strong>before</strong> "vs." is always the <strong>y-axis</strong> (the dependent variable).</p></div>
+<details class="check"><summary>In lesson 1.07 you measured enzyme activity at different pH values. Identify the IV and DV, and write the graph title.</summary><div class="ans"><p><strong>IV:</strong> pH (you set it). <strong>DV:</strong> enzyme activity, measured as reaction rate (for example, volume of O<sub>2</sub> produced per minute). <strong>Title:</strong> "Enzyme Activity vs. pH." pH goes on the x-axis and enzyme activity on the y-axis.</p></div></details>
+
+<h3 data-tier="likely">Checklist for a good graph</h3>
+<ul>
+  <li><strong>Title</strong> in the form "y vs. x."</li>
+  <li><strong>Both axes labelled</strong> with the variable name <strong>and its units</strong>, such as "Temperature (°C)" or "Time (s)."</li>
+  <li><strong>Even scales</strong>: each grid square stands for the same amount all the way along an axis. Choose a scale that makes the data fill most of the graph.</li>
+  <li><strong>Data points</strong> plotted accurately; if there is more than one data set, a <strong>legend</strong> (key) to tell them apart.</li>
+  <li>A <strong>trendline</strong> or curve where the graph type calls for one (scatter plots), not a dot-to-dot zigzag.</li>
+</ul>
+<div class="callout warn"><p class="callout-title">Common mistake</p><p>Uneven scales. If your x-values are 10, 20, 40 and 80 °C, those points must sit at those positions on an evenly spaced axis, not at four equally spaced ticks. Spacing them evenly distorts the shape of the relationship.</p></div>
+
+<h3 data-tier="essential">Three types of graph</h3>
+<p>The slides cover three graph types. Which one you use depends on what kind of data your independent variable is.</p>
+<figure class="diagram">
+<svg viewBox="0 0 640 250" role="img" aria-labelledby="b111-t1">
+<title id="b111-t1">Three example graphs. A bar graph of the percentage of the population with blood groups A, B, AB and O, with separate bars for each category. A line graph of resting heart rate over 12 weeks of exercise, with points joined in order, falling from about 78 to 67 beats per minute. A scatter plot of mass against height for many people, with unconnected points rising together and a straight trendline through them.</title>
+<text x="110" y="18" text-anchor="middle" font-family="inherit" font-size="13" font-weight="700" style="fill:var(--ink)">Bar graph</text>
+<text x="330" y="18" text-anchor="middle" font-family="inherit" font-size="13" font-weight="700" style="fill:var(--ink)">Line graph</text>
+<text x="540" y="18" text-anchor="middle" font-family="inherit" font-size="13" font-weight="700" style="fill:var(--ink)">Scatter plot</text>
+<g style="stroke:var(--line)" stroke-width="1"><line x1="40" y1="125" x2="200" y2="125"/><line x1="40" y1="50" x2="200" y2="50"/><line x1="250" y1="150" x2="410" y2="150"/><line x1="250" y1="100" x2="410" y2="100"/><line x1="250" y1="50" x2="410" y2="50"/></g>
+<g style="fill:var(--magenta)"><rect x="52" y="77" width="26" height="123"/><rect x="90" y="173" width="26" height="27"/><rect x="128" y="188" width="26" height="12"/><rect x="166" y="62" width="26" height="138"/></g>
+<polyline points="257,70 270,70 283,90 296,110 309,100 322,120 335,140 348,150 361,170 374,160 387,180 400,180" style="fill:none;stroke:var(--red)" stroke-width="2"/>
+<g style="fill:var(--red)"><circle cx="257" cy="70" r="3"/><circle cx="270" cy="70" r="3"/><circle cx="283" cy="90" r="3"/><circle cx="296" cy="110" r="3"/><circle cx="309" cy="100" r="3"/><circle cx="322" cy="120" r="3"/><circle cx="335" cy="140" r="3"/><circle cx="348" cy="150" r="3"/><circle cx="361" cy="170" r="3"/><circle cx="374" cy="160" r="3"/><circle cx="387" cy="180" r="3"/><circle cx="400" cy="180" r="3"/></g>
+<line x1="470" y1="190" x2="615" y2="62" style="stroke:var(--ink-2)" stroke-width="1.5"/>
+<g style="fill:var(--teal)"><circle cx="476" cy="182" r="3.2"/><circle cx="484" cy="186" r="3.2"/><circle cx="490" cy="170" r="3.2"/><circle cx="497" cy="176" r="3.2"/><circle cx="505" cy="162" r="3.2"/><circle cx="512" cy="170" r="3.2"/><circle cx="520" cy="150" r="3.2"/><circle cx="526" cy="158" r="3.2"/><circle cx="534" cy="140" r="3.2"/><circle cx="541" cy="148" r="3.2"/><circle cx="548" cy="128" r="3.2"/><circle cx="556" cy="136" r="3.2"/><circle cx="563" cy="116" r="3.2"/><circle cx="570" cy="124" r="3.2"/><circle cx="578" cy="104" r="3.2"/><circle cx="586" cy="110" r="3.2"/><circle cx="594" cy="92" r="3.2"/><circle cx="602" cy="98" r="3.2"/><circle cx="610" cy="78" r="3.2"/><circle cx="606" cy="70" r="3.2"/></g>
+<path d="M40,40 V200 H202 M250,40 V200 H412 M460,40 V200 H622" style="fill:none;stroke:var(--ink)" stroke-width="1.5"/>
+<text x="36" y="204" text-anchor="end" font-family="inherit" font-size="11" style="fill:var(--ink-2)">0</text>
+<text x="36" y="129" text-anchor="end" font-family="inherit" font-size="11" style="fill:var(--ink-2)">25</text>
+<text x="36" y="54" text-anchor="end" font-family="inherit" font-size="11" style="fill:var(--ink-2)">50</text>
+<text x="65" y="214" text-anchor="middle" font-family="inherit" font-size="11.5" style="fill:var(--ink)">A</text>
+<text x="103" y="214" text-anchor="middle" font-family="inherit" font-size="11.5" style="fill:var(--ink)">B</text>
+<text x="141" y="214" text-anchor="middle" font-family="inherit" font-size="11.5" style="fill:var(--ink)">AB</text>
+<text x="179" y="214" text-anchor="middle" font-family="inherit" font-size="11.5" style="fill:var(--ink)">O</text>
+<text x="120" y="232" text-anchor="middle" font-family="inherit" font-size="11.5" style="fill:var(--ink)">Blood group</text>
+<text x="18" y="120" text-anchor="middle" font-family="inherit" font-size="11.5" transform="rotate(-90 18 120)" style="fill:var(--ink)">% of population</text>
+<text x="246" y="204" text-anchor="end" font-family="inherit" font-size="11" style="fill:var(--ink-2)">65</text>
+<text x="246" y="154" text-anchor="end" font-family="inherit" font-size="11" style="fill:var(--ink-2)">70</text>
+<text x="246" y="104" text-anchor="end" font-family="inherit" font-size="11" style="fill:var(--ink-2)">75</text>
+<text x="246" y="54" text-anchor="end" font-family="inherit" font-size="11" style="fill:var(--ink-2)">80</text>
+<text x="257" y="214" text-anchor="middle" font-family="inherit" font-size="11" style="fill:var(--ink-2)">1</text>
+<text x="400" y="214" text-anchor="middle" font-family="inherit" font-size="11" style="fill:var(--ink-2)">12</text>
+<text x="330" y="232" text-anchor="middle" font-family="inherit" font-size="11.5" style="fill:var(--ink)">Week of exercise</text>
+<text x="226" y="125" text-anchor="middle" font-family="inherit" font-size="11.5" transform="rotate(-90 226 125)" style="fill:var(--ink)">Heart rate (bpm)</text>
+<text x="540" y="232" text-anchor="middle" font-family="inherit" font-size="11.5" style="fill:var(--ink)">Height (cm)</text>
+<text x="446" y="120" text-anchor="middle" font-family="inherit" font-size="11.5" transform="rotate(-90 446 120)" style="fill:var(--ink)">Mass (kg)</text>
+<text x="110" y="248" text-anchor="middle" font-family="inherit" font-size="11.5" font-style="italic" style="fill:var(--ink-2)">separate categories</text>
+<text x="330" y="248" text-anchor="middle" font-family="inherit" font-size="11.5" font-style="italic" style="fill:var(--ink-2)">change over time</text>
+<text x="540" y="248" text-anchor="middle" font-family="inherit" font-size="11.5" font-style="italic" style="fill:var(--ink-2)">relationship between two variables</text>
+</svg>
+<figcaption>The slide examples redrawn. Bars stand apart because blood groups are separate categories; line-graph points are joined in time order; scatter-plot points are not joined, and a trendline shows the overall relationship.</figcaption>
+</figure>
+<h4>Bar graph</h4>
+<ul>
+  <li>Compares <strong>discrete, non-continuous categories</strong>: groups with nothing "in between" them.</li>
+  <li>Used to make <strong>side-by-side comparisons</strong>.</li>
+</ul>
+<p>The slide's example compares the percentage of a population with each blood group: A, B, AB and O. There is no blood group halfway between A and B, so the categories are separate, and the bars are drawn with gaps between them. The y-axis should start at zero, so the bar heights are a fair comparison. Examples from this unit: the number of mitochondria in muscle, fat and red blood cells, or the amount of starch in different foods.</p>
+<h4>Line graph</h4>
+<ul>
+  <li>Shows <strong>continuous change over time</strong>.</li>
+  <li>The data follow a <strong>sequential order</strong> (such as time), so each point is joined to the next one.</li>
+</ul>
+<p>The slide's example tracks one person's resting heart rate every week for 12 weeks of exercise. It falls from about 78 to about 67 beats per minute, with small ups and downs along the way. Joining the points makes sense because week 3 really does come between week 2 and week 4. The steepness of the line tells you the rate of change: a steeper drop means a faster change. Examples from this unit: the volume of oxygen produced by catalase every 30 seconds, or the colour change as dye diffuses over time.</p>
+<h4>Scatter plot</h4>
+<ul>
+  <li>Shows a <strong>relationship or correlation between two variables</strong>.</li>
+  <li>Used when the data points are <strong>not connected in sequence</strong>: each point is a separate measurement, such as a different person.</li>
+  <li>Example from the slide: comparing the height and weight of different people.</li>
+</ul>
+<p>Instead of joining the points, you draw a single <span class="term">trendline</span> (line of best fit) through the middle of them, with about as many points above it as below. If the pattern is curved, draw a smooth <strong>trend curve</strong> instead; one slide example is a U-shaped curve.</p>
+<div class="callout warn"><p class="callout-title">Common mistake</p><p>Connecting the dots on a scatter plot. Each point is a different individual, so a line from one person's point to the next means nothing. Draw one best-fit line or curve. And do not use a bar graph for continuous data (like temperature): there <em>are</em> values in between, and a line or scatter graph shows them.</p></div>
+
+<h3 data-tier="essential">Reading a scatter plot: correlation and strength</h3>
+<p>A scatter plot can show three kinds of correlation:</p>
+<ul>
+  <li><strong>Positive correlation:</strong> both variables increase together. The points trend up to the right.</li>
+  <li><strong>Negative correlation:</strong> one variable increases while the other decreases. The points trend down to the right.</li>
+  <li><strong>No correlation:</strong> randomly scattered dots with no pattern. Changing x tells you nothing about y.</li>
+</ul>
+<p>The <strong>distance of the points from the trendline or trend curve</strong> tells you the <strong>strength of the relationship</strong>. The vertical distance from a point to the line is called a <span class="term">residual</span>. Small residuals (points hugging the line) mean a strong relationship: if you know x, you can predict y well. Large residuals (points spread widely) mean a weak relationship.</p>
+<figure class="diagram">
+<svg viewBox="0 0 640 378" role="img" aria-labelledby="b111-t2">
+<title id="b111-t2">Top row: three scatter plots showing positive correlation, with points rising to the right; no correlation, with randomly scattered points; and negative correlation, with points falling to the right. Bottom row: two plots with the same trendline. On the left the points sit close to the line with short residuals, a strong relationship. On the right the points are far from the line with long residuals, a weak relationship.</title>
+<g style="fill:var(--surface);stroke:var(--line)" stroke-width="1"><rect x="20" y="20" width="180" height="134"/><rect x="230" y="20" width="180" height="134"/><rect x="440" y="20" width="180" height="134"/><rect x="20" y="214" width="290" height="124"/><rect x="330" y="214" width="290" height="124"/></g>
+<g style="stroke:var(--ink-2)" stroke-width="1.5"><line x1="32" y1="146" x2="190" y2="50"/><line x1="452" y1="50" x2="610" y2="146"/><line x1="30" y1="320" x2="300" y2="226"/><line x1="340" y1="320" x2="610" y2="226"/></g>
+<line x1="240" y1="95" x2="400" y2="95" style="stroke:var(--ink-2)" stroke-width="1.5" stroke-dasharray="5 4"/>
+<g style="fill:var(--teal)"><circle cx="38" cy="142" r="3.5"/><circle cx="50" cy="130" r="3.5"/><circle cx="60" cy="136" r="3.5"/><circle cx="72" cy="118" r="3.5"/><circle cx="84" cy="122" r="3.5"/><circle cx="96" cy="104" r="3.5"/><circle cx="108" cy="110" r="3.5"/><circle cx="120" cy="92" r="3.5"/><circle cx="132" cy="96" r="3.5"/><circle cx="146" cy="78" r="3.5"/><circle cx="160" cy="72" r="3.5"/><circle cx="176" cy="58" r="3.5"/></g>
+<g style="fill:var(--ink-2)"><circle cx="250" cy="60" r="3.5"/><circle cx="270" cy="120" r="3.5"/><circle cx="290" cy="90" r="3.5"/><circle cx="305" cy="140" r="3.5"/><circle cx="325" cy="70" r="3.5"/><circle cx="340" cy="110" r="3.5"/><circle cx="360" cy="50" r="3.5"/><circle cx="372" cy="130" r="3.5"/><circle cx="385" cy="85" r="3.5"/><circle cx="300" cy="104" r="3.5"/><circle cx="352" cy="140" r="3.5"/><circle cx="395" cy="60" r="3.5"/></g>
+<g style="fill:var(--red)"><circle cx="458" cy="58" r="3.5"/><circle cx="470" cy="66" r="3.5"/><circle cx="480" cy="62" r="3.5"/><circle cx="492" cy="80" r="3.5"/><circle cx="504" cy="76" r="3.5"/><circle cx="516" cy="94" r="3.5"/><circle cx="528" cy="90" r="3.5"/><circle cx="540" cy="108" r="3.5"/><circle cx="552" cy="104" r="3.5"/><circle cx="566" cy="122" r="3.5"/><circle cx="580" cy="128" r="3.5"/><circle cx="596" cy="142" r="3.5"/></g>
+<g style="stroke:var(--amber)" stroke-width="1.5"><line x1="45" y1="311" x2="45" y2="315"/><line x1="70" y1="309" x2="70" y2="306"/><line x1="95" y1="294" x2="95" y2="297"/><line x1="120" y1="292" x2="120" y2="289"/><line x1="145" y1="277" x2="145" y2="280"/><line x1="170" y1="274" x2="170" y2="271"/><line x1="195" y1="259" x2="195" y2="263"/><line x1="220" y1="257" x2="220" y2="254"/><line x1="245" y1="242" x2="245" y2="245"/><line x1="270" y1="239" x2="270" y2="236"/><line x1="290" y1="227" x2="290" y2="230"/>
+<line x1="355" y1="296" x2="355" y2="315"/><line x1="380" y1="326" x2="380" y2="306"/><line x1="405" y1="272" x2="405" y2="297"/><line x1="430" y1="312" x2="430" y2="289"/><line x1="455" y1="254" x2="455" y2="280"/><line x1="480" y1="296" x2="480" y2="271"/><line x1="505" y1="240" x2="505" y2="263"/><line x1="530" y1="278" x2="530" y2="254"/><line x1="555" y1="222" x2="555" y2="245"/><line x1="580" y1="258" x2="580" y2="236"/><line x1="600" y1="222" x2="600" y2="230"/></g>
+<g style="fill:var(--blue)"><circle cx="45" cy="311" r="3.5"/><circle cx="70" cy="309" r="3.5"/><circle cx="95" cy="294" r="3.5"/><circle cx="120" cy="292" r="3.5"/><circle cx="145" cy="277" r="3.5"/><circle cx="170" cy="274" r="3.5"/><circle cx="195" cy="259" r="3.5"/><circle cx="220" cy="257" r="3.5"/><circle cx="245" cy="242" r="3.5"/><circle cx="270" cy="239" r="3.5"/><circle cx="290" cy="227" r="3.5"/>
+<circle cx="355" cy="296" r="3.5"/><circle cx="380" cy="326" r="3.5"/><circle cx="405" cy="272" r="3.5"/><circle cx="430" cy="312" r="3.5"/><circle cx="455" cy="254" r="3.5"/><circle cx="480" cy="296" r="3.5"/><circle cx="505" cy="240" r="3.5"/><circle cx="530" cy="278" r="3.5"/><circle cx="555" cy="222" r="3.5"/><circle cx="580" cy="258" r="3.5"/><circle cx="600" cy="222" r="3.5"/></g>
+<text x="110" y="172" text-anchor="middle" font-family="inherit" font-size="12" font-weight="700" style="fill:var(--teal)">Positive correlation</text>
+<text x="110" y="188" text-anchor="middle" font-family="inherit" font-size="11.5" style="fill:var(--ink-2)">both increase together</text>
+<text x="320" y="172" text-anchor="middle" font-family="inherit" font-size="12" font-weight="700" style="fill:var(--ink)">No correlation</text>
+<text x="320" y="188" text-anchor="middle" font-family="inherit" font-size="11.5" style="fill:var(--ink-2)">random scatter, no pattern</text>
+<text x="530" y="172" text-anchor="middle" font-family="inherit" font-size="12" font-weight="700" style="fill:var(--red)">Negative correlation</text>
+<text x="530" y="188" text-anchor="middle" font-family="inherit" font-size="11.5" style="fill:var(--ink-2)">one rises as the other falls</text>
+<text x="165" y="356" text-anchor="middle" font-family="inherit" font-size="12" font-weight="700" style="fill:var(--ink)">Small residuals: strong relationship</text>
+<text x="165" y="372" text-anchor="middle" font-family="inherit" font-size="11.5" style="fill:var(--ink-2)">points close to the trendline</text>
+<text x="475" y="356" text-anchor="middle" font-family="inherit" font-size="12" font-weight="700" style="fill:var(--ink)">Large residuals: weak relationship</text>
+<text x="475" y="372" text-anchor="middle" font-family="inherit" font-size="11.5" style="fill:var(--ink-2)">points far from the trendline</text>
+</svg>
+<figcaption>Top: the three kinds of correlation. Bottom: both plots have the same trendline (a positive correlation), but the amber residuals are much longer on the right, so that relationship is weaker.</figcaption>
+</figure>
+<div class="callout warn"><p class="callout-title">Common mistake</p><p>Correlation does not prove causation. Ice cream sales and sunburns rise together, but ice cream does not cause sunburn; hot sunny weather causes both. A scatter plot shows that two variables are related. Only a controlled experiment, changing one variable while holding the others constant, can show that one causes the other.</p></div>
+<div class="callout key"><p class="callout-title">On the test</p><p>When asked to describe a scatter plot, give <strong>both</strong> the direction (positive, negative or none) <strong>and</strong> the strength (strong or weak, judged by how close the points are to the trendline). "A strong positive correlation" earns more than "it goes up."</p></div>
+
+<h3 data-tier="essential">Choosing the right graph</h3>
+<div class="table-wrap"><table class="data"><thead><tr><th>Your data</th><th>Graph</th><th>Why</th></tr></thead><tbody>
+<tr><td>Separate categories (cell types, blood groups, species, foods)</td><td>Bar graph</td><td>Nothing exists between categories; bars compare them side by side</td></tr>
+<tr><td>One thing measured repeatedly over time</td><td>Line graph</td><td>Points follow a sequence, so joining them shows the change</td></tr>
+<tr><td>Two measured variables for many separate individuals or trials</td><td>Scatter plot with trendline</td><td>Shows whether, and how strongly, the variables are related</td></tr>
+</tbody></table></div>
+<details class="check"><summary>Which graph? (a) Average number of lysosomes in four cell types. (b) Volume of O<sub>2</sub> produced by catalase every 30 s for 5 min. (c) Body mass and heart rate of 30 different mammals.</summary><div class="ans"><p>(a) <strong>Bar graph</strong>: the cell types are discrete categories. (b) <strong>Line graph</strong>: one reaction followed through time, in sequence. (c) <strong>Scatter plot</strong>: two variables measured on many separate animals; you would look for a correlation (in fact larger mammals have slower heart rates, a negative correlation).</p></div></details>
+<details class="check"><summary>A student plots "Time to Dissolve vs. Water Temperature" and gets points that fall steeply and then level off. Describe the relationship.</summary><div class="ans"><p>A <strong>negative</strong> relationship: as water temperature increases, the time to dissolve decreases (sugar dissolves faster). Because the points level off, the relationship is <strong>curved</strong>, not linear: raising the temperature has a big effect at low temperatures and less effect at high temperatures. A trend curve, not a straight line, fits it best.</p></div></details>
+
+<h3 data-tier="likely">Worked example: graphing osmosis data</h3>
+<p>A classic lab connects this lesson to lesson 1.10. Cores of potato are weighed, soaked in sucrose solutions of different concentrations, and weighed again. The independent variable is the <strong>sucrose concentration</strong> (x-axis); the dependent variable is the <strong>percentage change in mass</strong> (y-axis). Percentage change is used instead of raw mass because the cores do not all start at exactly the same mass; percentages make them comparable.</p>
+<figure class="diagram">
+<svg viewBox="0 0 640 300" role="img" aria-labelledby="b111-t3">
+<title id="b111-t3">Percent change in mass of potato cores against sucrose concentration from 0 to 1.0 moles per litre. Mass rises about 18 percent in pure water, and the curve falls as concentration increases, crossing zero at about 0.32 moles per litre and reaching about minus 24 percent at 1.0. Above zero the cells gained water because the solution was hypotonic; below zero they lost water because it was hypertonic. The crossing point is where the solution is isotonic to the cells.</title>
+<g style="stroke:var(--line)" stroke-width="1"><line x1="80" y1="30" x2="600" y2="30"/><line x1="80" y1="74" x2="600" y2="74"/><line x1="80" y1="162" x2="600" y2="162"/><line x1="80" y1="206" x2="600" y2="206"/></g>
+<line x1="80" y1="118" x2="600" y2="118" style="stroke:var(--ink-2)" stroke-width="1.5" stroke-dasharray="6 4"/>
+<path d="M80,30 V250 H602" style="fill:none;stroke:var(--ink)" stroke-width="1.5"/>
+<path d="M80,39 C130,66 160,82 184,92 S250,124 288,136 S360,162 392,171 S460,194 496,202 S570,218 600,224" style="fill:none;stroke:var(--blue)" stroke-width="2"/>
+<g style="fill:var(--blue)"><circle cx="80" cy="39" r="4"/><circle cx="184" cy="92" r="4"/><circle cx="288" cy="136" r="4"/><circle cx="392" cy="171" r="4"/><circle cx="496" cy="202" r="4"/><circle cx="600" cy="224" r="4"/></g>
+<circle cx="246" cy="118" r="7" style="fill:none;stroke:var(--red)" stroke-width="2"/>
+<text x="72" y="34" text-anchor="end" font-family="inherit" font-size="11" style="fill:var(--ink-2)">+20</text>
+<text x="72" y="78" text-anchor="end" font-family="inherit" font-size="11" style="fill:var(--ink-2)">+10</text>
+<text x="72" y="122" text-anchor="end" font-family="inherit" font-size="11" style="fill:var(--ink-2)">0</text>
+<text x="72" y="166" text-anchor="end" font-family="inherit" font-size="11" style="fill:var(--ink-2)">−10</text>
+<text x="72" y="210" text-anchor="end" font-family="inherit" font-size="11" style="fill:var(--ink-2)">−20</text>
+<text x="72" y="254" text-anchor="end" font-family="inherit" font-size="11" style="fill:var(--ink-2)">−30</text>
+<text x="80" y="266" text-anchor="middle" font-family="inherit" font-size="11" style="fill:var(--ink-2)">0</text>
+<text x="184" y="266" text-anchor="middle" font-family="inherit" font-size="11" style="fill:var(--ink-2)">0.2</text>
+<text x="288" y="266" text-anchor="middle" font-family="inherit" font-size="11" style="fill:var(--ink-2)">0.4</text>
+<text x="392" y="266" text-anchor="middle" font-family="inherit" font-size="11" style="fill:var(--ink-2)">0.6</text>
+<text x="496" y="266" text-anchor="middle" font-family="inherit" font-size="11" style="fill:var(--ink-2)">0.8</text>
+<text x="600" y="266" text-anchor="middle" font-family="inherit" font-size="11" style="fill:var(--ink-2)">1.0</text>
+<text x="340" y="290" text-anchor="middle" font-family="inherit" font-size="12" style="fill:var(--ink)">Sucrose concentration (mol/L)</text>
+<text x="26" y="140" text-anchor="middle" font-family="inherit" font-size="12" transform="rotate(-90 26 140)" style="fill:var(--ink)">Change in mass (%)</text>
+<text x="300" y="54" font-family="inherit" font-size="12" style="fill:var(--ink)">Above 0: cores gained water</text>
+<text x="300" y="70" font-family="inherit" font-size="11.5" style="fill:var(--ink-2)">(solution hypotonic to the cells)</text>
+<text x="430" y="134" font-family="inherit" font-size="12" style="fill:var(--ink)">Below 0: cores lost water</text>
+<text x="430" y="150" font-family="inherit" font-size="11.5" style="fill:var(--ink-2)">(solution hypertonic)</text>
+<text x="258" y="108" font-family="inherit" font-size="12" font-weight="700" style="fill:var(--red)">isotonic point, about 0.32 mol/L</text>
+</svg>
+<figcaption>Sample data for potato cores. Where the trend curve crosses zero change in mass, there was no net movement of water: that solution is isotonic to the potato cells.</figcaption>
+</figure>
+<p>Reading the graph uses everything from lesson 1.10. Above the zero line the cores gained mass, so water moved <strong>in</strong>: those solutions were <strong>hypotonic</strong> to the potato cells. Below the zero line they lost mass, so the solutions were <strong>hypertonic</strong>. Where the curve crosses zero, there was no net movement of water, so that concentration (about 0.32 mol/L here) is <strong>isotonic</strong> to the cells. That is an estimate of the solute concentration inside the potato cells, a value you could not measure directly.</p>
+<p>Notice the choice of graph: the concentrations are continuous, so a scatter plot with a smooth trend curve is right, and the curve lets you read off a value <strong>between</strong> the concentrations you actually tested. Reading between data points like this is called <strong>interpolation</strong>.</p>
+<details class="check"><summary>Using the graph, predict what happens to a potato core in 0.7 mol/L sucrose, and explain.</summary><div class="ans"><p>It <strong>loses mass</strong> (roughly 15%). 0.7 mol/L is above the isotonic point, so the solution is <strong>hypertonic</strong> to the potato cells: water moves out of the cells by osmosis, and the cells may plasmolyze.</p></div></details>
+
+<h3 data-tier="essential">Lesson summary</h3>
+<ul>
+  <li>Independent variable: what you change, on the x-axis. Dependent variable: what you measure, on the y-axis. Title the graph "y vs. x." Keep all other variables controlled.</li>
+  <li>Label both axes with units and use even scales.</li>
+  <li><strong>Bar graph</strong>: discrete, non-continuous categories; side-by-side comparisons.</li>
+  <li><strong>Line graph</strong>: continuous change over time; points joined in sequence.</li>
+  <li><strong>Scatter plot</strong>: relationship between two variables; points not joined; one trendline or trend curve.</li>
+  <li>Correlation can be positive, negative or none. Points close to the trendline (small residuals) mean a strong relationship; points far from it mean a weak one. Correlation alone does not prove causation.</li>
 </ul>
 `
 });
