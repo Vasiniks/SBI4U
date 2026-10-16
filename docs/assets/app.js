@@ -114,7 +114,7 @@
     (parts[1] || '').split('&').forEach(function (kv) { if (kv) { var p = kv.split('='); query[p[0]] = decodeURIComponent(p[1] || ''); } });
     var seg = path.split('/');
     closeMenu();
-    setSubnav(null);
+    setRail(null);
     view.removeAttribute('data-stage');
     setWide(false);
     if (ALL) { renderQuizSetup(query); markNav('quiz'); }
@@ -128,7 +128,7 @@
     else if (seg[0] === 'glossary') { renderGlossary(); markNav('glossary'); }
     else { renderHome(); markNav('home'); }
     fitDiagrams();
-    if (pendingScroll) { var ps = pendingScroll; pendingScroll = null; ps.classList.remove('page-wait'); ps.classList.add('page-in'); ps.scrollIntoView({ block: 'start' }); }
+    if (pendingScroll) { var ps = pendingScroll; pendingScroll = null; ps.scrollIntoView({ block: 'start' }); }
     else if (keepScroll !== true) window.scrollTo(0, 0);
     var h1 = view.querySelector('h1, h2');
     document.title = (h1 ? h1.textContent + ' · ' : '') + (ALL ? 'SBI4U' : 'SBI4U ' + (UNIT.title || ''));
@@ -244,24 +244,27 @@
     $$('.fig-scroll', view).forEach(function (w) { w.classList.toggle('scrolls', w.scrollWidth > w.clientWidth + 2); });
   });
 
-  /* ---------- tabs + sidebar sub-navigation ---------- */
-  function tabStrip(tabs, label) {
-    return '<nav class="tabs" aria-label="' + esc(label) + '">' + tabs.map(function (t) {
-      return '<a href="' + t.href + '"' + (t.tier ? ' data-tier="' + t.tier + '"' : '') + (t.current ? ' aria-current="page"' : '') + '>' + t.label + '</a>';
-    }).join('') + '</nav>';
-  }
-  function setSubnav(routeKey, tabs) {
-    $$('.subnav').forEach(function (u) { u.remove(); });
-    if (!routeKey || !tabs || !tabs.length) return;
-    var a = $('.nav a[data-route="' + routeKey + '"]'); if (!a) return;
-    a.insertAdjacentHTML('afterend', '<ul class="subnav">' + tabs.map(function (t) {
+  /* ---------- right rail: the parts of this page or section ---------- */
+  var mainEl = $('#main');
+  mainEl.insertAdjacentHTML('beforeend', '<aside class="rail" id="rail" hidden></aside>');
+  var rail = $('#rail'), spy = null, railJump = null;
+  function setRail(label, items) {
+    if (spy) { window.removeEventListener('scroll', spy); spy = null; }
+    railJump = null;
+    var on = !!(label && items && items.length);
+    mainEl.classList.toggle('has-rail', on);
+    rail.hidden = !on;
+    rail.innerHTML = on ? '<nav aria-label="' + esc(label) + '"><details' + (window.innerWidth > 1100 ? ' open' : '') + '><summary>' + esc(label) + '</summary><ol>' + items.map(function (t) {
       return '<li' + (t.tier ? ' data-tier="' + t.tier + '"' : '') + '><a href="' + t.href + '"' + (t.current ? ' aria-current="true"' : '') + '>' + t.label + '</a></li>';
-    }).join('') + '</ul>');
+    }).join('') + '</ol></details></nav>' : '';
   }
-  function centerActiveTab() {
-    var strip = $('.tabs', view), at = $('.tabs a[aria-current]', view);
-    if (strip && at) strip.scrollLeft = at.offsetLeft - strip.offsetLeft - 24;
-  }
+  rail.addEventListener('click', function (ev) {
+    var a = ev.target.closest('a'); if (!a || !railJump) return;
+    var el = railJump(a.getAttribute('href') || ''); if (!el) return;
+    ev.preventDefault(); closeMenu();
+    el.scrollIntoView({ block: 'start' });
+  });
+  window.addEventListener('resize', function () { var d = $('details', rail); if (d && window.innerWidth > 1100) d.open = true; });
   // Split lesson-style HTML into one section per h3.
   function sectionsOf(html, prep) {
     var tmp = document.createElement('div');
@@ -286,56 +289,29 @@
     var f = stepVisible(secs, -1, 1); return f > -1 ? f : i;
   }
 
-  /* ---------- continuous pages with a flip-in ---------- */
-  var pageObserver = null, spyObserver = null, pendingScroll = null;
-  var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  function mountPages(art, secs, base, want) {
-    if (pageObserver) pageObserver.disconnect();
-    if (spyObserver) spyObserver.disconnect();
-    var io = 'IntersectionObserver' in window;
-    secs.forEach(function (sec, k) {
-      sec.classList.add('page');
-      sec.id = 'page-' + k;
-      sec.insertAdjacentHTML('beforeend', '<p class="page-no">Page ' + (k + 1) + ' of ' + secs.length + '</p>');
-      if (io && !reduceMotion) sec.classList.add('page-wait');
-      art.appendChild(sec);
-    });
-    if (io && !reduceMotion) {
-      pageObserver = new IntersectionObserver(function (entries) {
-        entries.forEach(function (e) {
-          if (!e.isIntersecting) return;
-          e.target.classList.remove('page-wait'); e.target.classList.add('page-in');
-          pageObserver.unobserve(e.target);
-        });
-      }, { rootMargin: '0px 0px -6% 0px', threshold: 0.01 });
-      secs.forEach(function (sec) { pageObserver.observe(sec); });
+  /* ---------- one long page, with the rail tracking the section you are reading ---------- */
+  var pendingScroll = null;
+  function mountLong(art, secs, base, want) {
+    secs.forEach(function (sec, k) { sec.id = 'sec-' + k; art.appendChild(sec); });
+    railJump = function (href) { return href.indexOf(base + '/') === 0 ? document.getElementById('sec-' + href.slice(base.length + 1)) : null; };
+    var links = $$('a', rail), cur = -1, ticking = false;
+    function update() {
+      ticking = false;
+      var k = -1;
+      secs.forEach(function (sec, i) { if (sec.offsetParent !== null && (k < 0 || sec.getBoundingClientRect().top <= 120)) k = i; });
+      if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 4) {
+        for (var j = secs.length - 1; j >= 0; j--) if (secs[j].offsetParent !== null) { k = j; break; }
+      }
+      if (k < 0 || k === cur) return;
+      cur = k;
+      links.forEach(function (a, i) { if (i === k) a.setAttribute('aria-current', 'true'); else a.removeAttribute('aria-current'); });
+      try { history.replaceState(null, '', k ? base + '/' + k : base); } catch (e) {}
     }
-    if (io) {
-      spyObserver = new IntersectionObserver(function (entries) {
-        entries.forEach(function (e) { if (e.isIntersecting) setCurrentPage(+e.target.id.slice(5), base); });
-      }, { rootMargin: '-30% 0px -65% 0px' });
-      secs.forEach(function (sec) { spyObserver.observe(sec); });
-    }
-    function onJump(ev) {
-      var a = ev.target.closest('a'); if (!a) return;
-      var href = a.getAttribute('href') || '';
-      if (href.indexOf(base + '/') !== 0) return;
-      ev.preventDefault(); closeMenu();
-      var el = document.getElementById('page-' + href.slice(base.length + 1));
-      if (!el) return;
-      el.classList.remove('page-wait'); el.classList.add('page-in');
-      el.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', block: 'start' });
-    }
-    $('.tabs', view).addEventListener('click', onJump);
-    var sn = $('.subnav'); if (sn) sn.addEventListener('click', onJump);
+    spy = function () { if (!ticking) { ticking = true; requestAnimationFrame(update); } };
+    window.addEventListener('scroll', spy, { passive: true });
+    requestAnimationFrame(update);
     var w = parseInt(want, 10);
-    if (w > 0 && secs[w]) { pendingScroll = secs[w]; setCurrentPage(w, base); }
-  }
-  function setCurrentPage(k, base) {
-    $$('.tabs a', view).forEach(function (a, i) { if (i === k) a.setAttribute('aria-current', 'page'); else a.removeAttribute('aria-current'); });
-    $$('.subnav a').forEach(function (a, i) { if (i === k) a.setAttribute('aria-current', 'true'); else a.removeAttribute('aria-current'); });
-    centerActiveTab();
-    try { history.replaceState(null, '', base + '/' + k); } catch (e) {}
+    if (w > 0 && secs[w]) pendingScroll = secs[w];
   }
 
   /* ---------- lesson ---------- */
@@ -352,20 +328,19 @@
     var tabs = secs.map(function (sec, k) { return { href: base + '/' + k, label: esc(secTitle(sec)), tier: secTier(sec), current: k === 0 }; });
     view.innerHTML =
       '<header class="lesson-head">' +
-        '<div class="lesson-kicker"><span>Lesson ' + l.id + '</span>' + (l.where ? '<span class="pill">' + esc(l.where) + '</span>' : '') + '<span>' + secs.length + ' pages</span></div>' +
+        '<div class="lesson-kicker"><span>Lesson ' + l.id + '</span>' + (l.where ? '<span class="pill">' + esc(l.where) + '</span>' : '') + '</div>' +
         '<h1>' + esc(l.title) + '</h1>' +
         (l.summary ? '<p class="lede">' + l.summary + '</p>' : '') +
         (l.objectives && l.objectives.length ? '<div class="objectives"><p>By the end of this lesson you can</p><ul>' + l.objectives.map(function (o) { return '<li>' + o + '</li>'; }).join('') + '</ul></div>' : '') +
       '</header>' +
-      tabStrip(tabs, 'Lesson pages') +
-      '<article class="lesson-body pages"></article>' +
+      '<article class="lesson-body"></article>' +
       '<div class="practice-cta"><p>Ready to test ' + esc(l.title) + '?</p><span><a class="btn" href="#/quiz?lesson=' + id + '">Practice ' + nQ + ' questions</a> <a class="btn ghost" href="#/qa?lesson=' + id + '">Class Q&amp;A</a></span></div>' +
       '<nav class="pager" aria-label="Lessons">' +
         (prevL ? '<a class="prev" href="#/lesson/' + prevL + '"><small>Previous lesson</small>' + prevL + ' ' + esc(LESSON_META[prevL].title) + '</a>' : '') +
         (nextL ? '<a class="next" href="#/lesson/' + nextL + '"><small>Next lesson</small>' + nextL + ' ' + esc(LESSON_META[nextL].title) + '</a>' : '') +
       '</nav>';
-    setSubnav('lesson/' + id, tabs);
-    mountPages($('.lesson-body', view), secs, base, want);
+    setRail('On this page', tabs);
+    mountLong($('.lesson-body', view), secs, base, want);
   }
 
   // Group each h3 and the blocks after it into a tier section; flag lower-tier blocks inside.
@@ -431,17 +406,13 @@
       '<h1>Cram mode</h1>' +
       '<p class="lede">Every name, function, structure and key fact in the unit. Scroll straight through, then take the cram quiz.</p>' +
       '<div class="toolbar"><button class="btn" id="cramQuiz"' + (ess ? '' : ' disabled') + '>Cram quiz: ' + Math.min(25, ess) + ' essential questions</button><button class="btn ghost" id="cramPrint">Print the cram sheet</button></div></header>' +
-      tabStrip(tabs, 'Cram topics') +
-      '<article class="lesson-body pages cram"></article>';
-    setSubnav('cram', tabs);
-    mountPages($('.lesson-body', view), secs, base, want);
+      '<article class="lesson-body cram"></article>';
+    setRail('Cram topics', tabs);
+    mountLong($('.lesson-body', view), secs, base, want);
     $('#cramQuiz').addEventListener('click', function () {
       startQuiz(shuffle(QUIZ.filter(function (q) { return tierOf(q) === 'essential'; })).slice(0, 25));
     });
-    $('#cramPrint').addEventListener('click', function () {
-      $$('.page-wait', view).forEach(function (p) { p.classList.remove('page-wait'); });
-      window.print();
-    });
+    $('#cramPrint').addEventListener('click', function () { window.print(); });
   }
 
   /* ---------- filter chips helper ---------- */
@@ -462,7 +433,6 @@
     view.setAttribute('data-stage', stageOf(g.lesson));
     view.innerHTML = '<header class="lesson-head"><div class="lesson-kicker"><span>Class questions &amp; answers</span><span>' + countQA() + ' questions in ' + QA.length + ' sets</span></div>' +
       '<h1>' + esc(g.title) + '</h1>' + (g.source ? '<p class="qa-source">' + esc(g.source) + '</p>' : '') + '</header>' +
-      tabStrip(tabs, 'Question sets') +
       '<div class="toolbar"><button class="btn ghost" id="openAll">Show all answers</button><button class="btn ghost" id="closeAll">Hide all answers</button></div>' +
       '<section class="qa-group">' + g.items.map(function (it, k) {
         var t = tierOf(it);
@@ -472,8 +442,7 @@
         (i > 0 ? '<a class="prev" href="#/qa/' + (i - 1) + '"><small>Previous set</small>' + esc(QA[i - 1].title) + '</a>' : '') +
         (i < QA.length - 1 ? '<a class="next" href="#/qa/' + (i + 1) + '"><small>Next set</small>' + esc(QA[i + 1].title) + '</a>' : '') +
       '</nav>';
-    setSubnav('qa', tabs);
-    centerActiveTab();
+    setRail('Question sets', tabs);
     $('#openAll').addEventListener('click', function () { $$('.qa-item', view).forEach(function (d) { d.open = true; }); });
     $('#closeAll').addEventListener('click', function () { $$('.qa-item', view).forEach(function (d) { d.open = false; }); });
   }
@@ -644,7 +613,6 @@
     var levelName = { apply: 'Apply', analyze: 'Analyze data', extend: 'Beyond the slides' };
     view.innerHTML = '<h1>Apply &amp; extend</h1>' +
       '<p class="lede">The thinking questions that come at the end of a test. Write your answer first, use a hint if you are stuck, then compare with the model answer.</p>' +
-      tabStrip(applyTabs(sel), 'Lessons') +
       (items.length ? items.map(function (x) {
         var saved = store('ans-' + x.id) || '';
         return '<article class="x-card" data-stage="' + stageOf(x.lesson) + '" data-id="' + x.id + '" data-tier="' + tierOf(x) + '">' +
@@ -656,8 +624,7 @@
           '<div class="x-answer" hidden><p class="x-label">Model answer</p>' + x.answer + '</div>' +
           '</article>';
       }).join('') : '<p class="empty">No questions for this lesson yet.</p>');
-    setSubnav('apply', applyTabs(sel));
-    centerActiveTab();
+    setRail('By lesson', applyTabs(sel));
     $$('.x-card', view).forEach(function (card) {
       var x = EXT.filter(function (e) { return e.id === card.getAttribute('data-id'); })[0];
       var shown = 0;
@@ -685,7 +652,6 @@
           return '<a href="#/beyond/' + e.id + '" data-stage="' + stageOf(e.lesson) + '" data-tier="' + tierOf(e) + '"><b>' + e.title + '</b>' + tierBadge(tierOf(e)) + (e.why ? '<span class="why">' + e.why + '</span>' : '') + '</a>';
         }).join('') + '</div>';
       }).join('') : '<p class="empty">This section is still being written.</p>');
-    setSubnav('beyond', beyondTabs(null));
   }
   function beyondTabs(cur) { return EXTRA.map(function (e) { return { href: '#/beyond/' + e.id, label: e.title, tier: tierOf(e), current: e.id === cur }; }); }
   function renderBeyondTopic(id) {
@@ -701,7 +667,7 @@
         (prev ? '<a class="prev" href="#/beyond/' + prev.id + '"><small>Previous topic</small>' + prev.title + '</a>' : '') +
         (next ? '<a class="next" href="#/beyond/' + next.id + '"><small>Next topic</small>' + next.title + '</a>' : '') +
       '</nav>';
-    setSubnav('beyond', beyondTabs(id));
+    setRail('Topics', beyondTabs(id));
   }
 
   /* ---------- glossary ---------- */
