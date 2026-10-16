@@ -1366,3 +1366,168 @@ window.QA.push({
   ]
 });
 /* end qa-108-dist */
+
+/* ------------------------------------------------------------------ 1.09 / 1.10 */
+window.QA.push({
+  id: "qa-110",
+  title: "Cell Membrane & Transport: application & research",
+  lesson: "1.10",
+  source: "Lesson 1.10 slides (Application & Research Questions, which cover both the Cell Membrane and Cellular Transport lessons) and the class answer key \"Cell Membrane and Transport Answers\"",
+  items: [
+    {
+      tier: "essential",
+      q: "Describe the difference between passive and active transport.",
+      a: `<p>The main differences are <strong>whether the cell spends energy (ATP)</strong> and <strong>which way the particles move relative to their concentration gradient</strong>.</p>
+<div class="compare"><div><h4>Passive transport</h4><ul><li><strong>No energy</strong> required; happens spontaneously</li><li>Particles move <strong>down</strong> their concentration gradient: high → low concentration</li><li>Examples: <strong>simple diffusion</strong> (O<sub>2</sub>, CO<sub>2</sub>), <strong>facilitated diffusion</strong> through channel or carrier proteins (ions, glucose, amino acids), <strong>osmosis</strong> (water)</li></ul></div><div><h4>Active transport</h4><ul><li><strong>Energy required</strong>, in the form of <strong>ATP</strong></li><li>Particles move <strong>against</strong> their concentration gradient: low → high concentration</li><li>Needs specific carrier proteins (pumps)</li><li>Examples: the <strong>sodium–potassium pump</strong> (Na<sup>+</sup>/K<sup>+</sup> pump), <strong>endocytosis</strong> and <strong>exocytosis</strong></li></ul></div></div>`,
+      note: `Endocytosis and exocytosis are counted with active transport because they need ATP to move vesicles and reshape the membrane. They move large particles or bulk fluid in or out, rather than pumping single molecules "uphill" against a gradient; the slides call them <strong>membrane-assisted transport</strong>.`
+    },
+    {
+      tier: "essential",
+      q: "What is the difference between diffusion and osmosis?",
+      a: `<ul>
+<li><span class="term">Diffusion</span> describes the movement of <strong>particles (molecules or ions)</strong> from an area of higher concentration to an area of lower concentration, until they are evenly spread (dynamic equilibrium). It can happen anywhere, not only across a membrane.</li>
+<li><span class="term">Osmosis</span> is the diffusion of <strong>water</strong> specifically, across a <strong>selectively permeable membrane</strong>, from an area of higher water concentration (fewer dissolved solutes) to an area of lower water concentration (more dissolved solutes).</li>
+</ul>
+<p><strong>Similarity:</strong> both move <strong>with (down) the concentration gradient</strong>, so both are forms of <strong>passive transport</strong> and need no energy.</p>`
+    },
+    {
+      tier: "essential",
+      q: "Use the terms hypotonic, hypertonic and isotonic to describe solutions.",
+      a: `<p>These terms compare the <strong>solute concentration of a solution with the inside of a cell</strong>. Water always moves by osmosis toward the side with <strong>more solute</strong>.</p>
+<div class="table-wrap"><table class="data"><thead><tr><th>Solution outside the cell</th><th>Solute concentration vs. the cell</th><th>Net water movement</th><th>Animal cell</th><th>Plant cell</th></tr></thead><tbody>
+<tr><td><strong>Isotonic</strong></td><td>Same</td><td>No net movement</td><td>Stays normal (stable)</td><td>Flaccid (limp)</td></tr>
+<tr><td><strong>Hypertonic</strong></td><td>Higher</td><td>Water <strong>leaves</strong> the cell</td><td>Shrivels (<strong>crenation</strong>)</td><td>Membrane pulls away from the wall (plasmolysis)</td></tr>
+<tr><td><strong>Hypotonic</strong></td><td>Lower</td><td>Water <strong>enters</strong> the cell</td><td>Swells and may burst (<strong>lysis</strong>)</td><td>Firm (turgid); the cell wall stops it bursting</td></tr>
+</tbody></table></div>
+<div class="callout tip"><p class="callout-title">Memory trick</p><p>"Hypo" sounds like "hippo": in a <strong>hypo</strong>tonic solution the cell swells up big like a <strong>hippo</strong>.</p></div>
+<div class="callout warn"><p class="callout-title">Common mistake</p><p>"No net movement" in an isotonic solution does not mean water stops moving. Water still crosses the membrane, but equally in both directions.</p></div>`
+    },
+    {
+      tier: "essential",
+      q: "Explain the roles of proteins in the phospholipid bilayer.",
+      a: `<ul>
+<li><strong>Transport:</strong> <strong>channel proteins</strong> (water-filled pores, such as aquaporins and ion channels) and <strong>carrier proteins</strong> (which change shape) move specific molecules across the membrane, either passively or actively (pumps). Without them, ions and polar molecules could not cross the hydrophobic interior.</li>
+<li><strong>Enzymatic activity:</strong> some membrane proteins are enzymes that catalyze reactions right at the membrane surface.</li>
+<li><strong>Signal transduction:</strong> <strong>receptor proteins</strong> have binding sites for chemical messengers such as hormones or neurotransmitters. The messenger binds outside and the protein "tells" the cell to perform a task, without the messenger entering the cell.</li>
+<li><strong>Cell–cell recognition:</strong> <strong>glycoproteins</strong> act as "ID tags" so the immune system can tell "self" cells from "foreign" cells.</li>
+<li><strong>Intercellular joining:</strong> proteins of neighbouring cells hook together to form junctions (such as gap junctions or tight junctions), helping build tissues.</li>
+<li><strong>Attachment:</strong> proteins connect to the <strong>cytoskeleton</strong> inside and the <strong>extracellular matrix</strong> outside, which helps maintain cell shape and anchors the cell.</li>
+</ul>
+<p><span class="term">Integral proteins</span> span the whole bilayer (most transport proteins); <span class="term">peripheral proteins</span> sit on only the inner or outer surface.</p>
+<div class="callout teacher"><p class="callout-title">Said in class</p><p>Example of signal transduction: adrenaline is not able to pass through the membrane, so it binds to a receptor on the outside, which sets off reactions inside the cell. The signal is transmitted, but the hormone is never absorbed.</p></div>`
+    },
+    {
+      tier: "essential",
+      q: "Explain how cholesterol can increase or decrease membrane fluidity.",
+      a: `<p>Cholesterol is called a <strong>"fluidity buffer"</strong>: it stops the membrane from becoming too fluid when hot or too rigid when cold. Its molecules sit wedged between the phospholipids.</p>
+<ul>
+<li><strong>At high temperatures:</strong> phospholipids move faster and spread apart, so the membrane becomes too "runny". Cholesterol acts like a <strong>speed bump</strong>: it restrains the movement of the phospholipids, which <strong>decreases fluidity</strong>.</li>
+<li><strong>At low temperatures:</strong> phospholipids tend to pack tightly and "freeze" into a solid. Cholesterol <strong>gets in the way of tight packing</strong>, keeping space between the tails, which <strong>maintains (increases) fluidity</strong> and stops the membrane from freezing.</li>
+</ul>
+<p>Fatty acid tails also matter: <strong>unsaturated</strong> (kinked) tails <strong>increase</strong> fluidity, and <strong>saturated</strong> (straight) tails <strong>decrease</strong> it.</p>`
+    }
+  ]
+});
+/* end qa-110 */
+
+/* ------------------------------------------------------------------ mix: model making assignment */
+window.QA.push({
+  id: "qa-model",
+  title: "Macromolecule Model Making Assignment: prepare and practise",
+  lesson: "mix",
+  source: "Macromolecule Model Making Assignment handout (requirements, sample 2D drawing and model of maltose, sample levelled questions, marking checklist); answers written from the unit's lessons",
+  items: [
+    {
+      tier: "likely",
+      q: "What do you have to hand in for the Macromolecule Model Making Assignment, and how is it marked?",
+      a: `<ul>
+<li><strong>Build</strong> a macromolecule with the model kits or marshmallows. Molecules are chosen <strong>first come, first served</strong>.</li>
+<li><strong>Hand in on paper (handwritten):</strong> a <strong>2D drawn structure</strong> of your molecule and <strong>three questions with answers</strong>, levelled <strong>easy, medium and extension</strong>.</li>
+<li><strong>Leave the model on the lab bench</strong> with your names and a <strong>legend</strong> (what each colour or piece stands for).</li>
+<li><strong>On the shared slides:</strong> a photo of your 2D drawing, your three questions, and a photo of your model, with the <strong>answers in the speaker notes</strong> under your slide. The class uses these as review for the test and for bell-ringers.</li>
+</ul>
+<div class="table-wrap"><table class="data"><thead><tr><th>Marking checklist</th><th>Marks</th></tr></thead><tbody>
+<tr><td>Model creation (accuracy)</td><td>3</td></tr>
+<tr><td>Easy question and answer</td><td>2</td></tr>
+<tr><td>Medium question and answer</td><td>2</td></tr>
+<tr><td>Extension question and answer</td><td>3</td></tr>
+<tr><td><strong>Total</strong></td><td><strong>10</strong></td></tr>
+</tbody></table></div>
+<p>You are marked on the <strong>accuracy of the model</strong>, the <strong>creativity of the questions</strong>, and giving <strong>accurate, detailed answers</strong>.</p>`
+    },
+    {
+      tier: "likely",
+      q: "Sample easy question (for the maltose model): What class of macromolecule is this? Be specific.",
+      a: `<p>It is a <strong>carbohydrate</strong>; specifically a <strong>disaccharide</strong> called <strong>maltose</strong>, made of <strong>two α-glucose</strong> monomers joined by a glycosidic linkage.</p>
+<p>"Be specific" means going past the class: give the type (mono-, di- or polysaccharide) and the name and monomers if you can. Clues that it is a carbohydrate: rings of carbon with one oxygen in the ring, and many –OH groups.</p>`
+    },
+    {
+      tier: "essential",
+      q: "Sample medium question (maltose): What is the name of the circled bond? Show the hydrolysis reaction that breaks this molecule into its two components.",
+      a: `<p>The circled bond is an <strong>α-1,4 glycosidic linkage</strong>: carbon 1 of the first glucose is bonded through an oxygen to carbon 4 of the second glucose, and the –OH on carbon 1 is in the α (down) position.</p>
+<div class="eq">maltose + H<sub>2</sub>O → glucose + glucose<br>C<sub>12</sub>H<sub>22</sub>O<sub>11</sub> + H<sub>2</sub>O → 2 C<sub>6</sub>H<sub>12</sub>O<sub>6</sub></div>
+<p>In <strong>hydrolysis</strong>, a water molecule is added across the linkage: an –OH goes back onto carbon 1 of one glucose and an H goes back onto the oxygen on carbon 4 of the other, giving two separate α-glucose molecules. In the body the enzyme <strong>maltase</strong> catalyzes this reaction. It is the reverse of the dehydration synthesis that formed maltose.</p>`
+    },
+    {
+      tier: "likely",
+      q: "Sample extension question: amylose is a polymer of this molecule with α-1,4 linkages. (a) Label the carbon numbers on the diagram to show the linkage. (b) Add another unit showing the continued α-1,4 linkage. (c) Amylopectin is a branching polymer that also has α-1,6 linkages. Add a single unit to show the α-1,6 linkage pattern.",
+      a: `<ol>
+<li><strong>(a)</strong> In each glucose ring, number clockwise from the ring oxygen: <strong>C1</strong> is the corner just right of the ring O, then C2, C3, C4 and C5 around the ring, and <strong>C6</strong> is the –CH<sub>2</sub>OH carbon above C5. The linkage oxygen joins <strong>C1 of the left glucose</strong> to <strong>C4 of the right glucose</strong>, which shows it is a 1,4 linkage.</li>
+<li><strong>(b)</strong> Draw a third α-glucose to the right. Its C4 –OH and the C1 –OH of the glucose that is now at the end of the chain lose an H<sub>2</sub>O, and an oxygen bridge forms between <strong>C1 (old end) and C4 (new unit)</strong>. The chain grows in a straight line; each new unit releases one water molecule.</li>
+<li><strong>(c)</strong> Draw a new α-glucose <strong>above</strong> the chain. Its <strong>C1</strong> bonds through an oxygen to <strong>C6</strong> (the –CH<sub>2</sub>OH carbon) of one of the glucoses in the chain, again releasing H<sub>2</sub>O. This α-1,6 linkage starts a <strong>branch</strong>; the branch then continues with its own α-1,4 linkages.</li>
+</ol>
+<p>Why it matters: branching gives amylopectin (and even more so glycogen) many chain ends where enzymes can remove glucose at the same time, so energy can be released quickly.</p>`
+    },
+    {
+      tier: "likely",
+      q: "How do you build an accurate model (worth 3 marks)? What should you check?",
+      a: `<ul>
+<li><strong>Use consistent colours and include a legend.</strong> The usual model-kit colours are carbon black or grey, hydrogen white, oxygen red, nitrogen blue, sulfur yellow and phosphorus orange or purple (the sample maltose model uses grey C, white H and red O). Marshmallows work too, as long as the legend explains them.</li>
+<li><strong>Give every atom the right number of bonds:</strong> C = 4, N = 3, O = 2, H = 1. A double bond (C=O) counts as two.</li>
+<li><strong>Get the rings right:</strong> glucose is a 6-membered ring of 5 C + 1 O; fructose and ribose/deoxyribose are 5-membered rings of 4 C + 1 O; a benzene ring (phenylalanine) is 6 C.</li>
+<li><strong>Show the key bond clearly</strong> (glycosidic, ester, peptide or phosphodiester linkage), and check the orientation that matters (for example, α vs. β –OH on carbon 1).</li>
+<li><strong>Match the model to your 2D drawing</strong>, atom for atom, and count the hydrogens.</li>
+<li><strong>Remember the water:</strong> the linkage forms by dehydration synthesis, so the model should be missing exactly one H and one –OH (one H<sub>2</sub>O) per linkage.</li>
+</ul>`
+    },
+    {
+      tier: "likely",
+      q: "Practice set: write easy, medium and extension questions (with answers) for a TRIGLYCERIDE model.",
+      a: `<ol>
+<li><strong>Easy:</strong> What class of macromolecule is this, and what is it made of? <em>Answer:</em> a lipid; specifically a triglyceride (a fat or oil) made of <strong>one glycerol + three fatty acids</strong>.</li>
+<li><strong>Medium:</strong> Name the linkage joining each fatty acid to glycerol and show its hydrolysis. <em>Answer:</em> an <strong>ester linkage</strong>. Triglyceride + 3 H<sub>2</sub>O → glycerol + 3 fatty acids (catalyzed by <strong>lipase</strong>); one water is used for each of the three ester linkages.</li>
+<li><strong>Extension:</strong> If one fatty acid had a <em>cis</em> double bond, how would the molecule's shape and its state at room temperature change? <em>Answer:</em> the cis double bond puts a <strong>kink</strong> in that tail, so the molecules cannot pack tightly. The fat would be less dense and more likely to be a <strong>liquid oil</strong> at room temperature. (A <em>trans</em> double bond keeps the tail straight, so it would pack like a saturated fat and stay solid.)</li>
+</ol>`
+    },
+    {
+      tier: "likely",
+      q: "Practice set: write easy, medium and extension questions (with answers) for a DIPEPTIDE model (for example glycine–alanine).",
+      a: `<ol>
+<li><strong>Easy:</strong> What class of macromolecule is this, and what are its monomers? <em>Answer:</em> a protein (a dipeptide), made of two <strong>amino acids</strong>: glycine and alanine.</li>
+<li><strong>Medium:</strong> Name the bond joining the two monomers and explain which atoms were removed to form it. <em>Answer:</em> a <strong>peptide bond</strong> between the carboxyl carbon of glycine and the amino nitrogen of alanine. The –OH from glycine's carboxyl group and an H from alanine's amino group were removed as <strong>one H<sub>2</sub>O</strong> (dehydration synthesis). Hydrolysis reverses it: dipeptide + H<sub>2</sub>O → glycine + alanine.</li>
+<li><strong>Extension:</strong> If alanine's R group (–CH<sub>3</sub>) were replaced with serine's (–CH<sub>2</sub>OH), how would the polarity change, and where would this amino acid likely be found in a folded protein? <em>Answer:</em> the –OH makes the R group <strong>polar</strong>, so it can hydrogen bond with water and the peptide becomes more soluble. In a folded protein in water, polar R groups tend to be on the <strong>outside surface</strong>, while nonpolar R groups are buried inside.</li>
+</ol>`
+    },
+    {
+      tier: "likely",
+      q: "Practice set: write easy, medium and extension questions (with answers) for a DNA NUCLEOTIDE (or short DNA strand) model.",
+      a: `<ol>
+<li><strong>Easy:</strong> Name the three parts of this nucleotide. <em>Answer:</em> a <strong>phosphate group</strong>, a five-carbon sugar (<strong>deoxyribose</strong>) and a <strong>nitrogenous base</strong> (for example adenine).</li>
+<li><strong>Medium:</strong> Is this nucleotide from DNA or RNA? How can you tell from the model? <em>Answer:</em> <strong>DNA</strong>: carbon 2′ of the sugar has only an H and no –OH (deoxyribose = "missing an oxygen"). RNA's ribose has an –OH on carbon 2′, and RNA uses uracil instead of thymine. Nucleotides join by <strong>phosphodiester linkages</strong> between the 3′ carbon of one sugar and the 5′ phosphate of the next.</li>
+<li><strong>Extension:</strong> Write the complementary strand for 5′-ATGC-3′, and if a DNA sample is 30% guanine, find the percentage of each other base. <em>Answer:</em> <strong>3′-TACG-5′</strong> (antiparallel; A–T and G–C). G = C = 30%; A + T = 100 − 60 = 40%, so <strong>A = T = 20%</strong>.</li>
+</ol>`
+    },
+    {
+      tier: "likely",
+      q: "What makes a strong set of levelled questions and answers (worth 7 marks)?",
+      a: `<ul>
+<li><strong>Easy (2 marks):</strong> identification: the class of macromolecule (be specific), the monomers, or labelling a functional group.</li>
+<li><strong>Medium (2 marks):</strong> naming and explaining: the type of bond, how it forms (dehydration synthesis) or breaks (hydrolysis), with a correct equation or drawing.</li>
+<li><strong>Extension (3 marks):</strong> applying the idea to something new: extending the polymer (like the amylose/amylopectin sample), predicting how a change in structure changes polarity, shape or function, or a calculation (like Chargaff's rule).</li>
+<li><strong>Answers must be accurate and detailed:</strong> use the correct terms (glycosidic, ester, peptide, phosphodiester; α/β; 5′/3′), show water in every condensation or hydrolysis, and include a labelled drawing where it helps.</li>
+<li><strong>Creative but clear:</strong> each question should have one clear correct answer that a classmate could check from your slide notes.</li>
+</ul>`
+    }
+  ]
+});
+/* end qa-model */

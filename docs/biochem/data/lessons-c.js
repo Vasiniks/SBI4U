@@ -831,6 +831,187 @@ window.LESSONS.push({
 <div class="callout warn"><p class="callout-title">Common mistake</p><p>In osmosis it is the <strong>water</strong> that moves, not the solute. And water moves <strong>toward</strong> the side with the <strong>higher</strong> solute concentration, which sounds backwards until you remember that side has the <strong>lower water</strong> concentration.</p></div>
 <div class="callout tip"><p class="callout-title">Memory trick</p><p><strong>Water follows solute.</strong> Wherever there is more dissolved "stuff," water moves there to dilute it.</p></div>
 <details class="check"><summary>Review question 2: What is the difference between diffusion and osmosis?</summary><div class="ans"><p>Diffusion describes the movement of particles (ions, molecules) in general; osmosis refers specifically to the movement of <strong>water</strong> across a selectively permeable membrane. Both move with the concentration gradient, so both are forms of <strong>passive</strong> transport.</p></div></details>
-<!-- @@110-PART2@@ -->
+<h3 data-tier="essential">Types of solutions: isotonic, hypotonic, hypertonic</h3>
+<p>These three words describe a solution's <strong>solute concentration compared with the inside of a cell</strong>. They are always relative: a solution is hypotonic <em>to</em> a particular cell.</p>
+<ul>
+  <li><span class="term">Isotonic</span>: the solution and the cell have an <strong>equal</strong> concentration of dissolved solutes. There is <strong>no net movement</strong> of water. The cell stays the same size.</li>
+  <li><span class="term">Hypotonic</span>: the solution has a <strong>lower</strong> concentration of dissolved solutes than the cell. The cell will <strong>gain</strong> water from the solution.</li>
+  <li><span class="term">Hypertonic</span>: the solution has a <strong>higher</strong> concentration of dissolved solutes than the cell. The cell will <strong>lose</strong> water to the solution.</li>
+</ul>
+<p>The slides used numbers, and so should you. Suppose the cell is <strong>20% solute (80% water)</strong>.</p>
+<div class="table-wrap"><table class="data"><thead><tr><th>Solution outside</th><th>Compared with the cell</th><th>Water moves</th><th>Result</th></tr></thead><tbody>
+<tr><td>20% solute (80% water)</td><td>Isotonic</td><td>In and out equally (no net movement)</td><td>No change</td></tr>
+<tr><td>10% solute (90% water)</td><td>Hypotonic</td><td><strong>Into</strong> the cell (outside has more water)</td><td>Cell swells</td></tr>
+<tr><td>40% solute (60% water)</td><td>Hypertonic</td><td><strong>Out of</strong> the cell (inside has more water)</td><td>Cell shrinks</td></tr>
+</tbody></table></div>
+<p>The reasoning is always the same: find which side has the higher water concentration (the lower solute concentration), and water moves from there to the other side.</p>
+<figure class="diagram">
+<svg viewBox="0 0 640 360" role="img" aria-labelledby="b110-t2">
+<title id="b110-t2">Animal and plant cells in three solutions. In a hypotonic solution water moves in: a red blood cell swells and may burst, and a plant cell becomes turgid, its membrane pressed against the wall. In an isotonic solution there is no net water movement: the red blood cell keeps its normal disc shape and the plant cell is flaccid. In a hypertonic solution water moves out: the red blood cell shrivels with a spiky outline, and the plant cell's membrane pulls away from the wall, called plasmolysis.</title>
+<defs><marker id="b110-aw" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" style="fill:var(--blue)"/></marker></defs>
+<text x="180" y="22" text-anchor="middle" font-family="inherit" font-size="13" font-weight="700" style="fill:var(--ink)">Hypotonic</text>
+<text x="360" y="22" text-anchor="middle" font-family="inherit" font-size="13" font-weight="700" style="fill:var(--ink)">Isotonic</text>
+<text x="540" y="22" text-anchor="middle" font-family="inherit" font-size="13" font-weight="700" style="fill:var(--ink)">Hypertonic</text>
+<text x="180" y="38" text-anchor="middle" font-family="inherit" font-size="11.5" style="fill:var(--ink-2)">less solute outside</text>
+<text x="360" y="38" text-anchor="middle" font-family="inherit" font-size="11.5" style="fill:var(--ink-2)">equal solute</text>
+<text x="540" y="38" text-anchor="middle" font-family="inherit" font-size="11.5" style="fill:var(--ink-2)">more solute outside</text>
+<text x="180" y="54" text-anchor="middle" font-family="inherit" font-size="12" font-weight="700" style="fill:var(--blue)">water moves IN</text>
+<text x="360" y="54" text-anchor="middle" font-family="inherit" font-size="12" font-weight="700" style="fill:var(--blue)">no net movement</text>
+<text x="540" y="54" text-anchor="middle" font-family="inherit" font-size="12" font-weight="700" style="fill:var(--blue)">water moves OUT</text>
+<text x="10" y="124" font-family="inherit" font-size="12" font-weight="700" style="fill:var(--ink)">Animal cell</text>
+<text x="10" y="140" font-family="inherit" font-size="11.5" style="fill:var(--ink-2)">(red blood cell)</text>
+<text x="10" y="266" font-family="inherit" font-size="12" font-weight="700" style="fill:var(--ink)">Plant cell</text>
+<circle cx="180" cy="128" r="40" style="fill:var(--red-soft);stroke:var(--red)" stroke-width="2"/>
+<ellipse cx="360" cy="128" rx="44" ry="28" style="fill:var(--red-soft);stroke:var(--red)" stroke-width="2"/>
+<ellipse cx="360" cy="128" rx="20" ry="10" style="fill:var(--surface);stroke:var(--red)" stroke-width="1" fill-opacity="0.6"/>
+<polygon points="572,128 563,135 567,145 556,146 553,157 543,152 535,160 530,150 519,152 520,141 509,137 516,128 509,119 520,115 519,104 530,106 535,96 543,104 553,99 556,110 567,111 563,121" style="fill:var(--red-soft);stroke:var(--red)" stroke-width="2"/>
+<g style="fill:none;stroke:var(--blue)" stroke-width="2">
+<line x1="180" y1="64" x2="180" y2="84" marker-end="url(#b110-aw)"/><line x1="180" y1="190" x2="180" y2="172" marker-end="url(#b110-aw)"/><line x1="114" y1="128" x2="136" y2="128" marker-end="url(#b110-aw)"/><line x1="246" y1="128" x2="224" y2="128" marker-end="url(#b110-aw)"/>
+<line x1="294" y1="128" x2="312" y2="128" marker-start="url(#b110-aw)" marker-end="url(#b110-aw)"/><line x1="408" y1="128" x2="426" y2="128" marker-start="url(#b110-aw)" marker-end="url(#b110-aw)"/>
+<line x1="540" y1="92" x2="540" y2="68" marker-end="url(#b110-aw)"/><line x1="540" y1="164" x2="540" y2="188" marker-end="url(#b110-aw)"/><line x1="504" y1="128" x2="480" y2="128" marker-end="url(#b110-aw)"/><line x1="576" y1="128" x2="600" y2="128" marker-end="url(#b110-aw)"/>
+</g>
+<text x="180" y="212" text-anchor="middle" font-family="inherit" font-size="12" style="fill:var(--ink)">Swells; may burst (lysis)</text>
+<text x="360" y="212" text-anchor="middle" font-family="inherit" font-size="12" style="fill:var(--ink)">Normal disc shape</text>
+<text x="540" y="212" text-anchor="middle" font-family="inherit" font-size="12" style="fill:var(--ink)">Shrivels (crenation)</text>
+<g style="fill:var(--surface-2);stroke:var(--good)" stroke-width="3"><rect x="128" y="228" width="104" height="84" rx="8"/><rect x="308" y="228" width="104" height="84" rx="8"/><rect x="488" y="228" width="104" height="84" rx="8"/></g>
+<g style="fill:var(--amber-soft);stroke:var(--amber)" stroke-width="1.5"><rect x="132" y="232" width="96" height="76" rx="6"/><rect x="316" y="238" width="88" height="64" rx="10"/><rect x="508" y="248" width="64" height="44" rx="18"/></g>
+<g style="fill:var(--blue-soft);stroke:var(--blue)" stroke-width="1.5"><rect x="144" y="242" width="72" height="56" rx="14"/><rect x="332" y="250" width="56" height="40" rx="12"/><rect x="524" y="258" width="32" height="24" rx="10"/></g>
+<g style="fill:none;stroke:var(--blue)" stroke-width="2">
+<line x1="104" y1="270" x2="126" y2="270" marker-end="url(#b110-aw)"/><line x1="256" y1="270" x2="234" y2="270" marker-end="url(#b110-aw)"/>
+<line x1="284" y1="270" x2="302" y2="270" marker-start="url(#b110-aw)" marker-end="url(#b110-aw)"/><line x1="418" y1="270" x2="436" y2="270" marker-start="url(#b110-aw)" marker-end="url(#b110-aw)"/>
+<line x1="504" y1="270" x2="470" y2="270" marker-end="url(#b110-aw)"/><line x1="576" y1="270" x2="610" y2="270" marker-end="url(#b110-aw)"/>
+</g>
+<text x="180" y="334" text-anchor="middle" font-family="inherit" font-size="12" style="fill:var(--ink)">Turgid (normal, firm)</text>
+<text x="360" y="334" text-anchor="middle" font-family="inherit" font-size="12" style="fill:var(--ink)">Flaccid (limp)</text>
+<text x="540" y="334" text-anchor="middle" font-family="inherit" font-size="12" style="fill:var(--ink)">Plasmolyzed: membrane</text>
+<text x="540" y="350" text-anchor="middle" font-family="inherit" font-size="12" style="fill:var(--ink)">pulls away from wall</text>
+</svg>
+<figcaption>The same three solutions have different effects on animal and plant cells because only the plant cell has a wall. Blue arrows show the net movement of water.</figcaption>
+</figure>
+<h4>Animal cells</h4>
+<p>An animal cell has no wall, so it is at the mercy of the water around it. In a <strong>hypotonic</strong> solution (pure water, for example) water rushes in, the cell swells, and it can burst; for red blood cells this is called <span class="term">lysis</span> (hemolysis). In a <strong>hypertonic</strong> solution (strong salt water) water leaves, and the cell shrivels into a spiky shape, called <span class="term">crenation</span>. Only an <strong>isotonic</strong> solution keeps it normal. That is why your body keeps the blood plasma isotonic to your cells, and why fluids given through an IV drip are isotonic saline, never pure water.</p>
+<h4>Plant cells</h4>
+<p>A plant cell has a cell wall, which changes the story. In a <strong>hypotonic</strong> solution water enters the central vacuole, which swells and presses the membrane against the wall. The wall pushes back and stops the cell bursting. The cell becomes <span class="term">turgid</span> (firm), and this is the <strong>normal, healthy</strong> state for a plant cell: turgor pressure is what holds up stems and leaves (lesson 1.08). In an <strong>isotonic</strong> solution there is no net water movement, the cell is <span class="term">flaccid</span> (limp) and the plant wilts. In a <strong>hypertonic</strong> solution water leaves, the vacuole shrinks and the membrane pulls away from the wall. This is <span class="term">plasmolysis</span>, and it usually kills the cell.</p>
+<div class="callout key"><p class="callout-title">On the test</p><p>From the answer key: <strong>isotonic</strong>: same solute concentration as the cell, no net movement of water, cell remains stable. <strong>Hypertonic</strong>: higher solute concentration than the cell; water leaves the cell to try to dilute the outside, so the cell shrivels (<strong>crenation</strong> in animal cells). <strong>Hypotonic</strong>: lower solute concentration than the cell; water rushes into the cell, causing it to swell and potentially burst (<strong>lysis</strong>).</p></div>
+<div class="callout tip"><p class="callout-title">Memory trick</p><p>From the answer key: "<strong>Hypo</strong>" sounds like "<strong>hippo</strong>": in a hypotonic solution the cell gets big like a hippo. And hyp<strong>er</strong>tonic has more "stuff" (solute) outside, like a h<strong>y</strong>per crowd, so water leaves the cell to join it.</p></div>
+<div class="callout teacher"><p class="callout-title">Said in class</p><p>"No net movement" in an isotonic solution does <strong>not</strong> mean no movement: water still crosses, but equally in both directions. Class memory tricks: <strong>hypo</strong>tonic, the cell fills up, "no more water needed"; <strong>hyper</strong>tonic, the cell is drained, "perhaps I need water."</p></div>
+<div class="callout warn"><p class="callout-title">Common mistake</p><p>These words describe the <strong>solution</strong> compared with the <strong>cell</strong>, not the cell itself. "The cell is hypotonic" is ambiguous; say "the solution is hypotonic to the cell." Also, do not say a cell in a hypotonic solution "gains solute." It gains <strong>water</strong>; solute does not need to move at all.</p></div>
+<details class="check"><summary>Review question 3: Use the terms hypotonic, hypertonic and isotonic to describe solutions.</summary><div class="ans"><p>The terms describe the solute concentration of a solution relative to the inside of a cell. <strong>Isotonic:</strong> the solution has the same solute concentration as the cell; there is no net movement of water and the cell remains stable. <strong>Hypertonic:</strong> the solution has a higher solute concentration than the cell; water leaves the cell, which shrivels (crenation in animal cells). <strong>Hypotonic:</strong> the solution has a lower solute concentration than the cell; water rushes into the cell, which swells and may burst (lysis).</p></div></details>
+<details class="check"><summary>Why does salting a road in winter kill the grass beside it?</summary><div class="ans"><p>Salt dissolves in the water in the soil, making the soil water <strong>hypertonic</strong> to the root cells. Water moves out of the root cells by osmosis, so they cannot take water in, and their cells plasmolyze. The plant wilts and dies even though the soil is wet.</p></div></details>
+<p data-tier="extra">Freshwater protists such as paramecia live in water that is always hypotonic to them, so water constantly floods in. They survive by using <strong>contractile vacuoles</strong> that collect the excess water and pump it out, a job that costs ATP.</p>
+
+<h3 data-tier="essential">Active transport</h3>
+<p><span class="term">Active transport</span> moves substances across the membrane with these three features from the slide:</p>
+<ul>
+  <li><strong>Energy is required</strong>, usually from ATP.</li>
+  <li>Particles move <strong>against</strong> their concentration gradient, from low to high.</li>
+  <li>Transport requires <strong>specific carrier proteins</strong>, often called <span class="term">pumps</span>.</li>
+</ul>
+<p>The second point explains the first. Diffusion always runs from high to low concentration on its own. To push particles the other way, piling them up where they are already concentrated, the cell has to do work, just as you have to do work to pump air into an already full tyre. The energy comes from ATP: the carrier protein uses the energy released when ATP is broken into ADP + P<sub>i</sub> to change its shape and move the particle.</p>
+<p>Why would a cell bother? Cells need to accumulate things they are short of (a root cell absorbs mineral ions from soil where they are scarce), remove things even when outside levels are already high, and maintain ion gradients that power other processes.</p>
+<h4>Example: the sodium-potassium pump</h4>
+<p>The answer key's main example of active transport is the <span class="term">sodium-potassium pump</span> (Na<sup>+</sup>/K<sup>+</sup> pump), found in the membranes of animal cells. Each cycle it uses <strong>one ATP</strong> to pump <strong>3 Na<sup>+</sup> out</strong> of the cell and <strong>2 K<sup>+</sup> into</strong> it. Both moves are against the gradient: there is already more Na<sup>+</sup> outside and more K<sup>+</sup> inside.</p>
+<ol class="steps">
+  <li><p class="step-head">Three Na<sup>+</sup> bind</p><p>Three sodium ions from the cytosol bind to the pump.</p></li>
+  <li><p class="step-head">ATP powers a shape change</p><p>ATP transfers a phosphate group to the pump. The pump changes shape, opens to the outside and releases the Na<sup>+</sup>.</p></li>
+  <li><p class="step-head">Two K<sup>+</sup> bind</p><p>In its new shape the pump binds two potassium ions from outside.</p></li>
+  <li><p class="step-head">Back to the start</p><p>The phosphate is released, the pump returns to its original shape and releases the K<sup>+</sup> inside. The cycle repeats.</p></li>
+</ol>
+<p>The gradients this pump builds are how nerve cells send impulses and muscle cells contract, and they help control the cell's water balance. Running it takes a large share of an animal cell's ATP, which is why neurons are packed with mitochondria (lesson 1.08).</p>
+<div class="callout warn"><p class="callout-title">Common mistake</p><p>Both facilitated diffusion and active transport can use carrier proteins, so the protein does not tell you which one it is. Ask: is ATP used, and is the substance going <strong>against</strong> its gradient? If yes, it is active.</p></div>
+
+<h3 data-tier="essential">Membrane-assisted transport: endocytosis and exocytosis</h3>
+<p>Some materials are far too large for any channel or carrier: whole bacteria, droplets of fluid, large proteins, hormones made by the cell. These are moved in bulk, wrapped in a piece of membrane, as a <strong>vesicle</strong>. This is <span class="term">membrane-assisted transport</span>. It requires energy (ATP), so the class answer key lists endocytosis and exocytosis as examples of active transport. It only works because the membrane is fluid (lesson 1.09).</p>
+<figure class="diagram">
+<svg viewBox="0 0 640 286" role="img" aria-labelledby="b110-t3">
+<title id="b110-t3">Four kinds of membrane-assisted transport, with the outside of the cell at the top. Phagocytosis: the membrane extends around a large particle and encloses it in a food vacuole. Pinocytosis: the membrane dips inward and pinches off a small vesicle of fluid. Receptor-mediated endocytosis: specific molecules bind receptors in a coated pit, which pinches off as a vesicle. Exocytosis: a vesicle fuses with the membrane and releases its contents outside.</title>
+<defs><marker id="b110-ak" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" style="fill:var(--ink-2)"/></marker></defs>
+<text x="240" y="18" text-anchor="middle" font-family="inherit" font-size="13" font-weight="700" style="fill:var(--ink)">ENDOCYTOSIS: into the cell</text>
+<text x="560" y="18" text-anchor="middle" font-family="inherit" font-size="13" font-weight="700" style="fill:var(--ink)">EXOCYTOSIS: out</text>
+<path d="M10,32 V27 H470 V32 M490,32 V27 H630 V32" style="fill:none;stroke:var(--ink-2)" stroke-width="1.2"/>
+<text x="632" y="50" text-anchor="end" font-family="inherit" font-size="11.5" font-style="italic" style="fill:var(--ink-2)">outside</text>
+<text x="632" y="146" text-anchor="end" font-family="inherit" font-size="11.5" font-style="italic" style="fill:var(--ink-2)">inside</text>
+<g style="stroke:var(--line)" stroke-width="1" stroke-dasharray="4 4"><line x1="160" y1="36" x2="160" y2="280"/><line x1="320" y1="36" x2="320" y2="280"/><line x1="480" y1="36" x2="480" y2="280"/></g>
+<ellipse cx="80" cy="68" rx="24" ry="14" style="fill:var(--teal-soft);stroke:var(--teal)" stroke-width="2"/>
+<path d="M6,110 H30 C36,110 28,52 56,46 M104,46 C132,52 124,110 130,110 H154" style="fill:none;stroke:var(--amber)" stroke-width="5" stroke-linecap="round"/>
+<line x1="80" y1="94" x2="80" y2="140" style="stroke:var(--ink-2)" stroke-width="1.6" marker-end="url(#b110-ak)"/>
+<circle cx="80" cy="178" r="28" style="fill:var(--amber-soft);stroke:var(--amber)" stroke-width="4"/>
+<ellipse cx="80" cy="178" rx="15" ry="9" style="fill:var(--teal-soft);stroke:var(--teal)" stroke-width="2"/>
+<text x="80" y="222" text-anchor="middle" font-family="inherit" font-size="11.5" style="fill:var(--ink-2)">food vacuole</text>
+<path d="M166,110 H218 C224,110 220,142 240,142 C260,142 256,110 262,110 H314" style="fill:none;stroke:var(--amber)" stroke-width="5" stroke-linecap="round"/>
+<g style="fill:var(--blue)"><circle cx="186" cy="62" r="3"/><circle cx="214" cy="80" r="3"/><circle cx="246" cy="58" r="3"/><circle cx="272" cy="76" r="3"/><circle cx="300" cy="60" r="3"/><circle cx="196" cy="96" r="3"/><circle cx="288" cy="96" r="3"/><circle cx="234" cy="126" r="3"/><circle cx="248" cy="120" r="3"/><circle cx="236" cy="186" r="3"/><circle cx="246" cy="180" r="3"/><circle cx="240" cy="192" r="3"/></g>
+<line x1="240" y1="146" x2="240" y2="162" style="stroke:var(--ink-2)" stroke-width="1.6" marker-end="url(#b110-ak)"/>
+<circle cx="240" cy="186" r="16" style="fill:none;stroke:var(--amber)" stroke-width="4"/>
+<path d="M326,110 H372 C378,110 374,148 400,148 C426,148 422,110 428,110 H474" style="fill:none;stroke:var(--amber)" stroke-width="5" stroke-linecap="round"/>
+<path d="M376,124 C380,152 420,152 424,124" style="fill:none;stroke:var(--ink-2)" stroke-width="2" stroke-dasharray="3 3"/>
+<g style="stroke:var(--magenta)" stroke-width="2"><line x1="379" y1="118" x2="372" y2="108"/><line x1="390" y1="137" x2="386" y2="126"/><line x1="410" y1="137" x2="414" y2="126"/><line x1="421" y1="118" x2="428" y2="108"/></g>
+<g style="fill:var(--magenta)"><circle cx="370" cy="104" r="4"/><circle cx="385" cy="122" r="4"/><circle cx="415" cy="122" r="4"/><circle cx="430" cy="104" r="4"/><circle cx="352" cy="66" r="4"/><circle cx="446" cy="62" r="4"/><circle cx="400" cy="76" r="4"/></g>
+<g style="fill:var(--teal)"><circle cx="340" cy="90" r="3"/><circle cx="458" cy="88" r="3"/><circle cx="420" cy="54" r="3"/></g>
+<line x1="400" y1="154" x2="400" y2="166" style="stroke:var(--ink-2)" stroke-width="1.6" marker-end="url(#b110-ak)"/>
+<circle cx="400" cy="190" r="20" style="fill:none;stroke:var(--amber)" stroke-width="4"/>
+<circle cx="400" cy="190" r="24" style="fill:none;stroke:var(--ink-2)" stroke-width="1.5" stroke-dasharray="3 3"/>
+<g style="fill:var(--magenta)"><circle cx="393" cy="186" r="3.5"/><circle cx="407" cy="186" r="3.5"/><circle cx="400" cy="196" r="3.5"/></g>
+<path d="M486,110 H545 C545,140 575,140 575,110 H634" style="fill:none;stroke:var(--amber)" stroke-width="5" stroke-linecap="round"/>
+<g style="fill:var(--magenta)"><circle cx="556" cy="96" r="3.5"/><circle cx="566" cy="86" r="3.5"/><circle cx="556" cy="74" r="3.5"/><circle cx="570" cy="64" r="3.5"/><circle cx="560" cy="120" r="3.5"/></g>
+<circle cx="560" cy="196" r="18" style="fill:var(--magenta-soft);stroke:var(--amber)" stroke-width="4"/>
+<g style="fill:var(--magenta)"><circle cx="553" cy="192" r="3.5"/><circle cx="567" cy="192" r="3.5"/><circle cx="560" cy="202" r="3.5"/></g>
+<line x1="560" y1="174" x2="560" y2="148" style="stroke:var(--ink-2)" stroke-width="1.6" marker-end="url(#b110-ak)"/>
+<text x="606" y="200" text-anchor="middle" font-family="inherit" font-size="11.5" style="fill:var(--ink-2)">vesicle</text>
+<text x="606" y="214" text-anchor="middle" font-family="inherit" font-size="11.5" style="fill:var(--ink-2)">from Golgi</text>
+<text x="80" y="244" text-anchor="middle" font-family="inherit" font-size="12" font-weight="700" style="fill:var(--ink)">Phagocytosis</text>
+<text x="80" y="260" text-anchor="middle" font-family="inherit" font-size="11.5" style="fill:var(--ink-2)">"cell eating":</text>
+<text x="80" y="276" text-anchor="middle" font-family="inherit" font-size="11.5" style="fill:var(--ink-2)">solid particles</text>
+<text x="240" y="244" text-anchor="middle" font-family="inherit" font-size="12" font-weight="700" style="fill:var(--ink)">Pinocytosis</text>
+<text x="240" y="260" text-anchor="middle" font-family="inherit" font-size="11.5" style="fill:var(--ink-2)">"cell drinking":</text>
+<text x="240" y="276" text-anchor="middle" font-family="inherit" font-size="11.5" style="fill:var(--ink-2)">fluid + solutes</text>
+<text x="400" y="244" text-anchor="middle" font-family="inherit" font-size="12" font-weight="700" style="fill:var(--ink)">Receptor-mediated</text>
+<text x="400" y="260" text-anchor="middle" font-family="inherit" font-size="11.5" style="fill:var(--ink-2)">receptors pick out</text>
+<text x="400" y="276" text-anchor="middle" font-family="inherit" font-size="11.5" style="fill:var(--ink-2)">specific molecules</text>
+<text x="560" y="244" text-anchor="middle" font-family="inherit" font-size="12" font-weight="700" style="fill:var(--ink)">Exocytosis</text>
+<text x="560" y="260" text-anchor="middle" font-family="inherit" font-size="11.5" style="fill:var(--ink-2)">vesicle fuses,</text>
+<text x="560" y="276" text-anchor="middle" font-family="inherit" font-size="11.5" style="fill:var(--ink-2)">contents released</text>
+</svg>
+<figcaption>The cell membrane is amber; the outside of the cell is at the top. In receptor-mediated endocytosis only the magenta molecules (which fit the receptors) are taken in; the dashed line is the protein coat lining the pit.</figcaption>
+</figure>
+<h4>Endocytosis</h4>
+<p><span class="term">Endocytosis</span> is the process by which a cell <strong>engulfs extracellular material to bring it inside the cell</strong>. A patch of membrane folds inward around the material and pinches off as a vesicle. There are three types:</p>
+<ul>
+  <li><span class="term">Phagocytosis</span> ("cell eating"): the cell engulfs <strong>solid particles</strong>. The cell extends <strong>pseudopodia</strong> around a large particle, such as a bacterium or a bit of food, and encloses it in a <strong>food vacuole</strong>. A lysosome then fuses with the vacuole and digests the contents (lesson 1.08). Amoebas feed this way, and your white blood cells destroy bacteria this way.</li>
+  <li><span class="term">Pinocytosis</span> ("cell drinking"): the cell engulfs <strong>fluid and dissolved solutes</strong>. The membrane dips in and pinches off tiny vesicles of extracellular fluid. It is not selective: whatever is dissolved in that droplet comes in.</li>
+  <li><span class="term">Receptor-mediated endocytosis</span>: the cell <strong>selectively</strong> ingests <strong>specific molecules</strong> after they bind to <strong>surface receptors</strong>, and the binding triggers vesicle formation. The receptors cluster in a <strong>coated pit</strong> (lined on the inside with coat protein), which deepens and pinches off as a coated vesicle. This lets a cell collect large amounts of a substance that is rare in the surrounding fluid.</li>
+</ul>
+<p data-tier="extra">Your cells take in cholesterol by receptor-mediated endocytosis: cholesterol travels in the blood in particles called LDL, which bind to LDL receptors on cells. In the inherited disease familial hypercholesterolemia the receptors are faulty, so cholesterol cannot be taken up and builds to dangerous levels in the blood.</p>
+<h4>Exocytosis</h4>
+<p><span class="term">Exocytosis</span> is the process by which <strong>secretory vesicles fuse with the cell membrane and release wastes, hormones and other molecules out of the cell</strong>. It is the last step of the secretory pathway from lesson 1.08: vesicles bud off the trans face of the Golgi, travel to the membrane, fuse with it, and spill their contents outside. The vesicle's membrane becomes part of the cell membrane. There are two types:</p>
+<ul>
+  <li><strong>Constitutive</strong> exocytosis: a <strong>continuous, automatic</strong> process in <strong>all cells</strong> that constantly secretes materials, including the <strong>membrane lipids and proteins</strong> that replace and enlarge the cell membrane, and components of the extracellular matrix.</li>
+  <li><strong>Regulated</strong> exocytosis: the cell <strong>stores</strong> substances in vesicles and releases them <strong>on demand</strong>, only after receiving a signal, which can be <strong>chemical</strong> or <strong>electrical</strong>. Examples: pancreas cells release insulin when blood sugar rises (a chemical signal), and a nerve cell releases neurotransmitters when an impulse arrives (an electrical signal).</li>
+</ul>
+<p>The slide's exocytosis diagram shows both side by side: soluble proteins carried by a transport vesicle are released by "unregulated membrane fusion" (constitutive secretion), while secretory proteins wait in a secretory vesicle until a signal molecule (ligand) binds a receptor and signal transduction triggers "regulated membrane fusion."</p>
+<div class="callout teacher"><p class="callout-title">Said in class</p><p>Endocytosis and exocytosis were presented as examples of membrane-assisted active transport. Constitutive exocytosis: continuous and automatic, in all cells (e.g., membrane lipids and proteins). Regulated exocytosis: stored, then released on demand after a chemical or electrical signal.</p></div>
+<div class="callout tip"><p class="callout-title">Memory trick</p><p><strong>Endo</strong> = <strong>en</strong>ter, <strong>exo</strong> = <strong>ex</strong>it. <strong>Phago</strong> = eat (think "esophagus"), <strong>pino</strong> = drink (think "pint").</p></div>
+<details class="check"><summary>A white blood cell engulfs a bacterium. Name the process and describe what happens to the bacterium next.</summary><div class="ans"><p><strong>Phagocytosis</strong>, a type of endocytosis. Pseudopodia surround the bacterium and enclose it in a food vacuole inside the cell. A lysosome fuses with the vacuole and its digestive enzymes (working at about pH 5) break the bacterium down; useful molecules are released into the cytosol and leftover debris can be expelled by exocytosis.</p></div></details>
+
+<h3 data-tier="essential">Comparing all the transport types</h3>
+<div class="table-wrap"><table class="data"><thead><tr><th>Type</th><th>Energy (ATP)?</th><th>Direction</th><th>Needs</th><th>Examples</th></tr></thead><tbody>
+<tr><td>Simple diffusion</td><td>No</td><td>Down the gradient</td><td>Nothing; crosses the bilayer</td><td>O<sub>2</sub>, CO<sub>2</sub>, small lipid-soluble molecules</td></tr>
+<tr><td>Facilitated diffusion: channel</td><td>No</td><td>Down the gradient</td><td>Channel protein (pore; no shape change)</td><td>Ions; water through aquaporins</td></tr>
+<tr><td>Facilitated diffusion: carrier</td><td>No</td><td>Down the gradient</td><td>Carrier protein (changes shape)</td><td>Glucose, amino acids</td></tr>
+<tr><td>Osmosis</td><td>No</td><td>Water: high [water] to low [water]</td><td>Selectively permeable membrane (aquaporins help)</td><td>Water into a cell in a hypotonic solution</td></tr>
+<tr><td>Active transport</td><td>Yes</td><td>Against the gradient</td><td>Specific carrier protein (pump)</td><td>Na<sup>+</sup>/K<sup>+</sup> pump; mineral uptake by roots</td></tr>
+<tr><td>Endocytosis</td><td>Yes</td><td>Into the cell, in bulk</td><td>Membrane folds into a vesicle</td><td>Phagocytosis, pinocytosis, receptor-mediated</td></tr>
+<tr><td>Exocytosis</td><td>Yes</td><td>Out of the cell, in bulk</td><td>Vesicle fuses with the membrane</td><td>Constitutive (membrane lipids, proteins); regulated (insulin, neurotransmitters)</td></tr>
+</tbody></table></div>
+<div class="callout key"><p class="callout-title">On the test</p><p>The application questions for this unit (1 to 3 here, 4 and 5 in lesson 1.09) come straight from these two lessons. For any transport question, state three things: <strong>energy or no energy</strong>, <strong>direction relative to the gradient</strong>, and <strong>what structure is used</strong> (bilayer, channel, carrier, pump, or vesicle).</p></div>
+
+<h3 data-tier="essential">Lesson summary</h3>
+<ul>
+  <li>Passive transport needs no energy and moves substances down their concentration gradient: simple diffusion (O<sub>2</sub>, CO<sub>2</sub>, small lipid-soluble molecules), facilitated diffusion (channel proteins for ions and water; carrier proteins that change shape for sugars and amino acids), and osmosis.</li>
+  <li>Diffusion continues until dynamic equilibrium: no net movement, but particles still cross both ways.</li>
+  <li>Osmosis is the diffusion of water across a selectively permeable membrane, from high [water] (low solute) to low [water] (high solute).</li>
+  <li>Hypotonic solution: water enters the cell (animal cells swell and may lyse; plant cells become turgid). Isotonic: no net movement. Hypertonic: water leaves (animal cells crenate; plant cells plasmolyze).</li>
+  <li>Active transport uses ATP and specific carrier proteins to move substances against their gradient; the Na<sup>+</sup>/K<sup>+</sup> pump moves 3 Na<sup>+</sup> out and 2 K<sup>+</sup> in per ATP.</li>
+  <li>Endocytosis brings material in by vesicles (phagocytosis, pinocytosis, receptor-mediated); exocytosis releases it (constitutive or regulated). Both use energy.</li>
+</ul>
 `
 });
