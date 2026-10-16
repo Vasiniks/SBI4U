@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>All-units test · SBI4U</title>
+<meta name="description" content="Mixed practice test across every SBI4U unit, with exam-style feedback at the end.">
+<meta name="color-scheme" content="light dark">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,500;0,7..72,600;1,7..72,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css?v=1792108936">
+<script>
+  try { var t = localStorage.getItem('sbi4u-theme'); if (t) document.documentElement.setAttribute('data-theme', t); } catch (e) {}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="topbar">
+  <button class="menu-btn" id="menuBtn" aria-controls="sidebar" aria-expanded="false">Menu</button>
+  <a class="topbar-title" href="#/">All-units test</a>
+  <button class="theme-btn" data-theme-toggle aria-label="Switch colour theme">Theme</button>
+</header>
+
+<div class="shell">
+  <nav class="sidebar" id="sidebar" aria-label="Study guide">
+    <a class="brand" href="#/">
+      <span class="brand-course">SBI4U</span>
+      <span class="brand-title">All-units test</span>
+    </a>
+    <ul class="nav">
+      <li><a href="#/" data-route="quiz">All-units test</a></li>
+      <li class="nav-group"><span class="nav-label">Study a unit</span><ul>
+        <li><a href="../biochem/">Unit 1: Biochemistry</a></li>
+        <li><a href="../metabolism/">Unit 2: Metabolic Processes</a></li>
+      </ul></li>
+    </ul>
+    <div class="depth-box">
+      <span class="nav-label" id="depthLabel">How much to show</span>
+      <div class="depth" role="group" aria-labelledby="depthLabel">
+        <button data-depth="essential">Essential</button>
+        <button data-depth="likely">+ Likely</button>
+        <button data-depth="extra">Everything</button>
+      </div>
+      <p class="depth-hint" id="depthHint"></p>
+    </div>
+    <div class="sidebar-foot">
+      <button class="theme-btn wide" data-theme-toggle>Switch theme</button>
+      <a class="back-hub" href="../">All SBI4U units</a>
+    </div>
+  </nav>
+  <div class="scrim" id="scrim" hidden></div>
+
+  <main id="main" tabindex="-1">
+    <div id="view"></div>
+    <noscript><p class="noscript">This study guide needs JavaScript to show its lessons and quizzes.</p></noscript>
+  </main>
+</div>
+
+<script>window.UNIT_KEY = 'all';</script>
+<script src="../biochem/data/unit.js?v=1792108936"></script>
+<script src="../metabolism/data/unit.js?v=1792108936"></script>
+<script>
+  window.ALLQ = [];
+  function stashUnit(u) {
+    [window.QUIZ, window.QUIZ_APPLIED, window.DRILL].forEach(function (a) {
+      (a || []).forEach(function (q) {
+        var c = {}; for (var k in q) c[k] = q[k];
+        c.id = u + ':' + q.id; c.unit = u; if (c.lesson === 'mix') c.lesson = 'mix-' + u;
+        window.ALLQ.push(c);
+      });
+    });
+    window.QUIZ = window.QUIZ_APPLIED = window.DRILL = undefined;
+  }
+</script>
+<script src="../biochem/data/quiz.js?v=1792108936"></script>
+<script src="../biochem/data/quiz-applied.js?v=1792108936"></script>
+<script>stashUnit('biochem');</script>
+<script src="../metabolism/data/quiz.js?v=1792108936"></script>
+<script src="../metabolism/data/quiz-applied.js?v=1792108936"></script>
+<script src="../metabolism/data/drill.js?v=1792108936"></script>
+<script>stashUnit('metabolism');</script>
+<script src="../assets/app.js?v=1792108936"></script>
+</body>
+</html>

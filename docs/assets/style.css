@@ -353,3 +353,45 @@ h3 .tier-badge { margin-left: 6px; }
   figure.diagram figcaption { padding: 0 16px; }
   .fig-scroll { padding: 0 16px; }
 }
+
+/* ---------- shared colour aliases + generic stages (Unit 1) ---------- */
+:root { --blue: var(--etc); --blue-soft: var(--etc-soft); --teal: var(--link); --teal-soft: var(--link-soft); --amber: var(--glyco); --amber-soft: var(--glyco-soft); --magenta: var(--krebs); --magenta-soft: var(--krebs-soft); --red: var(--proton); --red-soft: var(--proton-soft); }
+[data-stage="c1"] { --accent: var(--etc); --accent-soft: var(--etc-soft); }
+[data-stage="c2"] { --accent: var(--link); --accent-soft: var(--link-soft); }
+[data-stage="c3"] { --accent: var(--glyco); --accent-soft: var(--glyco-soft); }
+[data-stage="c4"] { --accent: var(--krebs); --accent-soft: var(--krebs-soft); }
+[data-stage="c5"] { --accent: var(--proton); --accent-soft: var(--proton-soft); }
+[data-stage="c6"] { --accent: var(--ink-2); --accent-soft: var(--surface-2); }
+
+/* ---------- continuous pages ---------- */
+:root { --topbar-h: 0px; }
+@media (max-width: 820px) { :root { --topbar-h: 53px; } }
+.tabs { position: sticky; top: var(--topbar-h); z-index: 20; background: var(--bg); }
+.lesson-body.pages { perspective: 1600px; }
+.lesson-body.pages > .page {
+  background: var(--surface); border: 1px solid var(--line); border-radius: 16px;
+  padding: 4px clamp(18px, 4vw, 40px) 14px; margin: 18px 0 26px; position: relative;
+  scroll-margin-top: calc(var(--topbar-h) + 56px); transform-origin: 50% 0; backface-visibility: hidden;
+}
+.lesson-body.pages > .page > h3:first-child, .lesson-body.pages > .page > :first-child { margin-top: .9em; }
+.page-no { text-align: right; font-family: var(--display); font-size: 12.5px; color: var(--ink-2); margin: 10px 0 0; }
+.page-wait { opacity: 0; transform: rotateX(-58deg) translateY(28px); }
+.page-in { animation: page-flip .8s cubic-bezier(.18, .74, .26, 1) both; }
+@keyframes page-flip {
+  0% { opacity: 0; transform: rotateX(-58deg) translateY(28px); box-shadow: 0 34px 46px -28px rgba(0, 0, 0, .45); }
+  45% { opacity: 1; }
+  100% { opacity: 1; transform: none; box-shadow: 0 0 0 0 rgba(0, 0, 0, 0); }
+}
+@media (max-width: 560px) { .lesson-body.pages > .page { padding: 2px 16px 12px; border-radius: 12px; margin: 12px -4px 20px; } }
+
+/* ---------- quiz extras ---------- */
+.chip-group { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; font-family: var(--display); font-weight: 650; font-size: 14.5px; margin: 14px 0 0; }
+.linkish { border: 0; background: none; padding: 0; color: var(--etc); font-family: var(--display); font-size: 13.5px; cursor: pointer; text-decoration: underline; text-underline-offset: 3px; }
+.opt.chosen { border-color: var(--ink); background: var(--surface-2); }
+.opt.chosen .k { color: var(--ink); }
+
+@media print {
+  .page-wait { opacity: 1 !important; transform: none !important; }
+  .lesson-body.pages > .page { border: 0; padding: 0; margin: 0 0 18px; }
+  .page-no, .tabs { display: none !important; }
+}

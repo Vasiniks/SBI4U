@@ -1,26 +1,32 @@
 (function () {
   'use strict';
 
+  var UNITS = window.UNITS || {};
+  var UNIT_KEY = window.UNIT_KEY || 'metabolism';
+  var ALL = UNIT_KEY === 'all';
+  var UNIT = UNITS[UNIT_KEY] || { key: UNIT_KEY, lessons: [] };
+  function unitList() { return Object.keys(UNITS).map(function (k) { return UNITS[k]; }).sort(function (a, b) { return a.order - b.order; }); }
+
   var LESSONS = (window.LESSONS || []).slice().sort(function (a, b) { return a.id.localeCompare(b.id); });
   var QA = window.QA || [];
-  var QUIZ = (window.QUIZ || []).concat(window.QUIZ_APPLIED || [], window.DRILL || []);
+  var QUIZ = ALL ? (window.ALLQ || []) : (window.QUIZ || []).concat(window.QUIZ_APPLIED || [], window.DRILL || []);
   var EXT = window.EXT || [];
   var EXTRA = (window.EXTRA || []).map(function (e, i) { return [e, i]; }).sort(function (a, b) { return a[0].lesson.localeCompare(b[0].lesson) || a[1] - b[1]; }).map(function (p) { return p[0]; });
   var VIS = window.VIS || {};
   var GLOSSARY = (window.GLOSSARY || []).slice().sort(function (a, b) { return a.term.localeCompare(b.term); });
 
-  var LESSON_META = {
-    '2.01': { title: 'Intro to Metabolism', stage: 'intro' },
-    '2.02': { title: 'Glycolysis', stage: 'glyco' },
-    '2.03': { title: 'Pyruvate Oxidation & Krebs', stage: 'krebs' },
-    '2.04': { title: 'Electron Transport Chain', stage: 'etc' },
-    '2.05': { title: 'Regulation', stage: 'reg' },
-    '2.06': { title: 'Lipid & Protein Catabolism', stage: 'cat' },
-    '2.07': { title: 'Fermentation', stage: 'ferm' },
-    'mix': { title: 'Whole unit', stage: 'etc' }
-  };
-  LESSONS.forEach(function (l) { LESSON_META[l.id] = { title: l.title, stage: l.stage }; });
-  var LESSON_IDS = ['2.01', '2.02', '2.03', '2.04', '2.05', '2.06', '2.07'];
+  var LESSON_META = { mix: { title: 'Whole unit', stage: 'c6' } };
+  var LESSON_IDS = [];
+  (ALL ? unitList() : [UNIT]).forEach(function (u) {
+    (u.lessons || []).forEach(function (l) { LESSON_META[l.id] = { title: l.title, stage: l.stage, unit: u.key }; LESSON_IDS.push(l.id); });
+    if (ALL) LESSON_META['mix-' + u.key] = { title: u.code + ' whole unit', stage: 'c6', unit: u.key };
+  });
+  LESSONS.forEach(function (l) { var m = LESSON_META[l.id] || (LESSON_META[l.id] = {}); m.title = l.title; m.stage = l.stage || m.stage; });
+  function mixIds() { return ALL ? unitList().map(function (u) { return 'mix-' + u.key; }) : ['mix']; }
+  function lessonHref(id) {
+    if (!ALL) return '#/lesson/' + id;
+    var u = UNITS[(LESSON_META[id] || {}).unit]; return u ? '../' + u.path + '/#/lesson/' + id : '#';
+  }
 
   var view = document.getElementById('view');
 
@@ -46,15 +52,17 @@
   var $ = function (sel, root) { return (root || document).querySelector(sel); };
   var $$ = function (sel, root) { return Array.prototype.slice.call((root || document).querySelectorAll(sel)); };
   function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
+  var PREFIX = 'sbi4u-' + (UNIT_KEY === 'metabolism' ? 'm' : UNIT_KEY) + '-';
   function store(key, val) {
     try {
-      if (val === undefined) { var v = localStorage.getItem('sbi4u-m-' + key); return v ? JSON.parse(v) : null; }
-      localStorage.setItem('sbi4u-m-' + key, JSON.stringify(val));
+      var k = (key === 'depth' ? 'sbi4u-' : PREFIX) + key;
+      if (val === undefined) { var v = localStorage.getItem(k); return v ? JSON.parse(v) : null; }
+      localStorage.setItem(k, JSON.stringify(val));
     } catch (e) { return null; }
   }
   function shuffle(a) { a = a.slice(); for (var i = a.length - 1; i > 0; i--) { var j = Math.floor(Math.random() * (i + 1)); var t = a[i]; a[i] = a[j]; a[j] = t; } return a; }
   function stageOf(id) { return (LESSON_META[id] || {}).stage || 'etc'; }
-  function lessonLabel(id) { return id === 'mix' ? 'Whole unit' : id + ' ' + (LESSON_META[id] ? LESSON_META[id].title : ''); }
+  function lessonLabel(id) { if (/^mix/.test(id)) return (LESSON_META[id] || {}).title || 'Whole unit'; return id + ' ' + (LESSON_META[id] ? LESSON_META[id].title : ''); }
   function setWide(on) { view.classList.toggle('wide', !!on); }
 
   /* ---------- theme ---------- */
@@ -86,7 +94,7 @@
   });
 
   /* ---------- nav ---------- */
-  $('#navLessons').innerHTML = LESSON_IDS.map(function (id) {
+  if ($('#navLessons')) $('#navLessons').innerHTML = LESSON_IDS.map(function (id) {
     return '<li><a href="#/lesson/' + id + '" data-route="lesson/' + id + '" data-stage="' + stageOf(id) + '"><span class="dot"></span><span class="num">' + id + '</span><span>' + esc(LESSON_META[id].title) + '</span></a></li>';
   }).join('');
 
@@ -109,7 +117,8 @@
     setSubnav(null);
     view.removeAttribute('data-stage');
     setWide(false);
-    if (!path) { renderHome(); markNav('home'); }
+    if (ALL) { renderQuizSetup(query); markNav('quiz'); }
+    else if (!path) { renderHome(); markNav('home'); }
     else if (seg[0] === 'cram') { renderCram(seg[1]); markNav('cram'); }
     else if (seg[0] === 'lesson') { renderLesson(seg[1], seg[2]); markNav('lesson/' + seg[1]); }
     else if (seg[0] === 'qa') { renderQA(query, seg[1]); markNav('qa'); }
@@ -119,7 +128,8 @@
     else if (seg[0] === 'glossary') { renderGlossary(); markNav('glossary'); }
     else { renderHome(); markNav('home'); }
     fitDiagrams();
-    if (keepScroll !== true) window.scrollTo(0, 0);
+    if (pendingScroll) { var ps = pendingScroll; pendingScroll = null; ps.classList.remove('page-wait'); ps.classList.add('page-in'); ps.scrollIntoView({ block: 'start' }); }
+    else if (keepScroll !== true) window.scrollTo(0, 0);
     var h1 = view.querySelector('h1, h2');
     document.title = (h1 ? h1.textContent + ' · ' : '') + 'SBI4U Metabolic Processes';
   }
@@ -141,14 +151,14 @@
       text: 'NADH and FADH<sub>2</sub> hand their electrons down the chain to oxygen. The energy pumps H<sup>+</sup> into the intermembrane space; H<sup>+</sup> flowing back through ATP synthase makes about 34 more ATP (10 × 3 + 2 × 2).' }
   ];
 
-  function renderHome() {
-    var lessonCards = LESSON_IDS.map(function (id) {
-      var l = LESSONS.filter(function (x) { return x.id === id; })[0];
-      return '<a class="row-link" data-stage="' + stageOf(id) + '" href="#/lesson/' + id + '"><span class="rl-num">' + id + '</span><span class="rl-body"><b>' + esc(LESSON_META[id].title) + '</b>' +
-        (l && l.summary ? '<span>' + l.summary + '</span>' : '') + '</span></a>';
-    }).join('');
-    view.innerHTML =
-      '<section class="hero">' +
+  function heroHTML() {
+    if (UNIT.key !== 'metabolism') {
+      return '<section class="hero"><p class="hero-course">SBI4U · ' + esc(UNIT.code || '') + ' study guide</p>' +
+        '<h1>' + (UNIT.headline || esc(UNIT.title || '')) + '</h1>' +
+        (UNIT.lede ? '<p class="lede">' + UNIT.lede + '</p>' : '') +
+        (VIS.overview ? '<figure class="map">' + VIS.overview + '</figure>' : '') + '</section>';
+    }
+    return '<section class="hero">' +
         '<p class="hero-course">SBI4U · Unit 2 study guide</p>' +
         '<h1>Follow one glucose all the way to 38 ATP.</h1>' +
         '<p class="lede">Every lesson from class in full detail, every review question answered, a practice bank to test yourself, and extra content the slides skipped.</p>' +
@@ -167,7 +177,16 @@
           '</div>' +
           '<div class="journey-detail" id="journeyDetail"><h3>Tap a stage to follow the glucose</h3><p class="muted">The counters add up what one glucose has produced by the end of each stage, using the class values (NADH ≈ 3 ATP, FADH<sub>2</sub> ≈ 2 ATP).</p></div>' +
         '</div>' +
-      '</section>' +
+      '</section>';
+  }
+  function renderHome() {
+    var lessonCards = LESSON_IDS.map(function (id) {
+      var l = LESSONS.filter(function (x) { return x.id === id; })[0];
+      return '<a class="row-link" data-stage="' + stageOf(id) + '" href="#/lesson/' + id + '"><span class="rl-num">' + id + '</span><span class="rl-body"><b>' + esc(LESSON_META[id].title) + '</b>' +
+        (l && l.summary ? '<span>' + l.summary + '</span>' : '') + '</span></a>';
+    }).join('');
+    view.innerHTML =
+      heroHTML() +
       '<h2>Three levels of depth</h2>' +
       '<div class="tier-explain">' +
         '<div>' + tierBadge('essential') + '<p>Must-know for the test: every name, function, location, yield, regulator and inhibitor.</p></div>' +
@@ -181,6 +200,7 @@
         '<a href="#/qa"><b>Class questions &amp; answers</b><span>' + countQA() + ' questions from the slides, worksheets, review and the Seven Deaths case, with model answers.</span></a>' +
         '<a href="#/quiz"><b>Practice quiz</b><span>' + QUIZ.length + ' multiple-choice and true/false questions with explanations. Filter by lesson.</span></a>' +
         '<a href="#/apply"><b>Apply &amp; extend</b><span>' + EXT.length + ' application and thinking questions with hints and full answers.</span></a>' +
+        '<a href="../test/"><b>All-units test</b><span>Mixed practice from every unit, with an exam-style option that only shows answers at the end.</span></a>' +
         '<a href="#/beyond"><b>Beyond the slides</b><span>' + EXTRA.length + ' topics that go past what the slides covered, marked by how likely they are to come up.</span></a>' +
       '</div>';
     var running = { atp: 0, nadh: 0, fadh: 0, co2: 0 };
@@ -266,6 +286,58 @@
     var f = stepVisible(secs, -1, 1); return f > -1 ? f : i;
   }
 
+  /* ---------- continuous pages with a flip-in ---------- */
+  var pageObserver = null, spyObserver = null, pendingScroll = null;
+  var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function mountPages(art, secs, base, want) {
+    if (pageObserver) pageObserver.disconnect();
+    if (spyObserver) spyObserver.disconnect();
+    var io = 'IntersectionObserver' in window;
+    secs.forEach(function (sec, k) {
+      sec.classList.add('page');
+      sec.id = 'page-' + k;
+      sec.insertAdjacentHTML('beforeend', '<p class="page-no">Page ' + (k + 1) + ' of ' + secs.length + '</p>');
+      if (io && !reduceMotion) sec.classList.add('page-wait');
+      art.appendChild(sec);
+    });
+    if (io && !reduceMotion) {
+      pageObserver = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (!e.isIntersecting) return;
+          e.target.classList.remove('page-wait'); e.target.classList.add('page-in');
+          pageObserver.unobserve(e.target);
+        });
+      }, { rootMargin: '0px 0px -6% 0px', threshold: 0.01 });
+      secs.forEach(function (sec) { pageObserver.observe(sec); });
+    }
+    if (io) {
+      spyObserver = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) { if (e.isIntersecting) setCurrentPage(+e.target.id.slice(5), base); });
+      }, { rootMargin: '-30% 0px -65% 0px' });
+      secs.forEach(function (sec) { spyObserver.observe(sec); });
+    }
+    function onJump(ev) {
+      var a = ev.target.closest('a'); if (!a) return;
+      var href = a.getAttribute('href') || '';
+      if (href.indexOf(base + '/') !== 0) return;
+      ev.preventDefault(); closeMenu();
+      var el = document.getElementById('page-' + href.slice(base.length + 1));
+      if (!el) return;
+      el.classList.remove('page-wait'); el.classList.add('page-in');
+      el.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', block: 'start' });
+    }
+    $('.tabs', view).addEventListener('click', onJump);
+    var sn = $('.subnav'); if (sn) sn.addEventListener('click', onJump);
+    var w = parseInt(want, 10);
+    if (w > 0 && secs[w]) { pendingScroll = secs[w]; setCurrentPage(w, base); }
+  }
+  function setCurrentPage(k, base) {
+    $$('.tabs a', view).forEach(function (a, i) { if (i === k) a.setAttribute('aria-current', 'page'); else a.removeAttribute('aria-current'); });
+    $$('.subnav a').forEach(function (a, i) { if (i === k) a.setAttribute('aria-current', 'true'); else a.removeAttribute('aria-current'); });
+    centerActiveTab();
+    try { history.replaceState(null, '', base + '/' + k); } catch (e) {}
+  }
+
   /* ---------- lesson ---------- */
   function renderLesson(id, want) {
     var l = LESSONS.filter(function (x) { return x.id === id; })[0];
@@ -274,31 +346,26 @@
     var idx = LESSON_IDS.indexOf(id);
     var prevL = LESSON_IDS[idx - 1], nextL = LESSON_IDS[idx + 1];
     var nQ = QUIZ.filter(function (q) { return q.lesson === id; }).length;
-    var S = sectionsOf(l.html), secs = S.secs, i = pickSection(secs, want);
-    var first = i === stepVisible(secs, -1, 1);
-    var tabs = secs.map(function (sec, k) { return { href: '#/lesson/' + id + '/' + k, label: esc(secTitle(sec)), tier: secTier(sec), current: k === i }; });
-    var p = stepVisible(secs, i, -1), n = stepVisible(secs, i, 1);
+    var base = '#/lesson/' + id;
+    var S = sectionsOf(l.html), secs = S.secs;
+    S.lead.slice().reverse().forEach(function (c) { secs[0].insertBefore(c, secs[0].firstChild); });
+    var tabs = secs.map(function (sec, k) { return { href: base + '/' + k, label: esc(secTitle(sec)), tier: secTier(sec), current: k === 0 }; });
     view.innerHTML =
       '<header class="lesson-head">' +
-        '<div class="lesson-kicker"><span>Lesson ' + l.id + '</span>' + (l.where ? '<span class="pill">' + esc(l.where) + '</span>' : '') + '</div>' +
+        '<div class="lesson-kicker"><span>Lesson ' + l.id + '</span>' + (l.where ? '<span class="pill">' + esc(l.where) + '</span>' : '') + '<span>' + secs.length + ' pages</span></div>' +
         '<h1>' + esc(l.title) + '</h1>' +
-        (first && l.summary ? '<p class="lede">' + l.summary + '</p>' : '') +
-        (first && l.objectives && l.objectives.length ? '<div class="objectives"><p>By the end of this lesson you can</p><ul>' + l.objectives.map(function (o) { return '<li>' + o + '</li>'; }).join('') + '</ul></div>' : '') +
+        (l.summary ? '<p class="lede">' + l.summary + '</p>' : '') +
+        (l.objectives && l.objectives.length ? '<div class="objectives"><p>By the end of this lesson you can</p><ul>' + l.objectives.map(function (o) { return '<li>' + o + '</li>'; }).join('') + '</ul></div>' : '') +
       '</header>' +
-      tabStrip(tabs, 'Lesson sections') +
-      '<article class="lesson-body"></article>' +
-      (n === -1 ? '<div class="practice-cta"><p>Ready to test ' + esc(l.title) + '?</p><span><a class="btn" href="#/quiz?lesson=' + id + '">Practice ' + nQ + ' questions</a> <a class="btn ghost" href="#/qa?lesson=' + id + '">Class Q&amp;A</a></span></div>' : '') +
-      '<nav class="pager" aria-label="Sections">' +
-        (p > -1 ? '<a class="prev" href="#/lesson/' + id + '/' + p + '"><small>Previous section</small>' + esc(secTitle(secs[p])) + '</a>'
-          : prevL ? '<a class="prev" href="#/lesson/' + prevL + '"><small>Previous lesson</small>' + prevL + ' ' + esc(LESSON_META[prevL].title) + '</a>' : '') +
-        (n > -1 ? '<a class="next" href="#/lesson/' + id + '/' + n + '"><small>Next section</small>' + esc(secTitle(secs[n])) + '</a>'
-          : nextL ? '<a class="next" href="#/lesson/' + nextL + '"><small>Next lesson</small>' + nextL + ' ' + esc(LESSON_META[nextL].title) + '</a>' : '') +
+      tabStrip(tabs, 'Lesson pages') +
+      '<article class="lesson-body pages"></article>' +
+      '<div class="practice-cta"><p>Ready to test ' + esc(l.title) + '?</p><span><a class="btn" href="#/quiz?lesson=' + id + '">Practice ' + nQ + ' questions</a> <a class="btn ghost" href="#/qa?lesson=' + id + '">Class Q&amp;A</a></span></div>' +
+      '<nav class="pager" aria-label="Lessons">' +
+        (prevL ? '<a class="prev" href="#/lesson/' + prevL + '"><small>Previous lesson</small>' + prevL + ' ' + esc(LESSON_META[prevL].title) + '</a>' : '') +
+        (nextL ? '<a class="next" href="#/lesson/' + nextL + '"><small>Next lesson</small>' + nextL + ' ' + esc(LESSON_META[nextL].title) + '</a>' : '') +
       '</nav>';
-    var art = $('.lesson-body', view);
-    if (first) S.lead.forEach(function (c) { art.appendChild(c); });
-    art.appendChild(secs[i]);
     setSubnav('lesson/' + id, tabs);
-    centerActiveTab();
+    mountPages($('.lesson-body', view), secs, base, want);
   }
 
   // Group each h3 and the blocks after it into a tier section; flag lower-tier blocks inside.
@@ -358,30 +425,22 @@
         secs.unshift(big);
       }
     });
-    var secs = S.secs, all = want === 'all', i = all ? -1 : pickSection(secs, want);
-    var tabs = secs.map(function (sec, k) { return { href: '#/cram/' + k, label: esc(secTitle(sec)), current: k === i }; });
-    tabs.push({ href: '#/cram/all', label: 'Whole sheet', current: all });
-    var p = all ? -1 : stepVisible(secs, i, -1), n = all ? -1 : stepVisible(secs, i, 1);
+    var secs = S.secs, base = '#/cram';
+    var tabs = secs.map(function (sec, k) { return { href: base + '/' + k, label: esc(secTitle(sec)), current: k === 0 }; });
     view.innerHTML = '<header class="lesson-head"><div class="lesson-kicker">' + tierBadge('essential') + '<span>The whole unit, essentials only</span></div>' +
       '<h1>Cram mode</h1>' +
-      '<p class="lede">Every name, function, location, yield, regulator and inhibitor in the unit, one topic per tab. Finish with the cram quiz.</p>' +
-      '<div class="toolbar"><button class="btn" id="cramQuiz"' + (ess ? '' : ' disabled') + '>Cram quiz: ' + Math.min(25, ess) + ' essential questions</button><button class="btn ghost" id="cramPrint">Print the whole sheet</button></div></header>' +
+      '<p class="lede">Every name, function, structure and key fact in the unit. Scroll straight through, then take the cram quiz.</p>' +
+      '<div class="toolbar"><button class="btn" id="cramQuiz"' + (ess ? '' : ' disabled') + '>Cram quiz: ' + Math.min(25, ess) + ' essential questions</button><button class="btn ghost" id="cramPrint">Print the cram sheet</button></div></header>' +
       tabStrip(tabs, 'Cram topics') +
-      '<article class="lesson-body cram"></article>' +
-      (all ? '' : '<nav class="pager" aria-label="Topics">' +
-        (p > -1 ? '<a class="prev" href="#/cram/' + p + '"><small>Previous</small>' + esc(secTitle(secs[p])) + '</a>' : '') +
-        (n > -1 ? '<a class="next" href="#/cram/' + n + '"><small>Next</small>' + esc(secTitle(secs[n])) + '</a>' : '<a class="next" href="#/cram/all"><small>Next</small>Whole sheet</a>') + '</nav>');
-    var art = $('.lesson-body', view);
-    (all ? secs : [secs[i]]).forEach(function (sec) { art.appendChild(sec); });
+      '<article class="lesson-body pages cram"></article>';
     setSubnav('cram', tabs);
-    centerActiveTab();
+    mountPages($('.lesson-body', view), secs, base, want);
     $('#cramQuiz').addEventListener('click', function () {
       startQuiz(shuffle(QUIZ.filter(function (q) { return tierOf(q) === 'essential'; })).slice(0, 25));
     });
     $('#cramPrint').addEventListener('click', function () {
-      if (all) { window.print(); return; }
-      location.hash = '#/cram/all';
-      setTimeout(function () { window.print(); }, 300);
+      $$('.page-wait', view).forEach(function (p) { p.classList.remove('page-wait'); });
+      window.print();
     });
   }
 
@@ -425,22 +484,31 @@
   function renderQuizSetup(query) {
     var st = stats();
     var sel = query.lesson ? [query.lesson] : [];
-    var type = 'both', count = 20, kind = query.kind || 'both';
-    var byLesson = LESSON_IDS.concat(['mix']).map(function (id) {
+    var type = 'both', count = 20, kind = query.kind || 'both', exam = ALL;
+    var byLesson = LESSON_IDS.concat(mixIds()).map(function (id) {
       var qs = QUIZ.filter(function (q) { return q.lesson === id; });
       var seen = 0, right = 0;
       qs.forEach(function (q) { var s = st[q.id]; if (s) { seen++; if (s.last) right++; } });
       return { id: id, total: qs.length, seen: seen, right: right };
     });
     var missedIds = Object.keys(st).filter(function (k) { return st[k] && st[k].last === false; });
-    view.innerHTML = '<h1>Practice quiz</h1>' +
-      '<p class="lede">' + QUIZ.length + ' multiple-choice and true/false questions. You get the answer and an explanation right after each one.</p>' +
+    var groups = ALL ? unitList().map(function (u) { return { label: u.code + ': ' + u.title, ids: u.lessons.map(function (l) { return l.id; }).concat(['mix-' + u.key]) }; })
+      : [{ label: '', ids: LESSON_IDS.concat(['mix']) }];
+    view.innerHTML = '<h1>' + (ALL ? 'All-units test' : 'Practice quiz') + '</h1>' +
+      '<p class="lede">' + QUIZ.length + ' multiple-choice and true/false questions' + (ALL ? ' from every unit. Pick units or lessons, or leave them all off for a full mixed test.' : '. You get the answer and an explanation right after each one.') + '</p>' +
       '<div class="quiz-panel">' +
-        '<span class="field-label">Lessons</span>' +
-        '<div class="chips" id="qLessons">' + LESSON_IDS.concat(['mix']).map(function (id) {
-          return '<button class="fchip" data-l="' + id + '" aria-pressed="' + (sel.indexOf(id) > -1) + '">' + (id === 'mix' ? 'Whole unit' : id + ' ' + esc(LESSON_META[id].title)) + '</button>';
+        '<span class="field-label">' + (ALL ? 'Units and lessons' : 'Lessons') + '</span>' +
+        '<div id="qLessons">' + groups.map(function (g, gi) {
+          return (g.label ? '<p class="chip-group"><span>' + esc(g.label) + '</span><button class="linkish" data-group="' + gi + '">Select all</button></p>' : '') +
+            '<div class="chips" data-group="' + gi + '">' + g.ids.map(function (id) {
+              var n = QUIZ.filter(function (q) { return q.lesson === id; }).length;
+              if (!n && ALL) return '';
+              return '<button class="fchip" data-l="' + id + '" aria-pressed="' + (sel.indexOf(id) > -1) + '">' + (/^mix/.test(id) ? 'Whole unit' : id + ' ' + esc(LESSON_META[id].title)) + '</button>';
+            }).join('') + '</div>';
         }).join('') + '</div>' +
-        '<p class="muted" style="font-size:14px;margin-top:-6px">Leave all unselected to use every lesson.</p>' +
+        '<p class="muted" style="font-size:14px;margin-top:-6px">Leave all unselected to use every ' + (ALL ? 'unit' : 'lesson') + '.</p>' +
+        '<span class="field-label">Feedback</span>' +
+        '<div class="chips" id="qExam"><button class="fchip" data-x="0" aria-pressed="' + !exam + '">After each question</button><button class="fchip" data-x="1" aria-pressed="' + exam + '">At the end (test conditions)</button></div>' +
         '<span class="field-label">Kind</span>' +
         '<div class="chips" id="qKind">' + [['both', 'Both'], ['knowledge', 'Knowledge: names, enzymes, facts'], ['applied', 'Applied: homework extensions, scenarios']].map(function (k) {
           var c = QUIZ.filter(function (q) { return k[0] === 'both' || kindOf(q) === k[0]; }).length;
@@ -457,27 +525,36 @@
       '</div>' +
       (Object.keys(st).length ? '<h3>Your progress</h3><div class="bars">' + byLesson.filter(function (b) { return b.total; }).map(function (b) {
         var pct = b.seen ? Math.round(100 * b.right / b.seen) : 0;
-        return '<div class="bar-row" data-stage="' + stageOf(b.id) + '"><span>' + (b.id === 'mix' ? 'Whole unit' : b.id + ' ' + esc(LESSON_META[b.id].title)) + '</span><span class="bar"><i style="width:' + pct + '%;background:var(--accent)"></i></span><span>' + (b.seen ? pct + '%' : '–') + '</span></div>';
+        return '<div class="bar-row" data-stage="' + stageOf(b.id) + '"><span>' + esc(lessonLabel(b.id)) + '</span><span class="bar"><i style="width:' + pct + '%;background:var(--accent)"></i></span><span>' + (b.seen ? pct + '%' : '–') + '</span></div>';
       }).join('') + '</div><p class="muted" style="font-size:14px">Based on your latest answer to each question you have seen. Saved in this browser only. <button class="btn ghost" id="qReset" style="padding:3px 10px;font-size:13px">Reset progress</button></p>' : '');
 
     $$('#qLessons .fchip', view).forEach(function (b) { b.addEventListener('click', function () { b.setAttribute('aria-pressed', String(b.getAttribute('aria-pressed') !== 'true')); }); });
     function single(groupSel, cb) { $$(groupSel + ' .fchip', view).forEach(function (b) { b.addEventListener('click', function () { $$(groupSel + ' .fchip', view).forEach(function (x) { x.setAttribute('aria-pressed', 'false'); }); b.setAttribute('aria-pressed', 'true'); cb(b); }); }); }
     single('#qType', function (b) { type = b.getAttribute('data-t'); });
     single('#qKind', function (b) { kind = b.getAttribute('data-k'); });
+    single('#qExam', function (b) { exam = b.getAttribute('data-x') === '1'; });
+    $$('#qLessons .linkish', view).forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var chips = $$('.chips[data-group="' + btn.getAttribute('data-group') + '"] .fchip', view);
+        var on = chips.some(function (c) { return c.getAttribute('aria-pressed') !== 'true'; });
+        chips.forEach(function (c) { c.setAttribute('aria-pressed', String(on)); });
+        btn.textContent = on ? 'Clear' : 'Select all';
+      });
+    });
     single('#qCount', function (b) { count = +b.getAttribute('data-c'); });
     $('#qStart').addEventListener('click', function () {
       var ls = $$('#qLessons .fchip[aria-pressed="true"]', view).map(function (b) { return b.getAttribute('data-l'); });
       var pool = QUIZ.filter(function (q) { return visible(tierOf(q)) && (kind === 'both' || kindOf(q) === kind) && (!ls.length || ls.indexOf(q.lesson) > -1) && (type === 'both' || q.type === type); });
       pool = shuffle(pool); if (count) pool = pool.slice(0, count);
-      startQuiz(pool);
+      startQuiz(pool, exam);
     });
     var m = $('#qMissed'); if (m) m.addEventListener('click', function () { startQuiz(shuffle(QUIZ.filter(function (q) { return missedIds.indexOf(q.id) > -1; }))); });
     var r = $('#qReset'); if (r) r.addEventListener('click', function () { store('stats', {}); renderQuizSetup(query); });
   }
 
-  function startQuiz(pool) {
+  function startQuiz(pool, exam) {
     if (!pool.length) { view.insertAdjacentHTML('beforeend', '<p class="empty">No questions match those filters. Pick another lesson or type.</p>'); return; }
-    quiz = { pool: pool, i: 0, answers: [] };
+    quiz = { pool: pool, i: 0, answers: [], exam: !!exam };
     showQuestion();
   }
 
@@ -507,6 +584,11 @@
     var ok = i === correctIdx;
     quiz.answers[quiz.i] = i;
     var st = stats(); var s = st[q.id] || { n: 0, c: 0 }; s.n++; if (ok) s.c++; s.last = ok; st[q.id] = s; store('stats', st);
+    if (quiz.exam) {
+      $$('.opt', view).forEach(function (b, j) { b.disabled = true; if (j === i) b.classList.add('chosen'); });
+      var nx = $('#qNext'); nx.hidden = false; nx.focus();
+      return;
+    }
     $$('.opt', view).forEach(function (b, j) { b.disabled = true; if (j === correctIdx) b.classList.add('right'); else if (j === i) b.classList.add('wrong'); });
     $('#fb').innerHTML = '<div class="feedback ' + (ok ? 'ok' : 'no') + '"><p class="verdict">' + (ok ? 'Correct' : 'Not quite') + '</p><p>' + (q.explain || '') + '</p></div>';
     var n = $('#qNext'); n.hidden = false; n.focus();
@@ -530,14 +612,15 @@
       '<p class="score-big">' + right + ' / ' + done + '</p><p class="muted">' + pct + '% correct' + (done < quiz.pool.length ? ' (ended early)' : '') + '</p>' +
       '<div class="bars">' + Object.keys(per).sort().map(function (id) {
         var p = Math.round(100 * per[id].c / per[id].n);
-        return '<div class="bar-row" data-stage="' + stageOf(id) + '"><span>' + esc(id === 'mix' ? 'Whole unit' : id + ' ' + LESSON_META[id].title) + '</span><span class="bar"><i style="width:' + p + '%;background:var(--accent)"></i></span><span>' + per[id].c + '/' + per[id].n + '</span></div>';
+        return '<div class="bar-row" data-stage="' + stageOf(id) + '"><span>' + esc(lessonLabel(id)) + '</span><span class="bar"><i style="width:' + p + '%;background:var(--accent)"></i></span><span>' + per[id].c + '/' + per[id].n + '</span></div>';
       }).join('') + '</div>' +
-      '<div class="toolbar">' + (wrong.length ? '<button class="btn" id="rRetry">Retry the ' + wrong.length + ' I missed</button>' : '') + '<a class="btn ghost" href="#/quiz">New quiz</a></div>' +
+      '<div class="toolbar">' + (wrong.length ? '<button class="btn" id="rRetry">Retry the ' + wrong.length + ' I missed</button>' : '') + '<a class="btn ghost" href="' + (ALL ? '#/' : '#/quiz') + '" id="rNew">New ' + (ALL ? 'test' : 'quiz') + '</a></div>' +
       '</div>' +
       (wrong.length ? '<h3>Review what you missed</h3>' + wrong.map(function (w) {
-        return '<div class="review-item" data-stage="' + stageOf(w.q.lesson) + '"><p class="q-text">' + w.q.q + '</p><p class="your">You said: ' + label(w.q, w.a) + '</p><p class="correct">Answer: ' + label(w.q, w.c) + '</p><p>' + (w.q.explain || '') + '</p><p><a href="#/lesson/' + w.q.lesson + '">' + (w.q.lesson === 'mix' ? '' : 'Review lesson ' + w.q.lesson) + '</a></p></div>';
+        return '<div class="review-item" data-stage="' + stageOf(w.q.lesson) + '"><p class="q-text">' + w.q.q + '</p><p class="your">You said: ' + label(w.q, w.a) + '</p><p class="correct">Answer: ' + label(w.q, w.c) + '</p><p>' + (w.q.explain || '') + '</p><p>' + (/^mix/.test(w.q.lesson) ? '' : '<a href="' + lessonHref(w.q.lesson) + '">Review lesson ' + w.q.lesson + '</a>') + '</p></div>';
       }).join('') : '');
-    var rr = $('#rRetry'); if (rr) rr.addEventListener('click', function () { startQuiz(shuffle(wrong.map(function (w) { return w.q; }))); });
+    var rr = $('#rRetry'); if (rr) rr.addEventListener('click', function () { startQuiz(shuffle(wrong.map(function (w) { return w.q; })), false); });
+    var rn = $('#rNew'); if (rn && ALL) rn.addEventListener('click', function (e) { e.preventDefault(); route(); });
     window.scrollTo(0, 0);
   }
 
