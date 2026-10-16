@@ -72,7 +72,7 @@ window.QUIZ.push(
     answer: 2,
     explain: "Cohesion is water attracting water; adhesion is water attracting other polar or charged materials. Cohesion is what causes surface tension." },
 
-  { id: "q009", lesson: "1.01", type: "mcq", kind: "knowledge", tier: "essential", level: 2,
+  { id: "q009", lesson: "1.01", type: "mcq", kind: "knowledge", tier: "likely", level: 2,
     q: "Why does water have a high specific heat capacity?",
     options: [
       "Water molecules are joined to one another by strong ionic bonds that resist heating",
@@ -83,7 +83,7 @@ window.QUIZ.push(
     answer: 1,
     explain: "So much energy goes into disrupting hydrogen bonds that water's temperature changes slowly. This helps the body hold a steady 37°C." },
 
-  { id: "q010", lesson: "1.01", type: "mcq", kind: "knowledge", tier: "essential", level: 1,
+  { id: "q010", lesson: "1.01", type: "mcq", kind: "knowledge", tier: "likely", level: 1,
     q: "Humans cool off by sweating and dogs by panting. Which property of water makes this work?",
     options: [
       "Ice being less dense than liquid water at 0°C",
@@ -239,12 +239,12 @@ window.QUIZ.push(
     answer: false,
     explain: "Lipids are the one macromolecule class that is <em>not</em> a polymer. A triglyceride is just glycerol plus 3 fatty acids; it cannot keep adding repeating units." },
 
-  { id: "q031", lesson: "1.02", type: "tf", kind: "knowledge", tier: "essential", level: 1,
+  { id: "q031", lesson: "1.02", type: "tf", kind: "knowledge", tier: "likely", level: 1,
     q: "Every compound that contains carbon is classified as organic, with no exceptions.",
     answer: false,
     explain: "Organic compounds contain carbon, but there are a few exceptions, such as CO<sub>2</sub> and CaCO<sub>3</sub>, which are classed as inorganic." },
 
-  { id: "q032", lesson: "1.02", type: "tf", kind: "knowledge", tier: "essential", level: 2,
+  { id: "q032", lesson: "1.02", type: "tf", kind: "knowledge", tier: "likely", level: 2,
     q: "Large hydrocarbons tend to be nonpolar because their C–H bonds have a low electronegativity difference and are arranged symmetrically.",
     answer: true,
     explain: "Molecules made only of carbon and hydrogen are hydrocarbons. Their bonds share electrons almost equally, so long hydrocarbon chains (like fatty acid tails) are nonpolar and hydrophobic." }
@@ -281,7 +281,7 @@ window.QUIZ.push(
     answer: 0,
     explain: "Lactose (milk sugar) is galactose joined to glucose by a glycosidic linkage. The enzyme lactase hydrolyzes it back into the two monosaccharides." },
 
-  { id: "q038", lesson: "1.03", type: "mcq", kind: "knowledge", tier: "essential", level: 1,
+  { id: "q038", lesson: "1.03", type: "mcq", kind: "knowledge", tier: "likely", level: 1,
     q: "Which disaccharide is found in grains, is used to make beer, and is made of two glucose units?",
     options: ["Sucrose", "Lactose", "Maltose", "Galactose"],
     answer: 2,
@@ -342,7 +342,7 @@ window.QUIZ.push(
     answer: 3,
     explain: "Starch (plants) and glycogen (animals) store energy. Cellulose (plant cell walls) and chitin (arthropod exoskeletons, fungal cell walls) give structural support." },
 
-  { id: "q047", lesson: "1.03", type: "tf", kind: "knowledge", tier: "essential", level: 1,
+  { id: "q047", lesson: "1.03", type: "tf", kind: "knowledge", tier: "likely", level: 1,
     q: "Monosaccharides with 5 or more carbons are linear when dry but form a ring when dissolved in water.",
     answer: true,
     explain: "That is why glucose is usually drawn as a ring with carbons numbered 1 to 6. You should be able to draw α-glucose and number its carbons." },
@@ -364,7 +364,7 @@ window.QUIZ.push(
     explain: "Carbohydrates provide short-term energy, and carbohydrate chains on the cell surface act as markers for cell identification and communication. Structural polysaccharides such as cellulose and chitin also give support." },
 
   /* ---------------- 1.04 Lipids ---------------- */
-  { id: "q050", lesson: "1.04", type: "mcq", kind: "knowledge", tier: "essential", level: 2,
+  { id: "q050", lesson: "1.04", type: "mcq", kind: "knowledge", tier: "likely", level: 2,
     q: "Why are fats <strong>nonpolar</strong>?",
     options: [
       "They contain no oxygen atoms anywhere in the molecule",
@@ -474,7 +474,7 @@ window.QUIZ.push(
     answer: 3,
     explain: "Waxes are simple lipids that are very hydrophobic, so they waterproof and protect. Examples are earwax and the plant cuticle, which prevents water loss." },
 
-  { id: "q062", lesson: "1.04", type: "tf", kind: "knowledge", tier: "likely", level: 1,
+  { id: "q062", lesson: "1.04", type: "tf", kind: "knowledge", tier: "extra", level: 1,
     q: "Fat stores about 9 kcal of energy per gram, more than twice the 4 kcal per gram of carbohydrates.",
     answer: true,
     explain: "That is why lipids are used for long-term energy storage. Fats also insulate (subcutaneous fat), cushion organs, and help absorb the fat-soluble vitamins A, D, E and K." },
@@ -484,7 +484,7 @@ window.QUIZ.push(
     options: [
       "Short-term energy, cell surface markers and cell identification",
       "Speeding up reactions, movement and transport of substances",
-      "Long-term energy storage, insulation, cell membranes and cell signalling",
+      "Long-term energy storage, insulation, membranes and signalling",
       "Storing hereditary information and coding for proteins"
     ],
     answer: 2,
@@ -776,7 +776,7 @@ window.QUIZ.push(
     answer: 0,
     explain: "The substrate binds the active site to form an enzyme-substrate complex, and the active site undergoes a conformational change to better hold it. Enzymes are still very specific to their substrates." },
 
-  { id: "q104", lesson: "1.07", type: "mcq", kind: "knowledge", tier: "essential", level: 2,
+  { id: "q104", lesson: "1.07", type: "mcq", kind: "knowledge", tier: "likely", level: 2,
     q: "As substrate concentration rises, the reaction rate increases and then levels off (plateaus). Why does it level off?",
     options: [
       "The enzyme denatures when there is too much substrate",
@@ -835,7 +835,7 @@ window.QUIZ.push(
     q: "How does a <strong>non-competitive</strong> inhibitor work?",
     options: [
       "It binds the active site and competes with the substrate",
-      "It lowers the activation energy of the reaction",
+      "It lowers the activation energy of the reaction it controls",
       "It raises the amount of substrate available to the enzyme",
       "It binds an allosteric site, which changes the active site's shape"
     ],
@@ -1015,7 +1015,7 @@ window.QUIZ.push(
     answer: 2,
     explain: "In Tay-Sachs disease, lysosomes lack one digestive enzyme, so a lipid they should break down builds up in neurons and damages the nervous system. The slides pose the question; these details come from outside the slides." },
 
-  { id: "q136", lesson: "1.08", type: "mcq", kind: "knowledge", tier: "essential", level: 2,
+  { id: "q136", lesson: "1.08", type: "mcq", kind: "knowledge", tier: "likely", level: 2,
     q: "Which path does a protein that will be <strong>secreted</strong> from the cell follow?",
     options: [
       "Golgi → rough ER → lysosome → cell membrane",
@@ -1037,10 +1037,10 @@ window.QUIZ.push(
   { id: "q138", lesson: "1.09", type: "mcq", kind: "knowledge", tier: "essential", level: 1,
     q: "In the fluid mosaic model, what does <strong>fluid</strong> refer to?",
     options: [
-      "The membrane being made mostly of water molecules",
-      "The cytosol flowing freely through the membrane",
-      "Phospholipids and proteins moving sideways within the membrane",
-      "Proteins dissolving into the extracellular fluid"
+      "The membrane being made mostly of liquid water molecules",
+      "The cytosol flowing freely in and out through the membrane",
+      "Phospholipids and proteins drifting sideways in the membrane",
+      "Proteins dissolving out into the extracellular fluid"
     ],
     answer: 2,
     explain: "The components are not static: phospholipids and proteins drift laterally. Said in class: this flexibility lets the membrane take some damage without rupturing." },
@@ -1168,7 +1168,7 @@ window.QUIZ.push(
   { id: "q155", lesson: "1.10", type: "mcq", kind: "knowledge", tier: "essential", level: 1,
     q: "How do <strong>channel proteins</strong> differ from carrier proteins?",
     options: [
-      "Channels form water-filled pores for specific ions and do not change shape",
+      "Channels form water-filled pores and do not change shape",
       "Channels change shape each time they move a molecule across",
       "Channels always use ATP to move ions against their gradient",
       "Channels engulf particles and pinch them off in vesicles"
@@ -1201,9 +1201,9 @@ window.QUIZ.push(
   { id: "q158", lesson: "1.10", type: "mcq", kind: "knowledge", tier: "extra", level: 2,
     q: "What happens to a <strong>plant cell</strong> in a hypotonic solution?",
     options: [
-      "It bursts (lysis), exactly like an animal cell",
-      "Its membrane pulls away from the cell wall",
-      "It shrivels because water leaves its vacuole",
+      "It bursts (lysis), exactly like an animal cell would",
+      "Its membrane pulls away from the rigid cell wall",
+      "It shrivels because water leaves its central vacuole",
       "It swells and becomes turgid; the wall stops it bursting"
     ],
     answer: 3,
@@ -1241,7 +1241,7 @@ window.QUIZ.push(
     answer: false,
     explain: "Osmosis is the diffusion of <em>water</em> across a selectively permeable membrane, from an area of high water concentration to an area of lower water concentration." },
 
-  { id: "q164", lesson: "1.10", type: "tf", kind: "knowledge", tier: "essential", level: 1,
+  { id: "q164", lesson: "1.10", type: "tf", kind: "knowledge", tier: "likely", level: 1,
     q: "In an isotonic solution there is no net movement of water, but water molecules still cross the membrane in both directions.",
     answer: true,
     explain: "Isotonic means equal solute concentrations on both sides, so water enters and leaves at the same rate. No net movement does not mean no movement (said in class)." },
@@ -1266,4 +1266,88 @@ window.QUIZ.push(
     answer: true,
     explain: "Water leaves the central vacuole, the cell loses turgor, and the membrane shrinks away from the rigid wall. Plant cell outcomes go beyond the slides." }
 );
-/* @@END@@ */
+window.QUIZ.push(
+  /* ---------------- 1.11 Visualizing Biological Data ---------------- */
+  { id: "q169", lesson: "1.11", type: "mcq", kind: "knowledge", tier: "essential", level: 1,
+    q: "What is the <strong>independent variable</strong> in an experiment, and where is it plotted?",
+    options: [
+      "The variable that is measured; plotted on the x-axis",
+      "The variable you change; plotted on the x-axis",
+      "The variable you change; plotted on the y-axis",
+      "A variable kept the same in every trial; not plotted"
+    ],
+    answer: 1,
+    explain: "The independent variable is what you change (x-axis); the dependent variable is what is affected and measured (y-axis). Class example: water temperature (independent) vs. time for sugar to dissolve (dependent)." },
+
+  { id: "q170", lesson: "1.11", type: "mcq", kind: "knowledge", tier: "essential", level: 1,
+    q: "You want to compare the number of mitochondria in four different cell types. Which graph should you use?",
+    options: ["Bar graph", "Line graph", "Scatter plot", "Pie chart"],
+    answer: 0,
+    explain: "Bar graphs compare discrete, non-continuous categories side by side. Cell types are separate categories, not a continuous scale." },
+
+  { id: "q171", lesson: "1.11", type: "mcq", kind: "knowledge", tier: "essential", level: 1,
+    q: "Which graph best shows how the amount of product changes minute by minute during an enzyme reaction?",
+    options: ["Bar graph", "Scatter plot", "Line graph", "Pie chart"],
+    answer: 2,
+    explain: "Line graphs show continuous change over time, where the data follow a sequential order." },
+
+  { id: "q172", lesson: "1.11", type: "mcq", kind: "knowledge", tier: "essential", level: 1,
+    q: "Which graph shows whether two variables are related when the data points are not in a sequence, e.g., the height and mass of different students?",
+    options: ["Line graph", "Bar graph", "Pie chart", "Scatter plot"],
+    answer: 3,
+    explain: "A scatter plot shows a relationship (correlation) between two variables. The points are not joined in order; a trendline or trend curve shows the pattern." },
+
+  { id: "q173", lesson: "1.11", type: "tf", kind: "knowledge", tier: "essential", level: 1,
+    q: "On a scatter plot, a negative correlation means both variables increase together.",
+    answer: false,
+    explain: "Positive correlation: both increase together. Negative correlation: one increases while the other decreases. No correlation: randomly scattered dots with no pattern." },
+
+  { id: "q174", lesson: "1.11", type: "tf", kind: "knowledge", tier: "essential", level: 1,
+    q: "A graph title is written as 'dependent variable vs. independent variable' (y vs. x).",
+    answer: true,
+    explain: "The slides give the title format as y vs. x, e.g., 'Time to Dissolve vs. Water Temperature'." },
+
+  { id: "q175", lesson: "1.11", type: "tf", kind: "knowledge", tier: "likely", level: 2,
+    q: "On a scatter plot, the closer the points lie to the trendline, the stronger the relationship between the variables.",
+    answer: true,
+    explain: "The distance of the points from the trendline or trend curve shows the strength of the relationship. Widely spread points mean a weak relationship." },
+
+  /* ---------------- Mixed (across lessons) ---------------- */
+  { id: "q176", lesson: "mix", type: "mcq", kind: "knowledge", tier: "essential", level: 1,
+    q: "Which list matches the bonds <strong>glycosidic, ester, peptide, phosphodiester</strong> (in that order) to the macromolecules they hold together?",
+    options: [
+      "Carbohydrates, lipids (triglycerides), proteins, nucleic acids",
+      "Proteins, carbohydrates, nucleic acids, lipids (triglycerides)",
+      "Nucleic acids, proteins, lipids (triglycerides), carbohydrates",
+      "Lipids (triglycerides), nucleic acids, carbohydrates, proteins"
+    ],
+    answer: 0,
+    explain: "Glycosidic linkages join monosaccharides, ester bonds join fatty acids to glycerol, peptide bonds join amino acids, and phosphodiester linkages join nucleotides. All four form by dehydration synthesis and break by hydrolysis." },
+
+  { id: "q177", lesson: "mix", type: "mcq", kind: "knowledge", tier: "likely", level: 2,
+    q: "Which class of macromolecule contains <strong>both nitrogen and phosphorus</strong> in every one of its monomers?",
+    options: ["Proteins", "Carbohydrates", "Nucleic acids", "Triglycerides"],
+    answer: 2,
+    explain: "Every nucleotide has a nitrogenous base and a phosphate group. Every amino acid has nitrogen (amino group) but not phosphorus, and carbohydrates and triglycerides are made only of C, H and O." },
+
+  { id: "q178", lesson: "mix", type: "mcq", kind: "knowledge", tier: "extra", level: 2,
+    q: "Glucose dissolves freely in blood plasma, but lipids travel bound to proteins (lipoproteins). Why can't lipids simply dissolve?",
+    options: [
+      "They are highly polar and would react with the water in plasma",
+      "Their hydrocarbon chains are nonpolar and cannot H-bond with water",
+      "They are long polymers that are too large to dissolve",
+      "Plasma is mostly oil, so only polar molecules dissolve in it"
+    ],
+    answer: 1,
+    explain: "Glucose's many –OH groups hydrogen bond with water, so it dissolves. Lipids are mostly nonpolar C–H chains, so they are insoluble in water. Lipoproteins come from the homework answers, beyond the slides." },
+
+  { id: "q179", lesson: "mix", type: "tf", kind: "knowledge", tier: "likely", level: 2,
+    q: "Hydrogen bonds hold DNA base pairs together, stabilize protein secondary structure, and cause the cohesion of water.",
+    answer: true,
+    explain: "All three depend on hydrogen bonds: between bases on opposite DNA strands, between C=O and N–H groups along a polypeptide backbone (α-helices and β-sheets), and between neighbouring water molecules." },
+
+  { id: "q180", lesson: "mix", type: "tf", kind: "knowledge", tier: "essential", level: 1,
+    q: "Starch, glycogen and cellulose are all built from α-glucose.",
+    answer: false,
+    explain: "Starch and glycogen are made of α-glucose, but cellulose is made of β-glucose (β-1,4 linkages), which humans cannot digest." }
+);

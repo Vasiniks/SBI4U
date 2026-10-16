@@ -99,4 +99,129 @@ window.CRAM = `
 <tr><td>Hydrolysis</td><td>Covalent bond breaks, H<sub>2</sub>O is a <strong>reactant</strong>; catabolic</td><td>Disaccharide + H<sub>2</sub>O → 2 monosaccharides</td></tr>
 <tr><td>Enzyme-catalyzed</td><td>Enzyme lowers activation energy → faster rate; enzyme unchanged, very specific</td><td>Amylase breaking starch</td></tr>
 </tbody></table></div>
+
+<h3>Functional groups</h3>
+<div class="table-wrap"><table class="data">
+<thead><tr><th>Group</th><th>Structure</th><th>Property</th><th>Found in</th></tr></thead>
+<tbody>
+<tr><td><strong>Hydroxyl</strong></td><td>–OH</td><td><strong>Very polar</strong>; H-bonds with water, so it makes molecules soluble</td><td>Alcohols (ethanol), sugars, glycerol</td></tr>
+<tr><td><strong>Carbonyl</strong></td><td>C=O. Aldehyde: at the end of the chain. Ketone: in the middle</td><td><strong>Slightly</strong> (medium) polar</td><td>Every monosaccharide; formaldehyde (aldehyde), acetone (ketone)</td></tr>
+<tr><td><strong>Carboxyl</strong></td><td>–COOH (C=O plus –OH on the same C)</td><td><strong>Very polar</strong>; <strong>acidic</strong>: the H on its –OH comes off as H<sup>+</sup> → –COO<sup>−</sup></td><td>Amino acids, fatty acids, vinegar (acetic acid)</td></tr>
+<tr><td><strong>Amino</strong></td><td>–NH<sub>2</sub></td><td><strong>Very polar</strong>; <strong>basic</strong>: accepts H<sup>+</sup> → –NH<sub>3</sub><sup>+</sup></td><td>Amino acids (proteins), ammonia</td></tr>
+<tr><td><strong>Phosphate</strong></td><td>–PO<sub>4</sub> (P with 4 O's)</td><td>Polar (medium) and charged (−); releases H<sup>+</sup> (acidic). As PO<sub>4</sub><sup>3−</sup> it can pull H<sup>+</sup> off other molecules, acting as a base (class key)</td><td>ATP, DNA/RNA backbone, phospholipid heads</td></tr>
+<tr><td><strong>Sulfhydryl</strong></td><td>–SH</td><td><strong>Low</strong> polarity (least polar of these)</td><td>Cysteine (links to another –SH as a disulfide bridge in proteins); rubber</td></tr>
+<tr data-tier="likely"><td>Methyl</td><td>–CH<sub>3</sub></td><td>Nonpolar</td><td>Hydrocarbon chains; thymine (vs uracil)</td></tr>
+</tbody></table></div>
+<ul>
+<li><strong>Polarity ranking:</strong> hydroxyl, carboxyl, amino (very polar, can H-bond) &gt; carbonyl, phosphate (medium, dipole–dipole) &gt; sulfhydryl (low) &gt; methyl (nonpolar).</li>
+<li>Sugars and alcohols dissolve well in water because of their polar –OH groups. Glucose has many –OH, so it dissolves in blood plasma; lipids (mostly hydrocarbon) do not and travel in lipoproteins.</li>
+<li><strong>Low blood pH</strong> (more H<sup>+</sup>): amino groups get protonated (–NH<sub>2</sub> → –NH<sub>3</sub><sup>+</sup>) and carboxyls stay –COOH. The charges inside hemoglobin change, its shape shifts, and it binds O<sub>2</sub> less well.</li>
+<li><strong>Phospholipids</strong> self-assemble into bilayers because the hydrocarbon tails are nonpolar and the phosphate head is polar and charged. Remove the phosphate → fully hydrophobic, no bilayer, no membrane.</li>
+<li>Structures are mapped with NMR spectroscopy (C/H skeleton), mass spectrometry (mass and fragments), IR spectroscopy (identifies functional groups by bond vibrations) and X-ray crystallography (3D atom positions).</li>
+</ul>
+
+<h3>Macromolecules overview</h3>
+<div class="table-wrap"><table class="data">
+<thead><tr><th>Class</th><th>Elements</th><th>Monomer (subunit)</th><th>Polymer</th><th>Bond</th><th>Examples</th><th>Main functions</th></tr></thead>
+<tbody>
+<tr><td><strong>Carbohydrates</strong></td><td>C, H, O</td><td>Monosaccharide (glucose)</td><td>Polysaccharide</td><td>Glycosidic linkage</td><td>Glucose, sucrose, starch, glycogen, cellulose, chitin</td><td>Short-term energy, energy storage, structure, cell-surface markers</td></tr>
+<tr><td><strong>Lipids</strong></td><td>C, H, O (mostly C–H); phospholipids add P</td><td>Glycerol + fatty acids</td><td><strong>Not a polymer</strong></td><td>Ester linkage</td><td>Fats, oils, phospholipids, steroids (cholesterol), waxes</td><td>Long-term energy, insulation, membranes, signalling (hormones)</td></tr>
+<tr><td><strong>Proteins</strong></td><td>C, H, O, N (S)</td><td>Amino acid (20 kinds)</td><td>Polypeptide</td><td>Peptide bond</td><td>Enzymes, hemoglobin, collagen, antibodies, membrane channels</td><td>Structure, transport, signalling, movement, regulation, catalysis</td></tr>
+<tr><td><strong>Nucleic acids</strong></td><td>C, H, O, N, P</td><td>Nucleotide</td><td>Polynucleotide (DNA, RNA)</td><td>Phosphodiester linkage</td><td>DNA, mRNA, tRNA, rRNA (ATP is a single nucleotide)</td><td>Store hereditary information; make proteins</td></tr>
+</tbody></table></div>
+<ul>
+<li>Every one of these bonds is covalent, made by <strong>dehydration synthesis</strong> (releases H<sub>2</sub>O) and broken by <strong>hydrolysis</strong> (adds H<sub>2</sub>O). Joining <em>n</em> monomers releases <em>n</em> − 1 water molecules.</li>
+<li>Lipids are not polymers: one glycerol + 3 fatty acids is a complete unit that cannot keep extending.</li>
+</ul>
+<h4>Identify it from the structure</h4>
+<div class="table-wrap"><table class="data">
+<thead><tr><th>You see</th><th>It is</th></tr></thead>
+<tbody>
+<tr><td>Ring of C with an O in the ring and many –OH (CH<sub>2</sub>OH on top)</td><td>Monosaccharide (carbohydrate); two rings joined by –O– = disaccharide</td></tr>
+<tr><td>3 carbons, each with –OH</td><td>Glycerol (lipid)</td></tr>
+<tr><td>Long zig-zag C–H chain with –COOH at one end</td><td>Fatty acid (C=C in the chain = unsaturated)</td></tr>
+<tr><td>Glycerol joined by 3 ester bonds (–O–C=O) to 3 chains</td><td>Triglyceride</td></tr>
+<tr><td>Polar phosphate head + 2 hydrocarbon tails</td><td>Phospholipid</td></tr>
+<tr><td>Four fused carbon rings (three 6-sided, one 5-sided)</td><td>Steroid (e.g., cholesterol)</td></tr>
+<tr><td>H<sub>2</sub>N–C–COOH with an H and an R group on the central C</td><td>Amino acid (protein)</td></tr>
+<tr><td>Phosphate + 5-carbon sugar ring + nitrogen-containing base ring</td><td>Nucleotide (nucleic acid); with 3 phosphates = ATP</td></tr>
+</tbody></table></div>
+
+<h3>Carbohydrates</h3>
+<p><strong>Functions:</strong> short-term energy; energy storage (starch, glycogen); structural support (cellulose, chitin); cell-surface markers attached to membrane proteins and lipids (cell identification "self vs not self", cell communication). Plants and other autotrophs make carbohydrates by photosynthesis.</p>
+<div class="table-wrap"><table class="data">
+<thead><tr><th>Class</th><th>Size</th><th>Examples</th></tr></thead>
+<tbody>
+<tr><td>Monosaccharide</td><td>1 simple sugar</td><td>Glucose, fructose, galactose, ribose, deoxyribose</td></tr>
+<tr><td>Disaccharide</td><td>2 monosaccharides joined by a covalent glycosidic linkage</td><td>Maltose, sucrose, lactose</td></tr>
+<tr><td>Oligosaccharide</td><td>2–10 monosaccharides (includes disaccharides)</td><td>Sugar chains on the membrane surface</td></tr>
+<tr><td>Polysaccharide ("complex carbohydrate")</td><td>Many: several hundred to several thousand</td><td>Starch, glycogen, cellulose, chitin</td></tr>
+</tbody></table></div>
+<h4>Monosaccharides</h4>
+<ul>
+<li>A single chain of carbons with <strong>hydroxyl groups</strong> attached, plus one <strong>carbonyl group</strong> (C=O).</li>
+<li>Named by number of carbons: <strong>triose</strong> = 3, <strong>pentose</strong> = 5 (ribose, deoxyribose), <strong>hexose</strong> = 6 (glucose, galactose, fructose: isomers, all C<sub>6</sub>H<sub>12</sub>O<sub>6</sub>).</li>
+<li>Those with 5 or more carbons are <strong>linear when dry</strong> but form a <strong>ring in water</strong>.</li>
+<li><strong>α vs β glucose:</strong> differ only at C1. α: the C1 –OH points <strong>down</strong> (opposite side to the CH<sub>2</sub>OH on C5). β: the C1 –OH points <strong>up</strong> (same side). Be able to draw α-glucose with carbons numbered: C1 is right of the ring O, numbering clockwise to C5; C6 is the CH<sub>2</sub>OH.</li>
+</ul>
+<h4>Disaccharides</h4>
+<div class="table-wrap"><table class="data">
+<thead><tr><th>Disaccharide</th><th>Made of</th><th>Linkage</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td><strong>Maltose</strong></td><td>Glucose + glucose</td><td>α-1,4</td><td>Found in grains; used to make beer</td></tr>
+<tr><td><strong>Sucrose</strong></td><td>Glucose + fructose</td><td>1,2</td><td>Table sugar; plants use it to transport glucose</td></tr>
+<tr><td><strong>Lactose</strong></td><td>Galactose + glucose</td><td>β-1,4</td><td>Milk sugar</td></tr>
+</tbody></table></div>
+<div class="eq">C<sub>6</sub>H<sub>12</sub>O<sub>6</sub> + C<sub>6</sub>H<sub>12</sub>O<sub>6</sub> → C<sub>12</sub>H<sub>22</sub>O<sub>11</sub> + H<sub>2</sub>O &nbsp; (condensation →, hydrolysis ←)</div>
+<p><strong>1-4 linkage:</strong> C1 of one sugar bonds (through an O) to C4 of the next → straight chain. <strong>1-6 linkage:</strong> C1 bonds to C6 → a <strong>branch</strong>.</p>
+<h4>Polysaccharides</h4>
+<div class="table-wrap"><table class="data">
+<thead><tr><th></th><th>Cellulose</th><th>Amylose (starch)</th><th>Amylopectin (starch)</th><th>Glycogen</th><th>Chitin</th></tr></thead>
+<tbody>
+<tr><td>Source</td><td>Plants (cell wall)</td><td>Plants</td><td>Plants</td><td>Animals (liver, skeletal muscle)</td><td>Fungi (cell walls), arthropods (exoskeleton)</td></tr>
+<tr><td>Subunit</td><td>β-glucose</td><td>α-glucose</td><td>α-glucose</td><td>α-glucose</td><td>N-acetylglucosamine (contains N)</td></tr>
+<tr><td>Bonds</td><td>β-1,4</td><td>α-1,4</td><td>α-1,4 and α-1,6</td><td>α-1,4 and α-1,6</td><td>β-1,4</td></tr>
+<tr><td>Branches</td><td>No</td><td>No</td><td>Yes (~every 20 subunits)</td><td>Yes, more (~every 10 subunits)</td><td>No</td></tr>
+<tr><td>Shape</td><td>Straight chains H-bonded side by side into fibres</td><td>Coiled helix</td><td>Branched</td><td>Highly branched</td><td>Straight parallel chains</td></tr>
+<tr><td>Function</td><td>Structure (plant cell wall)</td><td colspan="2">Energy storage in plants</td><td>Short-term energy storage in animals</td><td>Protective, waterproof structure</td></tr>
+</tbody></table></div>
+<ul>
+<li><strong>Linear</strong> chains = more structural strength. <strong>Branched</strong> = open structure with many ends, so enzymes access glucose fast (rapid energy).</li>
+<li>Animals have enzymes that break the α-linkages in starch. Humans have <strong>no cellulase</strong>; microbes in herbivore guts do, so herbivores get glucose from cellulose.</li>
+<li>Indigestible polysaccharides = <strong>fibre</strong>: important for gut health and does not raise glucose absorption. Soluble fibre holds water and slows digestion; insoluble fibre adds bulk (a "broom").</li>
+<li><strong>Polarity:</strong> monosaccharides have many –OH → very soluble → quick energy carried in blood. Polysaccharides are also made of polar units but act much less soluble: huge size, –OH groups H-bonded to neighbouring chains (cellulose is insoluble), and coiling tucks –OH inside (starch). Good for storage and structure.</li>
+</ul>
+
+<h3>Lipids</h3>
+<ul>
+<li>Higher proportion of H than C and O: few polar O–H bonds, many nonpolar C–H bonds → <strong>nonpolar</strong>. Insoluble in water; soluble in nonpolar solvents (like oil).</li>
+<li><strong>Functions:</strong> long-term energy storage (9 kcal/g vs 4 kcal/g for carbohydrates), insulation (fat under the skin), cushioning organs, cell membranes, cell signalling, coordination and regulation (steroid hormones), absorbing vitamins A, D, E, K.</li>
+</ul>
+<div class="table-wrap"><table class="data">
+<thead><tr><th>Type</th><th>Structure</th><th>Function / examples</th></tr></thead>
+<tbody>
+<tr><td><strong>Triglyceride</strong> (fats and oils)</td><td>4 subunits: glycerol backbone + 3 fatty acids, joined by 3 ester linkages (esterification, a condensation reaction)</td><td>Long-term energy storage, insulation. Animal fat, butter, cooking oils</td></tr>
+<tr><td><strong>Phospholipid</strong></td><td>Glycerol + 2 fatty acids + a highly polar phosphate group. Amphipathic: hydrophilic head, hydrophobic tails</td><td>Forms the cell membrane bilayer (two water compartments: extracellular fluid and cytosol)</td></tr>
+<tr><td><strong>Steroid</strong></td><td>17 carbons arranged in four fused rings (three 6-carbon, one 5-carbon)</td><td>Sex hormones (estrogen, testosterone), adrenal cortical hormones, bile acids, cholesterol (membrane fluidity)</td></tr>
+<tr><td><strong>Wax</strong></td><td>Simple lipid: ester of a long-chain alcohol + a long-chain fatty acid</td><td>Protection, waterproofing: earwax, plant cuticle (stops water loss)</td></tr>
+</tbody></table></div>
+<ul>
+<li><strong>Glycerol:</strong> 3-carbon chain, each carbon with an –OH (very polar). <strong>Fatty acid:</strong> long hydrocarbon chain with a carboxyl group at one end; length varies.</li>
+<li><strong>Ester linkage</strong> = between glycerol's –OH and a fatty acid's –COOH. 1 glycerol + 3 fatty acids → 1 triglyceride + <strong>3 H<sub>2</sub>O</strong>.</li>
+<li>Longer chain → larger nonpolar part → less polar, less water-soluble.</li>
+</ul>
+<div class="table-wrap"><table class="data">
+<thead><tr><th></th><th>Saturated</th><th>Cis unsaturated</th><th>Trans unsaturated</th></tr></thead>
+<tbody>
+<tr><td>C=C double bonds</td><td>None (all C–C single; "saturated" with H)</td><td>1 (mono) or more (poly)</td><td>1 or more</td></tr>
+<tr><td>H atoms at the C=C</td><td>n/a</td><td>Same side</td><td>Opposite sides</td></tr>
+<tr><td>Shape</td><td>Straight</td><td>Bent ("kink")</td><td>Straight, despite the C=C</td></tr>
+<tr><td>Packing / density</td><td>Pack tightly → denser</td><td>Can't pack tightly → less dense</td><td>Pack tightly like saturated</td></tr>
+<tr><td>Room temperature</td><td>Solid (fat)</td><td>Liquid (oil)</td><td>Solid or semi-solid</td></tr>
+<tr><td>Examples</td><td>Animal meats, butter</td><td>Cooking and vegetable oils (polyunsaturated)</td><td>Margarine (made by partial hydrogenation)</td></tr>
+</tbody></table></div>
+<ul>
+<li>Trans fats: the body treats them like saturated fats and lacks enzymes to break them down well → cardiovascular problems.</li>
+<li>Cold-water fish have more unsaturated fats so their membranes stay fluid; plants store oils (liquid, easy to access at low temperature).</li>
+</ul>
 `;

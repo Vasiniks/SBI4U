@@ -236,6 +236,159 @@ window.LESSONS.push({
 <div class="callout warn"><p class="callout-title">Common mistake</p><p>The most common error is forgetting to count the partner before splitting. With 18% A, some students do (100 − 18) ÷ 2 = 41% and give that to G and C. That ignores the 18% thymine. Always subtract <strong>both</strong> members of the known pair first. And always check that your four numbers add to 100.</p></div>
 <div class="callout key"><p class="callout-title">On the test</p><p>Show the three steps and the check. These rules work only for <strong>double-stranded DNA</strong>. If a question gives you single-stranded RNA, you cannot calculate the other bases this way, and saying so is the correct answer.</p></div>
 <details class="check"><summary>Quick check: A DNA sample is 15% cytosine. Calculate the percentage of each other base.</summary><div class="ans"><p>G = C = <strong>15%</strong>. G + C = 30%, so A + T = 70%, and A = T = <strong>35%</strong> each. Check: 15 + 15 + 35 + 35 = 100%.</p></div></details>
-@@B105@@
+
+<h3 data-tier="essential">The double helix and antiparallel strands</h3>
+<p><strong>DNA contains two strands arranged in a double helix. RNA is single-stranded.</strong> A good picture of DNA is a <strong>twisted ladder</strong>:</p>
+<ul>
+  <li>The two <strong>sides (rails)</strong> of the ladder are the sugar–phosphate backbones: alternating deoxyribose and phosphate, joined by phosphodiester linkages.</li>
+  <li>The <strong>rungs</strong> are the base pairs (A–T and G–C), held together in the middle by weak hydrogen bonds.</li>
+  <li>The whole ladder is twisted into a spiral, the <span class="term">double helix</span>.</li>
+</ul>
+<p>The two strands also point in <strong>opposite directions</strong>. Remember from the backbone section that each strand has a direction: <strong>each strand has a free phosphate at one end (the 5′ end) and a free sugar at the other (the 3′ end)</strong>. In the double helix, the <strong>5′ end of one strand lines up with the 3′ end of the other</strong>. This is called <span class="term">antiparallel</span> ("anti" = opposite, "parallel" = side by side).</p>
+<p>The answer key uses a good image: think of the two strands as two lanes of traffic on a highway. They run side by side, but one lane drives "up" (5′ to 3′) and the other drives "down" (3′ to 5′ when read in the same direction). Why does it have to be this way? The sugars of the two strands face opposite ways, and only in that arrangement do the bases on the two strands meet edge to edge, with their hydrogen-bonding atoms lined up. The direction also matters for the cell: the enzymes that copy and read DNA can only work in one direction along a strand, so they need to know which end is which.</p>
+<figure class="diagram">
+<svg viewBox="0 0 640 386" role="img" aria-labelledby="b105-t3">
+<title id="b105-t3">A short double-stranded DNA molecule. The left strand runs from a free phosphate at its 5-prime end at the top to a free sugar OH at its 3-prime end at the bottom. The right strand is upside down: its 3-prime end with a free OH is at the top and its 5-prime end with a free phosphate is at the bottom. Each strand is a sugar-phosphate backbone joined by phosphodiester linkages. Bases pair across the middle: A with T by 2 hydrogen bonds, G with C by 3, C with G by 3, and T with A by 2.</title>
+<defs><marker id="b105-ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" style="fill:var(--ink-2)"/></marker></defs>
+<text x="110" y="22" text-anchor="middle" font-family="inherit" font-size="13" font-weight="700" style="fill:var(--ink)">5′ end</text>
+<text x="518" y="22" text-anchor="middle" font-family="inherit" font-size="13" font-weight="700" style="fill:var(--ink)">3′ end</text>
+<line x1="66" y1="50" x2="66" y2="318" style="stroke:var(--ink-2)" stroke-width="2" marker-end="url(#b105-ar)"/>
+<text x="50" y="184" text-anchor="middle" font-family="inherit" font-size="12" transform="rotate(90 50 184)" style="fill:var(--ink-2)">strand 1 runs 5′ → 3′</text>
+<line x1="578" y1="318" x2="578" y2="50" style="stroke:var(--ink-2)" stroke-width="2" marker-end="url(#b105-ar)"/>
+<text x="596" y="184" text-anchor="middle" font-family="inherit" font-size="12" transform="rotate(-90 596 184)" style="fill:var(--ink-2)">strand 2 runs 5′ → 3′</text>
+<line x1="121" y1="53" x2="139" y2="73" style="stroke:var(--ink)" stroke-width="2"/>
+<line x1="147" y1="98" x2="123" y2="109" style="stroke:var(--ink)" stroke-width="2"/>
+<line x1="121" y1="123" x2="139" y2="143" style="stroke:var(--ink)" stroke-width="2"/>
+<line x1="147" y1="168" x2="123" y2="179" style="stroke:var(--ink)" stroke-width="2"/>
+<line x1="121" y1="193" x2="139" y2="213" style="stroke:var(--ink)" stroke-width="2"/>
+<line x1="147" y1="238" x2="123" y2="249" style="stroke:var(--ink)" stroke-width="2"/>
+<line x1="121" y1="263" x2="139" y2="283" style="stroke:var(--ink)" stroke-width="2"/>
+<line x1="147" y1="308" x2="132" y2="322" style="stroke:var(--ink)" stroke-width="2"/>
+<text x="122" y="338" text-anchor="middle" font-family="inherit" font-size="13" style="fill:var(--ink)">OH</text>
+<text x="122" y="360" text-anchor="middle" font-family="inherit" font-size="13" font-weight="700" style="fill:var(--ink)">3′ end</text>
+<circle cx="110" cy="45" r="14" style="fill:var(--amber-soft);stroke:var(--amber)" stroke-width="1.5"/>
+<circle cx="110" cy="115" r="14" style="fill:var(--amber-soft);stroke:var(--amber)" stroke-width="1.5"/>
+<circle cx="110" cy="185" r="14" style="fill:var(--amber-soft);stroke:var(--amber)" stroke-width="1.5"/>
+<circle cx="110" cy="255" r="14" style="fill:var(--amber-soft);stroke:var(--amber)" stroke-width="1.5"/>
+<text x="110" y="49" text-anchor="middle" font-family="inherit" font-size="12" font-weight="700" style="fill:var(--ink)">P</text>
+<text x="110" y="119" text-anchor="middle" font-family="inherit" font-size="12" font-weight="700" style="fill:var(--ink)">P</text>
+<text x="110" y="189" text-anchor="middle" font-family="inherit" font-size="12" font-weight="700" style="fill:var(--ink)">P</text>
+<text x="110" y="259" text-anchor="middle" font-family="inherit" font-size="12" font-weight="700" style="fill:var(--ink)">P</text>
+<circle cx="116" cy="183" r="26" style="fill:none;stroke:var(--red)" stroke-width="2" stroke-dasharray="5 4"/>
+<polygon points="160,58 181,73 173,98 147,98 139,73" style="fill:var(--teal-soft);stroke:var(--teal)" stroke-width="1.5"/>
+<polygon points="160,128 181,143 173,168 147,168 139,143" style="fill:var(--teal-soft);stroke:var(--teal)" stroke-width="1.5"/>
+<polygon points="160,198 181,213 173,238 147,238 139,213" style="fill:var(--teal-soft);stroke:var(--teal)" stroke-width="1.5"/>
+<polygon points="160,268 181,283 173,308 147,308 139,283" style="fill:var(--teal-soft);stroke:var(--teal)" stroke-width="1.5"/>
+<line x1="493" y1="62" x2="508" y2="49" style="stroke:var(--ink)" stroke-width="2"/>
+<text x="520" y="45" text-anchor="middle" font-family="inherit" font-size="13" style="fill:var(--ink)">OH</text>
+<line x1="501" y1="87" x2="520" y2="105" style="stroke:var(--ink)" stroke-width="2"/>
+<line x1="493" y1="132" x2="517" y2="121" style="stroke:var(--ink)" stroke-width="2"/>
+<line x1="501" y1="157" x2="520" y2="175" style="stroke:var(--ink)" stroke-width="2"/>
+<line x1="493" y1="202" x2="517" y2="191" style="stroke:var(--ink)" stroke-width="2"/>
+<line x1="501" y1="227" x2="520" y2="245" style="stroke:var(--ink)" stroke-width="2"/>
+<line x1="493" y1="272" x2="517" y2="261" style="stroke:var(--ink)" stroke-width="2"/>
+<line x1="501" y1="297" x2="520" y2="315" style="stroke:var(--ink)" stroke-width="2"/>
+<circle cx="530" cy="115" r="14" style="fill:var(--amber-soft);stroke:var(--amber)" stroke-width="1.5"/>
+<circle cx="530" cy="185" r="14" style="fill:var(--amber-soft);stroke:var(--amber)" stroke-width="1.5"/>
+<circle cx="530" cy="255" r="14" style="fill:var(--amber-soft);stroke:var(--amber)" stroke-width="1.5"/>
+<circle cx="530" cy="325" r="14" style="fill:var(--amber-soft);stroke:var(--amber)" stroke-width="1.5"/>
+<text x="530" y="119" text-anchor="middle" font-family="inherit" font-size="12" font-weight="700" style="fill:var(--ink)">P</text>
+<text x="530" y="189" text-anchor="middle" font-family="inherit" font-size="12" font-weight="700" style="fill:var(--ink)">P</text>
+<text x="530" y="259" text-anchor="middle" font-family="inherit" font-size="12" font-weight="700" style="fill:var(--ink)">P</text>
+<text x="530" y="329" text-anchor="middle" font-family="inherit" font-size="12" font-weight="700" style="fill:var(--ink)">P</text>
+<text x="530" y="360" text-anchor="middle" font-family="inherit" font-size="13" font-weight="700" style="fill:var(--ink)">5′ end</text>
+<polygon points="480,102 459,87 467,62 493,62 501,87" style="fill:var(--teal-soft);stroke:var(--teal)" stroke-width="1.5"/>
+<polygon points="480,172 459,157 467,132 493,132 501,157" style="fill:var(--teal-soft);stroke:var(--teal)" stroke-width="1.5"/>
+<polygon points="480,242 459,227 467,202 493,202 501,227" style="fill:var(--teal-soft);stroke:var(--teal)" stroke-width="1.5"/>
+<polygon points="480,312 459,297 467,272 493,272 501,297" style="fill:var(--teal-soft);stroke:var(--teal)" stroke-width="1.5"/>
+<rect x="181" y="68" width="140" height="24" rx="4" style="fill:var(--magenta-soft);stroke:var(--magenta)"/>
+<rect x="361" y="68" width="98" height="24" rx="4" style="fill:var(--blue-soft);stroke:var(--blue)"/>
+<line x1="321" y1="75" x2="361" y2="75" style="stroke:var(--ink-2)" stroke-width="2" stroke-dasharray="4 3"/>
+<line x1="321" y1="85" x2="361" y2="85" style="stroke:var(--ink-2)" stroke-width="2" stroke-dasharray="4 3"/>
+<text x="251" y="85" text-anchor="middle" font-family="inherit" font-size="14" font-weight="700" style="fill:var(--ink)">A</text>
+<text x="410" y="85" text-anchor="middle" font-family="inherit" font-size="14" font-weight="700" style="fill:var(--ink)">T</text>
+<rect x="181" y="138" width="140" height="24" rx="4" style="fill:var(--magenta-soft);stroke:var(--magenta)"/>
+<rect x="361" y="138" width="98" height="24" rx="4" style="fill:var(--blue-soft);stroke:var(--blue)"/>
+<line x1="321" y1="143" x2="361" y2="143" style="stroke:var(--ink-2)" stroke-width="2" stroke-dasharray="4 3"/>
+<line x1="321" y1="150" x2="361" y2="150" style="stroke:var(--ink-2)" stroke-width="2" stroke-dasharray="4 3"/>
+<line x1="321" y1="157" x2="361" y2="157" style="stroke:var(--ink-2)" stroke-width="2" stroke-dasharray="4 3"/>
+<text x="251" y="155" text-anchor="middle" font-family="inherit" font-size="14" font-weight="700" style="fill:var(--ink)">G</text>
+<text x="410" y="155" text-anchor="middle" font-family="inherit" font-size="14" font-weight="700" style="fill:var(--ink)">C</text>
+<rect x="181" y="208" width="98" height="24" rx="4" style="fill:var(--blue-soft);stroke:var(--blue)"/>
+<rect x="319" y="208" width="140" height="24" rx="4" style="fill:var(--magenta-soft);stroke:var(--magenta)"/>
+<line x1="279" y1="213" x2="319" y2="213" style="stroke:var(--ink-2)" stroke-width="2" stroke-dasharray="4 3"/>
+<line x1="279" y1="220" x2="319" y2="220" style="stroke:var(--ink-2)" stroke-width="2" stroke-dasharray="4 3"/>
+<line x1="279" y1="227" x2="319" y2="227" style="stroke:var(--ink-2)" stroke-width="2" stroke-dasharray="4 3"/>
+<text x="230" y="225" text-anchor="middle" font-family="inherit" font-size="14" font-weight="700" style="fill:var(--ink)">C</text>
+<text x="389" y="225" text-anchor="middle" font-family="inherit" font-size="14" font-weight="700" style="fill:var(--ink)">G</text>
+<rect x="181" y="278" width="98" height="24" rx="4" style="fill:var(--blue-soft);stroke:var(--blue)"/>
+<rect x="319" y="278" width="140" height="24" rx="4" style="fill:var(--magenta-soft);stroke:var(--magenta)"/>
+<line x1="279" y1="285" x2="319" y2="285" style="stroke:var(--ink-2)" stroke-width="2" stroke-dasharray="4 3"/>
+<line x1="279" y1="295" x2="319" y2="295" style="stroke:var(--ink-2)" stroke-width="2" stroke-dasharray="4 3"/>
+<text x="230" y="295" text-anchor="middle" font-family="inherit" font-size="14" font-weight="700" style="fill:var(--ink)">T</text>
+<text x="389" y="295" text-anchor="middle" font-family="inherit" font-size="14" font-weight="700" style="fill:var(--ink)">A</text>
+<text x="320" y="334" text-anchor="middle" font-family="inherit" font-size="12" style="fill:var(--ink-2)">dashed lines = hydrogen bonds</text>
+<text x="320" y="380" text-anchor="middle" font-family="inherit" font-size="12" style="fill:var(--red)">Circled: a phosphodiester linkage (3′ carbon – phosphate – 5′ carbon)</text>
+</svg>
+<figcaption>Antiparallel strands. Pentagons are sugars, circles are phosphates, bars are bases (long bars purines, short bars pyrimidines). The left strand reads 5′ to 3′ from top to bottom; the right strand reads 5′ to 3′ from bottom to top.</figcaption>
+</figure>
+<h4>Writing a complementary strand</h4>
+<p>To write the partner of a DNA strand, do two things: <strong>pair every base</strong> (A↔T, G↔C) and <strong>flip the end labels</strong> (5′ becomes 3′ and 3′ becomes 5′).</p>
+<div class="eq">5′ – A T G C G T – 3′<br>3′ – T A C G C A – 5′</div>
+<div class="callout warn"><p class="callout-title">Common mistake</p><p>Writing both strands as 5′ to 3′ from left to right, or leaving the ends unlabelled. The two strands are antiparallel, so if the top strand is labelled 5′ on the left, the bottom strand must be labelled 3′ on the left. Losing the labels can cost you the mark even when the bases are right.</p></div>
+<div class="callout teacher"><p class="callout-title">Said in class</p><p>From the DNA video: the most common form of DNA inside cells is called <strong>B-form DNA</strong>, a right-handed double helix. Each full turn of the helix contains about <strong>10 base pairs</strong>. Because of the way the backbones twist, the helix has a wider groove and a narrower groove running around it, the <strong>major groove</strong> and the <strong>minor groove</strong>. Proteins that read DNA often slot into these grooves to "feel" the bases without unzipping the strands.</p></div>
+<p data-tier="extra">For scale: the B-form helix is about 2 nm wide, neighbouring base pairs are about 0.34 nm apart, and one turn (about 10.5 base pairs) is about 3.4 nm long. The DNA in one human cell, stretched out, would be about 2 m long.</p>
+<details class="check"><summary>Quick check: Write the complementary strand of 5′–GGATCCA–3′ and label its ends.</summary><div class="ans"><p><strong>3′–CCTAGGT–5′</strong>. Each G becomes C, each A becomes T, each T becomes A, each C becomes G, and the end labels are reversed because the strands are antiparallel.</p></div></details>
+<details class="check"><summary>Review question 4: In your own words, explain the main structure of DNA (include Chargaff's rule and antiparallel strands).</summary><div class="ans"><p>DNA is a <strong>double helix</strong>, like a twisted ladder. The sides of the ladder are two <strong>sugar–phosphate backbones</strong> made of alternating deoxyribose and phosphate groups joined by phosphodiester linkages. The two strands are <strong>antiparallel</strong>: each has a 5′ end (free phosphate) and a 3′ end (free sugar), and the 5′ end of one strand lines up with the 3′ end of the other, like two lanes of traffic going opposite ways. This orientation matters for how enzymes read and copy the code.</p><p>The rungs are pairs of nitrogenous bases held together by weak <strong>hydrogen bonds</strong>. By <strong>Chargaff's rule</strong>, A always pairs with T (2 hydrogen bonds) and G always pairs with C (3 hydrogen bonds), always a purine with a pyrimidine. Because of this specific base pairing, if you know the sequence of one strand you can always predict the other.</p></div></details>
+
+<h3 data-tier="essential">DNA vs RNA: side by side</h3>
+<div class="table-wrap"><table class="data">
+<thead><tr><th>Feature</th><th>DNA</th><th>RNA</th></tr></thead>
+<tbody>
+<tr><td>Full name</td><td>Deoxyribonucleic acid</td><td>Ribonucleic acid</td></tr>
+<tr><td>Sugar</td><td>Deoxyribose (–H on carbon 2′)</td><td>Ribose (–OH on carbon 2′)</td></tr>
+<tr><td>Bases</td><td>A, G, C, <strong>T</strong></td><td>A, G, C, <strong>U</strong></td></tr>
+<tr><td>Strands</td><td>Two, antiparallel, in a double helix</td><td>One (single-stranded)</td></tr>
+<tr><td>Base pairing</td><td>A–T and G–C between the two strands</td><td>A–U and G–C when it pairs with DNA or folds back on itself</td></tr>
+<tr><td>Job</td><td>Stores hereditary information</td><td>Translates DNA into functional proteins</td></tr>
+<tr><td>Where</td><td>Nucleus (small amounts in mitochondria and chloroplasts)</td><td>Made in the nucleus; works mostly in the cytoplasm at ribosomes</td></tr>
+<tr><td>Types</td><td>One kind</td><td>mRNA, tRNA, rRNA</td></tr>
+<tr><td>Stability</td><td>Very stable, long-term storage</td><td>Less stable, short-lived working copy</td></tr>
+</tbody></table></div>
+<p>Every row of this table goes back to the two jobs. DNA must last a lifetime and be copied accurately, so it is double-stranded (each strand is a backup for the other), uses the more stable sugar, and uses thymine. RNA only needs to last long enough to be used, so a single, cheaper, less stable strand is fine, and even useful, because old messages are broken down instead of piling up.</p>
+<details class="check"><summary>Quick check: Give three structural differences between DNA and RNA.</summary><div class="ans"><p>Any three of: DNA has <strong>deoxyribose</strong>, RNA has <strong>ribose</strong> (DNA lacks the oxygen on carbon 2′); DNA has <strong>thymine</strong>, RNA has <strong>uracil</strong>; DNA is <strong>double-stranded</strong> (double helix), RNA is <strong>single-stranded</strong>; DNA strands are antiparallel and paired by Chargaff's rule, RNA usually has no partner strand.</p></div></details>
+
+<h3 data-tier="likely">ATP and ADP: nucleotides with an energy job</h3>
+<p>The second review question links this lesson to Unit 2. ATP is usually described as the cell's "energy currency", but structurally it is a <strong>nucleotide</strong>, the same kind of molecule that builds RNA and DNA.</p>
+<div class="compare">
+  <div><h4>ATP (adenosine triphosphate)</h4><ul><li>Adenine (base)</li><li>Ribose (sugar)</li><li><strong>Three</strong> phosphate groups</li></ul></div>
+  <div><h4>ADP (adenosine diphosphate)</h4><ul><li>Adenine (base)</li><li>Ribose (sugar)</li><li><strong>Two</strong> phosphate groups</li></ul></div>
+</div>
+<p>Adenine joined to ribose is called <strong>adenosine</strong>; the "tri" and "di" count the phosphates. So ATP and ADP follow exactly the same base + pentose + phosphate plan as the nucleotides in nucleic acids. With only one phosphate (AMP), it would be identical to the adenine nucleotide in RNA. Compared with DNA, the differences are that ATP has <strong>ribose instead of deoxyribose</strong>, it carries <strong>extra phosphates</strong>, and it floats free in the cell instead of being linked into a chain. Removing the last phosphate (ATP → ADP + phosphate, a hydrolysis reaction) releases energy the cell uses to do work.</p>
+<p data-tier="extra">The connection is more than a resemblance. The raw materials a cell uses to build RNA are ATP, GTP, CTP and UTP, and the raw materials for DNA are their deoxyribose versions (dATP, dGTP, dCTP, dTTP). When each one is added to a growing strand, two of its three phosphates are snapped off, and the energy released pays for the new phosphodiester linkage. That is why each nucleotide in a finished strand has only one phosphate.</p>
+<details class="check"><summary>Review question 2: Compare the structure of ATP and ADP and explain how they relate to DNA.</summary><div class="ans"><p>ATP is adenine + ribose + <strong>three</strong> phosphate groups; ADP is adenine + ribose + <strong>two</strong> phosphate groups. Both are <strong>nucleotides</strong>, the same category of molecule that builds DNA and RNA: each has a nitrogenous base (adenine, also found in DNA), a pentose sugar and phosphate. They differ from DNA nucleotides in having ribose rather than deoxyribose and extra phosphate groups, and their job is carrying energy rather than storing information.</p></div></details>
+
+<h3 data-tier="likely">Why DNA uses thymine instead of uracil</h3>
+<p>Many biologists accept the "RNA world" idea: early life stored its genetic information in RNA, and DNA evolved later. If so, why did DNA switch from uracil to thymine? The answer is about <strong>stability and accuracy</strong>, and it connects to natural selection from Grade 11.</p>
+<ol class="steps">
+  <li><p class="step-head">Cytosine can turn into uracil</p><p>Cytosine (in both DNA and RNA) can spontaneously lose its amine group (–NH<sub>2</sub>), a reaction called <span class="term">deamination</span>. Deaminated cytosine <strong>is uracil</strong>. This happens many times a day in every cell.</p></li>
+  <li><p class="step-head">The mutation trap</p><p>If DNA normally contained uracil, repair enzymes would find a U and have no way of knowing whether it was supposed to be there or was a damaged C. They could not fix it reliably, and errors (mutations) would build up. A damaged C that is not fixed pairs with A instead of G when DNA is copied, so the error gets passed on.</p></li>
+  <li><p class="step-head">The thymine solution</p><p>Thymine is uracil with an extra <strong>methyl group (–CH<sub>3</sub>)</strong>, a chemical "tag". Because DNA only uses thymine, the repair machinery knows that <strong>any uracil it finds in DNA is an error</strong> and removes it.</p></li>
+  <li><p class="step-head">Natural selection</p><p>Organisms that used thymine in their DNA copied their genetic information with higher <strong>fidelity</strong> (accuracy), passed fewer harmful mutations to their offspring, and so were favoured by natural selection. RNA kept uracil because RNA copies are short-lived; a damaged message is simply replaced.</p></li>
+</ol>
+<p data-tier="extra">Deoxyribose adds to DNA's stability too. Without the reactive 2′ –OH, the DNA backbone is far less likely to cut itself than an RNA backbone. Two small chemical changes, one oxygen removed and one methyl group added, turn a fragile message molecule into a durable archive.</p>
+<details class="check"><summary>Review question 3: DNA probably evolved from RNA. Discuss the stability of thymine and uracil.</summary><div class="ans"><p>DNA became the main store of genetic information because it is more stable than RNA, partly because it uses <strong>thymine instead of uracil</strong>. Cytosine can spontaneously lose an amine group (<strong>deamination</strong>) and become uracil. If DNA used uracil, repair enzymes could not tell a correct U from a mutated C, so mutations would accumulate. Thymine is uracil with an extra <strong>methyl group</strong>, so in DNA any uracil is recognized as an error and repaired. Natural selection favoured organisms that used thymine for their permanent genetic record because it gave higher fidelity when passing traits to offspring.</p></div></details>
+
+<h3 data-tier="essential">Lesson summary</h3>
+<ul>
+  <li><strong>DNA</strong> stores hereditary information; <strong>RNA</strong> translates DNA into functional proteins (types: mRNA, tRNA, rRNA).</li>
+  <li>The monomer is the <strong>nucleotide</strong>: phosphate group + pentose sugar + nitrogenous base. Base on the 1′ carbon, phosphate on the 5′ carbon, –OH on the 3′ carbon.</li>
+  <li><strong>Purines</strong> (A, G) have two rings; <strong>pyrimidines</strong> (C, T, U) have one ring. T is in DNA only, U in RNA only.</li>
+  <li><strong>Deoxyribose</strong> (DNA) lacks the oxygen at carbon 2 that <strong>ribose</strong> (RNA) has.</li>
+  <li>Nucleotides are joined by <strong>phosphodiester linkages</strong> (condensation, water released) between the 3′ carbon of one sugar and the 5′ carbon of the next, forming the sugar–phosphate backbone.</li>
+  <li><strong>Chargaff's rule</strong>: A–T (A–U in RNA) with 2 hydrogen bonds; G–C with 3 hydrogen bonds. Purine always with pyrimidine, so the rungs are equal in width and %A = %T, %G = %C.</li>
+  <li>DNA is a <strong>double helix</strong> of two <strong>antiparallel</strong> strands: each strand has a 5′ end (free phosphate) and a 3′ end (free sugar), and the 5′ end of one lines up with the 3′ end of the other. RNA is single-stranded.</li>
+  <li><strong>ATP and ADP</strong> are nucleotides (adenine + ribose + 3 or 2 phosphates). DNA uses <strong>thymine</strong> so that uracil from damaged cytosine can be recognized and repaired.</li>
+</ul>
 `
 });
