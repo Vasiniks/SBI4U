@@ -125,8 +125,8 @@ window.LESSONS.push({
 <text x="463" y="47" font-family="inherit" font-size="12" text-anchor="middle" style="fill:var(--magenta)">e⁻</text>
 <g font-family="inherit" font-size="12" text-anchor="middle" style="fill:var(--ink-2)">
 <text x="82" y="126">equal</text><text x="82" y="141">sharing</text>
-<text x="227" y="126">unequal sharing →</text><text x="227" y="141">partial charges (δ+, δ−)</text>
-<text x="464" y="126">electron transferred →</text><text x="464" y="141">full charges (ions)</text>
+<text x="227" y="126">unequal sharing gives</text><text x="227" y="141">partial charges (δ+, δ−)</text>
+<text x="464" y="126">electron transferred gives</text><text x="464" y="141">full charges (ions)</text>
 </g>
 <rect x="40" y="150" width="84.8" height="18" style="fill:var(--teal-soft);stroke:var(--teal)"/>
 <rect x="124.8" y="150" width="203.7" height="18" style="fill:var(--amber-soft);stroke:var(--amber)"/>
@@ -214,8 +214,404 @@ window.LESSONS.push({
 <li><strong>(c) Carbon dioxide, CO<sub>2</sub>: nonpolar.</strong> Double bonds form between the central carbon and each oxygen, with <strong>no lone pairs</strong> on the carbon. This symmetrical arrangement cancels out the dipoles.</li>
 <li><strong>(d) Phosphate ion, PO<sub>4</sub><sup>3−</sup>: nonpolar.</strong> The central phosphorus is surrounded by 4 oxygens and no lone pairs, giving a symmetrical shape that cancels the dipoles. <strong>But</strong> it is a polyatomic ion with an overall negative charge, so it can still take part in ion–dipole or ionic interactions.</li>
 </ul></div></details>
-@@CONT101@@
+<h3 data-tier="essential">Intermolecular forces</h3>
+<p><span class="term">Intermolecular forces</span> are the <strong>weaker attractive forces that exist between molecules</strong>. They do not hold a molecule together; they hold molecules <em>to each other</em>. That is why they determine <strong>physical properties</strong>: boiling point, melting point, viscosity and state of matter.</p>
+<div class="callout warn"><p class="callout-title">Common mistake</p><p>When water boils, the bubbles are <strong>not</strong> hydrogen and oxygen gas. Boiling is a physical change. It only overcomes the <strong>intermolecular</strong> hydrogen bonds between water molecules; the covalent O–H bonds inside each molecule stay intact, so the bubbles are water vapour. Only chemical reactions break intramolecular bonds.</p></div>
+<p>The slide's table lists four kinds, from weakest to strongest:</p>
+<div class="table-wrap"><table class="data"><thead><tr><th>Force</th><th>Present in</th><th>Cause</th><th>Strength (kJ/mol)</th></tr></thead><tbody>
+<tr><td>London dispersion</td><td>All molecules and atoms</td><td>Temporary dipoles from constant electron movement</td><td>0.05–40</td></tr>
+<tr><td>Dipole–dipole</td><td>Polar molecules</td><td>Permanent δ+ end of one molecule attracts the δ− end of another</td><td>5–25</td></tr>
+<tr><td>Hydrogen bonding</td><td>Molecules with H bonded to F, O or N</td><td>Very strong dipole–dipole between that H and an F, O or N on a neighbour</td><td>10–40</td></tr>
+<tr><td>Ion–dipole</td><td>Mixtures of ionic and polar compounds</td><td>Full charge of an ion attracts the partial charge of a polar molecule</td><td>40–600</td></tr>
+</tbody></table></div>
+<h4>London dispersion forces</h4>
+<p>A <span class="term">London dispersion force (LDF)</span> is a <strong>weak, temporary attraction between all atoms and molecules caused by constant electron movement</strong>. For a split second, more electrons may be on one side of an atom (the slide uses helium), creating an <strong>instantaneous dipole</strong>. That dipole pushes the electrons of a neighbouring atom away, creating an <strong>induced dipole</strong>, and the two attract. A moment later the electrons shift and the attraction is gone. LDFs are the only force between nonpolar molecules such as O<sub>2</sub>, CO<sub>2</sub> and the hydrocarbon tails of fats.</p>
+<h4>Dipole–dipole forces</h4>
+<p>A <span class="term">dipole–dipole force</span> is a <strong>slightly stronger, permanent attraction between polar molecules</strong> with fixed positive and negative ends. In H–Br, bromine is more electronegative and pulls the shared electrons toward itself, giving a permanent δ+ hydrogen end and δ− bromine end. Neighbouring HBr molecules line up so the δ+ end of one faces the δ− end of the next.</p>
+<h4>Hydrogen bonding</h4>
+<p>A <span class="term">hydrogen bond</span> is a <strong>strong dipole–dipole attraction between an electropositive hydrogen and an electronegative nitrogen, oxygen or fluorine</strong>. The hydrogen must itself be covalently bonded to N, O or F; it is then attracted to an N, O or F on another molecule, or on another part of the same large molecule. Water is the classic example (figure above). The slide also showed hydrogen bonds holding the two strands of the DNA double helix together.</p>
+<details class="check"><summary>Review question 9: Why is hydrogen bonding so special?</summary><div class="ans"><p>It is a special dipole–dipole interaction that is unusually strong for two reasons. <strong>Size:</strong> hydrogen is very small, and N, O and F are also small, so the two partial charges can get physically very close, and the closer they are, the stronger the force. <strong>Electronegativity:</strong> the difference between hydrogen and N, O or F is so large that the shared electrons are almost completely pulled away from the hydrogen.</p></div></details>
+<h4>Ion–dipole forces</h4>
+<p>An <span class="term">ion–dipole force</span> is the <strong>strongest attraction: between an ion with a full charge and a polar molecule with a partial charge</strong>. A cation attracts the δ− end of a polar molecule; an anion attracts the δ+ end. This is how salt dissolves in water (below).</p>
+<p data-tier="likely">The slide marks ion–dipole with an asterisk for a reason. An ion is not a molecule, so strictly speaking this is not an <em>inter</em>molecular force, even though many textbooks list it as one.</p>
+<details class="check"><summary>Review question 10: Rank the inter- and intramolecular forces in order of increasing strength.</summary><div class="ans"><p><strong>London dispersion &lt; dipole–dipole &lt; hydrogen bonding &lt; ion–dipole &lt; intramolecular bonds (covalent and ionic).</strong></p><p>Intramolecular bonds are broken and re-formed only in chemical reactions, while physical changes such as boiling only disrupt intermolecular forces. LDFs are weak and temporary. Dipole–dipole forces are stronger because the dipoles are permanent. Hydrogen bonds are an especially strong dipole–dipole because of the huge electronegativity difference and small atom sizes. Ion–dipole is strongest because one partner carries a full charge. Within covalent bonds, polar covalent is stronger than nonpolar because the partial charges add extra electrostatic attraction.</p></div></details>
+<div class="callout tip"><p class="callout-title">Memory trick</p><p>"<strong>L</strong>azy <strong>D</strong>ogs <strong>H</strong>ate <strong>I</strong>ce": <strong>L</strong>DF &lt; <strong>D</strong>ipole–dipole &lt; <strong>H</strong>ydrogen bond &lt; <strong>I</strong>on–dipole.</p></div>
+<details class="check" data-tier="likely"><summary>Review question 11: How is hydrogen bonding used in protein and nucleic acid structure?</summary><div class="ans"><p><strong>Proteins:</strong> hydrogen bonds form along the polypeptide backbone, between the oxygen of the carbonyl group of one amino acid and the hydrogen of the amino group of another, creating <strong>alpha helices</strong> or <strong>beta pleated sheets</strong>. Hydrogen bonds between the side chains (R groups) of different amino acids also fold the protein into its specific shape. <strong>Nucleic acids:</strong> hydrogen bonds hold the nitrogenous bases of the two opposite DNA strands together. You will see both again in lessons 1.05 and 1.06.</p></div></details>
+
+<h3 data-tier="essential">Water: why it matters</h3>
+<p>Water is the major component of most body parts. The slide's body diagram lists its jobs: it forms saliva (digestion), keeps mucous membranes moist, lets cells grow, reproduce and survive, flushes waste (mainly in urine), lubricates joints, is needed by the brain to make hormones and neurotransmitters, regulates body temperature (sweating and respiration), cushions the brain and spinal cord, helps convert food into usable components, and helps deliver oxygen around the body.</p>
+<p>The properties that make this possible are <strong>cohesion, adhesion, surface tension, high specific heat, evaporative cooling, its role as a solvent, and dissociation</strong>. All of them come from one fact: <strong>water is a small, bent, polar molecule that forms hydrogen bonds</strong>. Each water molecule can hydrogen-bond with up to four neighbours.</p>
+<div class="callout key"><p class="callout-title">On the test</p><p>Every water-property answer starts the same way: "Because water is polar and forms hydrogen bonds…". Then say what the hydrogen bonds do in that case: hold molecules together, absorb heat, form a lattice, or surround ions.</p></div>
+
+<h3 data-tier="essential">Cohesion, adhesion and surface tension</h3>
+<ul>
+  <li><span class="term">Cohesion</span>: water molecules form hydrogen bonds <strong>with one another</strong>. Water sticks to water.</li>
+  <li><span class="term">Adhesion</span>: water molecules form hydrogen bonds <strong>with other polar materials</strong> (or charged ones). Water sticks to glass, paper or the walls of plant xylem.</li>
+</ul>
+<p><span class="term">Surface tension</span> is <strong>due to cohesion</strong>. It causes the surface of water to <strong>resist external forces as if the top layer were a stretched elastic skin</strong>. A molecule in the middle of the water is pulled equally in every direction by its neighbours, so the pulls cancel. A molecule at the surface has no water above it, so it is pulled only sideways and <strong>inward</strong>, which tightens the top layer. That is why water beads into round drops on a leaf and why a water strider can stand on a pond.</p>
+<div class="callout tip"><p class="callout-title">Memory trick</p><p><strong>Co</strong>hesion = <strong>co</strong>-workers (the same kind sticking together). <strong>Ad</strong>hesion = <strong>ad</strong>hesive tape (sticking to something else).</p></div>
+<details class="check"><summary>Review question 12: What is the difference between adhesion and cohesion?</summary><div class="ans"><p><strong>Adhesion</strong> is the attraction of a fluid (e.g. water) to <strong>other</strong> polar or charged molecules or surfaces through hydrogen bonds. <strong>Cohesion</strong> is the attraction of a fluid to <strong>itself</strong> through hydrogen bonds.</p></div></details>
+<details class="check"><summary>Review question 14: Using concepts of polarity, discuss why water is "sticky".</summary><div class="ans"><p>Water is polar because the electronegative oxygen shares electrons unequally with the electropositive hydrogens, making a partially negative oxygen and partially positive hydrogens. The δ− oxygen attracts the δ+ hydrogens of neighbouring water molecules and forms strong hydrogen bonds that hold water together (<strong>cohesion</strong>). Water is also sticky because it attracts other polar molecules and surfaces and forms hydrogen bonds with them (<strong>adhesion</strong>).</p></div></details>
+
+<h3 data-tier="essential">Capillary action</h3>
+<p><span class="term">Capillary action</span> is water <strong>spontaneously travelling through narrow or porous materials</strong>, even upward against gravity. It is <strong>due to adhesion, cohesion and surface tension</strong> together. Adhesion pulls water up the walls of the tube, and cohesion drags the rest of the water column up behind it. The slide's diagram shows that the <strong>narrower</strong> the space, the <strong>higher</strong> the water climbs, because a narrow tube has more wall to stick to compared with the weight of water inside.</p>
+<details class="check"><summary>Review question 13: What is capillary action and where is it used in biological systems?</summary><div class="ans"><p>It is a process in which a fluid travels up a narrow tube or porous material against gravity. It occurs when <strong>adhesion is stronger than cohesion</strong> (the fluid is attracted to the tube more than to itself), but both matter: adhesion makes the fluid stick to the tube, and cohesion draws the rest of the fluid up. It helps draw water up the <strong>xylem</strong> of plants at first, but <strong>transpiration pull</strong> (evaporation from the leaves) is ultimately needed to lift water up taller plants.</p></div></details>
+
+<h3 data-tier="essential">High specific heat capacity</h3>
+<p><strong>Because of hydrogen bonds, water must absorb or release a very large amount of heat to change its temperature.</strong> When you heat water, much of the energy goes into breaking hydrogen bonds instead of making the molecules move faster, and temperature is a measure of how fast molecules move. So water heats up and cools down slowly. This <strong>allows us to maintain a constant body temperature of 37 °C</strong>, and it lets lakes and oceans act as heat sinks that keep conditions stable for aquatic life.</p>
+<details class="check"><summary>Review question 16: Why do hydrogen bonds give water a high specific heat capacity?</summary><div class="ans"><p>Added thermal energy is used to <strong>disrupt the hydrogen bonds</strong> between water molecules rather than to speed up the kinetic energy (movement) of the molecules, so the temperature rises only slowly.</p></div></details>
+<details class="check"><summary>Review question 15: What would happen to the body if water had a LOW specific heat capacity?</summary><div class="ans"><p>Little heat would be needed to change body temperature, so organisms could not properly maintain their temperature (evaporative cooling would also be ineffective). The risk of cell damage would rise: <strong>proteins would denature at high temperatures</strong> and <strong>enzyme-catalyzed reactions would slow at low temperatures</strong>. Large bodies of water would no longer be effective heat sinks, so temperatures in marine environments would swing widely and make survival extremely difficult.</p></div></details>
+<p data-tier="extra">Water's specific heat capacity is 4.18 J/(g·°C): 4.18 J warms 1 g of water by 1 °C, about five times the heat needed for the same mass of sand.</p>
+
+<h3 data-tier="essential">Heat of vaporization and evaporative cooling</h3>
+<p>Because of hydrogen bonds, liquid water must <strong>absorb a very large amount of heat to become a vapour</strong> (gas). To escape into the air, a molecule must break free of <em>all</em> its hydrogen bonds. This leads to <span class="term">evaporative cooling</span>: the evaporating molecules carry that heat away, so the surface they leave cools down. <strong>Humans</strong> dissipate body heat by the evaporation of <strong>sweat from the skin</strong>; <strong>dogs</strong> do it by the evaporation of <strong>saliva from the tongue</strong> when they pant.</p>
+<div class="callout warn"><p class="callout-title">Common mistake</p><p>Sweat does not cool you; its <strong>evaporation</strong> does. On a humid day sweat drips off instead of evaporating, so you stay hot. Keep the two heat properties separate: specific heat is about <strong>changing temperature</strong>; heat of vaporization is about <strong>changing liquid to gas</strong>.</p></div>
+
+<h3 data-tier="essential">Ice is less dense than liquid water</h3>
+<ul>
+  <li>As water cools below 0 °C, it forms a <strong>crystalline lattice</strong>.</li>
+  <li>In liquid water, hydrogen bonds are unstable: they constantly break and re-form, so molecules can crowd together. In ice, <strong>stable hydrogen bonds spread the molecules apart</strong> into an open pattern, <strong>reducing the density of ice</strong>.</li>
+  <li>Liquid water has its <strong>greatest density at 4 °C</strong>.</li>
+</ul>
+<p>Almost every other substance is denser as a solid. Because ice floats, a lake freezes from the top down. The ice (0 °C) insulates the water below, and the densest water (4 °C) sinks to the bottom, where fish survive the winter. If ice sank, lakes would freeze solid from the bottom up.</p>
+
+<h3 data-tier="essential">Water as the universal solvent</h3>
+<p>Since water is polar, it can <strong>dissolve other polar molecules and ionic substances</strong>: sugars, alcohols, salts and more. The rule of thumb is "<strong>like dissolves like</strong>". When salt dissolves, ion–dipole attractions pull the ions out of the crystal and each ion is surrounded by a shell of water molecules, oriented by charge. An ionic compound separating into its ions in water is called <span class="term">dissociation</span>.</p>
+<figure class="diagram">
+<svg viewBox="0 0 640 286" role="img" aria-labelledby="b101-t4">
+<title id="b101-t4">Salt dissolving in water. Left: a sodium ion surrounded by six water molecules, each with its partially negative oxygen end pointing toward the positive ion. Right: a chloride ion surrounded by six water molecules, each with a partially positive hydrogen pointing toward the negative ion. Each attraction is an ion–dipole force.</title>
+<text x="320" y="22" text-anchor="middle" font-family="inherit" font-size="14" font-weight="700" style="fill:var(--ink)">NaCl dissolving: water surrounds each ion</text>
+<g style="stroke:var(--ink-2)" stroke-width="3">
+<line x1="160" y1="78" x2="178.9" y2="63.2"/><line x1="160" y1="78" x2="141.1" y2="63.2"/><line x1="213.7" y1="109" x2="235.9" y2="118"/><line x1="213.7" y1="109" x2="217" y2="85.2"/><line x1="213.7" y1="171" x2="217" y2="194.8"/><line x1="213.7" y1="171" x2="235.9" y2="162"/><line x1="160" y1="202" x2="141.1" y2="216.8"/><line x1="160" y1="202" x2="178.9" y2="216.8"/><line x1="106.3" y1="171" x2="84.1" y2="162"/><line x1="106.3" y1="171" x2="103" y2="194.8"/><line x1="106.3" y1="109" x2="103" y2="85.2"/><line x1="106.3" y1="109" x2="84.1" y2="118"/>
+<line x1="480" y1="70" x2="480" y2="94"/><line x1="480" y1="70" x2="456.8" y2="64"/><line x1="540.6" y1="105" x2="519.8" y2="117"/><line x1="540.6" y1="105" x2="534.2" y2="81.9"/><line x1="540.6" y1="175" x2="519.8" y2="163"/><line x1="540.6" y1="175" x2="557.4" y2="157.9"/><line x1="480" y1="210" x2="480" y2="186"/><line x1="480" y1="210" x2="503.2" y2="216"/><line x1="419.4" y1="175" x2="440.2" y2="163"/><line x1="419.4" y1="175" x2="425.8" y2="198.1"/><line x1="419.4" y1="105" x2="440.2" y2="117"/><line x1="419.4" y1="105" x2="402.6" y2="122.1"/>
+</g>
+<circle cx="160" cy="140" r="20" style="fill:var(--amber-soft);stroke:var(--amber)" stroke-width="2"/>
+<circle cx="480" cy="140" r="26" style="fill:var(--magenta-soft);stroke:var(--magenta)" stroke-width="2"/>
+<g style="fill:var(--red-soft);stroke:var(--red)" stroke-width="1.5">
+<circle cx="160" cy="78" r="11"/><circle cx="213.7" cy="109" r="11"/><circle cx="213.7" cy="171" r="11"/><circle cx="160" cy="202" r="11"/><circle cx="106.3" cy="171" r="11"/><circle cx="106.3" cy="109" r="11"/>
+<circle cx="480" cy="70" r="11"/><circle cx="540.6" cy="105" r="11"/><circle cx="540.6" cy="175" r="11"/><circle cx="480" cy="210" r="11"/><circle cx="419.4" cy="175" r="11"/><circle cx="419.4" cy="105" r="11"/>
+</g>
+<g style="fill:var(--blue-soft);stroke:var(--blue)" stroke-width="1.5">
+<circle cx="178.9" cy="63.2" r="7"/><circle cx="141.1" cy="63.2" r="7"/><circle cx="235.9" cy="118" r="7"/><circle cx="217" cy="85.2" r="7"/><circle cx="217" cy="194.8" r="7"/><circle cx="235.9" cy="162" r="7"/><circle cx="141.1" cy="216.8" r="7"/><circle cx="178.9" cy="216.8" r="7"/><circle cx="84.1" cy="162" r="7"/><circle cx="103" cy="194.8" r="7"/><circle cx="103" cy="85.2" r="7"/><circle cx="84.1" cy="118" r="7"/>
+<circle cx="480" cy="94" r="7"/><circle cx="456.8" cy="64" r="7"/><circle cx="519.8" cy="117" r="7"/><circle cx="534.2" cy="81.9" r="7"/><circle cx="519.8" cy="163" r="7"/><circle cx="557.4" cy="157.9" r="7"/><circle cx="480" cy="186" r="7"/><circle cx="503.2" cy="216" r="7"/><circle cx="440.2" cy="163" r="7"/><circle cx="425.8" cy="198.1" r="7"/><circle cx="440.2" cy="117" r="7"/><circle cx="402.6" cy="122.1" r="7"/>
+</g>
+<text x="160" y="145" text-anchor="middle" font-family="inherit" font-size="14" font-weight="700" style="fill:var(--ink)">Na⁺</text>
+<text x="480" y="145" text-anchor="middle" font-family="inherit" font-size="14" font-weight="700" style="fill:var(--ink)">Cl⁻</text>
+<circle cx="290" cy="110" r="9" style="fill:var(--red-soft);stroke:var(--red)" stroke-width="1.5"/>
+<text x="306" y="114" font-family="inherit" font-size="12" style="fill:var(--ink)">O end: δ−</text>
+<circle cx="290" cy="138" r="6" style="fill:var(--blue-soft);stroke:var(--blue)" stroke-width="1.5"/>
+<text x="306" y="142" font-family="inherit" font-size="12" style="fill:var(--ink)">H end: δ+</text>
+<text x="320" y="180" text-anchor="middle" font-family="inherit" font-size="12" style="fill:var(--ink-2)">Each attraction is an</text>
+<text x="320" y="196" text-anchor="middle" font-family="inherit" font-size="12" style="fill:var(--ink-2)">ion–dipole force</text>
+<text x="160" y="254" text-anchor="middle" font-family="inherit" font-size="13" font-weight="700" style="fill:var(--ink)">Hydrated sodium ion</text>
+<text x="160" y="272" text-anchor="middle" font-family="inherit" font-size="12" style="fill:var(--ink-2)">δ− oxygen ends face the cation</text>
+<text x="480" y="254" text-anchor="middle" font-family="inherit" font-size="13" font-weight="700" style="fill:var(--ink)">Hydrated chloride ion</text>
+<text x="480" y="272" text-anchor="middle" font-family="inherit" font-size="12" style="fill:var(--ink-2)">δ+ hydrogen ends face the anion</text>
+</svg>
+<figcaption>When salt dissolves, water molecules turn to face each ion: oxygen (δ−) toward Na<sup>+</sup>, hydrogen (δ+) toward Cl<sup>−</sup>. The shell of water keeps the ions apart, so they stay dissolved instead of re-forming the crystal.</figcaption>
+</figure>
+<div class="compare">
+  <div><h4>Hydrophilic: "water-loving"</h4><ul><li>Substances with an <strong>affinity for water</strong>: they <strong>will dissolve</strong> in it.</li><li>Polar and ionic substances: sugars, salts, the phosphate head of a phospholipid.</li></ul></div>
+  <div><h4>Hydrophobic: "water-fearing"</h4><ul><li>Substances with an <strong>aversion to water</strong>: they <strong>will not dissolve</strong> in it.</li><li>Nonpolar substances: oil, fat, the hydrocarbon tails of a phospholipid.</li></ul></div>
+</div>
+<p>Hydrophobic molecules are not really repelled by water. Water molecules are so strongly attracted to each other that they squeeze nonpolar molecules out of the way, which is why oil collects into droplets.</p>
+<p data-tier="likely">Water itself also dissociates very slightly: a tiny fraction of water molecules split into H<sup>+</sup> and OH<sup>−</sup> ions. The concentration of H<sup>+</sup> is what pH measures, which leads to buffers below.</p>
+<details class="check"><summary>Review question 17: Which would dissolve in water? (a) NH<sub>3</sub> (b) O<sub>2</sub> (c) CO<sub>2</sub> (d) PO<sub>4</sub><sup>3−</sup></summary><div class="ans"><ul>
+<li><strong>(a) Ammonia: yes.</strong> It is polar and forms hydrogen bonds with water, so it is soluble.</li>
+<li><strong>(b) Oxygen: only somewhat.</strong> It is nonpolar, but its small size lets a little dissolve. That is not enough for our needs, which is why red blood cells carry oxygen on hemoglobin instead of in the watery plasma.</li>
+<li><strong>(c) Carbon dioxide: somewhat.</strong> Nonpolar but small, so some dissolves. It also reacts with water to form carbonic acid, which links to breathing rate (Grade 11) and the blood buffer below.</li>
+<li><strong>(d) Phosphate ion: yes.</strong> It is an anion with an overall negative charge, so it forms ion–dipole attractions with water's δ+ hydrogens.</li>
+</ul></div></details>
+<details class="check"><summary>Review question 18: In a phospholipid, identify the hydrophobic and hydrophilic ends.</summary><div class="ans"><p>The <strong>hydrophilic</strong> (water-loving) part is the <strong>negatively charged phosphate head</strong>, which attracts water molecules. The <strong>hydrophobic</strong> (water-fearing) parts are the <strong>fatty acid tails</strong>: long hydrocarbon chains made of nonpolar C–C and C–H bonds. (More in lesson 1.04.)</p></div></details>
+
+<h3 data-tier="essential">Types of biochemical reactions</h3>
+<p>The end of the lesson previews four reaction types and where each returns: <strong>acid–base reactions and buffers</strong> (Unit 4: Homeostasis), <strong>oxidation–reduction</strong> (Unit 2: Metabolic Processes), and <strong>dehydration and hydrolysis</strong> plus <strong>enzyme-catalyzed reactions</strong> (this unit).</p>
+<h4>Acid–base reactions and buffers</h4>
+<p>An acid–base reaction is the <strong>transfer of a proton (H<sup>+</sup>) from an acid to a base</strong>. <span class="term">Buffers</span> are <strong>substances that prevent a change in the pH of a solution by accepting or releasing hydrogen ions as needed</strong>. One of the most important buffers in the blood is the <span class="term">bicarbonate buffer</span>:</p>
+<div class="eq">CO<sub>2</sub> + H<sub>2</sub>O ⇌ H<sub>2</sub>CO<sub>3</sub> ⇌ H<sup>+</sup> + HCO<sub>3</sub><sup>−</sup><br>carbon dioxide + water ⇌ carbonic acid ⇌ hydrogen ion + bicarbonate ion</div>
+<p>Normal blood pH is <strong>7.35–7.45</strong>; <strong>above 7.8 or below 7.0 can result in death</strong>. If blood pH drops (extra H<sup>+</sup>), bicarbonate ions use up the extra protons, forming carbonic acid. If pH rises, carbonic acid dissociates to release protons. This is negative feedback. Because CO<sub>2</sub> drives the equation, your breathing rate (controlled by the medulla oblongata) can change to flush out more or less CO<sub>2</sub> and shift the balance.</p>
+<div class="callout key"><p class="callout-title">On the test</p><p>Know the numbers: normal blood pH <strong>7.35–7.45</strong>, death possible <strong>below 7.0 or above 7.8</strong>. Know that a buffer works by <strong>accepting or releasing H<sup>+</sup></strong>.</p></div>
+<h4>Redox reactions</h4>
+<p>An <span class="term">oxidation–reduction (redox) reaction</span> involves the <strong>transfer of electrons</strong>: one substance loses electrons (is <span class="term">oxidized</span>) while another gains them (is <span class="term">reduced</span>). In cellular respiration, C<sub>6</sub>H<sub>12</sub>O<sub>6</sub> + 6 O<sub>2</sub> → 6 CO<sub>2</sub> + 6 H<sub>2</sub>O, the <strong>carbons in glucose lose electrons</strong> as the reaction proceeds, so glucose is <strong>oxidized</strong>; oxygen gains them and is <strong>reduced</strong> to water, and energy is released.</p>
+<div class="callout tip"><p class="callout-title">Memory trick</p><p><strong>LEO the lion says GER</strong>: <strong>L</strong>ose <strong>E</strong>lectrons = <strong>O</strong>xidized; <strong>G</strong>ain <strong>E</strong>lectrons = <strong>R</strong>educed.</p></div>
+<h4>Metabolism, dehydration synthesis and hydrolysis</h4>
+<p><span class="term">Cellular metabolism</span> is <strong>all the reactions that take place in a cell</strong>. <span class="term">Anabolism</span> is the reactions that <strong>build</strong> substances such as polymers (monomers → polymer), like synthesis reactions in Grade 10; photosynthesis is an example. <span class="term">Catabolism</span> is the reactions that <strong>break</strong> substances into simpler forms (polymer → monomers), like decomposition reactions; cellular respiration is an example.</p>
+<ul>
+  <li><span class="term">Dehydration synthesis</span> (condensation) <strong>forms a covalent bond between two molecules and forms a water molecule</strong>. One molecule gives up –OH, the other gives up –H, and those become H<sub>2</sub>O. Slide examples: two amino acids → dipeptide + H<sub>2</sub>O; glucose + glucose → maltose + H<sub>2</sub>O.</li>
+  <li><span class="term">Hydrolysis</span> is the <strong>cleavage (breakage) of a covalent bond with the addition of a water molecule</strong>. The water splits into –H and –OH, which cap the two pieces. Slide example: sucrose + H<sub>2</sub>O → glucose + fructose, with the enzyme sucrase.</li>
+</ul>
+<div class="callout tip"><p class="callout-title">Memory trick</p><p><strong>De-hydration</strong> = water removed, to build. <strong>Hydro-lysis</strong> = water (hydro) splits (lysis). Atom check: a disaccharide is C<sub>12</sub>H<sub>22</sub>O<sub>11</sub>, not C<sub>12</sub>H<sub>24</sub>O<sub>12</sub>, because one H<sub>2</sub>O left when it formed.</p></div>
+<h4>Enzyme-catalyzed reactions</h4>
+<p><span class="term">Enzymes</span> <strong>lower the activation energy required for a reaction to occur</strong>, which <strong>increases the rate of reaction</strong>. On the slide's graphs, the catalyzed reaction has a much smaller energy barrier (E<sub>a</sub>), but the reactants and products sit at the same energy levels, so the overall energy change (ΔG) is the same. Enzymes work by <strong>straining bonds</strong> and holding reactants in the <strong>best orientation</strong>; they are <strong>not used up</strong> and act on very specific substrates (lesson 1.07).</p>
+<details class="check"><summary>Review question 20: How is a catalyst different from a reactant in a chemical reaction?</summary><div class="ans"><p>Reactants (substrates) are converted into products and used up; substrates have an affinity for the active site of the enzyme. A catalyst <strong>speeds up</strong> a reaction but is <strong>not consumed</strong> by it, so it is not a reactant and can be used again.</p></div></details>
+<details class="check"><summary>Review question 19: What are the key identifying features of each reaction type?</summary><div class="ans"><ul>
+<li><strong>Acid–base (buffers):</strong> a proton (H<sup>+</sup>) moves from an acid to a base; buffers resist pH change.</li>
+<li><strong>Redox:</strong> electrons move; one substance is oxidized (loses e<sup>−</sup>), the other reduced (gains e<sup>−</sup>).</li>
+<li><strong>Anabolism / dehydration synthesis:</strong> small molecules join into a larger one and <strong>water is a product</strong>.</li>
+<li><strong>Catabolism / hydrolysis:</strong> a large molecule breaks into smaller ones and <strong>water is a reactant</strong>.</li>
+<li><strong>Enzyme-catalyzed:</strong> an enzyme (often written over the arrow) lowers activation energy so the reaction proceeds faster; it is not used up.</li>
+</ul></div></details>
+
 <h3 data-tier="essential">Lesson summary</h3>
+<ul>
+  <li>Standard atomic notation: A (protons + neutrons) on top, Z (protons) below; neutrons N = A − Z.</li>
+  <li>Cations form by losing electrons, anions by gaining them. Isotopes differ only in neutrons; radioisotopes decay, emit radiation and can be used as tracers.</li>
+  <li>Intramolecular bonds (ionic = transfer, covalent = sharing) hold atoms together and break only in chemical reactions. Biology is mostly covalent because C, H, O and N are non-metals.</li>
+  <li>ΔEN below 0.5 = nonpolar covalent; 0.5–1.7 = polar covalent; above 1.7 = ionic. A molecule's polarity depends on bond polarity <em>and</em> shape; symmetrical molecules cancel their dipoles.</li>
+  <li>Intermolecular forces, weakest to strongest: London dispersion &lt; dipole–dipole &lt; hydrogen bonding &lt; ion–dipole, all weaker than intramolecular bonds.</li>
+  <li>Hydrogen bonds give water cohesion, adhesion, surface tension, capillary action, high specific heat, evaporative cooling, a solid (ice) less dense than its liquid, and the ability to dissolve polar and ionic substances.</li>
+  <li>Hydrophilic = polar or ionic, dissolves in water; hydrophobic = nonpolar, does not.</li>
+  <li>Reactions: acid–base (proton transfer; bicarbonate buffer keeps blood at pH 7.35–7.45), redox (electron transfer), dehydration synthesis (builds, releases water), hydrolysis (breaks, uses water), enzyme-catalyzed (lower activation energy, faster rate).</li>
+</ul>
+`
+});
+/* ===================================================================
+   1.02 FUNCTIONAL GROUPS & MACROMOLECULES
+   =================================================================== */
+window.LESSONS.push({
+  id: "1.02",
+  title: "Functional Groups & Macromolecules",
+  stage: "c2",
+  where: "Monomers & polymers",
+  summary: "Carbon builds the skeleton; functional groups give it its behaviour. This lesson covers why carbon is the backbone of biological molecules, the six functional groups you must recognize and how their polarity controls solubility and acidity, and the four macromolecules with their subunits, including why lipids are not polymers.",
+  objectives: [
+    "Define an organic compound and explain how carbon's four valence electrons make it the backbone of biological molecules.",
+    "Explain why large hydrocarbons are nonpolar.",
+    "Name, draw and give the formula of the hydroxyl, carboxyl, amino, phosphate, carbonyl (aldehyde and ketone) and sulfhydryl groups, with an example of where each is found.",
+    "Rank functional groups by polarity and use them to predict whether a molecule dissolves in water.",
+    "Identify carboxyl groups as acidic (proton donors) and amino groups as basic (proton acceptors), and predict how a change in pH changes their charge.",
+    "Circle and name the functional groups in an unfamiliar molecule.",
+    "Name the four classes of macromolecules and their subunits, and state which are polymers and why lipids are not.",
+    "Describe how dehydration synthesis builds polymers and hydrolysis breaks them down."
+  ],
+  html: `
+<h3 data-tier="essential">Organic compounds</h3>
+<p><span class="term">Organic compounds</span> are <strong>compounds that contain carbon</strong>. There are a <strong>few exceptions</strong>, such as carbon dioxide (CO<sub>2</sub>) and calcium carbonate (CaCO<sub>3</sub>, the material of chalk and seashells): they contain carbon but are classed as inorganic. A useful rule of thumb is that organic molecules have carbon bonded to hydrogen.</p>
+<p>The slide shows the four families of organic molecules in living things, each with an everyday source: <strong>carbohydrates</strong> (glucose, in bread), <strong>lipids</strong> (a triglyceride, in butter), <strong>proteins</strong> (built from amino acids, in meat) and <strong>nucleic acids</strong> (DNA).</p>
+<div class="callout teacher"><p class="callout-title">Said in class</p><p>Apart from water, the molecules that make up living things all contain carbon. Carbon–carbon bonds tend to form the <strong>backbone</strong> of all four groups: carbohydrates, proteins, lipids and nucleic acids.</p></div>
+
+<h3 data-tier="essential">Carbon: the backbone atom</h3>
+<p>Carbon has <strong>4 single valence electrons</strong>, so it can form <strong>up to 4 stable covalent bonds</strong>. That is more than the other common atoms of life (hydrogen forms 1 bond, oxygen 2, nitrogen 3). With four bonds, carbon can:</p>
+<ul>
+  <li>bond to other carbons to make long <strong>chains</strong> (the slide's C<sub>6</sub>H<sub>14</sub>, hexane), <strong>branches</strong>, or <strong>rings</strong> (the slide's C<sub>6</sub>H<sub>12</sub>, cyclohexane);</li>
+  <li>form single, double or triple bonds;</li>
+  <li>still have bonds left over to attach other atoms and groups.</li>
+</ul>
+<p>Molecules containing <strong>only carbon and hydrogen</strong> are <span class="term">hydrocarbons</span>. <strong>Large hydrocarbons are often nonpolar</strong> for two reasons from lesson 1.01. First, the C–H bond has a <strong>low electronegativity difference</strong> (2.55 − 2.20 = 0.35), so it is nonpolar covalent. Second, the bonds are arranged <strong>symmetrically</strong>, so any small dipoles cancel. This is why fats and oils, which are mostly long hydrocarbon chains, do not mix with water.</p>
+<div class="callout teacher"><p class="callout-title">Said in class</p><p>The nonpolar hydrocarbon skeleton is why carbon chains make a good "backbone". A molecule with a hydrocarbon part can still interact with water if it also carries a <strong>polar functional group</strong>. Phospholipids are the example: their fatty-acid tails are nonpolar, but the phosphate group at the top is polar, so that end interacts with water. This is what lets them build the cell membrane.</p></div>
+
+<h3 data-tier="essential">What a functional group is</h3>
+<p>A <span class="term">functional group</span> is <strong>a specific group of atoms bound to a carbon backbone</strong>. The carbon skeleton gives a molecule its size and shape; the functional groups decide how it behaves. They <strong>determine the molecule's chemical properties</strong>: its <strong>chemical behaviour</strong>, its <strong>polarity</strong> and its <strong>reactivity</strong>.</p>
+<p>The slide's examples: a fatty acid is a long, nonpolar hydrocarbon chain with one <strong>carboxyl group</strong> at the end, and an amino acid has an <strong>amino group</strong> and a <strong>carboxyl group</strong> on either side of a central carbon, plus a variable <strong>side chain</strong>. In structural formulas, the letter <strong>R</strong> stands for that variable part: "the rest of the molecule", not drawn in detail.</p>
+<div class="callout teacher"><p class="callout-title">Said in class</p><p>Of all the properties functional groups control, the one you will use most is <strong>solubility</strong>: whether the molecule dissolves in water.</p></div>
+<p><strong>Chemical reactions between organic molecules often involve the functional groups.</strong> The slide shows two amino acids joining in a <strong>condensation reaction</strong>. The –OH from the carboxyl group of one amino acid and an –H from the amino group of the other leave together as water, and a <strong>peptide bond</strong> forms between the carboxyl carbon and the amino nitrogen. The rest of each molecule does not change. Only the functional groups react.</p>
+
+<h3 data-tier="essential">The six functional groups to know</h3>
+<figure class="diagram">
+<svg viewBox="0 0 640 450" role="img" aria-labelledby="b102-t1">
+<title id="b102-t1">Six cards showing the structure of each functional group attached to R, the rest of the molecule. Hydroxyl, R–O–H, very polar, in alcohols and sugars. Carboxyl, R–C double-bonded to O and single-bonded to O–H, very polar and acidic, in acids and amino acids. Amino, R–N bonded to two H, very polar and basic, in bases and amino acids. Phosphate, R–O–P with three more oxygens, two negatively charged, in ATP, DNA and phospholipids. Carbonyl, C double-bonded to O, either at the end of a chain with an H (aldehyde) or in the middle between two carbons (ketone), slightly polar. Sulfhydryl, R–S–H, the least polar, in rubber and cysteine.</title>
+<g style="fill:var(--surface-2);stroke:var(--line)"><rect x="10" y="10" width="200" height="210" rx="10"/><rect x="220" y="10" width="200" height="210" rx="10"/><rect x="430" y="10" width="200" height="210" rx="10"/><rect x="10" y="230" width="200" height="210" rx="10"/><rect x="220" y="230" width="200" height="210" rx="10"/><rect x="430" y="230" width="200" height="210" rx="10"/></g>
+<g font-family="inherit" font-size="15" font-weight="700" text-anchor="middle" style="fill:var(--ink)"><text x="110" y="36">Hydroxyl</text><text x="320" y="36">Carboxyl</text><text x="530" y="36">Amino</text><text x="110" y="256">Phosphate</text><text x="320" y="256">Carbonyl</text><text x="530" y="256">Sulfhydryl</text></g>
+<g font-family="inherit" font-size="13" text-anchor="middle" style="fill:var(--ink-2)"><text x="110" y="56">–OH</text><text x="320" y="56">–COOH</text><text x="530" y="56">–NH<tspan font-size="11" dy="4">2</tspan></text><text x="110" y="276">–PO<tspan font-size="11" dy="4">4</tspan></text><text x="320" y="276">–COH (end) or –CO– (middle)</text><text x="530" y="276">–SH</text></g>
+<g style="stroke:var(--ink-2)" stroke-width="1.8">
+<line x1="70" y1="109" x2="90" y2="109"/><line x1="110" y1="109" x2="130" y2="109"/>
+<line x1="275" y1="115" x2="296" y2="115"/><line x1="301" y1="106" x2="301" y2="86"/><line x1="309" y1="106" x2="309" y2="86"/><line x1="314" y1="115" x2="335" y2="115"/><line x1="355" y1="115" x2="372" y2="115"/>
+<line x1="480" y1="115" x2="509" y2="115"/><line x1="528" y1="108" x2="549" y2="92"/><line x1="528" y1="122" x2="549" y2="138"/>
+<line x1="40" y1="336" x2="53" y2="336"/><line x1="71" y1="336" x2="91" y2="336"/><line x1="109" y1="336" x2="130" y2="336"/><line x1="100" y1="325" x2="100" y2="311"/><line x1="96" y1="346" x2="96" y2="361"/><line x1="104" y1="346" x2="104" y2="361"/>
+<line x1="246" y1="336" x2="260" y2="336"/><line x1="276" y1="336" x2="291" y2="336"/><line x1="264" y1="326" x2="264" y2="311"/><line x1="272" y1="326" x2="272" y2="311"/>
+<line x1="346" y1="336" x2="362" y2="336"/><line x1="378" y1="336" x2="392" y2="336"/><line x1="366" y1="326" x2="366" y2="311"/><line x1="374" y1="326" x2="374" y2="311"/>
+<line x1="490" y1="336" x2="519" y2="336"/><line x1="541" y1="336" x2="566" y2="336"/>
+</g>
+<g font-family="inherit" font-size="16" font-style="italic" text-anchor="middle" style="fill:var(--ink-2)"><text x="60" y="115">R</text><text x="265" y="121">R</text><text x="470" y="121">R</text><text x="30" y="342">R</text><text x="238" y="342">R</text><text x="338" y="342">R</text><text x="402" y="342">R′</text><text x="480" y="342">R</text></g>
+<g font-family="inherit" font-size="16" font-weight="700" text-anchor="middle">
+<text x="100" y="115" style="fill:var(--red)">O</text><text x="140" y="115" style="fill:var(--ink)">H</text>
+<text x="305" y="121" style="fill:var(--ink)">C</text><text x="305" y="81" style="fill:var(--red)">O</text><text x="345" y="121" style="fill:var(--red)">O</text><text x="380" y="121" style="fill:var(--ink)">H</text>
+<text x="520" y="121" style="fill:var(--blue)">N</text><text x="556" y="93" style="fill:var(--ink)">H</text><text x="556" y="149" style="fill:var(--ink)">H</text>
+<text x="62" y="342" style="fill:var(--red)">O</text><text x="100" y="342" style="fill:var(--magenta)">P</text><text x="142" y="342" style="fill:var(--red)">O<tspan font-size="12" dy="-7">−</tspan></text><text x="102" y="307" style="fill:var(--red)">O<tspan font-size="12" dy="-7">−</tspan></text><text x="100" y="377" style="fill:var(--red)">O</text>
+<text x="268" y="342" style="fill:var(--ink)">C</text><text x="268" y="307" style="fill:var(--red)">O</text><text x="298" y="342" style="fill:var(--ink)">H</text>
+<text x="370" y="342" style="fill:var(--ink)">C</text><text x="370" y="307" style="fill:var(--red)">O</text>
+<text x="530" y="342" style="fill:var(--amber)">S</text><text x="575" y="342" style="fill:var(--ink)">H</text>
+</g>
+<g font-family="inherit" font-size="11.5" text-anchor="middle" style="fill:var(--ink-2)"><text x="268" y="368">aldehyde (end)</text><text x="370" y="368">ketone (middle)</text></g>
+<line x1="320" y1="296" x2="320" y2="374" style="stroke:var(--line)" stroke-dasharray="3 3"/>
+<g font-family="inherit" font-size="12.5" font-weight="700" text-anchor="middle"><text x="110" y="178" style="fill:var(--teal)">Very polar</text><text x="320" y="178" style="fill:var(--teal)">Very polar · acidic</text><text x="530" y="178" style="fill:var(--teal)">Very polar · basic</text><text x="110" y="398" style="fill:var(--teal)">Polar · negative charges</text><text x="320" y="398" style="fill:var(--amber)">Slightly polar</text><text x="530" y="398" style="fill:var(--ink-2)">Less polar still</text></g>
+<g font-family="inherit" font-size="11" text-anchor="middle" style="fill:var(--ink-2)"><text x="110" y="196">found in</text><text x="320" y="196">found in</text><text x="530" y="196">found in</text><text x="110" y="416">found in</text><text x="320" y="416">found in</text><text x="530" y="416">found in</text></g>
+<g font-family="inherit" font-size="12" text-anchor="middle" style="fill:var(--ink)"><text x="110" y="212">alcohols (ethanol), sugars</text><text x="320" y="212">acids (vinegar), amino acids</text><text x="530" y="212">bases (ammonia), amino acids</text><text x="110" y="432">ATP, DNA, phospholipids</text><text x="320" y="432">aldehydes, ketones, sugars</text><text x="530" y="432">rubber, cysteine</text></g>
+</svg>
+<figcaption>The six functional groups, each attached to R (the rest of the molecule). Oxygen is red, nitrogen blue, phosphorus magenta and sulfur amber. The more O–H and N–H a group has, the more polar it is.</figcaption>
+</figure>
+<div class="table-wrap"><table class="data"><thead><tr><th>Group</th><th>Formula</th><th>Polarity</th><th>Found in (slide examples)</th></tr></thead><tbody>
+<tr><td>Hydroxyl</td><td>–OH</td><td>Very polar</td><td>Alcohols (e.g. ethanol); all sugars</td></tr>
+<tr><td>Carboxyl</td><td>–COOH</td><td>Very polar; acidic</td><td>Acids (e.g. vinegar); every amino acid and fatty acid</td></tr>
+<tr><td>Amino</td><td>–NH<sub>2</sub></td><td>Very polar; basic</td><td>Bases (e.g. ammonia); every amino acid</td></tr>
+<tr><td>Phosphate</td><td>–PO<sub>4</sub></td><td>Polar; carries negative charges in cells</td><td>ATP; DNA and RNA; phospholipids</td></tr>
+<tr><td>Carbonyl</td><td>–COH (aldehyde) or –CO– (ketone)</td><td>Slightly polar</td><td>Aldehydes (e.g. formaldehyde); ketones (e.g. acetone)</td></tr>
+<tr><td>Sulfhydryl</td><td>–SH</td><td>Even less polar</td><td>Rubber; the amino acid cysteine</td></tr>
+</tbody></table></div>
+<p>The carbonyl group comes in two versions. They have the same C=O, in a different position:</p>
+<ul>
+  <li>In an <span class="term">aldehyde</span>, the C=O is at the <strong>end</strong> of the carbon chain, so the carbonyl carbon also carries an H (–CHO). Example: formaldehyde.</li>
+  <li>In a <span class="term">ketone</span>, the C=O is in the <strong>middle</strong> of the chain, with a carbon on each side (–CO–). Example: acetone, in nail-polish remover.</li>
+</ul>
+<div class="callout tip"><p class="callout-title">Memory trick</p><p>An ald<strong>e</strong>hyde's carbonyl carbon has an <strong>H</strong> on it, and a carbon whose last bond goes to H can only sit at the <strong>e</strong>nd of a chain. A <strong>k</strong>etone's carbonyl is <strong>k</strong>ept in the middle, between two carbons. You will use this in lesson 1.03: glucose has an aldehyde, fructose has a ketone.</p></div>
+<p data-tier="likely">The functional-group chart in the class notes also includes the <strong>methyl</strong> group (–CH<sub>3</sub>). It is nonpolar, since it is just a small piece of hydrocarbon.</p>
+<div class="callout warn"><p class="callout-title">Common mistake</p><p>Do not confuse <strong>carboxyl</strong> (–COOH, two oxygens) with <strong>carbonyl</strong> (C=O, one oxygen). A carboxyl actually contains a carbonyl and a hydroxyl on the same carbon, but you name it once, as carboxyl. Also, a <strong>hydroxyl</strong> group (–OH, covalently bonded to carbon) is not the hydroxide ion (OH<sup>−</sup>): it does not come off as an ion, so sugars and alcohols are <strong>not</strong> bases.</p></div>
+
+<h3 data-tier="essential">Polarity and solubility</h3>
+<p>The slide ranks the groups: <strong>hydroxyl (–OH), carboxyl (–COOH) and amino (–NH<sub>2</sub>) are very polar; carbonyl (C=O) is slightly polar; and sulfhydryl (–SH) is even less polar.</strong> The reasons come straight from lesson 1.01:</p>
+<ul>
+  <li>O–H and N–H bonds are strongly polar (ΔEN 1.24 and 0.84), and the H on them can <strong>hydrogen-bond</strong> with water. Hydroxyl, carboxyl and amino groups pull a molecule into solution.</li>
+  <li>C=O is polar, but there is no H on the oxygen, so a carbonyl can only <em>accept</em> hydrogen bonds from water, not donate them. That makes it only slightly polar.</li>
+  <li>S and H have almost the same electronegativity (2.58 and 2.20, ΔEN 0.38), so sulfhydryl is the least polar of the six.</li>
+</ul>
+<p>This is the <strong>reason sugars and alcohols are highly soluble in water</strong>: they contain the polar hydroxyl group. The slide's glucose carries five –OH groups; ethanol has one on a short two-carbon chain. Both dissolve easily.</p>
+<details class="check"><summary>Worksheet question 3: Which functional groups would be polar? How does this affect function?</summary><div class="ans"><p>Class key: <strong>carboxyl, hydroxyl and amino</strong> are the most polar (they can form hydrogen bonds with each other and with water). <strong>Carbonyl and phosphate</strong> have medium polarity (dipole–dipole). <strong>Sulfhydryl</strong> has low polarity. The more polar groups a molecule has, the more water-soluble it is and the more strongly it attracts other polar molecules, or other parts of itself.</p></div></details>
+<details class="check"><summary>Application question 3: Glucose has many hydroxyl groups. Relate them to glucose's high solubility in blood plasma. How does a lipid, mainly hydrocarbon chains, compare?</summary><div class="ans"><p>The hydroxyl groups (–OH) in glucose can form <strong>many hydrogen bonds with water molecules</strong>, making glucose highly soluble in blood plasma, which is mostly water. Lipids consist mostly of long hydrocarbon chains, which are <strong>nonpolar</strong> and cannot hydrogen-bond with water. As a result, lipids are <strong>insoluble</strong> in plasma and must be transported by proteins (e.g. <strong>lipoproteins</strong>) rather than dissolving freely.</p></div></details>
+<details class="check"><summary>Application question 2: Phospholipids have hydrocarbon chains (–CH<sub>2</sub>–) and a phosphate group (–PO<sub>4</sub><sup>2−</sup>). Explain how these make phospholipids form bilayers in water, and predict what would happen if the phosphate were removed.</summary><div class="ans"><p>Phospholipids are <strong>amphipathic</strong>: their long hydrocarbon chains are nonpolar and hydrophobic, while the phosphate group is polar, negatively charged and hydrophilic. In water they spontaneously form <strong>bilayers</strong>, with the tails inside (away from water) and the phosphate heads facing outward toward the water. If the phosphate group were removed, the molecule would lose its polar head and become fully hydrophobic. It would no longer self-assemble into membranes, and cells could not form barriers with controlled permeability.</p></div></details>
+<h3 data-tier="likely">Acidic and basic groups</h3>
+<p>Some functional groups can give away or pick up a hydrogen ion (H<sup>+</sup>, a proton). Recall the <strong>Brønsted–Lowry</strong> definitions: an <strong>acid is a proton donor</strong> and a <strong>base is a proton acceptor</strong>.</p>
+<ul>
+  <li><strong>Carboxyl is acidic.</strong> The H on the –OH part of the carboxyl can be removed: –COOH → –COO<sup>−</sup> + H<sup>+</sup>. The neighbouring C=O pulls electrons away from that O–H, which makes the H easy to lose.</li>
+  <li><strong>Amino is basic.</strong> Nitrogen has a lone pair that can pick up an H<sup>+</sup>: –NH<sub>2</sub> + H<sup>+</sup> → –NH<sub>3</sub><sup>+</sup>.</li>
+  <li><strong>Phosphate</strong> can go either way. With H's attached it can release H<sup>+</sup> (the textbook chart in the class notes calls it acidic). In its fully ionized PO<sub>4</sub><sup>3−</sup> form it can pull an H<sup>+</sup> away from another molecule, so it acts as a base.</li>
+</ul>
+<div class="callout teacher"><p class="callout-title">Said in class</p><p>Protonation decides the form of an amino group: whether it is –NH<sub>2</sub> or –NH<sub>3</sub><sup>+</sup> depends on how many H<sup>+</sup> ions are around, which is the pH.</p></div>
+<details class="check"><summary>Worksheet question 1: Look at the structure of a carboxyl group. What makes it acidic?</summary><div class="ans"><p>The <strong>hydrogen on the hydroxyl part of the carboxyl can be removed</strong> (donated as H<sup>+</sup>). By the Brønsted–Lowry definition, anything that can donate a hydrogen ion is an acid.</p></div></details>
+<details class="check"><summary>Worksheet question 2: Would the phosphate group act as an acid or a base?</summary><div class="ans"><p>Class key: in the <strong>PO<sub>4</sub><sup>3−</sup> form it acts as a base</strong>, because it can pull a hydrogen ion away from another molecule, and bases are proton acceptors.</p></div></details>
+<details class="check"><summary>Application question 4: Hemoglobin's ability to bind oxygen depends partly on amino and carboxyl groups. Predict how a drop in blood pH (more H<sup>+</sup>) would affect these groups and the protein.</summary><div class="ans"><p>At a lower pH, the extra H<sup>+</sup> ions <strong>protonate</strong> amino groups (–NH<sub>2</sub> → –NH<sub>3</sub><sup>+</sup>) and keep carboxyl groups in their non-ionized form (–COOH). This changes the charge interactions among hemoglobin's amino acid side chains. Since protein folding depends on interactions between charged groups, the altered charges shift hemoglobin's shape, <strong>reducing its ability to bind oxygen</strong>.</p></div></details>
+<details class="check"><summary>Worksheet question 5: Serine or tryptophan: which amino acid is more polar, and why does it matter?</summary><div class="ans"><p><strong>Serine</strong> is more polar: its side chain is a small –CH<sub>2</sub>OH with a polar hydroxyl, so it has more polar groups relative to its overall size. Tryptophan's side chain is a large, mostly nonpolar double ring. Polarity affects solubility and how a molecule interacts with others. In a protein it also decides which parts of the chain attract each other, which makes the chain bend and coil into its shape.</p></div></details>
+<p data-tier="extra">At the pH of your blood (about 7.4), a free amino acid usually carries both charges at once: its carboxyl has lost an H (–COO<sup>−</sup>) and its amino group has gained one (–NH<sub>3</sub><sup>+</sup>). A molecule like this is called a zwitterion.</p>
+
+<h3 data-tier="likely">Spotting functional groups in real molecules</h3>
+<p>Tests often show a molecule you have never seen and ask you to circle and name its functional groups. The slide does this with three molecules: vitamin B<sub>6</sub> (pyridoxal phosphate: a hydroxyl, a phosphate and an aldehyde carbonyl), a nucleotide-like molecule (phosphate, hydroxyl and amino groups) and the amino acid cysteine, HS–CH<sub>2</sub>–CH(NH<sub>2</sub>)–COOH (sulfhydryl, amino and carboxyl).</p>
+<ol class="steps">
+  <li><p class="step-head">Find every O, N, S and P</p><p>Functional groups are built around these atoms. Carbon and hydrogen on their own are just the backbone.</p></li>
+  <li><p class="step-head">Check what each O is bonded to</p><p>O–H on a carbon = hydroxyl. C=O with carbon on both sides = ketone; C=O on a carbon that also has an H = aldehyde. C=O and O–H on the <em>same</em> carbon = carboxyl (name it once, as carboxyl).</p></li>
+  <li><p class="step-head">Check N, S and P</p><p>N with two H's = amino. S–H = sulfhydryl. P surrounded by four O's = phosphate.</p></li>
+</ol>
+<div class="callout key"><p class="callout-title">On the test</p><p>The class worksheet labels the hydroxyls and ring C=O (carbonyl) groups on steroids such as testosterone and cortisol, the many hydroxyls on glucose, and the amino, carboxyl and sulfhydryl groups in short amino acid chains. Be ready to circle and name groups in steroids, sugars and amino acids. The most common slip is labelling one carboxyl as "a carbonyl and a hydroxyl".</p></div>
+<details class="check"><summary>Worksheet question 4: Draw alpha-glucose. What functional groups are present, and what properties do they give it?</summary><div class="ans"><p>Ring glucose carries <strong>a bunch of hydroxyls</strong>: four on the ring carbons and one on the CH<sub>2</sub>OH group (five in total). They make glucose very polar, so it hydrogen-bonds with water and dissolves easily in blood plasma. You will learn to draw the ring in lesson 1.03.</p></div></details>
+
+<h3 data-tier="essential">Biological macromolecules</h3>
+<p>A <span class="term">macromolecule</span> is <strong>a very large organic molecule</strong>. There are <strong>four major groups</strong>: <strong>carbohydrates, lipids, proteins and nucleic acids</strong>. The slide's space-filling models show their size: a piece of starch, a triacylglycerol (fat), an enzyme and a stretch of DNA, each made of hundreds to millions of atoms.</p>
+<p><strong>All macromolecules are composed of smaller subunits.</strong> Cells do not build a protein one atom at a time. They join ready-made pieces, the way you build a wall from bricks rather than from sand. A <span class="term">polymer</span> is <strong>a large molecule composed of long chains of repeating subunits</strong>, called <span class="term">monomers</span> ("poly" = many, "mono" = one, "-mer" = part). The slide adds an asterisk: <strong>not lipids</strong>.</p>
+<figure class="diagram">
+<svg viewBox="0 0 640 316" role="img" aria-labelledby="b102-t2">
+<title id="b102-t2">The four macromolecules and their subunits. Carbohydrates: monosaccharide hexagons join into a long polysaccharide chain. Proteins: amino acid beads join into a polypeptide chain. Nucleic acids: nucleotides, each a phosphate, sugar and base, join into a DNA or RNA strand. Lipids: a triglyceride is one glycerol attached to three fatty acids and is not a polymer, because there is no repeating chain of one subunit.</title>
+<defs>
+<marker id="b102-m1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" style="fill:var(--ink-2)"/></marker>
+<polygon id="b102-hex" points="12,0 6,10.4 -6,10.4 -12,0 -6,-10.4 6,-10.4" style="fill:var(--teal-soft);stroke:var(--teal)" stroke-width="1.5"/>
+<circle id="b102-aa" r="9" style="fill:var(--amber-soft);stroke:var(--amber)" stroke-width="1.5"/>
+<g id="b102-nt"><line x1="-12" y1="0" x2="0" y2="0" style="stroke:var(--ink-2)" stroke-width="1.5"/><line x1="0" y1="6" x2="0" y2="12" style="stroke:var(--ink-2)" stroke-width="1.5"/><circle cx="-12" cy="0" r="5" style="fill:var(--blue-soft);stroke:var(--blue)" stroke-width="1.2"/><polygon points="0,-9 8.6,-2.8 5.3,7.3 -5.3,7.3 -8.6,-2.8" style="fill:var(--magenta-soft);stroke:var(--magenta)" stroke-width="1.5"/><rect x="-6" y="12" width="12" height="12" style="fill:var(--surface-2);stroke:var(--ink-2)" stroke-width="1.2"/></g>
+</defs>
+<g font-family="inherit" font-size="12" font-weight="700" style="fill:var(--ink-2)"><text x="10" y="22">Macromolecule</text><text x="215" y="22" text-anchor="middle">Monomer (subunit)</text><text x="445" y="22" text-anchor="middle">Polymer</text></g>
+<g style="stroke:var(--line)"><line x1="10" y1="32" x2="630" y2="32"/><line x1="10" y1="102" x2="630" y2="102"/><line x1="10" y1="170" x2="630" y2="170"/><line x1="10" y1="246" x2="630" y2="246"/></g>
+<g font-family="inherit" font-size="13" font-weight="700" style="fill:var(--ink)"><text x="10" y="64">Carbohydrate</text><text x="10" y="132">Protein</text><text x="10" y="202">Nucleic acid</text><text x="10" y="274">Lipid</text></g>
+<g font-family="inherit" font-size="12" style="fill:var(--ink-2)"><text x="10" y="80">(complex)</text><text x="10" y="148">(polypeptide)</text><text x="10" y="218">(DNA, RNA)</text><text x="10" y="290">(triglyceride)</text></g>
+<g style="stroke:var(--ink-2)" stroke-width="1.8" marker-end="url(#b102-m1)"><line x1="240" y1="67" x2="284" y2="67"/><line x1="240" y1="135" x2="284" y2="135"/><line x1="240" y1="196" x2="284" y2="196"/></g>
+<use href="#b102-hex" x="215" y="67"/>
+<line x1="305" y1="67" x2="577" y2="67" style="stroke:var(--ink-2)" stroke-width="2"/>
+<use href="#b102-hex" x="305" y="67"/><use href="#b102-hex" x="339" y="67"/><use href="#b102-hex" x="373" y="67"/><use href="#b102-hex" x="407" y="67"/><use href="#b102-hex" x="441" y="67"/><use href="#b102-hex" x="475" y="67"/><use href="#b102-hex" x="509" y="67"/><use href="#b102-hex" x="543" y="67"/><use href="#b102-hex" x="577" y="67"/>
+<use href="#b102-aa" x="215" y="135"/>
+<line x1="305" y1="135" x2="585" y2="135" style="stroke:var(--ink-2)" stroke-width="2"/>
+<use href="#b102-aa" x="305" y="135"/><use href="#b102-aa" x="333" y="135"/><use href="#b102-aa" x="361" y="135"/><use href="#b102-aa" x="389" y="135"/><use href="#b102-aa" x="417" y="135"/><use href="#b102-aa" x="445" y="135"/><use href="#b102-aa" x="473" y="135"/><use href="#b102-aa" x="501" y="135"/><use href="#b102-aa" x="529" y="135"/><use href="#b102-aa" x="557" y="135"/><use href="#b102-aa" x="585" y="135"/>
+<use href="#b102-nt" x="218" y="192"/>
+<line x1="308" y1="192" x2="560" y2="192" style="stroke:var(--ink-2)" stroke-width="2"/>
+<use href="#b102-nt" x="320" y="192"/><use href="#b102-nt" x="350" y="192"/><use href="#b102-nt" x="380" y="192"/><use href="#b102-nt" x="410" y="192"/><use href="#b102-nt" x="440" y="192"/><use href="#b102-nt" x="470" y="192"/><use href="#b102-nt" x="500" y="192"/><use href="#b102-nt" x="530" y="192"/><use href="#b102-nt" x="560" y="192"/>
+<g font-family="inherit" font-size="11.5" text-anchor="middle" style="fill:var(--ink-2)"><text x="215" y="94">monosaccharide</text><text x="215" y="162">amino acid</text><text x="215" y="238">nucleotide</text><text x="441" y="94">polysaccharide (e.g. starch)</text><text x="445" y="162">polypeptide chain</text><text x="440" y="238">nucleic acid strand</text></g>
+<rect x="180" y="258" width="12" height="40" rx="2" style="fill:var(--amber-soft);stroke:var(--amber)" stroke-width="1.5"/>
+<g style="fill:none;stroke:var(--teal)" stroke-width="2" stroke-linejoin="round"><path d="M192,265 l9,-4 l9,4 l9,-4 l9,4 l9,-4 l9,4 l9,-4 l9,4 l9,-4 l9,4"/><path d="M192,278 l9,-4 l9,4 l9,-4 l9,4 l9,-4 l9,4 l9,-4 l9,4 l9,-4 l9,4"/><path d="M192,291 l9,-4 l9,4 l9,-4 l9,4 l9,-4 l9,4 l9,-4 l9,4 l9,-4 l9,4"/></g>
+<text x="186" y="312" text-anchor="middle" font-family="inherit" font-size="11.5" style="fill:var(--ink-2)">glycerol</text>
+<text x="238" y="312" text-anchor="middle" font-family="inherit" font-size="11.5" style="fill:var(--ink-2)">+ 3 fatty acids</text>
+<text x="310" y="270" font-family="inherit" font-size="13" font-weight="700" style="fill:var(--red)">Not a polymer</text>
+<text x="310" y="288" font-family="inherit" font-size="12" style="fill:var(--ink-2)">1 glycerol + 3 fatty acids and it is full:</text>
+<text x="310" y="304" font-family="inherit" font-size="12" style="fill:var(--ink-2)">no long chain of one repeating subunit</text>
+</svg>
+<figcaption>Carbohydrates, proteins and nucleic acids are polymers: one kind of monomer repeated many times. A triglyceride is built from two different kinds of parts, only four parts in total, so it is not a polymer.</figcaption>
+</figure>
+<div class="table-wrap"><table class="data"><thead><tr><th>Macromolecule</th><th>Subunit</th><th>Polymer?</th><th>Bond between subunits (coming up)</th></tr></thead><tbody>
+<tr><td>Complex carbohydrate</td><td>Monosaccharide (simple sugar)</td><td>Yes</td><td>Glycosidic linkage (1.03)</td></tr>
+<tr><td>Lipid (triglyceride)</td><td>Glycerol backbone + fatty acids</td><td>No</td><td>Ester linkage (1.04)</td></tr>
+<tr><td>Protein</td><td>Amino acids</td><td>Yes</td><td>Peptide bond (1.06)</td></tr>
+<tr><td>Nucleic acid (DNA &amp; RNA)</td><td>Nucleotides</td><td>Yes</td><td>Phosphodiester linkage (1.05)</td></tr>
+</tbody></table></div>
+<div class="callout teacher"><p class="callout-title">Said in class</p><p>Why lipids are not polymers: a triglyceride is one small glycerol with three fatty acids attached. Once those three spots are used, the molecule cannot be built any further, so it never forms a long chain of repeating units the way a polysaccharide, a polypeptide chain or a DNA strand does.</p></div>
+<div class="callout warn"><p class="callout-title">Common mistake</p><p>"Fats are big, so they must be polymers." Size is not the test; <strong>repeating</strong> is. A fat is made of two <em>different</em> kinds of parts, only four parts in total. Also notice the slide says <strong>complex</strong> carbohydrates are polymers: a single monosaccharide such as glucose is a monomer.</p></div>
+<div class="callout key"><p class="callout-title">On the test</p><p>Be able to fill in the table from memory: macromolecule, subunit, polymer yes or no. "Which macromolecule is not a polymer, and why?" is a classic short answer.</p></div>
+
+<h3 data-tier="essential">Building and breaking polymers</h3>
+<p>The slide's arrow diagram shows monomers joining into a polymer by <strong>condensation</strong>, and the polymer splitting back into monomers by <strong>hydrolysis</strong>. These are the two reactions from lesson 1.01, now doing their main job.</p>
+<figure class="diagram">
+<svg viewBox="0 0 640 300" role="img" aria-labelledby="b102-t3">
+<title id="b102-t3">Top: two monomers, each with hydroxyl groups. The OH of the first monomer and the H from the HO group of the second are highlighted. Downward arrow, dehydration synthesis: water is removed and a bond is formed. Bottom: the two monomers joined through an oxygen bridge, the new covalent bond, plus one water molecule made from the highlighted atoms. Upward arrow, hydrolysis: water is added and the bond is broken, giving back the two monomers.</title>
+<defs>
+<marker id="b102-m2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" style="fill:var(--teal)"/></marker>
+<marker id="b102-m3" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" style="fill:var(--magenta)"/></marker>
+</defs>
+<g style="fill:var(--amber-soft);stroke:var(--amber)" stroke-dasharray="3 2"><rect x="265" y="48" width="31" height="26" rx="5"/><rect x="341" y="48" width="17" height="26" rx="5"/><rect x="466" y="206" width="54" height="30" rx="6"/></g>
+<g style="fill:var(--teal-soft);stroke:var(--teal)" stroke-width="2"><polygon points="258,62 244,86.2 216,86.2 202,62 216,37.8 244,37.8"/><polygon points="438,62 424,86.2 396,86.2 382,62 396,37.8 424,37.8"/><polygon points="278,222 264,246.2 236,246.2 222,222 236,197.8 264,197.8"/><polygon points="398,222 384,246.2 356,246.2 342,222 356,197.8 384,197.8"/></g>
+<g style="stroke:var(--ink-2)" stroke-width="2"><line x1="192" y1="62" x2="202" y2="62"/><line x1="258" y1="62" x2="266" y2="62"/><line x1="373" y1="62" x2="382" y2="62"/><line x1="438" y1="62" x2="446" y2="62"/><line x1="214" y1="222" x2="222" y2="222"/><line x1="398" y1="222" x2="406" y2="222"/></g>
+<g style="stroke:var(--red)" stroke-width="3"><line x1="278" y1="222" x2="302" y2="222"/><line x1="318" y1="222" x2="342" y2="222"/></g>
+<g font-family="inherit" font-size="15" style="fill:var(--ink)"><text x="190" y="68" text-anchor="end">HO</text><text x="268" y="68">OH</text><text x="344" y="68">H</text><text x="358" y="68">O</text><text x="448" y="68">OH</text><text x="212" y="228" text-anchor="end">HO</text><text x="408" y="228">OH</text></g>
+<text x="310" y="228" text-anchor="middle" font-family="inherit" font-size="16" font-weight="700" style="fill:var(--red)">O</text>
+<text x="320" y="70" text-anchor="middle" font-family="inherit" font-size="20" style="fill:var(--ink)">+</text>
+<text x="450" y="229" text-anchor="middle" font-family="inherit" font-size="20" style="fill:var(--ink)">+</text>
+<text x="493" y="227" text-anchor="middle" font-family="inherit" font-size="16" font-weight="700" style="fill:var(--ink)">H<tspan font-size="11" dy="4">2</tspan><tspan dy="-4">O</tspan></text>
+<g font-family="inherit" font-size="12" text-anchor="middle" style="fill:var(--ink-2)"><text x="230" y="110">monomer</text><text x="410" y="110">monomer</text><text x="310" y="292">two monomers joined (a dimer)</text></g>
+<line x1="310" y1="234" x2="310" y2="258" style="stroke:var(--red)" stroke-dasharray="2 2"/>
+<text x="310" y="272" text-anchor="middle" font-family="inherit" font-size="12" font-weight="700" style="fill:var(--red)">new covalent bond</text>
+<line x1="190" y1="124" x2="190" y2="184" style="stroke:var(--teal)" stroke-width="3" marker-end="url(#b102-m2)"/>
+<line x1="470" y1="184" x2="470" y2="124" style="stroke:var(--magenta)" stroke-width="3" marker-end="url(#b102-m3)"/>
+<g font-family="inherit" font-size="12" text-anchor="end" style="fill:var(--ink)"><text x="180" y="140" font-size="13" font-weight="700" style="fill:var(--teal)">Dehydration synthesis</text><text x="180" y="156">(condensation)</text><text x="180" y="172">water removed, bond formed</text></g>
+<g font-family="inherit" font-size="12" style="fill:var(--ink)"><text x="480" y="140" font-size="13" font-weight="700" style="fill:var(--magenta)">Hydrolysis</text><text x="480" y="156">water added,</text><text x="480" y="172">bond broken</text></g>
+</svg>
+<figcaption>Going down: the highlighted –OH and –H leave as one water molecule and the leftover oxygen bridges the two monomers. Going up: a water molecule is split, its –H and –OH cap the two pieces, and the bond breaks.</figcaption>
+</figure>
+<div class="compare">
+  <div>
+    <h4>Dehydration synthesis (condensation)</h4>
+    <ul>
+      <li><strong>Joins</strong> two molecules with a new <strong>covalent bond</strong>.</li>
+      <li>An <strong>–OH</strong> from one monomer and an <strong>–H</strong> from the other are removed and form <strong>H<sub>2</sub>O</strong>.</li>
+      <li>Repeat it and the chain grows: joining n monomers in a row releases n − 1 water molecules.</li>
+      <li><strong>Anabolic</strong>: builds, and needs an input of energy.</li>
+    </ul>
+  </div>
+  <div>
+    <h4>Hydrolysis</h4>
+    <ul>
+      <li><strong>Breaks</strong> the covalent bond between two monomers.</li>
+      <li>A water molecule is <strong>added</strong>: its –H goes to one piece and its –OH to the other.</li>
+      <li>This is what digestion does to the starch, protein and fat in your food.</li>
+      <li><strong>Catabolic</strong>: breaks down, and releases energy.</li>
+    </ul>
+  </div>
+</div>
+<p>Why does water come out every time? The groups that react are the polar functional groups at the ends of each monomer: hydroxyl, carboxyl and amino groups. Between them they give up exactly the atoms of one water molecule (an –OH from one and an –H from the other), and the atoms left behind bond together. In cells, both reactions are sped up by specific enzymes.</p>
+<details class="check"><summary>How many water molecules are released when 100 glucose molecules join into one unbranched chain?</summary><div class="ans"><p><strong>99.</strong> Each new bond releases one water, and joining 100 monomers in a row takes 99 bonds. Completely hydrolyzing that chain back into glucose would use 99 water molecules.</p></div></details>
+<div class="callout tip"><p class="callout-title">Memory trick</p><p>Building = <strong>losing</strong> water (a dehydrated person has lost water). Breaking = <strong>using</strong> water (hydro = water, lysis = split).</p></div>
+
+<h3 data-tier="extra">How do scientists know these structures?</h3>
+<p>Application question 1 asks how compounds are mapped. Molecules are far too small to see with a light microscope, so chemists combine several techniques:</p>
+<ul>
+  <li><strong>Nuclear magnetic resonance (NMR) spectroscopy</strong> shows the environment of hydrogen and carbon atoms, so the carbon "skeleton" and the positions of functional groups can be reconstructed.</li>
+  <li><strong>Mass spectrometry (MS)</strong> gives the molecular mass and the masses of fragments, which are pieced together like a puzzle.</li>
+  <li><strong>Infrared (IR) spectroscopy</strong> identifies functional groups (e.g. –OH, C=O) from how their bonds vibrate.</li>
+  <li><strong>X-ray crystallography</strong> directly shows atom positions in 3-D, if the compound can be crystallized.</li>
+</ul>
+<p>For very large molecules such as proteins, <strong>cryo-electron microscopy</strong> (flash-freezing the molecules and imaging thousands of them with an electron beam) is now also widely used.</p>
+
+<h3 data-tier="essential">Lesson summary</h3>
+<ul>
+  <li>Organic compounds contain carbon (exceptions include CO<sub>2</sub> and CaCO<sub>3</sub>). Carbon's 4 valence electrons let it form 4 covalent bonds, building chains, branches and rings.</li>
+  <li>Hydrocarbons contain only C and H. Large hydrocarbons are nonpolar because of their low ΔEN and symmetrical bonds.</li>
+  <li>Functional groups are specific groups of atoms on a carbon backbone that decide chemical behaviour, polarity and reactivity. Reactions between organic molecules usually happen at the functional groups.</li>
+  <li>Know all six: hydroxyl –OH (alcohols, sugars), carboxyl –COOH (acids), amino –NH<sub>2</sub> (bases), phosphate –PO<sub>4</sub> (ATP), carbonyl C=O (aldehyde at the end, ketone in the middle), sulfhydryl –SH (rubber).</li>
+  <li>Polarity: hydroxyl, carboxyl and amino are very polar; carbonyl slightly polar; sulfhydryl even less. Polar –OH groups make sugars and alcohols highly water-soluble.</li>
+  <li>Carboxyl groups are acidic (donate H<sup>+</sup>); amino groups are basic (accept H<sup>+</sup>, becoming –NH<sub>3</sub><sup>+</sup>), so pH changes their charge.</li>
+  <li>Four macromolecules: carbohydrates (monosaccharides), lipids (glycerol + fatty acids), proteins (amino acids), nucleic acids (nucleotides). All but lipids are polymers.</li>
+  <li>Dehydration synthesis joins monomers and releases water; hydrolysis adds water to split them.</li>
+</ul>
 `
 });
 /* @@NEXT@@ */
