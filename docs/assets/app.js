@@ -18,7 +18,7 @@
   var LESSON_META = { mix: { title: 'Whole unit', stage: 'c6' } };
   var LESSON_IDS = [];
   (ALL ? unitList() : [UNIT]).forEach(function (u) {
-    (u.lessons || []).forEach(function (l) { LESSON_META[l.id] = { title: l.title, stage: l.stage, unit: u.key }; LESSON_IDS.push(l.id); });
+    (u.lessons || []).forEach(function (l) { LESSON_META[l.id] = { title: l.title, stage: l.stage, unit: u.key, group: l.group }; LESSON_IDS.push(l.id); });
     if (ALL) LESSON_META['mix-' + u.key] = { title: u.code + ' whole unit', stage: 'c6', unit: u.key };
   });
   LESSONS.forEach(function (l) { var m = LESSON_META[l.id] || (LESSON_META[l.id] = {}); m.title = l.title; m.stage = l.stage || m.stage; });
@@ -95,7 +95,7 @@
 
   /* ---------- nav ---------- */
   if ($('#navLessons')) $('#navLessons').innerHTML = LESSON_IDS.map(function (id) {
-    return '<li><a href="#/lesson/' + id + '" data-route="lesson/' + id + '" data-stage="' + stageOf(id) + '"><span class="dot"></span><span class="num">' + id + '</span><span>' + esc(LESSON_META[id].title) + '</span></a></li>';
+    return (LESSON_META[id].group ? '<li class="nav-sublabel">' + esc(LESSON_META[id].group) + '</li>' : '') + '<li><a href="#/lesson/' + id + '" data-route="lesson/' + id + '" data-stage="' + stageOf(id) + '"><span class="dot"></span><span class="num">' + id + '</span><span>' + esc(LESSON_META[id].title) + '</span></a></li>';
   }).join('');
 
   function markNav(route) {
@@ -161,7 +161,7 @@
     return '<section class="hero">' +
         '<p class="hero-course">SBI4U · Unit 2 study guide</p>' +
         '<h1>Follow one glucose all the way to 38 ATP.</h1>' +
-        '<p class="lede">Every lesson from class in full detail, every review question answered, a practice bank to test yourself, and extra content the slides skipped.</p>' +
+        '<p class="lede">Cellular respiration and photosynthesis: every lesson from class in full detail, every review question answered, a practice bank to test yourself, and extra content the slides skipped.</p>' +
         '<div class="journey">' +
           (VIS.overview ? '<figure class="map">' + VIS.overview + '</figure>' : '') +
           '<div class="journey-track" role="group" aria-label="The four stages of aerobic respiration">' +
@@ -182,7 +182,9 @@
   function renderHome() {
     var lessonCards = LESSON_IDS.map(function (id) {
       var l = LESSONS.filter(function (x) { return x.id === id; })[0];
-      return '<a class="row-link" data-stage="' + stageOf(id) + '" href="#/lesson/' + id + '"><span class="rl-num">' + id + '</span><span class="rl-body"><b>' + esc(LESSON_META[id].title) + '</b>' +
+      var g = LESSON_META[id].group;
+      return (g ? (id === LESSON_IDS[0] ? '' : '</div>') + '<h3 class="rows-head">' + esc(g) + '</h3>' + (g === 'Photosynthesis' && VIS.photo ? '<figure class="map">' + VIS.photo + '</figure>' : '') + '<div class="rows">' : '') +
+        '<a class="row-link" data-stage="' + stageOf(id) + '" href="#/lesson/' + id + '"><span class="rl-num">' + id + '</span><span class="rl-body"><b>' + esc(LESSON_META[id].title) + '</b>' +
         (l && l.summary ? '<span>' + l.summary + '</span>' : '') + '</span></a>';
     }).join('');
     view.innerHTML =
@@ -194,10 +196,10 @@
         '<div>' + tierBadge('extra') + '<p>Enrichment beyond the slides, for full marks on thinking questions.</p></div>' +
       '</div>' +
       '<p class="muted">Use <strong>How much to show</strong> in the menu to hide lower levels everywhere. Short on time? <a href="#/cram">Open cram mode</a>: all the essentials on one page.</p>' +
-      '<h2>Lessons</h2><div class="rows">' + lessonCards + '</div>' +
+      '<h2>Lessons</h2>' + (LESSON_META[LESSON_IDS[0]].group ? '' : '<div class="rows">') + lessonCards + '</div>' +
       '<h2>Test yourself</h2>' +
       '<div class="rows tools">' +
-        '<a href="#/qa"><b>Class questions &amp; answers</b><span>' + countQA() + ' questions from the slides, worksheets, review and the Seven Deaths case, with model answers.</span></a>' +
+        '<a href="#/qa"><b>Class questions &amp; answers</b><span>' + countQA() + ' questions from the slides, worksheets, reviews, the lab, the escape room and the Seven Deaths case, with model answers.</span></a>' +
         '<a href="#/quiz"><b>Practice quiz</b><span>' + QUIZ.length + ' multiple-choice and true/false questions with explanations. Filter by lesson.</span></a>' +
         '<a href="#/apply"><b>Apply &amp; extend</b><span>' + EXT.length + ' application and thinking questions with hints and full answers.</span></a>' +
         '<a href="../test/"><b>All-units test</b><span>Mixed practice from every unit, with an exam-style option that only shows answers at the end.</span></a>' +
@@ -391,6 +393,8 @@
         var h = sec.querySelector('h3'); if (!h) return;
         var txt = h.textContent;
         if (/^Krebs/.test(txt) && VIS.krebs) h.insertAdjacentHTML('afterend', '<figure class="diagram narrow">' + VIS.krebs + '<figcaption>Per turn: 3 NADH, 1 FADH<sub>2</sub>, 1 ATP, 2 CO<sub>2</sub>. Oxaloacetate is both the start and the end.</figcaption></figure>');
+        if (/^Photosynthesis at a glance/.test(txt) && VIS.photo) h.insertAdjacentHTML('afterend', '<figure class="diagram">' + VIS.photo + '<figcaption>Light reactions on the thylakoid membranes make ATP and NADPH (and release O<sub>2</sub> from water). The Calvin cycle in the stroma spends them to turn CO<sub>2</sub> into G3P.</figcaption></figure>');
+        if (/^Calvin cycle/.test(txt) && VIS.calvin) h.insertAdjacentHTML('afterend', '<figure class="diagram narrow">' + VIS.calvin + '<figcaption>Per 3 CO<sub>2</sub>: 9 ATP and 6 NADPH, 1 G3P out. Double everything for one glucose.</figcaption></figure>');
         if (/^Electron transport/.test(txt) && VIS.etc) h.insertAdjacentHTML('afterend', '<figure class="diagram">' + VIS.etc + '<figcaption>Electrons (dashed blue) pass I → Q → III → cyt c → IV → O<sub>2</sub>. Red arrows are H<sup>+</sup>: pumped up by I, III and IV, then flowing back down through ATP synthase.</figcaption></figure>');
         $$('tr[data-tier]', sec).forEach(function (tr) { var c = tr.cells[0]; if (c) c.insertAdjacentHTML('beforeend', ' ' + tierBadge(tr.getAttribute('data-tier'))); });
       });

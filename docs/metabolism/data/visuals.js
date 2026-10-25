@@ -107,5 +107,79 @@ etc: `<svg viewBox="0 0 720 270" role="img" aria-labelledby="etc-t">
 <text x="410" y="200">½O₂ + 2H⁺ → H₂O</text>
 <text x="590" y="244" style="font-weight:700;fill:var(--glyco)">ADP + Pᵢ → ATP</text>
 </g>
+</svg>`,
+
+photo: `<svg viewBox="0 0 760 372" role="img" aria-labelledby="phm-t">
+<title id="phm-t">Map of photosynthesis in a chloroplast: light reactions on the thylakoids split water, release oxygen and make ATP and NADPH; the Calvin cycle in the stroma uses them to fix carbon dioxide into G3P</title>
+<defs>
+<marker id="phm-ah" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L8,4 L0,8 z" style="fill:var(--ink-2)"/></marker>
+<marker id="phm-sun" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L8,4 L0,8 z" style="fill:var(--glyco)"/></marker>
+</defs>
+<rect x="130" y="50" width="610" height="250" rx="100" style="fill:var(--leaf-soft);stroke:var(--leaf);stroke-width:1.5"/>
+<rect x="142" y="62" width="586" height="226" rx="90" style="fill:var(--bg);stroke:var(--leaf);stroke-width:1.5;stroke-dasharray:10 4"/>
+<text x="740" y="330" text-anchor="end" style="fill:var(--ink-2);font-size:13px">Chloroplast</text>
+<text x="452" y="270" text-anchor="middle" style="fill:var(--ink-2);font-size:12px">Stroma</text>
+<circle cx="56" cy="128" r="26" style="fill:var(--glyco-soft);stroke:var(--glyco);stroke-width:1.5"/>
+<text x="56" y="180" text-anchor="middle" style="fill:var(--glyco);font-size:14px;font-weight:700">Light</text>
+<g style="stroke:var(--glyco);stroke-width:2">
+<line x1="86" y1="118" x2="210" y2="140" marker-end="url(#phm-sun)"/>
+<line x1="86" y1="134" x2="210" y2="170" marker-end="url(#phm-sun)"/>
+<line x1="84" y1="150" x2="210" y2="200" marker-end="url(#phm-sun)"/>
+</g>
+<g style="fill:var(--leaf-soft);stroke:var(--leaf);stroke-width:1.5">
+<rect x="216" y="120" width="120" height="16" rx="8"/>
+<rect x="216" y="141" width="120" height="16" rx="8"/>
+<rect x="216" y="162" width="120" height="16" rx="8"/>
+<rect x="216" y="183" width="120" height="16" rx="8"/>
+<rect x="216" y="204" width="120" height="16" rx="8"/>
+</g>
+<text x="246" y="246" style="fill:var(--glyco);font-size:14px;font-weight:700">Light reactions</text>
+<text x="246" y="263" style="fill:var(--ink-2);font-size:12px">thylakoid membranes</text>
+<line x1="230" y1="350" x2="230" y2="226" style="stroke:var(--link);stroke-width:2" marker-end="url(#phm-ah)"/>
+<text x="230" y="366" text-anchor="middle" style="fill:var(--link);font-size:14px;font-weight:700">H₂O</text>
+<line x1="230" y1="116" x2="230" y2="24" style="stroke:var(--link);stroke-width:2" marker-end="url(#phm-ah)"/>
+<text x="242" y="30" style="fill:var(--link);font-size:14px;font-weight:700">O₂</text>
+<line x1="344" y1="140" x2="528" y2="140" style="stroke:var(--ink-2);stroke-width:1.5" marker-end="url(#phm-ah)"/>
+<text x="436" y="131" text-anchor="middle" style="font-size:13px;font-weight:700"><tspan style="fill:var(--glyco)">ATP</tspan><tspan style="fill:var(--ink-2)"> + </tspan><tspan style="fill:var(--etc)">NADPH</tspan></text>
+<line x1="528" y1="200" x2="344" y2="200" style="stroke:var(--ink-2);stroke-width:1.5" marker-end="url(#phm-ah)"/>
+<text x="436" y="220" text-anchor="middle" style="fill:var(--ink-2);font-size:12px">ADP + Pᵢ, NADP⁺</text>
+<circle cx="600" cy="170" r="64" style="fill:var(--leaf-soft);stroke:var(--leaf);stroke-width:1.5"/>
+<text x="600" y="166" text-anchor="middle" style="fill:var(--leaf);font-size:15px;font-weight:700">Calvin cycle</text>
+<text x="600" y="184" text-anchor="middle" style="fill:var(--ink);font-size:12px">RuBisCO fixes CO₂</text>
+<line x1="600" y1="350" x2="600" y2="238" style="stroke:var(--ink-2);stroke-width:2" marker-end="url(#phm-ah)"/>
+<text x="600" y="366" text-anchor="middle" style="fill:var(--ink);font-size:14px;font-weight:700">CO₂</text>
+<line x1="600" y1="104" x2="600" y2="24" style="stroke:var(--leaf);stroke-width:2" marker-end="url(#phm-ah)"/>
+<text x="612" y="30" style="fill:var(--leaf);font-size:14px;font-weight:700">G3P → glucose</text>
+</svg>`,
+
+calvin: `<svg viewBox="0 0 520 440" role="img" aria-labelledby="clv-t">
+<title id="clv-t">Calvin cycle per 3 CO2: RuBisCO fixes 3 CO2 onto 3 RuBP to make 6 PGA; 6 ATP and 6 NADPH reduce them to 6 G3P; one G3P leaves and 3 ATP regenerate 3 RuBP from the other five</title>
+<defs><marker id="clv-ah" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L8,4 L0,8 z" style="fill:var(--leaf)"/></marker>
+<marker id="clv-ag" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L8,4 L0,8 z" style="fill:var(--ink-2)"/></marker></defs>
+<g style="fill:none;stroke:var(--leaf);stroke-width:2">
+<path d="M150,138 Q260,40 370,138" marker-end="url(#clv-ah)"/>
+<path d="M398,166 Q420,300 322,342" marker-end="url(#clv-ah)"/>
+<path d="M198,344 Q100,300 122,168" marker-end="url(#clv-ah)"/>
+</g>
+<g style="font-size:13px;font-weight:700">
+<rect x="70" y="138" width="120" height="28" rx="14" style="fill:var(--surface);stroke:var(--leaf);stroke-width:1.5"/><text x="130" y="157" text-anchor="middle" style="fill:var(--ink)">3 RuBP (5C)</text>
+<rect x="330" y="138" width="120" height="28" rx="14" style="fill:var(--surface);stroke:var(--leaf);stroke-width:1.5"/><text x="390" y="157" text-anchor="middle" style="fill:var(--ink)">6 PGA (3C)</text>
+<rect x="200" y="336" width="120" height="28" rx="14" style="fill:var(--surface);stroke:var(--leaf);stroke-width:1.5"/><text x="260" y="355" text-anchor="middle" style="fill:var(--ink)">6 G3P (3C)</text>
+</g>
+<line x1="260" y1="36" x2="260" y2="80" style="stroke:var(--ink-2);stroke-width:1.5" marker-end="url(#clv-ag)"/>
+<text x="260" y="28" text-anchor="middle" style="fill:var(--ink);font-size:14px;font-weight:700">3 CO₂</text>
+<text x="260" y="128" text-anchor="middle" style="fill:var(--leaf);font-size:13px;font-weight:700">1 Carbon fixation</text>
+<text x="260" y="145" text-anchor="middle" style="fill:var(--ink-2);font-size:12px">by RuBisCO</text>
+<text x="260" y="218" text-anchor="middle" style="fill:var(--leaf);font-size:17px;font-weight:700">Calvin cycle</text>
+<text x="260" y="237" text-anchor="middle" style="fill:var(--ink-2);font-size:12px">stroma · per 3 CO₂</text>
+<text x="342" y="282" text-anchor="middle" style="fill:var(--leaf);font-size:13px;font-weight:700">2 Reduction</text>
+<text x="190" y="282" text-anchor="middle" style="fill:var(--leaf);font-size:13px;font-weight:700">3 Regeneration</text>
+<line x1="442" y1="254" x2="414" y2="254" style="stroke:var(--ink-2);stroke-width:1.5" marker-end="url(#clv-ag)"/>
+<text x="448" y="248" style="fill:var(--glyco);font-size:13px;font-weight:700">6 ATP</text>
+<text x="448" y="266" style="fill:var(--etc);font-size:13px;font-weight:700">6 NADPH</text>
+<line x1="72" y1="254" x2="106" y2="254" style="stroke:var(--ink-2);stroke-width:1.5" marker-end="url(#clv-ag)"/>
+<text x="66" y="259" text-anchor="end" style="fill:var(--glyco);font-size:13px;font-weight:700">3 ATP</text>
+<line x1="260" y1="366" x2="260" y2="402" style="stroke:var(--leaf);stroke-width:2" marker-end="url(#clv-ah)"/>
+<text x="260" y="424" text-anchor="middle" style="fill:var(--ink);font-size:13px;font-weight:700">1 G3P leaves (2 make one glucose)</text>
 </svg>`
 };

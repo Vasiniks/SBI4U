@@ -185,6 +185,88 @@ window.CRAM = `
 <p><strong>Fates of lactate:</strong> (1) slow-twitch muscle fibres turn it back into pyruvate and oxidize it; (2) liver makes glucose by gluconeogenesis (Cori cycle); (3) heart and brain use it as fuel for fast ATP; (4) signals capillary growth.</p>
 <p><strong>Muscle burn</strong> is not caused by lactic acid. It comes from H<sup>+</sup> released by rapid ATP hydrolysis; lactate actually helps buffer it.</p>
 
+<h3>Photosynthesis at a glance</h3>
+<div class="eq">6 CO<sub>2</sub> + 6 H<sub>2</sub>O + light energy → C<sub>6</sub>H<sub>12</sub>O<sub>6</sub> + 6 O<sub>2</sub></div>
+<div class="table-wrap"><table class="data"><tbody>
+<tr><th>Type</th><td>Anabolic and endergonic (the reverse of respiration). Happens in chloroplasts, mostly in leaf mesophyll (palisade + spongy).</td></tr>
+<tr><th>Redox</th><td>CO<sub>2</sub> is <strong>reduced</strong> to glucose. Water is <strong>oxidized</strong>: it supplies the electrons. Light supplies the energy, carried as ATP and NADPH.</td></tr>
+<tr><th>Light reactions</th><td><strong>Thylakoid membrane.</strong> In: light, H<sub>2</sub>O, ADP + P<sub>i</sub>, NADP<sup>+</sup>. Out: O<sub>2</sub> (from water), ATP, NADPH.</td></tr>
+<tr><th>Calvin cycle</th><td><strong>Stroma.</strong> Light-independent (but needs the light reactions' products). In: CO<sub>2</sub>, ATP, NADPH. Out: G3P (→ glucose), ADP + P<sub>i</sub>, NADP<sup>+</sup>.</td></tr>
+<tr><th>Where O<sub>2</sub> comes from</th><td>Water (photolysis), never CO<sub>2</sub>.</td></tr>
+</tbody></table></div>
+
+<h3>Chloroplast parts</h3>
+<div class="table-wrap"><table class="data"><thead><tr><th>Part</th><th>What it is</th><th>What happens there</th></tr></thead><tbody>
+<tr><td>Double membrane</td><td>Outer + inner envelope</td><td>Controls what enters and leaves</td></tr>
+<tr><td>Thylakoid</td><td>Membrane-bound flattened sac</td><td>Photosystems, ETC, ATP synthase: the light reactions</td></tr>
+<tr><td>Granum (grana)</td><td>Stack of thylakoids</td><td>Lots of membrane for light capture</td></tr>
+<tr><td>Thylakoid lumen</td><td>Space inside a thylakoid</td><td>H<sup>+</sup> is pumped in here (high [H<sup>+</sup>]); water is split here</td></tr>
+<tr><td>Stroma</td><td>Fluid matrix around the grana</td><td>Calvin cycle; ATP and NADPH are released here</td></tr>
+</tbody></table></div>
+
+<h3>Light and pigments</h3>
+<div class="table-wrap"><table class="data"><tbody>
+<tr><th>Visible light</th><td>380–750 nm. Light can be absorbed, transmitted or reflected.</td></tr>
+<tr><th>Pigment</th><td>Absorbs some wavelengths, reflects others. Plants look green because chlorophyll absorbs red and blue-violet and reflects green.</td></tr>
+<tr><th>Absorption spectrum</th><td>Graph of how much light a substance absorbs at each wavelength.</td></tr>
+<tr><th>Chlorophyll a</th><td>Primary photosynthetic pigment (in the reaction centre). Blue-green.</td></tr>
+<tr><th>Chlorophyll b</th><td>Accessory pigment: absorbs photons chlorophyll a absorbs poorly. Yellow-green.</td></tr>
+<tr><th>Carotenoids</th><td>e.g. β-carotene. Yellow-orange in fall. Precursor of vitamin A (low-light vision).</td></tr>
+<tr><th>Xanthophylls</th><td>Yellow in fall.</td></tr>
+<tr><th>Anthocyanins</th><td>Red in fall.</td></tr>
+<tr><th>Fall colours</th><td>Chlorophyll breaks down and is not replaced, so the yellow/orange pigments show; anthocyanins are made in fall.</td></tr>
+<tr><th>Chromatography</th><td>R<sub>f</sub> = distance moved by pigment ÷ distance moved by solvent front. Top to bottom: carotene, xanthophyll, chlorophyll a, chlorophyll b.</td></tr>
+</tbody></table></div>
+
+<h3>Light reactions</h3>
+<p><strong>Photosystem</strong> = antenna complex (absorbs photons, passes energy on) + reaction centre (chlorophyll a whose electron gets excited). <strong>PSII = P680</strong> works first; <strong>PSI = P700</strong> second (numbered by order of discovery).</p>
+<div class="table-wrap"><table class="data"><thead><tr><th>#</th><th>Non-cyclic electron flow</th><th>What happens</th></tr></thead><tbody>
+<tr><td>1</td><td>PSII (P680)</td><td>2 photons excite 2 e<sup>−</sup> → primary electron acceptor</td></tr>
+<tr><td>2</td><td>Photolysis (Z protein)</td><td>H<sub>2</sub>O → 2 H<sup>+</sup> + 2 e<sup>−</sup> + ½ O<sub>2</sub>. e<sup>−</sup> refill P680; H<sup>+</sup> stays in lumen; O<sub>2</sub> leaves</td></tr>
+<tr><td>3</td><td>Plastoquinone (PQ)</td><td>Carries e<sup>−</sup> to b6-f</td></tr>
+<tr><td>4</td><td>Cytochrome b6-f</td><td>Pumps H<sup>+</sup> from stroma into the lumen</td></tr>
+<tr><td>5</td><td>Plastocyanin (PC)</td><td>Carries e<sup>−</sup> to PSI</td></tr>
+<tr><td>6</td><td>PSI (P700)</td><td>2 photons re-excite the e<sup>−</sup> → primary acceptor</td></tr>
+<tr><td>7</td><td>Ferredoxin (Fd)</td><td>Carries e<sup>−</sup> to NADP<sup>+</sup> reductase</td></tr>
+<tr><td>8</td><td>NADP<sup>+</sup> reductase</td><td>NADP<sup>+</sup> + 2 e<sup>−</sup> + H<sup>+</sup> → NADPH (in the stroma)</td></tr>
+<tr><td>9</td><td>ATP synthase</td><td>Photophosphorylation by chemiosmosis: H<sup>+</sup> flows lumen → stroma. Class value: 1 ATP per 4 H<sup>+</sup></td></tr>
+</tbody></table></div>
+<p><strong>Cyclic photophosphorylation:</strong> PSI only. P700 → Fd → back to PQ/b6-f → PC → P700. Pumps extra H<sup>+</sup> for extra ATP. <strong>No O<sub>2</sub>, no NADPH.</strong> Needed because the Calvin cycle uses more ATP than NADPH.</p>
+
+<h3>Calvin cycle: 3 phases</h3>
+<div class="table-wrap"><table class="data"><thead><tr><th>Phase (per 3 CO<sub>2</sub>)</th><th>What happens</th><th>Cost</th></tr></thead><tbody>
+<tr><td>1. Carbon fixation</td><td><strong>RuBisCO</strong> adds 3 CO<sub>2</sub> to 3 <strong>RuBP</strong> (5C) → 3 unstable 6C → 6 <strong>PGA</strong> (3-phosphoglycerate, 3C)</td><td>none</td></tr>
+<tr><td>2. Reduction</td><td>6 PGA + 6 ATP → 6 1,3-BPG; 6 NADPH reduce them → 6 <strong>G3P</strong> (PGAL). <strong>1 G3P exits.</strong></td><td>6 ATP, 6 NADPH</td></tr>
+<tr><td>3. Regeneration</td><td>5 G3P (15 C) → 3 RuBP (15 C)</td><td>3 ATP</td></tr>
+</tbody></table></div>
+<div class="tally"><span class="chip co2">6 CO<sub>2</sub></span><span class="chip atp">18 ATP</span><span class="chip nadph">12 NADPH</span><span class="chip">2 G3P → 1 glucose</span></div>
+<p><strong>RuBisCO</strong> = ribulose-1,5-bisphosphate carboxylase/oxygenase. <strong>C3 plant</strong> = first stable product (PGA) has 3 carbons. RuBisCO evolved when there was almost no O<sub>2</sub>; at high temperature it prefers O<sub>2</sub> → photorespiration.</p>
+
+<h3>Photorespiration, C4 and CAM</h3>
+<p><strong>Photorespiration:</strong> hot, dry day → stomata close → CO<sub>2</sub> falls, O<sub>2</sub> builds up → RuBisCO adds O<sub>2</sub> to RuBP → 1 PGA + 1 toxic <strong>phosphoglycolate</strong> (2C). Breaking it down uses ATP and NADPH and loses about <strong>25% of the carbon</strong>. Pure waste.</p>
+<div class="table-wrap"><table class="data"><thead><tr><th></th><th>C3</th><th>C4</th><th>CAM</th></tr></thead><tbody>
+<tr><th>Examples</th><td>Most plants (wheat, rice, soybeans, trees)</td><td>Corn, sugar cane, tropical grasses</td><td>Cactus, pineapple, succulents</td></tr>
+<tr><th>Adapted to</th><td>Cool, moist</td><td>High heat, intense sun</td><td>Extreme drought</td></tr>
+<tr><th>First CO<sub>2</sub> fixer</th><td>RuBisCO</td><td>PEP carboxylase (ignores O<sub>2</sub>)</td><td>PEP carboxylase (at night)</td></tr>
+<tr><th>First stable product</th><td>PGA (3C)</td><td>Oxaloacetate (4C) → malate</td><td>Oxaloacetate → malate, stored in vacuoles</td></tr>
+<tr><th>Separation</th><td>None</td><td><strong>Spatial</strong>: mesophyll fixes, bundle sheath runs Calvin</td><td><strong>Temporal</strong>: fix at night, Calvin by day</td></tr>
+<tr><th>Stomata</th><td>Open by day</td><td>Open by day (can narrow)</td><td>Open at night, closed by day</td></tr>
+<tr><th>Photorespiration</th><td>High on hot, dry days</td><td>Almost none</td><td>Almost none</td></tr>
+<tr><th>Extra cost</th><td>none</td><td>PEP regenerated: ATP → AMP (= 2 ATP)</td><td>More ATP</td></tr>
+</tbody></table></div>
+
+<h3>Respiration vs photosynthesis</h3>
+<div class="table-wrap"><table class="data"><thead><tr><th></th><th>Cellular respiration</th><th>Photosynthesis</th></tr></thead><tbody>
+<tr><th>Overall</th><td>Glucose + O<sub>2</sub> → CO<sub>2</sub> + H<sub>2</sub>O; catabolic, exergonic</td><td>CO<sub>2</sub> + H<sub>2</sub>O → glucose + O<sub>2</sub>; anabolic, endergonic</td></tr>
+<tr><th>Electron source</th><td>Glucose (food)</td><td>Water</td></tr>
+<tr><th>Carriers</th><td>NADH, FADH<sub>2</sub></td><td>NADPH</td></tr>
+<tr><th>Final e<sup>−</sup> acceptor</th><td>O<sub>2</sub> (→ H<sub>2</sub>O)</td><td>NADP<sup>+</sup> (→ NADPH)</td></tr>
+<tr><th>Energy for the ETC</th><td>Oxidizing food</td><td>Light exciting chlorophyll</td></tr>
+<tr><th>H<sup>+</sup> pumped into</th><td>Intermembrane space</td><td>Thylakoid lumen</td></tr>
+<tr><th>ATP made in</th><td>Matrix (oxidative phosphorylation)</td><td>Stroma (photophosphorylation)</td></tr>
+<tr><th>Membrane</th><td>Inner membrane (cristae)</td><td>Thylakoid membrane</td></tr>
+</tbody></table></div>
+
 <h3>Numbers to know cold</h3>
 <ul>
 <li>Glycolysis: invest 2 ATP, make 4 → net 2 ATP, 2 NADH, 2 pyruvate.</li>
@@ -194,5 +276,8 @@ window.CRAM = `
 <li>Krebs: 3 NADH : 1 FADH<sub>2</sub> per turn, so 12 FADH<sub>2</sub> ↔ 36 NADH.</li>
 <li>6 O<sub>2</sub> used, 6 CO<sub>2</sub> and 6 H<sub>2</sub>O made per glucose.</li>
 <li>Carbons: glucose 6, pyruvate 3, acetyl 2, oxaloacetate 4, citrate 6, α-ketoglutarate 5.</li>
+<li>Photosynthesis per glucose: 6 CO<sub>2</sub> fixed, 6 turns of RuBisCO, 18 ATP, 12 NADPH, 12 G3P made (2 leave, 10 rebuild 6 RuBP), 6 O<sub>2</sub> released, all of it from water.</li>
+<li>Per 3 CO<sub>2</sub>: 9 ATP + 6 NADPH → 1 G3P. Photolysis: 1 H<sub>2</sub>O → 2 H<sup>+</sup> + 2 e<sup>−</sup> + ½ O<sub>2</sub>. 1 ATP per 4 H<sup>+</sup> through ATP synthase.</li>
+<li>Carbons: RuBP 5, PGA 3, G3P 3, PEP 3, oxaloacetate 4, malate 4, phosphoglycolate 2.</li>
 </ul>
 `;

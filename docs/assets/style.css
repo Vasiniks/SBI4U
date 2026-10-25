@@ -11,6 +11,7 @@
   --etc: #2a50bf;    --etc-soft: #e5ebfb;
   --proton: #c0362b; --proton-soft: #fbe6e3;
   --good: #1f7a45;   --good-soft: #e0f3e7;
+  --leaf: #4f7a12;   --leaf-soft: #eaf3d6;
   --bad: #b3261e;    --bad-soft: #fbe5e2;
   --accent: var(--etc); --accent-soft: var(--etc-soft);
   --display: "Bricolage Grotesque", system-ui, sans-serif;
@@ -25,6 +26,7 @@
     --glyco: #f2b24a; --glyco-soft: #33280f; --link: #4fcfc3; --link-soft: #0f312e;
     --krebs: #ee76ae; --krebs-soft: #381a2a; --etc: #8aa6ff; --etc-soft: #1a274d;
     --proton: #ff8476; --proton-soft: #3d1b18; --good: #5fd08f; --good-soft: #13301f; --bad: #ff8a80; --bad-soft: #3d1a17;
+    --leaf: #a8d466; --leaf-soft: #233212;
     color-scheme: dark;
   }
 }
@@ -33,6 +35,7 @@
   --glyco: #f2b24a; --glyco-soft: #33280f; --link: #4fcfc3; --link-soft: #0f312e;
   --krebs: #ee76ae; --krebs-soft: #381a2a; --etc: #8aa6ff; --etc-soft: #1a274d;
   --proton: #ff8476; --proton-soft: #3d1b18; --good: #5fd08f; --good-soft: #13301f; --bad: #ff8a80; --bad-soft: #3d1a17;
+  --leaf: #a8d466; --leaf-soft: #233212;
   color-scheme: dark;
 }
 
@@ -44,6 +47,10 @@
 [data-stage="reg"]   { --accent: var(--proton); --accent-soft: var(--proton-soft); }
 [data-stage="cat"]   { --accent: var(--link);  --accent-soft: var(--link-soft); }
 [data-stage="ferm"]  { --accent: var(--glyco); --accent-soft: var(--glyco-soft); }
+[data-stage="photo"] { --accent: var(--leaf); --accent-soft: var(--leaf-soft); }
+[data-stage="light"] { --accent: var(--glyco); --accent-soft: var(--glyco-soft); }
+[data-stage="calvin"] { --accent: var(--leaf); --accent-soft: var(--leaf-soft); }
+[data-stage="c4cam"] { --accent: var(--link); --accent-soft: var(--link-soft); }
 
 * { box-sizing: border-box; }
 html { -webkit-text-size-adjust: 100%; }
@@ -75,6 +82,8 @@ img, svg { max-width: 100%; }
 #navLessons a { display: flex; gap: 10px; align-items: baseline; font-size: 14.5px; }
 #navLessons .num { font-variant-numeric: tabular-nums; color: var(--accent); font-size: 12.5px; font-weight: 700; min-width: 28px; }
 #navLessons .dot { display: none; }
+.nav-sublabel { padding: 10px 10px 3px; font-family: var(--display); font-size: 12px; font-weight: 650; color: var(--ink-2); list-style: none; }
+#navLessons .nav-sublabel:first-child { padding-top: 2px; }
 .sidebar-foot { margin-top: auto; display: flex; justify-content: space-between; align-items: center; gap: 8px; padding: 0 8px; }
 .theme-btn { border: 0; background: none; padding: 4px 0; cursor: pointer; font-family: var(--display); font-size: 13.5px; color: var(--ink-2); text-decoration: underline; text-underline-offset: 3px; }
 .theme-btn:hover { color: var(--ink); }
@@ -121,7 +130,7 @@ ol.steps > li::before { content: counter(step); position: absolute; left: 0; top
 .step-head { font-family: var(--display); font-weight: 700; margin: 2px 0 2px; font-size: 17px; }
 .tally { display: flex; flex-wrap: wrap; gap: 6px 16px; margin: 1em 0; }
 .chip { font-family: var(--display); font-size: 14.5px; font-weight: 700; }
-.chip.atp { color: var(--glyco); } .chip.nadh { color: var(--etc); } .chip.fadh { color: var(--krebs); } .chip.co2 { color: var(--ink-2); }
+.chip.atp { color: var(--glyco); } .chip.nadh { color: var(--etc); } .chip.fadh { color: var(--krebs); } .chip.co2 { color: var(--ink-2); } .chip.nadph { color: var(--etc); } .chip.o2 { color: var(--link); }
 figure.diagram { margin: 1.8em 0; padding: 0; }
 figure.diagram.narrow svg { max-width: 520px; margin: 0 auto; }
 figure.diagram svg { display: block; width: 100%; height: auto; font-family: var(--display); }
@@ -164,6 +173,9 @@ figure.map svg { display: block; width: 100%; height: auto; font-family: var(--d
 .journey-detail h3 { margin: 10px 0 4px; font-size: 19px; }
 .ledger-note { font-size: 15px; color: var(--ink-2); }
 .rows { border-top: 1px solid var(--line); margin: 8px 0 0; }
+.rows-head { font-size: 18px; margin: 30px 0 4px; }
+h2 + .rows-head { margin-top: 10px; }
+.rows-head + .map { margin: 10px 0 14px; }
 .row-link, .rows.tools a { display: flex; gap: 16px; padding: 14px 4px; border-bottom: 1px solid var(--line); text-decoration: none; color: var(--ink); }
 .row-link:hover b, .rows.tools a:hover b { color: var(--accent); }
 .rl-num { font-family: var(--display); font-weight: 700; color: var(--accent); min-width: 34px; font-variant-numeric: tabular-nums; padding-top: 2px; font-size: 14.5px; }

@@ -336,12 +336,13 @@ window.QA = [
     id: "qa-204",
     title: "Electron transport chain: research & review",
     lesson: "2.04",
-    source: "Lesson 2.04 slides (Research & Review Questions). No class key was given, so these are full model answers.",
+    source: "Lesson 2.04 slides (Research & Review Questions) and the class answer key (ETC Research & Review Answers)",
     items: [
       {
         tier: "essential",
         q: "Why does a single molecule of NADH, on average, produce more ATP than a single molecule of FADH<sub>2</sub>?",
-        a: `<p>Because NADH's electrons pass through <strong>more proton pumps</strong>, so more H<sup>+</sup> is pumped and more ATP can be made.</p>
+        a: `<p><strong>Class key:</strong> FADH<sub>2</sub> enters the ETC at a later point than NADH.</p>
+<p>Because NADH's electrons pass through <strong>more proton pumps</strong>, so more H<sup>+</sup> is pumped and more ATP can be made.</p>
 <ul>
 <li><strong>NADH</strong> gives its electrons to <strong>complex I</strong> (NADH dehydrogenase), which is a proton pump. From there they travel through complex III and complex IV, which are also pumps. That makes <strong>3 pumping sites</strong>.</li>
 <li><strong>FADH<sub>2</sub></strong> gives its electrons to <strong>complex II</strong> (succinate dehydrogenase), which is <strong>not</strong> a proton pump. Its electrons skip complex I and only pass through complexes III and IV. That makes <strong>2 pumping sites</strong>.</li>
@@ -353,7 +354,8 @@ window.QA = [
       {
         tier: "likely",
         q: "How do the mitochondria maintain the chemiosmotic gradient used for the electron transport chain?",
-        a: `<ol>
+        a: `<p><strong>Class key:</strong> they continuously pump protons from the mitochondrial matrix into the intermembrane space.</p>
+<ol>
 <li><strong>Continuous pumping.</strong> As long as NADH and FADH<sub>2</sub> keep delivering electrons, complexes I, III and IV use the free energy from electron transfer to pump H<sup>+</sup> from the matrix into the intermembrane space.</li>
 <li><strong>A barrier H<sup>+</sup> cannot cross.</strong> The inner membrane is impermeable to H<sup>+</sup>, so the protons cannot simply leak back. Their only route back into the matrix is through ATP synthase.</li>
 <li><strong>Oxygen removes H<sup>+</sup> from the matrix.</strong> At complex IV, ½O<sub>2</sub> + 2H<sup>+</sup> + 2e<sup>−</sup> → H<sub>2</sub>O uses up protons on the matrix side, which keeps the matrix low in H<sup>+</sup> and steepens the gradient.</li>
@@ -365,7 +367,8 @@ window.QA = [
       {
         tier: "essential",
         q: "Why is oxygen required for aerobic cellular respiration?",
-        a: `<p>Oxygen is the <span class="term">final electron acceptor</span> of the electron transport chain.</p>
+        a: `<p><strong>Class key:</strong> it is the final electron acceptor in the ETC.</p>
+<p>Oxygen is the <span class="term">final electron acceptor</span> of the electron transport chain.</p>
 <ul>
 <li>O<sub>2</sub> is the most electronegative acceptor in the chain. It "pulls" electrons from complex IV, which keeps electrons moving through every carrier before it.</li>
 <li>It combines with those electrons and 2H<sup>+</sup> from the matrix to form water: ½O<sub>2</sub> + 2H<sup>+</sup> + 2e<sup>−</sup> → H<sub>2</sub>O. This clears the chain so the next electrons can follow.</li>
@@ -375,19 +378,22 @@ window.QA = [
       {
         tier: "essential",
         q: "When protons are pumped from the matrix, is this active or passive transport? Is it with or against the concentration gradient?",
-        a: `<p><strong>Active transport, against the concentration gradient.</strong> H<sup>+</sup> is moved from the matrix (low [H<sup>+</sup>]) into the intermembrane space (high [H<sup>+</sup>]). Moving a substance from low to high concentration needs energy. Here the energy comes from the free energy released as electrons pass from carrier to carrier (redox), not from ATP.</p>
+        a: `<p><strong>Class key:</strong> active transport (energy from electrons), against the concentration gradient.</p>
+<p><strong>Active transport, against the concentration gradient.</strong> H<sup>+</sup> is moved from the matrix (low [H<sup>+</sup>]) into the intermembrane space (high [H<sup>+</sup>]). Moving a substance from low to high concentration needs energy. Here the energy comes from the free energy released as electrons pass from carrier to carrier (redox), not from ATP.</p>
 <p>The return trip is the opposite. H<sup>+</sup> flowing back into the matrix through ATP synthase is <strong>passive</strong> (facilitated diffusion), <strong>with</strong> the gradient. That downhill flow is what powers ATP synthesis.</p>`
       },
       {
         tier: "essential",
         q: "Where is ATP made in the ETC?",
-        a: `<p>At <strong>ATP synthase</strong> (complex V), a protein embedded in the <strong>inner mitochondrial membrane (cristae)</strong>. Its catalytic "head" sticks into the <strong>matrix</strong>, so the ATP is released into the matrix.</p>
+        a: `<p><strong>Class key:</strong> at the final protein channel, ATP synthase, which synthesizes ATP from ADP and P<sub>i</sub>.</p>
+<p>At <strong>ATP synthase</strong> (complex V), a protein embedded in the <strong>inner mitochondrial membrane (cristae)</strong>. Its catalytic "head" sticks into the <strong>matrix</strong>, so the ATP is released into the matrix.</p>
 <p>Strictly, the electron transport chain itself (complexes I–IV) does not make ATP. It builds the H<sup>+</sup> gradient. ATP is made when H<sup>+</sup> flows back through ATP synthase and the energy is used to phosphorylate ADP + P<sub>i</sub> → ATP. This is <span class="term">chemiosmosis</span>, and the ATP made this way comes from <span class="term">oxidative phosphorylation</span>.</p>`
       },
       {
         tier: "likely",
         q: "Why is there a discrepancy in the number of ATP molecules produced in cellular respiration?",
-        a: `<p>The "perfect textbook" maximum is <strong>38 ATP</strong> per glucose (2 glycolysis + 2 Krebs + 10 NADH × 3 + 2 FADH<sub>2</sub> × 2). Real cells make about <strong>30–32</strong>, and some sources (and the class review key) say <strong>36</strong>. The reasons:</p>
+        a: `<p><strong>Class key:</strong> the membrane potential (the proton concentration difference built up in the intermembrane space) varies, and so does the number of protons that must pass through ATP synthase to phosphorylate ADP to ATP. If cytosolic NADH goes through the glycerol-3-phosphate shuttle, its electrons end up on FADH<sub>2</sub>, so less ATP is made.</p>
+<p>The "perfect textbook" maximum is <strong>38 ATP</strong> per glucose (2 glycolysis + 2 Krebs + 10 NADH × 3 + 2 FADH<sub>2</sub> × 2). Real cells make about <strong>30–32</strong>, and some sources (and the class review key) say <strong>36</strong>. The reasons:</p>
 <ol>
 <li><strong>Shuttles for cytosolic NADH.</strong> The 2 NADH from glycolysis are made in the cytoplasm and cannot cross the inner mitochondrial membrane. Their electrons are passed in by a shuttle.
 <ul>
@@ -1111,10 +1117,10 @@ window.QA = [
     items: [
       {
         tier: "likely",
-        q: "1a. Give the word equation and the balanced chemical equation for alcoholic fermentation.",
+        q: "1a. Give the word equation for alcoholic fermentation (and the balanced chemical equation).",
         a: `<div class="eq">glucose → ethanol + carbon dioxide (+ energy as 2 ATP)</div>
 <div class="eq">C<sub>6</sub>H<sub>12</sub>O<sub>6</sub> → 2 C<sub>2</sub>H<sub>5</sub>OH + 2 CO<sub>2</sub> &nbsp;(+ 2 ATP, from 2 ADP + 2 P<sub>i</sub>)</div>
-<p>Check that it balances: C 6 = (2 × 2) + 2; H 12 = 2 × 6; O 6 = (2 × 1) + (2 × 2). Ethanol can also be written CH<sub>3</sub>CH<sub>2</sub>OH.</p>
+<p>The updated version of the assignment asks only for the <strong>word equation</strong> (the first line). The balanced equation is here in case you want it. Check that it balances: C 6 = (2 × 2) + 2; H 12 = 2 × 6; O 6 = (2 × 1) + (2 × 2). Ethanol can also be written CH<sub>3</sub>CH<sub>2</sub>OH.</p>
 <p>If your recipe uses table sugar (sucrose), yeast first split it into glucose + fructose. The overall equation then becomes C<sub>12</sub>H<sub>22</sub>O<sub>11</sub> + H<sub>2</sub>O → 4 C<sub>2</sub>H<sub>5</sub>OH + 4 CO<sub>2</sub>.</p>`
       },
       {
