@@ -399,3 +399,91 @@ h3 .tier-badge { margin-left: 6px; }
   .rail { display: none !important; }
   main.has-rail { display: block; }
 }
+
+/* ---------- Unit 3: molecular genetics ---------- */
+/* Lesson stages */
+[data-stage="g-hist"] { --accent: var(--ink-2); --accent-soft: var(--surface-2); }
+[data-stage="g-dna"]  { --accent: var(--etc); --accent-soft: var(--etc-soft); }
+[data-stage="g-rep"]  { --accent: var(--link); --accent-soft: var(--link-soft); }
+[data-stage="g-tx"]   { --accent: var(--krebs); --accent-soft: var(--krebs-soft); }
+[data-stage="g-tl"]   { --accent: var(--leaf); --accent-soft: var(--leaf-soft); }
+[data-stage="g-mut"]  { --accent: var(--proton); --accent-soft: var(--proton-soft); }
+[data-stage="g-reg"]  { --accent: var(--glyco); --accent-soft: var(--glyco-soft); }
+/* Nucleotide colours, shared by every diagram and tool: A green, T red, G amber, C blue, U magenta */
+:root { --nt-a: var(--leaf); --nt-t: var(--proton); --nt-g: var(--glyco); --nt-c: var(--etc); --nt-u: var(--krebs); }
+.nt-A { color: var(--nt-a); } .nt-T { color: var(--nt-t); } .nt-G { color: var(--nt-g); } .nt-C { color: var(--nt-c); } .nt-U { color: var(--nt-u); }
+.seq { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-size: 15px; letter-spacing: .04em; font-weight: 600; white-space: nowrap; }
+.seq .cod { margin-right: .55em; }
+
+/* Step-through diagrams: <figure class="diagram stepper"> + <ol class="step-captions"> */
+.stepper .step-ctrl { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin: 12px 0 6px; }
+.stepper .step-ctrl .btn { padding: 6px 14px; font-size: 14.5px; }
+.step-dots { display: flex; gap: 6px; flex: 1; min-width: 120px; }
+.step-dots button { flex: 1; max-width: 56px; height: 6px; border-radius: 3px; border: 0; padding: 0; background: var(--line); cursor: pointer; }
+.step-dots button[aria-current="step"] { background: var(--accent); }
+.step-dots button.done { background: color-mix(in srgb, var(--accent) 45%, var(--line)); }
+.step-count { font-family: var(--display); font-size: 13.5px; color: var(--ink-2); min-width: 78px; text-align: right; }
+ol.step-captions { list-style: none; padding: 0; margin: 4px 0 0; counter-reset: sc; }
+ol.step-captions > li { counter-increment: sc; padding: 10px 14px 10px 50px; position: relative; border-radius: var(--r); background: var(--accent-soft); font-size: 16px; line-height: 1.6; }
+ol.step-captions > li::before { content: counter(sc); position: absolute; left: 12px; top: 10px; width: 26px; height: 26px; border-radius: 50%; display: grid; place-items: center; font-family: var(--display); font-weight: 750; font-size: 13.5px; background: var(--accent); color: var(--bg); }
+.js .stepper ol.step-captions > li:not(.on) { display: none; }
+.js ol.step-captions > li[data-n]::before { content: attr(data-n); }
+.stepper svg .st-off { opacity: 0; pointer-events: none; }
+.stepper svg [data-step], .stepper svg [data-from], .stepper svg [data-upto] { transition: opacity .28s ease; }
+.stepper svg .st-new { animation: st-pop .45s ease; }
+@keyframes st-pop { from { opacity: 0; } to { opacity: 1; } }
+html:not(.js) ol.step-captions > li { margin-bottom: 6px; }
+
+/* Interactive tools: <div class="widget" data-widget="…"> */
+.widget { margin: 1.8em 0; padding: 18px 20px 14px; border: 1px solid var(--line); border-radius: 14px; background: var(--surface); }
+.widget > h4:first-child, .widget .w-title { font-family: var(--display); font-weight: 700; font-size: 17px; margin: 0 0 4px; }
+.widget .w-sub { color: var(--ink-2); font-size: 15px; margin: 0 0 12px; }
+.widget input[type="text"] { width: 100%; font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-size: 15px; padding: 9px 12px; border-radius: 8px; border: 1px solid var(--line); background: var(--bg); color: var(--ink); letter-spacing: .04em; }
+.widget select { font: inherit; font-family: var(--display); font-size: 14.5px; padding: 7px 10px; border-radius: 8px; border: 1px solid var(--line); background: var(--bg); color: var(--ink); }
+.widget .w-row { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; margin: 8px 0; }
+.widget .w-row > input { flex: 1 1 260px; }
+.w-out { margin-top: 12px; display: grid; grid-template-columns: max-content 1fr; gap: 6px 14px; align-items: baseline; }
+.w-out dt { font-family: var(--display); font-size: 13.5px; font-weight: 650; color: var(--ink-2); }
+.w-out dd { margin: 0; overflow-x: auto; padding-bottom: 2px; }
+.w-note { font-size: 14.5px; color: var(--ink-2); margin: 10px 0 0; }
+.w-verdict { margin: 12px 0 0; padding: 10px 14px; border-radius: var(--r); background: var(--accent-soft); font-size: 15.5px; }
+.w-verdict b { font-family: var(--display); }
+.aa { display: inline-block; font-family: var(--display); font-size: 13.5px; font-weight: 650; padding: 1px 7px; margin: 0 4px 4px 0; border-radius: 999px; background: var(--leaf-soft); color: var(--ink); }
+.aa.stop { background: var(--proton-soft); color: var(--proton); }
+.aa.changed { outline: 2px solid var(--proton); outline-offset: -2px; }
+.cod.start { text-decoration: underline; text-decoration-color: var(--leaf); text-underline-offset: 4px; text-decoration-thickness: 2px; }
+.cod.changed { background: var(--proton-soft); border-radius: 4px; }
+
+/* Codon chart */
+.codon-grid { width: 100%; border-collapse: collapse; font-size: 13.5px; line-height: 1.35; }
+.codon-grid th { font-family: var(--display); font-weight: 750; font-size: 15px; padding: 6px; background: var(--surface-2); }
+.codon-grid td { border: 1px solid var(--line); padding: 3px 6px; vertical-align: top; }
+.codon-grid td > span { display: block; white-space: nowrap; }
+.codon-grid td > span .seq { display: inline; margin-right: 4px; }
+.codon-grid td > span.hit { background: var(--accent-soft); border-radius: 4px; font-weight: 700; }
+.codon-grid .seq { font-size: 13px; }
+
+/* Operon switch */
+.operon svg { display: block; width: 100%; max-width: 720px; height: auto; margin: 6px auto 0; font-family: var(--display); }
+.operon .op-state { font-family: var(--display); font-weight: 700; }
+.operon .op-on { color: var(--good); } .operon .op-off { color: var(--proton); }
+.operon svg .mv { transition: transform .5s ease, opacity .35s ease; }
+
+/* Put-in-order tasks: <div class="order-task"><p class="order-q">…</p><ol><li>…</li></ol></div> */
+.order-task { margin: 1.8em 0; padding: 16px 18px 12px; border: 1px solid var(--line); border-radius: 14px; }
+.order-task .order-q { font-family: var(--display); font-weight: 700; margin: 0 0 10px; }
+.order-task ol { padding: 0; margin: 0; list-style: none; counter-reset: oi; }
+.order-task li { counter-increment: oi; display: grid; grid-template-columns: 28px 1fr auto; gap: 10px; align-items: center; padding: 8px 10px; margin-bottom: 6px; border-radius: 8px; background: var(--surface-2); font-size: 15.5px; line-height: 1.45; }
+.order-task li::before { content: counter(oi); font-family: var(--display); font-weight: 750; color: var(--ink-2); text-align: center; }
+.order-task li.ok { background: var(--good-soft); } .order-task li.bad { background: var(--bad-soft); }
+.order-task .mv-btns { display: flex; gap: 4px; }
+.order-task .mv-btns button { width: 30px; height: 30px; border-radius: 6px; border: 1px solid var(--line); background: var(--surface); cursor: pointer; font-size: 14px; line-height: 1; }
+.order-task .mv-btns button:disabled { opacity: .3; cursor: default; }
+.order-task .order-msg { font-size: 15px; margin: 8px 0 0; }
+html:not(.js) .order-task .order-q::after { content: " (shown in the correct order)"; font-weight: 400; color: var(--ink-2); }
+
+/* Clickable lesson map on the Unit 3 home page */
+.ovmap a text { text-decoration: underline; text-decoration-color: var(--line); }
+.ovmap a:hover rect, .ovmap a:focus rect { stroke-width: 2.5; }
+@media print { .step-ctrl, .w-row, .mv-btns { display: none !important; } .js .stepper ol.step-captions > li:not(.on) { display: block; } .stepper svg .st-off { opacity: 1; } }
+.operon svg .fade { transition: opacity .35s ease; }

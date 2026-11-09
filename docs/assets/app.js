@@ -1,5 +1,6 @@
 (function () {
   'use strict';
+  document.documentElement.classList.add('js');
 
   var UNITS = window.UNITS || {};
   var UNIT_KEY = window.UNIT_KEY || 'metabolism';
@@ -127,6 +128,7 @@
     else if (seg[0] === 'beyond') { seg[1] ? renderBeyondTopic(seg[1]) : renderBeyond(); markNav('beyond'); }
     else if (seg[0] === 'glossary') { renderGlossary(); markNav('glossary'); }
     else { renderHome(); markNav('home'); }
+    hydrate(view);
     fitDiagrams();
     if (pendingScroll) { var ps = pendingScroll; pendingScroll = null; ps.scrollIntoView({ block: 'start' }); }
     else if (keepScroll !== true) window.scrollTo(0, 0);
@@ -199,7 +201,7 @@
       '<h2>Lessons</h2>' + (LESSON_META[LESSON_IDS[0]].group ? '' : '<div class="rows">') + lessonCards + '</div>' +
       '<h2>Test yourself</h2>' +
       '<div class="rows tools">' +
-        '<a href="#/qa"><b>Class questions &amp; answers</b><span>' + countQA() + ' questions from the slides, worksheets, reviews, the lab, the escape room and the Seven Deaths case, with model answers.</span></a>' +
+        '<a href="#/qa"><b>Class questions &amp; answers</b><span>' + countQA() + ' questions ' + (UNIT.qaBlurb || 'from the slides, worksheets, reviews, the lab, the escape room and the Seven Deaths case') + ', with model answers.</span></a>' +
         '<a href="#/quiz"><b>Practice quiz</b><span>' + QUIZ.length + ' multiple-choice and true/false questions with explanations. Filter by lesson.</span></a>' +
         '<a href="#/apply"><b>Apply &amp; extend</b><span>' + EXT.length + ' application and thinking questions with hints and full answers.</span></a>' +
         '<a href="../test/"><b>All-units test</b><span>Mixed practice from every unit, with an exam-style option that only shows answers at the end.</span></a>' +
@@ -222,6 +224,308 @@
     });
   }
   function countQA() { return QA.reduce(function (n, g) { return n + g.items.length; }, 0); }
+
+  /* ---------- interactive pieces (Unit 3): step-through diagrams, sequence tools, codon chart, operon, ordering ---------- */
+  var AA1 = 'FFLLSSSSYY**CC*WLLLLPPPPHHQQRRRRIIIMTTTTNNKKSSRRVVVVAAAADDEEGGGG';
+  var AA3 = { A: 'Ala', R: 'Arg', N: 'Asn', D: 'Asp', C: 'Cys', Q: 'Gln', E: 'Glu', G: 'Gly', H: 'His', I: 'Ile', L: 'Leu', K: 'Lys', M: 'Met', F: 'Phe', P: 'Pro', S: 'Ser', T: 'Thr', W: 'Trp', Y: 'Tyr', V: 'Val', '*': 'Stop' };
+  var AANAME = { Ala: 'alanine', Arg: 'arginine', Asn: 'asparagine', Asp: 'aspartic acid (aspartate)', Cys: 'cysteine', Gln: 'glutamine', Glu: 'glutamic acid (glutamate)', Gly: 'glycine', His: 'histidine', Ile: 'isoleucine', Leu: 'leucine', Lys: 'lysine', Met: 'methionine (start)', Phe: 'phenylalanine', Pro: 'proline', Ser: 'serine', Thr: 'threonine', Trp: 'tryptophan', Tyr: 'tyrosine', Val: 'valine', Stop: 'stop codon (no amino acid)' };
+  var RNA4 = 'UCAG';
+  function codonAA(c) {
+    var i = RNA4.indexOf(c[0]), j = RNA4.indexOf(c[1]), k = RNA4.indexOf(c[2]);
+    return i < 0 || j < 0 || k < 0 ? '?' : AA3[AA1[16 * i + 4 * j + k]];
+  }
+  var COMP = { A: 'T', T: 'A', G: 'C', C: 'G', U: 'A' };
+  function compDNA(s) { return s.split('').map(function (b) { return COMP[b] || '?'; }).join(''); }
+  function ntSpan(s) { return s.split('').map(function (b) { return '<span class="nt-' + b + '">' + b + '</span>'; }).join(''); }
+  function cleanSeq(s) { return String(s || '').toUpperCase().replace(/[53]['′’]|[^ACGTU]/g, ''); }
+  // Read an mRNA from its first AUG to the first stop codon (or the end).
+  function readORF(m) {
+    var st = m.indexOf('AUG');
+    if (st < 0) return { start: -1, codons: [], aas: [] };
+    var codons = [], aas = [];
+    for (var p = st; p + 3 <= m.length; p += 3) {
+      var c = m.substr(p, 3), a = codonAA(c);
+      codons.push(c); aas.push(a);
+      if (a === 'Stop') break;
+    }
+    return { start: st, codons: codons, aas: aas };
+  }
+  // Show an mRNA with the 5' UTR muted, codons spaced from the start codon on.
+  function mrnaHTML(m, orf, changedIdx) {
+    if (orf.start < 0) return '<span class="seq">5′ ' + ntSpan(m) + ' 3′</span>';
+    var used = orf.codons.length * 3;
+    var html = '<span class="seq">5′ ' + (orf.start ? '<span class="cod" style="opacity:.55">' + ntSpan(m.slice(0, orf.start)) + '</span>' : '');
+    orf.codons.forEach(function (c, i) {
+      html += '<span class="cod' + (i === 0 ? ' start' : '') + (changedIdx && changedIdx.indexOf(i) > -1 ? ' changed' : '') + '">' + ntSpan(c) + '</span>';
+    });
+    var rest = m.slice(orf.start + used);
+    return html + (rest ? '<span style="opacity:.55">' + ntSpan(rest) + '</span>' : '') + ' 3′</span>';
+  }
+  function aaHTML(aas, changedIdx) {
+    if (!aas.length) return '<span class="w-note">No AUG start codon, so a ribosome would not begin translating.</span>';
+    return aas.map(function (a, i) { return '<span class="aa' + (a === 'Stop' ? ' stop' : '') + (changedIdx && changedIdx.indexOf(i) > -1 ? ' changed' : '') + '">' + a + '</span>'; }).join('');
+  }
+  // Every strand from one input. kind: tmpl35 (template written 3'→5'), tmpl53, coding, mrna.
+  function strandsFrom(raw, kind) {
+    var s = cleanSeq(raw), note = '';
+    if (kind === 'mrna') { if (/T/.test(s)) { note = 'mRNA has U, not T: each T was read as U.'; s = s.replace(/T/g, 'U'); } }
+    else if (/U/.test(s)) { note = 'DNA has T, not U: each U was read as T.'; s = s.replace(/U/g, 'T'); }
+    var coding;
+    if (kind === 'coding') coding = s;
+    else if (kind === 'mrna') coding = s.replace(/U/g, 'T');
+    else if (kind === 'tmpl53') coding = compDNA(s.split('').reverse().join(''));
+    else coding = compDNA(s);
+    var tmpl = compDNA(coding);   // written 3'→5' under the coding strand
+    return { coding: coding, tmpl: tmpl, mrna: coding.replace(/T/g, 'U'), note: note, len: s.length };
+  }
+
+  function initSeqLab(w) {
+    var seq = w.getAttribute('data-seq') || 'TACGGATTCGTCCTGGCAATT', kind = w.getAttribute('data-type') || 'tmpl35';
+    w.innerHTML = '<p class="w-title">' + esc(w.getAttribute('data-title') || 'Sequence lab: DNA → mRNA → protein') + '</p>' +
+      '<p class="w-sub">Type or paste a sequence, choose what it is, and see the other strand, the mRNA and the polypeptide. Spaces, dashes and 5′/3′ labels are ignored.</p>' +
+      '<div class="w-row"><input type="text" aria-label="Sequence" spellcheck="false" autocomplete="off"><select aria-label="What the sequence is">' +
+        '<option value="tmpl35">DNA template strand, written 3′ → 5′</option><option value="tmpl53">DNA template strand, written 5′ → 3′</option>' +
+        '<option value="coding">DNA coding strand, 5′ → 3′</option><option value="mrna">mRNA, 5′ → 3′</option></select></div>' +
+      '<dl class="w-out"></dl><p class="w-note"></p>';
+    var inp = $('input', w), sel = $('select', w), out = $('.w-out', w), note = $('.w-note', w);
+    inp.value = seq; sel.value = kind;
+    function run() {
+      var r = strandsFrom(inp.value, sel.value);
+      if (!r.len) { out.innerHTML = ''; note.textContent = 'Type a sequence of A, C, G and T (or U for mRNA).'; return; }
+      var orf = readORF(r.mrna);
+      out.innerHTML =
+        '<dt>Coding strand</dt><dd><span class="seq">5′ ' + ntSpan(r.coding) + ' 3′</span></dd>' +
+        '<dt>Template strand</dt><dd><span class="seq">3′ ' + ntSpan(r.tmpl) + ' 5′</span></dd>' +
+        '<dt>mRNA</dt><dd>' + mrnaHTML(r.mrna, orf) + '</dd>' +
+        '<dt>Polypeptide</dt><dd>' + aaHTML(orf.aas) + '</dd>';
+      var bits = [];
+      if (r.note) bits.push(r.note);
+      if (orf.start > 0) bits.push('The faded bases before the first AUG are the 5′ untranslated region: the ribosome scans past them.');
+      if (orf.aas.length && orf.aas[orf.aas.length - 1] !== 'Stop') bits.push('No stop codon in frame before the sequence ends.');
+      bits.push('The mRNA is the coding strand with U for T. RNA polymerase reads the template strand 3′ → 5′ and builds mRNA 5′ → 3′.');
+      note.textContent = bits.join(' ');
+    }
+    inp.addEventListener('input', run); sel.addEventListener('change', run); run();
+  }
+
+  // Compare an original and a mutated template strand (both written 3'→5') and name the mutation.
+  function classifyMutation(o, m) {
+    var a = strandsFrom(o, 'tmpl35'), b = strandsFrom(m, 'tmpl35');
+    var A = readORF(a.mrna), B = readORF(b.mrna), d = b.len - a.len;
+    var changedAA = [], changedCod = [];
+    for (var i = 0; i < Math.max(A.aas.length, B.aas.length); i++) {
+      if (A.aas[i] !== B.aas[i]) changedAA.push(i);
+      if (A.codons[i] !== B.codons[i]) changedCod.push(i);
+    }
+    var name, why;
+    if (a.coding === b.coding) { name = 'No mutation'; why = 'The two sequences are identical.'; }
+    else if (A.start !== B.start && B.start < 0) { name = 'Start codon lost'; why = 'The AUG start codon is gone, so translation cannot begin here.'; }
+    else if (d % 3 !== 0) {
+      var early = B.aas.indexOf('Stop') > -1 && B.aas.length < A.aas.length;
+      name = 'Frameshift (' + (d > 0 ? 'insertion' : 'deletion') + ' of ' + Math.abs(d) + ' base' + (Math.abs(d) > 1 ? 's' : '') + ')';
+      why = 'The number of bases added or removed is not a multiple of 3, so every codon after the change is read in a new frame' + (early ? ', and a premature stop codon appears.' : '.');
+    } else if (d !== 0) {
+      name = 'In-frame ' + (d > 0 ? 'insertion' : 'deletion') + ' (' + Math.abs(d) / 3 + ' codon' + (Math.abs(d) > 3 ? 's' : '') + ')';
+      why = Math.abs(d) + ' bases is a multiple of 3, so the reading frame is kept: amino acids are ' + (d > 0 ? 'added' : 'removed') + ', but the rest of the protein is unchanged.';
+    } else {
+      var diffs = 0; for (var k = 0; k < a.coding.length; k++) if (a.coding[k] !== b.coding[k]) diffs++;
+      var lead = diffs === 1 ? 'Base-pair substitution: ' : diffs + ' substitutions: ';
+      if (!changedAA.length) { name = lead + 'silent'; why = 'The codon changed but still codes for the same amino acid (redundancy of the code), so the protein is unchanged.'; }
+      else if (B.aas.indexOf('Stop') > -1 && B.aas.indexOf('Stop') < A.aas.indexOf('Stop')) { name = lead + 'nonsense'; why = 'A codon for an amino acid became a stop codon, so the polypeptide is cut short.'; }
+      else if (A.aas.indexOf('Stop') > -1 && B.aas[A.aas.indexOf('Stop')] !== 'Stop') { name = lead + 'stop codon lost (read-through)'; why = 'The stop codon now codes for an amino acid, so the ribosome keeps adding amino acids past the normal end.'; }
+      else { name = lead + 'missense'; why = 'The new codon codes for a different amino acid. The effect depends on how different the new amino acid is.'; }
+    }
+    return { a: a, b: b, A: A, B: B, name: name, why: why, changedAA: changedAA, changedCod: changedCod };
+  }
+  function initMutate(w) {
+    var orig = cleanSeq(w.getAttribute('data-seq') || 'TACCTCGTTACT');
+    var presets;
+    try { presets = JSON.parse(w.getAttribute('data-presets') || 'null'); } catch (e) { presets = null; }
+    if (!presets && !w.getAttribute('data-seq')) presets = { Silent: 'TACCTTGTTACT', Missense: 'TACCACGTTACT', Nonsense: 'TACCTCATTACT', 'Frameshift (insert A)': 'TACACTCGTTACT', 'Frameshift (delete C)': 'TACTCGTTACT' };
+    w.innerHTML = '<p class="w-title">' + esc(w.getAttribute('data-title') || 'Mutation explorer') + '</p>' +
+      '<p class="w-sub">Edit the mutated template strand (written 3′ → 5′) or try a preset. The tool transcribes and translates both versions and names the mutation.</p>' +
+      '<dl class="w-out orig"></dl>' +
+      (presets ? '<div class="w-row">' + Object.keys(presets).map(function (k) { return '<button type="button" class="fchip" data-p="' + esc(k) + '">' + esc(k) + '</button>'; }).join('') + '<button type="button" class="fchip" data-p="">Reset</button></div>' : '') +
+      '<div class="w-row"><input type="text" aria-label="Mutated template strand, 3 prime to 5 prime" spellcheck="false" autocomplete="off"></div>' +
+      '<dl class="w-out mut"></dl><div class="w-verdict" aria-live="polite"></div>';
+    var inp = $('input', w), o = $('.orig', w), mu = $('.mut', w), v = $('.w-verdict', w);
+    function run() {
+      var r = classifyMutation(orig, inp.value);
+      o.innerHTML = '<dt>Original DNA</dt><dd><span class="seq">3′ ' + ntSpan(r.a.tmpl) + ' 5′</span></dd><dt>mRNA</dt><dd>' + mrnaHTML(r.a.mrna, r.A) + '</dd><dt>Protein</dt><dd>' + aaHTML(r.A.aas) + '</dd>';
+      mu.innerHTML = '<dt>Mutated mRNA</dt><dd>' + mrnaHTML(r.b.mrna, r.B, r.changedCod) + '</dd><dt>Protein</dt><dd>' + aaHTML(r.B.aas, r.changedAA) + '</dd>';
+      v.innerHTML = '<b>' + esc(r.name) + '.</b> ' + r.why;
+      $$('.fchip', w).forEach(function (b) { var k = b.getAttribute('data-p'); b.setAttribute('aria-pressed', String(cleanSeq(k ? presets[k] : orig) === cleanSeq(inp.value))); });
+    }
+    $$('.fchip', w).forEach(function (b) { b.addEventListener('click', function () { inp.value = b.getAttribute('data-p') ? presets[b.getAttribute('data-p')] : orig; run(); }); });
+    inp.value = orig; inp.addEventListener('input', run); run();
+  }
+
+  function initCodons(w) {
+    var head = '<tr><th rowspan="2" scope="col">1st<br>base</th><th colspan="4" scope="colgroup">2nd base</th><th rowspan="2" scope="col">3rd<br>base</th></tr><tr>' + RNA4.split('').map(function (b) { return '<th scope="col">' + b + '</th>'; }).join('') + '</tr>';
+    var body = RNA4.split('').map(function (b1) {
+      return '<tr><th scope="row">' + b1 + '</th>' + RNA4.split('').map(function (b2) {
+        return '<td>' + RNA4.split('').map(function (b3) { var c = b1 + b2 + b3, a = codonAA(c); return '<span data-c="' + c + '" data-a="' + a + '"><span class="seq">' + c + '</span> ' + (a === 'Stop' ? '<b>Stop</b>' : c === 'AUG' ? '<b>Met</b> (start)' : a) + '</span>'; }).join('') + '</td>';
+      }).join('') + '<td class="seq">' + RNA4.split('').join('<br>') + '</td></tr>';
+    }).join('');
+    w.innerHTML = '<p class="w-title">' + esc(w.getAttribute('data-title') || 'The genetic code (mRNA codons)') + '</p>' +
+      '<p class="w-sub">Find the row for the first base, the column for the second, then the line for the third. Type a codon (GAG), an anticodon written 3′→5′ with a dash in front (-CUC), or an amino acid (Glu or glutamic acid) to highlight it.</p>' +
+      '<div class="w-row"><input type="text" aria-label="Codon, anticodon or amino acid" placeholder="e.g. GAG, -CUC, Leu" spellcheck="false" autocomplete="off"></div><p class="w-note" aria-live="polite"></p>' +
+      '<div class="table-wrap"><table class="codon-grid">' + head + body + '</table></div>';
+    var inp = $('input', w), note = $('.w-note', w), cells = $$('td > span[data-c]', w);
+    inp.addEventListener('input', function () {
+      var q = inp.value.trim(), hits = [];
+      var anti = /^-/.test(q), s = q.toUpperCase().replace(/[^A-Z]/g, '');
+      if (anti && s.length === 3) {   // anticodon written 3'→5', lined up under its codon as in the class diagrams
+        s = s.replace(/T/g, 'U').split('').map(function (b) { return { A: 'U', U: 'A', G: 'C', C: 'G' }[b] || '?'; }).join('');
+      } else s = s.replace(/T/g, 'U');
+      cells.forEach(function (c) {
+        var code = c.getAttribute('data-c'), a = c.getAttribute('data-a');
+        var hit = q && (code === s || (!anti && q.length >= 3 && (a.toLowerCase() === q.toLowerCase() || (AANAME[a] || '').indexOf(q.toLowerCase()) === 0)));
+        c.classList.toggle('hit', !!hit); if (hit) hits.push(code);
+      });
+      if (!q) { note.textContent = ''; return; }
+      if (!hits.length) { note.textContent = 'No match yet.'; return; }
+      var a0 = codonAA(hits[0]);
+      note.textContent = (anti ? 'Anticodon 3′-' + q.replace(/^-/, '').toUpperCase() + '-5′ pairs with codon 5′-' + hits[0] + '-3′: ' : '') +
+        (hits.length > 1 ? hits.length + ' codons code for ' + a0 + ' (' + AANAME[a0] + '): ' + hits.join(', ') + '.' : hits[0] + ' → ' + a0 + ' (' + AANAME[a0] + ').');
+    });
+  }
+
+  function initOperon(w) {
+    var type = w.getAttribute('data-operon') || 'lac';
+    var cfg = {
+      lac: { title: 'The lac operon: an inducible switch', mol: 'lactose', Mol: 'Lactose', genes: [['lacZ', 'β-galactosidase'], ['lacY', 'permease'], ['lacA', 'transacetylase']], reg: 'lacI', defaultOn: false },
+      trp: { title: 'The trp operon: a repressible switch', mol: 'tryptophan', Mol: 'Tryptophan', genes: [['trpE', ''], ['trpD', ''], ['trpC', ''], ['trpB', ''], ['trpA', '']], reg: 'trpR', defaultOn: true }
+    }[type] || {};
+    var present = false;
+    var gx = 330, gw = 360 / cfg.genes.length;
+    var genes = cfg.genes.map(function (g, i) {
+      var x = gx + i * gw;
+      return '<rect x="' + x + '" y="140" width="' + gw + '" height="22" style="fill:var(--accent-soft);stroke:var(--accent);stroke-width:1.2"/>' +
+        '<text x="' + (x + gw / 2) + '" y="155.5" text-anchor="middle" style="fill:var(--ink);font-size:12.5px;font-style:italic;font-weight:650">' + g[0] + '</text>' +
+        (g[1] ? '<text x="' + (x + gw / 2) + '" y="180" text-anchor="middle" style="fill:var(--ink-2);font-size:11px">' + g[1] + '</text>' : '');
+    }).join('');
+    w.classList.add('operon');
+    w.setAttribute('data-stage', 'g-reg');
+    w.innerHTML = '<p class="w-title">' + esc(w.getAttribute('data-title') || cfg.title) + '</p>' +
+      '<p class="w-sub">' + (type === 'lac' ? 'Off by default. Lactose (as allolactose) is the <strong>inducer</strong>: it pulls the repressor off the operator.' : 'On by default. Tryptophan is the <strong>corepressor</strong>: it switches the repressor on so it can bind the operator.') + '</p>' +
+      '<svg viewBox="0 0 720 230" role="img" aria-label="' + esc(cfg.title) + '">' +
+        '<defs><marker id="op-' + type + '-ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0,0 L10,5 L0,10 z" style="fill:var(--krebs)"/></marker></defs>' +
+        '<line x1="20" y1="151" x2="700" y2="151" style="stroke:var(--ink-2);stroke-width:3"/>' +
+        '<rect x="30" y="140" width="70" height="22" style="fill:var(--surface-2);stroke:var(--ink-2);stroke-width:1.2"/><text x="65" y="155.5" text-anchor="middle" style="fill:var(--ink);font-size:12.5px;font-style:italic;font-weight:650">' + cfg.reg + '</text>' +
+        '<text x="65" y="180" text-anchor="middle" style="fill:var(--ink-2);font-size:11px">regulatory gene</text>' +
+        '<rect x="170" y="140" width="90" height="22" style="fill:var(--surface);stroke:var(--ink);stroke-width:1.2"/><text x="215" y="155.5" text-anchor="middle" style="fill:var(--ink);font-size:12.5px;font-weight:650">Promoter</text>' +
+        '<rect x="260" y="140" width="70" height="22" style="fill:var(--surface);stroke:var(--ink);stroke-width:1.2;stroke-dasharray:4 2"/><text x="295" y="155.5" text-anchor="middle" style="fill:var(--ink);font-size:12.5px;font-weight:650">Operator</text>' +
+        genes +
+        '<path d="M170,198 L170,206 L690,206 L690,198" style="fill:none;stroke:var(--ink-2);stroke-width:1"/><text x="430" y="222" text-anchor="middle" style="fill:var(--ink-2);font-size:11.5px">the operon: one promoter and one operator control all the structural genes</text>' +
+        '<g class="mv rnap"><ellipse cx="215" cy="122" rx="40" ry="17" style="fill:var(--krebs-soft);stroke:var(--krebs);stroke-width:1.5"/><text x="215" y="126" text-anchor="middle" style="fill:var(--ink);font-size:12px;font-weight:650">RNA pol</text></g>' +
+        '<g class="mrna fade"><path d="M335,108 q15,-8 30,0 t30,0 t30,0 t30,0 t30,0 t30,0 t30,0 t30,0 t30,0 t30,0 t30,0" style="fill:none;stroke:var(--krebs);stroke-width:2.5" marker-end="url(#op-' + type + '-ah)"/><text x="512" y="94" text-anchor="middle" style="fill:var(--krebs);font-size:12px;font-weight:650">mRNA → ' + (type === 'lac' ? 'lactose-digesting enzymes' : 'tryptophan-making enzymes') + '</text></g>' +
+        '<g class="mv rep"><path d="M-30,-14 h60 a8,8 0 0 1 8,8 v20 h-22 v-8 h-32 v8 h-22 v-20 a8,8 0 0 1 8,-8 z" style="fill:var(--glyco-soft);stroke:var(--glyco);stroke-width:1.5"/><text x="0" y="2" text-anchor="middle" style="fill:var(--ink);font-size:11.5px;font-weight:650">Repressor</text>' +
+          '<g class="mol fade"><polygon points="0,-34 11,-28 11,-16 0,-10 -11,-16 -11,-28" style="fill:var(--leaf-soft);stroke:var(--leaf);stroke-width:1.5"/><text x="16" y="-18" style="fill:var(--leaf);font-size:11.5px;font-weight:700">' + (type === 'lac' ? 'allolactose' : 'Trp') + '</text></g></g>' +
+        '<g class="block fade"><line x1="251" y1="88" x2="265" y2="102" style="stroke:var(--proton);stroke-width:3"/><line x1="265" y1="88" x2="251" y2="102" style="stroke:var(--proton);stroke-width:3"/></g>' +
+      '</svg>' +
+      '<div class="w-row"><button type="button" class="btn tog"></button><span class="op-state" aria-live="polite"></span></div>' +
+      '<p class="w-note expl"></p>';
+    var rep = $('.rep', w), mol = $('.mol', w), mrna = $('.mrna', w), blk = $('.block', w), rnap = $('.rnap', w), btn = $('.tog', w), state = $('.op-state', w), expl = $('.expl', w);
+    function draw() {
+      var bound = type === 'lac' ? !present : present;
+      rep.style.transform = bound ? 'translate(295px,124px)' : 'translate(120px,60px)';
+      mol.style.opacity = present ? 1 : 0;
+      mrna.style.opacity = bound ? 0 : 1;
+      blk.style.opacity = bound ? 1 : 0;
+      rnap.style.transform = bound ? 'translateX(0)' : 'translateX(18px)';
+      btn.textContent = (present ? 'Remove ' : 'Add ') + cfg.mol;
+      state.innerHTML = cfg.Mol + ' ' + (present ? 'present' : 'absent') + ': transcription <span class="' + (bound ? 'op-off">OFF' : 'op-on">ON') + '</span>';
+      expl.innerHTML = type === 'lac'
+        ? (present ? 'Lactose is present. It is converted to <strong>allolactose</strong>, the <strong>inducer</strong>, which binds the repressor and changes its shape, so the repressor falls off the operator. RNA polymerase can now transcribe <em>lacZ</em>, <em>lacY</em> and <em>lacA</em> as one mRNA, and the cell makes the enzymes it needs to take in and digest lactose.'
+                   : 'Lactose is absent. The repressor (made all the time from <em>lacI</em>) is <strong>active</strong> and binds the <strong>operator</strong>. It sits between the promoter and the genes, so RNA polymerase is blocked. The cell saves energy by not making enzymes it has no use for.')
+        : (present ? 'Tryptophan is plentiful. Tryptophan acts as the <strong>corepressor</strong>: it binds the inactive repressor and activates it, so the repressor binds the operator and blocks RNA polymerase. The cell stops making tryptophan it already has (end-product, negative feedback).'
+                   : 'Tryptophan is scarce. The repressor (made from <em>trpR</em>) is <strong>inactive</strong> on its own and cannot bind the operator, so RNA polymerase transcribes <em>trpE</em> to <em>trpA</em> and the cell makes the enzymes to build tryptophan.');
+    }
+    btn.addEventListener('click', function () { present = !present; draw(); });
+    draw();
+  }
+
+  function initOrder(box) {
+    var ol = $('ol', box); if (!ol) return;
+    var items = $$(':scope > li', ol).map(function (li, i) { return { i: i, html: li.innerHTML }; });
+    if (items.length < 2) return;
+    var cur;
+    function deal() { do { cur = shuffle(items); } while (cur.every(function (it, k) { return it.i === k; })); render(); msg.textContent = ''; }
+    function render(marks) {
+      ol.innerHTML = cur.map(function (it, k) {
+        return '<li' + (marks ? ' class="' + (it.i === k ? 'ok' : 'bad') + '"' : '') + '><span>' + it.html + '</span><span class="mv-btns"><button type="button" data-k="' + k + '" data-d="-1" aria-label="Move up"' + (k ? '' : ' disabled') + '>↑</button><button type="button" data-k="' + k + '" data-d="1" aria-label="Move down"' + (k < cur.length - 1 ? '' : ' disabled') + '>↓</button></span></li>';
+      }).join('');
+    }
+    box.insertAdjacentHTML('beforeend', '<div class="w-row"><button type="button" class="btn chk">Check order</button><button type="button" class="btn ghost again">Shuffle again</button></div><p class="order-msg" aria-live="polite"></p>');
+    var msg = $('.order-msg', box);
+    ol.addEventListener('click', function (ev) {
+      var b = ev.target.closest('button[data-k]'); if (!b) return;
+      var k = +b.getAttribute('data-k'), j = k + +b.getAttribute('data-d');
+      var t = cur[k]; cur[k] = cur[j]; cur[j] = t; render(); msg.textContent = '';
+      var nb = $('button[data-k="' + j + '"][data-d="' + b.getAttribute('data-d') + '"]', ol) || $('button[data-k="' + j + '"]', ol); if (nb && !nb.disabled) nb.focus();
+    });
+    $('.chk', box).addEventListener('click', function () {
+      var right = cur.filter(function (it, k) { return it.i === k; }).length;
+      render(true);
+      msg.innerHTML = right === cur.length ? '<strong>All ' + right + ' in the right order.</strong>' : right + ' of ' + cur.length + ' in the right place. Red ones are out of position: move them and check again.';
+    });
+    $('.again', box).addEventListener('click', deal);
+    deal();
+  }
+
+  function rangeHas(spec, s) {
+    return String(spec).split(/[\s,]+/).some(function (t) { var m = t.split('-'); return m.length === 2 ? s >= +m[0] && s <= +m[1] : +t === s; });
+  }
+  function initStepper(fig) {
+    var ol = $('ol.step-captions', fig); if (!ol) return;
+    var caps = $$(':scope > li', ol), n = caps.length; if (n < 2) return;
+    caps.forEach(function (c, k) { c.setAttribute('data-n', k + 1); });
+    var svg = $('svg', fig), parts = svg ? $$('[data-step],[data-from],[data-upto]', svg) : [];
+    var ctrl = document.createElement('div'); ctrl.className = 'step-ctrl';
+    ctrl.innerHTML = '<button type="button" class="btn ghost prev">Back</button><span class="step-dots">' + caps.map(function (c, i) { return '<button type="button" aria-label="Go to step ' + (i + 1) + '"></button>'; }).join('') + '</span><span class="step-count" aria-live="polite"></span><button type="button" class="btn next">Next</button>';
+    ol.parentNode.insertBefore(ctrl, ol);
+    var dots = $$('.step-dots button', ctrl), prev = $('.prev', ctrl), next = $('.next', ctrl), count = $('.step-count', ctrl), cur = 0;
+    function show(i) {
+      cur = (i + n) % n; var s = cur + 1;
+      caps.forEach(function (c, k) { c.classList.toggle('on', k === cur); });
+      parts.forEach(function (g) {
+        var on = true;
+        if (g.hasAttribute('data-step')) on = rangeHas(g.getAttribute('data-step'), s);
+        if (g.hasAttribute('data-from')) on = on && s >= +g.getAttribute('data-from');
+        if (g.hasAttribute('data-upto')) on = on && s <= +g.getAttribute('data-upto');
+        g.classList.toggle('st-off', !on);
+      });
+      dots.forEach(function (d, k) { if (k === cur) d.setAttribute('aria-current', 'step'); else d.removeAttribute('aria-current'); d.classList.toggle('done', k < cur); });
+      count.textContent = 'Step ' + s + ' of ' + n;
+      prev.disabled = cur === 0;
+      next.textContent = cur === n - 1 ? 'Start over' : 'Next';
+    }
+    prev.addEventListener('click', function () { show(cur - 1); });
+    next.addEventListener('click', function () { show(cur + 1); });
+    dots.forEach(function (d, k) { d.addEventListener('click', function () { show(k); }); });
+    fig.addEventListener('keydown', function (ev) {
+      if (ev.target.closest('input, textarea, select')) return;
+      if (ev.key === 'ArrowRight') { show(Math.min(n - 1, cur + 1)); ev.preventDefault(); }
+      if (ev.key === 'ArrowLeft') { show(Math.max(0, cur - 1)); ev.preventDefault(); }
+    });
+    show(0);
+  }
+
+  function hydrate(root) {
+    $$('[data-vis]', root).forEach(function (el) { if (VIS[el.getAttribute('data-vis')]) el.innerHTML = VIS[el.getAttribute('data-vis')]; });
+    $$('figure.stepper', root).forEach(initStepper);
+    $$('.widget[data-widget]', root).forEach(function (w) {
+      var t = w.getAttribute('data-widget');
+      try {
+        if (t === 'seqlab') initSeqLab(w);
+        else if (t === 'mutate') initMutate(w);
+        else if (t === 'codons') initCodons(w);
+        else if (t === 'operon') initOperon(w);
+      } catch (e) { w.innerHTML = '<p class="w-note">This interactive tool could not load.</p>'; }
+    });
+    $$('.order-task', root).forEach(initOrder);
+  }
 
   /* ---------- diagram sizing ---------- */
   // Never upscale a diagram past its drawn size; on narrow screens keep labels >= 10px and scroll sideways.
@@ -400,7 +704,7 @@
       });
       if (VIS.overview) {
         var big = document.createElement('section'); big.className = 'tier-sec'; big.setAttribute('data-tier', 'essential');
-        big.innerHTML = '<h3 data-title="Big picture">Big picture</h3><figure class="diagram">' + VIS.overview + '<figcaption>The whole pathway on one map. Glycolysis happens in the cytoplasm; everything else is inside the mitochondrion.</figcaption></figure>';
+        big.innerHTML = '<h3 data-title="Big picture">Big picture</h3><figure class="diagram">' + VIS.overview + '<figcaption>' + (UNIT.overviewCaption || 'The whole pathway on one map. Glycolysis happens in the cytoplasm; everything else is inside the mitochondrion.') + '</figcaption></figure>';
         secs.unshift(big);
       }
     });
